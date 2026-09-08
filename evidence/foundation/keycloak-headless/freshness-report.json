@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-09-08T22:17:04.385425+00:00",
+  "checked_inputs": 53,
+  "mismatches": [],
+  "active_reports": [
+    "evidence/foundation/keycloak-headless/probe-report.json",
+    "evidence/foundation/keycloak-headless/build-report.json",
+    "evidence/foundation/keycloak-headless/organization-client-report.json",
+    "engine-extensions/keycloak-headless/BUILD_DEPENDENCY_REPORT.json",
+    "evidence/foundation/keycloak-sessions/startup-report.json",
+    "evidence/foundation/keycloak-sessions/probe-report.json"
+  ],
+  "historical_failed_build_report_excluded": "build-report-first-permission-mismatch.json preserved as original failure, superseded by qualified current build report",
+  "exit_code": 0
+}

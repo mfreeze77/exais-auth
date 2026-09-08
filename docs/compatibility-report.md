@@ -18,6 +18,10 @@ PKCE authorization-code exchange and intermediate authentication state. It is no
 205-operation SuperTokens adapter. Candidate organization membership requires an
 explicit hard gate and application-side fixed tenant selection; defaults are
 insufficient. Identity-link concurrency failures prevent foundation approval.
+Its representative Node backend/React/Python client proof passes17 HTTP and5
+Chromium cases. Corrected fixtures use the supported basic scope to produce `sub`
+and the signed organization string-array shape. Final guards were not weakened to
+accept a missing subject. Exact builds, commands and prior failures are retained.
 
 All8 SDK,14 plugin and10 integration profiles remain required. Source pins and
 license/package findings exist for every original profile in `reuse/profiles.json`.

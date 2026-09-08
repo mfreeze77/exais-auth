@@ -34,6 +34,10 @@ Actual code and evidence:
 - Keycloak PostgreSQL two-replica probe:7 passes/3 failures. Cross-replica login,
   serial rotation and client revocation work; strict reuse/concurrent refresh and
   lost-response retry fail. Cluster startup does not close those cases.
+- Keycloak representative Node backend/React/Python clients:17 real HTTP and5
+  Chromium checks pass with supported basic/organization scope configuration,
+  PKCE/CSRF/state guards and engine-owned password/TOTP/session behavior. Full
+  FDI/CDI/SDK coverage and preauthentication replica failover remain unqualified.
 - Fresh isolated OSS build consumed strict checksum/lock verification and reproduced
   all87 JAR hashes. Source fetch reconstructed1300 permitted files with zero EE paths.
 

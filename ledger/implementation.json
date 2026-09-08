@@ -6,7 +6,11 @@
     "examples/node-react/package-lock.json",
     "examples/python/requirements.lock",
     "tests/browser/package-lock.json",
-    "engine-extensions/oss-build/locks/gradle/verification-metadata.xml"
+    "engine-extensions/oss-build/locks/gradle/verification-metadata.xml",
+    "engine-extensions/keycloak-headless/gradle.lockfile",
+    "engine-extensions/keycloak-headless/gradle/verification-metadata.xml",
+    "examples/keycloak-clients/package-lock.json",
+    "examples/keycloak-clients/requirements-test.txt"
   ],
   "independent_security_review": null,
   "qualification_artifacts": {},
@@ -10443,7 +10447,28 @@
         "record_sha256": "106c67a144a30ac88cbe69e782eee65c902f3a92517abf5bccf6a2bc6ab70703"
       },
       "status": "blocked",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java",
+          "sha256": "884dcdb68fbc2e11703eb1f34091da8bf35153c757d466573df522a5cda0d84a"
+        },
+        {
+          "path": "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java",
+          "sha256": "f8599677dfafdf7647861da9c7eedaf7d23d584f88ce65fc4c323be32fc2435d"
+        },
+        {
+          "path": "examples/keycloak-clients/server.mjs",
+          "sha256": "8146a53a867785230090275a2068b2e7c5cc0fd3750d6d4fa7b4d00f200e6dd3"
+        },
+        {
+          "path": "examples/keycloak-clients/python_client.py",
+          "sha256": "8e5e4a51b4ca0e5b813842ca8a94018a99956c164b26825a25a25f1c6eab1a0c"
+        },
+        {
+          "path": "tools/run_keycloak_cluster.py",
+          "sha256": "ea6c06cbf9f498daaafce778d1caad09d08622ba78088b89a5223de38533dadb"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
@@ -10451,6 +10476,32 @@
       "review": {},
       "blockers": [
         "Candidate proof is incomplete and has failed identity safety cases."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/foundation/keycloak-headless/build-report.json",
+          "sha256": "1614155f31d15d4e6d8984b9fa8332c3c5af806975d23e234d602ef2364a830f"
+        },
+        {
+          "path": "evidence/foundation/keycloak-headless/probe-report.json",
+          "sha256": "b1aaeb16e2d0b363666f1cc1f53a18c00fca47bb4690950d9573851649c02019"
+        },
+        {
+          "path": "evidence/foundation/keycloak-clients/commands.json",
+          "sha256": "06a79aa6cc3a870bdfb70f1574b3733d70b7f736fa3879730bc81c7ec9000dbb"
+        },
+        {
+          "path": "evidence/foundation/keycloak-clients/http-results.json",
+          "sha256": "d06e94b5dce1b5909c39d3108839745fb97f4de3a0235404ddac8388ab31cd44"
+        },
+        {
+          "path": "evidence/foundation/keycloak-clients/browser-results.json",
+          "sha256": "15cedabf29fab56079310e375e4195a59f9b8661803c0ef471f090ef51306174"
+        },
+        {
+          "path": "evidence/foundation/keycloak-sessions/probe-report.json",
+          "sha256": "5942c716388f3a068d060477377df84e309476fb99ca33ad85296d9c5a9e1cdd"
+        }
       ]
     },
     {
@@ -10968,5 +11019,31 @@
       ]
     }
   ],
-  "checkpoint_claim": "PARTIAL: narrow candidate implementation only; zero complete baseline requirements or API operations certified"
+  "checkpoint_claim": "PARTIAL: narrow candidate implementation only; zero complete baseline requirements or API operations certified",
+  "foundation_candidate_artifacts": [
+    {
+      "path": "evidence/foundation/keycloak-headless/build-report.json",
+      "sha256": "1614155f31d15d4e6d8984b9fa8332c3c5af806975d23e234d602ef2364a830f"
+    },
+    {
+      "path": "evidence/foundation/keycloak-headless/probe-report.json",
+      "sha256": "b1aaeb16e2d0b363666f1cc1f53a18c00fca47bb4690950d9573851649c02019"
+    },
+    {
+      "path": "evidence/foundation/keycloak-clients/commands.json",
+      "sha256": "06a79aa6cc3a870bdfb70f1574b3733d70b7f736fa3879730bc81c7ec9000dbb"
+    },
+    {
+      "path": "evidence/foundation/keycloak-clients/http-results.json",
+      "sha256": "d06e94b5dce1b5909c39d3108839745fb97f4de3a0235404ddac8388ab31cd44"
+    },
+    {
+      "path": "evidence/foundation/keycloak-clients/browser-results.json",
+      "sha256": "15cedabf29fab56079310e375e4195a59f9b8661803c0ef471f090ef51306174"
+    },
+    {
+      "path": "evidence/foundation/keycloak-sessions/probe-report.json",
+      "sha256": "5942c716388f3a068d060477377df84e309476fb99ca33ad85296d9c5a9e1cdd"
+    }
+  ]
 }

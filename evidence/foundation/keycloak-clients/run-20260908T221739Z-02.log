@@ -1,0 +1,47 @@
+Sending build context to Docker daemon  250.4kB
+
+Step 1/11 : FROM node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+ ---> d649c27dae7b
+Step 2/11 : WORKDIR /app
+ ---> Using cache
+ ---> ead541259731
+Step 3/11 : COPY package.json package-lock.json ./
+ ---> Using cache
+ ---> 05ed2a6608f8
+Step 4/11 : RUN npm ci --ignore-scripts --no-audit --no-fund
+ ---> Using cache
+ ---> e4229bccb7a7
+Step 5/11 : COPY server.mjs client.jsx build.mjs ./
+ ---> f1f4530826aa
+Step 6/11 : COPY public ./public
+ ---> 46e0f28022a4
+Step 7/11 : RUN npm run build
+ ---> Running in 885f9e7f73aa
+
+> @expertauth/keycloak-candidate-clients@0.0.1 build
+> node build.mjs
+
+ ---> Removed intermediate container 885f9e7f73aa
+ ---> 67bd686fc519
+Step 8/11 : ENV NODE_ENV=production
+ ---> Running in 9bca71b5ad12
+ ---> Removed intermediate container 9bca71b5ad12
+ ---> 41032d691cfd
+Step 9/11 : USER node
+ ---> Running in 0e3ce9db2757
+ ---> Removed intermediate container 0e3ce9db2757
+ ---> 9eb0c891b248
+Step 10/11 : EXPOSE 3000
+ ---> Running in 2f9dc8d0fed5
+ ---> Removed intermediate container 2f9dc8d0fed5
+ ---> 8d2110b64ea3
+Step 11/11 : CMD ["node", "server.mjs"]
+ ---> Running in 6daf6b69a355
+ ---> Removed intermediate container 6daf6b69a355
+ ---> 698f514bba46
+Successfully built 698f514bba46
+Successfully tagged expertauth-kc-clients-node:0.0.1
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

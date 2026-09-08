@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-09-08T21:53:52.037800+00:00",
+  "timestamp_utc": "2026-09-08T22:16:27.104738+00:00",
   "command": "python tests/foundation/keycloak_headless_organization.py",
   "exit_code": 0,
   "client": "expertauth-node-candidate",
@@ -9,11 +9,14 @@
   "signed_organizations": [
     "alpha"
   ],
+  "organization_claim_shape_verified": "array-of-strings",
+  "subject_claim_present": false,
+  "subject_validation_qualified": false,
   "membership_source": "Keycloak RealmRepresentation organizations.members imported through DefaultExportImportManager and emitted by built-in organization mapper",
   "hardcoded_claim_mapper": false,
   "input_sha256": {
-    "tests/foundation/keycloak_headless_organization.py": "ca60dcdf9e91256950ca02312980ee010ffb0e5fb233ac4313df5913c23d89fc",
-    "engine-extensions/keycloak-headless/prepare_lab.py": "901942dc424bdb592ced5e1124fe6f2c2d68e344d3db0c368e7509132eb9e0e6"
+    "tests/foundation/keycloak_headless_organization.py": "1b088251b3c1f8ca0b3f2173392723bf9d6636c5edd0be4f3d3f1c4dd941a85c",
+    "engine-extensions/keycloak-headless/prepare_lab.py": "d55889863a4408f82c0552504865ee1916ae0135eda687b4c41fbd66fab90733"
   },
-  "qualification": "dedicated-client fixture proof only; not full tenant authorization acceptance"
+  "qualification": "Original dedicated-client fixture narrow membership proof only; its import predates the basic-scope fix and is not full signed-subject or tenant-authorization acceptance. Current prepare_lab includes basic; independent client evidence uses a separately corrected import."
 }

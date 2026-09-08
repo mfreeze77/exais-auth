@@ -1,0 +1,194 @@
+{
+  "timestamp_utc": "2026-09-08T22:17:54.810605+00:00",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "expertauth-kc-clients-engine",
+        "--format",
+        "{{.Image}}"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-01.log",
+      "output_sha256": "b1cac5d6423f529eb5f39fccd86a9b4ccd3f21c78f3b318bf00124a5cbb9e1a7"
+    },
+    {
+      "argv": [
+        "docker",
+        "build",
+        "-t",
+        "expertauth-kc-clients-node:0.0.1",
+        "examples/keycloak-clients"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-02.log",
+      "output_sha256": "b6c6cd9b9d8c8750e743269645eddc6a57c85d9fb6aae797041a70630d7d7e6d"
+    },
+    {
+      "argv": [
+        "docker",
+        "rm",
+        "-f",
+        "expertauth-kc-clients-node"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-03.log",
+      "output_sha256": "b74438942da261a4ddba266ac18a20f5d3fdbf74617878549d4e17192113c69e"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "-d",
+        "--name",
+        "expertauth-kc-clients-node",
+        "--network",
+        "expertauth-kc-clients-proof",
+        "--network-alias",
+        "expertauth-kc-clients-node",
+        "-e",
+        "EXPERTAUTH_LOCAL_PROOF=true",
+        "expertauth-kc-clients-node:0.0.1"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-04.log",
+      "output_sha256": "3bb762d645e8c214e7b8d437671da4a8b157f56c53d515a4da569cbe6923040e"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-kc-clients-node",
+        "node",
+        "-e",
+        "fetch('http://localhost:3000/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      ],
+      "exit_code": 1,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-05.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-kc-clients-node",
+        "node",
+        "-e",
+        "fetch('http://localhost:3000/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-06.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "expertauth-kc-clients-proof",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/workspace",
+        "-w",
+        "/workspace",
+        "-e",
+        "PYTHONPATH=/workspace/examples/keycloak-clients/.runtime/testdeps",
+        "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+        "python",
+        "tests/foundation/keycloak_clients.py"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-07.log",
+      "output_sha256": "57386ca794af1465c8e9c4791733aecb8591be1857d2f0dab46bf05d93f76746"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "expertauth-kc-clients-proof",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/workspace",
+        "-w",
+        "/workspace/examples/keycloak-clients",
+        "mcr.microsoft.com/playwright@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+        "node",
+        "browser-probe.mjs"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-08.log",
+      "output_sha256": "ee9d686ce27093595c0492480f590359f0ef67c509692384e7570f7e7c968b34"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "expertauth-kc-clients-node",
+        "--format",
+        "{{.Image}}"
+      ],
+      "exit_code": 0,
+      "output": "evidence/foundation/keycloak-clients/run-20260908T221739Z-09.log",
+      "output_sha256": "f4bf81cb0afcb467b299fd9868df22b2034f85afca3511fed31f1c71f0e2f228"
+    }
+  ],
+  "source_sha256_before": {
+    "tests/foundation/keycloak_clients.py": "4803360ad5bb2309da258b1fdc2f68299eaf1e3975474360630e7656d2d86902",
+    "examples/keycloak-clients/.dockerignore": "b684c5a2863418c0927571b96cec7200be1c06d542625eaecc3b75815da59ba5",
+    "examples/keycloak-clients/.gitignore": "4cc7e58adc89a001146716115c65c5bd5fab57292436242cbd80a37f4e100472",
+    "examples/keycloak-clients/audit-dependencies.mjs": "d29049cb7235f21066c9281c1084886ca453a9b7ccf5cd30eac513c2caf0b069",
+    "examples/keycloak-clients/audit-python.py": "a7c32912edfba7d2e7151ad06c4e86d31e8a6d189df16885a94b1969f783cc3a",
+    "examples/keycloak-clients/browser-probe.mjs": "a2c08bafcc15a40a58ca8954023f6a12264072afc0904d5fe60409fb6e5f10f3",
+    "examples/keycloak-clients/build.mjs": "82a827217104af2397b6da8e2e72033a4c29672c512681cad9a60614e3ba1232",
+    "examples/keycloak-clients/client.jsx": "7c7d12ada968d97a0af166720d528f4286f8ddb41b6f896f9746a32a0fcf257a",
+    "examples/keycloak-clients/Dockerfile": "f2cdf15f59cae99c66c269170fc4ecfa109ea41f901f26cda530839b598bdd4a",
+    "examples/keycloak-clients/package-lock.json": "a1b15cab430aeb529fc2fc585126e3f501ccf6d5095c0c780674c6aba94f0e01",
+    "examples/keycloak-clients/package.json": "62bb20016e349acbdf3368bc33bd778b5b92a0f58eb6d1ef0ad7758d62137f7b",
+    "examples/keycloak-clients/prepare-client-lab.py": "bd63cac1a225497ac479c632362cd614ae05f420021f1819c38411f6eb41f108",
+    "examples/keycloak-clients/PYOTP_LICENSE.txt": "229362f4fc5dbcbee2345e1e8b68f697605237c85ce730266aec2634a5d2a508",
+    "examples/keycloak-clients/python_client.py": "8e5e4a51b4ca0e5b813842ca8a94018a99956c164b26825a25a25f1c6eab1a0c",
+    "examples/keycloak-clients/README.md": "67452664059754e846455272d901e6cc25db54c1bedcbd2820d78883df542bc0",
+    "examples/keycloak-clients/requirements-test.txt": "ff66549f44cee8cc24eff69e6807f659ce8720ddd57c28818b445605610e4f45",
+    "examples/keycloak-clients/run-proof.py": "23488ba972eb41ed710103260b8eee047245020c7eed5193db86b1739f6161e9",
+    "examples/keycloak-clients/server.mjs": "8146a53a867785230090275a2068b2e7c5cc0fd3750d6d4fa7b4d00f200e6dd3",
+    "examples/keycloak-clients/THIRD_PARTY_NOTICES.txt": "602b9b5600b4557cb5a96eaa2286e2a5bb80ebbb51390deb8ecb60b32ed39f9e",
+    "examples/keycloak-clients/public/index.html": "5ec8301509cabf234ae137f68b96526f9da88231c6786b51c556cc25c4fc9212",
+    "examples/keycloak-clients/public/style.css": "8349755bcde7bbd8ec9a0ffd194f7f44e0ae61c877f05aeaa3251e2147d83b52"
+  },
+  "source_sha256_after": {
+    "tests/foundation/keycloak_clients.py": "4803360ad5bb2309da258b1fdc2f68299eaf1e3975474360630e7656d2d86902",
+    "examples/keycloak-clients/.dockerignore": "b684c5a2863418c0927571b96cec7200be1c06d542625eaecc3b75815da59ba5",
+    "examples/keycloak-clients/.gitignore": "4cc7e58adc89a001146716115c65c5bd5fab57292436242cbd80a37f4e100472",
+    "examples/keycloak-clients/audit-dependencies.mjs": "d29049cb7235f21066c9281c1084886ca453a9b7ccf5cd30eac513c2caf0b069",
+    "examples/keycloak-clients/audit-python.py": "a7c32912edfba7d2e7151ad06c4e86d31e8a6d189df16885a94b1969f783cc3a",
+    "examples/keycloak-clients/browser-probe.mjs": "a2c08bafcc15a40a58ca8954023f6a12264072afc0904d5fe60409fb6e5f10f3",
+    "examples/keycloak-clients/build.mjs": "82a827217104af2397b6da8e2e72033a4c29672c512681cad9a60614e3ba1232",
+    "examples/keycloak-clients/client.jsx": "7c7d12ada968d97a0af166720d528f4286f8ddb41b6f896f9746a32a0fcf257a",
+    "examples/keycloak-clients/Dockerfile": "f2cdf15f59cae99c66c269170fc4ecfa109ea41f901f26cda530839b598bdd4a",
+    "examples/keycloak-clients/package-lock.json": "a1b15cab430aeb529fc2fc585126e3f501ccf6d5095c0c780674c6aba94f0e01",
+    "examples/keycloak-clients/package.json": "62bb20016e349acbdf3368bc33bd778b5b92a0f58eb6d1ef0ad7758d62137f7b",
+    "examples/keycloak-clients/prepare-client-lab.py": "bd63cac1a225497ac479c632362cd614ae05f420021f1819c38411f6eb41f108",
+    "examples/keycloak-clients/PYOTP_LICENSE.txt": "229362f4fc5dbcbee2345e1e8b68f697605237c85ce730266aec2634a5d2a508",
+    "examples/keycloak-clients/python_client.py": "8e5e4a51b4ca0e5b813842ca8a94018a99956c164b26825a25a25f1c6eab1a0c",
+    "examples/keycloak-clients/README.md": "67452664059754e846455272d901e6cc25db54c1bedcbd2820d78883df542bc0",
+    "examples/keycloak-clients/requirements-test.txt": "ff66549f44cee8cc24eff69e6807f659ce8720ddd57c28818b445605610e4f45",
+    "examples/keycloak-clients/run-proof.py": "23488ba972eb41ed710103260b8eee047245020c7eed5193db86b1739f6161e9",
+    "examples/keycloak-clients/server.mjs": "8146a53a867785230090275a2068b2e7c5cc0fd3750d6d4fa7b4d00f200e6dd3",
+    "examples/keycloak-clients/THIRD_PARTY_NOTICES.txt": "602b9b5600b4557cb5a96eaa2286e2a5bb80ebbb51390deb8ecb60b32ed39f9e",
+    "examples/keycloak-clients/public/index.html": "5ec8301509cabf234ae137f68b96526f9da88231c6786b51c556cc25c4fc9212",
+    "examples/keycloak-clients/public/style.css": "8349755bcde7bbd8ec9a0ffd194f7f44e0ae61c877f05aeaa3251e2147d83b52"
+  },
+  "source_changed_during_run": false,
+  "candidate_checks_passed": true,
+  "auth_completion": false,
+  "foundation_passed": false,
+  "harness_error": null,
+  "artifact_sha256": {
+    "browser-results.json": "15cedabf29fab56079310e375e4195a59f9b8661803c0ef471f090ef51306174",
+    "http-results.json": "d06e94b5dce1b5909c39d3108839745fb97f4de3a0235404ddac8388ab31cd44",
+    "react-authenticated-mobile.png": "9a8be7c40e220773a560335bc26cb0043101af7d06f3dbb2f731508fa7697daa",
+    "react-signed-out-mobile.png": "6d43b679074502b53236ab233bbc1b6c15e7c685047b4eac96ea2735d54d4937"
+  }
+}
