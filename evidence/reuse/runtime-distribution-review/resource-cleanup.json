@@ -1,0 +1,11 @@
+{
+  "container_name": "expertauth-runtime-distribution-notices-20260908",
+  "container_id": "83c3823237d23c8dc6812a479f008fe7611a440f3a96003b7ba78640e6d6a3f5",
+  "remaining_containers": 0,
+  "new_images": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "total_response_bytes": 89019,
+  "status": "removed",
+  "scope": "One authorized notice-only fetch container; no native execution"
+}

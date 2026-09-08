@@ -1,0 +1,19 @@
+{
+  "status": "FAILED",
+  "authentication_complete": false,
+  "full_distribution_approved": false,
+  "source_sha256": "375f2d70155d2c2f4b75314be521ea70997a7fe8b5fdbe3db8f098b075dcb14a",
+  "commands": [],
+  "qualified_image_report": {
+    "path": "evidence\\runtime\\oss-core-notices\\preserved-notices-01\\report.json",
+    "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+  },
+  "config_sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718",
+  "database_container_replaced": false,
+  "volumes_deleted": [],
+  "new_image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+  "error": {
+    "type": "ValueError",
+    "message": "Unexpected Core data/config mount"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "maximum_bytes": 2000000,
+  "total_response_bytes": 89019,
+  "container_name": "expertauth-runtime-distribution-notices-20260908",
+  "records": [
+    {
+      "path": "upstream/scrypt-tag.json",
+      "url": "https://api.github.com/repos/wg/scrypt/git/ref/tags/1.4.0",
+      "final_url": "https://api.github.com/repos/wg/scrypt/git/ref/tags/1.4.0",
+      "kind": "mapping",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 321,
+      "sha256": "a69ed2c2fb422ea8e9b2438e486853984fe576a91b632dbea23ee98e53eee04a"
+    },
+    {
+      "path": "upstream/jna-tag.json",
+      "url": "https://api.github.com/repos/java-native-access/jna/git/ref/tags/5.8.0",
+      "final_url": "https://api.github.com/repos/java-native-access/jna/git/ref/tags/5.8.0",
+      "kind": "mapping",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 347,
+      "sha256": "a75b9ff4e2e751e1e5db33373ff8b4b2cf557b6348a3cdacb1624a55e4237290"
+    },
+    {
+      "path": "upstream/scrypt__LICENSE",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/LICENSE",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "upstream/scrypt__Makefile",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/Makefile",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/Makefile",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 1253,
+      "sha256": "9a4fe30061862c775cea22397badc8b14e6407b2ee12ecd6fcd8e826fcf4a48c"
+    },
+    {
+      "path": "upstream/scrypt__pom.xml",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/pom.xml",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/pom.xml",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 4054,
+      "sha256": "6b24f9e7bb62550241e286287f527a7dc463669a0b7cf5acde599e99842de721"
+    },
+    {
+      "path": "upstream/scrypt__README",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/README",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/README",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 3095,
+      "sha256": "28bd26683e2295d0b091d1b8512306ce9141dfae84423e19f10bb9c723370282"
+    },
+    {
+      "path": "upstream/scrypt__src__main__c__crypto_scrypt-sse.c",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-sse.c",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-sse.c",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 9689,
+      "sha256": "8408a75032f7477cc88c28ba599a12505dc4f0707cd5820f7b00d332b6029cc1"
+    },
+    {
+      "path": "upstream/scrypt__src__main__c__crypto_scrypt-nosse.c",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-nosse.c",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-nosse.c",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 8979,
+      "sha256": "5eb2a4bf4b2c75c99d4cff769db19d1aa70f333c8e3ed9dccdd3ce64510abba7"
+    },
+    {
+      "path": "upstream/scrypt__src__main__c__sha256.c",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/sha256.c",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/sha256.c",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 11115,
+      "sha256": "522ade38a27290c3db62c773dc042e4ac52161dd53d722e06b2bbeda63243358"
+    },
+    {
+      "path": "upstream/scrypt__src__main__c__scrypt_jni.c",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/scrypt_jni.c",
+      "final_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/scrypt_jni.c",
+      "kind": "source",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 2060,
+      "sha256": "d3809f7b1d48bf906ccdaab0c4d909310d5adf45b81e6ba8a6c0929d2198fd86"
+    },
+    {
+      "path": "upstream/jna__LICENSE",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/LICENSE",
+      "kind": "source",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 788,
+      "sha256": "521bb271ac56e0e29a1b1b688b94af17d00d378fc8e63478d8c8b2a7c4a229d0"
+    },
+    {
+      "path": "upstream/jna__OTHERS",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/OTHERS",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/OTHERS",
+      "kind": "source",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 1241,
+      "sha256": "e90bf486c8d984a6d0836c9ba77715d9cc9d667a7458ea24cf2fe90ffa446a0a"
+    },
+    {
+      "path": "upstream/jna__native__Makefile",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/Makefile",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/Makefile",
+      "kind": "source",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 15653,
+      "sha256": "01cf8352802c9982b40a9983e6be748c6625bd9c8a4253783a06141712913a7a"
+    },
+    {
+      "path": "upstream/jna__native__libffi__LICENSE",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/LICENSE",
+      "kind": "source",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 1132,
+      "sha256": "25d56871423a870487edee68000ef66b1a7ec44a7ab84838ceeb3ce07f734b74"
+    },
+    {
+      "path": "upstream/jna__pom-jna.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna.xml",
+      "kind": "source",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 1583,
+      "sha256": "e340eecb098014cb9ada8c44d793ffac42fd59b3a76561e79279808a3e883bbc"
+    },
+    {
+      "path": "upstream/scrypt-tree.json",
+      "url": "https://api.github.com/repos/wg/scrypt/git/trees/0675236370458e819ee21e4427c5f7f3f9485d33?recursive=1",
+      "final_url": "https://api.github.com/repos/wg/scrypt/git/trees/0675236370458e819ee21e4427c5f7f3f9485d33?recursive=1",
+      "kind": "mapping",
+      "repo": "wg/scrypt",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 16542,
+      "sha256": "355a4a0c9ccc9a0fd898d25895b3125c12079c38863cc66b3d415d8a069ba242"
+    },
+    {
+      "path": "upstream/jna-dist-jar-metadata.json",
+      "url": "https://api.github.com/repos/java-native-access/jna/contents/dist/jna.jar?ref=cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "final_url": "https://api.github.com/repos/java-native-access/jna/contents/dist/jna.jar?ref=cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "kind": "mapping",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 993,
+      "sha256": "d50ed3ec08de8f4145638a491970f650228d61a616a128deac8a440c73fe4d02"
+    }
+  ]
+}

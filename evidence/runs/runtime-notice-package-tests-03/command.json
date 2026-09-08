@@ -1,0 +1,28 @@
+{
+  "command": [
+    "python",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reuse",
+    "-p",
+    "test_runtime_distribution.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788909365.6325183,
+  "elapsed_seconds": 4.704,
+  "input_sha256": {
+    "tools/assemble_runtime_licenses.py": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59",
+    "tools/fetch_runtime_notice_sources.py": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a",
+    "reuse/runtime-source-archives.lock.json": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353",
+    "tests/reuse/test_runtime_distribution.py": "4bea0dd6b824c4bac6c45d6299e67356571840fb6731f0da20483985b3fb13ac",
+    "THIRD_PARTY_NOTICES.md": "ca68ea81dd56beb16e2c3d7c9d6d144be1c3ca372fab15a69e57a900001ec0bc",
+    "docs/runtime-image-notices.md": "957fc38b2bfc01319fdc7eb062cf43062276f275de4bcfeba2d2638cd0b0ae39"
+  },
+  "inputs_changed": false,
+  "output_sha256": "c59ac737a449a8cfa78e9ded8495074f2821403fa560661574eac1a8a80ea1a1",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

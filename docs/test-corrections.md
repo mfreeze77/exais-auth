@@ -57,3 +57,19 @@ the forensic correction index does not rerun or certify their tests. Candidate
 execution observations remain limited to their recorded cases. All baseline
 acceptance rows remain unverified. Subsequent evidence must use the corrected
 writer and actual file hashes.
+
+## Notice packaging and maintenance preflight
+
+The first notice-tree test counted88 filename candidates, including Bouncy Castle's
+compiled `org/bouncycastle/LICENSE.class`. That2,001-byte executable class is not
+notice text. The assembler already correctly excluded it; the test now requires87
+actual archive notice texts and separately verifies5 supplemental notices. Original
+failure evidence remains in `evidence/runs/runtime-notice-package-tests-01`.
+
+The first local notice-image replacement stopped before any mutation because the
+Gradle base had added an inherited anonymous volume. The preflight now accepts only
+the exact owned read-only configuration mount plus that specific Gradle destination;
+unrelated mounts still fail. New Core containers use bounded tmpfs for the unused
+cache. Two nonempty old volumes were retained and measured at385,398 bytes combined.
+The successful run verified identical87 JARs and storage readiness before/after;
+it did not test rollback failure behavior, migrations or complete authentication.

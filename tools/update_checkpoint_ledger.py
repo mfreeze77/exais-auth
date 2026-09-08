@@ -51,9 +51,18 @@ def main():
     data['checkpoint_claim']='PARTIAL: narrow candidate implementation only; zero complete baseline requirements or API operations certified'
     data['delivery_checkpoint_artifacts'] = [artifact(ROOT, path) for path in ['evidence/extracted-checkpoint/20260908T222920Z-23f3d2/report.json','evidence/operations/hygiene/verification-20260908T225110Z.json','evidence/runs/hygiene-runner-integrity-03/command.json']]
     data['foundation_candidate_artifacts']=[artifact(ROOT,path) for path in ['evidence/foundation/keycloak-headless/build-report.json','evidence/foundation/keycloak-headless/probe-report.json','evidence/foundation/keycloak-clients/commands.json','evidence/foundation/keycloak-clients/http-results.json','evidence/foundation/keycloak-clients/browser-results.json','evidence/foundation/keycloak-sessions/probe-report.json']]
+    runtime_sources = ['tools/build_oss_runtime.py','tools/assemble_runtime_licenses.py','tools/fetch_runtime_notice_sources.py','tools/replace_oss_notice_image.py','deploy/oss-core.Dockerfile','reuse/runtime-source-archives.lock.json']
+    runtime_reports = ['evidence/runtime/oss-core-notices/preserved-notices-01/report.json','evidence/runtime/oss-core-notices/replacement-20260908T232129Z-99cdc5/report.json','evidence/runtime/oss-core-notices/same-image-guard-verification.json','evidence/runs/runtime-notice-package-tests-03/command.json','evidence/reuse/runtime-distribution-review/supplemental-notices.json','evidence/reuse/runtime-distribution-review/archive-inventory.json']
+    data['runtime_distribution_artifacts'] = [artifact(ROOT,path) for path in runtime_reports]
+    for identifier in ('BAS-002','BAS-004','BAS-005'):
+        index[identifier]['implementation'] += [artifact(ROOT,path) for path in runtime_sources]
+        index[identifier]['candidate_evidence'] += data['runtime_distribution_artifacts']
+        index[identifier]['qualification_note'] = 'Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.'
+    index['WP-002']['implementation'] = [artifact(ROOT,path) for path in runtime_sources]
+    index['WP-002']['candidate_evidence'] = data['runtime_distribution_artifacts']
     index['WP-004']['implementation']=[artifact(ROOT,path) for path in ['engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java','engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java','examples/keycloak-clients/server.mjs','examples/keycloak-clients/python_client.py','tools/run_keycloak_cluster.py']]
     index['WP-004']['candidate_evidence']=data['foundation_candidate_artifacts']
-    data['dependency_lock_paths']=['examples/node-react/package-lock.json','examples/python/requirements.lock','tests/browser/package-lock.json','engine-extensions/oss-build/locks/gradle/verification-metadata.xml','engine-extensions/keycloak-headless/gradle.lockfile','engine-extensions/keycloak-headless/gradle/verification-metadata.xml','examples/keycloak-clients/package-lock.json','examples/keycloak-clients/requirements-test.txt']
+    data['dependency_lock_paths']=['examples/node-react/package-lock.json','examples/python/requirements.lock','tests/browser/package-lock.json','engine-extensions/oss-build/locks/gradle/verification-metadata.xml','engine-extensions/keycloak-headless/gradle.lockfile','engine-extensions/keycloak-headless/gradle/verification-metadata.xml','examples/keycloak-clients/package-lock.json','examples/keycloak-clients/requirements-test.txt','reuse/runtime-source-archives.lock.json']
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

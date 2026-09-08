@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "tools/ledger.py",
+    "check"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788910587.1116433,
+  "elapsed_seconds": 0.354,
+  "input_sha256": {
+    "ledger/implementation.json": "9768a72ab4ab573f255e86c44d50ec178c4e7e95cd35a4b1604c281f0fe4520f",
+    "tools/update_checkpoint_ledger.py": "3a5b654ea3696dcae97cbc6ba9abcf63249d871c3b18155835aef9df6b625940"
+  },
+  "inputs_changed": false,
+  "output_sha256": "cb5763ead41e3089c841a7ae955514912b7572a66e785084dee5238edde8c216",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

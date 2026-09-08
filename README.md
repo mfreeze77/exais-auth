@@ -17,6 +17,7 @@ permitted sources/dependencies; the running lab network has no external egress.
 ```powershell
 docker run --rm -v "${PWD}:/workspace" -w /workspace python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36 python tools/fetch_pinned_sources.py
 python tools/build_oss_core.py
+docker run --rm --label org.expertauth.project=expert-auth -v "${PWD}:/workspace" -w /workspace python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36 python tools/fetch_runtime_notice_sources.py
 python tools/launch_oss_probe.py
 ```
 
@@ -34,6 +35,11 @@ The cleanup checkpoint leaves only Core-a/PostgreSQL running. Other candidate an
 example containers were retired with database/log backups. Read `AGENTS.md` before
 starting labs; inspect resources, reuse cached builds and remove temporary resources
 after tests. The cleanup evidence is under `evidence/operations/hygiene`.
+
+The current Core image includes the verified notice package described in
+`docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image
+inspection without starting services. Native and full distribution licensing remain
+unqualified in `docs/runtime-distribution-review.md`.
 
 The Node/React and Python representative applications are under `examples/`. They
 exercise the audited-source candidate; they are not evidence that Keycloak already

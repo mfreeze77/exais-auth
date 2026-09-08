@@ -1,0 +1,680 @@
+{
+  "timestamp_utc": "20260908T230655Z",
+  "source_lock_sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353",
+  "tool_sha256": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a",
+  "offline": true,
+  "results": [
+    {
+      "coordinate": "ch.qos.logback:logback-classic:1.5.38",
+      "runtime_jar_sha256": "afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700",
+      "status": "verified",
+      "sha256": "7f0a30657cb7b63379686419924e73851fa7e5159e0c3d7c653646030a142643",
+      "bytes": 251268,
+      "downloaded": false
+    },
+    {
+      "coordinate": "ch.qos.logback:logback-core:1.5.38",
+      "runtime_jar_sha256": "a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883",
+      "status": "verified",
+      "sha256": "682355ce7b96b8c6350ae20df86fe13ea262ef6b5d863833f26da1f700d6800a",
+      "bytes": 531931,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.auth0:java-jwt:4.4.0",
+      "runtime_jar_sha256": "173aab2a30727e5586e13055fb6c4e27112453f5d8cf1136b3369c674cbe011f",
+      "status": "verified",
+      "sha256": "a9db836198d02978e539bdea845f1d37247d151815338f27065cc8221c27945f",
+      "bytes": 43461,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.eatthepath:java-otp:0.4.0",
+      "runtime_jar_sha256": "c430c1039189635e4b6b7daee98b0c56288e459a3b8ec851cb7bcb9918107247",
+      "status": "verified",
+      "sha256": "14e98e7c600e0a11ae2d0f3c7c395532e4cfd61ced90f2fb2d44bf81b203f509",
+      "bytes": 8963,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-annotations:2.22",
+      "runtime_jar_sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0",
+      "status": "verified",
+      "sha256": "f5375c756ee3c585808f9937eb087d074743fd3f05f6aeff9b183cf19230c9f7",
+      "bytes": 91807,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-core:2.22.1",
+      "runtime_jar_sha256": "941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4",
+      "status": "verified",
+      "sha256": "f08c6bcea73ec33dcc18861a9c56e2ecb7c124619f5de46e1de89c02e4f65283",
+      "bytes": 503207,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.core:jackson-databind:2.22.1",
+      "runtime_jar_sha256": "7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2",
+      "status": "verified",
+      "sha256": "4e7160e0e90a844ae12ac3c73b70ea3855d29425890d3c5aed40723bca5bce52",
+      "bytes": 1259003,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.22.1",
+      "runtime_jar_sha256": "5c6e49843e46aaeebd3ffc777ad221ac2208f3e36e24c56779ac6fabdfb1d499",
+      "status": "verified",
+      "sha256": "a2afa601ae5ee614ed6bc9f19a4de25475c2a7a279eabb24d2a8cf0c81463fc7",
+      "bytes": 62134,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.22.1",
+      "runtime_jar_sha256": "cc3a0e540791a9a1cbcd7584767b84572ffda0b72823856558f47dea69ae8ed1",
+      "status": "verified",
+      "sha256": "09425e7d5a89546558263f18fd97492a6d045df1dd2a6ff575d0ed85b6d7b81e",
+      "bytes": 49423,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.22.1",
+      "runtime_jar_sha256": "85da45b7e5e565418963ff8f0dcb184365b0557c15468933f4318dde5c3ce845",
+      "status": "verified",
+      "sha256": "a7ad98f51575c04073ce99f7eec64fbda91d853628a0abde0eaf4a014d74bebd",
+      "bytes": 93383,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.google.code.findbugs:jsr305:3.0.2",
+      "runtime_jar_sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+      "status": "verified",
+      "sha256": "1c9e85e272d0708c6a591dc74828c71603053b48cc75ae83cce56912a2aa063b",
+      "bytes": 18102,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.google.code.gson:gson:2.13.1",
+      "runtime_jar_sha256": "94855942d4992f112946d3de1c334e709237b8126d8130bf07807c018a4a2120",
+      "status": "verified",
+      "sha256": "3317b8662ebc2b7a5ff34af2214cd0f8d74d37a9fa9757be494ad8824e96eee7",
+      "bytes": 208313,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.google.errorprone:error_prone_annotations:2.38.0",
+      "runtime_jar_sha256": "6661d5335090a5fc61dd869d2095bc6c1e2156e3aa47a6e4ababdf64c99a7889",
+      "status": "verified",
+      "sha256": "bc4e1535cf5a236ca2e2cfb66d76da4cea99ae52d7447f57a2b05943cac21747",
+      "bytes": 40096,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.google.guava:failureaccess:1.0.2",
+      "runtime_jar_sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064",
+      "status": "verified",
+      "sha256": "dd3bfa5e2ec5bc5397efb2c3cef044c192313ff77089573667ff97a60c6978e0",
+      "bytes": 3489,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.google.guava:guava:33.0.0-jre",
+      "runtime_jar_sha256": "f4d85c3e4d411694337cb873abea09b242b664bb013320be6105327c45991537",
+      "status": "verified",
+      "sha256": "0c17d911785e8a606d091aa6740d6d520f307749c2bddf6e35066d52fe0036e5",
+      "bytes": 1863997,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+      "runtime_jar_sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99",
+      "status": "source-unavailable-at-recorded-acquisition",
+      "downloaded": false,
+      "url": "https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava-sources.jar"
+    },
+    {
+      "coordinate": "com.googlecode.libphonenumber:libphonenumber:8.13.25",
+      "runtime_jar_sha256": "43f54cb4b10f907b1dec3b3bbfbbc3eb902ad26769da20b1edbb944a589f2407",
+      "status": "verified",
+      "sha256": "d553cca62a7534196c2301228592e8ef5ee5c409d1f8c3ca05d83d2d9ee955cf",
+      "bytes": 344177,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "runtime_jar_sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4",
+      "status": "verified",
+      "sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+      "bytes": 41994,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.squareup.okhttp3:okhttp-jvm:5.3.2",
+      "runtime_jar_sha256": "c771f48075b763f6c322055e21129a94b7de4c1faf3f8f58ace320b0c9517a30",
+      "status": "verified",
+      "sha256": "c44c549707d30d56084d0bc1bc00f36c7c326e30664b40c20c1ff8ab657afa5b",
+      "bytes": 395535,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.squareup.okio:okio-jvm:3.16.4",
+      "runtime_jar_sha256": "2196b993cd34dbbd919e7e01f57a4781b58bee80f86106163e287c20343a96a7",
+      "status": "verified",
+      "sha256": "834d0ba65168b5314f447bd2403d134423c42ad1927fdcd24473b20c4fd5a7d8",
+      "bytes": 190161,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.webauthn4j:webauthn4j-core:0.28.6.RELEASE",
+      "runtime_jar_sha256": "d8a8f4b735bb9067fc2afd13f8c9ff723a5bad76341a83a4051a998cccff61ab",
+      "status": "verified",
+      "sha256": "9a03a9618d96ca0968290533e6e020aa124de97abc6e9a136b181de96d3b9ab6",
+      "bytes": 419675,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.webauthn4j:webauthn4j-util:0.28.6.RELEASE",
+      "runtime_jar_sha256": "ad70dd0c03f7ff7b8515cdc7da3a03f6c970d7a174fcb9347f1c411776b0e80c",
+      "status": "verified",
+      "sha256": "28569712c81016d03791ce8aa36ad3159acf4900b8fae3efa861fab26bbe00cc",
+      "bytes": 21219,
+      "downloaded": false
+    },
+    {
+      "coordinate": "com.zaxxer:HikariCP:6.3.0",
+      "runtime_jar_sha256": "07c6344059af30a135144209c7c8bd666b8823124422ec859864d209d4ab7ca1",
+      "status": "verified",
+      "sha256": "0f6f8ae3b0c6d6f03947552fac05ab9fb803929e2328997a218cb81400d0871d",
+      "bytes": 261360,
+      "downloaded": false
+    },
+    {
+      "coordinate": "commons-codec:commons-codec:1.18.0",
+      "runtime_jar_sha256": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4",
+      "status": "verified",
+      "sha256": "6c50e3dd81284139baddf94b3d0f78d25135eea0853f6495267196cdcf5949e3",
+      "bytes": 374262,
+      "downloaded": false
+    },
+    {
+      "coordinate": "de.mkammerer:argon2-jvm-nolibs:2.11",
+      "runtime_jar_sha256": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804",
+      "status": "verified",
+      "sha256": "e1d9f36d08b5dd09413e98e9f35cbc3430d38b498d37ad1e413e8fdabe3e3645",
+      "bytes": 15815,
+      "downloaded": false
+    },
+    {
+      "coordinate": "de.mkammerer:argon2-jvm:2.11",
+      "runtime_jar_sha256": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1",
+      "status": "verified",
+      "sha256": "c910eb491b745c9fed9c1ff1669ca9c1417601d85791aada0dcd547a20609852",
+      "bytes": 414183,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.dropwizard.metrics:metrics-core:4.2.39",
+      "runtime_jar_sha256": "cc7b1352cd8077974b70b3e365c4f13aa93f5786ce1dea538be5451ed23600c9",
+      "status": "verified",
+      "sha256": "03b2f12d1144ca069c07cf04b9ac354131d45d521fa61bbded18a9194078d752",
+      "bytes": 60885,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.dropwizard.metrics:metrics-json:4.2.39",
+      "runtime_jar_sha256": "8726b15affd61992a4ecd0ed1dc3936782781e7fa0fdc47be04d338f9341dd46",
+      "status": "verified",
+      "sha256": "438fa95bdb4de679ea0205c47a75e4427a953bb6b58478ebfb8058418ef07ac2",
+      "bytes": 5298,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry.semconv:opentelemetry-semconv:1.42.0",
+      "runtime_jar_sha256": "eb56685bfb9d26b1c95a171b38015747fc3085dd7f63aca26dfd87352ccbbe40",
+      "status": "verified",
+      "sha256": "28c27108d49a317afb8cb7d1b65d2c7e3c7d4d854b2f34d8759287caf4c64f1e",
+      "bytes": 27305,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-api:1.63.0",
+      "runtime_jar_sha256": "07377d6f3fb2ccfb8b8b713290bf48759f9218d4e72467f3ccee55895926ee4b",
+      "status": "verified",
+      "sha256": "14a7621d5b8aea073caa0c817d46cdf9591a7cc96aa448e610d8c92b1cddfc06",
+      "bytes": 132918,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-common:1.63.0",
+      "runtime_jar_sha256": "6e0ab4fa86b2581848328cc25c00188d6b0826f039055aec85352ebcf64b05df",
+      "status": "verified",
+      "sha256": "27bc5cdc8fbed2ea8e055cf490e815d25b313c1eeb4dbd8f291d90a9bd12f56e",
+      "bytes": 3391,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-context:1.63.0",
+      "runtime_jar_sha256": "f96d13d1db4bf090eeb36d0c4e211e048a1ef48a59d833569b33aae4b4760a77",
+      "status": "verified",
+      "sha256": "e87d9d3b189e2b5d5a267eb07b9252ed36f41bebe358f808e584db753ae4a951",
+      "bytes": 39187,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-exporter-common:1.63.0",
+      "runtime_jar_sha256": "f288746055a9118d24a662cd7526cd5eb495ff37e5e4e54798a751b4bbe56e20",
+      "status": "verified",
+      "sha256": "6c386707a0a486579b7068b636eb152eb634dbcb6b1ca34f4239362bd947e545",
+      "bytes": 59048,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-exporter-logging:1.63.0",
+      "runtime_jar_sha256": "6d85a64b76977a60a57204304925ef216445adc7154d4103136caf6e11306307",
+      "status": "verified",
+      "sha256": "5ce9ecadc01626b034e704738efe1a1698ece64d774cfcedec440fdb41e9c77b",
+      "bytes": 12526,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-exporter-otlp-common:1.63.0",
+      "runtime_jar_sha256": "987fb841ea9c4b13699fc5c1afc842c5e83b38e18222821cdf9e6449c4cd5483",
+      "status": "verified",
+      "sha256": "468ed0d30c230bea24013baed057aa66d6b89000280d0aa3cf1ba9045695e42e",
+      "bytes": 118397,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-exporter-otlp:1.63.0",
+      "runtime_jar_sha256": "4877e560f0ca03675cfb99ed5457c0d1875e953381e029f198280aca8a1d0f47",
+      "status": "verified",
+      "sha256": "b07ff43bd198a20225dfe2cd4aec9d856146c76612fcd50787fd4e560c0cb220",
+      "bytes": 65972,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-exporter-sender-okhttp:1.63.0",
+      "runtime_jar_sha256": "5821c0fda70dd188c11a855ed2d76d410ec4fd91d7315299e11e1318e3cb1d58",
+      "status": "verified",
+      "sha256": "2f8f056c59711f9293364367a47db927b094951a81402d4f3910409633e488c9",
+      "bytes": 16674,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-sdk-common:1.63.0",
+      "runtime_jar_sha256": "75ecc937b6ad84efd838f445ee7f810f123c54d8c57ecbbec9196f009fe18cd6",
+      "status": "verified",
+      "sha256": "597cd9682e732ba9958124ed4de51dba2bdc23635b7f7fa41868ec272655f4d5",
+      "bytes": 52911,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-sdk-logs:1.63.0",
+      "runtime_jar_sha256": "85c4f207f2a437321af7864e45f92637b7ca5e9c9611103e2ff322bc9e6c4bd7",
+      "status": "verified",
+      "sha256": "6c98e6f02b9a1477d209872df88bca1793d601d38c94aa4f869f007d07d05c36",
+      "bytes": 41858,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-sdk-metrics:1.63.0",
+      "runtime_jar_sha256": "2140ff82be356e0d77a206f5f7f4868d22d49efd4976d00dee2fc52f1d8c670e",
+      "status": "verified",
+      "sha256": "e88f928ad9c608bff0f12330fd8a7350d70ad8957be31222a9007fcac874cfa9",
+      "bytes": 195163,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-sdk-trace:1.63.0",
+      "runtime_jar_sha256": "b3ad84c289d421d8ae0062d782043385b84e0394b859f6329dc02dae2485e7c3",
+      "status": "verified",
+      "sha256": "6108d8d5ea757faef05c1bee53fecb67119fd18454d9b9968b77bb7a8a3a774e",
+      "bytes": 70861,
+      "downloaded": false
+    },
+    {
+      "coordinate": "io.opentelemetry:opentelemetry-sdk:1.63.0",
+      "runtime_jar_sha256": "37acf2700ced98f59ac719e0551726d62eb085d659eb9f7c8e61f228c230902e",
+      "status": "verified",
+      "sha256": "388678d3cc22fe8893c06a4badd2c56c7470e10b39740867ff9e29d3209e07ea",
+      "bytes": 7711,
+      "downloaded": false
+    },
+    {
+      "coordinate": "net.java.dev.jna:jna:5.8.0",
+      "runtime_jar_sha256": "930273cc1c492f25661ea62413a6da3fd7f6e01bf1c4dcc0817fc8696a7b07ac",
+      "status": "verified",
+      "sha256": "4616cf507a47462ea5ec04654778d2e41624e21db7f41188cc553e8dce1123da",
+      "bytes": 160909,
+      "downloaded": false
+    },
+    {
+      "coordinate": "net.shibboleth:shib-networking:9.2.3",
+      "runtime_jar_sha256": "cca1d53b5a5bfab21320ed68ee77c5e0f87af53753d69711a52af87cced94861",
+      "status": "verified",
+      "sha256": "9ad26f46df28188983be8ea6bac21e1a3570817aaecaf8635b06725fba662bd2",
+      "bytes": 87379,
+      "downloaded": false
+    },
+    {
+      "coordinate": "net.shibboleth:shib-security:9.2.3",
+      "runtime_jar_sha256": "46c53c48a6e1930f145add7f65ed51ab9273de9e3dc746b82e5d695d25bb0ba8",
+      "status": "verified",
+      "sha256": "a054eadba38043a694bd23d767a4c3991905615674c2511ff9816ab9c4d08ed7",
+      "bytes": 40184,
+      "downloaded": false
+    },
+    {
+      "coordinate": "net.shibboleth:shib-support:9.2.3",
+      "runtime_jar_sha256": "c68f5668d23aa30a2a5b672dd03b46882bb0ce1185cf02240c4c99eee9bd94b0",
+      "status": "verified",
+      "sha256": "067954d50a2c642fed26dbaa0f702367d7d7e88a22c1e11f292f7b1ef1989982",
+      "bytes": 187373,
+      "downloaded": false
+    },
+    {
+      "coordinate": "net.shibboleth:shib-velocity:9.2.3",
+      "runtime_jar_sha256": "42f0fc3c53eae0b7d241b6e7c5a4c782100c78fe67d3527c1df67ba513a830c8",
+      "status": "verified",
+      "sha256": "467038ba9bce06d7972539e4d91ceced2b88f1ded247f0ce09df1be9f3756467",
+      "bytes": 5658,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.commons:commons-lang3:3.20.0",
+      "runtime_jar_sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4",
+      "status": "verified",
+      "sha256": "eec245e820ec2800a1780cf756aefb427c1c6170e06902e67ac15b6910ce6335",
+      "bytes": 772728,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.httpcomponents.client5:httpclient5-cache:5.6.4",
+      "runtime_jar_sha256": "c425cb6db4863480982899092d1d283f84c0f32914a59bf2de479e69daa8fa11",
+      "status": "verified",
+      "sha256": "a95fbe664713e15480f10e9ef4d02a2151ad532fda997d2c5ec244945f851d23",
+      "bytes": 175557,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.httpcomponents.client5:httpclient5:5.6.4",
+      "runtime_jar_sha256": "bdef5f8841145cd76c4c605ff301bc840eea0d5292332b7b892a93316c0d8ee1",
+      "status": "verified",
+      "sha256": "6739ab6a3ef576236c784efd94767248b2aad5549d433ff3562f3df76fabeb83",
+      "bytes": 857821,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.httpcomponents.core5:httpcore5-h2:5.4.3",
+      "runtime_jar_sha256": "c7db7026b8e2dea39132b04a6069f6671e2858309b20a146ec5c7dd6ed73a0b6",
+      "status": "verified",
+      "sha256": "ca7bc36ef8d56f17fb5455596d9dd38b80f8eb8931f8e4e167868356458625fa",
+      "bytes": 200649,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.httpcomponents.core5:httpcore5:5.4.3",
+      "runtime_jar_sha256": "18bfbbabb478dfb67f31aeaf428c387f3c3df654582e1309f708ee1f3086830a",
+      "status": "verified",
+      "sha256": "1039d1c7d5f09d48fdd684b8268abfd7206648e9939930cccfe88b6b0d36c741",
+      "bytes": 864570,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.santuario:xmlsec:3.0.6",
+      "runtime_jar_sha256": "395eccc3496063ac7b1d6af2422a11670ee5ded807f51542818eccd5fbb5e20c",
+      "status": "verified",
+      "sha256": "41233e260fe1fcb3c01924ef6acd4e3b5dc0c854e91dd3480b8ce771d7fd1092",
+      "bytes": 910957,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.tomcat.embed:tomcat-embed-core:11.0.25",
+      "runtime_jar_sha256": "282b65b9fe43647b1459c0df11101f8599a58de5832075acff485c3705ba4894",
+      "status": "verified",
+      "sha256": "1d2ec2c563194f0b768be5a34979ce14eb2dde4f9e866f954c19dfbdcb46b9bc",
+      "bytes": 3897374,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.tomcat:tomcat-annotations-api:11.0.25",
+      "runtime_jar_sha256": "d32cc2aad115b27456ce075b2167b3d549aa9ca75439d67f6a60bcc057d7212d",
+      "status": "verified",
+      "sha256": "9f90d525809342645c45edfaf2b650ecc44e7d52019564b4a30e8b3b6cd10b3b",
+      "bytes": 21076,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.apache.velocity:velocity-engine-core:2.4.1",
+      "runtime_jar_sha256": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231",
+      "status": "verified",
+      "sha256": "ea48b1899de5ba6a1b986e848a859b0dbe900befd944e0b49f3f14658e0becb5",
+      "bytes": 494120,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.aspectj:aspectjrt:1.9.24",
+      "runtime_jar_sha256": "38eeea5f17ad49b708afe11473867a99407f656ae140824ce8d6fc0c19fd4802",
+      "status": "verified",
+      "sha256": "8715bd5100d34cc6a1adf7458658a6cbeec7d0ee54dd619d58fef59351a0a653",
+      "bytes": 118400,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.bouncycastle:bcpkix-jdk18on:1.84",
+      "runtime_jar_sha256": "c87f16ed9e5ec61bc94151e9f3646ac44e50cd448121ce84367fa4b7ec7ec1bb",
+      "status": "verified",
+      "sha256": "fe00c12243c28ead30ad6c7742be40ff005ab29f493c350b83b637fe4a9b5597",
+      "bytes": 754709,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.bouncycastle:bcprov-jdk18on:1.84",
+      "runtime_jar_sha256": "64d6c5a6121fcd927152dd182cbed39afe0fda641a970d9bcc0c9cb1858b2731",
+      "status": "verified",
+      "sha256": "e5f04550f7740e588edcbd1654c59277cd7ee8725d8b674e44f7f8f4b9c5674a",
+      "bytes": 4882296,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.bouncycastle:bcutil-jdk18on:1.84",
+      "runtime_jar_sha256": "b374e16963421fb9cfb01cc20d7ad8fd2f8b8188e3eef0ec0a8965e245f7619a",
+      "status": "verified",
+      "sha256": "192b719273dc33e8fd6edc3b30b126760b6740cf2e1ac3cc7cf845c7ffec9f2b",
+      "bytes": 515956,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.checkerframework:checker-qual:3.41.0",
+      "runtime_jar_sha256": "2f9f245bf68e4259d610894f2406dc1f6363dc639302bd566e8272e4f4541172",
+      "status": "verified",
+      "sha256": "8308220bbdd4e12b49fa06a91de685faf9cc1a376464478c80845be3e87b7d4f",
+      "bytes": 261849,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.checkerframework:checker-qual:3.55.1",
+      "runtime_jar_sha256": "857658c8bdcbff794949a8d9922f88d63ee3751c203c7cd7d21ea97f9e745288",
+      "status": "verified",
+      "sha256": "2ec5c76038e65365a09b60997cfa790a8e3620571cae9b4d6020e6de2ca09712",
+      "bytes": 275663,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.cryptacular:cryptacular:1.3.0",
+      "runtime_jar_sha256": "5bef5b396aba0607bd972365991f833f7d8f16af506f2ade1f589fe344105123",
+      "status": "verified",
+      "sha256": "038ff711cd9b408d13b05efc08ef4aee2f1c53e978e348c0d1ae12722fec1d54",
+      "bytes": 156191,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.2.21",
+      "runtime_jar_sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd",
+      "status": "verified",
+      "sha256": "664f515359444a92267a13266101431a630f99d6b8d04407a92b1a0e558d33ee",
+      "bytes": 712993,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.jetbrains:annotations:13.0",
+      "runtime_jar_sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+      "status": "verified",
+      "sha256": "42a5e144b8e81d50d6913d1007b695e62e614705268d8cf9f13dbdc478c2c68e",
+      "bytes": 17566,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.mindrot:jbcrypt:0.4",
+      "runtime_jar_sha256": "e183f6f59404fc1e12073cfea4ace7ea103c900463cd21fb609a7c617ecdf624",
+      "status": "verified",
+      "sha256": "2d067ea67fb58f80cc5076ce78de2ddfeab6de7a072e68e7794ec71da3812c68",
+      "bytes": 14306,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-core-api:5.2.3",
+      "runtime_jar_sha256": "40ed25f0892dfb833aa2b917bd2be1e10cb7c788efb3276b66b19338b80c29f6",
+      "status": "verified",
+      "sha256": "b50fc2323fa76b49b7f248e7b2e04f8a752e6c55726cf64f6ebab158db0f5a1e",
+      "bytes": 151912,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-core-impl:5.2.3",
+      "runtime_jar_sha256": "af8604462837a7931d4688ccca3404db325ef7abff7a70a36206a9c4dd7fe953",
+      "status": "verified",
+      "sha256": "271e13aa012c55f19e03efdf7e5345d176d4101f4bbee70a7f3d519d1c1355f2",
+      "bytes": 50923,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-messaging-api:5.2.3",
+      "runtime_jar_sha256": "53e9a343afcdefdfaad4987d63598a2284c1bf98b99761c8baea1a69c2f7ebcd",
+      "status": "verified",
+      "sha256": "444dca78fb0c20909687a6522f7c188bb794a2f7dfef0281ca10a361e18c609a",
+      "bytes": 77627,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-profile-api:5.2.3",
+      "runtime_jar_sha256": "3c150e2db1dee689b776c604d601adcc060d0305c6eabffa17f213509f5587f8",
+      "status": "verified",
+      "sha256": "4f1debba76c84d6daa306989219bbc56bc800aeb9b7f33db63d922204fd76290",
+      "bytes": 38186,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-saml-api:5.2.3",
+      "runtime_jar_sha256": "cce72578ec8df5dd18cb71c88bba89bd196c640281c199ce875e2aa44154f93f",
+      "status": "verified",
+      "sha256": "b842b921ba4d97ebc4c0779b1990a9c3d5330d6a86d53ca0da8a4d8967278a82",
+      "bytes": 543053,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-saml-impl:5.2.3",
+      "runtime_jar_sha256": "9f04221e172dc426f90fb3873d0148a0744edbf9e7a37de7ee0e6a34f7b74581",
+      "status": "verified",
+      "sha256": "680aacafceda3deb9e08a06cf4e5b48d63b185e0d409f77b45cce3fdb91d2e55",
+      "bytes": 1115667,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-security-api:5.2.3",
+      "runtime_jar_sha256": "2053f9ae1f37a87cf94117ea61395080eb3ec71c631aa71dd2a6c386dd8ff3af",
+      "status": "verified",
+      "sha256": "d08bb5a2e583031a4e3c5463e6c89d3d14b7c7520d5da1882a98ac98816ccdbe",
+      "bytes": 139095,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-security-impl:5.2.3",
+      "runtime_jar_sha256": "21cc4cc73551f4ded22e8390286b9a4202b48c5054498bcd263f393f30d441a1",
+      "status": "verified",
+      "sha256": "5f7de2e634071b7a2640c0af3337e22deb5b6b75e3c9b967ea35d46c1398f566",
+      "bytes": 107556,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-soap-api:5.2.3",
+      "runtime_jar_sha256": "1b503de27e275bbe9014b4d503ce80a8b8dcfcb0c47fff9e48f14b05cb2788ab",
+      "status": "verified",
+      "sha256": "87aeafb0c359e32a3148b4f2760189a455856a99206e8897a274cdcd3ac853e7",
+      "bytes": 217849,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-soap-impl:5.2.3",
+      "runtime_jar_sha256": "b6a38b04741401de8b697ca773f200edb2421347e1eb0aa220355596d5675bf9",
+      "status": "verified",
+      "sha256": "218003200f625f1a2ab542fab70a8acd2cbf4cbaa625635396531c51ff8cb586",
+      "bytes": 454104,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-storage-api:5.2.3",
+      "runtime_jar_sha256": "07402db8880c7da7143c57f1c2ea3cf08e1e80e1470d86409e2db56e1d3fb02a",
+      "status": "verified",
+      "sha256": "436644336e7f03043cac1120df4260da0e22e42b9b5f3e97c271cf3c1702292c",
+      "bytes": 26236,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-xmlsec-api:5.2.3",
+      "runtime_jar_sha256": "3401e9e309fd170f4b9ea0d8fc68b5b778c2374bf654371378bce21952d6c6b9",
+      "status": "verified",
+      "sha256": "56e684ad839485e0c1e8dcd49bbfa26d175fac9f1f2f08f2762e76757cce5bd0",
+      "bytes": 297435,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.opensaml:opensaml-xmlsec-impl:5.2.3",
+      "runtime_jar_sha256": "cc67fc1bd9cb435cdbe7483ef04513c83cc9619a3015c04ad41bb6cc0eb6e68e",
+      "status": "verified",
+      "sha256": "050dbea833a58de9b909b88a38fbccddf5bf9caa06936d2ba1c83fe74856a385",
+      "bytes": 397768,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.postgresql:postgresql:42.7.13",
+      "runtime_jar_sha256": "6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93",
+      "status": "verified",
+      "sha256": "47914c21e0866a23de859041b2e6ecf921fdf68efbd9c7cb42c090ed5e944bab",
+      "bytes": 1035003,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:1.7.36",
+      "runtime_jar_sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0",
+      "status": "verified",
+      "sha256": "15bc04357a3725b7a5153f132db71379f95e83b7b8590a86cc6d4ad77bfc150a",
+      "bytes": 57747,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.slf4j:slf4j-api:2.0.17",
+      "runtime_jar_sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832",
+      "status": "verified",
+      "sha256": "db0d08d8efa05ad19d174d747bd9d8e68dbb02b596812fe7b3a681656e346694",
+      "bytes": 76986,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.xerial:sqlite-jdbc:3.45.1.0",
+      "runtime_jar_sha256": "f5f5404fa5a60f9e0b15e7bea2ea2d137e255f01babd0bfcb9dafcd2e3bf9cd2",
+      "status": "verified",
+      "sha256": "2700e85d6bd9bfafee3b69f17305f6d141ab3fb9be31c7ca5993181e1ee6c823",
+      "bytes": 13426088,
+      "downloaded": false
+    },
+    {
+      "coordinate": "org.yaml:snakeyaml:2.5",
+      "runtime_jar_sha256": "e6682acf1ace77508ef13649cbf4f8d09d2cf5457bdb61d25ffb6ac0233d78dd",
+      "status": "verified",
+      "sha256": "7a7d307ca9fe1663219a60045a8e5a113a69331566f9ebbe1d3b12c6781909ac",
+      "bytes": 209697,
+      "downloaded": false
+    }
+  ],
+  "full_distribution_approved": false
+}

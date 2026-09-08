@@ -1,0 +1,126 @@
+{
+  "scope": "Supplemental attribution eligibility only; all native licensing/build closure remains unqualified",
+  "license_approved": false,
+  "native_corresponding_source_complete": false,
+  "native_rebuild_verified": false,
+  "bindings": [
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "binary_jar_sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4",
+      "jar_member": "lib/x86_64/darwin/libscrypt.dylib",
+      "member_sha256": "8327ecee1c6e5feb41766766b84e1d1ff11c3bfee1d56cc11db6db04919e5a58",
+      "release_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "upstream_path": "src/main/resources/lib/x86_64/darwin/libscrypt.dylib",
+      "git_blob_sha1": "8f53dd1797f915c849ae02370d6ad367ca33c3a5",
+      "matches_release_tree": true
+    },
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "binary_jar_sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4",
+      "jar_member": "lib/x86_64/freebsd/libscrypt.so",
+      "member_sha256": "8d1b208635d50b968d01825f94af44f0f106edc46cd078652beb8f6282f10f31",
+      "release_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "upstream_path": "src/main/resources/lib/x86_64/freebsd/libscrypt.so",
+      "git_blob_sha1": "ef0dcbd490c067fa2b625467dd746d34a73099ea",
+      "matches_release_tree": true
+    },
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "binary_jar_sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4",
+      "jar_member": "lib/x86_64/linux/libscrypt.so",
+      "member_sha256": "69100ad6b49646f7f97388c64ed6d9fdf1a9b60c7dcf9787344e9f189359c3eb",
+      "release_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "upstream_path": "src/main/resources/lib/x86_64/linux/libscrypt.so",
+      "git_blob_sha1": "caba0025cbf72dbfee6dcdfbbd81192f25bb2378",
+      "matches_release_tree": true
+    },
+    {
+      "coordinate": "net.java.dev.jna:jna:5.8.0",
+      "binary_jar_sha256": "930273cc1c492f25661ea62413a6da3fd7f6e01bf1c4dcc0817fc8696a7b07ac",
+      "release_commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "upstream_path": "dist/jna.jar",
+      "git_blob_sha1": "c3d534c1d9f730881590036ac600aede01fd82d4",
+      "matches_release_tree": true
+    }
+  ],
+  "files": [
+    {
+      "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "license": "Apache-2.0",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/LICENSE",
+      "source_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "eligible_for_supplemental_notice_packaging": true,
+      "eligibility_scope": "Preserve unmodified notice from matched release source tree; not exhaustive license closure"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/upstream/jna__native__libffi__LICENSE",
+      "sha256": "25d56871423a870487edee68000ef66b1a7ec44a7ab84838ceeb3ce07f734b74",
+      "bytes": 1132,
+      "coordinate": "net.java.dev.jna:jna:5.8.0",
+      "license": "MIT",
+      "source_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/LICENSE",
+      "source_commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "eligible_for_supplemental_notice_packaging": true,
+      "eligibility_scope": "Preserve unmodified notice from matched release source tree; not exhaustive license closure"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/scrypt__src__main__c__crypto_scrypt-sse.c.notice.txt",
+      "sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8",
+      "bytes": 1456,
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "license": "BSD-2-Clause",
+      "source_file": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__crypto_scrypt-sse.c",
+      "source_sha256": "8408a75032f7477cc88c28ba599a12505dc4f0707cd5820f7b00d332b6029cc1",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-sse.c",
+      "source_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "exact_source_byte_range": {
+        "start_inclusive": 0,
+        "end_exclusive": 1456
+      },
+      "eligible_for_supplemental_notice_packaging": true,
+      "eligibility_scope": "Exact copyright/permission/disclaimer block from matched release source tree; not exhaustive license closure"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/scrypt__src__main__c__crypto_scrypt-nosse.c.notice.txt",
+      "sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8",
+      "bytes": 1456,
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "license": "BSD-2-Clause",
+      "source_file": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__crypto_scrypt-nosse.c",
+      "source_sha256": "5eb2a4bf4b2c75c99d4cff769db19d1aa70f333c8e3ed9dccdd3ce64510abba7",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-nosse.c",
+      "source_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "exact_source_byte_range": {
+        "start_inclusive": 0,
+        "end_exclusive": 1456
+      },
+      "eligible_for_supplemental_notice_packaging": true,
+      "eligibility_scope": "Exact copyright/permission/disclaimer block from matched release source tree; not exhaustive license closure"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/scrypt__src__main__c__sha256.c.notice.txt",
+      "sha256": "a341ec72b05646a3ffa490381b0ba622b7088ae37c5f4e9d86a3062d15cbb908",
+      "bytes": 1361,
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "license": "BSD-2-Clause",
+      "source_file": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__sha256.c",
+      "source_sha256": "522ade38a27290c3db62c773dc042e4ac52161dd53d722e06b2bbeda63243358",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/sha256.c",
+      "source_commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "exact_source_byte_range": {
+        "start_inclusive": 0,
+        "end_exclusive": 1361
+      },
+      "eligible_for_supplemental_notice_packaging": true,
+      "eligibility_scope": "Exact copyright/permission/disclaimer block from matched release source tree; not exhaustive license closure"
+    }
+  ],
+  "limitations": [
+    "Release-tree byte identity does not prove binaries were built from that tree.",
+    "Headers, transitive native dependencies, static compiler runtimes and all platform builds are not fully audited.",
+    "Argon2 and SQLite native corresponding-source/build gaps remain unchanged."
+  ]
+}

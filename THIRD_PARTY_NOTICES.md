@@ -45,6 +45,18 @@ whose dependency or licensing boundaries remain unresolved.
   source/notice and library-replacement obligations for distribution. POM lists
   of licenses are preserved as declarations, without silently deciding their
   AND/OR relationship. Embedded native code has additional provenance review.
+* **Supplemental native attribution:** the scrypt1.4.0 release contains Colin
+  Percival BSD notices in its native sources; JNA5.8.0 bundles libffi with its own
+  MIT notice. Five exact supplemental files, immutable source URLs and binary
+  release mappings are recorded in
+  `evidence/reuse/runtime-distribution-review/supplemental-notices.json`.
+  The runtime notice assembler preserves these alongside embedded notices.
+  Native source/build and full applicable-license closure remain unqualified.
+
+The runtime image's `/opt/expertauth/licenses/manifest.json` binds packaged
+attribution to actual JAR hashes. Source retrieval uses the83 available hash-locked
+Maven siblings in `reuse/runtime-source-archives.lock.json`; those archives are
+not represented as a complete native corresponding-source package or written offer.
 
 Full captured licenses are under `reuse/licenses/`, with file-specific hashes
 and provenance in the reuse manifests. Preserve relevant copyright, license,

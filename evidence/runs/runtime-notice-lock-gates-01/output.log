@@ -1,0 +1,8 @@
+test_changed_dependency_evidence_fails_even_when_source_hash_is_corrected (test_release_gate.ReleaseGateTests.test_changed_dependency_evidence_fails_even_when_source_hash_is_corrected) ... ok
+test_changed_dependency_lock_invalidates_run (test_release_gate.ReleaseGateTests.test_changed_dependency_lock_invalidates_run) ... ok
+test_verified_milestone_with_unverified_dependency_fails (test_release_gate.ReleaseGateTests.test_verified_milestone_with_unverified_dependency_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.869s
+
+OK

@@ -4,14 +4,11 @@ No public ports. This is foundation characterization, not production deployment.
 Existing owned containers/data are preserved. Never uses the vendor packaged image.
 """
 from __future__ import annotations
-import hashlib
 import json
 from pathlib import Path
 import secrets
-import shutil
 import subprocess
 import time
-import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NETWORK = 'expertauth-oss-proof'
@@ -25,36 +22,19 @@ def command(args, check=True):
     return result
 
 def main():
-    evidence = ROOT/'evidence/build/oss-core'
+    import argparse
+    from build_oss_runtime import build_runtime_image
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--build-only', action='store_true', help='Verify the image and retire scratch without starting services')
+    parser.add_argument('--evidence-name')
+    args = parser.parse_args()
+    built = build_runtime_image(evidence_name=args.evidence_name)
+    if args.build_only:
+        return
+    image_id = built['image_id']
+    copied = [row for row in built['installed_files'] if row['path'].startswith(('lib/', 'plugin/'))]
     runtime_evidence = ROOT/'evidence/runtime/oss-core'/str(time.time_ns())
     runtime_evidence.mkdir(parents=True)
-    record = json.loads((evidence/'command.json').read_text())
-    assert record['exit_code']==0, 'Source build required'
-    build = ROOT/'.cache/engine-build'
-    context = ROOT/'.cache/oss-runtime-image'
-    context.mkdir(parents=True,exist_ok=True)
-    artifacts = json.loads((evidence/'artifacts.json').read_text())
-    expected = {r['path']:r['sha256'] for r in artifacts}
-    copied = []
-    for project, destination in [('supertokens-core','lib'),('supertokens-plugin-interface','lib'),('supertokens-postgresql-plugin','plugin')]:
-        for folder in ['libs','dependencies']:
-            for jar in sorted((build/project/'build'/folder).glob('*.jar')):
-                relative = jar.relative_to(build).as_posix()
-                digest = hashlib.sha256(jar.read_bytes()).hexdigest()
-                assert expected[relative]==digest, f'Build artifact changed: {jar}'
-                assert 'ee.jar' not in jar.name.lower()
-                with zipfile.ZipFile(jar) as archive:
-                    assert not any(n.startswith(('io/supertokens/ee/','ee/')) or n.endswith('/ee.jar') for n in archive.namelist()), 'Restricted artifact found'
-                target = context/destination/jar.name
-                target.parent.mkdir(parents=True,exist_ok=True)
-                shutil.copyfile(jar,target)
-                copied.append({'path':target.relative_to(context).as_posix(),'sha256':digest})
-    shutil.copyfile(ROOT/'deploy/oss-core.Dockerfile',context/'Dockerfile')
-    (context/'version.yaml').write_text('core_version: 12.2.0\nplugin_interface_version: 10.0.0\nplugin_version: 9.8.0\nplugin_name: postgresql\n')
-    build_result = command(['docker','build','--pull=false','-t',IMAGE,str(context)],check=False)
-    (runtime_evidence/'runtime-image-build.log').write_text(build_result.stdout+build_result.stderr,encoding='utf-8')
-    assert build_result.returncode == 0, 'See runtime-image-build.log'
-    image_id = json.loads(command(['docker','image','inspect',IMAGE]).stdout)[0]['Id']
     runtime = ROOT/'.runtime/oss-core'
     runtime.mkdir(parents=True,exist_ok=True)
     env = runtime/'runtime.env'
@@ -79,9 +59,11 @@ def main():
             assert state['Config'].get('Labels',{}).get('org.expertauth.purpose')=='oss-foundation', 'Unowned container name'
             assert state['State']['Running'], 'Owned container is stopped; investigate before restarting'
             assert not state['HostConfig']['PortBindings'], 'Foundation services must have no public ports'
+            if name.startswith('expertauth-oss-core-'):
+                assert state['Image'] == image_id, 'Existing Core runs a different image; preserve it and perform an explicit local replacement before qualification'
             print(f'Preserved existing {name}; state={state["State"]["Status"]}')
             return
-        command(['docker','run','-d','--name',name,'--network',NETWORK,'--label','org.expertauth.purpose=oss-foundation',*args])
+        command(['docker','run','-d','--name',name,'--network',NETWORK,'--label','org.expertauth.project=expert-auth','--label','org.expertauth.purpose=oss-foundation',*args])
     launch('expertauth-oss-postgres',['--network-alias','postgres','--env-file',str(env),'-v','expertauth-oss-proof-pg:/var/lib/postgresql/data',POSTGRES])
     for _ in range(40):
         if command(['docker','exec','expertauth-oss-postgres','pg_isready','-U','expertauth','-d','expertauth'],False).returncode==0:
@@ -90,14 +72,14 @@ def main():
     else:
         raise SystemExit('PostgreSQL readiness failed')
     # Start sequentially; schema initialization first must finish before second replica.
-    launch('expertauth-oss-core-a',['--network-alias','core-a','-v',f'{config}:/run/expertauth/config.yaml:ro',image_id])
+    launch('expertauth-oss-core-a',['--network-alias','core-a','--tmpfs','/home/gradle/.gradle:rw,noexec,nosuid,size=16m','-v',f'{config}:/run/expertauth/config.yaml:ro',image_id])
     def storage_ready(replica):
         ready = command(['docker','run','--rm','--network',NETWORK,'--env-file',str(env),'-v',f'{ROOT}:/repo:ro',
                          'python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36',
                          'python','/repo/tools/wait_oss_storage.py',f'http://{replica}:3567'])
         print(ready.stdout.strip())
     storage_ready('core-a')
-    launch('expertauth-oss-core-b',['--network-alias','core-b','-v',f'{config}:/run/expertauth/config.yaml:ro',image_id])
+    launch('expertauth-oss-core-b',['--network-alias','core-b','--tmpfs','/home/gradle/.gradle:rw,noexec,nosuid,size=16m','-v',f'{config}:/run/expertauth/config.yaml:ro',image_id])
     storage_ready('core-b')
     output = {'image_id':image_id,'postgres_digest':POSTGRES,'network':NETWORK,'internal':True,'published_ports':[],
               'artifacts':copied,'remaining':'Foundation authentication and full parity acceptance are separate from storage readiness.',

@@ -1,0 +1,45 @@
+Sending build context to Docker daemon  60.42MB
+Step 1/12 : FROM gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2
+ ---> 67b8c4bfd2b0
+Step 2/12 : USER root
+ ---> Using cache
+ ---> 5810fd0230a7
+Step 3/12 : RUN mkdir -p /opt/expertauth/logs /opt/expertauth/.started /run/expertauth && chown -R gradle:gradle /opt/expertauth
+ ---> Using cache
+ ---> d441c7f96fd6
+Step 4/12 : COPY --chown=gradle:gradle lib /opt/expertauth/lib
+ ---> Using cache
+ ---> 528a0076b4bc
+Step 5/12 : COPY --chown=gradle:gradle plugin /opt/expertauth/plugin
+ ---> Using cache
+ ---> 1357e230b71f
+Step 6/12 : COPY --chown=gradle:gradle version.yaml /opt/expertauth/version.yaml
+ ---> c99eed79b3b1
+Step 7/12 : COPY --chown=gradle:gradle licenses /opt/expertauth/licenses
+ ---> d90acd2df9f6
+Step 8/12 : USER gradle
+ ---> Running in 62f9906b368a
+ ---> Removed intermediate container 62f9906b368a
+ ---> 11bd4d0265bc
+Step 9/12 : WORKDIR /opt/expertauth
+ ---> Running in 187165b2dc1f
+ ---> Removed intermediate container 187165b2dc1f
+ ---> 4bc9d609e62a
+Step 10/12 : EXPOSE 3567
+ ---> Running in e8a01401f64d
+ ---> Removed intermediate container e8a01401f64d
+ ---> 32517b23b7cf
+Step 11/12 : CMD ["java", "-Xmx512m", "--add-opens=java.base/java.lang=ALL-UNNAMED", "--add-opens=java.base/java.util=ALL-UNNAMED", "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED", "-cp", "/opt/expertauth/lib/*", "io.supertokens.Main", "/opt/expertauth", "configFile=/run/expertauth/config.yaml", "forceNoInMemDB=true"]
+ ---> Running in 369be19fb363
+ ---> Removed intermediate container 369be19fb363
+ ---> 9a55c7c0b81f
+Step 12/12 : LABEL org.expertauth.project=expert-auth
+ ---> Running in 7d934cd042d6
+ ---> Removed intermediate container 7d934cd042d6
+ ---> 60c7677d0a91
+Successfully built 60c7677d0a91
+Successfully tagged expertauth-oss-core:12.2.0-probe
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

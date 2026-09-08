@@ -1,0 +1,221 @@
+{
+  "status": "NOTICE_IMAGE_RUNNING_STORAGE_READY",
+  "authentication_complete": false,
+  "full_distribution_approved": false,
+  "source_sha256": "04b960f49b05716a59ec19ca5c8812188f799c8be850f25cdeba3c08f01a5e62",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-oss-core-a",
+        "/bin/sh",
+        "-c",
+        "cd /opt/expertauth && find lib plugin -type f -exec sha256sum {} +"
+      ],
+      "exit_code": 0,
+      "log": "command-01.log",
+      "sha256": "f8ec8ea38a1dffc0db6b85fb4ccdf26b1434d73023ffa29d9ae70a27e575950a"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-notice-readiness-3f25735b1e4a",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--network",
+        "expertauth-oss-proof",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\runtime.env",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tools\\wait_oss_storage.py,target=/wait.py,readonly",
+        "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+        "python",
+        "/wait.py",
+        "http://core-a:3567"
+      ],
+      "exit_code": 0,
+      "log": "command-02.log",
+      "sha256": "87edfc59461ff47c3be8444b0c786180f2dfc94f07032f7a4764b90775465907"
+    },
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "--timeout",
+        "15",
+        "expertauth-oss-core-a"
+      ],
+      "exit_code": 0,
+      "log": "command-03.log",
+      "sha256": "49f480f4afa3480dc627d4f596784aba37e064c05e6dcbab9dd368e0b3460a77"
+    },
+    {
+      "argv": [
+        "docker",
+        "rename",
+        "expertauth-oss-core-a",
+        "expertauth-oss-core-rollback-9d15b783255e"
+      ],
+      "exit_code": 0,
+      "log": "command-04.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "network",
+        "disconnect",
+        "expertauth-oss-proof",
+        "expertauth-oss-core-rollback-9d15b783255e"
+      ],
+      "exit_code": 0,
+      "log": "command-05.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "-d",
+        "--pull=never",
+        "--name",
+        "expertauth-oss-core-a",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=oss-foundation",
+        "--network",
+        "expertauth-oss-proof",
+        "--network-alias",
+        "core-a",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,noexec,nosuid,size=16m",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml,target=/run/expertauth/config.yaml,readonly",
+        "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58"
+      ],
+      "exit_code": 0,
+      "log": "command-06.log",
+      "sha256": "e9934fafb7ce803f57049c9a7071a2dbd429a883d8102cd81a266b5d16113b2c"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-notice-readiness-25cda3211e14",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--network",
+        "expertauth-oss-proof",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\runtime.env",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tools\\wait_oss_storage.py,target=/wait.py,readonly",
+        "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+        "python",
+        "/wait.py",
+        "http://core-a:3567"
+      ],
+      "exit_code": 0,
+      "log": "command-07.log",
+      "sha256": "87edfc59461ff47c3be8444b0c786180f2dfc94f07032f7a4764b90775465907"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "expertauth-oss-core-a",
+        "--format",
+        "{{.Image}}"
+      ],
+      "exit_code": 0,
+      "log": "command-08.log",
+      "sha256": "bd2ffef112d3986d1c8ccf8897ec27940e90c15ac6a40fe99ca3612eed52e793"
+    },
+    {
+      "argv": [
+        "docker",
+        "rm",
+        "expertauth-oss-core-rollback-9d15b783255e"
+      ],
+      "exit_code": 0,
+      "log": "command-09.log",
+      "sha256": "610403160318f6a972e6d2247763977917c250fadf4e4f7f3e4875482da8e584"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "ancestor=sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139"
+      ],
+      "exit_code": 0,
+      "log": "command-10.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "rm",
+        "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139"
+      ],
+      "exit_code": 0,
+      "log": "command-11.log",
+      "sha256": "e4145fab90f1c31852be558413a70ad7dc2df9cc731697711e37ce1cafb2d164"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-notice-readiness-3f25735b1e4a$"
+      ],
+      "exit_code": 0,
+      "log": "command-12.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-notice-readiness-25cda3211e14$"
+      ],
+      "exit_code": 0,
+      "log": "command-13.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "qualified_image_report": {
+    "path": "evidence\\runtime\\oss-core-notices\\preserved-notices-01\\report.json",
+    "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+  },
+  "config_sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718",
+  "database_container_replaced": false,
+  "volumes_deleted": [],
+  "new_image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+  "preserved_inherited_gradle_volumes": [
+    "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5"
+  ],
+  "executable_jars_unchanged": 87,
+  "old_image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+  "old_container_id": "e70eb7f5731de1cc3d7b0fe232b903e027a48230495200475e76e7343b6c7254",
+  "private_previous_log": {
+    "path": ".runtime/retired-core-logs/20260908T232129Z-99cdc5/previous-core.log",
+    "sha256": "c607779682021c80a99c5fa9e95773fca0f80726d73c60f389cbe6ed2271617e"
+  },
+  "rollback_container_removed_after_readiness": true,
+  "old_image_removed": true
+}

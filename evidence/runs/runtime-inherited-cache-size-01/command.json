@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--name",
+    "expertauth-gradle-size-check",
+    "--label",
+    "org.expertauth.project=expert-auth",
+    "--network",
+    "none",
+    "--read-only",
+    "--mount",
+    "type=volume,source=c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a,target=/old-b,readonly,volume-nocopy",
+    "--mount",
+    "type=volume,source=456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5,target=/old-a,readonly,volume-nocopy",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "-c",
+    "import json; from pathlib import Path; print(json.dumps([{ \"mount\": root, \"files\": [{\"path\": str(p.relative_to(root)), \"bytes\": p.stat().st_size} for p in Path(root).rglob(\"*\") if p.is_file()]} for root in [\"/old-a\", \"/old-b\"]]))"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788909858.0049047,
+  "elapsed_seconds": 0.452,
+  "input_sha256": {},
+  "inputs_changed": false,
+  "output_sha256": "d8fde744c2772b2a50f0087505e11028d34f8a875526c50189081f5aaabadded",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

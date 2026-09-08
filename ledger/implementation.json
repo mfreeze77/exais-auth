@@ -10,7 +10,8 @@
     "engine-extensions/keycloak-headless/gradle.lockfile",
     "engine-extensions/keycloak-headless/gradle/verification-metadata.xml",
     "examples/keycloak-clients/package-lock.json",
-    "examples/keycloak-clients/requirements-test.txt"
+    "examples/keycloak-clients/requirements-test.txt",
+    "reuse/runtime-source-archives.lock.json"
   ],
   "independent_security_review": null,
   "qualification_artifacts": {},
@@ -79,6 +80,30 @@
         {
           "path": "tools/build_oss_core.py",
           "sha256": "bc33f6c9caf654ffe3e349d80fea6fb9beaddd72f7cec460f2159cd502d471e4"
+        },
+        {
+          "path": "tools/build_oss_runtime.py",
+          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+        },
+        {
+          "path": "tools/assemble_runtime_licenses.py",
+          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+        },
+        {
+          "path": "tools/fetch_runtime_notice_sources.py",
+          "sha256": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a"
+        },
+        {
+          "path": "tools/replace_oss_notice_image.py",
+          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+        },
+        {
+          "path": "deploy/oss-core.Dockerfile",
+          "sha256": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6"
+        },
+        {
+          "path": "reuse/runtime-source-archives.lock.json",
+          "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
         }
       ],
       "positive_test_ids": [],
@@ -97,9 +122,33 @@
         {
           "path": "evidence/runs/source-reconstruction-01/command.json",
           "sha256": "775820a58733ab2eb761ce42e34bd1534003dfc1d5f5fb8db55e6597df0dd97a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/preserved-notices-01/report.json",
+          "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260908T232129Z-99cdc5/report.json",
+          "sha256": "0cea4d82a520549068558d584b3653410c706cf700551022746d4eae6fc7432c"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/same-image-guard-verification.json",
+          "sha256": "9d2ec8927adb28cc05f60737421f88801b89da94d11f70ba5c3202dc3911d7ea"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-package-tests-03/command.json",
+          "sha256": "e76b9fc9a3b664dbf8c352b6321991e49a252eec03ab9bed6618147a5b2ebf11"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/supplemental-notices.json",
+          "sha256": "17e9f7cadc5aae920aeebdf4df8c85b8c0ee108b82df7d3ad47d55b908592950"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
+          "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
         }
       ],
-      "qualification_note": "Pinned alternative source build exists; final dependency distribution and engine selection remain open.",
+      "qualification_note": "Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -113,7 +162,7 @@
       "implementation": [
         {
           "path": "tools/launch_oss_probe.py",
-          "sha256": "0c4887d5de1bb87e1ac5c4c11b1aee25d0bc1fe8d642676a21eb37a3120e73f4"
+          "sha256": "5ed65c4bd6d3e84b5dc38207a603a1e8510d7f3133fd2855d3b3d82985af124d"
         },
         {
           "path": "tests/foundation/oss_core_probe.py",
@@ -157,6 +206,30 @@
         {
           "path": "tools/build_oss_core.py",
           "sha256": "bc33f6c9caf654ffe3e349d80fea6fb9beaddd72f7cec460f2159cd502d471e4"
+        },
+        {
+          "path": "tools/build_oss_runtime.py",
+          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+        },
+        {
+          "path": "tools/assemble_runtime_licenses.py",
+          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+        },
+        {
+          "path": "tools/fetch_runtime_notice_sources.py",
+          "sha256": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a"
+        },
+        {
+          "path": "tools/replace_oss_notice_image.py",
+          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+        },
+        {
+          "path": "deploy/oss-core.Dockerfile",
+          "sha256": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6"
+        },
+        {
+          "path": "reuse/runtime-source-archives.lock.json",
+          "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
         }
       ],
       "positive_test_ids": [],
@@ -175,9 +248,33 @@
         {
           "path": "evidence/runs/source-reconstruction-01/command.json",
           "sha256": "775820a58733ab2eb761ce42e34bd1534003dfc1d5f5fb8db55e6597df0dd97a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/preserved-notices-01/report.json",
+          "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260908T232129Z-99cdc5/report.json",
+          "sha256": "0cea4d82a520549068558d584b3653410c706cf700551022746d4eae6fc7432c"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/same-image-guard-verification.json",
+          "sha256": "9d2ec8927adb28cc05f60737421f88801b89da94d11f70ba5c3202dc3911d7ea"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-package-tests-03/command.json",
+          "sha256": "e76b9fc9a3b664dbf8c352b6321991e49a252eec03ab9bed6618147a5b2ebf11"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/supplemental-notices.json",
+          "sha256": "17e9f7cadc5aae920aeebdf4df8c85b8c0ee108b82df7d3ad47d55b908592950"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
+          "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
         }
       ],
-      "qualification_note": "Pinned alternative source build exists; final dependency distribution and engine selection remain open.",
+      "qualification_note": "Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -200,6 +297,30 @@
         {
           "path": "tools/build_oss_core.py",
           "sha256": "bc33f6c9caf654ffe3e349d80fea6fb9beaddd72f7cec460f2159cd502d471e4"
+        },
+        {
+          "path": "tools/build_oss_runtime.py",
+          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+        },
+        {
+          "path": "tools/assemble_runtime_licenses.py",
+          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+        },
+        {
+          "path": "tools/fetch_runtime_notice_sources.py",
+          "sha256": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a"
+        },
+        {
+          "path": "tools/replace_oss_notice_image.py",
+          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+        },
+        {
+          "path": "deploy/oss-core.Dockerfile",
+          "sha256": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6"
+        },
+        {
+          "path": "reuse/runtime-source-archives.lock.json",
+          "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
         }
       ],
       "positive_test_ids": [],
@@ -218,9 +339,33 @@
         {
           "path": "evidence/runs/source-reconstruction-01/command.json",
           "sha256": "775820a58733ab2eb761ce42e34bd1534003dfc1d5f5fb8db55e6597df0dd97a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/preserved-notices-01/report.json",
+          "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260908T232129Z-99cdc5/report.json",
+          "sha256": "0cea4d82a520549068558d584b3653410c706cf700551022746d4eae6fc7432c"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/same-image-guard-verification.json",
+          "sha256": "9d2ec8927adb28cc05f60737421f88801b89da94d11f70ba5c3202dc3911d7ea"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-package-tests-03/command.json",
+          "sha256": "e76b9fc9a3b664dbf8c352b6321991e49a252eec03ab9bed6618147a5b2ebf11"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/supplemental-notices.json",
+          "sha256": "17e9f7cadc5aae920aeebdf4df8c85b8c0ee108b82df7d3ad47d55b908592950"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
+          "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
         }
       ],
-      "qualification_note": "Pinned alternative source build exists; final dependency distribution and engine selection remain open.",
+      "qualification_note": "Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -234,7 +379,7 @@
       "implementation": [
         {
           "path": "tools/launch_oss_probe.py",
-          "sha256": "0c4887d5de1bb87e1ac5c4c11b1aee25d0bc1fe8d642676a21eb37a3120e73f4"
+          "sha256": "5ed65c4bd6d3e84b5dc38207a603a1e8510d7f3133fd2855d3b3d82985af124d"
         },
         {
           "path": "tests/foundation/oss_core_probe.py",
@@ -580,7 +725,7 @@
       "implementation": [
         {
           "path": "tools/launch_oss_probe.py",
-          "sha256": "0c4887d5de1bb87e1ac5c4c11b1aee25d0bc1fe8d642676a21eb37a3120e73f4"
+          "sha256": "5ed65c4bd6d3e84b5dc38207a603a1e8510d7f3133fd2855d3b3d82985af124d"
         },
         {
           "path": "tests/foundation/oss_core_probe.py",
@@ -3106,7 +3251,7 @@
       "implementation": [
         {
           "path": "tools/launch_oss_probe.py",
-          "sha256": "0c4887d5de1bb87e1ac5c4c11b1aee25d0bc1fe8d642676a21eb37a3120e73f4"
+          "sha256": "5ed65c4bd6d3e84b5dc38207a603a1e8510d7f3133fd2855d3b3d82985af124d"
         },
         {
           "path": "tests/foundation/oss_core_probe.py",
@@ -10507,7 +10652,32 @@
         "record_sha256": "27acc8ab2d7800fe2b0858ef5ad8e49f5245b993a82379e2a35812f100ed0956"
       },
       "status": "blocked",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "tools/build_oss_runtime.py",
+          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+        },
+        {
+          "path": "tools/assemble_runtime_licenses.py",
+          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+        },
+        {
+          "path": "tools/fetch_runtime_notice_sources.py",
+          "sha256": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a"
+        },
+        {
+          "path": "tools/replace_oss_notice_image.py",
+          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+        },
+        {
+          "path": "deploy/oss-core.Dockerfile",
+          "sha256": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6"
+        },
+        {
+          "path": "reuse/runtime-source-archives.lock.json",
+          "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
@@ -10515,6 +10685,32 @@
       "review": {},
       "blockers": [
         "Full SDK/plugin/native/container license distribution closure incomplete."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/runtime/oss-core-notices/preserved-notices-01/report.json",
+          "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260908T232129Z-99cdc5/report.json",
+          "sha256": "0cea4d82a520549068558d584b3653410c706cf700551022746d4eae6fc7432c"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/same-image-guard-verification.json",
+          "sha256": "9d2ec8927adb28cc05f60737421f88801b89da94d11f70ba5c3202dc3911d7ea"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-package-tests-03/command.json",
+          "sha256": "e76b9fc9a3b664dbf8c352b6321991e49a252eec03ab9bed6618147a5b2ebf11"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/supplemental-notices.json",
+          "sha256": "17e9f7cadc5aae920aeebdf4df8c85b8c0ee108b82df7d3ad47d55b908592950"
+        },
+        {
+          "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
+          "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+        }
       ]
     },
     {
@@ -11154,6 +11350,32 @@
     {
       "path": "evidence/runs/hygiene-runner-integrity-03/command.json",
       "sha256": "611604f77d714906bc6b247fe2ac2987a78369b8e6c408e43a15122c69ba8c7a"
+    }
+  ],
+  "runtime_distribution_artifacts": [
+    {
+      "path": "evidence/runtime/oss-core-notices/preserved-notices-01/report.json",
+      "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+    },
+    {
+      "path": "evidence/runtime/oss-core-notices/replacement-20260908T232129Z-99cdc5/report.json",
+      "sha256": "0cea4d82a520549068558d584b3653410c706cf700551022746d4eae6fc7432c"
+    },
+    {
+      "path": "evidence/runtime/oss-core-notices/same-image-guard-verification.json",
+      "sha256": "9d2ec8927adb28cc05f60737421f88801b89da94d11f70ba5c3202dc3911d7ea"
+    },
+    {
+      "path": "evidence/runs/runtime-notice-package-tests-03/command.json",
+      "sha256": "e76b9fc9a3b664dbf8c352b6321991e49a252eec03ab9bed6618147a5b2ebf11"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/supplemental-notices.json",
+      "sha256": "17e9f7cadc5aae920aeebdf4df8c85b8c0ee108b82df7d3ad47d55b908592950"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
+      "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
     }
   ]
 }

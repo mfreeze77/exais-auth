@@ -44,6 +44,7 @@ To rebuild the source-built alternative from pinned public artifacts:
 ```powershell
 docker run --rm -v "${PWD}:/workspace" -w /workspace python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36 python tools/fetch_pinned_sources.py
 python tools/build_oss_core.py
+docker run --rm --label org.expertauth.project=expert-auth -v "${PWD}:/workspace" -w /workspace python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36 python tools/fetch_runtime_notice_sources.py
 python tools/launch_oss_probe.py
 ```
 
@@ -68,14 +69,28 @@ does not qualify full-stack restore. Current wrapper cleanup changes have their
 own12 integrity/filesystem checks. Four API wire-path resolutions are preserved in
 `contracts/runtime-path-resolutions.json`, with9 real checks and original IDs intact.
 
-Unfinished license work is in `tools/assemble_runtime_licenses.py` and
-`tools/fetch_runtime_notice_sources.py`. The final acquisition report is
-`evidence/reuse/runtime-source-notices/fetch-20260908T222746Z.json` (83 available,
-1 source JAR unavailable). Preserve the43MB source cache; do not refetch unchanged
-archives or generate more prototype trees. Add a reviewed locked-download mode,
-resolve applicable notices/source obligations, then integrate the assembler into
-the runtime image with evidence of actual image contents. It is not yet connected
-to `deploy/oss-core.Dockerfile` and does not close distribution licensing.
+Runtime notice packaging and locked acquisition are now connected. Preserve the43MB
+source cache; normal acquisition verifies it without downloading unchanged files.
+`python tools/fetch_runtime_notice_sources.py --offline` verifies83 available source
+archives and preserves the one recorded Guava metadata-only absence. Image
+`60c7677d0a91` contains474 verified files and is running in Core-a; see
+`evidence/runtime/oss-core-notices/preserved-notices-01/report.json` and
+`replacement-20260908T232129Z-99cdc5/report.json` in that same evidence directory.
+
+Use `python tools/launch_oss_probe.py --build-only --evidence-name NEW_NAME` when
+only an image build/content check is needed. It retires context/inspection resources
+and does not create a second service replica. The normal launcher refuses to report
+an old container as running a newly built image. `tools/replace_oss_notice_image.py`
+is limited to87-JAR-identical notice maintenance, not a general authentication
+upgrade or migration tool; its failure rollback branch remains unexecuted. Current
+Core uses bounded tmpfs for the inherited unused Gradle cache. Two old nonempty
+Gradle caches total385,398 bytes and were preserved after read-only inspection.
+
+Next licensing work is precise: full applicable notices for uncovered dependencies;
+native provenance/source/build and source/relink conditions for scrypt, Argon2,
+JNA and SQLite; and container OS/dependency closure. Read
+`docs/runtime-distribution-review.md`. Neither source JAR availability nor the
+packaged notice manifest closes the full distribution gate.
 
 For the tested Node/React and Python examples, use their own README commands.
 Keycloak JSON extension and representative client commands/evidence are in their

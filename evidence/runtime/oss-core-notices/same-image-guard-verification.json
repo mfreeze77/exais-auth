@@ -1,0 +1,8 @@
+{
+  "AuthenticationComplete": false,
+  "ActualExit": 1,
+  "ExpectedExit": 1,
+  "ContainerImageRunningBefore": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729 sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58 true",
+  "Unchanged": true,
+  "ContainerImageRunningAfter": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729 sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58 true"
+}

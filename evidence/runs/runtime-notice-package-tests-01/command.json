@@ -1,0 +1,26 @@
+{
+  "command": [
+    "python",
+    "-O",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reuse",
+    "-p",
+    "test_runtime_distribution.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788909125.8901122,
+  "elapsed_seconds": 3.802,
+  "input_sha256": {
+    "tools/assemble_runtime_licenses.py": "ac41c3bfe2dc7ca9e709c9ed0ede53c0907f2325265e92898f7aacf008b3fde9",
+    "tools/fetch_runtime_notice_sources.py": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a",
+    "reuse/runtime-source-archives.lock.json": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353",
+    "tests/reuse/test_runtime_distribution.py": "11e6441085226c1d27b184160c107d94bc2e90aa7f966bbd3c47f2b49bff7253"
+  },
+  "inputs_changed": false,
+  "output_sha256": "9be0b67383dff7405e7cf2974d06617af36757a7cc300d4c85aceae90007eb6f",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

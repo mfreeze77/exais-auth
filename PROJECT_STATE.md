@@ -60,11 +60,27 @@ The updated archive runner retires its own resources and fails on cleanup errors
 its12 integrity/filesystem tests passed, but its revised full Docker flow has not
 been rerun. `AGENTS.md` requires the same lifecycle for all further work.
 
-Runtime-license packaging is unfinished:83 pinned Maven source siblings were fetched
-to a bounded43MB cache;1 coordinate returned404 for its source JAR.
-The notice assembler/fetcher are preserved work in progress, not wired into the
-Dockerfile or approved for distribution. Locked acquisition, notice/source/relink
-obligations, container OS review and final distribution approval remain open.
+Runtime notice packaging now runs in Core image `60c7677d0a91`:474 installed files
+were hash-verified, including87 unchanged executable JARs,87 embedded notice texts,
+and5 supplemental scrypt/libffi notices mapped to release bytes. The83 available
+Maven source archives are locked and verified offline in the existing43MB cache;
+the one unavailable Guava source sibling corresponds to a metadata-only binary.
+Eight archive/provenance/notice tests pass, including tamper rejection and identical
+notice-tree reproduction. This is packaging evidence, not full license approval.
+
+Core-a was replaced only after verifying all87 JARs equal the running old image.
+Authenticated storage readiness passed before/after; PostgreSQL/config were preserved,
+old Core logs retained privately, and the old container/image retired. This did not
+rerun the historical full auth cases or exercise the replacement script's rollback
+branch. Its initial preflight refused an inherited Gradle volume; the corrected path
+recognizes that mount and uses16MiB tmpfs for the unused Gradle cache. Two old caches
+were retained after a nonempty check; their combined file content is385,398 bytes.
+Only Core-a/PostgreSQL remain as containers, with6 retained task image tags.
+
+Full notices for other uncovered dependencies, native source/build/relink obligations,
+container OS review and independent distribution approval remain open. Four native
+bundles need further work: scrypt, Argon2, JNA and SQLite JDBC. See
+`docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
 
 Editable ledger currently maps19 requirements to partial implementation,10 to blockers,
 7 to failed candidate checks and229 to planned work. All205 API rows remain blocked

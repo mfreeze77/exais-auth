@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "tools/launch_oss_probe.py",
+    "--build-only",
+    "--evidence-name",
+    "preserved-notices-01"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788909370.836657,
+  "elapsed_seconds": 19.338,
+  "input_sha256": {
+    "tools/build_oss_runtime.py": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef",
+    "tools/launch_oss_probe.py": "dd3925a483ea646658f7134f5695228ee4706053c35f63e810a2d84214498ebf",
+    "tools/assemble_runtime_licenses.py": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59",
+    "deploy/oss-core.Dockerfile": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6",
+    "reuse/runtime-source-archives.lock.json": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+  },
+  "inputs_changed": false,
+  "output_sha256": "d6bf262322bbe87c90c0f7cb2ed203f5aeefe7ebaa3f4b115caeabd849f109cf",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

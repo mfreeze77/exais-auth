@@ -1,0 +1,37 @@
+{
+  "status": "FAILED",
+  "authentication_complete": false,
+  "full_distribution_approved": false,
+  "source_sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-oss-core-a",
+        "/bin/sh",
+        "-c",
+        "cd /opt/expertauth && find lib plugin -type f -exec sha256sum {} +"
+      ],
+      "exit_code": 0,
+      "log": "command-01.log",
+      "sha256": "f8ec8ea38a1dffc0db6b85fb4ccdf26b1434d73023ffa29d9ae70a27e575950a"
+    }
+  ],
+  "qualified_image_report": {
+    "path": "evidence\\runtime\\oss-core-notices\\preserved-notices-01\\report.json",
+    "sha256": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+  },
+  "config_sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718",
+  "database_container_replaced": false,
+  "volumes_deleted": [],
+  "new_image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+  "preserved_inherited_gradle_volumes": [],
+  "executable_jars_unchanged": 87,
+  "old_image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+  "old_container_id": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729",
+  "error": {
+    "type": "ValueError",
+    "message": "Core already uses the qualified notice image"
+  }
+}

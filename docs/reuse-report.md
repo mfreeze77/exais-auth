@@ -232,3 +232,19 @@ artifacts. Cached discovery responses preserve this snapshot, not a promise that
 Python version, script hash, stdout/stderr, and exit status are persisted for
 new runs under `evidence/reuse/runs/`. The machine-readable evidence and the
 separate implementation ledger control acceptance.
+
+## Runtime notice packaging checkpoint
+
+The notice assembler is now connected to the actual Docker build. Its image
+manifest verifies474 installed files including87 unchanged JARs; Core-a runs that
+image after same-JAR comparison and authenticated storage readiness. All83 available
+source siblings are hash-locked, cached and verified without repeat downloads.
+Five supplemental scrypt/libffi notices are mapped to release bytes and copied
+verbatim. The native review also identified scrypt's C bundle, which must be covered
+alongside Argon2, JNA and SQLite. Detailed file/byte mappings and limits are in
+`docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
+
+Eight real archive/notice tests passed. These checks establish byte preservation,
+input-drift rejection and deterministic notice assembly; they do not approve all
+licenses or satisfy the required independent human review. Missing full notices,
+native source/build/relink conditions and container OS closure remain open.

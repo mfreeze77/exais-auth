@@ -1,0 +1,131 @@
+{
+  "source_sha256": "e33c11ac38a0609b3221519eced526d82aeaee0995b6aeb71689968c58d6c3bf",
+  "original_inventory_sha256": "f1c5eff4a9f8ff674035fc50b4bc2e1ab72885002518a0b89a7fdb41b9242b92",
+  "execute": true,
+  "database_volumes_touched": false,
+  "authentication_complete": false,
+  "results": [
+    {
+      "volume": "c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a",
+      "original_container": "/expertauth-oss-core-b",
+      "status": "retained-nonempty"
+    },
+    {
+      "volume": "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5",
+      "original_container": "/expertauth-oss-core-a",
+      "status": "retained-nonempty"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "volume",
+        "inspect",
+        "c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a"
+      ],
+      "exit_code": 0,
+      "output_sha256": "7ec4271b11b4ce2f075a02f1606c7cb4bfefe20ceb1fe3ee9b6f4c191be39b8b"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "volume=c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a"
+      ],
+      "exit_code": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-empty-gradle-71939e93bc22",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--network",
+        "none",
+        "--read-only",
+        "--mount",
+        "type=volume,source=c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a,target=/audit,readonly,volume-nocopy",
+        "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+        "python",
+        "-c",
+        "from pathlib import Path; import sys; sys.exit(42 if any(Path(\"/audit\").iterdir()) else 0)"
+      ],
+      "exit_code": 42,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-empty-gradle-71939e93bc22$"
+      ],
+      "exit_code": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "volume",
+        "inspect",
+        "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5"
+      ],
+      "exit_code": 0,
+      "output_sha256": "a4075536e443a4239585f97c8074e63f52af2fc0e16b4c73d49e910574706811"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "volume=456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5"
+      ],
+      "exit_code": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-empty-gradle-93b7fd67a59d",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--network",
+        "none",
+        "--read-only",
+        "--mount",
+        "type=volume,source=456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5,target=/audit,readonly,volume-nocopy",
+        "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+        "python",
+        "-c",
+        "from pathlib import Path; import sys; sys.exit(42 if any(Path(\"/audit\").iterdir()) else 0)"
+      ],
+      "exit_code": 42,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-empty-gradle-93b7fd67a59d$"
+      ],
+      "exit_code": 0,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ RUN mkdir -p /opt/expertauth/logs /opt/expertauth/.started /run/expertauth && ch
 COPY --chown=gradle:gradle lib /opt/expertauth/lib
 COPY --chown=gradle:gradle plugin /opt/expertauth/plugin
 COPY --chown=gradle:gradle version.yaml /opt/expertauth/version.yaml
+COPY --chown=gradle:gradle licenses /opt/expertauth/licenses
 USER gradle
 WORKDIR /opt/expertauth
 EXPOSE 3567

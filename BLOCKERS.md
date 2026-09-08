@@ -18,6 +18,10 @@
   legitimate child survival, concurrent refresh and a lost committed response.
 - Dependency distribution: LGPL/EPL/native source/relink notices, container OS review,
   every SDK/plugin transitive closure and version matrix remain incomplete.
+  The runtime now carries a verified notice package and83 locked source siblings
+  are locally available; this does not close those obligations. Four native bundles
+  (scrypt, Argon2, JNA, SQLite) have incomplete build/source provenance. Five
+  supplemental scrypt/libffi notices are preserved with release-byte mappings.
 - External qualification: no authorized live social/CAPTCHA/SMS/cloud provider account
   credentials supplied; native iOS/macOS hardware/toolchain unavailable in this Windows
   environment; physical passkey device/native-platform tests unexecuted. Keep each

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "tools/validate_release.py",
+    "--output",
+    "evidence/integrity/runtime-notice-release-refusal-20260908.json"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788910587.5412297,
+  "elapsed_seconds": 1.115,
+  "input_sha256": {
+    "ledger/implementation.json": "9768a72ab4ab573f255e86c44d50ec178c4e7e95cd35a4b1604c281f0fe4520f",
+    "tools/validate_release.py": "06738c687fdae44568da834c9a8b19477ca2db72fbb19a318301148c1c990ee7"
+  },
+  "inputs_changed": false,
+  "output_sha256": "2029bc6dbc901b30959cfac86b79a510716215d70ed65f0c6b7f258ae99e5ab7",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

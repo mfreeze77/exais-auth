@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "tools/replace_oss_notice_image.py",
+    "--image-report",
+    "evidence/runtime/oss-core-notices/preserved-notices-01/report.json"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788909591.4624875,
+  "elapsed_seconds": 0.204,
+  "input_sha256": {
+    "tools/replace_oss_notice_image.py": "375f2d70155d2c2f4b75314be521ea70997a7fe8b5fdbe3db8f098b075dcb14a",
+    "evidence/runtime/oss-core-notices/preserved-notices-01/report.json": "a73efca831ef282d07b46ac48d65aec299f161db3f5b4059989d3cb0d75aa26a"
+  },
+  "inputs_changed": false,
+  "output_sha256": "b874144812aaa6e25205f6101155ec50be0320b029916aa8b9eed0c61a828607",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

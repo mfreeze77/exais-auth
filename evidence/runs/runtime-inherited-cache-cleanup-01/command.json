@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "tools/retire_empty_gradle_volumes.py",
+    "--execute"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788909806.4882236,
+  "elapsed_seconds": 1.236,
+  "input_sha256": {
+    "tools/retire_empty_gradle_volumes.py": "e33c11ac38a0609b3221519eced526d82aeaee0995b6aeb71689968c58d6c3bf",
+    "evidence/operations/hygiene/20260908T223704Z/containers-before.json": "f1c5eff4a9f8ff674035fc50b4bc2e1ab72885002518a0b89a7fdb41b9242b92"
+  },
+  "inputs_changed": false,
+  "output_sha256": "6ccfaefecc44db8a7bfd206e36057b6ebd1eac96b0bf32c2fdbce3600342e6d4",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}
