@@ -1,0 +1,46 @@
+{
+  "state": "unfrozen-template-not-a-build-lock",
+  "research_date": "2026-09-08",
+  "reference_report_file": "file_00000000c7cc82309746d8702e0f075e",
+  "baseline_counts": {
+    "FDI": 49,
+    "CDI": 156
+  },
+  "selected_engine": null,
+  "core": {
+    "repository": null,
+    "release": null,
+    "full_commit": null,
+    "image_digest": null,
+    "license_manifest": null
+  },
+  "apis": {
+    "fdi_version": null,
+    "cdi_version": null,
+    "schema_artifact_hashes": []
+  },
+  "backend_sdks": {
+    "node": null,
+    "python": null,
+    "go": null
+  },
+  "frontend_sdks": {
+    "javascript": null,
+    "react": null,
+    "react-native": null,
+    "ios": null,
+    "android": null
+  },
+  "plugins": [],
+  "postgresql_release": null,
+  "mcp_authorization_profile": null,
+  "required_freeze_evidence": [
+    "all dependency licenses",
+    "source build logs",
+    "security advisories triaged",
+    "matching API definitions",
+    "SDK feature/version matrix",
+    "permitted reference-test feature access"
+  ],
+  "warning": "Null fields are deliberate unknowns and must not be interpreted as latest, defaults, or validated versions."
+}

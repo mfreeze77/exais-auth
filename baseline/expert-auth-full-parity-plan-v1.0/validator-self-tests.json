@@ -1,0 +1,17 @@
+{
+  "scope": "validator-negative-self-tests-only",
+  "tests": [
+    {
+      "name": "reject unsupported verified status",
+      "passed": true
+    },
+    {
+      "name": "reject work dependency cycle",
+      "passed": true
+    },
+    {
+      "name": "reject missing API operation",
+      "passed": true
+    }
+  ]
+}

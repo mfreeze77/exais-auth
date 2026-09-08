@@ -1,0 +1,23 @@
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-09-08 21:16:16,231 WARN  [org.keycloak.common.Profile] (build-50) Deprecated features identity-brokering-api:v1, twitter-broker:v1 enabled by default. Check the upgrading guide for steps to use later versions if available.
+2026-09-08 21:16:20,749 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 5987ms
+Running the server in development mode. DO NOT use this configuration in production.
+2026-09-08 21:16:22,985 INFO  [org.infinispan.CONTAINER] (main) ISPN000974: Virtual threads support: enabled
+2026-09-08 21:16:23,647 INFO  [org.hibernate.orm.jdbc.batch] (JPA Startup Thread) HHH100501: Automatic JDBC statement batching enabled (maximum batch size 32)
+2026-09-08 21:16:23,669 WARN  [org.keycloak.common.Profile] (main) Deprecated features identity-brokering-api:v1, twitter-broker:v1 enabled by default. Check the upgrading guide for steps to use later versions if available.
+2026-09-08 21:16:24,360 INFO  [org.keycloak.quarkus.runtime.storage.database.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2026-09-08 21:16:26,785 INFO  [org.infinispan.CONTAINER] (main) ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2026-09-08 21:16:27,010 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: node_898256, Site name: null, Cluster name: ISPN
+2026-09-08 21:16:27,099 INFO  [org.keycloak.quarkus.runtime.storage.database.jpa.DatabaseIndexChecker] (db-index-checker) Running database index checker
+2026-09-08 21:16:27,120 INFO  [org.keycloak.models.workflow.WorkflowsEventListenerFactory] (main) Workflow runner task scheduled: next execution at 09:16:27, then every PT12H
+2026-09-08 21:16:27,193 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2026-09-08 21:16:28,368 INFO  [org.keycloak.services] (main) KC-SERVICES0078: Created temporary admin service account with client id expertauth-probe
+2026-09-08 21:16:28,478 INFO  [org.keycloak.services.resources.KeycloakApplication] (main) Bootstrap completed in 4.808000 seconds
+2026-09-08 21:16:28,569 INFO  [io.quarkus] (main) Keycloak 26.7.3 on JVM (powered by Quarkus 3.33.3.1) started in 7.727s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2026-09-08 21:16:28,569 INFO  [io.quarkus] (main) Profile dev activated. 
+2026-09-08 21:16:28,569 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, keycloak, narayana-jta, opentelemetry, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]
+2026-09-08 21:16:31,226 WARN  [org.keycloak.cookie.DefaultCookieProvider] (executor-thread-1) Non-secure context detected; cookies are not secured, and will not be available in cross-origin POST requests. Please review whether this direct HTTP usage is expected.
+2026-09-08 21:16:31,585 WARN  [org.keycloak.cookie.DefaultCookieProvider] (executor-thread-1) Non-secure context detected; cookies are not secured, and will not be available in cross-origin POST requests. Please review whether this direct HTTP usage is expected.
+2026-09-08 21:16:31,655 WARN  [org.keycloak.cookie.DefaultCookieProvider] (executor-thread-1) Non-secure context detected; cookies are not secured, and will not be available in cross-origin POST requests. Please review whether this direct HTTP usage is expected.
+2026-09-08 21:16:31,755 WARN  [org.keycloak.events] (executor-thread-2) type="REFRESH_TOKEN_ERROR", realmId="6cc2f461-e82d-488a-a746-bfbcc2da42a8", realmName="ea-app-a", clientId="alpha", userId="null", sessionId="IXFSlnmfjC1O8Mgy1Q-HBm_Q", ipAddress="192.168.112.3", error="invalid_token", reason="Maximum allowed refresh token reuse exceeded", grant_type="refresh_token", refresh_token_type="Refresh", refresh_token_id="78d15b9f-2cc6-d52e-610c-07d1526cde11", refresh_token_sub="d7b39907-1939-460d-96e6-6e9b09c292ef", client_auth_method="client-secret"
+2026-09-08 21:16:31,786 WARN  [org.keycloak.events] (executor-thread-2) type="REFRESH_TOKEN_ERROR", realmId="6cc2f461-e82d-488a-a746-bfbcc2da42a8", realmName="ea-app-a", clientId="alpha", userId="null", sessionId="IXFSlnmfjC1O8Mgy1Q-HBm_Q", ipAddress="192.168.112.3", error="invalid_token", reason="Session not active", grant_type="refresh_token", refresh_token_type="Refresh", refresh_token_id="8f39ce63-d0c2-7c9b-383f-ae004c135eac", refresh_token_sub="d7b39907-1939-460d-96e6-6e9b09c292ef", client_auth_method="client-secret"

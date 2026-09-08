@@ -1,0 +1,82 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_13
+Built-By: will
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+
+Name: com/lambdaworks/jni/Platform$OS.class
+SHA1-Digest: XWdwH9Am6+GpKk5Emmt/F3oZcuI=
+SHA-256-Digest: EvCY0n2XvEtopNUzS4bwuSsIW1lSCp5/PyH6yVhRbwc=
+
+Name: com/lambdaworks/jni/JarLibraryLoader$1.class
+SHA1-Digest: D4o0tYIP6T0coJyl2+biAljRJ/0=
+SHA-256-Digest: lPYZLwZByz+orkBJLscMYGS/hfmPsQdGSk2IwUjD/t4=
+
+Name: com/lambdaworks/jni/LibraryLoaders.class
+SHA1-Digest: 2/si/CK3xsDi45uLj/b08/RUgi8=
+SHA-256-Digest: z68Wtb0KCKZYYYGN52Igd9dJ210XbNlVN1lOg1nmtEo=
+
+Name: com/lambdaworks/jni/JarLibraryLoader.class
+SHA1-Digest: wxNvc6912+LfL03EYyFawjrYvVM=
+SHA-256-Digest: RjoSPnYsabZs31yTk//aLJF1aBXZJ92rqbb7ZQ6oiEU=
+
+Name: com/lambdaworks/jni/SysLibraryLoader.class
+SHA1-Digest: mr73uYr5qNn8Tji4zXBKZy1xIxU=
+SHA-256-Digest: DUEZRnQYL6Iw27Qa73UAgBfZ/ORCx5FyrwbYIGxyxfA=
+
+Name: com/lambdaworks/jni/LibraryLoader.class
+SHA1-Digest: ZW75A9sjTRGLWnb9XtDfeqKTPHU=
+SHA-256-Digest: Tyno5R//aIL1/e02fpNp8uwi/iw/aZQjjpoFkic7mmE=
+
+Name: lib/x86_64/linux/libscrypt.so
+SHA1-Digest: yaopxaJU2WlBCSeiU8OkfNU/OqU=
+SHA-256-Digest: aRAK1rSWRvf5c4jGTtbZ/fGptgx9z5eHNE6fGJNZw+s=
+
+Name: com/lambdaworks/jni/UnsupportedPlatformException.class
+SHA1-Digest: BscVFRfzXdSBlF77RawAg/PGuQo=
+SHA-256-Digest: grHCULuimUAn1xgsa1NzVZ+/71qbgHep3VNtToUGGrw=
+
+Name: com/lambdaworks/crypto/SCryptUtil.class
+SHA1-Digest: vPnOjpyVvEaha1VYQgQXqUuQRrg=
+SHA-256-Digest: ACEu55DD6l24bmdKcv4jn8rjoo3T/0Ai1Nj7UTneHtE=
+
+Name: com/lambdaworks/crypto/PBKDF.class
+SHA1-Digest: DZUpXs0pKLrnP/q/kbmB09UOcoY=
+SHA-256-Digest: UTB/MN4pFtaLumQJ8yLrtx1Fjb5tfyhw9LUbRi8SpQM=
+
+Name: com/lambdaworks/jni/NilLibraryLoader.class
+SHA1-Digest: rqKhKcgR+GkpHVQPXKXPg/rh38o=
+SHA-256-Digest: f1fF10uP6jqMpNrBz+lK9CIMF7catBvu1aV7QmWeNSo=
+
+Name: lib/x86_64/freebsd/libscrypt.so
+SHA1-Digest: pBxjZliG7tBm9/5sE1FBk+Cs8Ko=
+SHA-256-Digest: jRsghjXVC5aNAYJflK9E8PEG7cRs0HhlK+uPYoLxDzE=
+
+Name: lib/x86_64/darwin/libscrypt.dylib
+SHA1-Digest: 9uATNkCOTuCySuiqGrI1rlV8JSY=
+SHA-256-Digest: gyfs7hxuX+tBdmdmuE4dH/EcO/7h1WzBHbbbBJGeWlg=
+
+Name: META-INF/maven/com.lambdaworks/scrypt/pom.xml
+SHA1-Digest: 3RnoYsLyMyDLo3JgQm54b0Olv0I=
+SHA-256-Digest: ayT557tiVQJB4oYof1J6fcRjZpoLfPWs3lmemYQt5yE=
+
+Name: com/lambdaworks/crypto/SCrypt.class
+SHA1-Digest: g2bb92BiGXHgTWpmclcD90GadLU=
+SHA-256-Digest: itBKuDTf1srAxLLQMNXmIzvoMil7BYb0esbF6ianRng=
+
+Name: com/lambdaworks/codec/Base64.class
+SHA1-Digest: bsZNnVwcqaUL1zdxAL6zHFKfHP4=
+SHA-256-Digest: zrslg6BQ/n3OcSAIMJ97CnbAN0B6xUZR/q6sxdahTYI=
+
+Name: com/lambdaworks/jni/Platform$Arch.class
+SHA1-Digest: T81L+R8OnVsXm510ea/pf4fc/PQ=
+SHA-256-Digest: D6x8gDhvD3U7vbGKY1CvUm5t6NQRB7QSnWjzxwhmCbM=
+
+Name: META-INF/maven/com.lambdaworks/scrypt/pom.properties
+SHA1-Digest: rl6JTKZUPMJNxvJYjn/roCU9QDo=
+SHA-256-Digest: YLk+FlL2dsVO0R7j/f4Osen9YOBVbysX7l0EL/diJkM=
+
+Name: com/lambdaworks/jni/Platform.class
+SHA1-Digest: GLLnViW6HSlGh5NU/CfEEqRp+9A=
+SHA-256-Digest: +s/0a0q8rirmxd6jqUoHWheiG9h4HV9v5W5EDjc6Ht4=
+

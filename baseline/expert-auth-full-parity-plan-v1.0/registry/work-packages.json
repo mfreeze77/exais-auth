@@ -1,0 +1,605 @@
+[
+  {
+    "id": "WP-001",
+    "milestone": "M0",
+    "title": "Freeze documentation and operation contracts",
+    "depends_on": [],
+    "deliverables": [
+      "versioned feature/SDK/plugin/configuration matrix",
+      "205 schema-complete operation records",
+      "documentation change log"
+    ],
+    "exit_gate": "Every researched item maps to a requirement; every relevant contract field is captured or explicitly blocked.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-002",
+    "milestone": "M0",
+    "title": "Audit licenses and reproducible dependency closure",
+    "depends_on": [
+      "WP-001"
+    ],
+    "deliverables": [
+      "source/license/SBOM register",
+      "restricted-content exclusion list",
+      "dependency fetch/build egress allowlist"
+    ],
+    "exit_gate": "No unapproved code or runtime dependency required for the selected unrestricted build.",
+    "responsible_role": "Engineering + licensing review",
+    "status": "planned"
+  },
+  {
+    "id": "WP-003",
+    "milestone": "M0",
+    "title": "Create reference environments and behavioral fixtures",
+    "depends_on": [
+      "WP-001",
+      "WP-002"
+    ],
+    "deliverables": [
+      "owned synthetic reference deployment",
+      "permitted advanced-feature evidence",
+      "golden request/response/state fixtures"
+    ],
+    "exit_gate": "Reference credentials/data are synthetic and authorized; unavailable commercial reference behavior stays marked unverified.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-004",
+    "milestone": "M1",
+    "title": "Run foundation feasibility spike",
+    "depends_on": [
+      "WP-003"
+    ],
+    "deliverables": [
+      "Keycloak mapping proof",
+      "OSS SuperTokens reuse comparison if required",
+      "ADR-001 engine selection"
+    ],
+    "exit_gate": "Critical tenant/link/session/embedded-SDK examples pass without insecure password-grant shortcuts or two credential authorities.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-005",
+    "milestone": "M1",
+    "title": "Implement canonical tenancy and identity mapping",
+    "depends_on": [
+      "WP-004"
+    ],
+    "deliverables": [
+      "invariant-enforced schema",
+      "membership and linking transaction boundaries",
+      "storage partition routing"
+    ],
+    "exit_gate": "Parallel same-email and shared-user tests preserve distinct app/tenant contexts.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-006",
+    "milestone": "M1",
+    "title": "Establish security envelope and build/deployment skeleton",
+    "depends_on": [
+      "WP-004"
+    ],
+    "deliverables": [
+      "private engine/data network",
+      "secret rotation/bootstrap",
+      "CI scaffolding and local launch",
+      "threat model v1"
+    ],
+    "exit_gate": "Unauthenticated private API access fails; secrets never enter browser bundles; production rejects ephemeral persistence.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-007",
+    "milestone": "M1",
+    "title": "Establish adapters and configuration contract",
+    "depends_on": [
+      "WP-005",
+      "WP-006"
+    ],
+    "deliverables": [
+      "private provider interfaces",
+      "FDI/CDI translation skeleton",
+      "base-path/tenant routing validation"
+    ],
+    "exit_gate": "All auth calls resolve explicit app/tenant context; unknown versions fail explicitly.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-008",
+    "milestone": "M2",
+    "title": "Build session authority and transports",
+    "depends_on": [
+      "WP-007"
+    ],
+    "deliverables": [
+      "access/refresh lifecycle",
+      "cookie/header/CSRF middleware",
+      "revocation modes and race tests"
+    ],
+    "exit_gate": "Concurrent refresh/response-loss/replay/rotation tests pass without blanket grace periods.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-009",
+    "milestone": "M2",
+    "title": "Build password and email verification flows",
+    "depends_on": [
+      "WP-008"
+    ],
+    "deliverables": [
+      "password/username/phone configuration",
+      "reset/verification flows",
+      "hash import fixtures"
+    ],
+    "exit_gate": "One-time actions consume atomically; disabled/banned/wrong-tenant users cannot obtain sessions.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-010",
+    "milestone": "M2",
+    "title": "Build message outbox and delivery adapters",
+    "depends_on": [
+      "WP-007"
+    ],
+    "deliverables": [
+      "SMTP/custom mail",
+      "Twilio/custom SMS",
+      "templates and local message sink"
+    ],
+    "exit_gate": "Delivery outage/retry tests do not leak secrets or duplicate authentication effects.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-011",
+    "milestone": "M2",
+    "title": "Build passwordless and invitation flows",
+    "depends_on": [
+      "WP-008",
+      "WP-010"
+    ],
+    "deliverables": [
+      "email/SMS OTP",
+      "magic links and combined mode",
+      "invitations/allowlists"
+    ],
+    "exit_gate": "Resend, replay, brute-force and mail-preview tests pass.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-012",
+    "milestone": "M2",
+    "title": "Complete social provider adapters",
+    "depends_on": [
+      "WP-008",
+      "WP-009"
+    ],
+    "deliverables": [
+      "baseline provider catalog",
+      "custom providers",
+      "Apple callback and multiple-client profiles"
+    ],
+    "exit_gate": "Each baseline provider has a passing permitted live test or a clearly blocked live qualification; mocks alone do not certify provider interoperability.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-013",
+    "milestone": "M3",
+    "title": "Implement transactional linking and ID mapping",
+    "depends_on": [
+      "WP-005",
+      "WP-009",
+      "WP-011",
+      "WP-012"
+    ],
+    "deliverables": [
+      "primary/method identities",
+      "manual/automatic linking",
+      "unlink/conflict recovery"
+    ],
+    "exit_gate": "Same-email and verified-domain shortcuts cannot take over another identity.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-014",
+    "milestone": "M3",
+    "title": "Implement app roles and tenant-scoped assignments",
+    "depends_on": [
+      "WP-013"
+    ],
+    "deliverables": [
+      "role/permission APIs",
+      "backend/frontend guards",
+      "authorization freshness profiles"
+    ],
+    "exit_gate": "Negative resource-ownership and stale-privilege tests pass.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-015",
+    "milestone": "M4",
+    "title": "Implement MFA factors and recovery",
+    "depends_on": [
+      "WP-013",
+      "WP-014"
+    ],
+    "deliverables": [
+      "TOTP/email/SMS factor orchestration",
+      "recovery codes",
+      "per-user/tenant step-up policy"
+    ],
+    "exit_gate": "Factors cannot enroll/remove/recover without the configured evidence and replay controls.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-016",
+    "milestone": "M4",
+    "title": "Implement WebAuthn/passkey lifecycle",
+    "depends_on": [
+      "WP-015"
+    ],
+    "deliverables": [
+      "registration/authentication/recovery",
+      "credential administration",
+      "virtual-authenticator tests"
+    ],
+    "exit_gate": "Wrong origin/RP/challenge and replay attempts fail; physical-platform qualification is separately recorded.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-017",
+    "milestone": "M5",
+    "title": "Implement enterprise discovery and SAML",
+    "depends_on": [
+      "WP-014",
+      "WP-016"
+    ],
+    "deliverables": [
+      "tenant discovery/domain verification",
+      "SAML and external OIDC configurations",
+      "certificate rollover"
+    ],
+    "exit_gate": "Signed assertion issuer/audience/recipient/replay and administrator ownership tests pass.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-018",
+    "milestone": "M5",
+    "title": "Implement OAuth/OIDC provider and unified login",
+    "depends_on": [
+      "WP-017"
+    ],
+    "deliverables": [
+      "clients/scopes/consent",
+      "authorization-code PKCE",
+      "tokens/introspection/revocation/logout"
+    ],
+    "exit_gate": "No ROPC shortcut; issuer/client/redirect/token audience conformance and multi-app logout tests pass.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-019",
+    "milestone": "M5",
+    "title": "Implement machine-to-machine lifecycle",
+    "depends_on": [
+      "WP-018"
+    ],
+    "deliverables": [
+      "client credential provisioning",
+      "secret rotation",
+      "audience-scoped service permissions"
+    ],
+    "exit_gate": "User tokens cannot silently become machine credentials; wrong-audience credentials fail.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-020",
+    "milestone": "M5",
+    "title": "Implement MCP authorization",
+    "depends_on": [
+      "WP-018",
+      "WP-019"
+    ],
+    "deliverables": [
+      "versioned protected-resource metadata",
+      "discovery/resource indicators",
+      "tool-level authorization adapter"
+    ],
+    "exit_gate": "Wrong-resource tokens and authorized-user/unauthorized-tool calls fail; unsupported protocol revision is explicit.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-021",
+    "milestone": "M6",
+    "title": "Build local risk signal acquisition",
+    "depends_on": [
+      "WP-008",
+      "WP-015",
+      "WP-020"
+    ],
+    "deliverables": [
+      "eight signal families",
+      "licensed local datasets",
+      "retention/confidence metadata"
+    ],
+    "exit_gate": "Missing data is unknown rather than a fabricated safe verdict.",
+    "responsible_role": "Security engineering + data evaluation",
+    "status": "planned"
+  },
+  {
+    "id": "WP-022",
+    "milestone": "M6",
+    "title": "Build risk policies, actions and evaluation",
+    "depends_on": [
+      "WP-021"
+    ],
+    "deliverables": [
+      "allow/challenge/step-up/deny engine",
+      "explainable audit",
+      "quality test corpus and false-positive report"
+    ],
+    "exit_gate": "All actions enforce policy, quality targets are declared before measurement, and failures remain visible.",
+    "responsible_role": "Security engineering + independent reviewer",
+    "status": "planned"
+  },
+  {
+    "id": "WP-023",
+    "milestone": "M6",
+    "title": "Build local and optional CAPTCHA adapters",
+    "depends_on": [
+      "WP-022"
+    ],
+    "deliverables": [
+      "local challenge",
+      "reCAPTCHA v2/v3 and Turnstile adapters",
+      "accessible flow integration"
+    ],
+    "exit_gate": "No vendor key is required for the local default; challenge replay or flow substitution fails.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-024",
+    "milestone": "M7",
+    "title": "Build user lifecycle and self-service profile",
+    "depends_on": [
+      "WP-013",
+      "WP-014",
+      "WP-016"
+    ],
+    "deliverables": [
+      "profile/metadata/search/counts",
+      "ban/deletion workflows",
+      "progressive profiling"
+    ],
+    "exit_gate": "Protected-field mass assignment and profile-gate bypass tests fail safely.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-025",
+    "milestone": "M7",
+    "title": "Build authentication UI and extension contracts",
+    "depends_on": [
+      "WP-016",
+      "WP-017",
+      "WP-023"
+    ],
+    "deliverables": [
+      "prebuilt/headless/embedded forms",
+      "translations/themes/overrides",
+      "accessibility tests"
+    ],
+    "exit_gate": "Every error/loading/recovery state has a tested UI; server enforcement survives bypassing UI.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-026",
+    "milestone": "M7",
+    "title": "Build admin/customer console",
+    "depends_on": [
+      "WP-022",
+      "WP-024",
+      "WP-025"
+    ],
+    "deliverables": [
+      "admin MFA/session management",
+      "delegated tenant/provider admin",
+      "audited sensitive actions"
+    ],
+    "exit_gate": "Tenant administrators cannot obtain platform scope or view another tenant’s credentials/configuration.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-027",
+    "milestone": "M7",
+    "title": "Close fourteen-plugin parity",
+    "depends_on": [
+      "WP-023",
+      "WP-024",
+      "WP-025",
+      "WP-026"
+    ],
+    "deliverables": [
+      "plugin ports/adapters",
+      "plugin API/version matrix",
+      "self-hosted OpenTelemetry export"
+    ],
+    "exit_gate": "Both server and frontend plugin halves pass lifecycle and customization tests.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-028",
+    "milestone": "M8",
+    "title": "Complete Node/Python/Go backend SDK profiles",
+    "depends_on": [
+      "WP-027"
+    ],
+    "deliverables": [
+      "three backend distributions",
+      "middleware/framework bindings",
+      "recipe-specific support matrix"
+    ],
+    "exit_gate": "Each baseline SDK profile builds and passes contracts; unsupported upstream features are not invented as prior parity.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-029",
+    "milestone": "M8",
+    "title": "Complete web, React and mobile frontend profiles",
+    "depends_on": [
+      "WP-028"
+    ],
+    "deliverables": [
+      "five frontend distributions",
+      "refresh/storage/deep-link tests",
+      "unmodified/forked compatibility labels"
+    ],
+    "exit_gate": "Browser/native lifecycle tests and selected OS/SDK build evidence exist.",
+    "responsible_role": "Web + mobile engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-030",
+    "milestone": "M8",
+    "title": "Complete framework/platform integration samples",
+    "depends_on": [
+      "WP-028",
+      "WP-029"
+    ],
+    "deliverables": [
+      "all original integration profiles",
+      "CI fixtures",
+      "operator setup documentation"
+    ],
+    "exit_gate": "Each example is runnable and tested; paid hosting is never the only deployable option.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-031",
+    "milestone": "M8",
+    "title": "Build migration/import/reconciliation/rollback",
+    "depends_on": [
+      "WP-013",
+      "WP-016",
+      "WP-028"
+    ],
+    "deliverables": [
+      "bulk/lazy/Rownd migration tools",
+      "session bridge",
+      "identity/factor/membership reconciliation"
+    ],
+    "exit_gate": "No unexplained data delta; nonportable sessions/passkeys are declared, not silently lost.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-032",
+    "milestone": "M9",
+    "title": "Qualify clustering, performance and dependency failure",
+    "depends_on": [
+      "WP-027",
+      "WP-030",
+      "WP-031"
+    ],
+    "deliverables": [
+      "multi-replica topology",
+      "capacity report",
+      "failure/load/concurrency runs"
+    ],
+    "exit_gate": "Chosen measured latency/capacity targets hold; dependency outages follow declared fail-open/closed policy.",
+    "responsible_role": "Platform operations",
+    "status": "planned"
+  },
+  {
+    "id": "WP-033",
+    "milestone": "M9",
+    "title": "Qualify backup, restore, key lifecycle and upgrades",
+    "depends_on": [
+      "WP-032"
+    ],
+    "deliverables": [
+      "restore evidence",
+      "signing/secret rotation",
+      "upgrade and rollback runbooks"
+    ],
+    "exit_gate": "An independent clean deployment restores correctly without resurrecting revoked credentials or relying on lost encryption keys.",
+    "responsible_role": "Platform operations",
+    "status": "planned"
+  },
+  {
+    "id": "WP-034",
+    "milestone": "M9",
+    "title": "Qualify sovereignty and no-fee execution",
+    "depends_on": [
+      "WP-033"
+    ],
+    "deliverables": [
+      "deny-by-default auth-vendor egress run",
+      "SBOM/build validation",
+      "local risk and challenge run"
+    ],
+    "exit_gate": "Full local feature profile runs without entitlement servers, vendor dashboard login or trial expiry.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-035",
+    "milestone": "M10",
+    "title": "Close all operation/SDK compatibility contracts",
+    "depends_on": [
+      "WP-028",
+      "WP-029",
+      "WP-034"
+    ],
+    "deliverables": [
+      "205-operation final dispositions",
+      "schema and differential reports",
+      "versioned compatibility exceptions"
+    ],
+    "exit_gate": "No missing business behavior or undocumented claimed compatibility; no success stubs.",
+    "responsible_role": "Platform engineering",
+    "status": "planned"
+  },
+  {
+    "id": "WP-036",
+    "milestone": "M10",
+    "title": "Independent security assessment and release decision",
+    "depends_on": [
+      "WP-035"
+    ],
+    "deliverables": [
+      "review findings/remediation evidence",
+      "265-row acceptance report",
+      "production release decision"
+    ],
+    "exit_gate": "All required rows verified with evidence; critical/high exploitable issues resolved; quality/operations limits disclosed.",
+    "responsible_role": "Independent security reviewer + product owner",
+    "status": "planned"
+  }
+]

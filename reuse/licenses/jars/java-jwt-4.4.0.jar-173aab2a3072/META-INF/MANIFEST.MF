@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: java-jwt
+Implementation-Version: 4.4.0
+Multi-Release: true
+

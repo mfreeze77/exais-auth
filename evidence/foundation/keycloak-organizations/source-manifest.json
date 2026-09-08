@@ -1,0 +1,78 @@
+{
+  "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+  "fetched_at": "2026-09-08T21:37:37.441610+00:00",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/integration/admin-client/src/main/java/org/keycloak/admin/client/resource/OrganizationMemberResource.java",
+      "source_path": "integration/admin-client/src/main/java/org/keycloak/admin/client/resource/OrganizationMemberResource.java",
+      "file": "evidence/foundation/keycloak-organizations/source/integration__admin-client__src__main__java__org__keycloak__admin__client__resource__OrganizationMemberResource.java",
+      "sha256": "47a04cc70271d1340ae759c88eb1b9d7747c509b6304f7749dc93b2e8e4b38f7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/admin/resource/OrganizationMemberResource.java",
+      "source_path": "services/src/main/java/org/keycloak/organization/admin/resource/OrganizationMemberResource.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__organization__admin__resource__OrganizationMemberResource.java",
+      "sha256": "9728f32ef88125d7cf83c0d397cc2cca934657ca1855a6839c47aa98b6f39c1c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/authentication/authenticators/broker/IdpAddOrganizationMemberAuthenticator.java",
+      "source_path": "services/src/main/java/org/keycloak/organization/authentication/authenticators/broker/IdpAddOrganizationMemberAuthenticator.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__organization__authentication__authenticators__broker__IdpAddOrganizationMemberAuthenticator.java",
+      "sha256": "8bbe39fb727da1cc54bae68ebdfb74c52d3235ac551dc7e0affa562b33dce6b8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/authentication/authenticators/broker/IdpOrganizationAuthenticatorFactory.java",
+      "source_path": "services/src/main/java/org/keycloak/organization/authentication/authenticators/broker/IdpOrganizationAuthenticatorFactory.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__organization__authentication__authenticators__broker__IdpOrganizationAuthenticatorFactory.java",
+      "sha256": "7c924660f631f7397a2515e0e2d84ade141a7ead5e88c332ca01366770c25d28"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/authentication/authenticators/browser/OrganizationAuthenticator.java",
+      "source_path": "services/src/main/java/org/keycloak/organization/authentication/authenticators/browser/OrganizationAuthenticator.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__organization__authentication__authenticators__browser__OrganizationAuthenticator.java",
+      "sha256": "9b6cbe9ddb881007be277565261cf8e104714ad0e164f4fe32af29ed541f94e0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/authentication/authenticators/browser/OrganizationAuthenticatorFactory.java",
+      "source_path": "services/src/main/java/org/keycloak/organization/authentication/authenticators/browser/OrganizationAuthenticatorFactory.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__organization__authentication__authenticators__browser__OrganizationAuthenticatorFactory.java",
+      "sha256": "518f638013f285c155d305a50fb6454c125b9559de8a2b6d085f559e3ed0656c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/protocol/mappers/oidc/OrganizationScope.java",
+      "source_path": "services/src/main/java/org/keycloak/organization/protocol/mappers/oidc/OrganizationScope.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__organization__protocol__mappers__oidc__OrganizationScope.java",
+      "sha256": "cfd996d8b69a658aa915d7576cfe8a8972ca7feec1d767a3838a94f3676838e2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/protocol/oidc/endpoints/LogoutEndpoint.java",
+      "source_path": "services/src/main/java/org/keycloak/protocol/oidc/endpoints/LogoutEndpoint.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__protocol__oidc__endpoints__LogoutEndpoint.java",
+      "sha256": "9788cc45b36ec1043a8708bac36a75d987a6fe613476848aea48a380e92e01dc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/themes/src/main/resources/theme/base/login/messages/messages_en.properties",
+      "source_path": "themes/src/main/resources/theme/base/login/messages/messages_en.properties",
+      "file": "evidence/foundation/keycloak-organizations/source/themes__src__main__resources__theme__base__login__messages__messages_en.properties",
+      "sha256": "ef5a600a518a40799d4ac32d812bcbc2b8037113097fa9b78ed612949c859762"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/themes/src/main/resources/theme/keycloak.v2/login/messages/messages_en.properties",
+      "source_path": "themes/src/main/resources/theme/keycloak.v2/login/messages/messages_en.properties",
+      "file": "evidence/foundation/keycloak-organizations/source/themes__src__main__resources__theme__keycloak.v2__login__messages__messages_en.properties",
+      "sha256": "eae6ed80d45d405393dda0fe30bd382076d3b58830f3a205603c50a66bd77add"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/themes/src/main/resources/theme/keycloak/login/messages/messages_en.properties",
+      "source_path": "themes/src/main/resources/theme/keycloak/login/messages/messages_en.properties",
+      "file": "evidence/foundation/keycloak-organizations/source/themes__src__main__resources__theme__keycloak__login__messages__messages_en.properties",
+      "sha256": "e09d08a132f8c0930fad642dd62c44bd5bfa74066b83b96ce44fbba4afd0ba5e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/protocol/oidc/endpoints/TokenRevocationEndpoint.java",
+      "source_path": "services/src/main/java/org/keycloak/protocol/oidc/endpoints/TokenRevocationEndpoint.java",
+      "file": "evidence/foundation/keycloak-organizations/source/services__src__main__java__org__keycloak__protocol__oidc__endpoints__TokenRevocationEndpoint.java",
+      "sha256": "a0c552612a3e92589ad3cb6429d4406ab973a6d1c96c8ac8d834bea58e7458ac"
+    }
+  ]
+}

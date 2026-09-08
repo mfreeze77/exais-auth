@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: tomcat-annotations-api
+Bundle-SymbolicName: org.apache.tomcat-annotations-api
+Bundle-Version: 11.0.25
+Export-Package: jakarta.annotation;version="3.0",jakarta.annotation.se
+ curity;version="3.0",jakarta.annotation.sql;version="3.0"
+Import-Package: java.lang,java.lang.annotation
+Provide-Capability: osgi.contract;osgi.contract=JakartaAnnotations;ver
+ sion:Version="3.0";uses:="jakarta.annotation,jakarta.annotation.secur
+ ity,jakarta.annotation.sql"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
+X-Compile-Source-JDK: 17
+X-Compile-Target-JDK: 17
+
+Name: jakarta/annotation/
+Implementation-Title: jakarta.annotation
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 3.0
+Specification-Title: Jakarta Annotations
+Specification-Vendor: Eclipse Foundation
+Specification-Version: 3.0
+
+Name: jakarta/annotation/security/
+Implementation-Title: jakarta.annotation
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 3.0
+Specification-Title: Jakarta Annotations
+Specification-Vendor: Eclipse Foundation
+Specification-Version: 3.0
+
+Name: jakarta/annotation/sql/
+Implementation-Title: jakarta.annotation
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 3.0
+Specification-Title: Jakarta Annotations
+Specification-Vendor: Eclipse Foundation
+Specification-Version: 3.0
+

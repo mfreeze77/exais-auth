@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\baseline\\expert-auth-full-parity-plan-v1.0\\tools\\validate_plan.py",
+    "--output",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\baseline\\plan-validation.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"validation_scope\": \"planning-inventory-integrity-only\",\n  \"result\": \"passed\",\n  \"baseline_date\": \"2026-09-08\",\n  \"counts\": {\n    \"required_requirements\": 265,\n    \"families\": 29,\n    \"milestones\": 11,\n    \"work_packages\": 36,\n    \"api_operations\": 205,\n    \"api_by_surface\": {\n      \"FDI\": 49,\n      \"CDI\": 156\n    },\n    \"sdk_profiles\": 8,\n    \"plugin_packages\": 14,\n    \"integration_profiles\": 10,\n    \"planned_acceptance_and_contract_test_ids\": 470,\n    \"verified_implementation_requirements\": 0,\n    \"schema_complete_operations\": 0\n  },\n  \"errors\": [],\n  \"limitations\": [\n    \"No authentication implementation is supplied or tested.\",\n    \"No source build or immutable baseline pin has been validated.\",\n    \"API paths and schemas remain capture tasks; names and methods alone are not an OpenAPI contract.\",\n    \"Test IDs describe planned checks, not executable authentication tests.\"\n  ]\n}\n",
+  "stderr": ""
+}

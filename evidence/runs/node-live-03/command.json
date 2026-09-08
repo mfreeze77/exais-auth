@@ -1,0 +1,30 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-oss-proof",
+    "--env-file",
+    ".runtime/oss-core/runtime.env",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth/examples/node-react:/app:ro",
+    "-w",
+    "/app",
+    "node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436",
+    "node",
+    "--test",
+    "test/live.test.js"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788904353.478115,
+  "elapsed_seconds": 3.043,
+  "input_sha256": {
+    "examples/node-react/test/live.test.js": "2dd95d103a05d3c09fbeef19e6cb5ed5201bca409e6c70b92d5067b40c88d61b",
+    "examples/node-react/server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "inputs_changed": false,
+  "output_sha256": "1a485cc14c51f719121f83bb6cdd2cdba101a330740646eed0c7d0a20e812838",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

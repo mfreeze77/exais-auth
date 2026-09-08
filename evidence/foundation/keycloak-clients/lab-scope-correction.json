@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-09-08T22:11:12.019777+00:00",
+  "scope": "Private disposable candidate engine import only",
+  "change": {
+    "client": "expertauth-node-candidate",
+    "defaultClientScopes_before": [],
+    "defaultClientScopes_after": [
+      "basic"
+    ]
+  },
+  "purpose": "Use maintained built-in basic scope to emit signed subject; keep API sub validation required",
+  "source_private_import_sha256": "00c7110f779fe755ee0509be539265a9c799511c0ee5c8f50015238763188755",
+  "corrected_private_import_sha256": "b12c11df93d828549c2eaad586df4c67ebf3dd3763e9d6910f605d45810f892f",
+  "script_sha256": "bd63cac1a225497ac479c632362cd614ae05f420021f1819c38411f6eb41f108",
+  "original_lab_modified": false,
+  "password_grant": false
+}

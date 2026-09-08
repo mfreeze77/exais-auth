@@ -1,0 +1,195 @@
+[
+  {
+    "assets": [
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-26.7.3.tar.gz",
+        "digest": "sha256:77657f30b7e90d70f727712ce1c967f430fd6a5e9f458d32d8c6df0635345f47",
+        "name": "keycloak-26.7.3.tar.gz",
+        "size": 176448763
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-26.7.3.tar.gz.asc",
+        "digest": "sha256:128903d42c4b10e189cc922a89b3671ab60b8dbcd4f6b90091bc21751e54b7e6",
+        "name": "keycloak-26.7.3.tar.gz.asc",
+        "size": 228
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-26.7.3.zip",
+        "digest": "sha256:27a6535553c3cdcd083872ba40629efafb3475e3b758e0c6f691395561dd0f1f",
+        "name": "keycloak-26.7.3.zip",
+        "size": 176710367
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-26.7.3.zip.asc",
+        "digest": "sha256:920de927a1c4a6906783b49edd86a47fa4f7e7ded438fce8cdc0e0e8a879a090",
+        "name": "keycloak-26.7.3.zip.asc",
+        "size": 228
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-account-ui-26.7.3.tgz",
+        "digest": "sha256:858ff5f3c6ec8b82bb92b343ac5b62e8267c4511106386d46923db4facc5cfe3",
+        "name": "keycloak-account-ui-26.7.3.tgz",
+        "size": 788910
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-admin-client-26.7.3.tgz",
+        "digest": "sha256:d2239b6dc5f12275813ac6f8b0e3c6344dd219b8b7a02cdb998eb8a6fba35101",
+        "name": "keycloak-admin-client-26.7.3.tgz",
+        "size": 78687
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-admin-ui-26.7.3.tgz",
+        "digest": "sha256:8f0201f24aabdd3ba6e4257d2f6ba847a0899a40f698a084698a6c7360e19475",
+        "name": "keycloak-admin-ui-26.7.3.tgz",
+        "size": 3780703
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-api-docs-26.7.3.zip",
+        "digest": "sha256:1446e56ce56f096c5c58166292364e704daa3491b250bc33d31a004ebe3bb59a",
+        "name": "keycloak-api-docs-26.7.3.zip",
+        "size": 33594648
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-api-docs-26.7.3.zip.asc",
+        "digest": "sha256:789787529fe19fc2c45b6a527ec857ea7721ea3ca951748bcddd9e883cc06e36",
+        "name": "keycloak-api-docs-26.7.3.zip.asc",
+        "size": 228
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-documentation-26.7.3.zip",
+        "digest": "sha256:ba96667f5448f8427478b681eb43348d8c6cb424855b23e59069704def0ff5cd",
+        "name": "keycloak-documentation-26.7.3.zip",
+        "size": 27771024
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-documentation-26.7.3.zip.asc",
+        "digest": "sha256:f7336427e81a006279c2e639f567e6a6b25cb220a0f28e6c716bfe29b4d0357e",
+        "name": "keycloak-documentation-26.7.3.zip.asc",
+        "size": 228
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/keycloak-ui-shared-26.7.3.tgz",
+        "digest": "sha256:8d04152fa747b22110982304858de4931145250fdb10804db13d80834ca1c4e5",
+        "name": "keycloak-ui-shared-26.7.3.tgz",
+        "size": 86071
+      },
+      {
+        "browser_download_url": "https://github.com/keycloak/keycloak/releases/download/26.7.3/third-party-notice-keycloak.html",
+        "digest": "sha256:bdc05dd0dddb361bf2658b911bb0ff4686ccab9262db78b2da8cd1bafe6d39bf",
+        "name": "third-party-notice-keycloak.html",
+        "size": 7408323
+      }
+    ],
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "files": [
+      {
+        "bytes": 11358,
+        "provenance": {
+          "bytes": 11358,
+          "fetched_at": "2026-09-08T21:12:10.659659+00:00",
+          "final_url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/LICENSE.txt",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/LICENSE.txt"
+        },
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "source_path": "LICENSE.txt"
+      },
+      {
+        "bytes": 83840,
+        "provenance": {
+          "bytes": 83840,
+          "fetched_at": "2026-09-08T21:12:11.060656+00:00",
+          "final_url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/pom.xml",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "580b6e662d1ba6f85ec12e1b3f451117300f02876274099892d4d4e0d0fa545c",
+          "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/pom.xml"
+        },
+        "sha256": "580b6e662d1ba6f85ec12e1b3f451117300f02876274099892d4d4e0d0fa545c",
+        "source_path": "pom.xml"
+      }
+    ],
+    "published_at": "2026-08-31T09:29:37Z",
+    "release": "26.7.3",
+    "release_notes": "<div>\n\n<h2>Upgrading</h2>\n<p>Before upgrading refer to <a href=\"https://www.keycloak.org/docs/latest/upgrading/#migration-changes\">the migration guide</a> for a complete list of changes.</p>\n\n<h2>All resolved issues</h2>\n\n<h3>Security fixes</h3>\n<ul>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50785\">#50785</a> CVE-2026-35563:  LDAP client implementation in version 2.1.7 does not verify if the server certificate matches the intended LDAP hostname <code>ldap</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50997\">#50997</a> [CVE-2026-16093] Required signed-JWT assertion policy can be bypassed with unsigned assertion headers <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50998\">#50998</a> [CVE-2026-16072] Organization managers can create managed members through stored registration links without manage-users <code>organizations</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51001\">#51001</a> [CVE-2026-16108] Realm default-group reads disclose hidden groups under FGAP v2 <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51002\">#51002</a> [CVE-2026-16105] Missing per-role authorization on RoleContainerResource composite endpoints <code>admin/rbac</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51003\">#51003</a> [CVE-2026-16089] Authorization codes can be retargeted to another client session <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51005\">#51005</a> [CVE-2026-16104] Authenticator config surfaces expose raw reCAPTCHA secrets <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51112\">#51112</a> [CVE-2026-16106] Incorrect authorization in admin role-composite deletion allows delegated admin to remove privileged child roles <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51142\">#51142</a> [CVE-2026-17059] Information disclosure: GET /roles/{role}/users returns user PII without the per-user view filter <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51279\">#51279</a> [CVE-2026-18218] Client not-before revocation is ignored when realm not-before is older but nonzero <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51282\">#51282</a> [CVE-2026-18215] Microsoft external access-token exchange bypasses configured tenant <code>token-exchange</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51283\">#51283</a> [CVE-2026-18201] Generic identity-provider creation can bind brokers to organizations without manage-organizations <code>organizations</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51286\">#51286</a> [CVE-2026-18209] Incomplete fix for redirect_uri OIDC response-parameter injection: forbidden-parameter check (commit 18832bca) inspects only the query string, not the URL fragment <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51287\">#51287</a> [CVE-2026-18214] Google external access-token exchange bypasses hosted-domain restriction <code>token-exchange</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51378\">#51378</a> [CVE-2026-18571] FGAP V2: Group assignment bypass during user creation (POST /users) allows adding unpermitted groups <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51379\">#51379</a> [CVE-2026-18572] UMA claim token can override the authorization time-policy clock <code>authorization-services</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51380\">#51380</a> [CVE-2026-18573] Client access-type condition evaluates updates against the old client type <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51382\">#51382</a> [CVE-2026-18570] Full-scope-disabled client policy validation can be bypassed by omitting fullScopeAllowed <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51745\">#51745</a> [CVE-2026-19729] Incomplete fix for CVE-2026-9083 \u2014 relative path traversal still enables filesystem probing in 26.6.4 <code>core</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/52028\">#52028</a> [CVE-2026-79652] Keycloak jwt-bearer authorization grant does not enforce consentRequired <code>oidc</code></li>\n</ul>\n\n<h3>Weaknesses</h3>\n<ul>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50581\">#50581</a> Admin API: User/group role-mapping endpoints disclose hidden client role metadata under FGAP v2 <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50583\">#50583</a> Admin API: Composite role endpoints do not filter child roles by FGAP v2 view permission <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50990\">#50990</a> Admin UI extension effective-role endpoints disclose hidden composite roles <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51143\">#51143</a> Aggregate policy partial evaluation diverges from runtime semantics under FGAP v2 <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51144\">#51144</a> Partial evaluation misses ancestor group policies with extendChildren <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51202\">#51202</a> Client-protocol condition can be bypassed on admin client creation by omitting protocol <code>oidc</code></li>\n</ul>\n\n\n\n\n\n<h3>Bugs</h3>\n<ul>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50825\">#50825</a> Creating an organization without a domain leads to an error <code>organizations</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/50963\">#50963</a> V1 token-exchange strips the DPoP sender-constraint from a bound access token <code>token-exchange</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51510\">#51510</a> SQLGrammarException: The incoming request has too many parameters <code>core</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51523\">#51523</a> Sustained high CPU on all nodes after upgrade <code>admin/api</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51554\">#51554</a> Admin API per-request cost grows super-linearly with realm count since 26.7.1 <code>admin/api</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51589\">#51589</a> NPE in RoleUtils.expandCompositeRoles when a cached client scope references a deleted role <code>core</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51602\">#51602</a> Invalid redirect on https://access.redhat.com/products/red-hat-single-sign-on/ <code>docs</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51707\">#51707</a> Lightweight access token role resolution resolves all roles across all realms on every admin API request <code>core</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51712\">#51712</a> Logout URL does not allow OIDC response parameters in its redirect_url <code>oidc</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51780\">#51780</a> SSSD CI job fails: FreeIPA container crashes on ubuntu-24.04 runner image 20260810.271 <code>ci</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51785\">#51785</a> Multiple CVEs inherited from Apache DS used for testing </li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51790\">#51790</a> Java Distribution IT/UT (windows-latest, temurin, 21) times out regularly <code>ci</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51792\">#51792</a> AsyncCommitIntegrator Aurora detection logs \"ERROR: function aurora_version() does not exist\" in the PostgreSQL server log on every startup </li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51807\">#51807</a> Client scope boundary bypassed when resolving admin roles via KeycloakIdentity <code>admin/fine-grained-permissions</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51902\">#51902</a> Index modifiers are not logged if an index is not created due to a threshold <code>core</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51920\">#51920</a> Error: 1020-HY000: Record has changed since last read in table OFFLINE_CLIENT_SESSION </li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/51983\">#51983</a> [26.7.2] Regression in UI in JS keycloak-admin-client </li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/52017\">#52017</a> SAML ECP faultstring discloses client existence, incomplete fix of CVE-2026-9794 <code>saml</code></li>\n<li><a href=\"https://github.com/keycloak/keycloak/issues/52038\">#52038</a> Client session note removals are not persisted with persistent user sessions <code>core</code></li>\n</ul>\n\n</div>",
+    "release_url": "https://github.com/keycloak/keycloak/releases/tag/26.7.3",
+    "repository": "keycloak/keycloak"
+  },
+  {
+    "assets": [],
+    "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+    "files": [
+      {
+        "bytes": 10732,
+        "provenance": {
+          "bytes": 10732,
+          "fetched_at": "2026-09-08T21:12:24.906094+00:00",
+          "final_url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005",
+          "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+        },
+        "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005",
+        "source_path": "LICENSE.md"
+      },
+      {
+        "bytes": 2240,
+        "provenance": {
+          "bytes": 2240,
+          "fetched_at": "2026-09-08T21:12:25.073724+00:00",
+          "final_url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/ee/LICENSE.md",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "b064ac24cf37a718dd1ab58a9749ff5f6fcdf97f7c3ea8150468ba452b57af21",
+          "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/ee/LICENSE.md"
+        },
+        "sha256": "b064ac24cf37a718dd1ab58a9749ff5f6fcdf97f7c3ea8150468ba452b57af21",
+        "source_path": "ee/LICENSE.md"
+      },
+      {
+        "bytes": 10695,
+        "provenance": {
+          "bytes": 10695,
+          "fetched_at": "2026-09-08T21:12:25.286293+00:00",
+          "final_url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/build.gradle",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "7a6bace8a2a873be64e544c80c4947a1de26a904a30e07c272d5ea98beb35661",
+          "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/build.gradle"
+        },
+        "sha256": "7a6bace8a2a873be64e544c80c4947a1de26a904a30e07c272d5ea98beb35661",
+        "source_path": "build.gradle"
+      },
+      {
+        "bytes": 0,
+        "provenance": {
+          "bytes": 0,
+          "fetched_at": "2026-09-08T21:12:25.481185+00:00",
+          "final_url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/settings.gradle",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/settings.gradle"
+        },
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_path": "settings.gradle"
+      },
+      {
+        "http_error": 404,
+        "source_path": "gradle.properties"
+      },
+      {
+        "http_error": 404,
+        "source_path": ".gitmodules"
+      }
+    ],
+    "published_at": "2026-09-04T12:53:23Z",
+    "release": "v12.2.0",
+    "release_notes": "## What's Changed\n* fix: verify database schema at startup and fail loudly on missing tables/columns by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1387\n* fix: Fix config updates for CUDs that have multiple tenants by @bcbogdan in https://github.com/supertokens/supertokens-core/pull/1384\n* fix: bulk import no longer borrows from the live connection pool by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1385\n* test: reproduce duplicate access token signing keys on concurrent rotation by @mchoopani in https://github.com/supertokens/supertokens-core/pull/1389\n* feat: single-flight signing key cache refresh - readers serve stale during rotation by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1398\n* fix: update OTel javaagent to 2.29.0 and pin httpclient5/httpcore5 to CVE-fixed versions by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1406\n* fix: SAML login redirect uses & when the IdP SSO URL already has a query string by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1412\n* fix: enforce dashboard session expiry at verification time (GHSA-w9fp-wv6g-pqv8) by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1409\n* ci: automate migration-script awareness at core releases by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1383\n* fix: session refresh never holds two DB connections at once by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1413\n* fix: upgrade embedded Tomcat 11.0.22 -> 11.0.25 for critical CVEs by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1416\n* ci: use BACKEND_APIS_PR_KEY for the backend-apis migration PR job by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1417\n* ci: fix backend-apis release branch + make GitHub release creation idempotent by @tamassoltesz in https://github.com/supertokens/supertokens-core/pull/1418\n\n## New Contributors\n* @mchoopani made their first contribution in https://github.com/supertokens/supertokens-core/pull/1389\n\n**Full Changelog**: https://github.com/supertokens/supertokens-core/compare/v12.1.1...v12.2.0",
+    "release_url": "https://github.com/supertokens/supertokens-core/releases/tag/v12.2.0",
+    "repository": "supertokens/supertokens-core"
+  }
+]

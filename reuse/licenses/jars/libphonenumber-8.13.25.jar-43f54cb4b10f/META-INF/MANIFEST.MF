@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Build-Jdk-Spec: 17
+Bnd-LastModified: 1699435513511
+Bundle-Description: Google's common Java library for parsing, formatting
+ , storing and validating international phone numbers.    Optimized for 
+ running on smartphones.
+Bundle-DocURL: http://www.google.com/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: libphonenumber
+Bundle-SymbolicName: com.googlecode.libphonenumber
+Bundle-Vendor: Google
+Bundle-Version: 8.13.25
+Eclipse-ExtensibleAPI: true
+Export-Package: com.google.i18n.phonenumbers;version="8.13.25"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+Tool: Bnd-6.3.1.202206071316
+

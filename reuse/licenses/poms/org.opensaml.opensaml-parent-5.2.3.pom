@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.shibboleth</groupId>
+        <artifactId>parent</artifactId>
+        <version>17.2.3</version>
+    </parent>
+
+    <name>OpenSAML</name>
+    <description>
+        A library for creating, reading, writing and performing some processing of SAML messages.
+
+        For further information see https://wiki.shibboleth.net/confluence/display/OS30/Home
+    </description>
+
+    <groupId>org.opensaml</groupId>
+    <artifactId>opensaml-parent</artifactId>
+    <version>5.2.3</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>opensaml-core-api</module>
+        <module>opensaml-storage-api</module>
+        <module>opensaml-security-api</module>
+        <module>opensaml-xmlsec-api</module>
+        <module>opensaml-messaging-api</module>
+        <module>opensaml-soap-api</module>
+        <module>opensaml-saml-api</module>
+        <module>opensaml-xacml-api</module>
+        <module>opensaml-xacml-saml-api</module>
+        <module>opensaml-profile-api</module>
+
+        <module>opensaml-core-impl</module>
+        <module>opensaml-storage-impl</module>
+        <module>opensaml-security-impl</module>
+        <module>opensaml-xmlsec-impl</module>
+        <module>opensaml-messaging-impl</module>
+        <module>opensaml-soap-impl</module>
+        <module>opensaml-saml-impl</module>
+        <module>opensaml-xacml-impl</module>
+        <module>opensaml-xacml-saml-impl</module>
+        <module>opensaml-profile-impl</module>
+        
+        <module>opensaml-spring</module>
+
+        <module>opensaml-testing</module>
+
+        <module>opensaml-bom</module>
+    </modules>
+
+    <properties>
+        <shibboleth.projectName>java-opensaml</shibboleth.projectName>
+        <shib-shared.groupId>net.shibboleth</shib-shared.groupId>
+        <shib-shared.version>9.2.3</shib-shared.version>
+        <checkstyle.configLocation>${project.basedir}/resources/checkstyle/checkstyle.xml</checkstyle.configLocation>
+    </properties>
+
+    <!-- Dependencies which are required by every single project module should go here and will be inherited by all modules. -->
+    <dependencies>
+        <!-- Compile Dependencies -->
+        <dependency>
+            <groupId>${slf4j.groupId}</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>${shib-shared.groupId}</groupId>
+            <artifactId>shib-support</artifactId>
+        </dependency>
+
+        <!-- Provided Dependencies -->
+
+        <!-- Runtime Dependencies -->
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>        
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Dependencies which are not required by every project module but for which every module should use the same version
+        of the dependency should go here. That is to say, placing a dependency here allows one to "peg" the version of the artifact
+        used by all project modules. -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Compile Dependencies -->
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-cli</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-networking</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-networking-spring</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-security</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-security-spring</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-service</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-spring</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-support</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-velocity</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-velocity-spring</artifactId>
+                <version>${shib-shared.version}</version>
+            </dependency>
+
+            <!-- Provided Dependencies -->
+
+            <!-- Runtime Dependencies -->
+
+            <!-- Test Dependencies -->
+            <dependency>
+                <groupId>${shib-shared.groupId}</groupId>
+                <artifactId>shib-testing</artifactId>
+                <version>${shib-shared.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.shibboleth.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <links combine.children="append">
+                        <link>${javadoc.url}/java-shib-shared/${shib-shared.version}</link>
+                    </links>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Automatic-Module-Name>${automatic.module.name}</Automatic-Module-Name>
+                            <Sealed>true</Sealed>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+             </plugin>
+        </plugins>
+    </build>
+
+</project>

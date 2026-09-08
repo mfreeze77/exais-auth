@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: io.opentelemetry.sdk.common
+Built-By: runner
+Built-JDK: 21.0.11
+Bundle-ManifestVersion: 2
+Bundle-Name: opentelemetry-sdk-common
+Bundle-SymbolicName: opentelemetry-sdk-common
+Bundle-Version: 1.63.0
+Created-By: 21.0.11 (Eclipse Adoptium)
+Export-Package: io.opentelemetry.sdk.common;version="1.63.0";uses:="io
+ .opentelemetry.api.common,javax.annotation",io.opentelemetry.sdk.comm
+ on.export;version="1.63.0";uses:="io.opentelemetry.sdk.common,javax.a
+ nnotation,javax.net.ssl",io.opentelemetry.sdk.common.internal;version
+ ="1.63.0";uses:="io.opentelemetry.api.common,io.opentelemetry.sdk.com
+ mon,javax.annotation",io.opentelemetry.sdk.resources;version="1.63.0"
+ ;uses:="io.opentelemetry.api.common,javax.annotation"
+Implementation-Title: common
+Implementation-Version: 1.63.0
+Import-Package: javax.annotation;version="3.0.2";resolution:=optional,
+ io.opentelemetry.api.common;version="[1.63,2)",io.opentelemetry.api.i
+ nternal;version="[1.63,2)",java.io,java.lang,java.lang.invoke,java.ne
+ t,java.nio,java.time,java.util,java.util.concurrent,java.util.concurr
+ ent.atomic,java.util.function,java.util.logging,java.util.regex,java.
+ util.stream,javax.net.ssl
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.2.3.202603250810
+

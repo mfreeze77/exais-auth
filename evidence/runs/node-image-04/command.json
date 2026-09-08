@@ -1,0 +1,22 @@
+{
+  "command": [
+    "docker",
+    "build",
+    "--pull=false",
+    "-t",
+    "expertauth-node-react:0.0.4",
+    "examples/node-react"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788904552.8919652,
+  "elapsed_seconds": 8.851,
+  "input_sha256": {
+    "examples/node-react/Dockerfile": "60690bb6fadf610305a1d20c5378b4ce9b0a536ed3783d73520b9e28a97155b3",
+    "examples/node-react/server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    "examples/node-react/client.jsx": "8c8385870cb06ae6742db8f6aac69f03d0a7cc889e8626f017cc97f66e8b240c"
+  },
+  "inputs_changed": false,
+  "output_sha256": "358b7ec76040b0b25cc9db0dd993fbcdfb543a007cb783121ecb93dbcb1ac576",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

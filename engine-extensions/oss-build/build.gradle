@@ -1,0 +1,29 @@
+import groovy.json.JsonOutput
+
+// Build orchestration only. No upstream credential, factor, entitlement or session code is patched.
+allprojects {
+    dependencyLocking { lockAllConfigurations() }
+    tasks.withType(AbstractArchiveTask).configureEach {
+        preserveFileTimestamps = false
+        reproducibleFileOrder = true
+    }
+}
+gradle.projectsEvaluated {
+    project(':supertokens-postgresql-plugin').tasks.named('processResources') {
+        dependsOn ':supertokens-postgresql-plugin:generateMetaInf'
+    }
+}
+tasks.register('runtimeInventory') {
+    doLast {
+        def rows = []
+        subprojects.each { p ->
+            p.configurations.runtimeClasspath.resolvedConfiguration.resolvedArtifacts.each { a ->
+                def id = a.moduleVersion.id
+                def hash = java.security.MessageDigest.getInstance('SHA-256').digest(a.file.bytes).encodeHex().toString()
+                rows << [project:p.name, group:id.group, name:id.name, version:id.version,
+                         filename:a.file.name, sha256:hash]
+            }
+        }
+        file('dependencies.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(rows)) + '\n'
+    }
+}

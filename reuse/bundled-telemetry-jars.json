@@ -1,0 +1,219 @@
+[
+  {
+    "bytes": 24394770,
+    "decision": "reference only; omit from source build pending byte-for-byte upstream provenance and nested dependency advisory closure",
+    "file": ".cache/reuse-audit/source/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/resources/opentelemetry-javaagent.jar",
+    "manifest": "Manifest-Version: 1.0\r\nImplementation-Title: javaagent\r\nImplementation-Version: 2.29.0\r\nImplementation-Vendor: OpenTelemetry\r\nImplementation-URL: https://github.com/open-telemetry/opentelemetry-java\r\n -instrumentation\r\nAutomatic-Module-Name: io.opentelemetry.javaagent\r\nMain-Class: io.opentelemetry.javaagent.OpenTelemetryAgent\r\nAgent-Class: io.opentelemetry.javaagent.OpenTelemetryAgent\r\nPremain-Class: io.opentelemetry.javaagent.OpenTelemetryAgent\r\nCan-Redefine-Classes: true\r\nCan-Retransform-Classes: true\r\n\r\n",
+    "maven_properties": [],
+    "notices": [
+      {
+        "bytes": 512,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "9656d8c78fbd86ce5ceef9f373b0f6ace0f04e934f33e53b8c958f3da949dfe5",
+        "source_path": "META-INF/MANIFEST.MF"
+      },
+      {
+        "bytes": 29962,
+        "detected_license": "Apache-2.0",
+        "sha256": "464515d907a7d4241a017d0a62f1fb4e4a833120cfdb2cf844d1b5242f31f692",
+        "source_path": "META-INF/licenses/licenses.md"
+      },
+      {
+        "bytes": 10140,
+        "detected_license": "Apache-2.0",
+        "sha256": "bb28c48e3e078166e91cfc2b6db7ffebb8a0973b9e23b3df060561292d8d69ec",
+        "source_path": "META-INF/licenses/byte-buddy-dep-1.18.10.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 570,
+        "detected_license": "Apache-2.0",
+        "sha256": "cfb119f8db2decb24e756fddec0e089029eaa73a7be594b2dd9676433d95d6e5",
+        "source_path": "META-INF/licenses/byte-buddy-dep-1.18.10.jar/META-INF/NOTICE"
+      },
+      {
+        "bytes": 11358,
+        "detected_license": "Apache-2.0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "source_path": "META-INF/licenses/jackson-annotations-2.22.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 738,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+        "source_path": "META-INF/licenses/jackson-annotations-2.22.jar/META-INF/NOTICE"
+      },
+      {
+        "bytes": 11358,
+        "detected_license": "Apache-2.0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "source_path": "META-INF/licenses/jackson-core-2.22.0.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 1616,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1",
+        "source_path": "META-INF/licenses/jackson-core-2.22.0.jar/META-INF/NOTICE"
+      },
+      {
+        "bytes": 11358,
+        "detected_license": "Apache-2.0",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "source_path": "META-INF/licenses/jackson-databind-2.22.0.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 738,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+        "source_path": "META-INF/licenses/jackson-databind-2.22.0.jar/META-INF/NOTICE"
+      },
+      {
+        "bytes": 1154,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73",
+        "source_path": "META-INF/licenses/slf4j-api-2.0.18.jar/META-INF/LICENSE.txt"
+      },
+      {
+        "bytes": 1154,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73",
+        "source_path": "META-INF/licenses/slf4j-simple-2.0.18.jar/META-INF/LICENSE.txt"
+      },
+      {
+        "bytes": 11809,
+        "detected_license": "Apache-2.0",
+        "sha256": "97bec7bf2c7537032731e621b4296884e450fe850ce58b82a1e8a686d20cabd8",
+        "source_path": "META-INF/licenses/zipkin-2.27.1.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 11659,
+        "detected_license": "Apache-2.0",
+        "sha256": "d6cd1836342cb9ed8ed63b5cbef014a63a368b107b0e7f75b93e216af7b4db99",
+        "source_path": "META-INF/licenses/zipkin-reporter-3.5.3.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 11659,
+        "detected_license": "Apache-2.0",
+        "sha256": "d6cd1836342cb9ed8ed63b5cbef014a63a368b107b0e7f75b93e216af7b4db99",
+        "source_path": "META-INF/licenses/zipkin-sender-okhttp3-3.5.3.jar/META-INF/LICENSE"
+      },
+      {
+        "bytes": 3228,
+        "detected_license": "MIT",
+        "sha256": "59067508e44346bf93dc9c5e4d673a67ecd77988c2020bb5e0f8667eb199f396",
+        "source_path": "inst/META-INF/FastDoubleParser-LICENSE"
+      },
+      {
+        "bytes": 4578,
+        "detected_license": "MIT",
+        "sha256": "dbc36f9422a40d58d1a214080583667cfd37d61c2fae1657d981edda2a60727f",
+        "source_path": "inst/META-INF/FastDoubleParser-ThirdParty-LICENSE"
+      },
+      {
+        "bytes": 1064,
+        "detected_license": "MIT",
+        "sha256": "12d39a6615219d73202300715e365bec2b958f858d1e837c8f2dace57f905969",
+        "source_path": "inst/META-INF/Schubfach-LICENSE"
+      }
+    ],
+    "sha256": "546531ca690a8603d2923b6db26bbda35c6409327b1e610430ae33c2f8f68050"
+  },
+  {
+    "bytes": 15401142,
+    "decision": "reference only; omit from source build pending byte-for-byte upstream provenance and nested dependency advisory closure",
+    "file": ".cache/reuse-audit/source/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/resources/opentelemetry-jmx-metrics.jar",
+    "manifest": "Manifest-Version: 1.0\r\nImplementation-Version: 1.56.0-alpha\r\nMain-Class: io.opentelemetry.contrib.jmxmetrics.JmxMetrics\r\nMulti-Release: true\r\n\r\n",
+    "maven_properties": [
+      {
+        "content": "#Generated by org.apache.felix.bundleplugin\n#Wed Jun 15 23:19:50 CEST 2022\ngroupId=io.prometheus\nartifactId=simpleclient_httpserver\nversion=0.16.0\n",
+        "source_path": "META-INF/maven/io.prometheus/simpleclient_httpserver/pom.properties"
+      },
+      {
+        "content": "#Generated by org.apache.felix.bundleplugin\n#Wed Jun 15 23:18:25 CEST 2022\ngroupId=io.prometheus\nartifactId=simpleclient_common\nversion=0.16.0\n",
+        "source_path": "META-INF/maven/io.prometheus/simpleclient_common/pom.properties"
+      },
+      {
+        "content": "#Generated by org.apache.felix.bundleplugin\n#Wed Jun 15 23:18:15 CEST 2022\ngroupId=io.prometheus\nartifactId=simpleclient\nversion=0.16.0\n",
+        "source_path": "META-INF/maven/io.prometheus/simpleclient/pom.properties"
+      },
+      {
+        "content": "#Generated by org.apache.felix.bundleplugin\n#Wed Jun 15 23:17:51 CEST 2022\ngroupId=io.prometheus\nartifactId=simpleclient_tracer_otel\nversion=0.16.0\n",
+        "source_path": "META-INF/maven/io.prometheus/simpleclient_tracer_otel/pom.properties"
+      },
+      {
+        "content": "#Generated by org.apache.felix.bundleplugin\n#Wed Jun 15 23:18:00 CEST 2022\ngroupId=io.prometheus\nartifactId=simpleclient_tracer_otel_agent\nversion=0.16.0\n",
+        "source_path": "META-INF/maven/io.prometheus/simpleclient_tracer_otel_agent/pom.properties"
+      },
+      {
+        "content": "artifactId=prometheus-metrics-exposition-formats-no-protobuf\ngroupId=io.prometheus\nversion=1.5.1\n",
+        "source_path": "META-INF/maven/io.prometheus/prometheus-metrics-exposition-formats-no-protobuf/pom.properties"
+      },
+      {
+        "content": "#Generated by org.apache.felix.bundleplugin\n#Wed Jun 15 23:17:43 CEST 2022\ngroupId=io.prometheus\nartifactId=simpleclient_tracer_common\nversion=0.16.0\n",
+        "source_path": "META-INF/maven/io.prometheus/simpleclient_tracer_common/pom.properties"
+      },
+      {
+        "content": "artifactId=prometheus-metrics-exporter-httpserver\ngroupId=io.prometheus\nversion=1.5.1\n",
+        "source_path": "META-INF/maven/io.prometheus/prometheus-metrics-exporter-httpserver/pom.properties"
+      },
+      {
+        "content": "artifactId=prometheus-metrics-exporter-common\ngroupId=io.prometheus\nversion=1.5.1\n",
+        "source_path": "META-INF/maven/io.prometheus/prometheus-metrics-exporter-common/pom.properties"
+      },
+      {
+        "content": "artifactId=prometheus-metrics-exposition-textformats\ngroupId=io.prometheus\nversion=1.5.1\n",
+        "source_path": "META-INF/maven/io.prometheus/prometheus-metrics-exposition-textformats/pom.properties"
+      },
+      {
+        "content": "artifactId=prometheus-metrics-model\ngroupId=io.prometheus\nversion=1.5.1\n",
+        "source_path": "META-INF/maven/io.prometheus/prometheus-metrics-model/pom.properties"
+      },
+      {
+        "content": "artifactId=prometheus-metrics-config\ngroupId=io.prometheus\nversion=1.5.1\n",
+        "source_path": "META-INF/maven/io.prometheus/prometheus-metrics-config/pom.properties"
+      },
+      {
+        "content": "#Generated by Maven\n#Tue Dec 17 16:10:35 MSK 2013\nversion=13.0\ngroupId=org.jetbrains\nartifactId=annotations\n",
+        "source_path": "META-INF/maven/org.jetbrains/annotations/pom.properties"
+      }
+    ],
+    "notices": [
+      {
+        "bytes": 144,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "2911369c90e03f2f9cf3f7300e13c0f753bb27871ea6547f01d797667ae4f21a",
+        "source_path": "META-INF/MANIFEST.MF"
+      },
+      {
+        "bytes": 11886,
+        "detected_license": "Apache-2.0",
+        "sha256": "f594431f26247b3c75f10d8114ef114f69246958636a7011ed5c755de5ad2e27",
+        "source_path": "META-INF/LICENSE"
+      },
+      {
+        "bytes": 395,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "7b618f2fcf2949dcc749cf71b9ef24692393cf8cd0e5bd6f7bc0467fc68c5001",
+        "source_path": "META-INF/NOTICE"
+      },
+      {
+        "bytes": 1639,
+        "detected_license": "LicenseRef-Unreviewed",
+        "sha256": "05dcdb9c1022b35eef6a1c570e19d637aebff76db93bc8250a9b30526faaf390",
+        "source_path": "META-INF/licenses/antlr2-license.txt"
+      },
+      {
+        "bytes": 1508,
+        "detected_license": "BSD-clause-review-required",
+        "sha256": "84c213fbceee99041bb1632c4518be2aa7bafc7fb4202b1134acb3d00f575050",
+        "source_path": "META-INF/licenses/antlr4-license.txt"
+      },
+      {
+        "bytes": 1588,
+        "detected_license": "BSD-clause-review-required",
+        "sha256": "5d2b9e63c9cba7276c7c4d5dd99417dd6e778f5c6873d40916c4d97516ad859f",
+        "source_path": "META-INF/licenses/asm-license.txt"
+      }
+    ],
+    "sha256": "889b32f2875e6d1816f1fd8baa0dfb6c80002ad7fd382e4679e1c92d97ffa999"
+  }
+]

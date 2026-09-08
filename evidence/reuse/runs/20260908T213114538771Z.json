@@ -1,0 +1,14 @@
+{
+  "command_argv": [
+    "expert-auth/tools/audit_sources.py",
+    "--validate",
+    "--bind-build"
+  ],
+  "exit_status": 0,
+  "finished_at": "2026-09-08T21:31:14.589481+00:00",
+  "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+  "script_sha256": "e36f72b5a0dd23fcb191c5189d65d41c61781622ed9eac9cf97dcadd8eea35b7",
+  "started_at": "2026-09-08T21:31:14.538771+00:00",
+  "stderr": "",
+  "stdout": "{\"kind\": \"Source audit consistency only; not authentication implementation tests\", \"passed\": 68, \"failed\": 0}\n{\"kind\": \"Actual source build to source audit binding; not runtime qualification\", \"source_files_bound\": 1293, \"runtime_dependencies_bound\": 84, \"declared_licenses_captured\": 84, \"hash_mismatches\": 0, \"build_exit_code\": 0, \"release_approved\": false, \"input_sha256\": {\"build\": \"dfa32c1027b771c8a730d9be3ad42d50a32f1bf9d2433660815a7f04573171f8\", \"runtime_dependencies\": \"d24b8a383108071e66444e10532e9d61e859aab92126c543000b81f53592a812\"}}\n"
+}

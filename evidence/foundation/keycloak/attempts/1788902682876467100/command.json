@@ -1,0 +1,35 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-foundation-kc",
+    "--env-file",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\keycloak\\bootstrap.env",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/workspace",
+    "-w",
+    "/workspace",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "tests/foundation/keycloak_probe.py"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 18.5,
+  "stdout": "KC-PRIVATE-001: PASS actual=401 expected=401\nKC-IDENTITY-001: PASS actual=4 expected=4\nKC-PROVIDER-ISOLATION-001: PASS actual=[204, 204] expected=[204, 204]\nKC-PKCE-001: PASS actual=True expected=True\nKC-TENANT-SESSION-001: FAIL actual=False expected=True\nKC-TENANT-MEMBERSHIP-001: FAIL actual=False expected=True\nKC-REVOKE-001: PASS actual=400 expected=400\n{\"observations\": 9, \"failed_mapping_cases\": 2, \"foundation_passed\": false}\n",
+  "stderr": "",
+  "images": {
+    "keycloak": "quay.io/keycloak/keycloak@sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54",
+    "python": "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36"
+  },
+  "network": {
+    "internal": true,
+    "published_ports": []
+  },
+  "scope": "candidate mapping experiment; development storage; no foundation approval",
+  "files": {
+    "tools/run_keycloak_probe.py": "585e70ced59446c3b2ef65d8ff7c56c3909e614b36f66b67c2853885c5e78af7",
+    "tests/foundation/keycloak_probe.py": "5feb5f5a716229a5fb8a7b38a58482fec28685aeca16d24544ea51cf927c34a7"
+  }
+}

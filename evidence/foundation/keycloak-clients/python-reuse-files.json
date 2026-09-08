@@ -1,0 +1,66 @@
+{
+  "name": "PyOTP",
+  "version": "2.10.0",
+  "license": "MIT",
+  "repository": "https://github.com/pyauth/pyotp",
+  "immutable_revision": "PyOTP 2.10.0 exact wheel SHA-256",
+  "source_boundary": "Unmodified maintained package, test-only fixture TOTP generation",
+  "destination": "examples/keycloak-clients/.runtime/testdeps via hash-locked requirements-test.txt",
+  "wheel_sha256": "1df2f6a1bcc3bb0716172a5215ddc2f8c7c7fd26a13df9927d52e1746934836c",
+  "modifications": [],
+  "requirement_mapping": "Candidate positive/negative MFA fixture proof only; no requirement closure",
+  "files": [
+    {
+      "path": "pyotp/__init__.py",
+      "sha256": "2af6f23cb3ed025969ffd2df473bec14064947124693732f5882b0b2d7922763"
+    },
+    {
+      "path": "pyotp/compat.py",
+      "sha256": "001d889ab404e6d03da5454658a94a643535879aa96472860540a9691889deb6"
+    },
+    {
+      "path": "pyotp/hotp.py",
+      "sha256": "92b069e35d82de9905d9c680362f0c2c97e7cf29d59f908996d1432d317aa707"
+    },
+    {
+      "path": "pyotp/otp.py",
+      "sha256": "addbc3514edab657fcd1e3a8c2f644a088a94eb40ac8b5ab0b2c78f28e8dc1be"
+    },
+    {
+      "path": "pyotp/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pyotp/totp.py",
+      "sha256": "7981e10ab5b304bb048c76e59c58f62c58bc9727ab660322cb4343e14855c7a0"
+    },
+    {
+      "path": "pyotp/utils.py",
+      "sha256": "23d6ff62ce432de97a3605e21c6abf4c4ff4499d3589df23f824c0c67894d50b"
+    },
+    {
+      "path": "pyotp/contrib/__init__.py",
+      "sha256": "da128e632178367674f51c371667a862693597b97adf57202298f6923cdb29fc"
+    },
+    {
+      "path": "pyotp/contrib/steam.py",
+      "sha256": "9de49bac08d3757e2a6f88aa3a6995d3483ce78e46948910c4815eb099faf7d3"
+    },
+    {
+      "path": "pyotp-2.10.0.dist-info/METADATA",
+      "sha256": "921222968b5c7aba480db1e9288544cf63407032fade2e195310b19c80659261"
+    },
+    {
+      "path": "pyotp-2.10.0.dist-info/WHEEL",
+      "sha256": "99f7cfcbcc019d9427d959c9514e6313df4ab316927e2c8c1d5f58b7468b571b"
+    },
+    {
+      "path": "pyotp-2.10.0.dist-info/licenses/LICENSE",
+      "sha256": "795885123341458172aad6ebfab31b071cc7b40524929e6901662d5dbbf57ea3"
+    },
+    {
+      "path": "pyotp-2.10.0.dist-info/RECORD",
+      "sha256": "24526688c045e9aa9020e5c9491aeb49a7068485b9b539c1c76f0571a888541f"
+    }
+  ]
+}

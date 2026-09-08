@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: io.opentelemetry.semconv
+Built-By: runner
+Built-JDK: 21.0.11
+Implementation-Title: opentelemetry-semconv
+Implementation-Version: 1.42.0
+

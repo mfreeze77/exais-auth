@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage();
+page.on('pageerror',error=>console.log('PAGEERROR',error.message,error.stack));
+page.on('console',message=>console.log('CONSOLE',message.type(),message.text()));
+page.on('requestfailed',request=>console.log('REQUEST_FAILED',request.url(),request.failure()));
+await page.goto('http://node-app.example.test:3000/auth');
+await page.waitForTimeout(1000);
+console.log('BODY',await page.locator('body').innerText());
+await browser.close();

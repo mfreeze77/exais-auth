@@ -1,0 +1,24 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo",
+    "-w",
+    "/repo",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "tools/fetch_pinned_sources.py"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788904440.9325469,
+  "elapsed_seconds": 94.058,
+  "input_sha256": {
+    "tools/fetch_pinned_sources.py": "fe3ae362c27e8538fa49c7ffea33515e2c3c28f0ea95ea95cfbd323970ffea30",
+    "tools/build_oss_core.py": "983d0b21c7551638921108c8634a8a7edd37e588fa082fda6e97fe7811f1e383"
+  },
+  "inputs_changed": false,
+  "output_sha256": "05d7846b82c9cfb1a558628512ab8ab668d5993106eb38f1023351358f156512",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

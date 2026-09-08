@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "tools/bootstrap_baseline.py"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788905624.2805393,
+  "elapsed_seconds": 0.205,
+  "input_sha256": {
+    "baseline-lock.json": "7236557c1910c8b1d74d82a476a54e469358a57ca6ed274ab04879ffbd36b9c1",
+    "tools/bootstrap_baseline.py": "38a4d7f457bcd8d9e4c999c69e7b47a16472c91169023b0bac52078f468bf97e"
+  },
+  "inputs_changed": false,
+  "output_sha256": "1b0fa883c209ec0dd61e4ad39755216365757f1b8d066e0c0937abd7756f938d",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

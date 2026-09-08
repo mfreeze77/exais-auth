@@ -1,0 +1,52 @@
+{
+  "timestamp_utc": "2026-09-08T22:04:25.929856+00:00",
+  "command": "python tools/run_keycloak_cluster.py up",
+  "private_network": "expertauth-kc-sessions-proof",
+  "network_internal": true,
+  "replicas": 2,
+  "postgres_image": "postgres@sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+  "containers": [
+    {
+      "name": "/expertauth-kc-sessions-a",
+      "image_id": "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+      "published_ports": {}
+    },
+    {
+      "name": "/expertauth-kc-sessions-b",
+      "image_id": "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+      "published_ports": {}
+    },
+    {
+      "name": "/expertauth-kc-sessions-pg",
+      "image_id": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "published_ports": {}
+    }
+  ],
+  "cluster_membership_log_lines": {
+    "expertauth-kc-sessions-a": [
+      "2026-09-08 22:04:10,445 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups JDBC_PING discovery enabled.",
+      "2026-09-08 22:04:11,287 INFO  [org.infinispan.CLUSTER] (main) ISPN000094: Received new cluster view for channel ISPN: [7e80d00e1b50-62873(v=16.0.14)|0] (1) [7e80d00e1b50-62873(v=16.0.14)]",
+      "2026-09-08 22:04:11,331 INFO  [org.infinispan.CLUSTER] (main) ISPN000079: Channel `ISPN` local address is `7e80d00e1b50-62873`, physical addresses are `[192.168.176.3:7800]`",
+      "2026-09-08 22:04:22,997 INFO  [org.infinispan.CLUSTER] (jgroups-17,7e80d00e1b50-62873(v=16.0.14)) ISPN000094: Received new cluster view for channel ISPN: [7e80d00e1b50-62873(v=16.0.14)|1] (2) [7e80d00e1b50-62873(v=16.0.14), dca75ba6c076-58676(v=16.0.14)]"
+    ],
+    "expertauth-kc-sessions-b": [
+      "2026-09-08 22:04:22,028 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups JDBC_PING discovery enabled.",
+      "2026-09-08 22:04:23,077 INFO  [org.infinispan.CLUSTER] (main) ISPN000094: Received new cluster view for channel ISPN: [7e80d00e1b50-62873(v=16.0.14)|1] (2) [7e80d00e1b50-62873(v=16.0.14), dca75ba6c076-58676(v=16.0.14)]",
+      "2026-09-08 22:04:23,123 INFO  [org.infinispan.CLUSTER] (main) ISPN000079: Channel `ISPN` local address is `dca75ba6c076-58676`, physical addresses are `[192.168.176.4:7800]`"
+    ]
+  },
+  "policy": {
+    "revokeRefreshToken": true,
+    "refreshTokenMaxReuse": 0
+  },
+  "candidate_selected": false,
+  "foundation_gate_passed": false,
+  "exit_code": 0,
+  "input_sha256": {
+    "tools\\run_keycloak_cluster.py": "ea6c06cbf9f498daaafce778d1caad09d08622ba78088b89a5223de38533dadb",
+    "engine-extensions\\keycloak-headless\\Dockerfile.postgres": "a88caba36a313dbf56078bd18917e92fa1533a137391d304b1bcd173380ce2ce",
+    "engine-extensions\\keycloak-headless\\build.gradle": "7eb8f041ef0ea55fc0a2eda2b6783e574a929f2d1ed4a176fff1dd9bd3d15f16",
+    "engine-extensions\\keycloak-headless\\gradle.lockfile": "5988981640e69c2b874e726cf140a4645c4f4f8c116b3923a9aa5533db1895af",
+    "engine-extensions\\keycloak-headless\\gradle\\verification-metadata.xml": "2dc3ea1a67997e887cc2eb1d16a03fd413f2abcad598e1addaac957c3de9a5c6"
+  }
+}

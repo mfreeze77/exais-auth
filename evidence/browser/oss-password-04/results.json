@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "id": "BROWSER-OSS-001",
+      "status": "passed"
+    },
+    {
+      "id": "BROWSER-OSS-002",
+      "status": "passed"
+    },
+    {
+      "id": "BROWSER-OSS-003",
+      "status": "passed"
+    },
+    {
+      "id": "BROWSER-OSS-004",
+      "status": "failed",
+      "error": "Expected values to be strictly equal:\n\nfalse !== true\n"
+    }
+  ],
+  "errors": [],
+  "pass": 3,
+  "fail": 1,
+  "skipped": 0,
+  "scope": "Actual Chromium password and cookie-session flow; not native platforms or full React profile"
+}

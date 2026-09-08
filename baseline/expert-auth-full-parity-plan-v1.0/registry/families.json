@@ -1,0 +1,317 @@
+[
+  {
+    "code": "BAS",
+    "title": "Baseline, licensing, and sovereignty",
+    "milestone": "M0",
+    "mode": "audit",
+    "sources": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "requirement_count": 8
+  },
+  {
+    "code": "IDN",
+    "title": "Application, tenant, and identity foundation",
+    "milestone": "M1",
+    "mode": "custom-or-extend",
+    "sources": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "requirement_count": 12
+  },
+  {
+    "code": "PWD",
+    "title": "Password authentication",
+    "milestone": "M2",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "PLS",
+    "title": "Passwordless OTP and magic links",
+    "milestone": "M2",
+    "mode": "extend",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "SOC",
+    "title": "Social and custom identity providers",
+    "milestone": "M2",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 8
+  },
+  {
+    "code": "ENT",
+    "title": "Enterprise federation and discovery",
+    "milestone": "M5",
+    "mode": "reuse-plus-extend",
+    "sources": [
+      "DR",
+      "S04"
+    ],
+    "requirement_count": 9
+  },
+  {
+    "code": "OAU",
+    "title": "Unified login and OAuth/OIDC provider",
+    "milestone": "M5",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR",
+      "S24"
+    ],
+    "requirement_count": 12
+  },
+  {
+    "code": "M2M",
+    "title": "Machine-to-machine authentication",
+    "milestone": "M5",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 6
+  },
+  {
+    "code": "MCP",
+    "title": "MCP authentication and authorization",
+    "milestone": "M5",
+    "mode": "custom-adapter",
+    "sources": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "requirement_count": 7
+  },
+  {
+    "code": "WBA",
+    "title": "Passkeys and WebAuthn",
+    "milestone": "M4",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR",
+      "S08"
+    ],
+    "requirement_count": 8
+  },
+  {
+    "code": "SES",
+    "title": "Session lifecycle and runtime behavior",
+    "milestone": "M2",
+    "mode": "reuse-or-custom-critical",
+    "sources": [
+      "DR",
+      "S05"
+    ],
+    "requirement_count": 20
+  },
+  {
+    "code": "MFA",
+    "title": "Multifactor and assurance policy",
+    "milestone": "M4",
+    "mode": "reuse-plus-extend",
+    "sources": [
+      "DR",
+      "S07"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "VER",
+    "title": "Email verification",
+    "milestone": "M2",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 6
+  },
+  {
+    "code": "RSK",
+    "title": "Attack protection and risk assessment",
+    "milestone": "M6",
+    "mode": "custom-plus-open-data",
+    "sources": [
+      "DR",
+      "S09"
+    ],
+    "requirement_count": 12
+  },
+  {
+    "code": "CAP",
+    "title": "CAPTCHA and challenges",
+    "milestone": "M6",
+    "mode": "reuse-plus-adapters",
+    "sources": [
+      "DR",
+      "S11",
+      "S25"
+    ],
+    "requirement_count": 5
+  },
+  {
+    "code": "RBC",
+    "title": "Roles, permissions and application authorization",
+    "milestone": "M3",
+    "mode": "reuse-plus-extend",
+    "sources": [
+      "DR",
+      "S04"
+    ],
+    "requirement_count": 6
+  },
+  {
+    "code": "USR",
+    "title": "User lifecycle, metadata and profiles",
+    "milestone": "M7",
+    "mode": "reuse-plus-custom",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 8
+  },
+  {
+    "code": "LNK",
+    "title": "Account linking and method composition",
+    "milestone": "M3",
+    "mode": "custom-or-extend",
+    "sources": [
+      "DR",
+      "S06"
+    ],
+    "requirement_count": 8
+  },
+  {
+    "code": "ADM",
+    "title": "Administration and customer dashboard",
+    "milestone": "M7",
+    "mode": "reuse-plus-custom",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 9
+  },
+  {
+    "code": "DEL",
+    "title": "Email and SMS delivery",
+    "milestone": "M2",
+    "mode": "custom-adapters",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 6
+  },
+  {
+    "code": "MIG",
+    "title": "Migration, import and rollback",
+    "milestone": "M8",
+    "mode": "custom-tooling",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "CFG",
+    "title": "Configuration and platform controls",
+    "milestone": "M1",
+    "mode": "reuse-plus-custom",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "OPS",
+    "title": "Production deployment and operations",
+    "milestone": "M9",
+    "mode": "custom-operations",
+    "sources": [
+      "DR",
+      "S20"
+    ],
+    "requirement_count": 12
+  },
+  {
+    "code": "SDK",
+    "title": "Backend, web and native SDKs",
+    "milestone": "M8",
+    "mode": "reuse-plus-adapt",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "UIX",
+    "title": "Authentication UI and extensibility",
+    "milestone": "M7",
+    "mode": "reuse-plus-custom",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 8
+  },
+  {
+    "code": "PLG",
+    "title": "Fourteen documented plugin packages",
+    "milestone": "M7",
+    "mode": "audit-and-adapt",
+    "sources": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "requirement_count": 9
+  },
+  {
+    "code": "INT",
+    "title": "Framework and platform integrations",
+    "milestone": "M8",
+    "mode": "adapters-and-samples",
+    "sources": [
+      "DR"
+    ],
+    "requirement_count": 10
+  },
+  {
+    "code": "CMP",
+    "title": "API and behavioral compatibility",
+    "milestone": "M10",
+    "mode": "contract-adapters",
+    "sources": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "requirement_count": 7
+  },
+  {
+    "code": "TST",
+    "title": "Qualification, security and release evidence",
+    "milestone": "M10",
+    "mode": "test-and-audit",
+    "sources": [
+      "DR",
+      "S24"
+    ],
+    "requirement_count": 9
+  }
+]

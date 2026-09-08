@@ -1,0 +1,18 @@
+Updating the configuration and installing your custom providers, if any. Please wait.
+2026-09-08 21:15:07,578 WARN  [org.keycloak.common.Profile] (build-41) Deprecated features identity-brokering-api:v1, twitter-broker:v1 enabled by default. Check the upgrading guide for steps to use later versions if available.
+2026-09-08 21:15:13,292 INFO  [io.quarkus.deployment.QuarkusAugmentor] (main) Quarkus augmentation completed in 7650ms
+Running the server in development mode. DO NOT use this configuration in production.
+2026-09-08 21:15:15,718 INFO  [org.infinispan.CONTAINER] (main) ISPN000974: Virtual threads support: enabled
+2026-09-08 21:15:16,453 INFO  [org.hibernate.orm.jdbc.batch] (JPA Startup Thread) HHH100501: Automatic JDBC statement batching enabled (maximum batch size 32)
+2026-09-08 21:15:16,478 WARN  [org.keycloak.common.Profile] (main) Deprecated features identity-brokering-api:v1, twitter-broker:v1 enabled by default. Check the upgrading guide for steps to use later versions if available.
+2026-09-08 21:15:17,112 INFO  [org.keycloak.quarkus.runtime.storage.database.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+2026-09-08 21:15:19,444 INFO  [org.infinispan.CONTAINER] (main) ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+2026-09-08 21:15:19,674 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: node_603228, Site name: null, Cluster name: ISPN
+2026-09-08 21:15:19,779 INFO  [org.keycloak.quarkus.runtime.storage.database.jpa.DatabaseIndexChecker] (db-index-checker) Running database index checker
+2026-09-08 21:15:19,832 INFO  [org.keycloak.models.workflow.WorkflowsEventListenerFactory] (main) Workflow runner task scheduled: next execution at 09:15:19, then every PT12H
+2026-09-08 21:15:19,880 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2026-09-08 21:15:21,142 INFO  [org.keycloak.services] (main) KC-SERVICES0078: Created temporary admin service account with client id expertauth-probe
+2026-09-08 21:15:21,238 INFO  [org.keycloak.services.resources.KeycloakApplication] (main) Bootstrap completed in 4.759000 seconds
+2026-09-08 21:15:21,339 INFO  [io.quarkus] (main) Keycloak 26.7.3 on JVM (powered by Quarkus 3.33.3.1) started in 7.964s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2026-09-08 21:15:21,339 INFO  [io.quarkus] (main) Profile dev activated. 
+2026-09-08 21:15:21,339 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, keycloak, narayana-jta, opentelemetry, rest, rest-jackson, smallrye-context-propagation, smallrye-health, vertx]

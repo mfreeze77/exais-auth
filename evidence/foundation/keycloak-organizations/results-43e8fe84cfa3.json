@@ -1,0 +1,1131 @@
+{
+  "schema": "foundation-characterization-v1",
+  "engine": "Keycloak",
+  "version": "26.7.3",
+  "source_commit": "6d238b6558037085cc25c915893c3d301a80243e",
+  "mapping": "application=realm; selected tenant=organization scope; separate tenant clients for refresh revocation",
+  "fixture_realm": "ea-org-proof-43e8fe84cfa3",
+  "started_at": "2026-09-08T21:44:37.756146+00:00",
+  "finished_at": "2026-09-08T21:44:39.824027+00:00",
+  "probe_sha256": "38ba43815bdd87477c353874184162d4e2c4e7521bf2397d9146a4fefc4b9814",
+  "source_manifest_sha256": "8500240c3bee552f155e1626bc563ec85a39c49e6ceab9d5c260dcb0bc80dbbb",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "origin": "http://keycloak:8080"
+  },
+  "foundation_passed": false,
+  "production_approved": false,
+  "harness_error": null,
+  "results": [
+    {
+      "test_id": "KCORG-DEFAULT-MEMBERSHIP-CONFIG",
+      "outcome": "observed",
+      "requirements": [
+        "IDN-006"
+      ],
+      "note": "Default requiresUserMembership=false is characterized separately from the required-membership profile.",
+      "observed": {
+        "outsider_kind": "tokens",
+        "outsider_organizations": []
+      }
+    },
+    {
+      "test_id": "KCORG-SUPPORTED-MEMBERSHIP-CONFIG",
+      "outcome": "observed",
+      "requirements": [
+        "CFG-003",
+        "IDN-006"
+      ],
+      "note": "Copied browser flow explicitly enables organization requiresUserMembership=true; source and Admin REST configuration are unchanged upstream.",
+      "observed": {
+        "flow": "org-membership-required",
+        "configured_organization_executions": 1
+      }
+    },
+    {
+      "test_id": "KCORG-NONMEMBER-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-006"
+      ],
+      "note": "Same already-authenticated alpha member receives explicit beta membership denial with no code/token.",
+      "observed": {
+        "kind": "explicit-membership-denial",
+        "http_status": 403
+      }
+    },
+    {
+      "test_id": "KCORG-OUTSIDER-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-006"
+      ],
+      "note": "User with valid credentials and zero organization memberships receives explicit denial.",
+      "observed": {
+        "kind": "explicit-membership-denial"
+      }
+    },
+    {
+      "test_id": "KCORG-EXPLICIT-SHARING-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-004"
+      ],
+      "note": "Same user changes from rejected to admitted after explicit beta association; selected organization claims stay distinct.",
+      "observed": {
+        "alpha_organizations": [
+          "alpha"
+        ],
+        "beta_organizations": [
+          "beta"
+        ]
+      }
+    },
+    {
+      "test_id": "KCORG-CLIENT-SESSIONS-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-001",
+        "IDN-004"
+      ],
+      "note": "Admin APIs independently enumerate both client attachments to user sessions.",
+      "observed": {
+        "client_session_counts": {
+          "alpha": 1,
+          "beta": 1
+        }
+      }
+    },
+    {
+      "test_id": "KCORG-REALM-SSO-SID",
+      "outcome": "observed",
+      "requirements": [
+        "SES-001"
+      ],
+      "note": "Shared realm sid does not by itself measure client-session independence.",
+      "observed": {
+        "shared_realm_sid": true
+      }
+    },
+    {
+      "test_id": "KCORG-CLIENT-ORG-POLICY",
+      "outcome": "observed",
+      "requirements": [
+        "IDN-006"
+      ],
+      "note": "Organization scope is an authorization context, not a fixed client-to-tenant binding; the application must require its declared tenant context.",
+      "observed": {
+        "alpha_client_requested_beta_kind": "tokens",
+        "alpha_client_requested_beta_organizations": [
+          "beta"
+        ],
+        "omitted_scope_kind": "explicit-membership-denial",
+        "omitted_scope_organizations": []
+      }
+    },
+    {
+      "test_id": "KCORG-PKCE-NEGATIVE-001",
+      "outcome": "passed",
+      "requirements": [
+        "OAU-001"
+      ],
+      "note": "Wrong PKCE verifier rejected at the real token endpoint.",
+      "observed": {
+        "status": 400,
+        "error": "invalid_grant"
+      }
+    },
+    {
+      "test_id": "KCORG-CODE-REPLAY-001",
+      "outcome": "passed",
+      "requirements": [
+        "OAU-001"
+      ],
+      "note": "Consumed authorization code cannot be exchanged again.",
+      "observed": {
+        "http_status": 400,
+        "error": "invalid_grant"
+      }
+    },
+    {
+      "test_id": "KCORG-REFRESH-CLIENT-BINDING-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003"
+      ],
+      "note": "Alpha refresh token submitted as beta client is rejected.",
+      "observed": {
+        "error": "invalid_grant"
+      }
+    },
+    {
+      "test_id": "KCORG-REFRESH-SCOPES-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "IDN-004"
+      ],
+      "note": "Both actual client refresh chains retain their selected organization scopes.",
+      "observed": {
+        "alpha_http": 200,
+        "beta_http": 200
+      }
+    },
+    {
+      "test_id": "KCORG-REFRESH-SCOPE-SUBSTITUTION-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-006",
+        "SES-003"
+      ],
+      "note": "Refresh cannot acquire beta context from an alpha-only authorization grant.",
+      "observed": {
+        "http_status": 200,
+        "resulting_organizations": []
+      }
+    },
+    {
+      "test_id": "KCORG-RFC7009-TENANT-LOGOUT-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-005",
+        "IDN-004"
+      ],
+      "note": "Revoking beta's refresh token detaches that client while alpha refresh remains valid in shared realm SSO.",
+      "observed": {
+        "revoke_http": 200,
+        "beta_refresh_http": 400,
+        "alpha_refresh_http": 200,
+        "beta_error": "invalid_grant"
+      }
+    },
+    {
+      "test_id": "KCORG-LEGACY-LOGOUT-SCOPE",
+      "outcome": "observed",
+      "requirements": [
+        "SES-005",
+        "IDN-004"
+      ],
+      "note": "Legacy refresh-token logout invokes realm SSO logout; this operation is not interchangeable with client refresh-token revocation for tenant-local logout.",
+      "observed": {
+        "logout_http": 204,
+        "beta_refresh_http": 400,
+        "alpha_refresh_http": 400
+      }
+    },
+    {
+      "test_id": "KCORG-MEMBERSHIP-REMOVAL-LOGIN-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-006"
+      ],
+      "note": "Removed unmanaged beta member is absent in admin inventory and denied new authorization with both fresh and existing SSO browser cookies.",
+      "observed": {
+        "membership_http": 404,
+        "fresh_browser_kind": "explicit-membership-denial",
+        "existing_browser_kind": "explicit-membership-denial"
+      }
+    },
+    {
+      "test_id": "KCORG-MEMBERSHIP-REMOVAL-REFRESH-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-006",
+        "SES-003"
+      ],
+      "note": "Refresh after membership removal must not recreate beta organization authority; alpha chain must survive.",
+      "observed": {
+        "beta_http": 400,
+        "beta_organizations": [],
+        "beta_error": "invalid_grant",
+        "alpha_http": 200
+      }
+    },
+    {
+      "test_id": "KCORG-MEMBERSHIP-REMOVAL-ACCESS-WINDOW",
+      "outcome": "observed",
+      "requirements": [
+        "IDN-006",
+        "SES-006"
+      ],
+      "note": "Previously issued access JWT retains original signed claims. Userinfo acceptance is measured separately; this is not immediate online resource revocation qualification.",
+      "observed": {
+        "original_access_organizations": [
+          "beta"
+        ],
+        "userinfo_http": 400,
+        "userinfo_organizations": [],
+        "configured_access_token_lifespan_seconds": 60
+      }
+    }
+  ],
+  "explicit_denial_page_evidence": [
+    {
+      "http_status": 403,
+      "error_text": "User is not a member of the organization beta",
+      "html_sha256": "9c68db19b3ab87109092dfe8df5c24c4b8d47781cc8411ace53cb5feb47e33b3",
+      "source_message_keys": [
+        "notMemberOfOrganization",
+        "notMemberOfAnyOrganization"
+      ],
+      "code_issued": false,
+      "token_exchange_attempted": false
+    },
+    {
+      "http_status": 403,
+      "error_text": "User is not a member of the organization beta",
+      "html_sha256": "472dd33e44cb71530cc6b9ae4fa149adbc1516f1330786df3f0f7a7992dda133",
+      "source_message_keys": [
+        "notMemberOfOrganization",
+        "notMemberOfAnyOrganization"
+      ],
+      "code_issued": false,
+      "token_exchange_attempted": false
+    },
+    {
+      "http_status": 403,
+      "error_text": "User is not a member of any organization",
+      "html_sha256": "e68ef4d5077ffe89047cc196c961dc6b22ad3e0111a7c74365986ae3ad96f658",
+      "source_message_keys": [
+        "notMemberOfOrganization",
+        "notMemberOfAnyOrganization"
+      ],
+      "code_issued": false,
+      "token_exchange_attempted": false
+    },
+    {
+      "http_status": 403,
+      "error_text": "User is not a member of the organization beta",
+      "html_sha256": "58324cc509b9bb4c0c44c71dae689fb87203b8f93bdcbc202fa78eb7d5282048",
+      "source_message_keys": [
+        "notMemberOfOrganization",
+        "notMemberOfAnyOrganization"
+      ],
+      "code_issued": false,
+      "token_exchange_attempted": false
+    },
+    {
+      "http_status": 403,
+      "error_text": "User is not a member of the organization beta",
+      "html_sha256": "ecb4f4ec1e76997687f4e4ed39fd906b6c85953345fd6f35699b46e5dbd4003a",
+      "source_message_keys": [
+        "notMemberOfOrganization",
+        "notMemberOfAnyOrganization"
+      ],
+      "code_issued": false,
+      "token_exchange_attempted": false
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/realms/master/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 22.838,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms",
+      "http_status": 201,
+      "duration_ms": 428.755,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations",
+      "http_status": 201,
+      "duration_ms": 13.746,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/clients",
+      "http_status": 201,
+      "duration_ms": 17.693,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations",
+      "http_status": 201,
+      "duration_ms": 8.221,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/clients",
+      "http_status": 201,
+      "duration_ms": 9.502,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/users",
+      "http_status": 201,
+      "duration_ms": 25.167,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/users",
+      "http_status": 201,
+      "duration_ms": 22.909,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations/36928757-0faf-430e-9181-d1f511d71802/members",
+      "http_status": 201,
+      "duration_ms": 10.122,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 29.278,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 25.08,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 28.186,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 19.118,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 3.439,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/authentication/flows/browser/copy",
+      "http_status": 201,
+      "duration_ms": 24.683,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/authentication/flows/org-membership-required/executions",
+      "http_status": 200,
+      "duration_ms": 20.846,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/authentication/executions/3ecb9a4e-f974-411a-b2f0-428bba9ea3c8/config",
+      "http_status": 201,
+      "duration_ms": 11.443,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "PUT",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3",
+      "http_status": 204,
+      "duration_ms": 31.844,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 34.521,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 29.094,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 36.229,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 12.135,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 6.929,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 403,
+      "duration_ms": 25.084,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 22.191,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 403,
+      "duration_ms": 21.8,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations/56764396-cb1f-4b82-9ec5-3fcaef99d768/members",
+      "http_status": 201,
+      "duration_ms": 12.063,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 302,
+      "duration_ms": 25.988,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 13.561,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 7.06,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/clients/1c22a292-59d1-45f6-95c5-d59ac92da9df/user-sessions",
+      "http_status": 200,
+      "duration_ms": 8.656,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/clients/86c8c888-1d45-44e3-87c6-c9624cc8dfe2/user-sessions",
+      "http_status": 200,
+      "duration_ms": 8.072,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 21.623,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 21.359,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 27.926,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 9.958,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 7.095,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 24.738,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 403,
+      "duration_ms": 14.935,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 22.431,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 22.48,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 28.919,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 5.776,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 22.755,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 24.278,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 30.191,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 11.731,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 6.088,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 7.957,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 20.804,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 30.759,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 48.781,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 13.14,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 7.061,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 302,
+      "duration_ms": 16.384,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 13.023,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 6.906,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 4.794,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 12.799,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 12.946,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 11.759,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 20.593,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 20.049,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 29.744,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 10.145,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 6.643,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 302,
+      "duration_ms": 12.694,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 8.817,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 5.57,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/revoke",
+      "http_status": 200,
+      "duration_ms": 5.361,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 4.702,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 10.441,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 19.028,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 19.057,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 24.699,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 10.808,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 5.533,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 302,
+      "duration_ms": 11.761,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 9.178,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 5.94,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/logout",
+      "http_status": 204,
+      "duration_ms": 6.487,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 4.929,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 4.016,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 19.705,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 200,
+      "duration_ms": 17.473,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 302,
+      "duration_ms": 24.375,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 10.198,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 5.264,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 302,
+      "duration_ms": 13.351,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 8.506,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 200,
+      "duration_ms": 5.299,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "DELETE",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations/56764396-cb1f-4b82-9ec5-3fcaef99d768/members/f4b0eddc-e06a-4d3a-8c54-77f716847327",
+      "http_status": 204,
+      "duration_ms": 9.424,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations/56764396-cb1f-4b82-9ec5-3fcaef99d768/members/f4b0eddc-e06a-4d3a-8c54-77f716847327",
+      "http_status": 404,
+      "duration_ms": 7.359,
+      "oauth_error": "HTTP 404 Not Found",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 200,
+      "duration_ms": 18.828,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/login-actions/authenticate",
+      "http_status": 403,
+      "duration_ms": 14.248,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/auth",
+      "http_status": 403,
+      "duration_ms": 15.983,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 400,
+      "duration_ms": 5.872,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/token",
+      "http_status": 200,
+      "duration_ms": 10.984,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/realms/ea-org-proof-43e8fe84cfa3/protocol/openid-connect/userinfo",
+      "http_status": 400,
+      "duration_ms": 4.56,
+      "oauth_error": "invalid_grant",
+      "body_or_credentials_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/ea-org-proof-43e8fe84cfa3/organizations/56764396-cb1f-4b82-9ec5-3fcaef99d768/members",
+      "http_status": 201,
+      "duration_ms": 7.139,
+      "oauth_error": null,
+      "body_or_credentials_recorded": false
+    }
+  ],
+  "remaining": [
+    "Supported headless/embedded first-party MFA and intermediate states",
+    "Primary/method identity link/unlink ownership and proof of control",
+    "Keycloak-backed Node/React/Python compatibility clients; alternative-engine clients do not count",
+    "Tenant-scoped roles/resource checks and bounded online membership revocation",
+    "Multi-replica refresh fault/replay and response-loss proof",
+    "Real rendered browser/native qualification and independent security review"
+  ],
+  "claim_limit": "Narrow configured behavior only. No whole-requirement or engine foundation completion inferred."
+}

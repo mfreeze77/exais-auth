@@ -1,0 +1,26 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-foundation-kc",
+    "--env-file",
+    ".runtime/keycloak/bootstrap.env",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/workspace",
+    "-w",
+    "/workspace",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "tests/foundation/keycloak_organizations.py"
+  ],
+  "started_at": "2026-09-08T21:45:46.473525+00:00",
+  "finished_at": "2026-09-08T21:45:49.362257+00:00",
+  "exit_code": 0,
+  "stdout_stderr_artifact": "evidence/foundation/keycloak-organizations/probe-output-03.log",
+  "stdout_stderr_sha256": "bb3346394f9b43c7f537d9417ac0b972a443abf2d5fd18638a651ca611aab520",
+  "runtime_image_id": "sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54",
+  "secrets": "Environment values and token bodies deliberately omitted",
+  "probe_sha256": "38ba43815bdd87477c353874184162d4e2c4e7521bf2397d9146a4fefc4b9814"
+}

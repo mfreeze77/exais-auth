@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-09-08T21:25:26.934153+00:00",
+  "command": "python tools/capture_contracts.py",
+  "python_version": "3.12.13 (main, Aug  5 2026, 01:10:24) [GCC 14.2.0]",
+  "pyyaml_version": "6.0.3",
+  "exit_code": 0,
+  "source_files_retained": false,
+  "input_and_output_sha256": {
+    "tools/capture_contracts.py": "ab2cd78baa5ae031e78b1a2522dfac2c4649bb3e7e6ff1ebf0d9b67e35e40906",
+    "baseline/expert-auth-full-parity-plan-v1.0/registry/api-operations.json": "d99a8f09a3825ec3c24fb6eddb1f82b17900729f1a22b28253d136fdf7dbfc10",
+    "contracts/source-pins.json": "106cdf3761cc2584b7f281edeb2bbcdcfdb2867ef8a2feb5f5553bebd5e152f6",
+    "contracts/operation-map.json": "5536efd372375a606b3abfcb5ba267145c9dfd94e1cc24378581bdc63679db5c",
+    "contracts/api-contracts.json": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe"
+  },
+  "result": {
+    "accounted_operations": 205,
+    "FDI": 49,
+    "CDI": 156,
+    "operation_variants": 207,
+    "captured_reference_only": 205,
+    "fully_captured_and_behavior_verified": 0,
+    "exact_schema_redistribution_blocked": 205,
+    "vendor_control_non_equivalences_required": 5,
+    "operations_with_path_artifacts": [
+      "FDI-026",
+      "CDI-099",
+      "CDI-104",
+      "CDI-116"
+    ],
+    "upstream_additions_outside_frozen_inventory": 5,
+    "complete": false
+  },
+  "evidence_type": "source-contract-accounting-not-runtime-implementation"
+}

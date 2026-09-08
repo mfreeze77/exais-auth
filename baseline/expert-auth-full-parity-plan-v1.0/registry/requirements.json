@@ -1,0 +1,4996 @@
+[
+  {
+    "id": "BAS-001",
+    "family": "BAS",
+    "title": "Frozen public feature baseline",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Every research-report feature, SDK, plugin, configuration family and operation has a stable identifier and source; new documentation changes create a reviewed delta rather than silently changing scope.",
+    "test_ids": [
+      "AT-BAS-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-002",
+    "family": "BAS",
+    "title": "Commit and artifact provenance",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Each reused source or binary has a selected release, full commit or immutable digest, origin, license, notices and dependency list; unset pins block implementation qualification.",
+    "test_ids": [
+      "AT-BAS-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-003",
+    "family": "BAS",
+    "title": "No paid authentication entitlement",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Start and exercise every built-in capability without an authentication-vendor account, subscription, activation key, usage meter or license-validation service.",
+    "test_ids": [
+      "AT-BAS-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-004",
+    "family": "BAS",
+    "title": "Restricted material exclusion",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Dependency and artifact scans find no unapproved enterprise source, enterprise binary or runtime download; proprietary code is neither copied nor used to manufacture fake entitlements.",
+    "test_ids": [
+      "AT-BAS-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-005",
+    "family": "BAS",
+    "title": "Reproducible source build",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Build the chosen OSS components and our changes from the recorded sources in a clean environment; compare declared artifact hashes and SBOM contents.",
+    "test_ids": [
+      "AT-BAS-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-006",
+    "family": "BAS",
+    "title": "No hidden outbound dependency",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "With auth-vendor domains blocked, first-party login, refresh, MFA, administration and local risk evaluation pass; explicitly configured social/mail/SMS traffic is separately allowlisted.",
+    "test_ids": [
+      "AT-BAS-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-007",
+    "family": "BAS",
+    "title": "Owned configuration and data export",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Export application, tenant, user, roles, provider references, policy and audit data without a vendor service, then restore into an independently deployed instance.",
+    "test_ids": [
+      "AT-BAS-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "BAS-008",
+    "family": "BAS",
+    "title": "Bounded compatibility claims",
+    "required": true,
+    "milestone": "M0",
+    "implementation_strategy": "audit",
+    "source_ids": [
+      "DR",
+      "S14",
+      "S15",
+      "S19"
+    ],
+    "acceptance": "Publish exact supported core/API/SDK/plugin versions and distinguish functional parity, wire parity, security quality and deployment evidence.",
+    "test_ids": [
+      "AT-BAS-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-001",
+    "family": "IDN",
+    "title": "Application isolation",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "The same external email can identify unrelated users in two applications, and tokens/data cannot cross the app boundary.",
+    "test_ids": [
+      "AT-IDN-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-002",
+    "family": "IDN",
+    "title": "Default app and tenant",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "A fresh installation creates the documented default logical application and tenant, and omitted addressing resolves only to those defaults.",
+    "test_ids": [
+      "AT-IDN-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-003",
+    "family": "IDN",
+    "title": "Tenant-specific identity namespaces",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "The same email, phone or provider account in two tenants may create distinct identities without an application-global uniqueness constraint accidentally merging them.",
+    "test_ids": [
+      "AT-IDN-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-004",
+    "family": "IDN",
+    "title": "Explicit user sharing",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Within an allowed shared storage boundary, explicitly associate one app-scoped identity with two tenants while retaining separate tenant sessions and role assignments.",
+    "test_ids": [
+      "AT-IDN-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-005",
+    "family": "IDN",
+    "title": "Primary and method-specific identities",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Preserve stable primary IDs and method/recipe IDs, with explicit mappings rather than treating a provider account as the complete application user.",
+    "test_ids": [
+      "AT-IDN-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-006",
+    "family": "IDN",
+    "title": "Tenant membership lifecycle",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Add and remove memberships with authorization checks; removal prevents new tenant sessions and invalidates access according to the declared revocation profile.",
+    "test_ids": [
+      "AT-IDN-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-007",
+    "family": "IDN",
+    "title": "App-level roles and tenant assignments",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Define a role once per application and assign it differently for the same user in different tenants; verify both positive and forbidden access.",
+    "test_ids": [
+      "AT-IDN-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-008",
+    "family": "IDN",
+    "title": "App-level user metadata",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Shared tenant membership does not duplicate or leak the app-scoped metadata record across applications.",
+    "test_ids": [
+      "AT-IDN-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-009",
+    "family": "IDN",
+    "title": "Separate persistence domains",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Place selected applications or tenants on separate database deployments and reject identity-sharing operations that cross an unsupported physical boundary.",
+    "test_ids": [
+      "AT-IDN-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-010",
+    "family": "IDN",
+    "title": "Host and routing resolution",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Resolve app/tenant from validated host, route and caller configuration; substituting a host header or tenant parameter cannot select another customer's identity context.",
+    "test_ids": [
+      "AT-IDN-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-011",
+    "family": "IDN",
+    "title": "Provisioning lifecycle",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Create, configure, list, suspend and delete apps/tenants using idempotent jobs, explicit destructive-operation policy and audit records.",
+    "test_ids": [
+      "AT-IDN-011"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "IDN-012",
+    "family": "IDN",
+    "title": "Concurrency and uniqueness",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S04",
+      "S06"
+    ],
+    "acceptance": "Simultaneous sign-up, membership change and linking tests preserve all uniqueness and foreign-key invariants without orphaned credentials.",
+    "test_ids": [
+      "AT-IDN-012"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-001",
+    "family": "PWD",
+    "title": "Email and password registration/login",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Correct credentials create/resolve the expected tenant identity; wrong credentials and disabled accounts cannot create authenticated sessions.",
+    "test_ids": [
+      "AT-PWD-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-002",
+    "family": "PWD",
+    "title": "Username and password",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Configured username login uses a tenant-scoped normalized identifier without leaking identity existence across tenants.",
+    "test_ids": [
+      "AT-PWD-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-003",
+    "family": "PWD",
+    "title": "Phone and password",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support the documented customized phone/password use case with phone normalization and independent verification state.",
+    "test_ids": [
+      "AT-PWD-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-004",
+    "family": "PWD",
+    "title": "Custom sign-up/sign-in fields",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Validate added fields on the server and in UI, return stable field errors and prevent client-side-only policy bypass.",
+    "test_ids": [
+      "AT-PWD-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-005",
+    "family": "PWD",
+    "title": "Password hashing and rehash",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Verify supported imported hash fixtures and rehash after successful authentication under a configured modern policy; never expose the hash to clients.",
+    "test_ids": [
+      "AT-PWD-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-006",
+    "family": "PWD",
+    "title": "Password reset lifecycle",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Issue, expire and atomically consume a reset token; replay, wrong-tenant and concurrent consumption attempts fail.",
+    "test_ids": [
+      "AT-PWD-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-007",
+    "family": "PWD",
+    "title": "Registration control",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Disable open registration while preserving administrator or explicitly invited registration paths.",
+    "test_ids": [
+      "AT-PWD-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-008",
+    "family": "PWD",
+    "title": "Password-manager behavior",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Browser autocomplete, generated-password and paste flows work in supported browsers; accessible field labels remain intact.",
+    "test_ids": [
+      "AT-PWD-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-009",
+    "family": "PWD",
+    "title": "Authentication hooks and overrides",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Pre/post hooks, API overrides and function overrides receive documented context and cannot implicitly bypass shared authorization invariants.",
+    "test_ids": [
+      "AT-PWD-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PWD-010",
+    "family": "PWD",
+    "title": "Password change security",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Require appropriate recent authentication, notify according to policy and apply the declared session-revocation policy after a change.",
+    "test_ids": [
+      "AT-PWD-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-001",
+    "family": "PLS",
+    "title": "Email OTP",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Start, deliver, consume and expire email codes; enforce attempt limits, tenant binding and one-time use.",
+    "test_ids": [
+      "AT-PLS-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-002",
+    "family": "PLS",
+    "title": "SMS OTP",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Run the same lifecycle through a configurable SMS adapter without an auth-vendor delivery dependency.",
+    "test_ids": [
+      "AT-PLS-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-003",
+    "family": "PLS",
+    "title": "Magic links",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support link creation and consumption with allowed redirects, expiration and replay protection.",
+    "test_ids": [
+      "AT-PLS-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-004",
+    "family": "PLS",
+    "title": "Combined OTP and link flows",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Where configured, code and link refer to one controlled pre-authentication flow and cannot produce conflicting identities through concurrent consumption.",
+    "test_ids": [
+      "AT-PLS-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-005",
+    "family": "PLS",
+    "title": "Resend and throttling",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "A resend observes configured cooldowns and attempt policy; overlapping delivery does not reset brute-force protection or extend validity unexpectedly.",
+    "test_ids": [
+      "AT-PLS-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-006",
+    "family": "PLS",
+    "title": "Code administration",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Check, list and revoke one or all active challenges under authorized backend operations without exposing raw secrets to users or logs.",
+    "test_ids": [
+      "AT-PLS-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-007",
+    "family": "PLS",
+    "title": "Invitation-based sign-up",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Invitations bind intended app/tenant, recipient and expiration; reuse or recipient substitution is rejected.",
+    "test_ids": [
+      "AT-PLS-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-008",
+    "family": "PLS",
+    "title": "Allow-list sign-up",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Apply tenant-specific allow-list rules before creating a user; disallowed recipients receive a non-enumerating error profile.",
+    "test_ids": [
+      "AT-PLS-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-009",
+    "family": "PLS",
+    "title": "Customization and providers",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Customize OTP/link templates, verification behavior and hooks; provider failure leaves challenge and delivery state reconcilable.",
+    "test_ids": [
+      "AT-PLS-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLS-010",
+    "family": "PLS",
+    "title": "Link-preview safety",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "extend",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Mail scanners/prefetch do not silently authenticate or consume high-impact actions; a documented confirmation mechanism preserves supported link flows.",
+    "test_ids": [
+      "AT-PLS-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-001",
+    "family": "SOC",
+    "title": "Built-in provider catalog",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Supply integration/configuration paths for Google, Google Workspaces, Apple, Discord, Facebook, GitHub, GitLab, Twitter, LinkedIn, Okta and Active Directory; SAML is tracked under enterprise federation.",
+    "test_ids": [
+      "AT-SOC-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-002",
+    "family": "SOC",
+    "title": "Custom OAuth/OIDC provider",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Register a custom provider with validated issuer/endpoints, claim mapping and callback behavior; reject mismatched issuer or audience.",
+    "test_ids": [
+      "AT-SOC-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-003",
+    "family": "SOC",
+    "title": "Provider client variants",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Select distinct client configurations by tenant/platform while preventing secret/configuration crossover.",
+    "test_ids": [
+      "AT-SOC-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-004",
+    "family": "SOC",
+    "title": "Authorization callback integrity",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Validate state and the applicable nonce/PKCE/issuer binding; duplicate or swapped authorization callbacks do not sign in a different session.",
+    "test_ids": [
+      "AT-SOC-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-005",
+    "family": "SOC",
+    "title": "Apple callback handling",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Exercise Apple's documented callback representation and state preservation rather than assuming every provider uses an identical redirect query flow.",
+    "test_ids": [
+      "AT-SOC-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-006",
+    "family": "SOC",
+    "title": "Claims and email trust",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Treat provider subject and issuer as identity evidence; an unverified email claim alone never causes privileged linking.",
+    "test_ids": [
+      "AT-SOC-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-007",
+    "family": "SOC",
+    "title": "Provider invitations and hooks",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Run invitation, allow-list and customization policies consistently on third-party sign-in and sign-up.",
+    "test_ids": [
+      "AT-SOC-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SOC-008",
+    "family": "SOC",
+    "title": "Secret and credential rotation",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Rotate provider secrets/certificates without exposing them to browser bundles or losing tenant configuration rollback.",
+    "test_ids": [
+      "AT-SOC-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-001",
+    "family": "ENT",
+    "title": "Per-tenant login configuration",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Configure enabled password, passwordless and enterprise providers separately per tenant and return only allowed login methods.",
+    "test_ids": [
+      "AT-ENT-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-002",
+    "family": "ENT",
+    "title": "Common-domain tenant discovery",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Discover/select a tenant through a configured shared login domain without unauthenticated disclosure of sensitive tenant membership.",
+    "test_ids": [
+      "AT-ENT-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-003",
+    "family": "ENT",
+    "title": "Subdomain login",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Resolve a tenant from an allowlisted subdomain and prevent host-header or suffix-matching spoofing.",
+    "test_ids": [
+      "AT-ENT-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-004",
+    "family": "ENT",
+    "title": "Domain ownership and onboarding",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Verify ownership before granting domain-directed routing, and handle ownership expiry, conflicts and transfer with audit records.",
+    "test_ids": [
+      "AT-ENT-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-005",
+    "family": "ENT",
+    "title": "SAML service-provider flow",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Validate signed assertions, issuer, audience, destination, request correlation and validity; reject replay and malformed XML fixtures.",
+    "test_ids": [
+      "AT-ENT-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-006",
+    "family": "ENT",
+    "title": "SAML metadata and certificate lifecycle",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Import/export metadata, support planned certificate rotation and reject untrusted endpoint/configuration updates.",
+    "test_ids": [
+      "AT-ENT-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-007",
+    "family": "ENT",
+    "title": "Legacy SAML migration",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Convert documented legacy configuration and mapping behavior or supply an explicit tested adapter; do not label an untested metadata import compatible.",
+    "test_ids": [
+      "AT-ENT-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-008",
+    "family": "ENT",
+    "title": "Tenant provider administration",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Tenant-authorized administrators can configure their own connections but cannot read another tenant's secrets or edit platform-level providers.",
+    "test_ids": [
+      "AT-ENT-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ENT-009",
+    "family": "ENT",
+    "title": "Federation mapping and logout",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Map identities and memberships predictably and document/test the extent of SAML/OIDC logout and local-session invalidation.",
+    "test_ids": [
+      "AT-ENT-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-001",
+    "family": "OAU",
+    "title": "Authorization code with PKCE",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Public and confidential clients complete the applicable secure authorization-code flow; code reuse, wrong verifier and redirect substitution fail.",
+    "test_ids": [
+      "AT-OAU-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-002",
+    "family": "OAU",
+    "title": "Issuer discovery and keys",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Publish correct issuer metadata and JWKS, with exact issuer/audience verification and key-rotation overlap tests.",
+    "test_ids": [
+      "AT-OAU-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-003",
+    "family": "OAU",
+    "title": "Client registration and administration",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Create, list, update, disable and remove OAuth clients; validate redirects, grants and authentication methods per client.",
+    "test_ids": [
+      "AT-OAU-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-004",
+    "family": "OAU",
+    "title": "Login and consent interactions",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Expose accept/reject login, consent and logout decisions with one-time request binding and least-privilege scope approval.",
+    "test_ids": [
+      "AT-OAU-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-005",
+    "family": "OAU",
+    "title": "Shared-backend multi-domain SSO",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Two frontend domains sharing one backend authenticate via top-level redirects and keep domain/session boundaries intact.",
+    "test_ids": [
+      "AT-OAU-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-006",
+    "family": "OAU",
+    "title": "Separate-backend multi-domain SSO",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Two independently configured backend applications reuse central login without sharing raw application refresh tokens or collapsing app identity namespaces.",
+    "test_ids": [
+      "AT-OAU-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-007",
+    "family": "OAU",
+    "title": "Desktop and native login reuse",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Use external-browser authorization and validated callback/deep-link handling for desktop and mobile clients.",
+    "test_ids": [
+      "AT-OAU-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-008",
+    "family": "OAU",
+    "title": "Scopes and custom claims",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Issue only approved scopes/claims; reserved claims cannot be overridden and unauthorized application roles do not propagate.",
+    "test_ids": [
+      "AT-OAU-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-009",
+    "family": "OAU",
+    "title": "Userinfo, introspection and revocation",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Implement authorized userinfo/introspection and token/client revocation with defined propagation and audience restrictions.",
+    "test_ids": [
+      "AT-OAU-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-010",
+    "family": "OAU",
+    "title": "Logout and session inventory",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Support local app logout, OAuth-session logout and central SSO logout as separate explicit operations with tested effects.",
+    "test_ids": [
+      "AT-OAU-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-011",
+    "family": "OAU",
+    "title": "Token lifecycle and consent records",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Persist grants/consents and apply expiry, rotation and revocation independently from application cookie sessions.",
+    "test_ids": [
+      "AT-OAU-011"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OAU-012",
+    "family": "OAU",
+    "title": "Legacy provider behavior",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Identify required legacy documented token/client behavior and test a migration adapter without enabling prohibited password-grant shortcuts for new clients.",
+    "test_ids": [
+      "AT-OAU-012"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "M2M-001",
+    "family": "M2M",
+    "title": "Client-credentials grant",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "An authorized service obtains an audience- and scope-restricted token; an end-user credential cannot impersonate a machine client.",
+    "test_ids": [
+      "AT-M2M-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "M2M-002",
+    "family": "M2M",
+    "title": "Service credential management",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Create, rotate, expire and revoke machine credentials with audit and overlap policy.",
+    "test_ids": [
+      "AT-M2M-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "M2M-003",
+    "family": "M2M",
+    "title": "Service authorization",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Enforce service-specific permissions and tenant restrictions on every protected operation.",
+    "test_ids": [
+      "AT-M2M-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "M2M-004",
+    "family": "M2M",
+    "title": "Machine token validation",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Validate issuer, audience, time and scopes on service requests and distinguish service principals from human sessions.",
+    "test_ids": [
+      "AT-M2M-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "M2M-005",
+    "family": "M2M",
+    "title": "Legacy M2M transition",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Import/migrate documented legacy machine configuration with controlled overlap and removal of old credentials.",
+    "test_ids": [
+      "AT-M2M-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "M2M-006",
+    "family": "M2M",
+    "title": "No volume licensing",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Issue and validate machine tokens without per-token billing logic or vendor quota enforcement in the software.",
+    "test_ids": [
+      "AT-M2M-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-001",
+    "family": "MCP",
+    "title": "Protected resource metadata",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "The protected MCP endpoint publishes version-pinned OAuth protected-resource metadata and an authorization-server discovery path.",
+    "test_ids": [
+      "AT-MCP-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-002",
+    "family": "MCP",
+    "title": "Client authorization flow",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "Run browser authorization and PKCE for supported MCP clients; client metadata/registration requirements are explicitly profiled to the selected protocol version.",
+    "test_ids": [
+      "AT-MCP-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-003",
+    "family": "MCP",
+    "title": "Resource and audience binding",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "Requests include the required target resource and the MCP server rejects tokens issued for another server or API.",
+    "test_ids": [
+      "AT-MCP-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-004",
+    "family": "MCP",
+    "title": "Tool-level scope checks",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "Tool invocation receives authenticated identity/context and checks the required scope and application/tenant permission.",
+    "test_ids": [
+      "AT-MCP-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-005",
+    "family": "MCP",
+    "title": "Authentication errors and challenges",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "Produce the correct authentication challenge and insufficient-scope behavior; no raw bearer token is reflected in errors.",
+    "test_ids": [
+      "AT-MCP-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-006",
+    "family": "MCP",
+    "title": "No token passthrough",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "Do not forward an inbound bearer token to an unrelated downstream service; obtain an explicitly scoped credential through a supported delegation path.",
+    "test_ids": [
+      "AT-MCP-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MCP-007",
+    "family": "MCP",
+    "title": "Compatibility sample",
+    "required": true,
+    "milestone": "M5",
+    "implementation_strategy": "custom-adapter",
+    "source_ids": [
+      "DR",
+      "S10",
+      "S23"
+    ],
+    "acceptance": "Ship an independently self-hosted MCP sample that authenticates, invokes an allowed tool, rejects a forbidden tool and handles logout/token expiry.",
+    "test_ids": [
+      "AT-MCP-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-001",
+    "family": "WBA",
+    "title": "Registration options and credentials",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "Generate challenge/options and verify credential registration with configured RP ID, origin, user-verification and algorithm policy.",
+    "test_ids": [
+      "AT-WBA-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-002",
+    "family": "WBA",
+    "title": "Passkey sign-up and sign-in",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "Support the documented creation and existing-user authentication flows, including invalid credential and user-not-found outcomes.",
+    "test_ids": [
+      "AT-WBA-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-003",
+    "family": "WBA",
+    "title": "Credential inventory",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "List, name where supported, and remove credentials without exposing private material or another identity's credential metadata.",
+    "test_ids": [
+      "AT-WBA-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-004",
+    "family": "WBA",
+    "title": "Challenge lifecycle",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "Expire/remove options and reject duplicate, wrong-origin, wrong-RP and wrong-tenant responses.",
+    "test_ids": [
+      "AT-WBA-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-005",
+    "family": "WBA",
+    "title": "Account recovery",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "Issue/consume recovery credentials with a strong approved recovery policy, notifications and session revalidation.",
+    "test_ids": [
+      "AT-WBA-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-006",
+    "family": "WBA",
+    "title": "Passkeys as an MFA factor",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "A verified passkey can satisfy the configured factor/assurance policy without counting one ceremony twice as independent factors.",
+    "test_ids": [
+      "AT-WBA-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-007",
+    "family": "WBA",
+    "title": "Browser and device coverage",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "Test supported browsers plus real native/device scenarios; virtual authenticators alone do not qualify device compatibility.",
+    "test_ids": [
+      "AT-WBA-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "WBA-008",
+    "family": "WBA",
+    "title": "Migration constraints",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR",
+      "S08"
+    ],
+    "acceptance": "Preserve RP ID and origin-compatible credentials where possible, otherwise mark required re-enrollment explicitly rather than claiming portable passkeys.",
+    "test_ids": [
+      "AT-WBA-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-001",
+    "family": "SES",
+    "title": "Session creation",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Issue an app/tenant-scoped handle, access token and refresh credential only after required authentication policy succeeds.",
+    "test_ids": [
+      "AT-SES-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-002",
+    "family": "SES",
+    "title": "Local JWT verification",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Normal protected requests verify cached signing material and claims locally; invalid issuer, audience, algorithm or expired token is rejected.",
+    "test_ids": [
+      "AT-SES-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-003",
+    "family": "SES",
+    "title": "Stateful refresh rotation",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Atomically compare and rotate server-side refresh verifiers; concurrent refresh and response-loss cases follow a documented tested state machine.",
+    "test_ids": [
+      "AT-SES-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-004",
+    "family": "SES",
+    "title": "Refresh reuse detection",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Distinguish allowed race/retry behavior from stale-token replay under a versioned policy, and revoke the intended token family on confirmed compromise.",
+    "test_ids": [
+      "AT-SES-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-005",
+    "family": "SES",
+    "title": "Logout and session invalidation",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Revoke one or all authorized sessions; subsequent refresh fails while existing access-token behavior matches the declared revocation mode.",
+    "test_ids": [
+      "AT-SES-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-006",
+    "family": "SES",
+    "title": "Online revocation mode",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "An explicit denylist/version check enforces a measured bounded revocation window; dependency failure follows a documented security policy.",
+    "test_ids": [
+      "AT-SES-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-007",
+    "family": "SES",
+    "title": "Cookie and header transfer",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Support both transport modes with correct secure storage, CSRF protections, headers and cookie path/domain flags.",
+    "test_ids": [
+      "AT-SES-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-008",
+    "family": "SES",
+    "title": "Subdomain session sharing",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Share sessions only across explicitly configured trusted subdomains in the same allowed identity context; tenant switching requires a distinct tenant session.",
+    "test_ids": [
+      "AT-SES-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-009",
+    "family": "SES",
+    "title": "SSR protection",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Server rendering validates sessions without accidentally refreshing from a browser-only context or leaking tokens into rendered HTML.",
+    "test_ids": [
+      "AT-SES-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-010",
+    "family": "SES",
+    "title": "WebSocket verification",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Verify initial upgrade and enforce expiration/revocation policy during a long-lived socket; reconnect and reauthentication are tested.",
+    "test_ids": [
+      "AT-SES-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-011",
+    "family": "SES",
+    "title": "Claims and session data",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Read/update server-side session data and JWT claims with stable regeneration semantics and protection of reserved claims.",
+    "test_ids": [
+      "AT-SES-011"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-012",
+    "family": "SES",
+    "title": "Signing key modes",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Support configured static/dynamic signing-key behavior, versioned key rotation and old-token overlap; retired keys expire from acceptance.",
+    "test_ids": [
+      "AT-SES-012"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-013",
+    "family": "SES",
+    "title": "Anonymous sessions",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Create limited anonymous sessions and upgrade them without session fixation or unintended role inheritance.",
+    "test_ids": [
+      "AT-SES-013"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-014",
+    "family": "SES",
+    "title": "Impersonation",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Require privileged recent authentication, record actor and subject, enforce bounded duration and exclude prohibited actions.",
+    "test_ids": [
+      "AT-SES-014"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-015",
+    "family": "SES",
+    "title": "Multiple API endpoints",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Multiple configured resource APIs use the right token audience and shared refresh policy without duplicate refresh storms.",
+    "test_ids": [
+      "AT-SES-015"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-016",
+    "family": "SES",
+    "title": "Interceptors and explicit mode",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Fetch/XHR/client integrations support refresh coordination and an opt-out/manual mode with no silently unprotected requests.",
+    "test_ids": [
+      "AT-SES-016"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-017",
+    "family": "SES",
+    "title": "Error contract",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Preserve refresh, expired-session, invalid-claim, forbidden and network-failure distinctions expected by supported SDKs.",
+    "test_ids": [
+      "AT-SES-017"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-018",
+    "family": "SES",
+    "title": "Iframe behavior",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Document and test behavior with supported third-party-cookie/storage policies; use a supported fallback rather than claiming to bypass browser restrictions.",
+    "test_ids": [
+      "AT-SES-018"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-019",
+    "family": "SES",
+    "title": "Path and domain migration",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Changing auth base path/domain has a tested transition policy for cookie scope and old sessions, including safe forced reauthentication when necessary.",
+    "test_ids": [
+      "AT-SES-019"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SES-020",
+    "family": "SES",
+    "title": "Server outage behavior",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-or-custom-critical",
+    "source_ids": [
+      "DR",
+      "S05"
+    ],
+    "acceptance": "Unexpired offline-verifiable access can continue under its profile; new login/refresh and state-dependent checks fail according to documented boundaries.",
+    "test_ids": [
+      "AT-SES-020"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-001",
+    "family": "MFA",
+    "title": "TOTP device enrollment",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Create, verify, name, list, remove and import TOTP devices; protect secrets at rest and do not activate unverified enrollment.",
+    "test_ids": [
+      "AT-MFA-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-002",
+    "family": "MFA",
+    "title": "TOTP verification controls",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Enforce accepted skew/period, failed-attempt policy and replay prevention for relevant operations.",
+    "test_ids": [
+      "AT-MFA-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-003",
+    "family": "MFA",
+    "title": "Email and SMS second factors",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Deliver and verify independently scoped OTP challenges with expiry, cooldown, retry policy and tenant binding.",
+    "test_ids": [
+      "AT-MFA-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-004",
+    "family": "MFA",
+    "title": "Per-user and tenant-wide requirements",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Require factors for everyone or selected users according to tenant/app policy; removing a factor cannot silently clear mandatory MFA.",
+    "test_ids": [
+      "AT-MFA-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-005",
+    "family": "MFA",
+    "title": "Factor discovery",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Return available, enrolled and required factors consistently to backend and frontend clients.",
+    "test_ids": [
+      "AT-MFA-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-006",
+    "family": "MFA",
+    "title": "Step-up authentication",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Require appropriate factor class and recent authentication for a sensitive action; a stale MFA claim alone does not satisfy freshness.",
+    "test_ids": [
+      "AT-MFA-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-007",
+    "family": "MFA",
+    "title": "Recovery codes",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Generate, display once, hash, rotate and consume recovery codes atomically; reuse is rejected across replicas.",
+    "test_ids": [
+      "AT-MFA-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-008",
+    "family": "MFA",
+    "title": "Factor independence",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Passwordless email plus another email challenge is not misrepresented as two independent factors; policies state the achieved assurance.",
+    "test_ids": [
+      "AT-MFA-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-009",
+    "family": "MFA",
+    "title": "Route and UI enforcement",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Backend guards enforce verification status regardless of hidden UI controls; prebuilt/custom UI represents enrollment and challenge states.",
+    "test_ids": [
+      "AT-MFA-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MFA-010",
+    "family": "MFA",
+    "title": "Recovery and factor replacement",
+    "required": true,
+    "milestone": "M4",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S07"
+    ],
+    "acceptance": "Require a documented recovery proof, notify the user and re-evaluate active sessions when factors are reset or replaced.",
+    "test_ids": [
+      "AT-MFA-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "VER-001",
+    "family": "VER",
+    "title": "Verification status",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Query verification status for the correct identity/email and distinguish account-level from current-email state.",
+    "test_ids": [
+      "AT-VER-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "VER-002",
+    "family": "VER",
+    "title": "Send and consume verification",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Send, expire, remove and consume single-use verification tokens with wrong-tenant and replay rejection.",
+    "test_ids": [
+      "AT-VER-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "VER-003",
+    "family": "VER",
+    "title": "Manual administrative actions",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Mark verified/unverified through privileged audited actions; applications cannot forge the result through profile updates.",
+    "test_ids": [
+      "AT-VER-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "VER-004",
+    "family": "VER",
+    "title": "Protected-route behavior",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Enforce verification claims on API and UI routes, with bounded stale-claim handling after state changes.",
+    "test_ids": [
+      "AT-VER-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "VER-005",
+    "family": "VER",
+    "title": "Custom and embedded UI",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support embedded verification state, resend actions, text/styling and redirect customization.",
+    "test_ids": [
+      "AT-VER-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "VER-006",
+    "family": "VER",
+    "title": "Email change handling",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Updating an email invalidates or re-evaluates old proof and linking policy without granting trust to the replacement address.",
+    "test_ids": [
+      "AT-VER-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-001",
+    "family": "RSK",
+    "title": "Brute-force detection",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Rate and behavior rules cover login, reset, verification and challenge endpoints, including distributed attempts and tenant/account lockout abuse.",
+    "test_ids": [
+      "AT-RSK-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-002",
+    "family": "RSK",
+    "title": "Breached-password detection",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Check against an approved locally available dataset or optional adapter without logging plaintext or transmitting full password hashes.",
+    "test_ids": [
+      "AT-RSK-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-003",
+    "family": "RSK",
+    "title": "Impossible-travel signal",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Evaluate time/location uncertainty and VPN/proxy effects; uncertain geography yields an explicit unknown signal, not certain fraud.",
+    "test_ids": [
+      "AT-RSK-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-004",
+    "family": "RSK",
+    "title": "Bot and credential-stuffing signal",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Combine request/challenge/velocity evidence; test both scripted attacks and legitimate automation/accessibility cases.",
+    "test_ids": [
+      "AT-RSK-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-005",
+    "family": "RSK",
+    "title": "Suspicious IP signal",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Support approved local IP/ASN/Tor/proxy/reputation feeds with version, age and license metadata; no proprietary intelligence endpoint is required.",
+    "test_ids": [
+      "AT-RSK-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-006",
+    "family": "RSK",
+    "title": "New-device detection",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Track a scoped, privacy-conscious device recognition signal with reset, loss and cookie-blocking scenarios.",
+    "test_ids": [
+      "AT-RSK-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-007",
+    "family": "RSK",
+    "title": "Device-count tracking",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Count observed devices using defined retention and confidence, without treating every cookie reset as a confirmed new human/device.",
+    "test_ids": [
+      "AT-RSK-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-008",
+    "family": "RSK",
+    "title": "Requester correlation",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Correlate available requester signals with explicit confidence/limitations; do not promise identification of arbitrarily disguised devices.",
+    "test_ids": [
+      "AT-RSK-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-009",
+    "family": "RSK",
+    "title": "Risk policy and action contract",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Return allow, challenge, step-up or deny plus reason codes and policy version; challenge completion is bound to the original transaction.",
+    "test_ids": [
+      "AT-RSK-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-010",
+    "family": "RSK",
+    "title": "Unknown and outage state",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Missing or stale signals remain unknown; define minimum local protections and fail-open/fail-closed behavior by action and severity.",
+    "test_ids": [
+      "AT-RSK-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-011",
+    "family": "RSK",
+    "title": "Risk administration and audit",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Explain decisions, configure tenant policy, review outcomes and redact sensitive inputs from telemetry.",
+    "test_ids": [
+      "AT-RSK-011"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RSK-012",
+    "family": "RSK",
+    "title": "Detection quality evaluation",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "custom-plus-open-data",
+    "source_ids": [
+      "DR",
+      "S09"
+    ],
+    "acceptance": "Measure detection and false-positive rates on a documented corpus and lawful available reference tests; never equate an API-shaped stub with comparable protection quality.",
+    "test_ids": [
+      "AT-RSK-012"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CAP-001",
+    "family": "CAP",
+    "title": "Self-hosted challenge default",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "reuse-plus-adapters",
+    "source_ids": [
+      "DR",
+      "S11",
+      "S25"
+    ],
+    "acceptance": "Generate and verify local challenges without vendor keys and reject expired/replayed/wrong-site responses.",
+    "test_ids": [
+      "AT-CAP-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CAP-002",
+    "family": "CAP",
+    "title": "reCAPTCHA v2/v3 adapters",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "reuse-plus-adapters",
+    "source_ids": [
+      "DR",
+      "S11",
+      "S25"
+    ],
+    "acceptance": "Implement documented provider adapters with site/action/hostname validation; use only when operator-configured credentials permit.",
+    "test_ids": [
+      "AT-CAP-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CAP-003",
+    "family": "CAP",
+    "title": "Turnstile adapter",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "reuse-plus-adapters",
+    "source_ids": [
+      "DR",
+      "S11",
+      "S25"
+    ],
+    "acceptance": "Implement server-side validation and equivalent error mapping without making the service mandatory for core operation.",
+    "test_ids": [
+      "AT-CAP-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CAP-004",
+    "family": "CAP",
+    "title": "Conditional flow enforcement",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "reuse-plus-adapters",
+    "source_ids": [
+      "DR",
+      "S11",
+      "S25"
+    ],
+    "acceptance": "Apply challenge rules to configured sign-in, sign-up, reset and passwordless flows with consistent server enforcement.",
+    "test_ids": [
+      "AT-CAP-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CAP-005",
+    "family": "CAP",
+    "title": "UI, accessibility and degraded clients",
+    "required": true,
+    "milestone": "M6",
+    "implementation_strategy": "reuse-plus-adapters",
+    "source_ids": [
+      "DR",
+      "S11",
+      "S25"
+    ],
+    "acceptance": "Support suitable accessible challenge/fallback behavior and measure impact on constrained devices; proof-of-work alone is not labeled a complete bot detector.",
+    "test_ids": [
+      "AT-CAP-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RBC-001",
+    "family": "RBC",
+    "title": "Role and permission lifecycle",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Create, update, list and delete roles; grant/revoke permissions with stable app scope.",
+    "test_ids": [
+      "AT-RBC-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RBC-002",
+    "family": "RBC",
+    "title": "Tenant-specific assignments",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Assign/remove roles to users in a tenant and query users by role and roles by permission without cross-tenant leakage.",
+    "test_ids": [
+      "AT-RBC-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RBC-003",
+    "family": "RBC",
+    "title": "Backend guards",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Require authenticated context and enforce role/permission claims at each protected API operation.",
+    "test_ids": [
+      "AT-RBC-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RBC-004",
+    "family": "RBC",
+    "title": "Frontend guards",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Provide route/component helpers while documenting that server authorization remains mandatory.",
+    "test_ids": [
+      "AT-RBC-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RBC-005",
+    "family": "RBC",
+    "title": "Authorization change propagation",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Removing privileges affects access within the selected online/offline claim freshness contract and refresh regeneration behavior.",
+    "test_ids": [
+      "AT-RBC-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "RBC-006",
+    "family": "RBC",
+    "title": "Resource isolation integration",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "reuse-plus-extend",
+    "source_ids": [
+      "DR",
+      "S04"
+    ],
+    "acceptance": "Sample document/database/search endpoints enforce tenant/resource ownership even when the user has a valid platform token.",
+    "test_ids": [
+      "AT-RBC-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-001",
+    "family": "USR",
+    "title": "Search and user inventory",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "List, filter, search and paginate users with stable cursor behavior and authorized tenant/application scope.",
+    "test_ids": [
+      "AT-USR-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-002",
+    "family": "USR",
+    "title": "Counts and activity",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Produce total/active-user counts and administrative statistics using documented definitions without fee enforcement.",
+    "test_ids": [
+      "AT-USR-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-003",
+    "family": "USR",
+    "title": "Profile updates",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Let users update permitted fields with validation, recent-authentication checks where required and protected fields unavailable to mass assignment.",
+    "test_ids": [
+      "AT-USR-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-004",
+    "family": "USR",
+    "title": "User metadata",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Get, merge/update and remove app-scoped metadata with size limits, version control and safe reserved namespaces.",
+    "test_ids": [
+      "AT-USR-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-005",
+    "family": "USR",
+    "title": "Deduplication",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Identify potential duplicates and resolve them through the explicit verified linking workflow, not blind same-email merges.",
+    "test_ids": [
+      "AT-USR-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-006",
+    "family": "USR",
+    "title": "User banning",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Enforce app/tenant-scoped bans on login, refresh and applicable active sessions; unban behavior is audited.",
+    "test_ids": [
+      "AT-USR-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-007",
+    "family": "USR",
+    "title": "Progressive profiling",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Require configured fields at defined stages while keeping incomplete profiles from accidentally receiving privileged access.",
+    "test_ids": [
+      "AT-USR-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "USR-008",
+    "family": "USR",
+    "title": "Deletion and retention",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Delete users and dependent state using explicit retention/legal policy; restore/deletion reconciliation does not resurrect removed access.",
+    "test_ids": [
+      "AT-USR-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-001",
+    "family": "LNK",
+    "title": "Primary-user creation checks",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Determine whether a method identity can become primary without conflicting with another primary identity in the applicable namespace.",
+    "test_ids": [
+      "AT-LNK-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-002",
+    "family": "LNK",
+    "title": "Link-possibility checks",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Return deterministic conflict outcomes for already-linked identities and account information conflicts.",
+    "test_ids": [
+      "AT-LNK-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-003",
+    "family": "LNK",
+    "title": "Manual linking",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Require proofs of control for the accounts involved and a recent-authentication policy before transactionally linking.",
+    "test_ids": [
+      "AT-LNK-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-004",
+    "family": "LNK",
+    "title": "Automatic linking policy",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Enable only for explicit verified/trusted evidence rules; an equal unverified email or broad domain match is insufficient.",
+    "test_ids": [
+      "AT-LNK-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-005",
+    "family": "LNK",
+    "title": "Add social or password method",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Attach additional login methods to the intended primary user without changing ownership or bypassing verification requirements.",
+    "test_ids": [
+      "AT-LNK-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-006",
+    "family": "LNK",
+    "title": "Unlink semantics",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Preserve valid remaining login paths and defined method-identity lifecycle; prevent accidental last-method lockout.",
+    "test_ids": [
+      "AT-LNK-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-007",
+    "family": "LNK",
+    "title": "Merge/split transaction integrity",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Concurrent linking/unlinking preserves unique ownership, tenant membership and credential invariants.",
+    "test_ids": [
+      "AT-LNK-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "LNK-008",
+    "family": "LNK",
+    "title": "Session and authorization consequences",
+    "required": true,
+    "milestone": "M3",
+    "implementation_strategy": "custom-or-extend",
+    "source_ids": [
+      "DR",
+      "S06"
+    ],
+    "acceptance": "Resolve subject/recipe IDs consistently after link/unlink and revoke or regenerate affected sessions without transferring unintended roles.",
+    "test_ids": [
+      "AT-LNK-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-001",
+    "family": "ADM",
+    "title": "Self-hosted dashboard",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Serve all dashboard assets and APIs locally with your own branding and no required vendor login.",
+    "test_ids": [
+      "AT-ADM-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-002",
+    "family": "ADM",
+    "title": "Unlimited licensed administrator count",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Create, update, list, disable and delete administrators without software seat entitlements; normal capacity and security limits still apply.",
+    "test_ids": [
+      "AT-ADM-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-003",
+    "family": "ADM",
+    "title": "Administrator authentication and sessions",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Enforce administrator MFA, list/revoke administrator sessions and separate dashboard credentials/authorization from ordinary users.",
+    "test_ids": [
+      "AT-ADM-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-004",
+    "family": "ADM",
+    "title": "User operations dashboard",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Search/edit/delete/ban users, inspect metadata/roles and revoke sessions with authorization, confirmation and audit.",
+    "test_ids": [
+      "AT-ADM-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-005",
+    "family": "ADM",
+    "title": "Tenant/application management",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Create/configure apps and tenants, manage membership and login methods, and inspect isolated user pools.",
+    "test_ids": [
+      "AT-ADM-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-006",
+    "family": "ADM",
+    "title": "Enterprise provider management",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Configure provider metadata, secrets/certificates and domain ownership with masked secret fields and audited changes.",
+    "test_ids": [
+      "AT-ADM-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-007",
+    "family": "ADM",
+    "title": "Delegated administration",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "A tenant administrator can manage only delegated resources; platform administrator functions remain inaccessible.",
+    "test_ids": [
+      "AT-ADM-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-008",
+    "family": "ADM",
+    "title": "Configuration and diagnostics",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Expose authorized configuration/status/stats with secrets redacted; liveness and database readiness are visibly distinct.",
+    "test_ids": [
+      "AT-ADM-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "ADM-009",
+    "family": "ADM",
+    "title": "Risk and lifecycle workflows",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Present factor reset, linking conflicts, failed imports and risk events with safe remedial actions.",
+    "test_ids": [
+      "AT-ADM-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "DEL-001",
+    "family": "DEL",
+    "title": "Operator-controlled SMTP",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "custom-adapters",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Verification, reset, invite and email OTP deliver through configured SMTP with no auth-vendor sender service.",
+    "test_ids": [
+      "AT-DEL-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "DEL-002",
+    "family": "DEL",
+    "title": "Custom email adapter",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "custom-adapters",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support a typed delivery interface with template data, locale, recipient, idempotency and categorized errors.",
+    "test_ids": [
+      "AT-DEL-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "DEL-003",
+    "family": "DEL",
+    "title": "SMS/Twilio/custom adapter",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "custom-adapters",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support the documented Twilio-style integration and a generic SMS interface without a required provider purchase or claim of cost-free SMS transport.",
+    "test_ids": [
+      "AT-DEL-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "DEL-004",
+    "family": "DEL",
+    "title": "Templates and localization",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "custom-adapters",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Customize sender, subject, HTML/text, links, language and branding safely; untrusted fields cannot inject headers or unsafe markup.",
+    "test_ids": [
+      "AT-DEL-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "DEL-005",
+    "family": "DEL",
+    "title": "Durable outbox and retries",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "custom-adapters",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Persist messages atomically with challenge intent, retry bounded failures and prevent uncontrolled duplicate sends or reissuance.",
+    "test_ids": [
+      "AT-DEL-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "DEL-006",
+    "family": "DEL",
+    "title": "Delivery operational controls",
+    "required": true,
+    "milestone": "M2",
+    "implementation_strategy": "custom-adapters",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Apply abuse budgets, monitor bounces/errors where available, protect credentials and never log OTPs, raw links or recovery secrets.",
+    "test_ids": [
+      "AT-DEL-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-001",
+    "family": "MIG",
+    "title": "Bulk import staging",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Add/list/count/delete staged imports with idempotent batches, schema validation and per-record error reports.",
+    "test_ids": [
+      "AT-MIG-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-002",
+    "family": "MIG",
+    "title": "Direct and hash-preserving import",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Import individual accounts and supported hash types using fixtures proving authentication succeeds and unsupported types are reported.",
+    "test_ids": [
+      "AT-MIG-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-003",
+    "family": "MIG",
+    "title": "No-hash and lazy migration",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide explicitly secured first-login or password-reset flows for accounts without portable hashes; no fabricated password credential is introduced.",
+    "test_ids": [
+      "AT-MIG-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-004",
+    "family": "MIG",
+    "title": "External user-ID mapping",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Create/read/update/remove external ID mappings without breaking stable application IDs or linking ownership.",
+    "test_ids": [
+      "AT-MIG-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-005",
+    "family": "MIG",
+    "title": "Verification, metadata and roles",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Reconcile verification state, app metadata, tenant memberships and role/permission assignments with zero unexplained differences.",
+    "test_ids": [
+      "AT-MIG-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-006",
+    "family": "MIG",
+    "title": "MFA and passkey migration",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Import transferable TOTP state and eligible passkeys; mark nonportable factor/credential material for re-enrollment.",
+    "test_ids": [
+      "AT-MIG-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-007",
+    "family": "MIG",
+    "title": "Session migration bridge",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Validate old sessions through an owned authorized bridge and issue new bounded sessions; never assume unrelated token formats are interchangeable.",
+    "test_ids": [
+      "AT-MIG-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-008",
+    "family": "MIG",
+    "title": "Rownd transition",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide a tested mapping/configuration path for the research report's Rownd migration use case, with explicit source credential/data prerequisites.",
+    "test_ids": [
+      "AT-MIG-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-009",
+    "family": "MIG",
+    "title": "Historical MySQL to PostgreSQL",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Supply a supported conversion/reconciliation path for relevant historical schema snapshots; do not add MySQL as a new production dependency by accident.",
+    "test_ids": [
+      "AT-MIG-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "MIG-010",
+    "family": "MIG",
+    "title": "Cutover and rollback",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "custom-tooling",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Dry-run migration, canary traffic and rehearse rollback; new writes/factors after cutover have a defined reconciliation policy rather than destructive blind downgrade.",
+    "test_ids": [
+      "AT-MIG-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-001",
+    "family": "CFG",
+    "title": "Domains and paths",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support appName, websiteDomain, apiDomain, websiteBasePath, apiBasePath and gateway-prefix equivalents with validated combinations.",
+    "test_ids": [
+      "AT-CFG-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-002",
+    "family": "CFG",
+    "title": "Origin and CORS handling",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support static/dynamic allowed-origin resolution without wildcard credentialed CORS or untrusted reflected origins.",
+    "test_ids": [
+      "AT-CFG-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-003",
+    "family": "CFG",
+    "title": "Recipe selection and configuration",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Enable/disable authentication modules with typed validation; disabled modules do not leave accidentally accessible API routes.",
+    "test_ids": [
+      "AT-CFG-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-004",
+    "family": "CFG",
+    "title": "Private service authentication",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Authenticate backend-to-core operations with rotatable scoped keys and private networking; public clients never receive control-plane credentials.",
+    "test_ids": [
+      "AT-CFG-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-005",
+    "family": "CFG",
+    "title": "Core IP filtering",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Implement allow/deny caller policies with normalized addresses and trusted proxy handling; forged forwarding headers do not bypass them.",
+    "test_ids": [
+      "AT-CFG-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-006",
+    "family": "CFG",
+    "title": "TLS and proxy deployment",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Document/run external TLS termination and internal secure transport appropriate to the network boundary.",
+    "test_ids": [
+      "AT-CFG-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-007",
+    "family": "CFG",
+    "title": "PostgreSQL configuration",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support DSN/discrete settings, schema/table namespace equivalents and tested database connection-pool controls.",
+    "test_ids": [
+      "AT-CFG-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-008",
+    "family": "CFG",
+    "title": "Session and signing configuration",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Expose access/refresh lifetimes, signing-key mode/rotation and CSRF/cookie options with safe defaults and explicit migration impact.",
+    "test_ids": [
+      "AT-CFG-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-009",
+    "family": "CFG",
+    "title": "CLI and environment configuration",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Bootstrap, validate, inspect version/configuration, migrate and export through documented commands without printing secrets.",
+    "test_ids": [
+      "AT-CFG-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CFG-010",
+    "family": "CFG",
+    "title": "Secret custody and rotation",
+    "required": true,
+    "milestone": "M1",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Use encrypted secret storage/external file or vault adapters; test provider, service, DB and signing-key rotation and recovery access.",
+    "test_ids": [
+      "AT-CFG-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-001",
+    "family": "OPS",
+    "title": "Single-host deployment",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Supply production-mode containers, private networks, persistent volumes, TLS, health checks and explicit backup instructions; this profile is not described as highly available.",
+    "test_ids": [
+      "AT-OPS-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-002",
+    "family": "OPS",
+    "title": "High-availability deployment",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Support redundant auth nodes and an independently resilient data tier, with exercised node/AZ failure and no single proxy/database masquerading as HA.",
+    "test_ids": [
+      "AT-OPS-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-003",
+    "family": "OPS",
+    "title": "Gateway and application limits",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Enforce request, payload and rate limits at appropriate public boundaries and handle retry-after/backoff safely.",
+    "test_ids": [
+      "AT-OPS-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-004",
+    "family": "OPS",
+    "title": "Readiness and liveness",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Liveness proves process health; readiness verifies required persistence/dependencies and removes a failed node from traffic.",
+    "test_ids": [
+      "AT-OPS-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-005",
+    "family": "OPS",
+    "title": "Metrics, traces and logging",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Export self-hosted observability signals and redact passwords, hashes, OTPs, tokens, provider secrets and sensitive profile data.",
+    "test_ids": [
+      "AT-OPS-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-006",
+    "family": "OPS",
+    "title": "Backup and recovery",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Encrypt and restore databases, key material and configuration in a fresh environment; record measured recovery results.",
+    "test_ids": [
+      "AT-OPS-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-007",
+    "family": "OPS",
+    "title": "Upgrade and compatibility",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Perform schema-compatible rolling upgrades with old/new SDK fixtures, tested rollback boundaries and pinned images.",
+    "test_ids": [
+      "AT-OPS-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-008",
+    "family": "OPS",
+    "title": "Security update ownership",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Track upstream advisories, prioritize relevant fixes and run tests on patched dependencies before publication.",
+    "test_ids": [
+      "AT-OPS-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-009",
+    "family": "OPS",
+    "title": "Load and capacity evidence",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Publish benchmark hardware, data size, request mix, failure rates and latency distributions; do not claim unlimited throughput from unlimited licensing.",
+    "test_ids": [
+      "AT-OPS-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-010",
+    "family": "OPS",
+    "title": "Audit and privacy operations",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Export security/admin history with access control and retention; enforce deletion and privacy choices in logs, backups and local risk datasets.",
+    "test_ids": [
+      "AT-OPS-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-011",
+    "family": "OPS",
+    "title": "Dependency outage controls",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Exercise database, cache, SMTP, provider, DNS and signing-key fetch failures with explicitly documented safe behavior.",
+    "test_ids": [
+      "AT-OPS-011"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "OPS-012",
+    "family": "OPS",
+    "title": "No certification inheritance",
+    "required": true,
+    "milestone": "M9",
+    "implementation_strategy": "custom-operations",
+    "source_ids": [
+      "DR",
+      "S20"
+    ],
+    "acceptance": "Provide audit-evidence artifacts and control mapping; do not label a fork SOC 2 certified or promise a contractual vendor SLA from code alone.",
+    "test_ids": [
+      "AT-OPS-012"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-001",
+    "family": "SDK",
+    "title": "Node.js SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Ship recipe APIs, request adapters, verification, errors, hooks and override behavior for the selected Node versions/frameworks.",
+    "test_ids": [
+      "AT-SDK-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-002",
+    "family": "SDK",
+    "title": "Python SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Ship and test FastAPI/ASGI and other frozen-baseline adapters, async lifecycle, verification, errors and configuration without Node-only hidden requirements.",
+    "test_ids": [
+      "AT-SDK-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-003",
+    "family": "SDK",
+    "title": "Go SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Ship and test middleware/context/request/response integrations and the selected baseline recipe surface.",
+    "test_ids": [
+      "AT-SDK-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-004",
+    "family": "SDK",
+    "title": "Vanilla JavaScript SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide framework-independent authentication/session APIs, refresh coordination and explicit network-client integration modes.",
+    "test_ids": [
+      "AT-SDK-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-005",
+    "family": "SDK",
+    "title": "React SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide UI and state/route helpers, hooks, overrides, theme/localization and recipe-composition behavior.",
+    "test_ids": [
+      "AT-SDK-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-006",
+    "family": "SDK",
+    "title": "React Native SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Verify header-token storage/refresh, deep links, concurrent networking and lifecycle/resume behavior in supported native environments.",
+    "test_ids": [
+      "AT-SDK-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-007",
+    "family": "SDK",
+    "title": "iOS SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Build and test native integration, secure credential storage, refresh coordination and browser authentication callback behavior.",
+    "test_ids": [
+      "AT-SDK-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-008",
+    "family": "SDK",
+    "title": "Android SDK",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Build and test native integration, secure credential storage, refresh coordination and browser authentication callback behavior.",
+    "test_ids": [
+      "AT-SDK-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-009",
+    "family": "SDK",
+    "title": "Versioned feature matrix",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Record feature-by-language/platform support rather than assuming every upstream SDK implements every recipe; no required original platform is dropped.",
+    "test_ids": [
+      "AT-SDK-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "SDK-010",
+    "family": "SDK",
+    "title": "Consistent error and context contract",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "reuse-plus-adapt",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "SDKs expose normalized documented result types, request context and cancellation/retry semantics while preserving per-version compatibility where promised.",
+    "test_ids": [
+      "AT-SDK-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-001",
+    "family": "UIX",
+    "title": "Prebuilt and custom authentication UI",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide complete login, sign-up, reset, verification, OTP, MFA, passkey and recovery states plus headless APIs.",
+    "test_ids": [
+      "AT-UIX-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-002",
+    "family": "UIX",
+    "title": "Embedding and component overrides",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Embed forms within an application and replace documented components without forking the entire UI.",
+    "test_ids": [
+      "AT-UIX-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-003",
+    "family": "UIX",
+    "title": "Theme and CSS",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Customize colors/styles, support the documented shadow-DOM choices and preserve accessible focus/validation behavior.",
+    "test_ids": [
+      "AT-UIX-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-004",
+    "family": "UIX",
+    "title": "Localization and legal links",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Configure translations, tenant branding and terms/privacy links without requiring a vendor-hosted asset.",
+    "test_ids": [
+      "AT-UIX-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-005",
+    "family": "UIX",
+    "title": "Post-login redirects",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Support application-controlled redirects with server-side allowlisting and consistent continuation after MFA/verification.",
+    "test_ids": [
+      "AT-UIX-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-006",
+    "family": "UIX",
+    "title": "Function/API hooks and plugin ordering",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Define before/after/error contracts, asynchronous behavior, ordering, exception propagation and context isolation.",
+    "test_ids": [
+      "AT-UIX-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-007",
+    "family": "UIX",
+    "title": "Network interceptor extension",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Intercept the documented request boundaries safely while redacting credentials and preventing hook-caused infinite refresh loops.",
+    "test_ids": [
+      "AT-UIX-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "UIX-008",
+    "family": "UIX",
+    "title": "Cross-version extension tests",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "reuse-plus-custom",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Compile and execute representative customizations on each supported SDK release so an override signature match is not mistaken for semantic compatibility.",
+    "test_ids": [
+      "AT-UIX-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-001",
+    "family": "PLG",
+    "title": "CAPTCHA Node and React packages",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Supply both server and UI counterparts with equivalent configuration and hooks, including a fully local default provider.",
+    "test_ids": [
+      "AT-PLG-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-002",
+    "family": "PLG",
+    "title": "OpenTelemetry Node package",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Provide equivalent lifecycle tracing/redaction behavior and allow a self-hosted collector.",
+    "test_ids": [
+      "AT-PLG-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-003",
+    "family": "PLG",
+    "title": "Profile-base React package",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Supply the profile container/composition entry points required by dependent profile plugins.",
+    "test_ids": [
+      "AT-PLG-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-004",
+    "family": "PLG",
+    "title": "Profile-details Node and React packages",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Enforce server-side field policies and corresponding editable/read-only UI behavior.",
+    "test_ids": [
+      "AT-PLG-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-005",
+    "family": "PLG",
+    "title": "Progressive-profiling Node and React packages",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Preserve enrollment/completion gating and server/UI consistency through authentication changes.",
+    "test_ids": [
+      "AT-PLG-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-006",
+    "family": "PLG",
+    "title": "Tenant-discovery Node and React packages",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Resolve tenant candidates and user choice with enumeration controls and correct app context.",
+    "test_ids": [
+      "AT-PLG-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-007",
+    "family": "PLG",
+    "title": "Tenants Node and React packages",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Support authorized tenant management APIs and corresponding customer-facing UI flows.",
+    "test_ids": [
+      "AT-PLG-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-008",
+    "family": "PLG",
+    "title": "User-banning Node and React packages",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Apply ban/unban decisions and UI state consistently, including active-session policy.",
+    "test_ids": [
+      "AT-PLG-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "PLG-009",
+    "family": "PLG",
+    "title": "Plugin package provenance",
+    "required": true,
+    "milestone": "M7",
+    "implementation_strategy": "audit-and-adapt",
+    "source_ids": [
+      "DR",
+      "S12",
+      "S13"
+    ],
+    "acceptance": "Verify each package license, dependencies, version and extension signatures rather than assuming the monorepo root makes every runtime dependency reusable.",
+    "test_ids": [
+      "AT-PLG-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-001",
+    "family": "INT",
+    "title": "Next.js App Router",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Test auth routes, frontend guards, route handlers, proxy/middleware equivalents and server-component/SSR behavior on the frozen Next.js version.",
+    "test_ids": [
+      "AT-INT-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-002",
+    "family": "INT",
+    "title": "Next.js Pages Router",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Test API routes, frontend guards and server-side session validation in the Pages Router profile.",
+    "test_ids": [
+      "AT-INT-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-003",
+    "family": "INT",
+    "title": "NestJS",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Supply middleware/guard/decorator integration and error propagation examples backed by tests.",
+    "test_ids": [
+      "AT-INT-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-004",
+    "family": "INT",
+    "title": "GraphQL",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Supply context authentication, resolver authorization and subscription/session-expiry handling.",
+    "test_ids": [
+      "AT-INT-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-005",
+    "family": "INT",
+    "title": "Hasura",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Supply claim/JWT or webhook integration with row/tenant permission fixtures; valid authentication never replaces row authorization.",
+    "test_ids": [
+      "AT-INT-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-006",
+    "family": "INT",
+    "title": "Supabase",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Supply the documented interoperability path with issuer/claim validation and RLS fixtures rather than asserting generic JWT interchangeability.",
+    "test_ids": [
+      "AT-INT-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-007",
+    "family": "INT",
+    "title": "AWS Lambda",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Test stateless handler startup, request/response cookies, key caching and session verification under concurrency.",
+    "test_ids": [
+      "AT-INT-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-008",
+    "family": "INT",
+    "title": "AWS AppSync",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide an authorizer/session example with explicit identity propagation and unauthorized subscription tests.",
+    "test_ids": [
+      "AT-INT-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-009",
+    "family": "INT",
+    "title": "Netlify and Vercel",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Provide deployment examples with supported runtime constraints, proxy paths, headers and cookie behavior; these hosts are integrations, not mandatory hosting choices.",
+    "test_ids": [
+      "AT-INT-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "INT-010",
+    "family": "INT",
+    "title": "Reproducible local examples",
+    "required": true,
+    "milestone": "M8",
+    "implementation_strategy": "adapters-and-samples",
+    "source_ids": [
+      "DR"
+    ],
+    "acceptance": "Every integration has a local/test harness plus clearly identified external credentials/prerequisites for live qualification.",
+    "test_ids": [
+      "AT-INT-010"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-001",
+    "family": "CMP",
+    "title": "FDI operation coverage",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "Implement and test all 49 frozen reference operation entries, including documented legacy variants, with exact method/path/header/cookie/error behavior for the declared profile.",
+    "test_ids": [
+      "AT-CMP-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-002",
+    "family": "CMP",
+    "title": "CDI operation accounting",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "Account for all 156 entries; implement business/admin equivalents and explicitly classify licensing/telemetry differences without fake vendor-license success.",
+    "test_ids": [
+      "AT-CMP-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-003",
+    "family": "CMP",
+    "title": "Schema and field behavior",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "Capture request/response schemas, missing/null fields, defaults, error variants and pagination; unknown schema fields remain qualification blockers.",
+    "test_ids": [
+      "AT-CMP-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-004",
+    "family": "CMP",
+    "title": "Negotiated versions and recipe IDs",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "Enforce supported protocol ranges, recipe identifiers and default app/tenant addressing; unsupported combinations fail clearly.",
+    "test_ids": [
+      "AT-CMP-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-005",
+    "family": "CMP",
+    "title": "SDK differential corpus",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "Execute representative unmodified upstream SDKs where licensed/compatible and maintained forks otherwise; compare observable state, errors, cookies and hooks.",
+    "test_ids": [
+      "AT-CMP-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-006",
+    "family": "CMP",
+    "title": "No success stubs",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "A route returning the expected JSON shape without required state changes, audit and security behavior fails parity acceptance.",
+    "test_ids": [
+      "AT-CMP-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "CMP-007",
+    "family": "CMP",
+    "title": "Compatibility exceptions",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "contract-adapters",
+    "source_ids": [
+      "DR",
+      "S02",
+      "S03",
+      "S21",
+      "S22"
+    ],
+    "acceptance": "Every deviation is versioned and visible; unapproved functional reductions block full parity, while nonfunctional vendor-license differences are never advertised as exact wire equivalence.",
+    "test_ids": [
+      "AT-CMP-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-001",
+    "family": "TST",
+    "title": "Requirement traceability",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Every requirement links to implementation paths, positive/negative tests, a run artifact and reviewer sign-off before it can become verified.",
+    "test_ids": [
+      "AT-TST-001"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-002",
+    "family": "TST",
+    "title": "Cross-tenant adversarial corpus",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Test identity collision, session substitution, provider configuration theft, dashboard privilege escape and resource-data leakage across at least two apps and tenants.",
+    "test_ids": [
+      "AT-TST-002"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-003",
+    "family": "TST",
+    "title": "Concurrency and crash corpus",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Test refresh, OTP/reset/recovery consumption, linking, credential updates and key rotation across concurrent replicas and injected crashes.",
+    "test_ids": [
+      "AT-TST-003"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-004",
+    "family": "TST",
+    "title": "Protocol security corpus",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Validate OAuth/SAML/WebAuthn/CSRF/CORS protections and malformed or replayed inputs using maintained test tooling where suitable.",
+    "test_ids": [
+      "AT-TST-004"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-005",
+    "family": "TST",
+    "title": "Migration evidence",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Run realistic data fixtures, reconciliation and rollback; unexplained missing memberships/factors/sessions block migration acceptance.",
+    "test_ids": [
+      "AT-TST-005"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-006",
+    "family": "TST",
+    "title": "Independent security review",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Review custom security-critical code and deployed configuration independently from its author; remediate exploitable critical/high findings before production approval.",
+    "test_ids": [
+      "AT-TST-006"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-007",
+    "family": "TST",
+    "title": "Accessibility and usability evidence",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Verify keyboard/screen-reader/error/translation workflows and account-recovery usability across supported interfaces.",
+    "test_ids": [
+      "AT-TST-007"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-008",
+    "family": "TST",
+    "title": "No-fee runtime qualification",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Block authentication-vendor egress and prove local capability operation; separate genuine external provider transport prerequisites from auth licensing.",
+    "test_ids": [
+      "AT-TST-008"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  },
+  {
+    "id": "TST-009",
+    "family": "TST",
+    "title": "Final parity publication",
+    "required": true,
+    "milestone": "M10",
+    "implementation_strategy": "test-and-audit",
+    "source_ids": [
+      "DR",
+      "S24"
+    ],
+    "acceptance": "Publish functional, protocol, SDK, security-quality and operations scorecards separately; skipped or unknown requirements are not counted as passed.",
+    "test_ids": [
+      "AT-TST-009"
+    ],
+    "status": "planned",
+    "implementation_paths": [],
+    "evidence": []
+  }
+]

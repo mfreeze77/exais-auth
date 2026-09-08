@@ -1,0 +1,7 @@
+{
+  "original_count": 87,
+  "clean_rebuild_count": 87,
+  "differences": [],
+  "exact_match": true,
+  "scope": "new isolated build directory, pinned image, strict dependency checksum verification; reused Gradle dependency cache, not independent OS qualification"
+}

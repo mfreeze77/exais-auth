@@ -1,0 +1,191 @@
+[
+  {
+    "id": "DR",
+    "title": "Original SuperTokens Documentation and Reverse-Engineering Report",
+    "url": "User Library; file_00000000c7cc82309746d8702e0f075e, version 1",
+    "notes": "Full report retrieved in this conversation; inherited feature inventory and configuration catalog.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S01",
+    "title": "SuperTokens documentation navigation and architecture",
+    "url": "https://supertokens.com/docs",
+    "notes": "Current documentation surface and private Core boundary.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S02",
+    "title": "SuperTokens current FDI reference",
+    "url": "https://supertokens.com/docs/references/fdi/introduction",
+    "notes": "Navigation contains 49 operation entries. Exact operation schemas still require version-specific capture.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S03",
+    "title": "SuperTokens current CDI reference",
+    "url": "https://supertokens.com/docs/references/cdi/introduction",
+    "notes": "Navigation contains 156 operation entries; version selection is tied to coreDriverInterfaceSupported.json.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S04",
+    "title": "SuperTokens application and tenant semantics",
+    "url": "https://supertokens.com/docs/authentication/enterprise/important-concepts",
+    "notes": "Separate app/tenant identity scopes, optional shared users, app-scoped roles with tenant assignments.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S05",
+    "title": "SuperTokens session management",
+    "url": "https://supertokens.com/docs/post-authentication/session-management/introduction",
+    "notes": "Access/refresh session model and lifecycle.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S06",
+    "title": "SuperTokens account-linking concepts",
+    "url": "https://supertokens.com/docs/post-authentication/account-linking/important-concepts",
+    "notes": "Primary and recipe identities; linking boundaries.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S07",
+    "title": "SuperTokens MFA",
+    "url": "https://supertokens.com/docs/additional-verification/mfa/introduction",
+    "notes": "MFA recipe and factor surface.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S08",
+    "title": "SuperTokens passkeys",
+    "url": "https://supertokens.com/docs/authentication/passkeys/introduction",
+    "notes": "WebAuthn/passkey product scope.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S09",
+    "title": "SuperTokens Attack Protection Suite",
+    "url": "https://supertokens.com/docs/additional-verification/attack-protection-suite/introduction",
+    "notes": "Eight published detection categories; beta status.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S10",
+    "title": "SuperTokens MCP authentication",
+    "url": "https://supertokens.com/docs/authentication/ai-authentication",
+    "notes": "Node-oriented beta with OAuth dependency.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S11",
+    "title": "SuperTokens CAPTCHA",
+    "url": "https://supertokens.com/docs/additional-verification/captcha",
+    "notes": "reCAPTCHA v2/v3 and Turnstile integration; React/Node scope.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S12",
+    "title": "SuperTokens plugin reference",
+    "url": "https://supertokens.com/docs/references/plugins/introduction",
+    "notes": "Plugin extension model; expanded navigation includes fourteen listed packages.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S13",
+    "title": "SuperTokens plugin repository",
+    "url": "https://github.com/supertokens/supertokens-plugins",
+    "notes": "Repository describes Apache 2.0 licensing. Inspect individual packages and dependency licenses at the chosen commit.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S14",
+    "title": "SuperTokens Core license",
+    "url": "https://github.com/supertokens/supertokens-core/blob/master/LICENSE.md",
+    "notes": "Apache-licensed content must be distinguished from enterprise and third-party components.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S15",
+    "title": "SuperTokens enterprise license",
+    "url": "https://github.com/supertokens/supertokens-core/blob/master/ee/LICENSE.md",
+    "notes": "Restricted enterprise material is excluded from unrestricted copying/production dependency.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S16",
+    "title": "SuperTokens pricing",
+    "url": "https://supertokens.com/pricing",
+    "notes": "Self-hosting does not remove paid-feature entitlements in the vendor distribution.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S17",
+    "title": "Keycloak administration guide",
+    "url": "https://www.keycloak.org/docs/latest/server_admin/index.html",
+    "notes": "Candidate identity/protocol capabilities, not proof of SuperTokens semantic equivalence.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S18",
+    "title": "Keycloak extension guide",
+    "url": "https://www.keycloak.org/docs/latest/server_development/index.html",
+    "notes": "Documented authentication, user storage, REST, event-listener and other SPIs.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S19",
+    "title": "Keycloak license",
+    "url": "https://github.com/keycloak/keycloak/blob/main/LICENSE.txt",
+    "notes": "Apache 2.0 community code.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S20",
+    "title": "Keycloak container deployment",
+    "url": "https://www.keycloak.org/server/containers",
+    "notes": "Production container/deployment reference.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S21",
+    "title": "Core Driver Interface repository",
+    "url": "https://github.com/supertokens/core-driver-interface",
+    "notes": "Reference repository; api_spec.yaml exists. A fetched raw view identified 5.2.0, so master/raw must not be assumed equal to current docs.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S22",
+    "title": "Frontend Driver Interface repository",
+    "url": "https://github.com/supertokens/frontend-driver-interface",
+    "notes": "Reference repository; api_spec.yaml exists. Redistribution rights require separate verification.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S23",
+    "title": "MCP authorization, version 2025-11-25",
+    "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization",
+    "notes": "Versioned primary reference for resource metadata, audience binding and resource indicators; not a claim that this is the newest possible future revision.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S24",
+    "title": "OAuth Security Best Current Practice, RFC 9700",
+    "url": "https://www.rfc-editor.org/info/rfc9700/",
+    "notes": "Do not implement Resource Owner Password Credentials as a shortcut for embedded MFA flows.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S25",
+    "title": "ALTCHA open-source product boundary",
+    "url": "https://altcha.org/open-source-captcha/",
+    "notes": "MIT core is a local challenge building block; commercial risk intelligence is not included in that assumption.",
+    "checked_on": "2026-09-08"
+  },
+  {
+    "id": "S26",
+    "title": "Have I Been Pwned password API documentation",
+    "url": "https://haveibeenpwned.com/API/v3#PwnedPasswords",
+    "notes": "Candidate breach-password data interface; validate local snapshot/download rights and footprint before selecting it.",
+    "checked_on": "2026-09-08"
+  }
+]

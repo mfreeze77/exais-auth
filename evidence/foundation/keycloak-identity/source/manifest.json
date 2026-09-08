@@ -1,0 +1,92 @@
+[
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/services/resources/IdentityBrokerService.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "d4b3d05b988d4f99595edaac9af5fe568f6ee7cd5052fae8b916737c390d9f11"
+  },
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/services/resources/account/AccountRestService.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "940c1f1f51b5ef564fcd84bbfd8ff78d5cb3e429d0925ac29a676e582c2a1d1c"
+  },
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/services/resources/admin/UserResource.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "45ff738d620c5a27a574148fab92c83a0b4e7eb4e905c53460432e38a48f080c"
+  },
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/authentication/authenticators/broker/IdpConfirmLinkAuthenticator.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "8bbd38965d49a59210e38047e299d940cc6ed34b4871935a4b284b6968f52ae7"
+  },
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/services/resources/account/LinkedAccountsResource.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "c3a3724801b6393f8191023c3956c69394ebc4be6167d9d119584ed12e72a865"
+  },
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/broker/provider/IdpLinkAction.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "556cf6c643710cd1ac5cf6e7f9f7d31b994f4c16546cbda082f5dc8d022256e2"
+  },
+  {
+    "upstream_path": "model/jpa/src/main/java/org/keycloak/models/jpa/entities/FederatedIdentityEntity.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "2df2a4a3a8d6629527bf86a04fa5de286db0d754cb964c93ad6d0ad8d1fac002"
+  },
+  {
+    "upstream_path": "model/jpa/src/main/java/org/keycloak/models/jpa/JpaUserProvider.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "4b39393766e0784fe964a4b6fabd0682a8bd0d7f8bb3c9afb60cf67a706fa5ac"
+  },
+  {
+    "upstream_path": "model/jpa/src/main/java/org/keycloak/models/jpa/JpaRealmProviderFactory.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "a6aac958c6938696a0b00748db3311a403eaeef069944411271238cc0b1a6517"
+  },
+  {
+    "upstream_path": "model/jpa/src/main/java/org/keycloak/models/jpa/JpaUserCredentialStore.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "2b04fb11b95f01a591ae0e9508c33e9fdce3ae9dd789fd4cbd5fb2ebf632f21d"
+  },
+  {
+    "upstream_path": "model/storage-private/src/main/java/org/keycloak/storage/UserStorageManager.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "37f95f905cc5f5de5b7ed0d42d6874e4e0bd05d049e646d74c3940db4d2594df"
+  },
+  {
+    "upstream_path": "model/storage/src/main/java/org/keycloak/storage/UserStorageUtil.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "615d2d2786ebff193b5229ef2a935c1244c482ff44d4f358cb74dc0496a93930"
+  },
+  {
+    "upstream_path": "server-spi-private/src/main/java/org/keycloak/events/EventBuilder.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "8ee89d5d822c1598d9d6dd6d96e8fea10c77418892062ba8f8b82bf2fde30c05"
+  },
+  {
+    "upstream_path": "server-spi-private/src/main/java/org/keycloak/models/UserProviderFactory.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "16a9c3828b870f28baadc978aa3f40a9b7fa21db85d3153e9b2ae3488e4fbacb"
+  },
+  {
+    "upstream_path": "server-spi-private/src/main/java/org/keycloak/models/UserSpi.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "3d71dc1518a24eac8cec08e4c1d4ef6f23a7c089df9642490c57b3e8d4f3d49c"
+  },
+  {
+    "upstream_path": "server-spi/src/main/java/org/keycloak/provider/ProviderFactory.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "11e1049fcfd8febed0e3cb499dd970416b27fd840086b2e2045271d8948cd8d5"
+  },
+  {
+    "upstream_path": "services/src/main/java/org/keycloak/services/DefaultKeycloakSessionFactory.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "685f093a607610193e4a93f3a1c3e9e941ae93bb59462d913a1f0e8f29f7747d"
+  },
+  {
+    "upstream_path": "model/jpa/src/main/java/org/keycloak/models/jpa/JpaUserProviderFactory.java",
+    "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+    "sha256": "4fdd29ad52aa55cd2737b8ecf2f40a015a059039af60e488d3849cf01a180f0c"
+  }
+]

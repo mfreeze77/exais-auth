@@ -1,0 +1,136 @@
+{
+  "status": "blocked",
+  "description": "Preservation checkpoint only; no additional test execution",
+  "files": [
+    {
+      "path": "evidence/foundation/keycloak-identity/attempts/126206249977/results.json",
+      "bytes": 22419,
+      "sha256": "5e21c0aaa4cc0019af15412f1edbaa75cc20db4ddbd20ffee61b64d46b25faa2"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/attempts/239652545592/results.json",
+      "bytes": 26480,
+      "sha256": "e5910580daecfa8be78c2ad11c3ed903dc6b63f0633ae2f3c5f8318e0be28df5"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/attempts/992188296522/results.json",
+      "bytes": 10061,
+      "sha256": "594e9f75760117ebb5473c03578d6dccc50276302ce1554ac3bbbe9042ac4e3f"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/HANDOFF.md",
+      "bytes": 7860,
+      "sha256": "d540bb02431320b058787ef7595c5ada2de49b6618df07f9f5b2f1a9b31e3223"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/independent-persistence-reread.json",
+      "bytes": 1719,
+      "sha256": "084202aa38d073f67f586aaf00e6aba66a36624f797e5c1ac077533e6d9c1cc2"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/results.json",
+      "bytes": 26480,
+      "sha256": "e5910580daecfa8be78c2ad11c3ed903dc6b63f0633ae2f3c5f8318e0be28df5"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/AccountRestService.java",
+      "bytes": 24358,
+      "sha256": "940c1f1f51b5ef564fcd84bbfd8ff78d5cb3e429d0925ac29a676e582c2a1d1c"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/DefaultKeycloakSessionFactory.java",
+      "bytes": 20449,
+      "sha256": "685f093a607610193e4a93f3a1c3e9e941ae93bb59462d913a1f0e8f29f7747d"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/EventBuilder.java",
+      "bytes": 11005,
+      "sha256": "8ee89d5d822c1598d9d6dd6d96e8fea10c77418892062ba8f8b82bf2fde30c05"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/FederatedIdentityEntity.java",
+      "bytes": 6307,
+      "sha256": "2df2a4a3a8d6629527bf86a04fa5de286db0d754cb964c93ad6d0ad8d1fac002"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/IdentityBrokerService.java",
+      "bytes": 87915,
+      "sha256": "d4b3d05b988d4f99595edaac9af5fe568f6ee7cd5052fae8b916737c390d9f11"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/IdpConfirmLinkAuthenticator.java",
+      "bytes": 4668,
+      "sha256": "8bbd38965d49a59210e38047e299d940cc6ed34b4871935a4b284b6968f52ae7"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/IdpLinkAction.java",
+      "bytes": 9498,
+      "sha256": "556cf6c643710cd1ac5cf6e7f9f7d31b994f4c16546cbda082f5dc8d022256e2"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/JpaRealmProviderFactory.java",
+      "bytes": 3175,
+      "sha256": "a6aac958c6938696a0b00748db3311a403eaeef069944411271238cc0b1a6517"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/JpaUserCredentialStore.java",
+      "bytes": 11042,
+      "sha256": "2b04fb11b95f01a591ae0e9508c33e9fdce3ae9dd789fd4cbd5fb2ebf632f21d"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/JpaUserProvider.java",
+      "bytes": 65079,
+      "sha256": "4b39393766e0784fe964a4b6fabd0682a8bd0d7f8bb3c9afb60cf67a706fa5ac"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/JpaUserProviderFactory.java",
+      "bytes": 1928,
+      "sha256": "4fdd29ad52aa55cd2737b8ecf2f40a015a059039af60e488d3849cf01a180f0c"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/LinkedAccountsResource.java",
+      "bytes": 18532,
+      "sha256": "c3a3724801b6393f8191023c3956c69394ebc4be6167d9d119584ed12e72a865"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/manifest.json",
+      "bytes": 4512,
+      "sha256": "e3e02b0bb68191a114bb213319864dbdb179509031b10c722fd564627939256c"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/ProviderFactory.java",
+      "bytes": 2734,
+      "sha256": "11e1049fcfd8febed0e3cb499dd970416b27fd840086b2e2045271d8948cd8d5"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/UserProviderFactory.java",
+      "bytes": 945,
+      "sha256": "16a9c3828b870f28baadc978aa3f40a9b7fa21db85d3153e9b2ae3488e4fbacb"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/UserResource.java",
+      "bytes": 65221,
+      "sha256": "45ff738d620c5a27a574148fab92c83a0b4e7eb4e905c53460432e38a48f080c"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/UserSpi.java",
+      "bytes": 1343,
+      "sha256": "3d71dc1518a24eac8cec08e4c1d4ef6f23a7c089df9642490c57b3e8d4f3d49c"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/UserStorageManager.java",
+      "bytes": 57861,
+      "sha256": "37f95f905cc5f5de5b7ed0d42d6874e4e0bd05d049e646d74c3940db4d2594df"
+    },
+    {
+      "path": "evidence/foundation/keycloak-identity/source/UserStorageUtil.java",
+      "bytes": 1235,
+      "sha256": "615d2d2786ebff193b5229ef2a935c1244c482ff44d4f358cb74dc0496a93930"
+    },
+    {
+      "path": "tests/foundation/keycloak_identity.py",
+      "bytes": 27680,
+      "sha256": "48f3b290c4b7f68731de6346ba3f8ee19544e530728fd4cfc14817938a318bdd"
+    }
+  ]
+}

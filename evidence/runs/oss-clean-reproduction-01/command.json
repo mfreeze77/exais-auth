@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "tools/build_oss_core.py",
+    "--clean",
+    "--evidence-name",
+    "oss-core-reproduction-01"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788904893.081067,
+  "elapsed_seconds": 83.042,
+  "input_sha256": {
+    "tools/build_oss_core.py": "bc33f6c9caf654ffe3e349d80fea6fb9beaddd72f7cec460f2159cd502d471e4",
+    "engine-extensions/oss-build/build.gradle": "11a01f873cec57f0c1fa3c87389898ad33b4032bd07355b767eff04f547cba7f",
+    "engine-extensions/oss-build/locks/gradle/verification-metadata.xml": "3c429eed47e247d83059edcfcb6b3392fb236c8a9edc4bada8532e955ceda9eb"
+  },
+  "inputs_changed": false,
+  "output_sha256": "d4eb3138e20bef76ee3c3c0ea925a7fc87d39cc3811b3fbcda84102e4efb1183",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

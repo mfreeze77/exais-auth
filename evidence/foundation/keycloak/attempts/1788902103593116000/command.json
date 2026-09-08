@@ -1,0 +1,35 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-foundation-kc",
+    "--env-file",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\keycloak\\bootstrap.env",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/workspace",
+    "-w",
+    "/workspace",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "tests/foundation/keycloak_probe.py"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 1.296,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/tests/foundation/keycloak_probe.py\", line 180, in <module>\n    main()\n  File \"/workspace/tests/foundation/keycloak_probe.py\", line 103, in main\n    if request('GET','/realms/master/.well-known/openid-configuration')[0] == 200:\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/tests/foundation/keycloak_probe.py\", line 35, in request\n    response = (opener or urllib.request).open(req, timeout=20)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'urllib.request' has no attribute 'open'\n",
+  "images": {
+    "keycloak": "quay.io/keycloak/keycloak@sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54",
+    "python": "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36"
+  },
+  "network": {
+    "internal": true,
+    "published_ports": []
+  },
+  "scope": "candidate mapping experiment; development storage; no foundation approval",
+  "files": {
+    "tools/run_keycloak_probe.py": "cc6e20f0ec6e9743563ae0de5c3fba63642f811d6060baa3067f604aa3330fec",
+    "tests/foundation/keycloak_probe.py": "8b3215ede0f8c373c6a1b30da8cce4d6ee41a8346ec65d91e9a2f5d192e49d17"
+  }
+}

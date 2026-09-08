@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: okio
+Bundle-ManifestVersion: 2
+Bundle-Name: com.squareup.okio
+Bundle-SymbolicName: com.squareup.okio
+Bundle-Version: 3.16.4
+Created-By: 24.0.2 (Azul Systems, Inc.)
+Export-Package: okio;uses:="javax.crypto,kotlin,kotlin.annotation,kotl
+ in.collections,kotlin.jvm,kotlin.jvm.functions,kotlin.jvm.internal,ko
+ tlin.reflect,kotlin.sequences,kotlin.time";version="3.16.4"
+Import-Package: java.io,java.lang,java.lang.annotation,java.lang.invok
+ e,java.lang.reflect,java.net,java.nio,java.nio.channels,java.nio.char
+ set,java.nio.file,java.nio.file.attribute,java.security,java.util,jav
+ a.util.concurrent,java.util.concurrent.atomic,java.util.concurrent.lo
+ cks,java.util.logging,java.util.zip,javax.crypto,javax.crypto.spec,ko
+ tlin,kotlin.annotation,kotlin.collections,kotlin.comparisons,kotlin.c
+ oroutines,kotlin.coroutines.intrinsics,kotlin.coroutines.jvm.internal
+ ,kotlin.io.path,kotlin.jvm,kotlin.jvm.functions,kotlin.jvm.internal,k
+ otlin.reflect,kotlin.sequences,kotlin.text,kotlin.time
+Private-Package: okio.internal
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.1.0.202411251545
+

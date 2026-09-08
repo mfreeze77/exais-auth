@@ -1,0 +1,16 @@
+{
+  "scope": "M1 candidate session characterization only; original requirement IDs unchanged",
+  "foundation_gate_passed": false,
+  "candidate_selected": false,
+  "implementation": ["tools/run_keycloak_cluster.py", "engine-extensions/keycloak-headless/Dockerfile.postgres", "tests/foundation/keycloak_sessions.py"],
+  "evidence": ["evidence/foundation/keycloak-sessions/startup-report.json", "evidence/foundation/keycloak-sessions/probe-report.json", "evidence/foundation/keycloak-headless/build-report.json"],
+  "requirements": [
+    {"id": "SES-001", "qualification": "partial", "tests": ["KC-CLUSTER-CROSS-REPLICA-AUTHENTICATION"], "remaining": "Full app/tenant handle and all authentication policy profiles"},
+    {"id": "SES-002", "qualification": "partial", "tests": ["KC-CLUSTER-CROSS-REPLICA-AUTHENTICATION", "KC-CLUSTER-BEARER-VALIDATION-ON-BOTH-REPLICAS"], "remaining": "Full cached-local-verification negative algorithm/issuer/audience/expiry matrix and SDK profiles"},
+    {"id": "SES-003", "qualification": "blocked", "tests": ["KC-CLUSTER-SERIAL-REFRESH-ROTATION", "KC-CLUSTER-CONCURRENT-REFRESH-SINGLE-SURVIVING-ROTATION", "KC-CLUSTER-POSTCOMMIT-RESPONSE-LOSS-RECOVERY"], "remaining": "Concurrent legitimate refresh and postcommit response-loss recovery fail strict candidate policy"},
+    {"id": "SES-004", "qualification": "blocked", "tests": ["KC-CLUSTER-STALE-REFRESH-DENY-WITH-CHILD-SURVIVAL", "KC-CLUSTER-CONCURRENT-REFRESH-SINGLE-SURVIVING-ROTATION"], "remaining": "Allowed race/retry is not distinguished from stale replay; intended compromise-family policy remains unqualified"},
+    {"id": "SES-005", "qualification": "partial", "tests": ["KC-CLUSTER-CLIENT-SPECIFIC-REVOCATION-ISOLATION", "KC-CLUSTER-GLOBAL-RP-LOGOUT"], "remaining": "Full authorized handle API and existing access-token revocation-mode matrix"},
+    {"id": "SES-007", "qualification": "partial", "tests": ["KC-ENGINE-COOKIE-AND-TOKEN-RESPONSE-CONTRACT", "KC-CLUSTER-BEARER-VALIDATION-ON-BOTH-REPLICAS"], "remaining": "SuperTokens-compatible cookie/header semantics, browser CSRF/storage and secure public cookie profile"},
+    {"id": "OPS-002", "qualification": "partial", "tests": ["KC-CLUSTER-TWO-REPLICAS-SHARED-POSTGRES"], "remaining": "Single database is not resilient data tier; node/AZ failure and complete HA deployment remain unqualified"}
+  ]
+}

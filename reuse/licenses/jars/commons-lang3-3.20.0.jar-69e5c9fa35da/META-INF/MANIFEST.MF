@@ -1,0 +1,60 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 6.0.0
+Build-Jdk-Spec: 25
+Specification-Title: Apache Commons Lang
+Specification-Version: 3.20
+Specification-Vendor: The Apache Software Foundation
+Implementation-Title: Apache Commons Lang
+Implementation-Version: 3.20.0
+Implementation-Vendor: The Apache Software Foundation
+Automatic-Module-Name: org.apache.commons.lang3
+Bundle-Description: Apache Commons Lang, a package of Java utility class
+ es for the  classes that are in java.lang's hierarchy, or are considere
+ d to be so  standard as to justify existence in java.lang.  The code is
+  tested using the latest revision of the JDK for supported  LTS release
+ s: 8, 11, 17, 21 and 25 currently.  See https://github.com/apache/commo
+ ns-lang/blob/master/.github/workflows/maven.yml    Please ensure your b
+ uild environment is up-to-date and kindly report any build issues.
+Bundle-DocURL: https://commons.apache.org/proper/commons-lang/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Commons Lang
+Bundle-SymbolicName: org.apache.commons.lang3
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 3.20.0
+Export-Package: org.apache.commons.lang3;version="3.20.0";uses:="org.apa
+ che.commons.lang3.arch,org.apache.commons.lang3.builder,org.apache.comm
+ ons.lang3.function,org.apache.commons.lang3.text,org.apache.commons.lan
+ g3.text.translate",org.apache.commons.lang3.arch;version="3.20.0",org.a
+ pache.commons.lang3.builder;version="3.20.0";uses:="org.apache.commons.
+ lang3.function,org.apache.commons.lang3.tuple",org.apache.commons.lang3
+ .compare;version="3.20.0",org.apache.commons.lang3.concurrent;version="
+ 3.20.0";uses:="org.apache.commons.lang3.builder,org.apache.commons.lang
+ 3.exception,org.apache.commons.lang3.function",org.apache.commons.lang3
+ .concurrent.locks;version="3.20.0";uses:="org.apache.commons.lang3.buil
+ der,org.apache.commons.lang3.function",org.apache.commons.lang3.event;v
+ ersion="3.20.0";uses:="org.apache.commons.lang3.function",org.apache.co
+ mmons.lang3.exception;version="3.20.0";uses:="org.apache.commons.lang3.
+ tuple",org.apache.commons.lang3.function;version="3.20.0";uses:="org.ap
+ ache.commons.lang3.stream",org.apache.commons.lang3.math;version="3.20.
+ 0",org.apache.commons.lang3.mutable;version="3.20.0",org.apache.commons
+ .lang3.reflect;version="3.20.0";uses:="org.apache.commons.lang3,org.apa
+ che.commons.lang3.builder",org.apache.commons.lang3.stream;version="3.2
+ 0.0";uses:="org.apache.commons.lang3.function",org.apache.commons.lang3
+ .text;version="3.20.0";uses:="org.apache.commons.lang3.builder",org.apa
+ che.commons.lang3.text.translate;version="3.20.0",org.apache.commons.la
+ ng3.time;version="3.20.0";uses:="org.apache.commons.lang3.function,org.
+ apache.commons.lang3.tuple",org.apache.commons.lang3.tuple;version="3.2
+ 0.0";uses:="org.apache.commons.lang3.function",org.apache.commons.lang3
+ .util;version="3.20.0"
+Import-Package: java.beans,java.io,java.lang,java.lang.annotation,java.l
+ ang.invoke,java.lang.reflect,java.math,java.net,java.nio,java.nio.chars
+ et,java.nio.file,java.security,java.text,java.time,java.time.temporal,j
+ ava.util,java.util.concurrent,java.util.concurrent.atomic,java.util.con
+ current.locks,java.util.function,java.util.regex,java.util.stream
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt=N
+ OTICE.txt
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.1.0.202411251545
+Multi-Release: true
+

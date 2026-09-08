@@ -1,0 +1,259 @@
+{
+  "state": "planned-profiles-not-qualified-builds",
+  "source_ids": [
+    "DR",
+    "S12"
+  ],
+  "sdks": [
+    {
+      "id": "SDKP-01",
+      "name": "Node.js",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-02",
+      "name": "Python",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-03",
+      "name": "Go",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-04",
+      "name": "Vanilla JavaScript",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-05",
+      "name": "React",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-06",
+      "name": "React Native",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-07",
+      "name": "iOS",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "SDKP-08",
+      "name": "Android",
+      "selected_version": null,
+      "supported_feature_matrix": null,
+      "status": "planned",
+      "evidence": []
+    }
+  ],
+  "plugins": [
+    {
+      "id": "PLGP-01",
+      "upstream_package": "@supertokens-plugins/captcha-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-02",
+      "upstream_package": "@supertokens-plugins/captcha-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-03",
+      "upstream_package": "@supertokens-plugins/opentelemetry-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-04",
+      "upstream_package": "@supertokens-plugins/profile-base-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-05",
+      "upstream_package": "@supertokens-plugins/profile-details-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-06",
+      "upstream_package": "@supertokens-plugins/profile-details-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-07",
+      "upstream_package": "@supertokens-plugins/progressive-profiling-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-08",
+      "upstream_package": "@supertokens-plugins/progressive-profiling-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-09",
+      "upstream_package": "@supertokens-plugins/tenant-discovery-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-10",
+      "upstream_package": "@supertokens-plugins/tenant-discovery-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-11",
+      "upstream_package": "@supertokens-plugins/tenants-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-12",
+      "upstream_package": "@supertokens-plugins/tenants-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-13",
+      "upstream_package": "@supertokens-plugins/user-banning-nodejs",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "PLGP-14",
+      "upstream_package": "@supertokens-plugins/user-banning-react",
+      "selected_version": null,
+      "license_audit": "pending",
+      "status": "planned",
+      "evidence": []
+    }
+  ],
+  "integrations": [
+    {
+      "id": "INTP-01",
+      "name": "Next.js App Router",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-02",
+      "name": "Next.js Pages Router",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-03",
+      "name": "NestJS",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-04",
+      "name": "GraphQL",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-05",
+      "name": "Hasura",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-06",
+      "name": "Supabase",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-07",
+      "name": "AWS Lambda",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-08",
+      "name": "AWS AppSync",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-09",
+      "name": "Netlify",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    },
+    {
+      "id": "INTP-10",
+      "name": "Vercel",
+      "selected_runtime": null,
+      "status": "planned",
+      "evidence": []
+    }
+  ]
+}

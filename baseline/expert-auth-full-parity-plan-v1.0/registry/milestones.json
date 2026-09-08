@@ -1,0 +1,170 @@
+[
+  {
+    "id": "M0",
+    "title": "Freeze scope and legal reuse boundary",
+    "depends_on": [],
+    "families": [
+      "BAS"
+    ],
+    "exit_gate": "All sources, versions, schema captures, licensing decisions and requirement mappings recorded. Unknown contracts and unlicensed artifacts block foundation approval.",
+    "status": "planned"
+  },
+  {
+    "id": "M1",
+    "title": "Prove foundation and canonical identity/session boundaries",
+    "depends_on": [
+      "M0"
+    ],
+    "families": [
+      "IDN",
+      "CFG"
+    ],
+    "exit_gate": "Pass identity collision/sharing, linking, embedded authentication, refresh concurrency and API adapter spikes. Select one authority through ADR-001; publish owned data and contract boundaries.",
+    "status": "planned"
+  },
+  {
+    "id": "M2",
+    "title": "Complete authentication and session vertical slices",
+    "depends_on": [
+      "M1"
+    ],
+    "families": [
+      "PWD",
+      "PLS",
+      "SOC",
+      "VER",
+      "DEL",
+      "SES"
+    ],
+    "exit_gate": "Every required password/passwordless/social/verification/session behavior passes positive, negative and concurrency tests; local delivery harness and an application integration work.",
+    "status": "planned"
+  },
+  {
+    "id": "M3",
+    "title": "Complete linking, membership and permissions",
+    "depends_on": [
+      "M2"
+    ],
+    "families": [
+      "LNK",
+      "RBC"
+    ],
+    "exit_gate": "Same-email, cross-tenant, verified/unverified link, unlink, role scope and access-propagation tests pass without inherited access escalation.",
+    "status": "planned"
+  },
+  {
+    "id": "M4",
+    "title": "Complete factors, passkeys and recovery",
+    "depends_on": [
+      "M3"
+    ],
+    "families": [
+      "MFA",
+      "WBA"
+    ],
+    "exit_gate": "Enrollment, step-up, recovery, factor removal, WebAuthn origin and replay tests pass with recent-authentication policy.",
+    "status": "planned"
+  },
+  {
+    "id": "M5",
+    "title": "Complete enterprise, unified login and machine/agent auth",
+    "depends_on": [
+      "M4"
+    ],
+    "families": [
+      "ENT",
+      "OAU",
+      "M2M",
+      "MCP"
+    ],
+    "exit_gate": "OIDC/SAML interoperability, multi-app logout, client lifecycle, resource audiences and MCP tool authorization pass under the frozen protocol profiles.",
+    "status": "planned"
+  },
+  {
+    "id": "M6",
+    "title": "Complete local attack protection and CAPTCHA",
+    "depends_on": [
+      "M2",
+      "M4",
+      "M5"
+    ],
+    "families": [
+      "RSK",
+      "CAP"
+    ],
+    "exit_gate": "All documented signal classes execute locally with quality/false-positive evidence, clear unknown states and enforcement tests; optional providers remain opt-in.",
+    "status": "planned"
+  },
+  {
+    "id": "M7",
+    "title": "Complete customer/admin UI and plugins",
+    "depends_on": [
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ],
+    "families": [
+      "USR",
+      "ADM",
+      "UIX",
+      "PLG"
+    ],
+    "exit_gate": "All admin/profile/tenant/ban/plugin/UI flows pass role-boundary and accessibility tests. No platform function requires a vendor-hosted dashboard or paid seat.",
+    "status": "planned"
+  },
+  {
+    "id": "M8",
+    "title": "Complete SDKs, integrations and migration",
+    "depends_on": [
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M7"
+    ],
+    "families": [
+      "SDK",
+      "INT",
+      "MIG"
+    ],
+    "exit_gate": "All original SDK/platform profiles build and pass qualification; integration examples and full migration/reconciliation/rollback evidence exist.",
+    "status": "planned"
+  },
+  {
+    "id": "M9",
+    "title": "Qualify production operations and disaster recovery",
+    "depends_on": [
+      "M6",
+      "M7",
+      "M8"
+    ],
+    "families": [
+      "OPS"
+    ],
+    "exit_gate": "Reproducible deployments, multiple replicas, load/failure tests, recovery, upgrades, redaction and no-auth-vendor-egress qualification pass.",
+    "status": "planned"
+  },
+  {
+    "id": "M10",
+    "title": "Close full parity and independently review release",
+    "depends_on": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6",
+      "M7",
+      "M8",
+      "M9"
+    ],
+    "families": [
+      "CMP",
+      "TST"
+    ],
+    "exit_gate": "All required functional rows have implementation, tests and reviewed evidence; all 205 operations accounted; supported compatibility profiles explicit; exploitable critical/high findings remediated.",
+    "status": "planned"
+  }
+]

@@ -1,0 +1,3655 @@
+{
+  "timestamp_utc": "2026-09-08T21:39:18.603301+00:00",
+  "python": "3.12.13 (main, Aug  5 2026, 01:10:24) [GCC 14.2.0]",
+  "source_repository": "supertokens/supertokens-python",
+  "source_commit": "b498da1a6d09ca84ca204ac881df76900df19175",
+  "audited_manifest_sha256": "819b90073f8b9a51a9f8e4d36c2f2ef1c2c4a55fe6a32cd1db8f671805382693",
+  "sdk_package": "supertokens-python",
+  "sdk_version": "0.31.3",
+  "sdk_source_files_checked": 418,
+  "sdk_source_mismatches": [],
+  "sdk_source_files": [
+    {
+      "path": "supertokens_python/__init__.py",
+      "sha256": "e953094e81f5d33c1e6c40502d75f6152f79bd52ebb5b25239959b79a0000f84",
+      "audited_source_sha256": "e953094e81f5d33c1e6c40502d75f6152f79bd52ebb5b25239959b79a0000f84",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/async_to_sync_wrapper.py",
+      "sha256": "161b5e46893478186f82805c596f021171d8d67f9725f00598c75cfad3af1445",
+      "audited_source_sha256": "161b5e46893478186f82805c596f021171d8d67f9725f00598c75cfad3af1445",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/asyncio/__init__.py",
+      "sha256": "1db4aeecac6789e8a60abe84eb32b807f63a0f4b0cbf7e8c85443a1eee58150b",
+      "audited_source_sha256": "1db4aeecac6789e8a60abe84eb32b807f63a0f4b0cbf7e8c85443a1eee58150b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/auth_utils.py",
+      "sha256": "19fbe8b1b101607da9a4e0cd4fcf052501adf962e1a955bed3c5f1a7e19e34c1",
+      "audited_source_sha256": "19fbe8b1b101607da9a4e0cd4fcf052501adf962e1a955bed3c5f1a7e19e34c1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/constants.py",
+      "sha256": "8369f8b4309c01714589b58884eed2b11cd91edd5f9ed7089c1bdfbebdd52b61",
+      "audited_source_sha256": "8369f8b4309c01714589b58884eed2b11cd91edd5f9ed7089c1bdfbebdd52b61",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/env/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/env/base.py",
+      "sha256": "a67de715c8ea588b3cdca8e0990e351fb6b53b851aaeb47e4a7d50ebcd67eb21",
+      "audited_source_sha256": "a67de715c8ea588b3cdca8e0990e351fb6b53b851aaeb47e4a7d50ebcd67eb21",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/env/utils.py",
+      "sha256": "4534747f451738cd47d92800ea1425ba21e0415eff456429283225db3cd56349",
+      "audited_source_sha256": "4534747f451738cd47d92800ea1425ba21e0415eff456429283225db3cd56349",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/exceptions.py",
+      "sha256": "168e91ef55b9d5426449e82deb38632ae332b3c856c27db5547e2dab8a39a728",
+      "audited_source_sha256": "168e91ef55b9d5426449e82deb38632ae332b3c856c27db5547e2dab8a39a728",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/__init__.py",
+      "sha256": "acfb77eafdc9c65ba93640b0f6fdd31f05b6f880a294a90b38a871bd08b3ca01",
+      "audited_source_sha256": "acfb77eafdc9c65ba93640b0f6fdd31f05b6f880a294a90b38a871bd08b3ca01",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/django/__init__.py",
+      "sha256": "f4c4c3bc6c86fc80fa32efe49eeb8e499d636acfc7dea7f18412b759c803fff0",
+      "audited_source_sha256": "f4c4c3bc6c86fc80fa32efe49eeb8e499d636acfc7dea7f18412b759c803fff0",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/django/django_middleware.py",
+      "sha256": "43cc7a87e2210c3541cbf6f17b3f32f46f71b5c2c23160253e5796b3605cdf91",
+      "audited_source_sha256": "43cc7a87e2210c3541cbf6f17b3f32f46f71b5c2c23160253e5796b3605cdf91",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/django/django_request.py",
+      "sha256": "9a33aee6eee422b27d2d008eb8d3c4df9f2c3db05e0e74f02ab61f079e96defb",
+      "audited_source_sha256": "9a33aee6eee422b27d2d008eb8d3c4df9f2c3db05e0e74f02ab61f079e96defb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/django/django_response.py",
+      "sha256": "d180c1f3eb86cdacfcb227311e1c63958d0f5cdd191d29a94ad29ecf6bda71a8",
+      "audited_source_sha256": "d180c1f3eb86cdacfcb227311e1c63958d0f5cdd191d29a94ad29ecf6bda71a8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/django/framework.py",
+      "sha256": "29ed6f33cb10be8896866ca004f35345e36fd70fe1ba477a63ca696052dddf78",
+      "audited_source_sha256": "29ed6f33cb10be8896866ca004f35345e36fd70fe1ba477a63ca696052dddf78",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/fastapi/__init__.py",
+      "sha256": "4dd94081808f194577e178443f2f6201a17ec657f3d53d7eff289b11c782e2df",
+      "audited_source_sha256": "4dd94081808f194577e178443f2f6201a17ec657f3d53d7eff289b11c782e2df",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/fastapi/fastapi_middleware.py",
+      "sha256": "ff648b3d5425ab839367aec8cca7edeceee5d7a4e94d9f721d4edf861b2b35b6",
+      "audited_source_sha256": "ff648b3d5425ab839367aec8cca7edeceee5d7a4e94d9f721d4edf861b2b35b6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/fastapi/fastapi_request.py",
+      "sha256": "8da16a2cc01a9edec854e50ced76162d6b8e2e144014e35dfe5214c887226ac2",
+      "audited_source_sha256": "8da16a2cc01a9edec854e50ced76162d6b8e2e144014e35dfe5214c887226ac2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/fastapi/fastapi_response.py",
+      "sha256": "1831a5604514ab0a6c144af0812bd0abe775020a01783e0acf6580a246667415",
+      "audited_source_sha256": "1831a5604514ab0a6c144af0812bd0abe775020a01783e0acf6580a246667415",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/fastapi/framework.py",
+      "sha256": "3b6d6a135d88282b5119d6b593e2f6f141cce8c2becdbc41a1d796c489e1ee40",
+      "audited_source_sha256": "3b6d6a135d88282b5119d6b593e2f6f141cce8c2becdbc41a1d796c489e1ee40",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/flask/__init__.py",
+      "sha256": "7b2e7881ca76a5e698d4554742bcf65393f3f833341c90c8c24082d5df8bbaff",
+      "audited_source_sha256": "7b2e7881ca76a5e698d4554742bcf65393f3f833341c90c8c24082d5df8bbaff",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/flask/flask_middleware.py",
+      "sha256": "3e5a35db33ce793d4ba012804b6048a16cb9813cebe65618f649c26ece36be23",
+      "audited_source_sha256": "3e5a35db33ce793d4ba012804b6048a16cb9813cebe65618f649c26ece36be23",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/flask/flask_request.py",
+      "sha256": "7db4b819188e0bb56a4c1c4809a1cb3eddb164f9aa8672825a3237967912abdf",
+      "audited_source_sha256": "7db4b819188e0bb56a4c1c4809a1cb3eddb164f9aa8672825a3237967912abdf",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/flask/flask_response.py",
+      "sha256": "cf8e4d089f13fe339956d0dbbd3f3cf2af52d5c6445121f71575160249eb745e",
+      "audited_source_sha256": "cf8e4d089f13fe339956d0dbbd3f3cf2af52d5c6445121f71575160249eb745e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/flask/framework.py",
+      "sha256": "5a1f83225661d5c7ec93c3176ec3093f737eab21b32f9a45b2415578b09e7ab9",
+      "audited_source_sha256": "5a1f83225661d5c7ec93c3176ec3093f737eab21b32f9a45b2415578b09e7ab9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/request.py",
+      "sha256": "bb1282617d29c75e56ef221e74bf62df8ba70d4dced5ea4eed839c6a78c7f6e4",
+      "audited_source_sha256": "bb1282617d29c75e56ef221e74bf62df8ba70d4dced5ea4eed839c6a78c7f6e4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/response.py",
+      "sha256": "82bb534992b95aa29afb1799eb5f0a678990037074df5d781f436154a78699e8",
+      "audited_source_sha256": "82bb534992b95aa29afb1799eb5f0a678990037074df5d781f436154a78699e8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/framework/types.py",
+      "sha256": "0aec96ab8c9eb2d43f27be2ff92c579283bef0cf3bad47937b83522603137c21",
+      "audited_source_sha256": "0aec96ab8c9eb2d43f27be2ff92c579283bef0cf3bad47937b83522603137c21",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/emaildelivery/__init__.py",
+      "sha256": "a35569e8953f212f96eae949fac80e12c46b79d4a4fb9ac6d315b164c2105a6f",
+      "audited_source_sha256": "a35569e8953f212f96eae949fac80e12c46b79d4a4fb9ac6d315b164c2105a6f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/emaildelivery/services/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/emaildelivery/services/smtp.py",
+      "sha256": "74f62c70f72bf4e63cb19ed7c3afa5859b8ed8b3473caaadfa505f923bd6fd7a",
+      "audited_source_sha256": "74f62c70f72bf4e63cb19ed7c3afa5859b8ed8b3473caaadfa505f923bd6fd7a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/emaildelivery/types.py",
+      "sha256": "cbd363c25ad6815f12cd1e26e08166dfcb6e356c3527f0d6581358e3f15b95a2",
+      "audited_source_sha256": "cbd363c25ad6815f12cd1e26e08166dfcb6e356c3527f0d6581358e3f15b95a2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/smsdelivery/__init__.py",
+      "sha256": "ceb28b721ac7d4d60275eca6abb4e1819f14b52d9cd0fc30c66a8e5cb9a21629",
+      "audited_source_sha256": "ceb28b721ac7d4d60275eca6abb4e1819f14b52d9cd0fc30c66a8e5cb9a21629",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/smsdelivery/services/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/smsdelivery/services/supertokens.py",
+      "sha256": "094557b386cd036664525ff0d7ea2ccd7fe96815f763f2fc57f2f2586f08c7b1",
+      "audited_source_sha256": "094557b386cd036664525ff0d7ea2ccd7fe96815f763f2fc57f2f2586f08c7b1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/smsdelivery/services/twilio.py",
+      "sha256": "44c079079b22cb402ef9b3a5b4835f257d8d8c5cda22a19f1ba2ef316e7af59b",
+      "audited_source_sha256": "44c079079b22cb402ef9b3a5b4835f257d8d8c5cda22a19f1ba2ef316e7af59b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/ingredients/smsdelivery/types.py",
+      "sha256": "e1faf4d10334eca2eccd541027ea25c89ecce2b8a68275754136d9c7cf6aa56c",
+      "audited_source_sha256": "e1faf4d10334eca2eccd541027ea25c89ecce2b8a68275754136d9c7cf6aa56c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/interfaces.py",
+      "sha256": "c8f17656f5074c552bcbeb18bf9936de79f97a03b3c7c165c830c47ba15412f5",
+      "audited_source_sha256": "c8f17656f5074c552bcbeb18bf9936de79f97a03b3c7c165c830c47ba15412f5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/logger.py",
+      "sha256": "11ef56ccf469a1c343470ad2d059b7a93c5332d5e6e05020ca9dbe9cf765888b",
+      "audited_source_sha256": "11ef56ccf469a1c343470ad2d059b7a93c5332d5e6e05020ca9dbe9cf765888b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/normalised_url_domain.py",
+      "sha256": "4a1f055f93d3dd8113f3684e86a3a1f4290c8bde46567851e49d179c86818cb4",
+      "audited_source_sha256": "4a1f055f93d3dd8113f3684e86a3a1f4290c8bde46567851e49d179c86818cb4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/normalised_url_path.py",
+      "sha256": "e89e358a116bb5368df8cfd6fde37f6292b851eb5f0e4f0f1b9c3ffefad0f231",
+      "audited_source_sha256": "e89e358a116bb5368df8cfd6fde37f6292b851eb5f0e4f0f1b9c3ffefad0f231",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/plugins.py",
+      "sha256": "4931c4ed855ee9bcc0f6def69683312a3b80ce0cdc9bba4f8eab5edd59f64fc7",
+      "audited_source_sha256": "4931c4ed855ee9bcc0f6def69683312a3b80ce0cdc9bba4f8eab5edd59f64fc7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/post_init_callbacks.py",
+      "sha256": "f4d0c56183032183e41a23e36f56ba84fc9971d061b28d14c1e07075b8cf33a2",
+      "audited_source_sha256": "f4d0c56183032183e41a23e36f56ba84fc9971d061b28d14c1e07075b8cf33a2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/process_state.py",
+      "sha256": "08152166a8efcfa59ae6c9cfcf5751272f3de653bbc68f62a0785cba8612a1ef",
+      "audited_source_sha256": "08152166a8efcfa59ae6c9cfcf5751272f3de653bbc68f62a0785cba8612a1ef",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/querier.py",
+      "sha256": "293f58cd3d2d331b9cb0b882d2d8e5e289e2a8f25c95c3399c8ef262313c1002",
+      "audited_source_sha256": "293f58cd3d2d331b9cb0b882d2d8e5e289e2a8f25c95c3399c8ef262313c1002",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/__init__.py",
+      "sha256": "e81b9b3427b1c766fd966361a1311dfec20dd1e8e2ac30b0bc511a2503dd5e3d",
+      "audited_source_sha256": "e81b9b3427b1c766fd966361a1311dfec20dd1e8e2ac30b0bc511a2503dd5e3d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/asyncio/__init__.py",
+      "sha256": "0102d4ea323c9156cf2aec56eddd31b7f2197d70224dc21fdd80d43f687de342",
+      "audited_source_sha256": "0102d4ea323c9156cf2aec56eddd31b7f2197d70224dc21fdd80d43f687de342",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/interfaces.py",
+      "sha256": "8bbfac0366f39686369c3806b450bee4987b62634d24ed19238279333ede0ee2",
+      "audited_source_sha256": "8bbfac0366f39686369c3806b450bee4987b62634d24ed19238279333ede0ee2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/recipe.py",
+      "sha256": "3dd333764597362e6c2471e780b19e4d0e042ab3ebafb140e09589a3dd6c42d9",
+      "audited_source_sha256": "3dd333764597362e6c2471e780b19e4d0e042ab3ebafb140e09589a3dd6c42d9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/recipe_implementation.py",
+      "sha256": "f9cd9573e0eddb58457f6c58b68f5b3f0f8b4678750013f6b05b795417fde3e1",
+      "audited_source_sha256": "f9cd9573e0eddb58457f6c58b68f5b3f0f8b4678750013f6b05b795417fde3e1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/syncio/__init__.py",
+      "sha256": "08f3708762b2c575be2c2753b302a054dc7f3864360f6fee64f45f54bf5e0910",
+      "audited_source_sha256": "08f3708762b2c575be2c2753b302a054dc7f3864360f6fee64f45f54bf5e0910",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/types.py",
+      "sha256": "e3f176392e444ec0f38776576c3cb6ea0a82ca4c194bec76dc848b317f4a9e40",
+      "audited_source_sha256": "e3f176392e444ec0f38776576c3cb6ea0a82ca4c194bec76dc848b317f4a9e40",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/accountlinking/utils.py",
+      "sha256": "3be659470886979a06a582d1870937c6495e3dc012ce0b30b6ae88e3e831d15d",
+      "audited_source_sha256": "3be659470886979a06a582d1870937c6495e3dc012ce0b30b6ae88e3e831d15d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/__init__.py",
+      "sha256": "97a6e2224e8f8bb8e53e653a9a6d7523228db51a838ab05a23350cdfef02a283",
+      "audited_source_sha256": "97a6e2224e8f8bb8e53e653a9a6d7523228db51a838ab05a23350cdfef02a283",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/__init__.py",
+      "sha256": "5b5f9ea5ee56d2c5bd4d2982185c9edbb0b7b093e69c4664ea100fd89cfe4595",
+      "audited_source_sha256": "5b5f9ea5ee56d2c5bd4d2982185c9edbb0b7b093e69c4664ea100fd89cfe4595",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/analytics.py",
+      "sha256": "ffcbeb57ab4fd9aa421ed8e4a541df95f3ebb837f26c930addf500327be16d02",
+      "audited_source_sha256": "ffcbeb57ab4fd9aa421ed8e4a541df95f3ebb837f26c930addf500327be16d02",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/api_key_protector.py",
+      "sha256": "0e21c65c06ecb90819c464b66575d5ca80d7e3471437b76d4327afdf1f0469de",
+      "audited_source_sha256": "0e21c65c06ecb90819c464b66575d5ca80d7e3471437b76d4327afdf1f0469de",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/dashboard.py",
+      "sha256": "d1ae211616992a214019abd7b02d74138e737d6e4d43f7846f33aa531f644438",
+      "audited_source_sha256": "d1ae211616992a214019abd7b02d74138e737d6e4d43f7846f33aa531f644438",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/implementation.py",
+      "sha256": "890064a8b0ee4c97b9eb927fb245ae4795d673706d781b8918e0be887ffd5ff8",
+      "audited_source_sha256": "890064a8b0ee4c97b9eb927fb245ae4795d673706d781b8918e0be887ffd5ff8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/create_or_update_third_party_config.py",
+      "sha256": "2a43a24dbd07420a495d626e58e85b533c97d14887549efe288b67aca9c70fa7",
+      "audited_source_sha256": "2a43a24dbd07420a495d626e58e85b533c97d14887549efe288b67aca9c70fa7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/create_tenant.py",
+      "sha256": "ebe20266ec4962eb5d36bad7392db65141151b04c05648f0b67ce2b87e2e72eb",
+      "audited_source_sha256": "ebe20266ec4962eb5d36bad7392db65141151b04c05648f0b67ce2b87e2e72eb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/delete_tenant.py",
+      "sha256": "3ba67dacfa24a5c604202e2c8ff9688bbf8aac40604db20382ca4fb8b6cb97f8",
+      "audited_source_sha256": "3ba67dacfa24a5c604202e2c8ff9688bbf8aac40604db20382ca4fb8b6cb97f8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/delete_third_party_config.py",
+      "sha256": "b4243b4c019d7b45f6680ed6904928f70fe0b356289581a75caab5fd9296c298",
+      "audited_source_sha256": "b4243b4c019d7b45f6680ed6904928f70fe0b356289581a75caab5fd9296c298",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/get_tenant_info.py",
+      "sha256": "82161a6869710dd37c0f95db4224147c3d66391a4f1c4bea343e50e073b356a7",
+      "audited_source_sha256": "82161a6869710dd37c0f95db4224147c3d66391a4f1c4bea343e50e073b356a7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/get_third_party_config.py",
+      "sha256": "e7c74cb30836820ee4f5d02b6671f190285ddbdd76cfd789d4a51744266a9253",
+      "audited_source_sha256": "e7c74cb30836820ee4f5d02b6671f190285ddbdd76cfd789d4a51744266a9253",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/list_all_tenants_with_login_methods.py",
+      "sha256": "7f520e06eb6823a301f349b5f1b62adab0e407088c9e54e67de28cc1846f0da7",
+      "audited_source_sha256": "7f520e06eb6823a301f349b5f1b62adab0e407088c9e54e67de28cc1846f0da7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/update_tenant_core_config.py",
+      "sha256": "de47d0d7592471283a64d5c71b80aacbd7085e64895233a6588d87e08ce63b81",
+      "audited_source_sha256": "de47d0d7592471283a64d5c71b80aacbd7085e64895233a6588d87e08ce63b81",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/update_tenant_first_factor.py",
+      "sha256": "ac7c73c276096bc30ded0e31a05b6a173f06ab2afff546fa23c2a14dd88c72ef",
+      "audited_source_sha256": "ac7c73c276096bc30ded0e31a05b6a173f06ab2afff546fa23c2a14dd88c72ef",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/update_tenant_secondary_factor.py",
+      "sha256": "45d9c4fd1de8524af432debfcdc3aeb86e696c332f440704394980b3539c96b3",
+      "audited_source_sha256": "45d9c4fd1de8524af432debfcdc3aeb86e696c332f440704394980b3539c96b3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/multitenancy/utils.py",
+      "sha256": "ca9a281f239a264d8f9a19caaa2d293316476fd04a19925b89d92f2a78313895",
+      "audited_source_sha256": "ca9a281f239a264d8f9a19caaa2d293316476fd04a19925b89d92f2a78313895",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/search/getTags.py",
+      "sha256": "16caed04fca4374375b4340d857690bb72c3b201dcd664f2317c13183111cf89",
+      "audited_source_sha256": "16caed04fca4374375b4340d857690bb72c3b201dcd664f2317c13183111cf89",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/signin.py",
+      "sha256": "5a685bcd67af710db4af224e8f5b56aab1ef580fa93699933f9a8567fe8d2d87",
+      "audited_source_sha256": "5a685bcd67af710db4af224e8f5b56aab1ef580fa93699933f9a8567fe8d2d87",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/signout.py",
+      "sha256": "1966737052617ebe9477678a127675b0f198768fca9b1f633be8a4b709f1955d",
+      "audited_source_sha256": "1966737052617ebe9477678a127675b0f198768fca9b1f633be8a4b709f1955d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/user/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/user/create/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/user/create/emailpassword_user.py",
+      "sha256": "67ad57126b6b7ed7e8e70fa6e750c24a3ac61d731b2995fa46d4f37f9f2d81d3",
+      "audited_source_sha256": "67ad57126b6b7ed7e8e70fa6e750c24a3ac61d731b2995fa46d4f37f9f2d81d3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/user/create/passwordless_user.py",
+      "sha256": "da2ae681e6ecfe8a70684922307cb8399e8707d7e49f7602bd0e4c61d9326a0b",
+      "audited_source_sha256": "da2ae681e6ecfe8a70684922307cb8399e8707d7e49f7602bd0e4c61d9326a0b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_delete.py",
+      "sha256": "54bc558ddf1d8c1136448dfebb1f12b236b5a4bffe07d15975947bede601d960",
+      "audited_source_sha256": "54bc558ddf1d8c1136448dfebb1f12b236b5a4bffe07d15975947bede601d960",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_email_verify_get.py",
+      "sha256": "c3ac43bcc87be708445f48a3567484811b8168b430704d01b0417322c9689100",
+      "audited_source_sha256": "c3ac43bcc87be708445f48a3567484811b8168b430704d01b0417322c9689100",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_email_verify_put.py",
+      "sha256": "20255a08a4ba1c1e8297d55f30ec592542bf11dfed2b2abdf96e52851630d725",
+      "audited_source_sha256": "20255a08a4ba1c1e8297d55f30ec592542bf11dfed2b2abdf96e52851630d725",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_email_verify_token_post.py",
+      "sha256": "2d6a5399f18cbb26a539255a0d1620727ab99acd98a4f5bdb3c08415b641a753",
+      "audited_source_sha256": "2d6a5399f18cbb26a539255a0d1620727ab99acd98a4f5bdb3c08415b641a753",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_get.py",
+      "sha256": "b914ae871b143502647ea9f62e290d946b255edbadd07bb59c9e0421a0fb3cb6",
+      "audited_source_sha256": "b914ae871b143502647ea9f62e290d946b255edbadd07bb59c9e0421a0fb3cb6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_metadata_get.py",
+      "sha256": "1d6ced688c0a2083e4bab62ece20a1023764762ed58cb430bcda76762ddd79ae",
+      "audited_source_sha256": "1d6ced688c0a2083e4bab62ece20a1023764762ed58cb430bcda76762ddd79ae",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_metadata_put.py",
+      "sha256": "fc36d31eee35035b1418a5ab2a39547b7ec257e9c6b59796789ecae759953446",
+      "audited_source_sha256": "fc36d31eee35035b1418a5ab2a39547b7ec257e9c6b59796789ecae759953446",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_password_put.py",
+      "sha256": "3b050d60058702ad3990ae8695c232d7dacbbd2c28e5cd29273fcc4ae3b048db",
+      "audited_source_sha256": "3b050d60058702ad3990ae8695c232d7dacbbd2c28e5cd29273fcc4ae3b048db",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_put.py",
+      "sha256": "092036b804c502f5b2843bd88d593e54c144d36f0c38e1dd51278ddd5f349c3c",
+      "audited_source_sha256": "092036b804c502f5b2843bd88d593e54c144d36f0c38e1dd51278ddd5f349c3c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_sessions_get.py",
+      "sha256": "30877d2a771adb12c52c107d2b71e7cef6cf985d8f34117c67353e4c3abb0ab4",
+      "audited_source_sha256": "30877d2a771adb12c52c107d2b71e7cef6cf985d8f34117c67353e4c3abb0ab4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_sessions_post.py",
+      "sha256": "e511e00d3b8856cc092012176f4f21e9dadd34e03700e34e6bdc3d6da88da958",
+      "audited_source_sha256": "e511e00d3b8856cc092012176f4f21e9dadd34e03700e34e6bdc3d6da88da958",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userdetails/user_unlink_get.py",
+      "sha256": "ef4a2cee2e19b3aae8c1e16b71e13ab6c936ba60bf74799d2a721f8f1979aad9",
+      "audited_source_sha256": "ef4a2cee2e19b3aae8c1e16b71e13ab6c936ba60bf74799d2a721f8f1979aad9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/add_role_to_user.py",
+      "sha256": "0b90bc3b7cb2f0b52fbf7c78b3fa36d6045b9c88fbc0aa60bca5437c1ebb5ca4",
+      "audited_source_sha256": "0b90bc3b7cb2f0b52fbf7c78b3fa36d6045b9c88fbc0aa60bca5437c1ebb5ca4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/get_role_to_user.py",
+      "sha256": "832e593fe5461fe9983457ccb4d286fbff56af9240a70ffef5c03c625ff814e6",
+      "audited_source_sha256": "832e593fe5461fe9983457ccb4d286fbff56af9240a70ffef5c03c625ff814e6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/permissions/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/permissions/get_permissions_for_role.py",
+      "sha256": "2185180d8b792828ba93cdfa0a0a5db7720d41f6104b1536967cd47e4c6dc5ba",
+      "audited_source_sha256": "2185180d8b792828ba93cdfa0a0a5db7720d41f6104b1536967cd47e4c6dc5ba",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/permissions/remove_permissions_from_role.py",
+      "sha256": "315a42f4b025334d431b92653ec5aa38376741cd4b77f7938374849d861b1cc6",
+      "audited_source_sha256": "315a42f4b025334d431b92653ec5aa38376741cd4b77f7938374849d861b1cc6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/remove_user_role.py",
+      "sha256": "9eb9b93de2be5e6823ecdac3514b3a6fc18802b6bc9b4286cc627607446e26e2",
+      "audited_source_sha256": "9eb9b93de2be5e6823ecdac3514b3a6fc18802b6bc9b4286cc627607446e26e2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/roles/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/roles/create_role_or_add_permissions.py",
+      "sha256": "62693cc2c51528fb13ee7c191f5237c9bd8f354d9d7db0dd88b138c9f811671a",
+      "audited_source_sha256": "62693cc2c51528fb13ee7c191f5237c9bd8f354d9d7db0dd88b138c9f811671a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/roles/delete_role.py",
+      "sha256": "bbfe99b43970c0679f2dbfb8ffc94c273d714bfb5a1ac97f03a8fbabed56e3c8",
+      "audited_source_sha256": "bbfe99b43970c0679f2dbfb8ffc94c273d714bfb5a1ac97f03a8fbabed56e3c8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/userroles/roles/get_all_roles.py",
+      "sha256": "f605bf59fe64c057b27c0e1ee8d5ecccb88d7c63884298e34490ce2dff3c4bcf",
+      "audited_source_sha256": "f605bf59fe64c057b27c0e1ee8d5ecccb88d7c63884298e34490ce2dff3c4bcf",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/users_count_get.py",
+      "sha256": "f19d54119b11ca171b23ba9f2b31c6de2f39aadbfd8773b8afeebc956c3891d2",
+      "audited_source_sha256": "f19d54119b11ca171b23ba9f2b31c6de2f39aadbfd8773b8afeebc956c3891d2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/users_get.py",
+      "sha256": "0d061ea499bb33c2b8364ef2d9c46708ffb7554397d0c914feaee873597b70a8",
+      "audited_source_sha256": "0d061ea499bb33c2b8364ef2d9c46708ffb7554397d0c914feaee873597b70a8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/api/validate_key.py",
+      "sha256": "560ba216e3c60bba04f5e0d2cc7f06164a1e74f6fc24e95fc9f3b8c21e91d131",
+      "audited_source_sha256": "560ba216e3c60bba04f5e0d2cc7f06164a1e74f6fc24e95fc9f3b8c21e91d131",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/constants.py",
+      "sha256": "c01f7c564d577384541de4f9258e030915bf0040c3bdd7c48d484f9fd5e684cc",
+      "audited_source_sha256": "c01f7c564d577384541de4f9258e030915bf0040c3bdd7c48d484f9fd5e684cc",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/exceptions.py",
+      "sha256": "3fbc1783c33cfce0a446121b55d183d17d1bd75c34e483bae58744a8a810e055",
+      "audited_source_sha256": "3fbc1783c33cfce0a446121b55d183d17d1bd75c34e483bae58744a8a810e055",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/interfaces.py",
+      "sha256": "7a6d864c93536e4cc343d01c95520be20d00872f7c07714844c5bfa379ba5d5d",
+      "audited_source_sha256": "7a6d864c93536e4cc343d01c95520be20d00872f7c07714844c5bfa379ba5d5d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/recipe.py",
+      "sha256": "3c991574f8991f46ef8a9e1d42a1bdae34e05b521cbcf3101c5b274c9a4a4e68",
+      "audited_source_sha256": "3c991574f8991f46ef8a9e1d42a1bdae34e05b521cbcf3101c5b274c9a4a4e68",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/recipe_implementation.py",
+      "sha256": "2b6a7484ccf6583a0fdb7801098c8adb6effd604157e93a72e310e46990020a2",
+      "audited_source_sha256": "2b6a7484ccf6583a0fdb7801098c8adb6effd604157e93a72e310e46990020a2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/dashboard/utils.py",
+      "sha256": "e810d995ddaa4b29b8f1698755d200668a4de2705b70716b1842be3148be04a5",
+      "audited_source_sha256": "e810d995ddaa4b29b8f1698755d200668a4de2705b70716b1842be3148be04a5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/__init__.py",
+      "sha256": "807cd12bb53adc65370d377f7ac01074d2b50fdde801e5c498015b74ad5a8c97",
+      "audited_source_sha256": "807cd12bb53adc65370d377f7ac01074d2b50fdde801e5c498015b74ad5a8c97",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/__init__.py",
+      "sha256": "ca1fc3d5cc666965f0e0ee89563418581c675707cb1d7dd062d8034a7402fbd9",
+      "audited_source_sha256": "ca1fc3d5cc666965f0e0ee89563418581c675707cb1d7dd062d8034a7402fbd9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/email_exists.py",
+      "sha256": "2033cb440b78af5e8ab939022f13930fb1fa405d6abe82c92f4411d7a6f003b5",
+      "audited_source_sha256": "2033cb440b78af5e8ab939022f13930fb1fa405d6abe82c92f4411d7a6f003b5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/generate_password_reset_token.py",
+      "sha256": "15bea4e27387c9792a1bfb4b0cb015f1e122770df336214edb16ff001ce5bd15",
+      "audited_source_sha256": "15bea4e27387c9792a1bfb4b0cb015f1e122770df336214edb16ff001ce5bd15",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/implementation.py",
+      "sha256": "3403b1bb261bbaecd625b7a0393942aa9c7daebba2a2e35c4e27b26773dc77d0",
+      "audited_source_sha256": "3403b1bb261bbaecd625b7a0393942aa9c7daebba2a2e35c4e27b26773dc77d0",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/password_reset.py",
+      "sha256": "06c5005bd53c3ebf8cace1c5be8ce4e68b76809c0c1c693aba6bae52ccff662b",
+      "audited_source_sha256": "06c5005bd53c3ebf8cace1c5be8ce4e68b76809c0c1c693aba6bae52ccff662b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/signin.py",
+      "sha256": "704e0892102516af765ebd853d3b3547af9addf625c5de04f540d6d146b675d3",
+      "audited_source_sha256": "704e0892102516af765ebd853d3b3547af9addf625c5de04f540d6d146b675d3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/signup.py",
+      "sha256": "9c6c89debf812b295df8b4c159d6fdc46a6fa3f2759fe1efbdfa48dbc5d89e96",
+      "audited_source_sha256": "9c6c89debf812b295df8b4c159d6fdc46a6fa3f2759fe1efbdfa48dbc5d89e96",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/api/utils.py",
+      "sha256": "61e8dfdd3fc93647f64db913aa3bbead858cfd3431cac291c63483d5fb4aaaf9",
+      "audited_source_sha256": "61e8dfdd3fc93647f64db913aa3bbead858cfd3431cac291c63483d5fb4aaaf9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/asyncio/__init__.py",
+      "sha256": "2f4f8e03a7a398c312cbc16f6abc8aad85a782ea15617d085c3dc7ba9bd79ec1",
+      "audited_source_sha256": "2f4f8e03a7a398c312cbc16f6abc8aad85a782ea15617d085c3dc7ba9bd79ec1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/constants.py",
+      "sha256": "64fa0e1b1ae77506cc3639d42b231933511683de837af826d64884122ea57007",
+      "audited_source_sha256": "64fa0e1b1ae77506cc3639d42b231933511683de837af826d64884122ea57007",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/services/__init__.py",
+      "sha256": "0ac99eef8436526cd6c720280dc516463ea6d7e22eea99d7fa36a4c15a8e612a",
+      "audited_source_sha256": "0ac99eef8436526cd6c720280dc516463ea6d7e22eea99d7fa36a4c15a8e612a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/services/backward_compatibility/__init__.py",
+      "sha256": "910d6d91516a56994edfe4e9c07d3ef1961e9e3d8452e3b63872c88688c30296",
+      "audited_source_sha256": "910d6d91516a56994edfe4e9c07d3ef1961e9e3d8452e3b63872c88688c30296",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/services/smtp/__init__.py",
+      "sha256": "336fca46ae0b7c4d1743e312f10170ce1446a87aab6ae23e526d3b12822fbd30",
+      "audited_source_sha256": "336fca46ae0b7c4d1743e312f10170ce1446a87aab6ae23e526d3b12822fbd30",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/services/smtp/password_reset.py",
+      "sha256": "0a9ca7c913a10e1589d30029dc183f895cae5033db724f870e4b3d43e2ccee32",
+      "audited_source_sha256": "0a9ca7c913a10e1589d30029dc183f895cae5033db724f870e4b3d43e2ccee32",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/services/smtp/password_reset_email.py",
+      "sha256": "d4c42d1ea08a64b12fcf04dc9a137574795d69c5543f507cda5a58699ac39659",
+      "audited_source_sha256": "d4c42d1ea08a64b12fcf04dc9a137574795d69c5543f507cda5a58699ac39659",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/emaildelivery/services/smtp/service_implementation/__init__.py",
+      "sha256": "b8180ea69b37c654e8c094922ad738616e104a261b38e8217587456b9ea798eb",
+      "audited_source_sha256": "b8180ea69b37c654e8c094922ad738616e104a261b38e8217587456b9ea798eb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/exceptions.py",
+      "sha256": "7f710f25e08727ef154ec31c58a47fe252a31813d376b9bb8a5a1abb039c6e5b",
+      "audited_source_sha256": "7f710f25e08727ef154ec31c58a47fe252a31813d376b9bb8a5a1abb039c6e5b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/interfaces.py",
+      "sha256": "829a0b1097a1a2f7f3f9836f215e261dfea3a775a0c08efa8ae899ad53db1905",
+      "audited_source_sha256": "829a0b1097a1a2f7f3f9836f215e261dfea3a775a0c08efa8ae899ad53db1905",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/recipe.py",
+      "sha256": "4c64b85c436300c8c0f2febc7c4e79547de86e01c21cc0ff03dc5b54368cb658",
+      "audited_source_sha256": "4c64b85c436300c8c0f2febc7c4e79547de86e01c21cc0ff03dc5b54368cb658",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/recipe_implementation.py",
+      "sha256": "d53986155ca834984b12ccd437f4cc793bb2e97e1407267132a24f5925799393",
+      "audited_source_sha256": "d53986155ca834984b12ccd437f4cc793bb2e97e1407267132a24f5925799393",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/syncio/__init__.py",
+      "sha256": "356a466eeb03055f48ab2e2c0a3daa1dc432240dc3b57aac4793d34a52f71e59",
+      "audited_source_sha256": "356a466eeb03055f48ab2e2c0a3daa1dc432240dc3b57aac4793d34a52f71e59",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/types.py",
+      "sha256": "73013584d7461728529b6da47cb7387ee8066d6cd1b23d2593c71a366dae9fe1",
+      "audited_source_sha256": "73013584d7461728529b6da47cb7387ee8066d6cd1b23d2593c71a366dae9fe1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailpassword/utils.py",
+      "sha256": "ca3ea67c11713d73dec9877c03af25a117c8184c07eb37507cfb1c8f8d47af44",
+      "audited_source_sha256": "ca3ea67c11713d73dec9877c03af25a117c8184c07eb37507cfb1c8f8d47af44",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/__init__.py",
+      "sha256": "998e2528928fef1c5cb4c70ece3851f25095b5085d138ed1f8036f7390f12b5e",
+      "audited_source_sha256": "998e2528928fef1c5cb4c70ece3851f25095b5085d138ed1f8036f7390f12b5e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/api/__init__.py",
+      "sha256": "040b80866fe133c2c4b3e5cbafaa3623184a17cb3b78af787a0172afcddb5dbd",
+      "audited_source_sha256": "040b80866fe133c2c4b3e5cbafaa3623184a17cb3b78af787a0172afcddb5dbd",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/api/email_verify.py",
+      "sha256": "243a4d55811a7c9b57cc72a2f70ef1a892f054b41e9039dfecac40d921e5cdfe",
+      "audited_source_sha256": "243a4d55811a7c9b57cc72a2f70ef1a892f054b41e9039dfecac40d921e5cdfe",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/api/generate_email_verify_token.py",
+      "sha256": "054f056eb240188ede3ba7b8435be6cf6cac5cfa4bda50483bf65143a0b4b756",
+      "audited_source_sha256": "054f056eb240188ede3ba7b8435be6cf6cac5cfa4bda50483bf65143a0b4b756",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/asyncio/__init__.py",
+      "sha256": "9588294424b3b692f0743e1b8dfd0f3c765d492131e88a9f563efffc5dc98dff",
+      "audited_source_sha256": "9588294424b3b692f0743e1b8dfd0f3c765d492131e88a9f563efffc5dc98dff",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/constants.py",
+      "sha256": "183ac635d193c6016a080f3d4c865034c17b5708255768692bf63934f4338149",
+      "audited_source_sha256": "183ac635d193c6016a080f3d4c865034c17b5708255768692bf63934f4338149",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/services/__init__.py",
+      "sha256": "0ac99eef8436526cd6c720280dc516463ea6d7e22eea99d7fa36a4c15a8e612a",
+      "audited_source_sha256": "0ac99eef8436526cd6c720280dc516463ea6d7e22eea99d7fa36a4c15a8e612a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/services/backward_compatibility/__init__.py",
+      "sha256": "98ea73f4d6eb99204892e2b7b14a92cbf05e4755214ec56cd7a87276e85b40db",
+      "audited_source_sha256": "98ea73f4d6eb99204892e2b7b14a92cbf05e4755214ec56cd7a87276e85b40db",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/services/smtp/__init__.py",
+      "sha256": "56a7317f63dd48dafb289558a04a5d1fd2ac7aaa9bd632c153fa38c6f38f2411",
+      "audited_source_sha256": "56a7317f63dd48dafb289558a04a5d1fd2ac7aaa9bd632c153fa38c6f38f2411",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/services/smtp/email_verify.py",
+      "sha256": "c3d4032bbf8cbc3be88b04324c88dd859117cabaa2fed3d55954a44a9a0f0f06",
+      "audited_source_sha256": "c3d4032bbf8cbc3be88b04324c88dd859117cabaa2fed3d55954a44a9a0f0f06",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/services/smtp/email_verify_email.py",
+      "sha256": "7c48e1b03d80b8cad43252ee9976ecca4e08dd667f2084d53a40f51f3b995998",
+      "audited_source_sha256": "7c48e1b03d80b8cad43252ee9976ecca4e08dd667f2084d53a40f51f3b995998",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/emaildelivery/services/smtp/service_implementation.py",
+      "sha256": "061624898aee06cd4d53c8c4928b96e143247132128a22e4d5e77f4b8b9e01d4",
+      "audited_source_sha256": "061624898aee06cd4d53c8c4928b96e143247132128a22e4d5e77f4b8b9e01d4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/exceptions.py",
+      "sha256": "07f7873d503a9894f9f2d81fd066facf26cb732bcf43d08ebd4aa5bb4e4bc87c",
+      "audited_source_sha256": "07f7873d503a9894f9f2d81fd066facf26cb732bcf43d08ebd4aa5bb4e4bc87c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/interfaces.py",
+      "sha256": "6464536723821635a7cebc0b208039e233f5586636fc32c8cd82106f5d93059b",
+      "audited_source_sha256": "6464536723821635a7cebc0b208039e233f5586636fc32c8cd82106f5d93059b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/recipe.py",
+      "sha256": "f37fd11a8dcfc91070ca5c1dfa98e2431aa4ed7750a64e33cec7a66ba587f5c9",
+      "audited_source_sha256": "f37fd11a8dcfc91070ca5c1dfa98e2431aa4ed7750a64e33cec7a66ba587f5c9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/recipe_implementation.py",
+      "sha256": "27edc20c77bd6558f4d81af0276a475effa4e31aeaf681e4c659d68d53f292e4",
+      "audited_source_sha256": "27edc20c77bd6558f4d81af0276a475effa4e31aeaf681e4c659d68d53f292e4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/syncio/__init__.py",
+      "sha256": "97e2bcbec5a14fc7d316c65cf760386786da25d7371d1266b20285a6832bceb2",
+      "audited_source_sha256": "97e2bcbec5a14fc7d316c65cf760386786da25d7371d1266b20285a6832bceb2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/types.py",
+      "sha256": "2093b230ef75a0a398646d443dfe456eb72d19d5ab919f840a40f770306257f5",
+      "audited_source_sha256": "2093b230ef75a0a398646d443dfe456eb72d19d5ab919f840a40f770306257f5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/emailverification/utils.py",
+      "sha256": "26c9d226b729777602902466b5596493b2764a161f84088b99ba5d1b3a341ceb",
+      "audited_source_sha256": "26c9d226b729777602902466b5596493b2764a161f84088b99ba5d1b3a341ceb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/__init__.py",
+      "sha256": "0736ea0c8f3c2840ac68f031d234845c11e3c13fb6a63efb7f849c9641f8b715",
+      "audited_source_sha256": "0736ea0c8f3c2840ac68f031d234845c11e3c13fb6a63efb7f849c9641f8b715",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/api/implementation.py",
+      "sha256": "85fd42a322f011fc0120bf6c23f7925209fc339f259cefd184ab09b85518baf9",
+      "audited_source_sha256": "85fd42a322f011fc0120bf6c23f7925209fc339f259cefd184ab09b85518baf9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/api/jwks_get.py",
+      "sha256": "5ab462e15f9ba2bb23d51c5241619fb95b63b916a6975f4a17f0cd49f774d544",
+      "audited_source_sha256": "5ab462e15f9ba2bb23d51c5241619fb95b63b916a6975f4a17f0cd49f774d544",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/asyncio/__init__.py",
+      "sha256": "eb282d8719841ae2223430b68d71987e554d44bc59175625051b281a08b24dd6",
+      "audited_source_sha256": "eb282d8719841ae2223430b68d71987e554d44bc59175625051b281a08b24dd6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/constants.py",
+      "sha256": "1d8999792a8e4006d493830284c8a7205f2d60f7e39191690b0e5f963b899109",
+      "audited_source_sha256": "1d8999792a8e4006d493830284c8a7205f2d60f7e39191690b0e5f963b899109",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/exceptions.py",
+      "sha256": "f2658a8376c2064c309ce7d56e346a02a35ed1bb86c57c7134fb6cf3452710d4",
+      "audited_source_sha256": "f2658a8376c2064c309ce7d56e346a02a35ed1bb86c57c7134fb6cf3452710d4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/interfaces.py",
+      "sha256": "304c2b1440e129c8d42f4f7266fb37bef7a71b9eb974675625578f8eeb580602",
+      "audited_source_sha256": "304c2b1440e129c8d42f4f7266fb37bef7a71b9eb974675625578f8eeb580602",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/recipe.py",
+      "sha256": "ffa0545ed92928fcaa7c6a0f3d7dda441d917274fccdd5724e5ddbd54345842d",
+      "audited_source_sha256": "ffa0545ed92928fcaa7c6a0f3d7dda441d917274fccdd5724e5ddbd54345842d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/recipe_implementation.py",
+      "sha256": "988197e6227d57599b59a08a15bb72071173d291a70964436ac7bd293da2dcf0",
+      "audited_source_sha256": "988197e6227d57599b59a08a15bb72071173d291a70964436ac7bd293da2dcf0",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/syncio/__init__.py",
+      "sha256": "c1dd15a6958f02fb4eb13bdfa2040abd4f32fd0c2e7bacd0fa4c2602552febcd",
+      "audited_source_sha256": "c1dd15a6958f02fb4eb13bdfa2040abd4f32fd0c2e7bacd0fa4c2602552febcd",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/jwt/utils.py",
+      "sha256": "f99bc374fb43510f2ddbd636d14a289185abb506d9102a3b6d7a13f1b469a9e1",
+      "audited_source_sha256": "f99bc374fb43510f2ddbd636d14a289185abb506d9102a3b6d7a13f1b469a9e1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/__init__.py",
+      "sha256": "7435dbe733c0821a2fa0ccedcf85cf0cf1ed4ad567c8471f08fafff919237c94",
+      "audited_source_sha256": "7435dbe733c0821a2fa0ccedcf85cf0cf1ed4ad567c8471f08fafff919237c94",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/api/__init__.py",
+      "sha256": "36ec3dc7df094edbbdfab82bcf30ef02a000a7ba5df99d9428b6314499c81397",
+      "audited_source_sha256": "36ec3dc7df094edbbdfab82bcf30ef02a000a7ba5df99d9428b6314499c81397",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/api/implementation.py",
+      "sha256": "476900c15dbcc6293b94eef62932d0a81e9de2c9cae81dcf1f69fee1682e73f4",
+      "audited_source_sha256": "476900c15dbcc6293b94eef62932d0a81e9de2c9cae81dcf1f69fee1682e73f4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/api/resync_session_and_fetch_mfa_info.py",
+      "sha256": "f8d7b59c22d16fe7594f888754c90bec4658e515799b73dc85b0fb643dad4125",
+      "audited_source_sha256": "f8d7b59c22d16fe7594f888754c90bec4658e515799b73dc85b0fb643dad4125",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/asyncio/__init__.py",
+      "sha256": "112bd1f0293566359e2f7643a0694fe22469a29123d06c000c5cbed059e2fba8",
+      "audited_source_sha256": "112bd1f0293566359e2f7643a0694fe22469a29123d06c000c5cbed059e2fba8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/constants.py",
+      "sha256": "fe6c668ee0fecf244657d6824e288d24b40f81c47de255211c84a992d2a349ac",
+      "audited_source_sha256": "fe6c668ee0fecf244657d6824e288d24b40f81c47de255211c84a992d2a349ac",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/interfaces.py",
+      "sha256": "efa4732aacdc8d8db75334852bd1690f9298b60a17deb95eda40b30d8a5963e2",
+      "audited_source_sha256": "efa4732aacdc8d8db75334852bd1690f9298b60a17deb95eda40b30d8a5963e2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/multi_factor_auth_claim.py",
+      "sha256": "fb1623b024bec332037f8842cb668515af9c59f678f79e0c6b3a2ba29cf0ebcb",
+      "audited_source_sha256": "fb1623b024bec332037f8842cb668515af9c59f678f79e0c6b3a2ba29cf0ebcb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/recipe.py",
+      "sha256": "1882474bc82c3cf51b6d33871a4822e53ea3d8dba3b7e7930c60cde3cc1c5e80",
+      "audited_source_sha256": "1882474bc82c3cf51b6d33871a4822e53ea3d8dba3b7e7930c60cde3cc1c5e80",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/recipe_implementation.py",
+      "sha256": "e188588fe3c6c345c43f367b0e101323a8c3249a760e0906933e199111a7db6c",
+      "audited_source_sha256": "e188588fe3c6c345c43f367b0e101323a8c3249a760e0906933e199111a7db6c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/syncio/__init__.py",
+      "sha256": "b6da67f59240970a8b6db8515bee87b9faa5b3b1b66f10681739f48c9af5a785",
+      "audited_source_sha256": "b6da67f59240970a8b6db8515bee87b9faa5b3b1b66f10681739f48c9af5a785",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/types.py",
+      "sha256": "cc666351243d4d0635fb8390afd57cff4890cda57f6396d480742b080b1509bb",
+      "audited_source_sha256": "cc666351243d4d0635fb8390afd57cff4890cda57f6396d480742b080b1509bb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multifactorauth/utils.py",
+      "sha256": "2cdbd010d5c0689ff58d3f50cbf4c0d040e923dcda90036d9d0e0e428a4d6f8e",
+      "audited_source_sha256": "2cdbd010d5c0689ff58d3f50cbf4c0d040e923dcda90036d9d0e0e428a4d6f8e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/__init__.py",
+      "sha256": "7803d85b35a573cec94833f3ec3799e9b079ca96845fbdd56e8ce81ade4c9bdb",
+      "audited_source_sha256": "7803d85b35a573cec94833f3ec3799e9b079ca96845fbdd56e8ce81ade4c9bdb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/api/__init__.py",
+      "sha256": "ae7a617b84a0941de6ab64c6446205b63cc21e810468843d19328d85179409f1",
+      "audited_source_sha256": "ae7a617b84a0941de6ab64c6446205b63cc21e810468843d19328d85179409f1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/api/implementation.py",
+      "sha256": "d0470cb3c986b3269ba5f0c92e64dfe034863c6ba045e779d0c56f0a9927b995",
+      "audited_source_sha256": "d0470cb3c986b3269ba5f0c92e64dfe034863c6ba045e779d0c56f0a9927b995",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/api/login_methods.py",
+      "sha256": "c235666f9089ff3da9a0ceb7afd5ecbcac8772061f0927149f4ba506108a30ad",
+      "audited_source_sha256": "c235666f9089ff3da9a0ceb7afd5ecbcac8772061f0927149f4ba506108a30ad",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/asyncio/__init__.py",
+      "sha256": "bd9af72227a1a6f68cae4e300692676f080c3ec4bde516bff0e9df6ef4f9f92b",
+      "audited_source_sha256": "bd9af72227a1a6f68cae4e300692676f080c3ec4bde516bff0e9df6ef4f9f92b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/constants.py",
+      "sha256": "7808129d8cff5cae55315df562a67d5668625dbc5e2b982b1338b544f7db65a5",
+      "audited_source_sha256": "7808129d8cff5cae55315df562a67d5668625dbc5e2b982b1338b544f7db65a5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/exceptions.py",
+      "sha256": "0dadb5929922ddcca5976ebc2c689700011214c6926b77d7ef0b03dbeeb4912f",
+      "audited_source_sha256": "0dadb5929922ddcca5976ebc2c689700011214c6926b77d7ef0b03dbeeb4912f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/interfaces.py",
+      "sha256": "365f536121a9d8afc28b577295db3aad134bee7fd57694fa332f4192977e8511",
+      "audited_source_sha256": "365f536121a9d8afc28b577295db3aad134bee7fd57694fa332f4192977e8511",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/recipe.py",
+      "sha256": "a2802f0b549a81903cfc28175c73a16481613e5a76e93125cc141ca073f90a61",
+      "audited_source_sha256": "a2802f0b549a81903cfc28175c73a16481613e5a76e93125cc141ca073f90a61",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/recipe_implementation.py",
+      "sha256": "4c969639a9fe14050c93ac7ab08573b39a3b655ec9d3bd3061b3baf478473123",
+      "audited_source_sha256": "4c969639a9fe14050c93ac7ab08573b39a3b655ec9d3bd3061b3baf478473123",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/syncio/__init__.py",
+      "sha256": "c70df9e5efd9f2d6c61b31bb3192c147a22484f8fdb33b8f8e37dd7c6bd66e9e",
+      "audited_source_sha256": "c70df9e5efd9f2d6c61b31bb3192c147a22484f8fdb33b8f8e37dd7c6bd66e9e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/multitenancy/utils.py",
+      "sha256": "93e5d80a684b03479f39a78c5aea3fb118c0a7b88c324aa89ef61adde8c5fa41",
+      "audited_source_sha256": "93e5d80a684b03479f39a78c5aea3fb118c0a7b88c324aa89ef61adde8c5fa41",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/__init__.py",
+      "sha256": "63509a74fcba0929bb8461866912ee92e310b7f7981bdf026b17ce8e32085ea9",
+      "audited_source_sha256": "63509a74fcba0929bb8461866912ee92e310b7f7981bdf026b17ce8e32085ea9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/__init__.py",
+      "sha256": "f23ece191064574dae1d389a313859073913f27310b0f7a892d3ef10afcab99a",
+      "audited_source_sha256": "f23ece191064574dae1d389a313859073913f27310b0f7a892d3ef10afcab99a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/auth.py",
+      "sha256": "0b93aca19ebc102c8b50652330367988f7f980defe57f117e1c0b50f9ac120b1",
+      "audited_source_sha256": "0b93aca19ebc102c8b50652330367988f7f980defe57f117e1c0b50f9ac120b1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/end_session.py",
+      "sha256": "dfa07e54c71f621d1a8257ab0f6515fe825cd7691516d50685b871f4e34f557f",
+      "audited_source_sha256": "dfa07e54c71f621d1a8257ab0f6515fe825cd7691516d50685b871f4e34f557f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/implementation.py",
+      "sha256": "8fd7764f8a4224ba728a4623689631f868369fb030d208428c7c3ef3f302029b",
+      "audited_source_sha256": "8fd7764f8a4224ba728a4623689631f868369fb030d208428c7c3ef3f302029b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/introspect_token.py",
+      "sha256": "954043fcfd0cbe42aaaafcec18d4b927f42a38eea5f2a8f7243c7939b5a631cf",
+      "audited_source_sha256": "954043fcfd0cbe42aaaafcec18d4b927f42a38eea5f2a8f7243c7939b5a631cf",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/login.py",
+      "sha256": "af16ffc0bb07e80c4edca0a75a060486ac13a42f992aaed93fe1cf815a3fc3ca",
+      "audited_source_sha256": "af16ffc0bb07e80c4edca0a75a060486ac13a42f992aaed93fe1cf815a3fc3ca",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/login_info.py",
+      "sha256": "e69dfc95a0166398309b6656399032f185d4a781b52d3109ee2ad19d31b69ab2",
+      "audited_source_sha256": "e69dfc95a0166398309b6656399032f185d4a781b52d3109ee2ad19d31b69ab2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/logout.py",
+      "sha256": "1d6a638ef34c4192639cb554e4294c44cefd5420c121c4c02f6d95e26e61fd4d",
+      "audited_source_sha256": "1d6a638ef34c4192639cb554e4294c44cefd5420c121c4c02f6d95e26e61fd4d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/revoke_token.py",
+      "sha256": "b6dbcba4f44fa00257d528bf8317e06301cbe7be2d699248699f7850d9f07ced",
+      "audited_source_sha256": "b6dbcba4f44fa00257d528bf8317e06301cbe7be2d699248699f7850d9f07ced",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/token.py",
+      "sha256": "2bcae86efbe47095e4766bb16cdf8b3df8a98e3f17840df42bf7c7159f1e6298",
+      "audited_source_sha256": "2bcae86efbe47095e4766bb16cdf8b3df8a98e3f17840df42bf7c7159f1e6298",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/user_info.py",
+      "sha256": "51f18efc7b0e66ece5b3297cb61efd8466d345cb0331e126aca3e7938e5e1c52",
+      "audited_source_sha256": "51f18efc7b0e66ece5b3297cb61efd8466d345cb0331e126aca3e7938e5e1c52",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/api/utils.py",
+      "sha256": "eaa8cc089571ba5ca21726806559b5c768c874b2a17e1009b7397b2db19c91b5",
+      "audited_source_sha256": "eaa8cc089571ba5ca21726806559b5c768c874b2a17e1009b7397b2db19c91b5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/asyncio/__init__.py",
+      "sha256": "9ffd20afb01ef6c62a909b2e095aef5f5ecd6c1d141dc2fc85e56eff6da64911",
+      "audited_source_sha256": "9ffd20afb01ef6c62a909b2e095aef5f5ecd6c1d141dc2fc85e56eff6da64911",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/constants.py",
+      "sha256": "1fba7d27ffe5dbb558fb63ef7bc1745cda5b90e2c24a522e5966cbc8d57f0ad1",
+      "audited_source_sha256": "1fba7d27ffe5dbb558fb63ef7bc1745cda5b90e2c24a522e5966cbc8d57f0ad1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/exceptions.py",
+      "sha256": "d864f2e838e940414d5bc2ebe8b50670a6e7d9992d33dae2d1359aeff823e912",
+      "audited_source_sha256": "d864f2e838e940414d5bc2ebe8b50670a6e7d9992d33dae2d1359aeff823e912",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/interfaces.py",
+      "sha256": "d584577cf64eac58215e3a46b45a99ae770bf2251afa5369ff0baad0236dac28",
+      "audited_source_sha256": "d584577cf64eac58215e3a46b45a99ae770bf2251afa5369ff0baad0236dac28",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/oauth2_client.py",
+      "sha256": "d17d20272f4ce991a3e7ae777a4bb1573c0f28a6e16e64b734a75bc2fc453917",
+      "audited_source_sha256": "d17d20272f4ce991a3e7ae777a4bb1573c0f28a6e16e64b734a75bc2fc453917",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/recipe.py",
+      "sha256": "47bd58061b9f4052893e087ae2c0da55939c822df7cfa8efc832cc102d8c94ad",
+      "audited_source_sha256": "47bd58061b9f4052893e087ae2c0da55939c822df7cfa8efc832cc102d8c94ad",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/recipe_implementation.py",
+      "sha256": "960cd7b7a8e6112acefeaeab75b2483e7fe5f38590de54ac769856ff42a1cb16",
+      "audited_source_sha256": "960cd7b7a8e6112acefeaeab75b2483e7fe5f38590de54ac769856ff42a1cb16",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/syncio/__init__.py",
+      "sha256": "63312e055012a27cd32e0dff6c56dd2e53ba639ea9017c6d276ab5699de8ceb3",
+      "audited_source_sha256": "63312e055012a27cd32e0dff6c56dd2e53ba639ea9017c6d276ab5699de8ceb3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/oauth2provider/utils.py",
+      "sha256": "74f28eba33d7f0095288e2da270933a57842d2eb1c854382e47af64955bf28f5",
+      "audited_source_sha256": "74f28eba33d7f0095288e2da270933a57842d2eb1c854382e47af64955bf28f5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/__init__.py",
+      "sha256": "9b6fc8b17cca773c63f47f6f4c90f356384bc41ac9d43c460945fe052112e30e",
+      "audited_source_sha256": "9b6fc8b17cca773c63f47f6f4c90f356384bc41ac9d43c460945fe052112e30e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/api/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "audited_source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/api/implementation.py",
+      "sha256": "2b7e5aad924d26852648637115d2815450cbf7945daa135709949d1a3541bad5",
+      "audited_source_sha256": "2b7e5aad924d26852648637115d2815450cbf7945daa135709949d1a3541bad5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/api/open_id_discovery_configuration_get.py",
+      "sha256": "0bac06a5aae3e9ce450d560558cb0bf7e571c263a550862c20de1d40bc173a8b",
+      "audited_source_sha256": "0bac06a5aae3e9ce450d560558cb0bf7e571c263a550862c20de1d40bc173a8b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/asyncio/__init__.py",
+      "sha256": "eee416673bf6d1a946f092bf3c79f1e8ebd0e1b942706166cab1a4265baf9737",
+      "audited_source_sha256": "eee416673bf6d1a946f092bf3c79f1e8ebd0e1b942706166cab1a4265baf9737",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/constants.py",
+      "sha256": "1ca520d4424ccc56b19c4c36d72ba61140a0bc3400689bd303c6c36909cdf1a4",
+      "audited_source_sha256": "1ca520d4424ccc56b19c4c36d72ba61140a0bc3400689bd303c6c36909cdf1a4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/exceptions.py",
+      "sha256": "5e9455f950869d63696c9aa476ec9769c67ecbd50f73f60a57dbf11aa7927132",
+      "audited_source_sha256": "5e9455f950869d63696c9aa476ec9769c67ecbd50f73f60a57dbf11aa7927132",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/interfaces.py",
+      "sha256": "01abbc53f184f3e7cf26226dbc5609bb7e1fb26e29a979ffcee838feb0dc0832",
+      "audited_source_sha256": "01abbc53f184f3e7cf26226dbc5609bb7e1fb26e29a979ffcee838feb0dc0832",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/recipe.py",
+      "sha256": "ff0f2eccfc349f4ea4c59938c8dafbf422f3526e0c869e8cccf3ac79324d9580",
+      "audited_source_sha256": "ff0f2eccfc349f4ea4c59938c8dafbf422f3526e0c869e8cccf3ac79324d9580",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/recipe_implementation.py",
+      "sha256": "16ac53c169779bfa783e211d936439a91a49aa7cfc063273f1da73372167b65a",
+      "audited_source_sha256": "16ac53c169779bfa783e211d936439a91a49aa7cfc063273f1da73372167b65a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/syncio/__init__.py",
+      "sha256": "033018c45b4e1b8fb3aa165959ec8527d5c5a0ed6662ddebe75a2cc3a5579156",
+      "audited_source_sha256": "033018c45b4e1b8fb3aa165959ec8527d5c5a0ed6662ddebe75a2cc3a5579156",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/openid/utils.py",
+      "sha256": "06b583b9286ad6688182b7676583631c9d1413034e042053817332c75c41bbc7",
+      "audited_source_sha256": "06b583b9286ad6688182b7676583631c9d1413034e042053817332c75c41bbc7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/__init__.py",
+      "sha256": "8183deeb3fbab218b0e47c83a8b6612d2b9ee47d6eedf00f92108cb66af28c96",
+      "audited_source_sha256": "8183deeb3fbab218b0e47c83a8b6612d2b9ee47d6eedf00f92108cb66af28c96",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/__init__.py",
+      "sha256": "843dc95b8211608b43004d7299738d4902abb280e395eccbc2989116a4cbef4d",
+      "audited_source_sha256": "843dc95b8211608b43004d7299738d4902abb280e395eccbc2989116a4cbef4d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/consume_code.py",
+      "sha256": "476a95342329896bee0e6b600efd5d85dd8e9cf23f57fd2fde0202915dd742c8",
+      "audited_source_sha256": "476a95342329896bee0e6b600efd5d85dd8e9cf23f57fd2fde0202915dd742c8",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/create_code.py",
+      "sha256": "20f34bf977ea7860a2889f8932c3b1b1f61a42b2535088210a07f78f82c0f1b6",
+      "audited_source_sha256": "20f34bf977ea7860a2889f8932c3b1b1f61a42b2535088210a07f78f82c0f1b6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/email_exists.py",
+      "sha256": "e888948401d568ad7d79cefb85d286777094bae47d76f7669bba4b9df4882ded",
+      "audited_source_sha256": "e888948401d568ad7d79cefb85d286777094bae47d76f7669bba4b9df4882ded",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/implementation.py",
+      "sha256": "63e7c079fb1adc90bc7e5c5393b046ba76f35f1837a5d6d8a8c5bb64673ad1af",
+      "audited_source_sha256": "63e7c079fb1adc90bc7e5c5393b046ba76f35f1837a5d6d8a8c5bb64673ad1af",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/phone_number_exists.py",
+      "sha256": "3642ab46bf1aa78f3492b51e5eaae3371d3b98944f0992604d927b9179396ee5",
+      "audited_source_sha256": "3642ab46bf1aa78f3492b51e5eaae3371d3b98944f0992604d927b9179396ee5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/api/resend_code.py",
+      "sha256": "356f3d114ce71dab9b4cd83d54ba92ea8e10e3a3a47fa9737adaeb75d9683622",
+      "audited_source_sha256": "356f3d114ce71dab9b4cd83d54ba92ea8e10e3a3a47fa9737adaeb75d9683622",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/asyncio/__init__.py",
+      "sha256": "aef2d538a9f61c5a7fe9ad7dd1562592a3a74d3181ba45ae32ee7766dc8578ee",
+      "audited_source_sha256": "aef2d538a9f61c5a7fe9ad7dd1562592a3a74d3181ba45ae32ee7766dc8578ee",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/constants.py",
+      "sha256": "2a45a1768ac8f8970e3f26edfb9b5806febf9a7e079c75cfbd7f54977cdb1dcc",
+      "audited_source_sha256": "2a45a1768ac8f8970e3f26edfb9b5806febf9a7e079c75cfbd7f54977cdb1dcc",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/services/__init__.py",
+      "sha256": "0ac99eef8436526cd6c720280dc516463ea6d7e22eea99d7fa36a4c15a8e612a",
+      "audited_source_sha256": "0ac99eef8436526cd6c720280dc516463ea6d7e22eea99d7fa36a4c15a8e612a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/services/backward_compatibility/__init__.py",
+      "sha256": "081ff57f5730362fd99633488109fe1b67d17ab15a32184fa74bbc2bebe4ea4c",
+      "audited_source_sha256": "081ff57f5730362fd99633488109fe1b67d17ab15a32184fa74bbc2bebe4ea4c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/services/smtp/__init__.py",
+      "sha256": "e0c7d0c0365b04ac1a67de551831016ced96fc8346e387a0baa168a8005b1efc",
+      "audited_source_sha256": "e0c7d0c0365b04ac1a67de551831016ced96fc8346e387a0baa168a8005b1efc",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/services/smtp/pless_login.py",
+      "sha256": "f067b0a6faa79c89d04efb75d1be3ded15fac0d3f3cf4c47e48bd180b6aef915",
+      "audited_source_sha256": "f067b0a6faa79c89d04efb75d1be3ded15fac0d3f3cf4c47e48bd180b6aef915",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/services/smtp/pless_login_email.py",
+      "sha256": "d869488aa807cea95869697081c4cbbce2604bf0b48bc921a9c5516676c33b1d",
+      "audited_source_sha256": "d869488aa807cea95869697081c4cbbce2604bf0b48bc921a9c5516676c33b1d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/emaildelivery/services/smtp/service_implementation.py",
+      "sha256": "0728c126a1d1a0eb969dec7026dabf75bf38e0d147322544c855e9a897ff5a9e",
+      "audited_source_sha256": "0728c126a1d1a0eb969dec7026dabf75bf38e0d147322544c855e9a897ff5a9e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/exceptions.py",
+      "sha256": "307175673fc7602d5d8a9f79990962c3d00bdf0d8ed102925e6c878e2c56b281",
+      "audited_source_sha256": "307175673fc7602d5d8a9f79990962c3d00bdf0d8ed102925e6c878e2c56b281",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/interfaces.py",
+      "sha256": "2c657a87e575448c3c9faad49dccade852907a64a7bb5945c1984bba49465099",
+      "audited_source_sha256": "2c657a87e575448c3c9faad49dccade852907a64a7bb5945c1984bba49465099",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/recipe.py",
+      "sha256": "f9ae8993806f848db2fe5dfe9733aa78db16f8f36d70d1bad1de2d5bd43ee02f",
+      "audited_source_sha256": "f9ae8993806f848db2fe5dfe9733aa78db16f8f36d70d1bad1de2d5bd43ee02f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/recipe_implementation.py",
+      "sha256": "b3d1078ba6a8d7b211c8c922134640c8ac2e248940637d6a67c9d69062f7b676",
+      "audited_source_sha256": "b3d1078ba6a8d7b211c8c922134640c8ac2e248940637d6a67c9d69062f7b676",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/services/__init__.py",
+      "sha256": "e1e3d7aff2ba4f3bc2f0791f3c89792b28dbd1cae8295acbfb84276197c65f41",
+      "audited_source_sha256": "e1e3d7aff2ba4f3bc2f0791f3c89792b28dbd1cae8295acbfb84276197c65f41",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/services/backward_compatibility/__init__.py",
+      "sha256": "f11f18982df632df2ea6a9e41055671f29e9db197ffc8545895a449861fa8398",
+      "audited_source_sha256": "f11f18982df632df2ea6a9e41055671f29e9db197ffc8545895a449861fa8398",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/services/supertokens/__init__.py",
+      "sha256": "0b74a9a6046c6d6698d8a267eb01d521db0127fc62a3ba9677009facd2ca6305",
+      "audited_source_sha256": "0b74a9a6046c6d6698d8a267eb01d521db0127fc62a3ba9677009facd2ca6305",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/services/twilio/__init__.py",
+      "sha256": "2cd27aff72d50ac452fb66e1692810cd31ca98fdcff7e4e8c9bd26acf3c20fdf",
+      "audited_source_sha256": "2cd27aff72d50ac452fb66e1692810cd31ca98fdcff7e4e8c9bd26acf3c20fdf",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/services/twilio/passwordless_login.py",
+      "sha256": "2babac111300ccf3b112c1c08c9363d2777fc5c653a456b34af3087ecc636538",
+      "audited_source_sha256": "2babac111300ccf3b112c1c08c9363d2777fc5c653a456b34af3087ecc636538",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/smsdelivery/services/twilio/service_implementation.py",
+      "sha256": "e7fb5a4ed3b940d621a8c8fb40c0d49052da6fec3e57146911d0520a6c57e589",
+      "audited_source_sha256": "e7fb5a4ed3b940d621a8c8fb40c0d49052da6fec3e57146911d0520a6c57e589",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/syncio/__init__.py",
+      "sha256": "2d11617e3cd345517b5e09f6ee6cdd801e13c4230defc2e47c8481ced62aa3d3",
+      "audited_source_sha256": "2d11617e3cd345517b5e09f6ee6cdd801e13c4230defc2e47c8481ced62aa3d3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/types.py",
+      "sha256": "00822fad70ca3a1ceb139f88ae05e8d240dbd030c86a1092eef1e25957cd8f1f",
+      "audited_source_sha256": "00822fad70ca3a1ceb139f88ae05e8d240dbd030c86a1092eef1e25957cd8f1f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/passwordless/utils.py",
+      "sha256": "879079853dbcd0604c90c2109bad8cfa759205a7fd4c45f6d86e2a171ac155e3",
+      "audited_source_sha256": "879079853dbcd0604c90c2109bad8cfa759205a7fd4c45f6d86e2a171ac155e3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/__init__.py",
+      "sha256": "dc4be24a36a0b740da82fda20a21ab10d25d3f89a9a5d374f34171f13943d401",
+      "audited_source_sha256": "dc4be24a36a0b740da82fda20a21ab10d25d3f89a9a5d374f34171f13943d401",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/api/__init__.py",
+      "sha256": "91fc4dc8755a7b91001043f3356c8b680febeeaa5130517bb45042d8792d078b",
+      "audited_source_sha256": "91fc4dc8755a7b91001043f3356c8b680febeeaa5130517bb45042d8792d078b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/api/callback.py",
+      "sha256": "43fa705ad6cca74817377354eec448976c5af08dccf14b01933d83acf11c7786",
+      "audited_source_sha256": "43fa705ad6cca74817377354eec448976c5af08dccf14b01933d83acf11c7786",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/api/implementation.py",
+      "sha256": "dbfedbd05a22f7911b0a329bb846a91dba70b0285b6af6267f1d0974269111e2",
+      "audited_source_sha256": "dbfedbd05a22f7911b0a329bb846a91dba70b0285b6af6267f1d0974269111e2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/api/login.py",
+      "sha256": "ebe13d84802caa950b78ace46225fe83d0ca2f68eb3b623206cf00b0af919293",
+      "audited_source_sha256": "ebe13d84802caa950b78ace46225fe83d0ca2f68eb3b623206cf00b0af919293",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/asyncio/__init__.py",
+      "sha256": "42576176072ea215c6ed7759bca9185671c02c2b703947a7e0768711301a2537",
+      "audited_source_sha256": "42576176072ea215c6ed7759bca9185671c02c2b703947a7e0768711301a2537",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/constants.py",
+      "sha256": "0a96dc0dcbab350a39ccc7bc2943389ff1ae301d2af8ab11d7cb7f17ffa5c8c5",
+      "audited_source_sha256": "0a96dc0dcbab350a39ccc7bc2943389ff1ae301d2af8ab11d7cb7f17ffa5c8c5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/exceptions.py",
+      "sha256": "36f15ca6c6c29ee2ab0a4ef10f9c417770aa5d8622c43711e71ba37b15738eda",
+      "audited_source_sha256": "36f15ca6c6c29ee2ab0a4ef10f9c417770aa5d8622c43711e71ba37b15738eda",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/interfaces.py",
+      "sha256": "fdfb82f77b789c3e156fcbd5a289ce54f72404a2fe8db5d13645e94b944b6439",
+      "audited_source_sha256": "fdfb82f77b789c3e156fcbd5a289ce54f72404a2fe8db5d13645e94b944b6439",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/recipe.py",
+      "sha256": "f5566a7887c1f841b3f5f1ca6a971e9ebc9280ff2453a9f6562496730b77bf12",
+      "audited_source_sha256": "f5566a7887c1f841b3f5f1ca6a971e9ebc9280ff2453a9f6562496730b77bf12",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/recipe_implementation.py",
+      "sha256": "4653399ecc27555110c51bfcf5e7c30478c45ce9faa7e0dd16ff6fcbff2247e4",
+      "audited_source_sha256": "4653399ecc27555110c51bfcf5e7c30478c45ce9faa7e0dd16ff6fcbff2247e4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/syncio/__init__.py",
+      "sha256": "7bb0710c4b9d5bf4159e3aea81267d9da186b3890eda7086b150435e8cb6c6b4",
+      "audited_source_sha256": "7bb0710c4b9d5bf4159e3aea81267d9da186b3890eda7086b150435e8cb6c6b4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/types.py",
+      "sha256": "b5745e2a06368f3ece9ee66a1e36501453ecbd9c64d6a2eaaf00642b5dea7648",
+      "audited_source_sha256": "b5745e2a06368f3ece9ee66a1e36501453ecbd9c64d6a2eaaf00642b5dea7648",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/saml/utils.py",
+      "sha256": "ee037650d1c81522fdd59aabd9e584f92215d1a5c3fbf1553321696db71e3273",
+      "audited_source_sha256": "ee037650d1c81522fdd59aabd9e584f92215d1a5c3fbf1553321696db71e3273",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/__init__.py",
+      "sha256": "e13e1eac13ac890824a19f8de4bbb3a0ed935f4d5c60d91b4d4e84cd419ed05b",
+      "audited_source_sha256": "e13e1eac13ac890824a19f8de4bbb3a0ed935f4d5c60d91b4d4e84cd419ed05b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/access_token.py",
+      "sha256": "ce6069621261198308c871406bef7d637681cd9e7dedce94bbd2820a33b706f0",
+      "audited_source_sha256": "ce6069621261198308c871406bef7d637681cd9e7dedce94bbd2820a33b706f0",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/api/__init__.py",
+      "sha256": "ad285cd88cd043c6b0b0cc66d41d5e5af2e5b1b8eff628a1c27545d2d19af452",
+      "audited_source_sha256": "ad285cd88cd043c6b0b0cc66d41d5e5af2e5b1b8eff628a1c27545d2d19af452",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/api/implementation.py",
+      "sha256": "1a6dfed00fa82b7ed1d2df59d211e877a82840c4faeeb453ccc4f9756d050945",
+      "audited_source_sha256": "1a6dfed00fa82b7ed1d2df59d211e877a82840c4faeeb453ccc4f9756d050945",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/api/refresh.py",
+      "sha256": "7eb2bca27613123f45f630a4130efe17a1e461d91fb72c3c6253beb3fbd0d3b0",
+      "audited_source_sha256": "7eb2bca27613123f45f630a4130efe17a1e461d91fb72c3c6253beb3fbd0d3b0",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/api/signout.py",
+      "sha256": "f7823835bcef6669bda2a2e966ae26c3c36ba4f865d526fda9ab83fd98c6411f",
+      "audited_source_sha256": "f7823835bcef6669bda2a2e966ae26c3c36ba4f865d526fda9ab83fd98c6411f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/asyncio/__init__.py",
+      "sha256": "3c1622049528c3cc2650af8da8790f38e899c0d046aa9cde19b2a9e8dd373b2b",
+      "audited_source_sha256": "3c1622049528c3cc2650af8da8790f38e899c0d046aa9cde19b2a9e8dd373b2b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/claim_base_classes/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/claim_base_classes/boolean_claim.py",
+      "sha256": "b5a1c589422311297c04119b0f05a653640460732c964acf18f945637ec1393d",
+      "audited_source_sha256": "b5a1c589422311297c04119b0f05a653640460732c964acf18f945637ec1393d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/claim_base_classes/primitive_array_claim.py",
+      "sha256": "e9b749f34e43cdb89f1c76f4467d796bb68451eeca9b2cbeff29a2af643d0c1a",
+      "audited_source_sha256": "e9b749f34e43cdb89f1c76f4467d796bb68451eeca9b2cbeff29a2af643d0c1a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/claim_base_classes/primitive_claim.py",
+      "sha256": "ce69401d0107f8b1343bb624a33dddbaf99eb6c69af0c09e3391e6a2e2f2fb8c",
+      "audited_source_sha256": "ce69401d0107f8b1343bb624a33dddbaf99eb6c69af0c09e3391e6a2e2f2fb8c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/claims.py",
+      "sha256": "c6688a789ba1ad1a3a1a09266a4939f6b5b89b0e7bb5ee64c9a7facf70d57d91",
+      "audited_source_sha256": "c6688a789ba1ad1a3a1a09266a4939f6b5b89b0e7bb5ee64c9a7facf70d57d91",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/constants.py",
+      "sha256": "5dc78f577edd73e1d1cd60a06434fd2eaa414a10ab38c4a898fc4bbf9b23ab9f",
+      "audited_source_sha256": "5dc78f577edd73e1d1cd60a06434fd2eaa414a10ab38c4a898fc4bbf9b23ab9f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/cookie_and_header.py",
+      "sha256": "d5aeb865c478b2edbd07783ed3603e5372a507c06a56bfd12f5f993a56f42b19",
+      "audited_source_sha256": "d5aeb865c478b2edbd07783ed3603e5372a507c06a56bfd12f5f993a56f42b19",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/exceptions.py",
+      "sha256": "7623463985980de317d2aa3458dee210dad5b8914dd0ca54024f0202b58ec10d",
+      "audited_source_sha256": "7623463985980de317d2aa3458dee210dad5b8914dd0ca54024f0202b58ec10d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/framework/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/framework/django/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/framework/django/asyncio/__init__.py",
+      "sha256": "a3853fabd3f357802cbe0ec0ee27aeedcaa6025cd30997bc42d307a48fcdd8af",
+      "audited_source_sha256": "a3853fabd3f357802cbe0ec0ee27aeedcaa6025cd30997bc42d307a48fcdd8af",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/framework/django/syncio/__init__.py",
+      "sha256": "77215a0d9b20a823bb036b18b4f35c872b32defaf1e7eea0c765cc142da466ab",
+      "audited_source_sha256": "77215a0d9b20a823bb036b18b4f35c872b32defaf1e7eea0c765cc142da466ab",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/framework/fastapi/__init__.py",
+      "sha256": "8cc53481bf3c0e7b3fce3bb2358dcc90f40f1c19032f1534d7ad493bc1f66911",
+      "audited_source_sha256": "8cc53481bf3c0e7b3fce3bb2358dcc90f40f1c19032f1534d7ad493bc1f66911",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/framework/flask/__init__.py",
+      "sha256": "6f9b8a1f0badf1edd92f6008ca8c8c14df07192a36eecd075f2c8cc01943089d",
+      "audited_source_sha256": "6f9b8a1f0badf1edd92f6008ca8c8c14df07192a36eecd075f2c8cc01943089d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/interfaces.py",
+      "sha256": "d0c4cf0ce3d0ce1cae0200fc0cb7e1ab41f708e2821540fa08208afac000e52b",
+      "audited_source_sha256": "d0c4cf0ce3d0ce1cae0200fc0cb7e1ab41f708e2821540fa08208afac000e52b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/jwks.py",
+      "sha256": "bca23eb5c4b603eb4c3e999e6ee1a2d81ce14f6236d52fbdb27cace692515c52",
+      "audited_source_sha256": "bca23eb5c4b603eb4c3e999e6ee1a2d81ce14f6236d52fbdb27cace692515c52",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/jwt.py",
+      "sha256": "65af876bc9fb3cf4817ea4a202e90116cd37e21c78506bc99a67b5a494b06ba5",
+      "audited_source_sha256": "65af876bc9fb3cf4817ea4a202e90116cd37e21c78506bc99a67b5a494b06ba5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/recipe.py",
+      "sha256": "4eb7a708c3dba7f91bbf9084ad0af5d9dcf1e003d00ec5018540e162f43e8540",
+      "audited_source_sha256": "4eb7a708c3dba7f91bbf9084ad0af5d9dcf1e003d00ec5018540e162f43e8540",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/recipe_implementation.py",
+      "sha256": "8a3f553e97afd3204933ff67e9763a76d5287217cdd88059076a1181160030f1",
+      "audited_source_sha256": "8a3f553e97afd3204933ff67e9763a76d5287217cdd88059076a1181160030f1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/session_class.py",
+      "sha256": "e00293402c86928aa24a0f003a66fec4b054557ea13e70412c549a46cdc21aea",
+      "audited_source_sha256": "e00293402c86928aa24a0f003a66fec4b054557ea13e70412c549a46cdc21aea",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/session_functions.py",
+      "sha256": "bf617c89acdb8214c497b2ef4443ca4da13fe2e0c7f58fe0e69cebfdfb6afe14",
+      "audited_source_sha256": "bf617c89acdb8214c497b2ef4443ca4da13fe2e0c7f58fe0e69cebfdfb6afe14",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/session_request_functions.py",
+      "sha256": "9e39d4c77e1081d6f10125f7c39710faf73577930d6d235bbc61cbb96818f4b5",
+      "audited_source_sha256": "9e39d4c77e1081d6f10125f7c39710faf73577930d6d235bbc61cbb96818f4b5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/syncio/__init__.py",
+      "sha256": "cc7a1da1d1dd36c484b2ab144682eee3f4c822eee10e93c88a109f03f8cf3e33",
+      "audited_source_sha256": "cc7a1da1d1dd36c484b2ab144682eee3f4c822eee10e93c88a109f03f8cf3e33",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/session/utils.py",
+      "sha256": "92880dab69b727ef83b3ca04dcd21ccc4a87ec4eeb6bb27a82745a3f2947d3bc",
+      "audited_source_sha256": "92880dab69b727ef83b3ca04dcd21ccc4a87ec4eeb6bb27a82745a3f2947d3bc",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/__init__.py",
+      "sha256": "e6888b2e13259ec5816f0bb265193a57f6d0d16b7392ce5dcadfaa957daa0516",
+      "audited_source_sha256": "e6888b2e13259ec5816f0bb265193a57f6d0d16b7392ce5dcadfaa957daa0516",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/api/__init__.py",
+      "sha256": "7762394fd8154b545d0bc28f4ddde803609542d14dad28e086fefdff9878843a",
+      "audited_source_sha256": "7762394fd8154b545d0bc28f4ddde803609542d14dad28e086fefdff9878843a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/api/apple_redirect.py",
+      "sha256": "f9a380eebd08f53f0133596ba79d6e82d3b7456b3522ae5778f2ea6cf404c817",
+      "audited_source_sha256": "f9a380eebd08f53f0133596ba79d6e82d3b7456b3522ae5778f2ea6cf404c817",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/api/authorisation_url.py",
+      "sha256": "f1a26cf5c2a67f991c2348991aed4885d4bd6d7672cb078e2122cd0d738f9e2a",
+      "audited_source_sha256": "f1a26cf5c2a67f991c2348991aed4885d4bd6d7672cb078e2122cd0d738f9e2a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/api/implementation.py",
+      "sha256": "7e9f3c62ca73e67ec3ee62a4f828eecc1a70fae42ce11e78cbd10825e69e181f",
+      "audited_source_sha256": "7e9f3c62ca73e67ec3ee62a4f828eecc1a70fae42ce11e78cbd10825e69e181f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/api/signinup.py",
+      "sha256": "fdeb54c6dc668f83ad6cb487eab2ac5a98393ec9ccbed3e59b1ecae92b1a0f1e",
+      "audited_source_sha256": "fdeb54c6dc668f83ad6cb487eab2ac5a98393ec9ccbed3e59b1ecae92b1a0f1e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/asyncio/__init__.py",
+      "sha256": "94c61a9edb6e09f343e188f7f03fb75768a0096716585638815e9bdd09a60d65",
+      "audited_source_sha256": "94c61a9edb6e09f343e188f7f03fb75768a0096716585638815e9bdd09a60d65",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/constants.py",
+      "sha256": "57b86a7803a672d6dbaa6a016790d6198d747ed644d153132b3c037539a1c600",
+      "audited_source_sha256": "57b86a7803a672d6dbaa6a016790d6198d747ed644d153132b3c037539a1c600",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/exceptions.py",
+      "sha256": "337dddb211fd78fb75b212d2ce9d2b70324d993b7d6e9fa7ead39d66ec0e49b2",
+      "audited_source_sha256": "337dddb211fd78fb75b212d2ce9d2b70324d993b7d6e9fa7ead39d66ec0e49b2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/interfaces.py",
+      "sha256": "7279342940ad4f5773b0e9977c3b7472b75be64badf9836a86c9d941745c14b9",
+      "audited_source_sha256": "7279342940ad4f5773b0e9977c3b7472b75be64badf9836a86c9d941745c14b9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/provider.py",
+      "sha256": "d3635c014d66f0ff753e62516e1ea8ed894d219902238a819081e0363565fab4",
+      "audited_source_sha256": "d3635c014d66f0ff753e62516e1ea8ed894d219902238a819081e0363565fab4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/__init__.py",
+      "sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "audited_source_sha256": "119ae151e78750d161a8b315404050ade08268de2b5266cb3bff2c095158457f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/active_directory.py",
+      "sha256": "a2666906c2992b23dced806af70ebbb7772f29529895ddd6c498a732e4b1ea7c",
+      "audited_source_sha256": "a2666906c2992b23dced806af70ebbb7772f29529895ddd6c498a732e4b1ea7c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/apple.py",
+      "sha256": "13acbaa1a32ba1cccb4a5093e24497ae424312c61ebb2d01ab72c4e55656855b",
+      "audited_source_sha256": "13acbaa1a32ba1cccb4a5093e24497ae424312c61ebb2d01ab72c4e55656855b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/bitbucket.py",
+      "sha256": "0dce8c1edeafe5c79705bbbabe4dd8b101247931e29a0c35f8fbc411619bee61",
+      "audited_source_sha256": "0dce8c1edeafe5c79705bbbabe4dd8b101247931e29a0c35f8fbc411619bee61",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/boxy_saml.py",
+      "sha256": "073c4ea8f147e47ea609ad592e810bb730276e15f8d9a3b2d896897a9e606245",
+      "audited_source_sha256": "073c4ea8f147e47ea609ad592e810bb730276e15f8d9a3b2d896897a9e606245",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/config_utils.py",
+      "sha256": "e1f1952239dbc8d8c7a13bca922df43365991d3dce4ab843d3cf76331b65eebe",
+      "audited_source_sha256": "e1f1952239dbc8d8c7a13bca922df43365991d3dce4ab843d3cf76331b65eebe",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/custom.py",
+      "sha256": "1f4c1f611a39dfab52cfd36bcd991a067f0a6fc6f10f7ba2a62833ef4c5d8468",
+      "audited_source_sha256": "1f4c1f611a39dfab52cfd36bcd991a067f0a6fc6f10f7ba2a62833ef4c5d8468",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/discord.py",
+      "sha256": "deecb1ed8b0e75c813a58e6a16a5994a9512130fb53bafd9d202323b1488dcc4",
+      "audited_source_sha256": "deecb1ed8b0e75c813a58e6a16a5994a9512130fb53bafd9d202323b1488dcc4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/facebook.py",
+      "sha256": "dd1238fc6b6ad81229b5e66f6bf8460c6efd76c28ed3f8eb842e6b5bb678a904",
+      "audited_source_sha256": "dd1238fc6b6ad81229b5e66f6bf8460c6efd76c28ed3f8eb842e6b5bb678a904",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/github.py",
+      "sha256": "e41f7d0d00d5e039f25d9034774166837fde37fe4a95be6649a1c9c23ca2c6c3",
+      "audited_source_sha256": "e41f7d0d00d5e039f25d9034774166837fde37fe4a95be6649a1c9c23ca2c6c3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/gitlab.py",
+      "sha256": "f2f65f40ea9594742c5294485d6ef7e1de79b18e2cdf2922e1fb88d3aca53ee1",
+      "audited_source_sha256": "f2f65f40ea9594742c5294485d6ef7e1de79b18e2cdf2922e1fb88d3aca53ee1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/google.py",
+      "sha256": "e35fa9c1f207009d2448443dfd7673344e9b8228e7d0b3c1a90ac2b0e84daf69",
+      "audited_source_sha256": "e35fa9c1f207009d2448443dfd7673344e9b8228e7d0b3c1a90ac2b0e84daf69",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/google_workspaces.py",
+      "sha256": "4de0a06740a94756a87f299881e47e065ca9d6c3b8212cf0e8b4ede12aa4a770",
+      "audited_source_sha256": "4de0a06740a94756a87f299881e47e065ca9d6c3b8212cf0e8b4ede12aa4a770",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/linkedin.py",
+      "sha256": "31bb877deb4ea2bc7ebb5297bf47162e880fd406f0964ff0d842122626d604e1",
+      "audited_source_sha256": "31bb877deb4ea2bc7ebb5297bf47162e880fd406f0964ff0d842122626d604e1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/okta.py",
+      "sha256": "e049823363248e2435ecc5caa27515558751f0f480c36df863f59ef726e838c7",
+      "audited_source_sha256": "e049823363248e2435ecc5caa27515558751f0f480c36df863f59ef726e838c7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/saml.py",
+      "sha256": "164006fd3ba227c50e7ea3a46b6e52e4bdd00efe2e3b7cb7f8d3ee9a9a16057b",
+      "audited_source_sha256": "164006fd3ba227c50e7ea3a46b6e52e4bdd00efe2e3b7cb7f8d3ee9a9a16057b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/twitter.py",
+      "sha256": "36eea05ee7c9587d44f260344cd61f6b8f7c6e689221fe41e441cadef1a8b4cc",
+      "audited_source_sha256": "36eea05ee7c9587d44f260344cd61f6b8f7c6e689221fe41e441cadef1a8b4cc",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/providers/utils.py",
+      "sha256": "d9ca78096fe45d3a22b709b9dcc237aad9222218b2676174fe51643f3e7fe16a",
+      "audited_source_sha256": "d9ca78096fe45d3a22b709b9dcc237aad9222218b2676174fe51643f3e7fe16a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/recipe.py",
+      "sha256": "44f548ed21222f322a9a2ce6d07526c601c5297e5741164b7aa2fbc350e71ac6",
+      "audited_source_sha256": "44f548ed21222f322a9a2ce6d07526c601c5297e5741164b7aa2fbc350e71ac6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/recipe_implementation.py",
+      "sha256": "65fc8480f0de96341cccf62a1e65188e5e3c1d27228800153c9e4a4a57d001ed",
+      "audited_source_sha256": "65fc8480f0de96341cccf62a1e65188e5e3c1d27228800153c9e4a4a57d001ed",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/syncio/__init__.py",
+      "sha256": "51e1b2cb434660b1176f00bbd027a2e33ad5daea1cc27a454c0ddf2b20a5b942",
+      "audited_source_sha256": "51e1b2cb434660b1176f00bbd027a2e33ad5daea1cc27a454c0ddf2b20a5b942",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/types.py",
+      "sha256": "287fb1f5958f8dd6caff05b9b418e9a8e7f8f34181b4a62a72fde8fdc697723a",
+      "audited_source_sha256": "287fb1f5958f8dd6caff05b9b418e9a8e7f8f34181b4a62a72fde8fdc697723a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/thirdparty/utils.py",
+      "sha256": "bf7dfefc8ac9f68d1881f9b800f02218142fa40d5b6af3214d85cbb180b22317",
+      "audited_source_sha256": "bf7dfefc8ac9f68d1881f9b800f02218142fa40d5b6af3214d85cbb180b22317",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/__init__.py",
+      "sha256": "de38e3beea1b2755a1cc5b28c917c321f84435821981b0eceab0ccad33dcc3cd",
+      "audited_source_sha256": "de38e3beea1b2755a1cc5b28c917c321f84435821981b0eceab0ccad33dcc3cd",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/__init__.py",
+      "sha256": "8d8ecece115ce3fc2cf37780366b1950210709724df26144e93a01bdf868d11f",
+      "audited_source_sha256": "8d8ecece115ce3fc2cf37780366b1950210709724df26144e93a01bdf868d11f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/create_device.py",
+      "sha256": "2528a78f1e585ec2d752e833da438c77a522f8274b3f5ea3b16a98759a5d92f4",
+      "audited_source_sha256": "2528a78f1e585ec2d752e833da438c77a522f8274b3f5ea3b16a98759a5d92f4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/implementation.py",
+      "sha256": "678f288dba77a1ead0613d48231cd047e6b80bed995351d90249833c3b184196",
+      "audited_source_sha256": "678f288dba77a1ead0613d48231cd047e6b80bed995351d90249833c3b184196",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/list_devices.py",
+      "sha256": "b9a615d544cd845675a1cf7caf887a78530f777cc16405001c87ca3a738c8b68",
+      "audited_source_sha256": "b9a615d544cd845675a1cf7caf887a78530f777cc16405001c87ca3a738c8b68",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/remove_device.py",
+      "sha256": "9a2c08aff63cba9886012038560ed6e202cda50a60ca9af4b6b6f21fb0bd0ff1",
+      "audited_source_sha256": "9a2c08aff63cba9886012038560ed6e202cda50a60ca9af4b6b6f21fb0bd0ff1",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/verify_device.py",
+      "sha256": "572aff6bc023eb428b790dfd731e6589e7e597c391d691ea92415bedaf99b54d",
+      "audited_source_sha256": "572aff6bc023eb428b790dfd731e6589e7e597c391d691ea92415bedaf99b54d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/api/verify_totp.py",
+      "sha256": "e2bd0fea51a93ffd1fe39a74b873c51ffc737b0dad3937a1da0be91392c245d7",
+      "audited_source_sha256": "e2bd0fea51a93ffd1fe39a74b873c51ffc737b0dad3937a1da0be91392c245d7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/asyncio/__init__.py",
+      "sha256": "0b97bf73308e0026ad6cb4e094cbc1e9393842719bdde7682b6726e807b76a29",
+      "audited_source_sha256": "0b97bf73308e0026ad6cb4e094cbc1e9393842719bdde7682b6726e807b76a29",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/constants.py",
+      "sha256": "8939a30f6996bc7821f7ab0580b790c0e13c35f46cf1d0c2a583bc4b2b58595d",
+      "audited_source_sha256": "8939a30f6996bc7821f7ab0580b790c0e13c35f46cf1d0c2a583bc4b2b58595d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/interfaces.py",
+      "sha256": "b22b7eea6314520fe6cdddd952661facbc2b37b9cd9c29603bf656e527fa313a",
+      "audited_source_sha256": "b22b7eea6314520fe6cdddd952661facbc2b37b9cd9c29603bf656e527fa313a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/recipe.py",
+      "sha256": "687625c9ed3a1e2afbc0a76fe3d2593047b405ba5ce1ec5aa799baab6c2f9a50",
+      "audited_source_sha256": "687625c9ed3a1e2afbc0a76fe3d2593047b405ba5ce1ec5aa799baab6c2f9a50",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/recipe_implementation.py",
+      "sha256": "92a6a5f29b1467957200e098c4c8490ddb9d56e3f3f5c34c409235b46316fce4",
+      "audited_source_sha256": "92a6a5f29b1467957200e098c4c8490ddb9d56e3f3f5c34c409235b46316fce4",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/syncio/__init__.py",
+      "sha256": "d65f1d5b0083b36230aab586140cbb4d80e8af3f3096c443066accf8a96a5178",
+      "audited_source_sha256": "d65f1d5b0083b36230aab586140cbb4d80e8af3f3096c443066accf8a96a5178",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/types.py",
+      "sha256": "83b2c9f185bbc4dbd956bbc3b013beb01cda082a306da4a7ceb607ecfe1eb076",
+      "audited_source_sha256": "83b2c9f185bbc4dbd956bbc3b013beb01cda082a306da4a7ceb607ecfe1eb076",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/totp/utils.py",
+      "sha256": "3af8132f53a808b5042ad2c096d5edac1c1e333ab483ce17e84fe8cacd14ec35",
+      "audited_source_sha256": "3af8132f53a808b5042ad2c096d5edac1c1e333ab483ce17e84fe8cacd14ec35",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/__init__.py",
+      "sha256": "c06fd4953c532792591990e0ad97febc7b6f021f15d0377be3a78b5788d109f2",
+      "audited_source_sha256": "c06fd4953c532792591990e0ad97febc7b6f021f15d0377be3a78b5788d109f2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/asyncio/__init__.py",
+      "sha256": "be1d84bdaa5cec08654fd661870071cdf07c188955a1e9bb8f27ba19de6133b6",
+      "audited_source_sha256": "be1d84bdaa5cec08654fd661870071cdf07c188955a1e9bb8f27ba19de6133b6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/exceptions.py",
+      "sha256": "4a875decc903adef575ccf5e1a3ef096f5dd687c15edfa2277bcb7397859ecd7",
+      "audited_source_sha256": "4a875decc903adef575ccf5e1a3ef096f5dd687c15edfa2277bcb7397859ecd7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/interfaces.py",
+      "sha256": "f99a28db3b377719efe34198467909f80f8ab27c57711898fe1f0cfcc8bf8822",
+      "audited_source_sha256": "f99a28db3b377719efe34198467909f80f8ab27c57711898fe1f0cfcc8bf8822",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/recipe.py",
+      "sha256": "e53092288f221d9c81d50789f4ef7f537548fcb4df9469411617bf4e455d4ac7",
+      "audited_source_sha256": "e53092288f221d9c81d50789f4ef7f537548fcb4df9469411617bf4e455d4ac7",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/recipe_implementation.py",
+      "sha256": "c600b032430607d50292bd5d4e221009279275474c6699481d21c6cd922ba18f",
+      "audited_source_sha256": "c600b032430607d50292bd5d4e221009279275474c6699481d21c6cd922ba18f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/syncio/__init__.py",
+      "sha256": "42e52c05d05c21a7c35d9583bdf15591eb4c27a19d221c594ac985e8d1dddb57",
+      "audited_source_sha256": "42e52c05d05c21a7c35d9583bdf15591eb4c27a19d221c594ac985e8d1dddb57",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/usermetadata/utils.py",
+      "sha256": "77406810b88b33cfc79ddbc2c9e3f7db7ab6a48f352c47659b22aa10835b12fd",
+      "audited_source_sha256": "77406810b88b33cfc79ddbc2c9e3f7db7ab6a48f352c47659b22aa10835b12fd",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/__init__.py",
+      "sha256": "de1e567fff0d55417164afaa6da1e949a263a8af0b52d07e5d4901ee4e9dcf4c",
+      "audited_source_sha256": "de1e567fff0d55417164afaa6da1e949a263a8af0b52d07e5d4901ee4e9dcf4c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/asyncio/__init__.py",
+      "sha256": "1bf3d6a098bb088e0ebbcedb2b94d56034875c2cb3147b3e39d1076794b2b0d3",
+      "audited_source_sha256": "1bf3d6a098bb088e0ebbcedb2b94d56034875c2cb3147b3e39d1076794b2b0d3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/exceptions.py",
+      "sha256": "d5c6d2054fd74a0f6266a7fd125a637e26e670928d4a93a52ad6e679e81639e6",
+      "audited_source_sha256": "d5c6d2054fd74a0f6266a7fd125a637e26e670928d4a93a52ad6e679e81639e6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/interfaces.py",
+      "sha256": "e3096610064d17f8e884d498774c4e488e45ba9b81f2002c369ed93d5cfb1e36",
+      "audited_source_sha256": "e3096610064d17f8e884d498774c4e488e45ba9b81f2002c369ed93d5cfb1e36",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/recipe.py",
+      "sha256": "991595c9996daf4e23b90fc1b568ba911a81d8613600a52e5da8e4a7b477f222",
+      "audited_source_sha256": "991595c9996daf4e23b90fc1b568ba911a81d8613600a52e5da8e4a7b477f222",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/recipe_implementation.py",
+      "sha256": "440d7d664eb31cc86b93b682f8434f3be44713bd23e696dbf28de6ef5e11ac7a",
+      "audited_source_sha256": "440d7d664eb31cc86b93b682f8434f3be44713bd23e696dbf28de6ef5e11ac7a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/syncio/__init__.py",
+      "sha256": "293303412f2247ccffd922b6a213ca1fb88bd5198f8bbcef4ec69ca6e3afd3e5",
+      "audited_source_sha256": "293303412f2247ccffd922b6a213ca1fb88bd5198f8bbcef4ec69ca6e3afd3e5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/userroles/utils.py",
+      "sha256": "a2caf4b62d296358fcab6d63b5139eb1c60f1098cd0668e359b1b2c2d5992db0",
+      "audited_source_sha256": "a2caf4b62d296358fcab6d63b5139eb1c60f1098cd0668e359b1b2c2d5992db0",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/__init__.py",
+      "sha256": "3f88df1aabb1705199e6f3280e3f5f2c25c42e8d8a367c379fef5762b92f11c2",
+      "audited_source_sha256": "3f88df1aabb1705199e6f3280e3f5f2c25c42e8d8a367c379fef5762b92f11c2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/email_exists.py",
+      "sha256": "e11467860c2a5236b173390c339194ff44e2e06f6c958a96f33d4750d0398a2a",
+      "audited_source_sha256": "e11467860c2a5236b173390c339194ff44e2e06f6c958a96f33d4750d0398a2a",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/generate_recover_account_token.py",
+      "sha256": "5864dbbb4e3fa27a93d74b9cd707c4b6783b8e145c05938fa81fc1ecc3061e04",
+      "audited_source_sha256": "5864dbbb4e3fa27a93d74b9cd707c4b6783b8e145c05938fa81fc1ecc3061e04",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/implementation.py",
+      "sha256": "c303801d6c8c26f89f62efd6e43e48d7f9b361c8a0942d5cad5a8d7a271b7790",
+      "audited_source_sha256": "c303801d6c8c26f89f62efd6e43e48d7f9b361c8a0942d5cad5a8d7a271b7790",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/list_credentials.py",
+      "sha256": "540437e7cd916338a7a53312700bb0f7833fbab93398bfd888fb662d2e906e13",
+      "audited_source_sha256": "540437e7cd916338a7a53312700bb0f7833fbab93398bfd888fb662d2e906e13",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/recover_account.py",
+      "sha256": "29fce5b5045480f6ccb494d2466ac42de8bbd71659dc0aa3232109cb9783ddb5",
+      "audited_source_sha256": "29fce5b5045480f6ccb494d2466ac42de8bbd71659dc0aa3232109cb9783ddb5",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/register_credential.py",
+      "sha256": "c5d81f7407c78dfe7fd4189ed0f78c0e0a6b750ab6b9ad231b14b990989acf00",
+      "audited_source_sha256": "c5d81f7407c78dfe7fd4189ed0f78c0e0a6b750ab6b9ad231b14b990989acf00",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/register_options.py",
+      "sha256": "7785c6f27c69f60ba949e5c86ebec9693c5cb4a05540adce10f1ae758f91a539",
+      "audited_source_sha256": "7785c6f27c69f60ba949e5c86ebec9693c5cb4a05540adce10f1ae758f91a539",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/remove_credential.py",
+      "sha256": "ef08b0eabdc0c7bf240cde1696c5704eed71bff094c1ef52950da78b9845f0ce",
+      "audited_source_sha256": "ef08b0eabdc0c7bf240cde1696c5704eed71bff094c1ef52950da78b9845f0ce",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/sign_in.py",
+      "sha256": "2f1083cc8aecc2de6062694e0466f1832af014d4b08e059308bd8eb657ad6569",
+      "audited_source_sha256": "2f1083cc8aecc2de6062694e0466f1832af014d4b08e059308bd8eb657ad6569",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/sign_in_options.py",
+      "sha256": "590923b096785c00b2f8dcfea9646f99948e82d32015de4214f4539f3dceb779",
+      "audited_source_sha256": "590923b096785c00b2f8dcfea9646f99948e82d32015de4214f4539f3dceb779",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/api/sign_up.py",
+      "sha256": "6ca55490f8d6956493898dfaa414c8fab49eae4dab2b2dc9e664cd73cbbe5efb",
+      "audited_source_sha256": "6ca55490f8d6956493898dfaa414c8fab49eae4dab2b2dc9e664cd73cbbe5efb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/constants.py",
+      "sha256": "14d5748baa7bce36eaab7a257533a788dc698120cfdc19d466ff01f554732889",
+      "audited_source_sha256": "14d5748baa7bce36eaab7a257533a788dc698120cfdc19d466ff01f554732889",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/backward_compatibility/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/backward_compatibility/base.py",
+      "sha256": "a5e8cfc9ecdd6a816eb61e2d6a810a72ab6773b913409125bbddd09ebd0747cf",
+      "audited_source_sha256": "a5e8cfc9ecdd6a816eb61e2d6a810a72ab6773b913409125bbddd09ebd0747cf",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/smtp/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/smtp/base.py",
+      "sha256": "7fb1ea3edc61beb7b9bbef4ebc4247f080b1809fe56a286497d809a0ee00c7ca",
+      "audited_source_sha256": "7fb1ea3edc61beb7b9bbef4ebc4247f080b1809fe56a286497d809a0ee00c7ca",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/smtp/recover_account.py",
+      "sha256": "8d272ac240a269d05a60513b488f0696f1959296b3274765ef75e2f6f22e1be3",
+      "audited_source_sha256": "8d272ac240a269d05a60513b488f0696f1959296b3274765ef75e2f6f22e1be3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/smtp/service_implementation/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/emaildelivery/services/smtp/service_implementation/base.py",
+      "sha256": "d509ff7ef2265f669e11664df55dcf3e14e275c1af95ed513e169f89573ef2e3",
+      "audited_source_sha256": "d509ff7ef2265f669e11664df55dcf3e14e275c1af95ed513e169f89573ef2e3",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/exceptions.py",
+      "sha256": "716d4bcb4443de106becf7f8fedf46eec57bfd894a1fbd82a913368a0097aafb",
+      "audited_source_sha256": "716d4bcb4443de106becf7f8fedf46eec57bfd894a1fbd82a913368a0097aafb",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/functions.py",
+      "sha256": "f1d619c4700886ea0af8f31ae25273c289c1e851de32967e74053a77d13878b2",
+      "audited_source_sha256": "f1d619c4700886ea0af8f31ae25273c289c1e851de32967e74053a77d13878b2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/interfaces/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/interfaces/api.py",
+      "sha256": "53bfea022480075a79258d466657df0272cdd638adbeb9cb74ec6a1b67e1610b",
+      "audited_source_sha256": "53bfea022480075a79258d466657df0272cdd638adbeb9cb74ec6a1b67e1610b",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/interfaces/recipe.py",
+      "sha256": "13606445a0d1081ae619a8a81c3157272afc7b934ee02ffdd662f4c925482d20",
+      "audited_source_sha256": "13606445a0d1081ae619a8a81c3157272afc7b934ee02ffdd662f4c925482d20",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/recipe.py",
+      "sha256": "9c460fdd8605989107b0bdeed6ae66b90c98ac117d3f7ffde8600f2af57e5ab9",
+      "audited_source_sha256": "9c460fdd8605989107b0bdeed6ae66b90c98ac117d3f7ffde8600f2af57e5ab9",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/recipe_implementation.py",
+      "sha256": "df5cfb5838fb15c4fac9a1fb41dc1fe307e44e3a19a93f3fa5fc040be28ff929",
+      "audited_source_sha256": "df5cfb5838fb15c4fac9a1fb41dc1fe307e44e3a19a93f3fa5fc040be28ff929",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/types/__init__.py",
+      "sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "audited_source_sha256": "5e031b224a1c03d1941930f1ea97806ed8492eba23e680d8e6ced0d971c7e38e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/types/base.py",
+      "sha256": "9412eb2b53c9681f740b23d8f3f9570c660155974e10918d2d813315f428ddf2",
+      "audited_source_sha256": "9412eb2b53c9681f740b23d8f3f9570c660155974e10918d2d813315f428ddf2",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/types/config.py",
+      "sha256": "8d5c622a7e997235eb5fa7b89dbb0c1f2fe4d29b362ef803edee03af5664eb19",
+      "audited_source_sha256": "8d5c622a7e997235eb5fa7b89dbb0c1f2fe4d29b362ef803edee03af5664eb19",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe/webauthn/utils.py",
+      "sha256": "a323a25499e103ae04adf7a764de084257a2783fd90c88848d405ad0e9e0ac80",
+      "audited_source_sha256": "a323a25499e103ae04adf7a764de084257a2783fd90c88848d405ad0e9e0ac80",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/recipe_module.py",
+      "sha256": "b4f015dec2d8eb0ebd0ddb9912284574e28ccf289ae2db79472e414a6f49ab6d",
+      "audited_source_sha256": "b4f015dec2d8eb0ebd0ddb9912284574e28ccf289ae2db79472e414a6f49ab6d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/supertokens.py",
+      "sha256": "452e3ff326bd601b88315c35aa3f5fcebbcbb63c30d678bc38448c83012d5253",
+      "audited_source_sha256": "452e3ff326bd601b88315c35aa3f5fcebbcbb63c30d678bc38448c83012d5253",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/syncio/__init__.py",
+      "sha256": "fb15c16b703e57a236127ec2512beebe29e2441e2240ed4d2b1c8707bf7f8d08",
+      "audited_source_sha256": "fb15c16b703e57a236127ec2512beebe29e2441e2240ed4d2b1c8707bf7f8d08",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/test.py",
+      "sha256": "97608add20b3c03ef1d970810576c0c946310d5b0bbef4dbc5454145df4e305d",
+      "audited_source_sha256": "97608add20b3c03ef1d970810576c0c946310d5b0bbef4dbc5454145df4e305d",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/__init__.py",
+      "sha256": "a0042a5254a2a5888242d920d432d7aee7781dcb0514a96986cd696757939a78",
+      "audited_source_sha256": "a0042a5254a2a5888242d920d432d7aee7781dcb0514a96986cd696757939a78",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/auth_utils.py",
+      "sha256": "430fb275bfb5c55309c5165fc6477318509eb696959c87f48f415e29a2232e1c",
+      "audited_source_sha256": "430fb275bfb5c55309c5165fc6477318509eb696959c87f48f415e29a2232e1c",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/base.py",
+      "sha256": "1be0b091b02cc0c1ad552ce1fdb111597dd49f8a7ebcec8fc9b8add488302e81",
+      "audited_source_sha256": "1be0b091b02cc0c1ad552ce1fdb111597dd49f8a7ebcec8fc9b8add488302e81",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/config.py",
+      "sha256": "2ed41c0c06c87aafba86b19a5b8154dd0b67a09f507ac10f79f833e1328fef4e",
+      "audited_source_sha256": "2ed41c0c06c87aafba86b19a5b8154dd0b67a09f507ac10f79f833e1328fef4e",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/recipe.py",
+      "sha256": "60018c50747cb9f7e1078a628cdc92266f78d93493cb5f02d85b2b6598a0bce6",
+      "audited_source_sha256": "60018c50747cb9f7e1078a628cdc92266f78d93493cb5f02d85b2b6598a0bce6",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/response.py",
+      "sha256": "e043b4bb6c1999ba7de4831297a122262d43471fa5f4301cec0c373faa7890ad",
+      "audited_source_sha256": "e043b4bb6c1999ba7de4831297a122262d43471fa5f4301cec0c373faa7890ad",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/types/utils.py",
+      "sha256": "b5ca5834ca4c48bd2ee82956a0d71bf97cd65d7e337241c341d202cc07c0c62f",
+      "audited_source_sha256": "b5ca5834ca4c48bd2ee82956a0d71bf97cd65d7e337241c341d202cc07c0c62f",
+      "matches_audited_source": true
+    },
+    {
+      "path": "supertokens_python/utils.py",
+      "sha256": "3cf1a84c3b8ea5737f97f013731b29c1a9dab819e926a99e679cbbcf78e2ccdb",
+      "audited_source_sha256": "3cf1a84c3b8ea5737f97f013731b29c1a9dab819e926a99e679cbbcf78e2ccdb",
+      "matches_audited_source": true
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "supertokens_python",
+      "version": "0.31.3",
+      "wheel_url": "https://files.pythonhosted.org/packages/8e/02/6c970841001e491a1727c1509a071b21df3cc3aaf8b7860f47c624089b57/supertokens_python-0.31.3-py3-none-any.whl",
+      "wheel_sha256": "2da6b51e9a864898660d41f11c0eaa270d81565960433b5750d257768084d295",
+      "declared_license": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "supertokens_python-0.31.3.dist-info/licenses/LICENSE.md",
+          "sha256": "8350e4d0ca2abfd8f8a34484f567a288c3bff9f0b8e55c4080c0c7d67902d357"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/cb/03/10388a42375ee7e4ac9b94eb2c5c569c8b5795e377e701c9ac3ad63de890/fastapi-0.141.1-py3-none-any.whl",
+      "wheel_sha256": "bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "fastapi-0.141.1.dist-info/licenses/LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "wheel_url": "https://files.pythonhosted.org/packages/f1/79/4a20b54ab0491485ccd8c077db2d39187c7f12b3e15485d38a7be37c81b4/uvicorn-0.52.4-py3-none-any.whl",
+      "wheel_sha256": "f86e41a149d7d05a9969337e3946a9c171c06a5d42680896daaba624aeac8da1",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "uvicorn-0.52.4.dist-info/licenses/LICENSE.md",
+          "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl",
+      "wheel_sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "httpx-0.28.1.dist-info/licenses/LICENSE.md",
+          "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "wheel_url": "https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl",
+      "wheel_sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+          "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "aiosmtplib",
+      "version": "5.1.3",
+      "wheel_url": "https://files.pythonhosted.org/packages/9c/0a/b56ab8163d54960337fdca475d3dfd56c8badf6172e79cf2ad00d5335dc1/aiosmtplib-5.1.3-py3-none-any.whl",
+      "wheel_sha256": "f7d76ce3d4995a65a178c1f11e1bd1607706b921d00cb768e7a2c7f7ef5517a8",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "aiosmtplib-5.1.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "4096585cf0343b0713e8e7d6df73e90bb97797428b160f305e4c326f93c9b802"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "wheel_url": "https://files.pythonhosted.org/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl",
+      "wheel_sha256": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "asgiref",
+      "version": "3.12.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/c0/1b/54f4ad77cd8a584fa70746c47df988e002cf1ee1eba43364d46f87803647/asgiref-3.12.1-py3-none-any.whl",
+      "wheel_sha256": "fe386d1c2bff7259ea95929266d12a8cf9a8b5a1c2598402967d8792e7a7c094",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "asgiref-3.12.1.dist-info/licenses/LICENSE",
+          "sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl",
+      "wheel_sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "click-8.5.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "Deprecated",
+      "version": "1.2.18",
+      "wheel_url": "https://files.pythonhosted.org/packages/6e/c6/ac0b6c1e2d138f1002bcf799d330bd6d85084fece321e662a14223794041/Deprecated-1.2.18-py2.py3-none-any.whl",
+      "wheel_sha256": "bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "Deprecated-1.2.18.dist-info/LICENSE.rst",
+          "sha256": "1e83edd15be419b5d5bde372e325e527ff4f9915f548e7c75314b41f6699e83c"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl",
+      "wheel_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl",
+      "wheel_sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
+      "declared_license": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License",
+        "License :: OSI Approved :: BSD License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "packaging-25.0.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "installed_path": "packaging-25.0.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "installed_path": "packaging-25.0.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "phonenumbers",
+      "version": "9.0.38",
+      "wheel_url": "https://files.pythonhosted.org/packages/b2/09/6df2574777489592b37e6b9cda72962709af2e121b122bf6aae19bcce7b4/phonenumbers-9.0.38-py2.py3-none-any.whl",
+      "wheel_sha256": "f3cbeb1a42bf226060c60fc6277f5431755d325eddc23fbf2c72ef7e156113c6",
+      "declared_license": "Apache-2.0",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "phonenumbers-9.0.38.dist-info/licenses/LICENSE",
+          "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "pkce",
+      "version": "1.0.3",
+      "wheel_url": "https://files.pythonhosted.org/packages/15/51/52c22ec0812d25f5bf297a01153604bfa7bfa59ed66f6cd8345beb3c2b2a/pkce-1.0.3-py3-none-any.whl",
+      "wheel_sha256": "55927e24c7d403b2491ebe182b95d9dcb1807643243d47e3879fbda5aad4471d",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "pkce-1.0.3.dist-info/LICENSE",
+          "sha256": "103b5b0eb1f668e32238e43d70529b56782b50ca3fb3c15e22725b692fc707ea"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "pycryptodome",
+      "version": "3.20.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/af/20/5f29ec45462360e7f61e8688af9fe4a0afae057edfabdada662e11bf97e7/pycryptodome-3.20.0-cp35-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "wheel_sha256": "76cb39afede7055127e35a444c1c041d2e8d2f1f9c121ecef573757ba4cd2c3c",
+      "declared_license": "BSD, Public Domain",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: Apache Software License",
+        "License :: Public Domain"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "pycryptodome-3.20.0.dist-info/LICENSE.rst",
+          "sha256": "4e04660d77c1c64e89d79537919fb8240fa21484a7e3db29f358b2c7f84ea073"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "wheel_url": "https://files.pythonhosted.org/packages/eb/47/c95ffc2009878c7aac0c5e08528022dcb885933252a88b5f170058014464/pydantic-2.13.5-py3-none-any.whl",
+      "wheel_sha256": "346a034f080da3755d8e9cb5e00e8b07de1d39e4f6e2c87d8ab7cafa0b269a73",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "pydantic-2.13.5.dist-info/licenses/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "wheel_url": "https://files.pythonhosted.org/packages/c0/a4/eb9409ec0736e50aa70a412f16c204ed149516846912f7e6724d4c73ee53/pydantic_core-2.46.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "wheel_sha256": "0fc5be0abd4a407e200d844b404e33639a554e7bd0d448e7b9ae181be4789ac2",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "pydantic_core-2.46.5.dist-info/licenses/LICENSE",
+          "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.13.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/a3/5e/ecf12fdb62546d64385c158514e9b2b671f7832108ef2ecd2020ce0af2d1/pyjwt-2.13.0-py3-none-any.whl",
+      "wheel_sha256": "66adcc2aff09b3f1bbd95fc1e1577df8ac8723c978552fd43304c8a290ac5728",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "pyjwt-2.13.0.dist-info/licenses/LICENSE",
+          "sha256": "797a7a20231d4c433e9f1911db1731d06b5828b98f499819a034f7c0f56f5ce5"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "PyOTP",
+      "version": "2.10.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/65/33/7b83bde70eddaaaaef487751a9c3a5cc0c0be54620ded0e120ebdc401ff9/pyotp-2.10.0-py3-none-any.whl",
+      "wheel_sha256": "1df2f6a1bcc3bb0716172a5215ddc2f8c7c7fd26a13df9927d52e1746934836c",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "pyotp-2.10.0.dist-info/licenses/LICENSE",
+          "sha256": "795885123341458172aad6ebfab31b071cc7b40524929e6901662d5dbbf57ea3"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "wheel_url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "wheel_sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+      "declared_license": "Dual License",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "python_dateutil-2.9.0.post0.dist-info/LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl",
+      "wheel_sha256": "2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2",
+      "declared_license": "MIT OR Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "sniffio-1.3.1.dist-info/LICENSE",
+          "sha256": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b"
+        },
+        {
+          "installed_path": "sniffio-1.3.1.dist-info/LICENSE.APACHE2",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "installed_path": "sniffio-1.3.1.dist-info/LICENSE.MIT",
+          "sha256": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "starlette",
+      "version": "1.6.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/c8/cb/6a6a47d5b464bd08695d254f3da6e7986cc70c9fa5d778eda57538edfe56/starlette-1.6.0-py3-none-any.whl",
+      "wheel_sha256": "a86dd39d14bb45f85a3d18525215a9ef0cfd1f192ac793220e72598c90335f0c",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "starlette-1.6.0.dist-info/licenses/LICENSE.md",
+          "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl",
+      "wheel_sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "anyio-4.15.1.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "idna",
+      "version": "3.19",
+      "wheel_url": "https://files.pythonhosted.org/packages/57/b0/0e52c878c53f245edd3a11020f20979b3f490f245af532c7cae3027754b5/idna-3.19-py3-none-any.whl",
+      "wheel_sha256": "815e7be7a7806d54abb586dc943addc79e8b2ee16915059658cbeff4b1b43bf4",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "idna-3.19.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "tldextract",
+      "version": "5.3.2",
+      "wheel_url": "https://files.pythonhosted.org/packages/4a/3b/930310b274dfe3b9a4fe64ef8b24e5faf376c9a6f94bba6fc6e438058598/tldextract-5.3.2-py3-none-any.whl",
+      "wheel_sha256": "6c90d2a259f5c89f4fcf01f97af15708416a59ffedddff006d67222ab30d0fb0",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "tldextract-5.3.2.dist-info/licenses/LICENSE",
+          "sha256": "cc204e03504deb15a3ff822addb5a48edc9a0222bfa310479b8274cf6b563458"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "twilio",
+      "version": "9.11.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/35/55/73950bf916642837148d6ecf288212216fff6c2421294e5bdbcb462c00b0/twilio-9.11.0-py2.py3-none-any.whl",
+      "wheel_sha256": "3de712da429d73955fa36210c2884cae077076985368094aec0d6743fb03dc2f",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "twilio-9.11.0.dist-info/licenses/LICENSE",
+          "sha256": "f142b5f67e4b6d505e48fd92baf787b5b990d81315f836adf3dc59f00b3e619d"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "wheel_sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "declared_license": "PSF-2.0",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "wheel_url": "https://files.pythonhosted.org/packages/67/81/4add07e5172b7ac40d8ed5ff580409a7801a4fe26d529bdd915401dabfbe/typing_inspection-0.4.4-py3-none-any.whl",
+      "wheel_sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "wheel_url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "wheel_sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+      "declared_license": "MPL-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "certifi-2026.7.22.dist-info/licenses/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.3",
+      "wheel_url": "https://files.pythonhosted.org/packages/52/b7/7cd31f29d6055bd711ae6e669367fba6f5ae9de463910a793e30556a8db7/aiohttp-3.14.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "wheel_sha256": "543906c127fb1d929b95076db19b83fa2d46751006ff1e23b093aa5ac4d8db42",
+      "declared_license": "Apache-2.0 AND MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "aiohttp-3.14.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23"
+        },
+        {
+          "installed_path": "aiohttp-3.14.3.dist-info/licenses/vendor/llhttp/LICENSE",
+          "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "aiohttp-retry",
+      "version": "2.9.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/1a/99/84ba7273339d0f3dfa57901b846489d2e5c2cd731470167757f1935fffbd/aiohttp_retry-2.9.1-py3-none-any.whl",
+      "wheel_sha256": "66d2759d1921838256a05a3f80ad7e724936f083e35be5abb5e16eed6be6dc54",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "aiohttp_retry-2.9.1.dist-info/LICENSE",
+          "sha256": "aca6126cf5c5e84cab41ea3bc61f53578616316a83ebe130cde0d4b766e8a1fe"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/99/91/8acff4f5e50511b911bbccb72b8628a49c68ce14148cd9f6431094859a90/annotated_types-0.8.0-py3-none-any.whl",
+      "wheel_sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "annotated_types-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/85/66/6ccca4722987ddedaa7fc9c3f4708af7431f5535666c174350830888c6b7/cryptography-50.0.1-cp311-abi3-manylinux_2_34_x86_64.whl",
+      "wheel_sha256": "51afcfceb15597cf2635068e4ac9a56b2abde622edde17f37d85fd7b5306497a",
+      "declared_license": "Apache-2.0 OR BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "cryptography-50.0.1.dist-info/licenses/LICENSE",
+          "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb"
+        },
+        {
+          "installed_path": "cryptography-50.0.1.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe"
+        },
+        {
+          "installed_path": "cryptography-50.0.1.dist-info/licenses/LICENSE.BSD",
+          "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.5",
+      "wheel_url": "https://files.pythonhosted.org/packages/36/d2/b70a31e13d04456d28493f31d2aa087e99eeb2767ef0293b2625727ccb8c/filelock-3.32.5-py3-none-any.whl",
+      "wheel_sha256": "142cd9fa77a872c5e78c62329a0d15278fadc686eb89e760017968961a4fd6b2",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "filelock-3.32.5.dist-info/licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "wheel_url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+      "wheel_sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0",
+      "declared_license": "Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "requests-2.34.2.dist-info/licenses/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+        },
+        {
+          "installed_path": "requests-2.34.2.dist-info/licenses/NOTICE",
+          "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "requests-file",
+      "version": "3.0.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/e1/d5/de8f089119205a09da657ed4784c584ede8381a0ce6821212a6d4ca47054/requests_file-3.0.1-py2.py3-none-any.whl",
+      "wheel_sha256": "d0f5eb94353986d998f80ac63c7f146a307728be051d4d1cd390dbdb59c10fa2",
+      "declared_license": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "requests_file-3.0.1.dist-info/licenses/LICENSE",
+          "sha256": "39ff1bc4e15ffced0047d99689d06f54bb29ce47844927a03eaa29ebb9ac0f17"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+      "wheel_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "declared_license": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "six-1.17.0.dist-info/LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "wrapt",
+      "version": "1.17.3",
+      "wheel_url": "https://files.pythonhosted.org/packages/9f/81/5d931d78d0eb732b95dc3ddaeeb71c8bb572fb01356e9133916cd729ecdd/wrapt-1.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+      "wheel_sha256": "042ec3bb8f319c147b1301f2393bc19dba6e176b7da446853406d041c36c7828",
+      "declared_license": "BSD",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "wrapt-1.17.3.dist-info/licenses/LICENSE",
+          "sha256": "5974efbbc8b626b2050810d63c3a907ee21c92bf64b3740fc623ad05eb3448ab"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl",
+      "wheel_sha256": "9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472",
+      "declared_license": "PSF-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Python Software Foundation License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl",
+      "wheel_sha256": "053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e",
+      "declared_license": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "aiosignal-1.4.0.dist-info/licenses/LICENSE",
+          "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+      "wheel_sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "attrs-26.1.0.dist-info/licenses/LICENSE",
+          "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/b1/db/dceb9dd5b231e1da801793f8acc9f3c52a7e1afe40bb1aae37e02b0faad5/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "wheel_sha256": "c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf",
+      "declared_license": "MIT-0",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "cffi-2.1.1.dist-info/licenses/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/6f/89/bb5108dc6c3651dca963f2b0a3ba19bbcb370c94e1b6d3e0e844a58e6dca/charset_normalizer-3.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "wheel_sha256": "b9af956078716df40d985fb0dfeb2c2120c5ca92ba4ff4b388acfd01cdc14d08",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "charset_normalizer-3.5.1.dist-info/licenses/LICENSE",
+          "sha256": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/6a/bd/d91c5e39f490a49df14320f4e8c80161cfcce09f1e2cde1edd16a551abb3/frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+      "wheel_sha256": "494a5952b1c597ba44e0e78113a7266e656b9794eec897b19ead706bd7074383",
+      "declared_license": "Apache-2.0",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "frozenlist-1.8.0.dist-info/licenses/LICENSE",
+          "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "multidict",
+      "version": "6.7.1",
+      "wheel_url": "https://files.pythonhosted.org/packages/f3/8d/5e5be3ced1d12966fefb5c4ea3b2a5b480afcea36406559442c6e31d4a48/multidict-6.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "wheel_sha256": "bfde23ef6ed9db7eaee6c37dcec08524cb43903c60b285b172b6c094711b3961",
+      "declared_license": "Apache License 2.0",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "multidict-6.7.1.dist-info/licenses/LICENSE",
+          "sha256": "93d11a968e2f0f36373c40811ff6d20e173f58c3cab5884cd6617bbfd795492a"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.2",
+      "wheel_url": "https://files.pythonhosted.org/packages/14/15/5574111ae50dd6e879456888c0eadd4c5a869959775854e18e18a6b345f3/propcache-0.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "wheel_sha256": "6f328175a2cde1f0ff2c4ed8ce968b9dcfb55f3a7153f39e2957ed994da13476",
+      "declared_license": "Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "installed_license_files": [
+        {
+          "installed_path": "propcache-0.5.2.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "installed_path": "propcache-0.5.2.dist-info/licenses/NOTICE",
+          "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/7f/3e/5db95bcf282c52709639744ca2a8b149baccf648e39c8cc87553df9eae0c/urllib3-2.7.0-py3-none-any.whl",
+      "wheel_sha256": "9fb4c81ebbb1ce9531cce37674bbc6f1360472bc18ca9a553ede278ef7276897",
+      "declared_license": "MIT",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "urllib3-2.7.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "yarl",
+      "version": "1.24.5",
+      "wheel_url": "https://files.pythonhosted.org/packages/d6/d0/d56c859b8222116f5d68459199f48359e0bf121b6f65a69bf329b3602ba0/yarl-1.24.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "wheel_sha256": "f08c7513ecef5aad65687bfdf6bc601ae9fccd04a42904501f8f7141abad9eb9",
+      "declared_license": "Apache-2.0",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "yarl-1.24.5.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "installed_path": "yarl-1.24.5.dist-info/licenses/NOTICE",
+          "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "wheel_url": "https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl",
+      "wheel_sha256": "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992",
+      "declared_license": "BSD-3-Clause",
+      "license_classifiers": [],
+      "installed_license_files": [
+        {
+          "installed_path": "pycparser-3.0.dist-info/licenses/LICENSE",
+          "sha256": "0c846399369ea76ddd7b5c44fe6d16497415fcf015f5cbb508c24bf98b81c5b1"
+        }
+      ],
+      "modifications": [],
+      "boundary": "unmodified installed wheel dependency"
+    }
+  ],
+  "advisory_status": "queried-OSV-exact-versions; absence-of-matches-is-not-independent-review",
+  "advisories": [
+    {
+      "name": "supertokens_python",
+      "version": "0.31.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.141.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.52.4",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "aiosmtplib",
+      "version": "5.1.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "asgiref",
+      "version": "3.12.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "Deprecated",
+      "version": "1.2.18",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "phonenumbers",
+      "version": "9.0.38",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pkce",
+      "version": "1.0.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pycryptodome",
+      "version": "3.20.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.46.5",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.13.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "PyOTP",
+      "version": "2.10.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "starlette",
+      "version": "1.6.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "idna",
+      "version": "3.19",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "tldextract",
+      "version": "5.3.2",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "twilio",
+      "version": "9.11.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "aiohttp-retry",
+      "version": "2.9.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.5",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "requests-file",
+      "version": "3.0.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "wrapt",
+      "version": "1.17.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "multidict",
+      "version": "6.7.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.2",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "urllib3",
+      "version": "2.7.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "yarl",
+      "version": "1.24.5",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "vulnerability_ids": []
+    }
+  ],
+  "independent_review": "blocked-not-performed",
+  "license_review": "installed notices and declarations recorded; substantive per-file exceptions remain separate audit obligations",
+  "input_sha256": {
+    "examples/python/audit_dependencies.py": "af3e143f301afff6684a5958f0ef700ce9940311dd3abac2ee12ab1eff1e79d1",
+    "examples/python/dependency-resolution.json": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/LICENSES/supertokens-python-LICENSE.md": "8350e4d0ca2abfd8f8a34484f567a288c3bff9f0b8e55c4080c0c7d67902d357"
+  },
+  "exit_code": 0
+}

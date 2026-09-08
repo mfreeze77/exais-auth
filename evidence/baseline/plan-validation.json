@@ -1,0 +1,29 @@
+{
+  "validation_scope": "planning-inventory-integrity-only",
+  "result": "passed",
+  "baseline_date": "2026-09-08",
+  "counts": {
+    "required_requirements": 265,
+    "families": 29,
+    "milestones": 11,
+    "work_packages": 36,
+    "api_operations": 205,
+    "api_by_surface": {
+      "FDI": 49,
+      "CDI": 156
+    },
+    "sdk_profiles": 8,
+    "plugin_packages": 14,
+    "integration_profiles": 10,
+    "planned_acceptance_and_contract_test_ids": 470,
+    "verified_implementation_requirements": 0,
+    "schema_complete_operations": 0
+  },
+  "errors": [],
+  "limitations": [
+    "No authentication implementation is supplied or tested.",
+    "No source build or immutable baseline pin has been validated.",
+    "API paths and schemas remain capture tasks; names and methods alone are not an OpenAPI contract.",
+    "Test IDs describe planned checks, not executable authentication tests."
+  ]
+}

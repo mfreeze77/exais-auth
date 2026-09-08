@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-09-08T21:25:57.661961+00:00",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth,target=/work,readonly",
+    "-w",
+    "/work",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "sh",
+    "-c",
+    "pip install --quiet --root-user-action ignore --disable-pip-version-check -r contracts/requirements.txt && python tools/capture_contracts.py --check"
+  ],
+  "stdout": "{\n  \"accounted_operations\": 205,\n  \"FDI\": 49,\n  \"CDI\": 156,\n  \"operation_variants\": 207,\n  \"captured_reference_only\": 205,\n  \"fully_captured_and_behavior_verified\": 0,\n  \"exact_schema_redistribution_blocked\": 205,\n  \"vendor_control_non_equivalences_required\": 5,\n  \"operations_with_path_artifacts\": [\n    \"FDI-026\",\n    \"CDI-099\",\n    \"CDI-104\",\n    \"CDI-116\"\n  ],\n  \"upstream_additions_outside_frozen_inventory\": 5,\n  \"complete\": false\n}\n",
+  "stderr": "",
+  "actual_exit_code": 0,
+  "expected_exit_code": 0,
+  "expectation_met": true,
+  "evidence_scope": "source-accounting-and-fail-closed-completion-only",
+  "input_sha256": {
+    "tools/capture_contracts.py": "ab2cd78baa5ae031e78b1a2522dfac2c4649bb3e7e6ff1ebf0d9b67e35e40906",
+    "contracts/api-contracts.json": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe",
+    "contracts/source-pins.json": "106cdf3761cc2584b7f281edeb2bbcdcfdb2867ef8a2feb5f5553bebd5e152f6",
+    "contracts/operation-map.json": "5536efd372375a606b3abfcb5ba267145c9dfd94e1cc24378581bdc63679db5c"
+  }
+}

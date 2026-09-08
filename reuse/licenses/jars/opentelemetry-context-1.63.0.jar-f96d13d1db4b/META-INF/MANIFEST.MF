@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: io.opentelemetry.context
+Built-By: runner
+Built-JDK: 21.0.11
+Bundle-ManifestVersion: 2
+Bundle-Name: opentelemetry-context
+Bundle-SymbolicName: opentelemetry-context
+Bundle-Version: 1.63.0
+Created-By: 21.0.11 (Eclipse Adoptium)
+Export-Package: io.opentelemetry.context;version="1.63.0";uses:="javax
+ .annotation",io.opentelemetry.context.internal.shaded;version="1.63.0
+ ",io.opentelemetry.context.propagation;version="1.63.0";uses:="io.ope
+ ntelemetry.context,javax.annotation",io.opentelemetry.context.propaga
+ tion.internal;version="1.63.0";uses:="io.opentelemetry.context.propag
+ ation"
+Implementation-Title: context
+Implementation-Version: 1.63.0
+Import-Package: javax.annotation;version="3.0.2";resolution:=optional,
+ io.opentelemetry.common;version="[1.63,2)",java.lang,java.lang.invoke
+ ,java.lang.ref,java.util,java.util.concurrent,java.util.concurrent.at
+ omic,java.util.function,java.util.logging,java.util.stream
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.2.3.202603250810
+

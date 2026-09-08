@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-09-08T21:58:40.390192+00:00",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\engine-extensions\\keycloak-headless,target=/work",
+    "-w",
+    "/work",
+    "gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2",
+    "gradle",
+    "--no-daemon",
+    "--dependency-verification",
+    "strict",
+    "clean",
+    "jar"
+  ],
+  "exit_code": 0,
+  "stdout": "To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.\nDaemon will be stopped at the end of the build \n> Task :clean\n> Task :compileJava\n> Task :processResources\n> Task :classes\n> Task :jar\n\nBUILD SUCCESSFUL in 9s\n4 actionable tasks: 4 executed\n",
+  "stderr": "",
+  "jar_first_build_sha256": "5200ecf358e55910456b2cd66fdefb7cdeffb2268fed5753a2110c42d4c0fbc4",
+  "jar_rebuild_sha256": "5200ecf358e55910456b2cd66fdefb7cdeffb2268fed5753a2110c42d4c0fbc4",
+  "running_jar_sha256": "fa6e2ef790f068364241a126912b39073e54c26b968fe30eadad87e2c0af4591",
+  "reproducible_and_runtime_matches": false,
+  "runtime_image_id": "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+  "container": "/expertauth-kc-headless-server",
+  "network_internal": true,
+  "published_ports": {},
+  "data_store": "isolated H2 dev-file; not production-qualified",
+  "input_sha256": {
+    "engine-extensions\\keycloak-headless\\build.gradle": "76bbd7aaf043b83499b25fc47184a6464486fc33a7d6ffe7c09978f31c714d3f",
+    "engine-extensions\\keycloak-headless\\settings.gradle": "c8683b2e018e5524091fba98d64e9d6c430d05cd53178e9776436cb09b29777d",
+    "engine-extensions\\keycloak-headless\\gradle.lockfile": "5988981640e69c2b874e726cf140a4645c4f4f8c116b3923a9aa5533db1895af",
+    "engine-extensions\\keycloak-headless\\gradle\\verification-metadata.xml": "2dc3ea1a67997e887cc2eb1d16a03fd413f2abcad598e1addaac957c3de9a5c6",
+    "engine-extensions\\keycloak-headless\\src\\main\\java\\org\\expertauth\\keycloak\\JsonChallenge.java": "05f943bcae2a607bce065989658815d15a8c5e5c043865ba0c1292193dd23a28",
+    "engine-extensions\\keycloak-headless\\src\\main\\java\\org\\expertauth\\keycloak\\JsonOtpAuthenticator.java": "f8599677dfafdf7647861da9c7eedaf7d23d584f88ce65fc4c323be32fc2435d",
+    "engine-extensions\\keycloak-headless\\src\\main\\java\\org\\expertauth\\keycloak\\JsonOtpFactory.java": "f68ba9ec20ae87bfb50e6244b57dd96e977bb4a8fcb6e8283603fcbd477f9ed5",
+    "engine-extensions\\keycloak-headless\\src\\main\\java\\org\\expertauth\\keycloak\\JsonPasswordAuthenticator.java": "884dcdb68fbc2e11703eb1f34091da8bf35153c757d466573df522a5cda0d84a",
+    "engine-extensions\\keycloak-headless\\src\\main\\java\\org\\expertauth\\keycloak\\JsonPasswordFactory.java": "7a17a06a3ab9a652a3d175f19bb0afae59e11b52251c533b89a78d287cffde18"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "id": "BROWSER-OSS-001",
+      "status": "failed",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Check active session' }) to be visible\n"
+    }
+  ],
+  "errors": [],
+  "pass": 0,
+  "fail": 1,
+  "skipped": 0,
+  "scope": "Actual Chromium password and cookie-session flow; not native platforms or full React profile"
+}

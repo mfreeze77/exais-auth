@@ -1,0 +1,140 @@
+{
+  "engine": "Keycloak",
+  "version": "26.7.3",
+  "mapping": "app=realm; tenant=client; isolated username=tenant.identifier",
+  "foundation_passed": false,
+  "production_approved": false,
+  "results": [
+    {
+      "test_id": "KC-PRIVATE-001",
+      "actual": 401,
+      "expected": 401,
+      "outcome": "passed",
+      "requirements": [
+        "CFG-004"
+      ],
+      "note": "Untrusted admin API request rejected."
+    },
+    {
+      "test_id": "KC-IDENTITY-001",
+      "actual": 4,
+      "expected": 4,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-001",
+        "IDN-003"
+      ],
+      "note": "Tenant-qualified usernames permit isolated equal emails; email login deliberately disabled, so not full embedded/email parity."
+    },
+    {
+      "test_id": "KC-PROVIDER-ISOLATION-001",
+      "actual": [
+        204,
+        204
+      ],
+      "expected": [
+        204,
+        204
+      ],
+      "outcome": "passed",
+      "requirements": [
+        "IDN-003",
+        "SOC-003"
+      ],
+      "note": "Required distinct tenant identities under one provider alias; this is an engine mapping test, not live provider authentication."
+    },
+    {
+      "test_id": "KC-PKCE-001",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "OAU-001"
+      ],
+      "note": "Actual browser-form authorization code + PKCE, no resource-owner password grant."
+    },
+    {
+      "test_id": "KC-TENANT-SESSION-001",
+      "outcome": "observed",
+      "shared_realm_sid": true,
+      "note": "Shared realm SSO sid does not alone disprove independent client sessions. No acceptance claim."
+    },
+    {
+      "test_id": "KC-TENANT-MEMBERSHIP-001",
+      "outcome": "observed",
+      "bare_client_issued_token": true,
+      "note": "No organization scope or membership was configured for this request. Bare clients alone do not enforce desired tenant authorization."
+    },
+    {
+      "test_id": "KC-SESSION-INVENTORY",
+      "outcome": "observed",
+      "session_count": 1,
+      "client_counts": [
+        2
+      ],
+      "note": "Token/session identifiers omitted."
+    },
+    {
+      "test_id": "KC-ORG-MEMBER-001",
+      "actual": [
+        "alpha"
+      ],
+      "expected": [
+        "alpha"
+      ],
+      "outcome": "passed",
+      "requirements": [
+        "IDN-004"
+      ],
+      "note": "Selected organization claim from real membership through PKCE."
+    },
+    {
+      "test_id": "KC-ORG-NONMEMBER-001",
+      "actual": false,
+      "expected": true,
+      "outcome": "failed",
+      "requirements": [
+        "IDN-006"
+      ],
+      "note": "Explicit beta organization scope must reject a nonmember without code/token. Non-OAuth intermediate errors are not treated as passes."
+    },
+    {
+      "test_id": "KC-ORG-SHARING-001",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-004"
+      ],
+      "note": "One engine user explicitly associated with two organizations; selected org claims stay distinct."
+    },
+    {
+      "test_id": "KC-REFRESH-RACE-OBSERVED",
+      "outcome": "observed",
+      "http_statuses": [
+        400,
+        200
+      ],
+      "note": "Single-node diagnostic only; no multi-replica or response-loss acceptance claim."
+    },
+    {
+      "test_id": "KC-REVOKE-001",
+      "actual": 400,
+      "expected": 400,
+      "outcome": "passed",
+      "requirements": [
+        "SES-005"
+      ],
+      "note": "Refresh denied after authoritative logout. Offline access revocation is not claimed."
+    }
+  ],
+  "remaining": [
+    "Provider alias per tenant needs separate configuration proof",
+    "Explicit organization sharing/permissions",
+    "Primary/method identity link/unlink conflict and proof of control",
+    "Supported headless/embedded MFA and hooks",
+    "Node/React and Python adapter contract",
+    "Two-replica response loss, replay, cookies/header profiles"
+  ],
+  "disposition": "No engine selected. Bare client mapping needs explicit tenant policy; shared SSO sid alone is not a failure. Further org/session/headless/link proofs and audited-source alternative evaluation remain."
+}

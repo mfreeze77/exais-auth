@@ -1,0 +1,39 @@
+Sending build context to Docker daemon  83.46kB
+
+Step 1/11 : FROM gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2 AS build
+ ---> 67b8c4bfd2b0
+Step 2/11 : WORKDIR /work
+ ---> Using cache
+ ---> 36b8d62813b3
+Step 3/11 : COPY settings.gradle build.gradle gradle.lockfile ./
+ ---> Using cache
+ ---> 40a1df15f317
+Step 4/11 : COPY gradle ./gradle
+ ---> Using cache
+ ---> 41e332befc6e
+Step 5/11 : COPY src ./src
+ ---> Using cache
+ ---> 4066e9ca32fa
+Step 6/11 : RUN gradle --no-daemon --dependency-verification strict jar
+ ---> Using cache
+ ---> ddc4b5bdab19
+Step 7/11 : FROM quay.io/keycloak/keycloak@sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54
+ ---> ff4257d0d64e
+Step 8/11 : COPY --from=build --chown=keycloak:keycloak /work/build/libs/expertauth-keycloak-headless-0.1.0.jar /opt/keycloak/providers/
+ ---> Using cache
+ ---> 9c1cca14de86
+Step 9/11 : RUN /opt/keycloak/bin/kc.sh build --db=postgres
+ ---> Using cache
+ ---> bc3e7beedb7e
+Step 10/11 : ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+ ---> Using cache
+ ---> 313612ca223c
+Step 11/11 : CMD ["start", "--optimized", "--import-realm", "--http-enabled=true", "--http-port=8080", "--hostname=http://kc-cluster.example.test:8080"]
+ ---> Using cache
+ ---> 4a1ff40f9ec6
+Successfully built 4a1ff40f9ec6
+Successfully tagged expertauth-kc-headless-postgres:0.1.0
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

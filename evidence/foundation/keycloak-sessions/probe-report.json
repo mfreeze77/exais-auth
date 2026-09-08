@@ -1,0 +1,217 @@
+{
+  "timestamp_utc": "2026-09-08T22:10:20.422137+00:00",
+  "command": "python tools/run_keycloak_cluster.py probe",
+  "candidate_selected": false,
+  "foundation_gate_passed": false,
+  "keycloak_version": "26.7.3",
+  "source_commit": "6d238b6558037085cc25c915893c3d301a80243e",
+  "expected_tests": 10,
+  "executed": 10,
+  "passed": 7,
+  "failed": 3,
+  "unexecuted": 0,
+  "skipped": 0,
+  "exit_code": 1,
+  "tests": [
+    {
+      "id": "KC-CLUSTER-TWO-REPLICAS-SHARED-POSTGRES",
+      "expectation": "Both replicas join the same private engine cluster and publish one issuer",
+      "status": "passed",
+      "duration_ms": 95.04,
+      "details": {
+        "replicas": 2,
+        "database": "shared PostgreSQL 17.11",
+        "cluster_members": 2,
+        "public_ports": 0
+      }
+    },
+    {
+      "id": "KC-CLUSTER-CROSS-REPLICA-AUTHENTICATION",
+      "expectation": "Engine authentication sessions and PKCE code exchange work across replicas",
+      "status": "passed",
+      "duration_ms": 776.49,
+      "details": {
+        "sequence": [
+          "password challenge A",
+          "password verify B",
+          "TOTP verify A",
+          "code exchange B"
+        ],
+        "id_signature_issuer_audience_nonce_verified": true,
+        "access_signature_issuer_audience_subject_verified": true
+      }
+    },
+    {
+      "id": "KC-ENGINE-COOKIE-AND-TOKEN-RESPONSE-CONTRACT",
+      "expectation": "Real engine cookie flags and uncached token response are characterized; HTTPS deployment remains unqualified",
+      "status": "passed",
+      "duration_ms": 0.02,
+      "details": {
+        "engine_cookie_names": [
+          "KC_RESTART",
+          "KEYCLOAK_IDENTITY",
+          "KEYCLOAK_SESSION"
+        ],
+        "identity_http_only": true,
+        "identity_same_site": "Lax",
+        "secure_cookie": false,
+        "private_http_lab_only": true,
+        "token_response_no_store": true,
+        "supertokens_transport_compatibility_proven": false
+      }
+    },
+    {
+      "id": "KC-CLUSTER-BEARER-VALIDATION-ON-BOTH-REPLICAS",
+      "expectation": "Real valid bearer works and missing/tampered bearer is rejected",
+      "status": "passed",
+      "duration_ms": 99.18,
+      "details": {
+        "valid_statuses": [
+          200,
+          200
+        ],
+        "invalid_signature_status": 401,
+        "absent_status": 401
+      }
+    },
+    {
+      "id": "KC-CLUSTER-SERIAL-REFRESH-ROTATION",
+      "expectation": "Sequential refresh rotation remains usable across alternating replicas",
+      "status": "passed",
+      "duration_ms": 194.26,
+      "details": {
+        "statuses": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "all_refresh_tokens_changed": true
+      }
+    },
+    {
+      "id": "KC-CLUSTER-STALE-REFRESH-DENY-WITH-CHILD-SURVIVAL",
+      "expectation": "Used refresh is rejected while the legitimate replacement remains usable",
+      "status": "failed",
+      "duration_ms": 184.27,
+      "details": {
+        "stale_refresh": {
+          "http_status": 400,
+          "error": "invalid_grant",
+          "error_description": "Maximum allowed refresh token reuse exceeded",
+          "tokens_issued": false
+        },
+        "rotated_child": {
+          "http_status": 400,
+          "error": "invalid_grant",
+          "error_description": "Session doesn't have required client",
+          "tokens_issued": false
+        }
+      },
+      "error": "Denying stale-token replay invalidated the legitimate rotated child"
+    },
+    {
+      "id": "KC-CLUSTER-CONCURRENT-REFRESH-SINGLE-SURVIVING-ROTATION",
+      "expectation": "Two simultaneous replica refreshes yield one usable rotation and reject the stale competitor",
+      "status": "failed",
+      "duration_ms": 236.37,
+      "details": {
+        "simultaneous_refresh": [
+          {
+            "replica": "kc-a",
+            "http_status": 400,
+            "error": "invalid_grant",
+            "error_description": "Maximum allowed refresh token reuse exceeded",
+            "tokens_issued": false
+          },
+          {
+            "replica": "kc-b",
+            "http_status": 200,
+            "error": null,
+            "error_description": null,
+            "tokens_issued": true
+          }
+        ],
+        "successful_rotations": 1,
+        "winner_followup": [
+          {
+            "http_status": 400,
+            "error": "invalid_grant",
+            "error_description": "Session doesn't have required client",
+            "tokens_issued": false
+          }
+        ]
+      },
+      "error": "Winning refresh token was unusable after the concurrent stale request"
+    },
+    {
+      "id": "KC-CLUSTER-POSTCOMMIT-RESPONSE-LOSS-RECOVERY",
+      "expectation": "Client can recover a refresh after losing the committed response without reauthentication",
+      "status": "failed",
+      "duration_ms": 158.44,
+      "details": {
+        "first_server_response_committed": true,
+        "first_response_intentionally_discarded": true,
+        "retry": {
+          "http_status": 400,
+          "error": "invalid_grant",
+          "error_description": "Maximum allowed refresh token reuse exceeded",
+          "tokens_issued": false
+        },
+        "configured_max_reuse": 0
+      },
+      "error": "A committed refresh response lost by the client cannot be recovered by retrying the original token"
+    },
+    {
+      "id": "KC-CLUSTER-CLIENT-SPECIFIC-REVOCATION-ISOLATION",
+      "expectation": "Revoking alpha's refresh token preserves beta's authenticated client session under shared SSO",
+      "status": "passed",
+      "duration_ms": 227.51,
+      "details": {
+        "second_client_used_sso": true,
+        "shared_parent_sid": true,
+        "shared_sid_is_failure": false,
+        "revoke_http_status": 200,
+        "revoked_client": {
+          "http_status": 400,
+          "error": "invalid_grant",
+          "error_description": "Session doesn't have required client",
+          "tokens_issued": false
+        },
+        "other_client": {
+          "http_status": 200,
+          "error": null,
+          "error_description": null,
+          "tokens_issued": true
+        }
+      }
+    },
+    {
+      "id": "KC-CLUSTER-GLOBAL-RP-LOGOUT",
+      "expectation": "Explicit global RP logout removes SSO cookies and denies both clients across replicas",
+      "status": "passed",
+      "duration_ms": 215.25,
+      "details": {
+        "refresh_statuses": [
+          400,
+          400
+        ],
+        "final_engine_cookies_removed": true,
+        "global_scope_intentional": true
+      }
+    }
+  ],
+  "input_sha256": {
+    "tests/foundation/keycloak_sessions.py": "1c4a64346e39216c1ae0d1b2605fd306d9e1c3625f02601dc13a8cfd947d1f92",
+    "tools/run_keycloak_cluster.py": "ea6c06cbf9f498daaafce778d1caad09d08622ba78088b89a5223de38533dadb",
+    "evidence/foundation/keycloak-sessions/startup-report.json": "2b0f93b2769e0e1599d2ed0fff96fe2ceed787ee2540c1c28ccea2e5d7a1b7cc",
+    "engine-extensions/keycloak-headless/Dockerfile.postgres": "a88caba36a313dbf56078bd18917e92fa1533a137391d304b1bcd173380ce2ce",
+    "engine-extensions/keycloak-headless/build.gradle": "7eb8f041ef0ea55fc0a2eda2b6783e574a929f2d1ed4a176fff1dd9bd3d15f16"
+  },
+  "limitations": [
+    "Bounded synthetic candidate characterization, not full M1 or SuperTokens session parity",
+    "HTTP on private network only; public TLS/cookie policy and browser/native transport profiles unqualified",
+    "Two-member cluster with shared PostgreSQL observed; process-crash, full disaster recovery, rolling upgrade and independent security review unqualified",
+    "Explicit strict refresh rotation policy; failures are retained rather than disabled or treated as passing"
+  ]
+}

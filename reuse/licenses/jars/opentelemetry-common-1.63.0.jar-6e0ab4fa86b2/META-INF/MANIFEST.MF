@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: io.opentelemetry.common
+Built-By: runner
+Built-JDK: 21.0.11
+Bundle-ManifestVersion: 2
+Bundle-Name: opentelemetry-common
+Bundle-SymbolicName: opentelemetry-common
+Bundle-Version: 1.63.0
+Created-By: 21.0.11 (Eclipse Adoptium)
+Export-Package: io.opentelemetry.common;version="1.63.0",io.openteleme
+ try.common.impl;version="1.63.0"
+Implementation-Title: common
+Implementation-Version: 1.63.0
+Import-Package: java.lang,java.lang.invoke,java.util,java.util.concurr
+ ent.atomic,java.util.function,java.util.logging
+Require-Capability: osgi.extender;filter:="(osgi.extender=osgi.service
+ loader.processor)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.2.3.202603250810
+

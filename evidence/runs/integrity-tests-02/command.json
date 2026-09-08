@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/evidence",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788905387.858774,
+  "elapsed_seconds": 27.574,
+  "input_sha256": {
+    "tools/ledger.py": "6e8ffb45403b37a595c7ffa8ade8b9c1477b260f18b19402f01813efc05012be",
+    "tools/validate_release.py": "06738c687fdae44568da834c9a8b19477ca2db72fbb19a318301148c1c990ee7",
+    "tests/evidence/test_release_gate.py": "d3d42ae49ceee53aa868fefeaddea86d54b4733a54260e289a3d616c37fd3d5a"
+  },
+  "inputs_changed": false,
+  "output_sha256": "9110e3979e732aa27c94df40c346bafd313f49fdf581d4c4e9b3a415c2eaaec6",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

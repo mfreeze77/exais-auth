@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "tools/launch_oss_probe.py"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788905051.6828992,
+  "elapsed_seconds": 9.048,
+  "input_sha256": {
+    "tools/launch_oss_probe.py": "0c4887d5de1bb87e1ac5c4c11b1aee25d0bc1fe8d642676a21eb37a3120e73f4",
+    "tools/wait_oss_storage.py": "93a28253276e20a0f49f57170831a28628fa0a14782b61f6a9ef352f56917b2a",
+    "deploy/oss-core.Dockerfile": "8c5e84b8ce58f452ed8e3b3473c32da64e06d49537029cd75528b4361c5b3ffa"
+  },
+  "inputs_changed": false,
+  "output_sha256": "7f6014c49981dfea6fd0ef72b62249356e61b37a46c949723fb6c9ccebab35df",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

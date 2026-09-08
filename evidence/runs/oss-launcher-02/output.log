@@ -1,0 +1,6 @@
+Preserved existing expertauth-oss-postgres; state=running
+Preserved existing expertauth-oss-core-a; state=running
+{"storage_ready": "http://core-a:3567", "authenticated_query": true}
+Preserved existing expertauth-oss-core-b; state=running
+{"storage_ready": "http://core-b:3567", "authenticated_query": true}
+{"image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139", "network": "expertauth-oss-proof", "both_replicas_storage_ready": true, "ports": [], "evidence": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\runtime\\oss-core\\1788905051750870400"}

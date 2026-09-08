@@ -1,0 +1,7 @@
+ExpertAuth
+Foundation preview
+Welcome to ExpertAuth
+
+Self-hosted account access. This preview exercises password login and sessions.
+
+Local qualification build · Full parity and production approval remain pending.

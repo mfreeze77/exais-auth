@@ -1,0 +1,212 @@
+{
+  "original_archive_state": "missing-original-archive-extracted-files-verified",
+  "expected_archive_sha256": "58f013dc0ae6fe9981206d4594e78d8efd0cde2f1a00f15bbdfbaec12ee918ed",
+  "manifest_files": [
+    {
+      "path": "FULL_PARITY_PLAN.md",
+      "sha256": "68d233204945c4e6a6e9e36112f5dd5cfa0e550a60e4c17790b15f7091531fd5",
+      "verified": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "3952a0b54063b1712bf1aeeba41f4ecbbb23b76ccff522aa71870cd30f82576b",
+      "verified": true
+    },
+    {
+      "path": "docs/API_OPERATIONS.md",
+      "sha256": "c702b6ec91cd31d8f04cddbd43e14948371c3ad1755414bb02b317f2e6de68f2",
+      "verified": true
+    },
+    {
+      "path": "docs/BACKLOG.md",
+      "sha256": "dd98368113c4efe3c9719df9f721c39bdbbc4641d98535b1768c078f6bc08409",
+      "verified": true
+    },
+    {
+      "path": "docs/CONFIGURATION_AND_DATA_MODEL.md",
+      "sha256": "e190cb0ae0d703d488a3b26232b1e7078d307636fd3691be5e25d9d72e19a140",
+      "verified": true
+    },
+    {
+      "path": "docs/FEATURE_MATRIX.md",
+      "sha256": "41d25e94eaa0573b29d0f50f77000ce0789e2c1a2bd12f69f5268395313f2b74",
+      "verified": true
+    },
+    {
+      "path": "docs/HARVEST_PLAN.md",
+      "sha256": "4e05926c53f1315974c77cee7b4f96ea25c1edfb5b23b23385263bf91984b47d",
+      "verified": true
+    },
+    {
+      "path": "docs/SECURITY_ACCEPTANCE.md",
+      "sha256": "e5550effc582f90286bb561fa48e6121494011f189d54fb3a7bbea4b63e192e0",
+      "verified": true
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "sha256": "649ce5dff53b3860460f2c177398e0582bf4ccd281e3ce5e268f1d72fd876b59",
+      "verified": true
+    },
+    {
+      "path": "registry/api-operations.json",
+      "sha256": "d99a8f09a3825ec3c24fb6eddb1f82b17900729f1a22b28253d136fdf7dbfc10",
+      "verified": true
+    },
+    {
+      "path": "registry/baseline-lock.template.json",
+      "sha256": "44aa19aab353910d583b8a542d144b81fe245035a8142f8f0d1b790bc0b39230",
+      "verified": true
+    },
+    {
+      "path": "registry/families.json",
+      "sha256": "37cd07707c797bf4f5f61a26154276469fde6d812f2af48e78b06ff1e9e8c126",
+      "verified": true
+    },
+    {
+      "path": "registry/milestones.json",
+      "sha256": "2e0e2e9791e44508f6981f262e79b771a56e8908e2e9b4e95fa8c168d80dfb25",
+      "verified": true
+    },
+    {
+      "path": "registry/requirements.json",
+      "sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36",
+      "verified": true
+    },
+    {
+      "path": "registry/sdk-and-plugins.json",
+      "sha256": "0f298a253b652868edf3ecaf5778dd43168588d4d18842c32331caeff9f0017f",
+      "verified": true
+    },
+    {
+      "path": "registry/sources.json",
+      "sha256": "a9c22cc6518671dd4568e104e18a4482642ff702cf6aef7cea1df883a5ca9626",
+      "verified": true
+    },
+    {
+      "path": "registry/work-packages.json",
+      "sha256": "0582f4ec5be5c198a315646826ad5fec00d5489444b90fb19a0a6d95a83ead08",
+      "verified": true
+    },
+    {
+      "path": "tools/validate_plan.py",
+      "sha256": "17c3b568d986f2fbf535768c572e58541d45b16f731cfa55db2d739a689c5416",
+      "verified": true
+    },
+    {
+      "path": "validation-report.json",
+      "sha256": "bf49f095e9a5c8420d3826a394d44cc9f5365f4b7a2815702f92132668428a68",
+      "verified": true
+    },
+    {
+      "path": "validator-self-tests.json",
+      "sha256": "795bc4dffbd3ce1226188a846fe3512e641d1008e493d2c2729554ad8cd2641a",
+      "verified": true
+    }
+  ],
+  "files": [
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/API_OPERATIONS.md",
+      "sha256": "c702b6ec91cd31d8f04cddbd43e14948371c3ad1755414bb02b317f2e6de68f2"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/BACKLOG.md",
+      "sha256": "dd98368113c4efe3c9719df9f721c39bdbbc4641d98535b1768c078f6bc08409"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/CONFIGURATION_AND_DATA_MODEL.md",
+      "sha256": "e190cb0ae0d703d488a3b26232b1e7078d307636fd3691be5e25d9d72e19a140"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/FEATURE_MATRIX.md",
+      "sha256": "41d25e94eaa0573b29d0f50f77000ce0789e2c1a2bd12f69f5268395313f2b74"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/HARVEST_PLAN.md",
+      "sha256": "4e05926c53f1315974c77cee7b4f96ea25c1edfb5b23b23385263bf91984b47d"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/SECURITY_ACCEPTANCE.md",
+      "sha256": "e5550effc582f90286bb561fa48e6121494011f189d54fb3a7bbea4b63e192e0"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/docs/SOURCES.md",
+      "sha256": "649ce5dff53b3860460f2c177398e0582bf4ccd281e3ce5e268f1d72fd876b59"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/FULL_PARITY_PLAN.md",
+      "sha256": "68d233204945c4e6a6e9e36112f5dd5cfa0e550a60e4c17790b15f7091531fd5"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/PACKAGE_MANIFEST.json",
+      "sha256": "68026295a81a02d1b7598ba5935981169b1b8f455863335bde045745c1a32255"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/README.md",
+      "sha256": "3952a0b54063b1712bf1aeeba41f4ecbbb23b76ccff522aa71870cd30f82576b"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/api-operations.json",
+      "sha256": "d99a8f09a3825ec3c24fb6eddb1f82b17900729f1a22b28253d136fdf7dbfc10"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/baseline-lock.template.json",
+      "sha256": "44aa19aab353910d583b8a542d144b81fe245035a8142f8f0d1b790bc0b39230"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/families.json",
+      "sha256": "37cd07707c797bf4f5f61a26154276469fde6d812f2af48e78b06ff1e9e8c126"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/milestones.json",
+      "sha256": "2e0e2e9791e44508f6981f262e79b771a56e8908e2e9b4e95fa8c168d80dfb25"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/requirements.json",
+      "sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/sdk-and-plugins.json",
+      "sha256": "0f298a253b652868edf3ecaf5778dd43168588d4d18842c32331caeff9f0017f"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/sources.json",
+      "sha256": "a9c22cc6518671dd4568e104e18a4482642ff702cf6aef7cea1df883a5ca9626"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/registry/work-packages.json",
+      "sha256": "0582f4ec5be5c198a315646826ad5fec00d5489444b90fb19a0a6d95a83ead08"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/SHA256SUMS.txt",
+      "sha256": "cbbd98426a86fdba3b2d184ae833fc54618c7417b9276f174a19f69255e1e245"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/tools/validate_plan.py",
+      "sha256": "17c3b568d986f2fbf535768c572e58541d45b16f731cfa55db2d739a689c5416"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/validation-report.json",
+      "sha256": "bf49f095e9a5c8420d3826a394d44cc9f5365f4b7a2815702f92132668428a68"
+    },
+    {
+      "path": "baseline/expert-auth-full-parity-plan-v1.0/validator-self-tests.json",
+      "sha256": "795bc4dffbd3ce1226188a846fe3512e641d1008e493d2c2729554ad8cd2641a"
+    },
+    {
+      "path": "baseline/ExpertAuth_Full_Parity_Plan.md",
+      "sha256": "68d233204945c4e6a6e9e36112f5dd5cfa0e550a60e4c17790b15f7091531fd5"
+    },
+    {
+      "path": "baseline/EXPERTAUTH_KICKOFF.md",
+      "sha256": "df2dcdd13354bddc039ee9f7e55561c9555fca1f92b178abd18859df83e5cea1"
+    },
+    {
+      "path": "baseline/KICKOFF_MANIFEST.json",
+      "sha256": "69fd64d8add1cee007bf05a1a3a95411ea047b29fc79997e8cc81d6ad9784029"
+    },
+    {
+      "path": "baseline/super-tokens-engineering-report.md",
+      "sha256": "657b089eb9f85a01ee3e2110b81365337117e97a350d144dbfa1c073456a9dfe"
+    }
+  ]
+}

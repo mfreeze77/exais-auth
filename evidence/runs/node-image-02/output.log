@@ -1,0 +1,62 @@
+Sending build context to Docker daemon   93.7kB
+
+Step 1/11 : FROM node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+ ---> d649c27dae7b
+Step 2/11 : WORKDIR /app
+ ---> Using cache
+ ---> ead541259731
+Step 3/11 : COPY package.json package-lock.json ./
+ ---> d5ade166e8df
+Step 4/11 : RUN npm ci --ignore-scripts
+ ---> Running in 0e37926d81fe
+[91mnpm warn deprecated scmp@2.1.0: Just use Node.js's crypto.timingSafeEqual()
+[0m[91mnpm warn deprecated @simplewebauthn/types@12.0.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+[0m[91mnpm warn deprecated crypto-js@4.2.0: Active development of CryptoJS has been discontinued. This library is no longer maintained.
+[0m
+added 143 packages, and audited 144 packages in 3s
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[91mnpm notice
+npm notice New major version of npm available! 10.9.8 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+[0m ---> Removed intermediate container 0e37926d81fe
+ ---> 73add44eb2d1
+Step 5/11 : COPY server.js client.jsx build.mjs ./
+ ---> 1fb170793ffd
+Step 6/11 : COPY public ./public
+ ---> 36be5b39c853
+Step 7/11 : RUN npm run build
+ ---> Running in 786818ba5c6f
+
+> @expertauth/foundation-node-react@0.0.1 build
+> node build.mjs
+
+ ---> Removed intermediate container 786818ba5c6f
+ ---> a15864dd9010
+Step 8/11 : ENV NODE_ENV=production
+ ---> Running in c42d9562867c
+ ---> Removed intermediate container c42d9562867c
+ ---> 8a83923f2731
+Step 9/11 : USER node
+ ---> Running in 8fc6a54d03e5
+ ---> Removed intermediate container 8fc6a54d03e5
+ ---> 212a568428a5
+Step 10/11 : EXPOSE 3000
+ ---> Running in 9948043dd5ee
+ ---> Removed intermediate container 9948043dd5ee
+ ---> 7dadc8f825ff
+Step 11/11 : CMD ["node", "server.js"]
+ ---> Running in 936e7af07743
+ ---> Removed intermediate container 936e7af07743
+ ---> 1f6c32dcf631
+Successfully built 1f6c32dcf631
+Successfully tagged expertauth-node-react:0.0.2
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

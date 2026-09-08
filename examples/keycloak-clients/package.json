@@ -1,0 +1,25 @@
+{
+  "name": "@expertauth/keycloak-candidate-clients",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "cookie-parser": "1.4.7",
+    "csrf-csrf": "4.0.3",
+    "express": "5.2.1",
+    "jose": "6.2.12",
+    "openid-client": "6.8.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tough-cookie": "6.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "playwright": "1.62.1"
+  }
+}

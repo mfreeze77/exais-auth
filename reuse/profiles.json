@@ -1,0 +1,2926 @@
+{
+  "coverage": {
+    "integration_profiles": 10,
+    "plugin_profiles": 14,
+    "sdk_profiles": 8
+  },
+  "integrations": [
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-01",
+      "name": "Next.js App Router",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-02",
+      "name": "Next.js Pages Router",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-03",
+      "name": "NestJS",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-04",
+      "name": "GraphQL",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-05",
+      "name": "Hasura",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-06",
+      "name": "Supabase",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-07",
+      "name": "AWS Lambda",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-08",
+      "name": "AWS AppSync",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-09",
+      "name": "Netlify",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    },
+    {
+      "blocker": "No tested runtime/version combination",
+      "evidence": [],
+      "id": "INTP-10",
+      "name": "Vercel",
+      "qualification": "unverified",
+      "selected_runtime": null,
+      "status": "planned"
+    }
+  ],
+  "plugins": [
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:03.901902+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+      "candidate_version": "0.2.1",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-01",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-node": "^23.0.0"
+        },
+        "dist": {
+          "fileCount": 21,
+          "integrity": "sha512-8yanNzNqcyf1FX+kRBE1njTUcWULidF1CjpjVtICrI2IRLAqy+hjJfooh/wRp8XrXEhXBlhca7VkIgEkqbpviA==",
+          "shasum": "ddd547b1ac8402b6cb06f59f58b9b99c00f13e3b",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQC0g33ZSu6LtwDwVw+mZCa2wDZ+7tvTYm5bvN2iARrqDwIgXtWXeM1Jewx8p+PlaVSgF5swWNEblSrRZ3cD4qybOFM="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/captcha-nodejs/-/captcha-nodejs-0.2.1.tgz",
+          "unpackedSize": 42022
+        },
+        "git_head": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+        "license": "Apache-2.0",
+        "metadata_evidence": {
+          "bytes": 1815,
+          "fetched_at": "2026-09-08T21:15:03.012580+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fcaptcha-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "d28884463e239181ad062efa9ae878083e649bb56823ce897499a931a2e43f78",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fcaptcha-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/captcha-nodejs",
+        "peer_dependencies": {},
+        "repository": null,
+        "tarball_evidence": {
+          "bytes": 6122,
+          "fetched_at": "2026-09-08T21:15:03.641805+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/captcha-nodejs/-/captcha-nodejs-0.2.1.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "28dfa1e32407450cc0eccca5eeab4d347986627e7adcf91d3f535ba39c5f1c8b",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/captcha-nodejs/-/captcha-nodejs-0.2.1.tgz"
+        },
+        "version": "0.2.1"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-01.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__c5926c043bd81934d9c50be0b09beb363e97d77f.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/captcha-nodejs",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1",
+          "source_path": "packages/captcha-nodejs/package.json",
+          "version": "0.2.1"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/captcha-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:04.706556+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+      "candidate_version": "0.3.1",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-02",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-auth-react": "^0.50.0"
+        },
+        "dist": {
+          "fileCount": 28,
+          "integrity": "sha512-6FlI3qpE4pCqGL5ot6DbZCUI2XkSBnP1JgAlo5BXOleBSledkPcpawHvWgudEaJ7cV/7Ly9swUDUaTI8H4HU7w==",
+          "shasum": "f302ed92c630684ddfb7ccb340e06d82869f55c0",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIEx34StJzs2/Hs4DswzGGHgSCy42VOmEzQ28c4mCZKvBAiEAq3vkLOv/RmSIcLQdIjNB/fuDLE12NnDVSroXiHgqlbE="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/captcha-react/-/captcha-react-0.3.1.tgz",
+          "unpackedSize": 130290
+        },
+        "git_head": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+        "license": "Apache-2.0",
+        "metadata_evidence": {
+          "bytes": 2068,
+          "fetched_at": "2026-09-08T21:15:04.001904+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fcaptcha-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "cfe183cf48ca00756c5dfab96fb96763638c7d96c3a4a9ce4f36534e1caad785",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fcaptcha-react/latest"
+        },
+        "name": "@supertokens-plugins/captcha-react",
+        "peer_dependencies": {
+          "react": "^18.3.1",
+          "react-dom": "^18.3.1"
+        },
+        "repository": null,
+        "tarball_evidence": {
+          "bytes": 24514,
+          "fetched_at": "2026-09-08T21:15:04.413342+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/captcha-react/-/captcha-react-0.3.1.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "56db15f546b7b4fb8c9e9b0f0e87d497f9612e20feae9708b45e6874cd781552",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/captcha-react/-/captcha-react-0.3.1.tgz"
+        },
+        "version": "0.3.1"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-02.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__c5926c043bd81934d9c50be0b09beb363e97d77f.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/captcha-react",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922",
+          "source_path": "packages/captcha-react/package.json",
+          "version": "0.3.1"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/captcha-react"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:04.753701+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "e05a220a23ec5ccaad0397870b5c483eb862b27b",
+      "candidate_version": "0.1.2",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-03",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "@opentelemetry/api": "^1.9.0",
+          "@opentelemetry/resources": "^2.1.0",
+          "@opentelemetry/semantic-conventions": "^1.37.0"
+        },
+        "dist": {
+          "fileCount": 20,
+          "integrity": "sha512-0EpT0gVycGHZRPX1VMPARVZrtTAHSsObo2SI9z7N6CN7WDRqJkQqJpyQE2Qlh0+8sOJFnuH7xRQVlrDrWlXCGw==",
+          "shasum": "5e6817e314a3234358bd1827575b0925d1f95232",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQCekin0gksf81lkoEMtC+O2Bl/Wvao/0uyA4Qzon2eWGQIgTNHEQef/ONdjqj7SZM5VC5b0vgp7IhHN9eWLkOQ1VQ8="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/opentelemetry-nodejs/-/opentelemetry-nodejs-0.1.2.tgz",
+          "unpackedSize": 65081
+        },
+        "git_head": "e05a220a23ec5ccaad0397870b5c483eb862b27b",
+        "license": "Apache-2.0",
+        "metadata_evidence": {
+          "bytes": 1961,
+          "fetched_at": "2026-09-08T21:15:04.082172+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fopentelemetry-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "4a0466c65652895b01eba8ec80d44ee408f705fec9b86f727bdea829c7b44379",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fopentelemetry-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/opentelemetry-nodejs",
+        "peer_dependencies": {
+          "supertokens-node": ">=23.0.0"
+        },
+        "repository": null,
+        "tarball_evidence": {
+          "bytes": 9480,
+          "fetched_at": "2026-09-08T21:15:04.417803+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/opentelemetry-nodejs/-/opentelemetry-nodejs-0.1.2.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "8bad8e429d30a99ba9f43fce1e35376a89b9bde9dae46a2d1451c2d5ae34f0a9",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/opentelemetry-nodejs/-/opentelemetry-nodejs-0.1.2.tgz"
+        },
+        "version": "0.1.2"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-03.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "835192449ac80c9611eb2b26579ff0bc4a54dfa9e6428c2bbdd26f06cd00e5f2"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d0f89791397328b6901a8ebd0cb67a95b1fa24a0567ef5c34d6f4f4008364fcd"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__e05a220a23ec5ccaad0397870b5c483eb862b27b.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/opentelemetry-nodejs",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac",
+          "source_path": "packages/opentelemetry-nodejs/package.json",
+          "version": "0.1.2"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/opentelemetry-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:04.736089+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "e00dbc90ffb4927f01afb043f8bdbeb868725fc2",
+      "candidate_version": "0.1.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-04",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 70,
+          "integrity": "sha512-VAn/oo6zWvQT/7OaZ70ngeCxB7F1dTUitA3n4gwqLPw5g8T59nkqTeaPtTlfZHN1HO/4dfh0SEdHEZknUc9TOA==",
+          "shasum": "d7b06fa2648bfecde9be9ed298afeb6015d33d1a",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQD14dFW8/tfVIU/YwkoHUEGzZ4LDvAH0QaL6iszif7LTAIgOxNTBtXqmLPL0OdS4lIr7KjpipoERkwLWZ2YbF80Pg8="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/profile-base-react/-/profile-base-react-0.1.0.tgz",
+          "unpackedSize": 540219
+        },
+        "git_head": "e00dbc90ffb4927f01afb043f8bdbeb868725fc2",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2131,
+          "fetched_at": "2026-09-08T21:15:04.103971+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fprofile-base-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "b72436b0603460eae03319737bd346fb7d1d76556f292a6d2e0da87ae1f991ef",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fprofile-base-react/latest"
+        },
+        "name": "@supertokens-plugins/profile-base-react",
+        "peer_dependencies": {
+          "react": ">=18.3.1",
+          "react-dom": ">=18.3.1",
+          "supertokens-auth-react": ">=0.50.0"
+        },
+        "repository": {
+          "directory": "packages/profile-base-react",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 114304,
+          "fetched_at": "2026-09-08T21:15:04.472329+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/profile-base-react/-/profile-base-react-0.1.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "2b1e1515691f96f3c06a5706c59dc9fdffabbf37f9d0279fa28615e9afb1f57a",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/profile-base-react/-/profile-base-react-0.1.0.tgz"
+        },
+        "version": "0.1.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-04.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__e00dbc90ffb4927f01afb043f8bdbeb868725fc2.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/profile-base-react",
+          "license": null,
+          "sha256": "cf6d4fca27eff757ad3e3d79d3fc8d1e66935562b9a8d11cba3d6b5c700b382a",
+          "source_path": "packages/profile-base-react/package.json",
+          "version": "0.1.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/profile-base-react"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:04.924232+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "e00dbc90ffb4927f01afb043f8bdbeb868725fc2",
+      "candidate_version": "0.1.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-05",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {},
+        "dist": {
+          "fileCount": 30,
+          "integrity": "sha512-bJ3jpTU+FOLsejncaXaMSHNRIFgTdiAnt9Ti1IozjxHApMT9jbLIy16etdCBjnA58UGCcaZjubxYWHR2U/jACg==",
+          "shasum": "c36ee955b9a5e9b1dabf575d19ee80f3ff5cdf77",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEYCIQDxDXn5IDTLiS7GMLc4GeW367YatDOiB+esTAy/TlRsgQIhAKlXk/8fRBeCONy/btZBggEW9NVjLaXPDnFNjygOBonZ"
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/profile-details-nodejs/-/profile-details-nodejs-0.1.0.tgz",
+          "unpackedSize": 178781
+        },
+        "git_head": "e00dbc90ffb4927f01afb043f8bdbeb868725fc2",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2166,
+          "fetched_at": "2026-09-08T21:15:04.314490+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fprofile-details-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "98cf7899bb0f41e5b90abcaf5efe1c0f4e9a2c6d822c76d4af154adb52b22d23",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fprofile-details-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/profile-details-nodejs",
+        "peer_dependencies": {
+          "supertokens-node": ">=23.0.0"
+        },
+        "repository": {
+          "directory": "packages/profile-details-nodejs",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 47427,
+          "fetched_at": "2026-09-08T21:15:04.663299+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/profile-details-nodejs/-/profile-details-nodejs-0.1.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "ed172ff7060a9acc7b5c970ae2ca69142fedef145385533ca5079068fda76758",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/profile-details-nodejs/-/profile-details-nodejs-0.1.0.tgz"
+        },
+        "version": "0.1.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-05.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__e00dbc90ffb4927f01afb043f8bdbeb868725fc2.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/profile-details-nodejs",
+          "license": null,
+          "sha256": "eec2879d878298d0f112e48fbe67e3ed7726d999d9cb365116d3e205248ec2ae",
+          "source_path": "packages/profile-details-nodejs/package.json",
+          "version": "0.1.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/profile-details-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:05.616526+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "e00dbc90ffb4927f01afb043f8bdbeb868725fc2",
+      "candidate_version": "0.1.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-06",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 102,
+          "integrity": "sha512-e01tVfPEAjDylIVIBJkvqWie+H/8zkTcJH8MeIY5SRPmAoqjmELtZLItIl0uzn//JbJZ3cnaOl6iNsssQ1xO6g==",
+          "shasum": "5361f225bfe67aa4070d7ba67d4471229283f821",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQCDsPYa3NC5G4adKsaCJVepTCBPgtjgY282e6+82ivOKwIgc32QE6vXfQtCGrL6h4zQrNHVODZaP9harLMdSIjz+2k="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/profile-details-react/-/profile-details-react-0.1.0.tgz",
+          "unpackedSize": 853683
+        },
+        "git_head": "e00dbc90ffb4927f01afb043f8bdbeb868725fc2",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2297,
+          "fetched_at": "2026-09-08T21:15:04.927093+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fprofile-details-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "9953330b179f78c918e260624257f0d4bcab5ca76a06246caf02c49baa76dd01",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fprofile-details-react/latest"
+        },
+        "name": "@supertokens-plugins/profile-details-react",
+        "peer_dependencies": {
+          "@supertokens-plugins/profile-base-react": ">=0.1.0",
+          "react": ">=18.3.1",
+          "react-dom": ">=18.3.1",
+          "supertokens-auth-react": ">=0.50.0"
+        },
+        "repository": {
+          "directory": "packages/profile-details-react",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 186154,
+          "fetched_at": "2026-09-08T21:15:05.321360+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/profile-details-react/-/profile-details-react-0.1.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "27a826c3b630146f1846be1ae775a2b86181c9b54f9d243ac704c089ee805a0d",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/profile-details-react/-/profile-details-react-0.1.0.tgz"
+        },
+        "version": "0.1.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-06.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__e00dbc90ffb4927f01afb043f8bdbeb868725fc2.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/profile-details-react",
+          "license": null,
+          "sha256": "df785c1d6a5b7e96c63260e82659b4d952758893fc6a3e30abc4c3417cd43d0a",
+          "source_path": "packages/profile-details-react/package.json",
+          "version": "0.1.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/profile-details-react"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:05.665451+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "bb0f4ae0f9ba7330556ccc438f942f3430e713eb",
+      "candidate_version": "0.3.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-07",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {},
+        "dist": {
+          "fileCount": 19,
+          "integrity": "sha512-sjCC4TkUxs/ry6ThBTkNnb+I7VaG5z4dnFYPzeiQqgbJOnzFju3DFeEBZXQzbyuRvD+6nf9LdggCpzaTiWikpg==",
+          "shasum": "d27f0b4ba7d1968e3bbd92faad1b92f6397ad19c",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEQCIDnmOn/zM6oX0EqmRRrWwNp+60GFOSNJ4vMLCujocv3rAiBDQv2nPXSw3exhoOtuTBYZZA9DzU9w2DI7yqtk3IJ68w=="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/progressive-profiling-nodejs/-/progressive-profiling-nodejs-0.3.0.tgz",
+          "unpackedSize": 154153
+        },
+        "git_head": "bb0f4ae0f9ba7330556ccc438f942f3430e713eb",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2233,
+          "fetched_at": "2026-09-08T21:15:04.962501+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fprogressive-profiling-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "844ec5c624f9d886c96c552c54e83c0ec8e1b9a81abe1f21115eb441113e6bde",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fprogressive-profiling-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/progressive-profiling-nodejs",
+        "peer_dependencies": {
+          "supertokens-node": ">=23.0.0"
+        },
+        "repository": {
+          "directory": "packages/progressive-profiling-nodejs",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 30416,
+          "fetched_at": "2026-09-08T21:15:05.361968+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/progressive-profiling-nodejs/-/progressive-profiling-nodejs-0.3.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "61c8fb079e57b3c13e745792e219b9afe9e87f5305b12045013024e880be84ae",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/progressive-profiling-nodejs/-/progressive-profiling-nodejs-0.3.0.tgz"
+        },
+        "version": "0.3.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-07.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "f6a4b98d928800ac8d86beba8b03e770a99a25d786913b4cc25e67e9730796c9"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "ed279c720ca17f8f460295b832d6a7209ea04a084a182a35cbf0fe9fb2b0f3bc"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "2ff1a2bdfea539114a4d0a6d8d0dfba431635522efb25c718ba2139d8829a7cf"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__bb0f4ae0f9ba7330556ccc438f942f3430e713eb.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/progressive-profiling-nodejs",
+          "license": null,
+          "sha256": "10a0a7e825626f27e760bb3b5217a232c5b33193b78d9537dbc874355a51212f",
+          "source_path": "packages/progressive-profiling-nodejs/package.json",
+          "version": "0.3.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/progressive-profiling-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:05.705087+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "430707998733c1814e1cb87650e3432777aa4861",
+      "candidate_version": "0.3.1",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-08",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 105,
+          "integrity": "sha512-8BTQvuYaa+7uKFN0fWjBx17L7E0TKaBbQ7ujbkrVyMtCxuffTu4YSafnuDPpT/FVsE4hu2YdNgigrwOSii/O7g==",
+          "shasum": "12141f81eed5dab8296743e4183a89b1c4b97106",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEQCIGLCWgNP8+M3KUHiPgLe0N1dk2HrgkQKjDOo3lleg7ScAiAJnkA+8kKAgi3xFTWcP7i3Sk7TPichSkq9KRXLOMktcA=="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/progressive-profiling-react/-/progressive-profiling-react-0.3.1.tgz",
+          "unpackedSize": 855773
+        },
+        "git_head": "430707998733c1814e1cb87650e3432777aa4861",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2268,
+          "fetched_at": "2026-09-08T21:15:04.972283+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fprogressive-profiling-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "49d45d2c688ee49fabdabf14057189e7f2583ec7113a6724ab0a8e6c4da07e3a",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fprogressive-profiling-react/latest"
+        },
+        "name": "@supertokens-plugins/progressive-profiling-react",
+        "peer_dependencies": {
+          "react": ">=18.3.1",
+          "react-dom": ">=18.3.1",
+          "supertokens-auth-react": ">=0.50.0"
+        },
+        "repository": {
+          "directory": "packages/progressive-profiling-react",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 194101,
+          "fetched_at": "2026-09-08T21:15:05.418031+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/progressive-profiling-react/-/progressive-profiling-react-0.3.1.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "4337c0f6d3eee93aab1978fc335ed3be31676b8f710787022ed49bd9379c6ce6",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/progressive-profiling-react/-/progressive-profiling-react-0.3.1.tgz"
+        },
+        "version": "0.3.1"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-08.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "f6a4b98d928800ac8d86beba8b03e770a99a25d786913b4cc25e67e9730796c9"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "ed279c720ca17f8f460295b832d6a7209ea04a084a182a35cbf0fe9fb2b0f3bc"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "2ff1a2bdfea539114a4d0a6d8d0dfba431635522efb25c718ba2139d8829a7cf"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__430707998733c1814e1cb87650e3432777aa4861.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/progressive-profiling-react",
+          "license": null,
+          "sha256": "e346462c8f2815c6ece2c10a2078f836816732a500e3e4b33410e67586b3994d",
+          "source_path": "packages/progressive-profiling-react/package.json",
+          "version": "0.3.1"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/progressive-profiling-react"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:05.855007+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+      "candidate_version": "0.2.1",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-09",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {},
+        "dist": {
+          "fileCount": 17,
+          "integrity": "sha512-To6RdydRN4XVfibxX2YbD3XHbjtghdBtpXX9V+opoU/JOAlV2r3fK3VRiUW5a2psbsuXLv1pLW8UZfk/xhxFkQ==",
+          "shasum": "63601ff10bfbca1a0fc153f2ac64773104f7db35",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEQCIAW2N+VC3ge3vkiXJLpHzP1eK5VAlIXfZ46eLscMrfcTAiBLEMRX/lKdU5zrnzLaT2zyUvG0JSvvdxedd9XVw1SrgA=="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/tenant-discovery-nodejs/-/tenant-discovery-nodejs-0.2.1.tgz",
+          "unpackedSize": 74866
+        },
+        "git_head": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2175,
+          "fetched_at": "2026-09-08T21:15:05.150562+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2ftenant-discovery-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "f1d88b32745c339ccde4eaa71e5ada774fae9dbaa761aa4739ff1fef93c38148",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2ftenant-discovery-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/tenant-discovery-nodejs",
+        "peer_dependencies": {
+          "supertokens-node": ">=23.0.0"
+        },
+        "repository": {
+          "directory": "packages/tenant-discovery-nodejs",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 19396,
+          "fetched_at": "2026-09-08T21:15:05.535793+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/tenant-discovery-nodejs/-/tenant-discovery-nodejs-0.2.1.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "bd5141a4903e908e0da770f32d54aee4f0f09874e6590087db8fa84055eda890",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/tenant-discovery-nodejs/-/tenant-discovery-nodejs-0.2.1.tgz"
+        },
+        "version": "0.2.1"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-09.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__c5926c043bd81934d9c50be0b09beb363e97d77f.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/tenant-discovery-nodejs",
+          "license": null,
+          "sha256": "8479b0de23d13fcb282bf87cbd4943225233b9348314663a7fe3ae923c7ab7b5",
+          "source_path": "packages/tenant-discovery-nodejs/package.json",
+          "version": "0.2.1"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/tenant-discovery-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:06.539474+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "8cc15ce39767b9c82604ab8ee8979080af3a86c4",
+      "candidate_version": "0.1.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-10",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 47,
+          "integrity": "sha512-Fp561gF30/hGTxGyLcu9FATNPhxCr0VWxdcEya797NDgPkJpM+c8Mm+eL038jN9yEbgLE5/YfTn1a1dpqlvh2w==",
+          "shasum": "715b04e3ba581c3687dc13ae9bcefdf347577457",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEYCIQC/qfsIhrPWRIoeQHWm/sbKM4POFLv+SFBG6DvU8MKo2wIhAKNz/gyPePQ1x2KiYA87SmRpZd0GVKEwPcTsdfyJCOm/"
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/tenant-discovery-react/-/tenant-discovery-react-0.1.0.tgz",
+          "unpackedSize": 82009
+        },
+        "git_head": "8cc15ce39767b9c82604ab8ee8979080af3a86c4",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2327,
+          "fetched_at": "2026-09-08T21:15:05.830169+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2ftenant-discovery-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "7e22d9da8049ec6858e4fcdc3f5d923b2a485074e89b4ea73d1276dcfa81eba7",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2ftenant-discovery-react/latest"
+        },
+        "name": "@supertokens-plugins/tenant-discovery-react",
+        "peer_dependencies": {
+          "react": ">=18.3.1",
+          "react-dom": ">=18.3.1",
+          "supertokens-auth-react": ">=0.50.0",
+          "supertokens-web-js": ">=0.16.0"
+        },
+        "repository": {
+          "directory": "packages/tenant-discovery-react",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 24253,
+          "fetched_at": "2026-09-08T21:15:06.253579+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/tenant-discovery-react/-/tenant-discovery-react-0.1.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "1e970e45ce3e5372ada87abdd367f669aa486a3ef90403a53e85147f7be6811b",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/tenant-discovery-react/-/tenant-discovery-react-0.1.0.tgz"
+        },
+        "version": "0.1.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-10.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "835192449ac80c9611eb2b26579ff0bc4a54dfa9e6428c2bbdd26f06cd00e5f2"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d0f89791397328b6901a8ebd0cb67a95b1fa24a0567ef5c34d6f4f4008364fcd"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__8cc15ce39767b9c82604ab8ee8979080af3a86c4.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/tenant-discovery-react",
+          "license": null,
+          "sha256": "7c6f1da8e83d1b0b6a3924422facddb6a7cda123a46bff0d165f74e1be62a1d5",
+          "source_path": "packages/tenant-discovery-react/package.json",
+          "version": "0.1.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/tenant-discovery-react"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:06.520361+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "350223ffcd58295843129cfe77f1ca756be0c634",
+      "candidate_version": "0.2.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-11",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {},
+        "dist": {
+          "fileCount": 22,
+          "integrity": "sha512-FGHdbV/3OXTnsPNP3z1K9kiZbYvFKOlAAksUjBAhJQlwRXpIhJWzY9M+RlI86bgeI2qxOzJj2n1qexRA1olH5Q==",
+          "shasum": "fa179ec25ba3b17c8274bf287d10250e410af397",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQDdk3L6wqBay7ZZY8OgOTdy0tzH5bZBKOAmbxWd+R5YtwIgec3t1+Fi+zH6Oat8b9iKaYxj8c/e5WsBKGNHWvumpjg="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/tenants-nodejs/-/tenants-nodejs-0.2.0.tgz",
+          "unpackedSize": 292667
+        },
+        "git_head": "350223ffcd58295843129cfe77f1ca756be0c634",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2149,
+          "fetched_at": "2026-09-08T21:15:05.881343+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2ftenants-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "21c6bbcea730df1c4a000e03797ae583a740753113e6f40f62902a3629125170",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2ftenants-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/tenants-nodejs",
+        "peer_dependencies": {
+          "nodemailer": "^6.0.0",
+          "supertokens-node": ">=23.0.0"
+        },
+        "repository": {
+          "directory": "packages/tenants-nodejs",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 49488,
+          "fetched_at": "2026-09-08T21:15:06.238888+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/tenants-nodejs/-/tenants-nodejs-0.2.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "3ce02b11674d08de9406d141073ac7c1582680faa75ce5c1058af833db09bd73",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/tenants-nodejs/-/tenants-nodejs-0.2.0.tgz"
+        },
+        "version": "0.2.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-11.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "f6a4b98d928800ac8d86beba8b03e770a99a25d786913b4cc25e67e9730796c9"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "ed279c720ca17f8f460295b832d6a7209ea04a084a182a35cbf0fe9fb2b0f3bc"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "2ff1a2bdfea539114a4d0a6d8d0dfba431635522efb25c718ba2139d8829a7cf"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__350223ffcd58295843129cfe77f1ca756be0c634.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/tenants-nodejs",
+          "license": null,
+          "sha256": "06c6b8cbf297575ca4c569f129c39e93acacd005a93bf53368278ec4198d9222",
+          "source_path": "packages/tenants-nodejs/package.json",
+          "version": "0.2.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/tenants-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:06.671299+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "350223ffcd58295843129cfe77f1ca756be0c634",
+      "candidate_version": "0.2.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-12",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 183,
+          "integrity": "sha512-2mrujXceG8fl86x4PtKP8SPq1NfIoZ4ksZGzoZKAM46Np4PsBZ+NyuXPVqxBhiAill74z4CsZAwg1YclHTLlyQ==",
+          "shasum": "2e2bfceb2e38a72364f344dcc842617c77c58b11",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQDa6tFWFu86UnKrPErnTb72PkFZvbp7VqH1lYaNZNWWMwIgIASM9+aToterkbqYHEeY45D/Hgq22+a3smHKSemSsmM="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/tenants-react/-/tenants-react-0.2.0.tgz",
+          "unpackedSize": 930530
+        },
+        "git_head": "350223ffcd58295843129cfe77f1ca756be0c634",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2503,
+          "fetched_at": "2026-09-08T21:15:06.016930+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2ftenants-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "e62f4e9ff9ddcbf64d3045766806aea50b948414fb60b0c827cb61c734f666e8",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2ftenants-react/latest"
+        },
+        "name": "@supertokens-plugins/tenants-react",
+        "peer_dependencies": {
+          "@supertokens-plugins/profile-base-react": ">=0.0.1",
+          "react": ">=18.3.1",
+          "react-dom": ">=18.3.1",
+          "supertokens-auth-react": ">=0.50.0",
+          "supertokens-web-js": ">=0.16.0"
+        },
+        "repository": {
+          "directory": "packages/tenants-react",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 211741,
+          "fetched_at": "2026-09-08T21:15:06.393903+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/tenants-react/-/tenants-react-0.2.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "0bc0b5728d94e59e09f7778c5bcdc7ef504c569d0936b714671dcdce8fe4f0d4",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/tenants-react/-/tenants-react-0.2.0.tgz"
+        },
+        "version": "0.2.0"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-12.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "f6a4b98d928800ac8d86beba8b03e770a99a25d786913b4cc25e67e9730796c9"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "ed279c720ca17f8f460295b832d6a7209ea04a084a182a35cbf0fe9fb2b0f3bc"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "2ff1a2bdfea539114a4d0a6d8d0dfba431635522efb25c718ba2139d8829a7cf"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__350223ffcd58295843129cfe77f1ca756be0c634.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/tenants-react",
+          "license": null,
+          "sha256": "ab17dee5f49692172ae9c11b09e90c12b61cc9d455b3c337fabeba1cb56656f2",
+          "source_path": "packages/tenants-react/package.json",
+          "version": "0.2.0"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/tenants-react"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:06.658237+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+      "candidate_version": "0.2.1",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-13",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {},
+        "dist": {
+          "fileCount": 19,
+          "integrity": "sha512-eiclfJPsmurgBEi9fMW3ycAdb0v7MOZCm8gV8B1Ac+MnpSRlVTdbtiKmXh+vZ6cFNe8mzHj/nsxmnVi59uj1ww==",
+          "shasum": "7a731f101d9ba3dddc0f3d946ba00325521da964",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEQCIHw/AyAD7J3HWIESYvoe4k9c2vYqovEg9dsl+nmyjFQVAiAfm+r0fQvK6DYEBkGTCD9psYFB86j1wSP6i9Plz+tr4g=="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/user-banning-nodejs/-/user-banning-nodejs-0.2.1.tgz",
+          "unpackedSize": 121336
+        },
+        "git_head": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2121,
+          "fetched_at": "2026-09-08T21:15:06.050170+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fuser-banning-nodejs/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "0871c69de6756d1fc6140ddfaad9990eb4a1648844cd443f23d547d5a05c9824",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fuser-banning-nodejs/latest"
+        },
+        "name": "@supertokens-plugins/user-banning-nodejs",
+        "peer_dependencies": {
+          "supertokens-node": ">=23.0.0"
+        },
+        "repository": {
+          "directory": "packages/user-banning-nodejs",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 26341,
+          "fetched_at": "2026-09-08T21:15:06.387069+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/user-banning-nodejs/-/user-banning-nodejs-0.2.1.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "2b503114b2c48e0f108be15de277bcdd4c3cfb7c3df6390e16a774c397e30e1b",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/user-banning-nodejs/-/user-banning-nodejs-0.2.1.tgz"
+        },
+        "version": "0.2.1"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-13.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__c5926c043bd81934d9c50be0b09beb363e97d77f.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/user-banning-nodejs",
+          "license": null,
+          "sha256": "3b56ca95c642b764a75ccbe3824d4d75e8384f1fa41d25282641f4e3ab069883",
+          "source_path": "packages/user-banning-nodejs/package.json",
+          "version": "0.2.1"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/user-banning-nodejs"
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:07.357877+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+      "candidate_version": "0.2.1",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "PLGP-14",
+      "license_audit": "Apache-2.0 declared in pinned README; missing license text and transitive closure remain review gaps",
+      "license_declaration_evidence": {
+        "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+        "license": "Apache-2.0",
+        "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+      },
+      "notice_gap": "Published npm archive omits license text. Retain pinned repository license and package provenance before redistribution.",
+      "npm": {
+        "dependencies": {
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 48,
+          "integrity": "sha512-+hMABSNfHino4kiohYTFl/5+cqLwMPeGNH8PaTxW3I92BNRWXvMzgUQvAWu/V3BgyilQHwdlmMwOf3SGUmQn9A==",
+          "shasum": "748de98865f19ef0ddf2f4a8cc8d6069ef74e8be",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQCGX7oM5AAEthQvetaWpDpkrMFs5eOO+cLCSDoAvspd+gIgTstWdLzwnpW2uIVx74fHNJWjw3eF0090wimQkGON2B8="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/@supertokens-plugins/user-banning-react/-/user-banning-react-0.2.1.tgz",
+          "unpackedSize": 60523
+        },
+        "git_head": "c5926c043bd81934d9c50be0b09beb363e97d77f",
+        "license": null,
+        "metadata_evidence": {
+          "bytes": 2143,
+          "fetched_at": "2026-09-08T21:15:06.723828+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins%2fuser-banning-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "18083f4d0208b9d09c8f1c2f24a3fb31f99f7afe6792863bb6dd4a4990fdc74e",
+          "url": "https://registry.npmjs.org/@supertokens-plugins%2fuser-banning-react/latest"
+        },
+        "name": "@supertokens-plugins/user-banning-react",
+        "peer_dependencies": {
+          "react": ">=18.3.1",
+          "react-dom": ">=18.3.1",
+          "supertokens-auth-react": ">=0.50.0",
+          "supertokens-web-js": ">=0.16.0"
+        },
+        "repository": {
+          "directory": "packages/user-banning-react",
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-plugins.git"
+        },
+        "tarball_evidence": {
+          "bytes": 18179,
+          "fetched_at": "2026-09-08T21:15:07.051692+00:00",
+          "final_url": "https://registry.npmjs.org/@supertokens-plugins/user-banning-react/-/user-banning-react-0.2.1.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "083d7276ff0fd403b54f5e266f6dd3ce4bb26a1109d0cef7d1173e7c1bc39b15",
+          "url": "https://registry.npmjs.org/@supertokens-plugins/user-banning-react/-/user-banning-react-0.2.1.tgz"
+        },
+        "version": "0.2.1"
+      },
+      "package_license_files": {},
+      "package_manifest": "reuse/package-files/PLGP-14.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-plugins",
+      "selected_version": null,
+      "source_license_declarations": {
+        "README.md": {
+          "evidence_type": "Explicit README declaration; referenced LICENSE file missing",
+          "license": "Apache-2.0",
+          "sha256": "94b0ea321493c3577e06fc49bc55eb15800215018f757f6268dcfd802313651e"
+        },
+        "packages/captcha-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "a527e61f5046914ab37e9f75864dad2fa5c12bce9702cae352866ad7722900c1"
+        },
+        "packages/captcha-react/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "9d446bb2df0d049f95e6b22d11693f8102249320d07fde93ab3ba8c24c68f922"
+        },
+        "packages/opentelemetry-nodejs/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "d3af5c1bc7008d90d7f734950a65760ce56c41071f9293de41b24026786d91ac"
+        },
+        "shared/tsconfig/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "ea05bb40fa85d15bef1cfaab25619594b04bc6986faa5e5ee38329f51ccdc966"
+        }
+      },
+      "source_license_files": {},
+      "source_manifest": "reuse/files/supertokens__supertokens-plugins__c5926c043bd81934d9c50be0b09beb363e97d77f.json",
+      "source_package_declarations": [
+        {
+          "directory": "packages/user-banning-react",
+          "license": null,
+          "sha256": "042e7dd409362fae160e5a3f9469f26aa74a84c7801595c79cb748b224a118c2",
+          "source_path": "packages/user-banning-react/package.json",
+          "version": "0.2.1"
+        }
+      ],
+      "status": "planned",
+      "upstream_package": "@supertokens-plugins/user-banning-react"
+    }
+  ],
+  "sdks": [
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:01.919395+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "candidate_version": "24.0.3",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-01",
+      "name": "Node.js",
+      "npm": {
+        "dependencies": {
+          "buffer": "^6.0.3",
+          "content-type": "^1.0.5",
+          "cookie": "^0.7.2",
+          "cross-fetch": "^4.1.0",
+          "debug": "^4.3.3",
+          "jose": "^4.13.1",
+          "libphonenumber-js": "^1.9.44",
+          "nodemailer": "^8.0.2",
+          "pako": "^2.1.0",
+          "pkce-challenge": "^3.0.0",
+          "process": "^0.11.10",
+          "set-cookie-parser": "^2.7.1",
+          "supertokens-js-override": "^0.0.4",
+          "tldts": "^6.1.48",
+          "twilio": "^4.19.3"
+        },
+        "dist": {
+          "fileCount": 1015,
+          "integrity": "sha512-bidA9avgA5gBSus4p/H2HHahARj44qGsRJeXN8p7NMqjDN+F80aBsOF/aozB+xnm+ELOKQlQFTDgcAG8Ag/5QQ==",
+          "shasum": "3091a7b91871ffc099ae29ca4fb7ba840320eab3",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEYCIQCP+qD44nClOnC/7F6ibgcuCljEnifN3QBo/ZdW3zoR6gIhAJM0W52yqYqyVRmpV13mBkSA2i3TwcDC810gw6be7B7g"
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/supertokens-node/-/supertokens-node-24.0.3.tgz",
+          "unpackedSize": 4746822
+        },
+        "git_head": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+        "license": "Apache-2.0",
+        "metadata_evidence": {
+          "bytes": 5845,
+          "fetched_at": "2026-09-08T21:15:01.335484+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-node/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "58a43ae96dc5caa6fd0da1770017ee02d52f68a1128551ad8362d975e36a8d20",
+          "url": "https://registry.npmjs.org/supertokens-node/latest"
+        },
+        "name": "supertokens-node",
+        "peer_dependencies": {},
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-node.git"
+        },
+        "tarball_evidence": {
+          "bytes": 554142,
+          "fetched_at": "2026-09-08T21:15:01.529636+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-node/-/supertokens-node-24.0.3.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "fcf2a48f43513b016feb23ad58b85ab79c5cc33e7fc9144cd123fbd9a9212774",
+          "url": "https://registry.npmjs.org/supertokens-node/-/supertokens-node-24.0.3.tgz"
+        },
+        "version": "24.0.3"
+      },
+      "package_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+        }
+      },
+      "package_manifest": "reuse/package-files/SDKP-01.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-node",
+      "selected_version": null,
+      "source_license_declarations": {
+        ".github/helpers/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "461cb1c87ecedc3e34c48a5b886ac1b5afbbc1feb11b2d3b167ad0b80454533b"
+        },
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+        },
+        "examples/aws/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/aws/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "5a11b6dfe316422838f7d6a72e519359182476a4c181674430c5f5a50bb9dfbc"
+        },
+        "examples/cloudflare-workers/with-email-password-hono-be-only/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "1d88234e25aa37703983702c068ee659ff6aaeea25322299c5a47c8d7b89d1ba"
+        },
+        "examples/cloudflare-workers/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "5dd85ec3d1a88287835852a3b20ffa3beff4e34605b30ab16a00961e07ddb042"
+        },
+        "examples/cloudflare-workers/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/cloudflare-workers/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "eeb5c611410b8791118b3acf8c30fb20e04e8b3f911788643daf0e22db8a9766"
+        },
+        "examples/express/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "f9d1bf8112b2059b84afaf1ef8a96924de0af42d19dcca940350e17fffe838d1"
+        },
+        "examples/express/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/express/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "d27b6485bb4ec0a1390abda7745e4ae1d4d05a9031b677c2ca46d1f142563abb"
+        },
+        "examples/express/with-m2m/assistant-cli/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "59f4ef5750806d7c9caac6baf04053c71d36b33e72e9669f2bf211f9de59d400"
+        },
+        "examples/express/with-m2m/auth-provider-service/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "3a5c12fc1de39283494162a430838c0bcf3fa4b8798e684794a0ca33f1a4309b"
+        },
+        "examples/express/with-m2m/calendar-service/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "847378c64a0e9d127a35c2d6a0db544d7eb600392244e4d4fdad1fbf7f2b901a"
+        },
+        "examples/express/with-m2m/note-service/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "847378c64a0e9d127a35c2d6a0db544d7eb600392244e4d4fdad1fbf7f2b901a"
+        },
+        "examples/express/with-m2m/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "815aad5072d938d552208b5007f3c4fbaafa05267a6a485ff3f8ba7ab63b0a4c"
+        },
+        "examples/fastify/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "f9d1bf8112b2059b84afaf1ef8a96924de0af42d19dcca940350e17fffe838d1"
+        },
+        "examples/fastify/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/fastify/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "84d86146e60bf4e51165202af741361e4556d4034574fd4e6cfee84ceb8e5b34"
+        },
+        "examples/hapi/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "f9d1bf8112b2059b84afaf1ef8a96924de0af42d19dcca940350e17fffe838d1"
+        },
+        "examples/hapi/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/hapi/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "5c09c65f4592d644db9f0b183a311a2911b3d2bdbc08e9b4cbb720db79ac156c"
+        },
+        "examples/koa/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "f9d1bf8112b2059b84afaf1ef8a96924de0af42d19dcca940350e17fffe838d1"
+        },
+        "examples/koa/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/koa/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "91aa6f9b3dcc6720bb2e83f1611ea995e8dfebb00c280311912c06c54d58d4e4"
+        },
+        "examples/loopback/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "f9d1bf8112b2059b84afaf1ef8a96924de0af42d19dcca940350e17fffe838d1"
+        },
+        "examples/loopback/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/loopback/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "953624724ef82695680ac357dfae48fa4049b92e10a7371a1acb288d5803ec70"
+        },
+        "examples/nest/with-emailpassword/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "UNLICENSED",
+          "sha256": "6cdb23f7d73bffde7d35030fd9267f9c3382b4df722eee526505e48fde638469"
+        },
+        "examples/nest/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/nest/with-emailpassword/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "b91853bc83444590b20cd0da845793c4d8fca8373cb5aa8205579c5a081f015c"
+        },
+        "package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "824d3e0fcaa1fa7434a2e61008bff7317d418219db88ae383f024b4bec60b618"
+        },
+        "test/auth-react-server/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "0da10913ddf2f5d0bf5d2c73b78974cb229ca8e8a4362e9e71067fdb8158bad0"
+        },
+        "test/frontendIntegration/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "3d0f3e9bd4dded0683e0cbb41e1f187d361bfd1b7efd52f8b904781f8088bbc2"
+        },
+        "test/with-typescript/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "5ee5bd6a0f6acb4f41f3df81af387f7209a5a859125d2f4f8b477fbbf9a6ad2e"
+        }
+      },
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+        },
+        "examples/aws/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/cloudflare-workers/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/express/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/fastify/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/hapi/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/koa/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/loopback/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/nest/with-emailpassword/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-node__9b82aefb46da4c0f0a388d8f6656c39a62d7642c.json",
+      "source_package_declarations": [
+        {
+          "directory": ".",
+          "license": "Apache-2.0",
+          "sha256": "824d3e0fcaa1fa7434a2e61008bff7317d418219db88ae383f024b4bec60b618",
+          "source_path": "package.json",
+          "version": "24.0.3"
+        }
+      ],
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:04.051042+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV commit query; coverage is ecosystem dependent and is not a transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "b498da1a6d09ca84ca204ac881df76900df19175",
+      "candidate_version": "v0.31.3",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-02",
+      "name": "Python",
+      "qualification": "unverified",
+      "release_published_at": "2026-05-06T21:13:21Z",
+      "repository": "supertokens/supertokens-python",
+      "selected_version": null,
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "8350e4d0ca2abfd8f8a34484f567a288c3bff9f0b8e55c4080c0c7d67902d357"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-python.json",
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:02.747501+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV commit query; coverage is ecosystem dependent and is not a transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "11fc3b06a06a1050d95dbdb4c404c24b0f8639c6",
+      "candidate_version": "v0.26.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-03",
+      "name": "Go",
+      "qualification": "unverified",
+      "release_published_at": "2026-07-24T11:30:33Z",
+      "repository": "supertokens/supertokens-golang",
+      "selected_version": null,
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-golang.json",
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:01.856562+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "be2e0fd7dcade8352cdc9639abe968e5cda5b1cd",
+      "candidate_version": "0.16.0",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-04",
+      "name": "Vanilla JavaScript",
+      "npm": {
+        "dependencies": {
+          "@simplewebauthn/browser": "^13.0.0",
+          "supertokens-js-override": "0.0.4",
+          "supertokens-website": "^20.1.5"
+        },
+        "dist": {
+          "fileCount": 307,
+          "integrity": "sha512-wuIdlVJtOsx4ZX0kCyl8lxmmAodXLlMAniZEHyVhsH2fhersh7bMrHpvgN9WoC470HYNC22qpHdlJngvyh/cSA==",
+          "shasum": "2dedb7e49d84da2ffa8692f37416bb104d492345",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEYCIQDwKHx0BsnGJIfloOG3meaVWkLVNCSkrqMIGveOpXl3cwIhAJNsipBaYcuJHW0npvnLutb0T6FDMgCwNm0MQInFJYZR"
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/supertokens-web-js/-/supertokens-web-js-0.16.0.tgz",
+          "unpackedSize": 1799869
+        },
+        "git_head": "be2e0fd7dcade8352cdc9639abe968e5cda5b1cd",
+        "license": "Apache-2.0",
+        "metadata_evidence": {
+          "bytes": 3885,
+          "fetched_at": "2026-09-08T21:15:01.320421+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-web-js/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "68d3b8cc23311502b24199c1c0c59a4955e3580708e7b482b45b749554a1d741",
+          "url": "https://registry.npmjs.org/supertokens-web-js/latest"
+        },
+        "name": "supertokens-web-js",
+        "peer_dependencies": {},
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-web-js.git"
+        },
+        "tarball_evidence": {
+          "bytes": 219851,
+          "fetched_at": "2026-09-08T21:15:01.491884+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-web-js/-/supertokens-web-js-0.16.0.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "42b954ea92198bc390f5d8eae4743affda3c5b5404939329b4109df9adf6d072",
+          "url": "https://registry.npmjs.org/supertokens-web-js/-/supertokens-web-js-0.16.0.tgz"
+        },
+        "version": "0.16.0"
+      },
+      "package_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "6044e5052ecfdd1b4600c313a4c9558af8bcd904e0b42f4f2848511823e68816"
+        }
+      },
+      "package_manifest": "reuse/package-files/SDKP-04.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-web-js",
+      "selected_version": null,
+      "source_license_declarations": {
+        ".github/helpers/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "461cb1c87ecedc3e34c48a5b886ac1b5afbbc1feb11b2d3b167ad0b80454533b"
+        },
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "6044e5052ecfdd1b4600c313a4c9558af8bcd904e0b42f4f2848511823e68816"
+        },
+        "package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "5144edffcd8fa6d8478f6ab920cbe6a4c336964fabb121c45b6f0e85960eadd3"
+        },
+        "test/with-typescript/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "447086153409124c8706f9086662db69031e2da925caf28419df4102d8f0efe0"
+        }
+      },
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "6044e5052ecfdd1b4600c313a4c9558af8bcd904e0b42f4f2848511823e68816"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-web-js__be2e0fd7dcade8352cdc9639abe968e5cda5b1cd.json",
+      "source_package_declarations": [
+        {
+          "directory": ".",
+          "license": "Apache-2.0",
+          "sha256": "5144edffcd8fa6d8478f6ab920cbe6a4c336964fabb121c45b6f0e85960eadd3",
+          "source_path": "package.json",
+          "version": "0.16.0"
+        }
+      ],
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:02.621938+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "5d080836741561af3bda5461e1e993d2c4088b3b",
+      "candidate_version": "0.51.3",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-05",
+      "name": "React",
+      "npm": {
+        "dependencies": {
+          "@simplewebauthn/types": "^12.0.0",
+          "intl-tel-input": "^17.0.19",
+          "prop-types": "*",
+          "react-qr-code": "^2.0.18",
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 424,
+          "integrity": "sha512-Gpa/CeLJAP6MKMSvTt6T1xs7SkqM5BaJBuhwPgm/s0IrI+CgCt7AMM1nfKGden2iEU9vsHkMXQVaSjbANY/Yhg==",
+          "shasum": "496dd3bfe3642f531515bab701f67c56d68ef49c",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIQD6IpsLVkXsBgCtkb0pUoVh7fmN3YVx2Gfah4PGnBBxDgIgSLcpssEQr4Bg/gfnrTi5h/OhkskuUo9guCnCz8ZqTmc="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/supertokens-auth-react/-/supertokens-auth-react-0.51.3.tgz",
+          "unpackedSize": 3251395
+        },
+        "git_head": "5d080836741561af3bda5461e1e993d2c4088b3b",
+        "license": "Apache-2.0",
+        "metadata_evidence": {
+          "bytes": 7914,
+          "fetched_at": "2026-09-08T21:15:02.118102+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-auth-react/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "136dfb8449f9004db7274df81cb312142e4a789f8d81713973b73cab4d088e41",
+          "url": "https://registry.npmjs.org/supertokens-auth-react/latest"
+        },
+        "name": "supertokens-auth-react",
+        "peer_dependencies": {
+          "react": ">=16.8.0",
+          "react-dom": ">=16.8.0",
+          "supertokens-web-js": "^0.16.0"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-auth-react.git"
+        },
+        "tarball_evidence": {
+          "bytes": 474255,
+          "fetched_at": "2026-09-08T21:15:02.295500+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-auth-react/-/supertokens-auth-react-0.51.3.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "ba7ac9975ce0c0a4d69973c807d92661e48d4e8a0b93363d0cfa1cf0a219da3d",
+          "url": "https://registry.npmjs.org/supertokens-auth-react/-/supertokens-auth-react-0.51.3.tgz"
+        },
+        "version": "0.51.3"
+      },
+      "package_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        }
+      },
+      "package_manifest": "reuse/package-files/SDKP-05.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-auth-react",
+      "selected_version": null,
+      "source_license_declarations": {
+        ".github/helpers/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "461cb1c87ecedc3e34c48a5b886ac1b5afbbc1feb11b2d3b167ad0b80454533b"
+        },
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-account-linking/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "0f8d5b21becaa77f9ea3b86003fd51d2d197e786c08de98587b8ea366bb9d247"
+        },
+        "examples/with-account-linking/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-account-linking/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "4a3210065e834cdcf6891e023d53505426b186072cb74da8735026edd01c28e7"
+        },
+        "examples/with-emailpassword-vercel/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-emailverification-then-password-thirdpartyemailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-hash-router/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "b90b48472546af1b861121c1adab2bc5661be7a9d0d38f2fb6e20e87bba5c8db"
+        },
+        "examples/with-hash-router/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-hash-router/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "c446a7dd01b9bf5fe971066d82fd39648eca249c2ad8c9b6df3449d4fcdf0d93"
+        },
+        "examples/with-hasura-thirdpartyemailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-i18next/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-localstorage/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "b90b48472546af1b861121c1adab2bc5661be7a9d0d38f2fb6e20e87bba5c8db"
+        },
+        "examples/with-localstorage/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-localstorage/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "00f003db6aae5ac75f48b4052e383d0013e0188ce63f758d0025f54f7eb062a6"
+        },
+        "examples/with-multifactorauth-phone-chooser/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "0f8d5b21becaa77f9ea3b86003fd51d2d197e786c08de98587b8ea366bb9d247"
+        },
+        "examples/with-multifactorauth-phone-chooser/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-multifactorauth-phone-chooser/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "21b4c827c7370c5274f8a733314014535b6893644e9773c4e9139f09157b792d"
+        },
+        "examples/with-multifactorauth-recovery-codes/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "0f8d5b21becaa77f9ea3b86003fd51d2d197e786c08de98587b8ea366bb9d247"
+        },
+        "examples/with-multifactorauth-recovery-codes/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-multifactorauth-recovery-codes/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "6cdec8dc196fba7102174c814ef20d660acd2235930973690fbde511f5a26628"
+        },
+        "examples/with-multiple-email-sign-in/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-next-iframe/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "c35ac329de214acb27707cd447381262fd9638cbc5c4ae0b4ec0c9ef657a7a3f"
+        },
+        "examples/with-no-session-on-sign-up-thirdpartyemailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-one-login-many-subdomains/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "dfb4515f311714771eb795329b505b53875a19c5746116f7ea2e4f873c126128"
+        },
+        "examples/with-sign-in-up-split-emailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdparty-google-onetap/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "2035b7abd3debc2138629363a5eedd6e518532918047e4b150c77c1fe230fe60"
+        },
+        "examples/with-thirdparty-google-onetap/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdparty-google-onetap/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "99ce512c1bd81ea9d0fd896b85f28ffe3e2519679903e59e9057305f6c455420"
+        },
+        "examples/with-thirdparty-popup/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "aa71d4c526699d2168c7020d4e532b2920075628295bc7fc23bbd56dfe13db6d"
+        },
+        "examples/with-thirdparty-popup/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdparty-popup/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "be5cefa98bb725716a308752751faf57d2e47297247fb038d140cef8febf9ce5"
+        },
+        "examples/with-thirdpartyemailpassword-passwordless/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdpartypasswordless-electron/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "MIT",
+          "sha256": "60a56af09c47e4a128455202f967cdf00271514d4e21900d277346fe1f09c536"
+        },
+        "examples/with-update-email-post-verification/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "98ccfbc76ad553c7cb173a9d70fdee80301d242d6630fb2336b7b209318885e9"
+        },
+        "examples/with-update-email-post-verification/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-update-email-post-verification/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "44efc462640f9d32449bf6775192536d9aaf54111013ee48aadb2ed14fbf0588"
+        },
+        "package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache-2.0",
+          "sha256": "aa2ef546adf56a0d4144ebad07816a584fe95b976d108f4e4021ef413c97a581"
+        },
+        "test/server/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "7847f8528500bcf69854755f69d663faac481637b4cdb52b0aa84bd683d09e0b"
+        }
+      },
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-account-linking/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-emailpassword-vercel/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-emailverification-then-password-thirdpartyemailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-hash-router/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-hasura-thirdpartyemailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-i18next/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-localstorage/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-multifactorauth-phone-chooser/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-multifactorauth-recovery-codes/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-multiple-email-sign-in/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-no-session-on-sign-up-thirdpartyemailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-sign-in-up-split-emailpassword/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdparty-google-onetap/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdparty-popup/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-thirdpartyemailpassword-passwordless/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        },
+        "examples/with-update-email-post-verification/frontend/LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-auth-react__5d080836741561af3bda5461e1e993d2c4088b3b.json",
+      "source_package_declarations": [
+        {
+          "directory": ".",
+          "license": "Apache-2.0",
+          "sha256": "aa2ef546adf56a0d4144ebad07816a584fe95b976d108f4e4021ef413c97a581",
+          "source_path": "package.json",
+          "version": "0.51.3"
+        }
+      ],
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:02.573521+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV exact direct package query; not transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "ebae74d8661e24759f6f943d457d045d08087e61",
+      "candidate_version": "5.1.5",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-06",
+      "name": "React Native",
+      "npm": {
+        "dependencies": {
+          "base-64": "^1.0.0",
+          "supertokens-js-override": "^0.0.4"
+        },
+        "dist": {
+          "fileCount": 45,
+          "integrity": "sha512-t3bq5cCIVmAKdSXdW80W9JbXUDGZQZN9ZN4kySG+oavLpOns6ep8E48Ye5UQMe1GVnAAWL2MuEWaYvVj/huBuw==",
+          "shasum": "9d390d461e0332901926fcf4692dd3c277c386d3",
+          "signatures": [
+            {
+              "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+              "sig": "MEUCIDuzbgRBRBci0cQwY+ACmeAQcjLCB2OZ09z9r7pgvz8YAiEA3b4KAoT8URQcN8idQjQwQNhZ3EqoV90JJt/dnC17Tgo="
+            }
+          ],
+          "tarball": "https://registry.npmjs.org/supertokens-react-native/-/supertokens-react-native-5.1.5.tgz",
+          "unpackedSize": 152585
+        },
+        "git_head": "ebae74d8661e24759f6f943d457d045d08087e61",
+        "license": "Apache 2.0",
+        "metadata_evidence": {
+          "bytes": 2847,
+          "fetched_at": "2026-09-08T21:15:02.123984+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-react-native/latest",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "7a5713eb8c8cf4bb803fcc55cb119117640f9554df1e5d4f85e34d25f1dfd2e5",
+          "url": "https://registry.npmjs.org/supertokens-react-native/latest"
+        },
+        "name": "supertokens-react-native",
+        "peer_dependencies": {
+          "@react-native-async-storage/async-storage": ">=1.13.0 <=2.2.x",
+          "axios": "*",
+          "react-native": ">=0.61.5 <1.0.x"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/supertokens/supertokens-react-native.git"
+        },
+        "tarball_evidence": {
+          "bytes": 32424,
+          "fetched_at": "2026-09-08T21:15:02.284658+00:00",
+          "final_url": "https://registry.npmjs.org/supertokens-react-native/-/supertokens-react-native-5.1.5.tgz",
+          "http_status": 200,
+          "request_method": "GET",
+          "sha256": "b67e643cfcdf780e75f8655bd000e24ec081062a4cfd838eed14571a9b94d99c",
+          "url": "https://registry.npmjs.org/supertokens-react-native/-/supertokens-react-native-5.1.5.tgz"
+        },
+        "version": "5.1.5"
+      },
+      "package_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "f1b92bc7d5a57caff825de5b4ae2d9d411768d9f7ca3f1118a380d7729a0a867"
+        }
+      },
+      "package_manifest": "reuse/package-files/SDKP-06.json",
+      "qualification": "unverified",
+      "repository": "supertokens/supertokens-react-native",
+      "selected_version": null,
+      "source_license_declarations": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "f1b92bc7d5a57caff825de5b4ae2d9d411768d9f7ca3f1118a380d7729a0a867"
+        },
+        "TestingApp/test/server/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "b789366470393f5fd45fcf3d5d5b399043ba3e1212ba75d6a25f28bb20b270fe"
+        },
+        "TestingApp/test/tough-cookie/LICENSE": {
+          "license": "BSD-clause-review-required",
+          "sha256": "22ec6791c91ba42c0516a05f4cbdde019aae4687f8a38c5ca7e8a69ee68f851d"
+        },
+        "TestingApp/test/tough-cookie/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "BSD-3-Clause",
+          "sha256": "f603b0ab74c525df7ec5f1d9e5a2718f3cf0c8ac08eec9f86cb618c15b778c1a"
+        },
+        "examples/with-thirdparty/backend/package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "ISC",
+          "sha256": "0f8d5b21becaa77f9ea3b86003fd51d2d197e786c08de98587b8ea366bb9d247"
+        },
+        "package.json": {
+          "evidence_type": "Package license declaration",
+          "license": "Apache 2.0",
+          "sha256": "69f64e4a21e06b1b09fe3d1b7b42293b5ada672d607f92b4565f94e515893b38"
+        }
+      },
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "f1b92bc7d5a57caff825de5b4ae2d9d411768d9f7ca3f1118a380d7729a0a867"
+        },
+        "TestingApp/test/tough-cookie/LICENSE": {
+          "license": "BSD-clause-review-required",
+          "sha256": "22ec6791c91ba42c0516a05f4cbdde019aae4687f8a38c5ca7e8a69ee68f851d"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-react-native__ebae74d8661e24759f6f943d457d045d08087e61.json",
+      "source_package_declarations": [
+        {
+          "directory": ".",
+          "license": "Apache 2.0",
+          "sha256": "69f64e4a21e06b1b09fe3d1b7b42293b5ada672d607f92b4565f94e515893b38",
+          "source_path": "package.json",
+          "version": "5.1.5"
+        }
+      ],
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:03.774652+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV commit query; coverage is ecosystem dependent and is not a transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "3f26d38882cecff7505a9c772fe4a38cd9ce55c6",
+      "candidate_version": "v0.4.2",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-07",
+      "name": "iOS",
+      "qualification": "unverified",
+      "release_published_at": "2024-10-31T15:46:31Z",
+      "repository": "supertokens/supertokens-ios",
+      "selected_version": null,
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "f1b92bc7d5a57caff825de5b4ae2d9d411768d9f7ca3f1118a380d7729a0a867"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-ios.json",
+      "status": "planned",
+      "supported_feature_matrix": null
+    },
+    {
+      "advisories": {
+        "evidence": {
+          "bytes": 2,
+          "fetched_at": "2026-09-08T21:15:03.853319+00:00",
+          "final_url": "https://api.osv.dev/v1/query",
+          "http_status": 200,
+          "request_method": "POST",
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "url": "https://api.osv.dev/v1/query"
+        },
+        "method": "OSV commit query; coverage is ecosystem dependent and is not a transitive audit",
+        "vulnerabilities": []
+      },
+      "blockers": [
+        "Full transitive dependency license/advisory closure not qualified",
+        "No ExpertAuth behavior/build test evidence for this profile"
+      ],
+      "candidate_commit": "40aaebeaf0e88f63300f1f5c7e474bd1656750e3",
+      "candidate_version": "v0.5.3",
+      "decision": "reference only",
+      "errors": [],
+      "evidence": [],
+      "id": "SDKP-08",
+      "name": "Android",
+      "qualification": "unverified",
+      "release_published_at": "2024-11-01T11:02:02Z",
+      "repository": "supertokens/supertokens-android",
+      "selected_version": null,
+      "source_license_files": {
+        "LICENSE.md": {
+          "license": "Apache-2.0",
+          "sha256": "f1b92bc7d5a57caff825de5b4ae2d9d411768d9f7ca3f1118a380d7729a0a867"
+        }
+      },
+      "source_manifest": "reuse/files/supertokens__supertokens-android.json",
+      "status": "planned",
+      "supported_feature_matrix": null
+    }
+  ],
+  "selection_status": "Candidates only. Pins do not imply compatibility or production acceptance."
+}

@@ -1,0 +1,277 @@
+{
+  "schema": "test-execution-v1",
+  "runner": "stdlib-unittest",
+  "profile": "integrity",
+  "command": [
+    "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "tools/ledger.py",
+    "run-tests",
+    "--discover",
+    "tests/evidence",
+    "--output",
+    "evidence/integrity/release-gate-tests-20260908-01.json",
+    "--profile",
+    "integrity"
+  ],
+  "started_at": "2026-09-08T21:22:06.730769+00:00",
+  "finished_at": "2026-09-08T21:22:32.431112+00:00",
+  "exit_code": 1,
+  "source_snapshot": {
+    ".gitignore": "cef935b7e99fd1fa984bfb08a5abd9f4b8644d02c8071e9b9c93fd8a22785435",
+    "baseline-lock.json": "7236557c1910c8b1d74d82a476a54e469358a57ca6ed274ab04879ffbd36b9c1",
+    ".runtime/keycloak/bootstrap.env": "80e2c58914be29b7ef45e9d2db9df8f1f8ac8e1ee8e3d2580053aa13340406e1",
+    "contracts/api-contracts.json": "938cb49e9577069bb82dda84f35d520de90bd9ddb978226a5dc9d279d6031f75",
+    "contracts/operation-map.json": "5536efd372375a606b3abfcb5ba267145c9dfd94e1cc24378581bdc63679db5c",
+    "contracts/requirements.txt": "0969da99a0bc2a1b71ed50584560f4588a37567ac63af3ddbaf3c4617ca5621a",
+    "contracts/source-pins.json": "106cdf3761cc2584b7f281edeb2bbcdcfdb2867ef8a2feb5f5553bebd5e152f6",
+    "engine-extensions/oss-build/build.gradle": "11a01f873cec57f0c1fa3c87389898ad33b4032bd07355b767eff04f547cba7f",
+    "engine-extensions/oss-build/settings.gradle": "9192587f761654028d5ac96477821ac06d2f8eb30628b40173a1c1ca7fc3a3e4",
+    "reuse/bundled-telemetry-jars.json": "9e9190c7beca3a81dabb04e2055551325f300f3cd823e04873d7a45db66fc921",
+    "reuse/core-build-dependencies.json": "a8ec13e9305b896581dd00c974ab4498b8f3a0d2f67b151ffce700e4f8eb0f8a",
+    "reuse/engine-candidates.json": "3fe76c7a306bb4e521dab9c034fde3613819af5f18f475ccd1d6cbf66ef2cdb0",
+    "reuse/profiles.json": "e137fcc94e767a76b999138f60f4c20c7b58b0ee47791d51d9343658fb39230a",
+    "reuse/files/supertokens__supertokens-android.json": "c1aafb058fb705a703ba058179cb8fbba40413e968cbcec6d4294219e77edaa5",
+    "reuse/files/supertokens__supertokens-auth-react.json": "928f2de7357efb918c3c6d2046f7a3ba9314aaf70c0487be2139055ebefea5a8",
+    "reuse/files/supertokens__supertokens-auth-react__5d080836741561af3bda5461e1e993d2c4088b3b.json": "0983cc797e149d05eb78b328c2214e6faa4e8bd6bb711b151053647677324170",
+    "reuse/files/supertokens__supertokens-core.json": "b833c3fbbbe4ac05d8e75eef10c5b915bb57cd80a4e47aef6e5b42af154d5b07",
+    "reuse/files/supertokens__supertokens-core__b2219c4aa019a501e4dfea76cf06ef802ca93fc0.json": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd",
+    "reuse/files/supertokens__supertokens-golang.json": "8218e87e3c9decf82bde929dc00be94d2340609a6e665b50b3e6d2695a7f1842",
+    "reuse/files/supertokens__supertokens-ios.json": "8cc0649ac512b207ce5612da6a985194b6e6b6ed9dcfcdf2018ca5d7afae5ec7",
+    "reuse/files/supertokens__supertokens-node.json": "5bb1c8e61655e671f1430e5b77aabbe6cca0fb1353d4d001d04f374e8966f484",
+    "reuse/files/supertokens__supertokens-node__9b82aefb46da4c0f0a388d8f6656c39a62d7642c.json": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680",
+    "reuse/files/supertokens__supertokens-plugin-interface__2550750188069110753decd06265a59fadefb427.json": "a515ac44bafd3d886a74cfbde36fb358a851ffb5d3dacc29faaed02ef20173be",
+    "reuse/files/supertokens__supertokens-plugins.json": "1e2b32706a441886c8c17858af9117be6647a2e2092675d1ff03e15e65089f3c",
+    "reuse/files/supertokens__supertokens-plugins__350223ffcd58295843129cfe77f1ca756be0c634.json": "e5f217476929f918e3ae1887465dff458a09fdf5d438aa9d7185031ca6257ff7",
+    "reuse/files/supertokens__supertokens-plugins__430707998733c1814e1cb87650e3432777aa4861.json": "06acb16f1cb7b09a04b26cbfdbb773cdc012a0fe64cb6346cd95056dc1c49cb7",
+    "reuse/files/supertokens__supertokens-plugins__8cc15ce39767b9c82604ab8ee8979080af3a86c4.json": "9dbb00bae2c268a0f5675579f30031a801f1453c6dff4ee53c1e34db71a012bf",
+    "reuse/files/supertokens__supertokens-plugins__bb0f4ae0f9ba7330556ccc438f942f3430e713eb.json": "87a3e4fa312010b6b5dd690d77aac5879b544e1eec17da35730886765e96f9d6",
+    "reuse/files/supertokens__supertokens-plugins__c5926c043bd81934d9c50be0b09beb363e97d77f.json": "f255cd0bbd20c9d14f8225606acb6b163f3695e58bcfebed54e787b144152717",
+    "reuse/files/supertokens__supertokens-plugins__e00dbc90ffb4927f01afb043f8bdbeb868725fc2.json": "15e59598148b1eac325d74c356ee1429e3cc945b96b08fae1d4e72eea2b14cba",
+    "reuse/files/supertokens__supertokens-plugins__e05a220a23ec5ccaad0397870b5c483eb862b27b.json": "4666e392ca94fb38105236adb7d1cda64e0ad1588a7e69df2226ac1668d6fc20",
+    "reuse/files/supertokens__supertokens-postgresql-plugin__0b68fd14ca10baee2d0e3c31466984fccfb36c8a.json": "e98db9d2d73445adfd01dffd80945b683d32d36a7a8fb920dbb55332f7aa6c96",
+    "reuse/files/supertokens__supertokens-python.json": "819b90073f8b9a51a9f8e4d36c2f2ef1c2c4a55fe6a32cd1db8f671805382693",
+    "reuse/files/supertokens__supertokens-react-native.json": "19186c7ff4da1e089118944aceeb87670d1d14cdbac553da3d69660a5b23fb40",
+    "reuse/files/supertokens__supertokens-react-native__ebae74d8661e24759f6f943d457d045d08087e61.json": "4cfdd613bed254a4359bf02220245bea95912633a22df7db2b648282d5317366",
+    "reuse/files/supertokens__supertokens-root__25d24162afe78488899ebceff81821549470b273.json": "1d4af8ad0a9226a2a67ea17df1ad3836a0d5be4f290906f68b9bd9311dd366ce",
+    "reuse/files/supertokens__supertokens-web-js.json": "b948d0c263a016119f98b23e5093180e044e83f40ab51b066d3cbb7bcfddf639",
+    "reuse/files/supertokens__supertokens-web-js__be2e0fd7dcade8352cdc9639abe968e5cda5b1cd.json": "eb58bafb95799603047f4af90c8459c51df34cd5cd71b089485dc7c196b48f1b",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/MANIFEST.MF": "9656d8c78fbd86ce5ceef9f373b0f6ace0f04e934f33e53b8c958f3da949dfe5",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/licenses.md": "464515d907a7d4241a017d0a62f1fb4e4a833120cfdb2cf844d1b5242f31f692",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/byte-buddy-dep-1.18.10.jar/META-INF/LICENSE": "bb28c48e3e078166e91cfc2b6db7ffebb8a0973b9e23b3df060561292d8d69ec",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/byte-buddy-dep-1.18.10.jar/META-INF/NOTICE": "cfb119f8db2decb24e756fddec0e089029eaa73a7be594b2dd9676433d95d6e5",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/jackson-annotations-2.22.jar/META-INF/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/jackson-annotations-2.22.jar/META-INF/NOTICE": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/jackson-core-2.22.0.jar/META-INF/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/jackson-core-2.22.0.jar/META-INF/NOTICE": "e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/jackson-databind-2.22.0.jar/META-INF/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/jackson-databind-2.22.0.jar/META-INF/NOTICE": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/slf4j-api-2.0.18.jar/META-INF/LICENSE.txt": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/slf4j-simple-2.0.18.jar/META-INF/LICENSE.txt": "6fbe2eaf44b193b8a40eed9208f52848572224ad8d7672dd09418aa174847e73",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/zipkin-2.27.1.jar/META-INF/LICENSE": "97bec7bf2c7537032731e621b4296884e450fe850ce58b82a1e8a686d20cabd8",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/zipkin-reporter-3.5.3.jar/META-INF/LICENSE": "d6cd1836342cb9ed8ed63b5cbef014a63a368b107b0e7f75b93e216af7b4db99",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/META-INF/licenses/zipkin-sender-okhttp3-3.5.3.jar/META-INF/LICENSE": "d6cd1836342cb9ed8ed63b5cbef014a63a368b107b0e7f75b93e216af7b4db99",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/inst/META-INF/FastDoubleParser-LICENSE": "59067508e44346bf93dc9c5e4d673a67ecd77988c2020bb5e0f8667eb199f396",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/inst/META-INF/FastDoubleParser-ThirdParty-LICENSE": "dbc36f9422a40d58d1a214080583667cfd37d61c2fae1657d981edda2a60727f",
+    "reuse/licenses/jars/opentelemetry-javaagent.jar-546531ca690a/inst/META-INF/Schubfach-LICENSE": "12d39a6615219d73202300715e365bec2b958f858d1e837c8f2dace57f905969",
+    "reuse/licenses/jars/opentelemetry-jmx-metrics.jar-889b32f2875e/META-INF/LICENSE": "f594431f26247b3c75f10d8114ef114f69246958636a7011ed5c755de5ad2e27",
+    "reuse/licenses/jars/opentelemetry-jmx-metrics.jar-889b32f2875e/META-INF/MANIFEST.MF": "2911369c90e03f2f9cf3f7300e13c0f753bb27871ea6547f01d797667ae4f21a",
+    "reuse/licenses/jars/opentelemetry-jmx-metrics.jar-889b32f2875e/META-INF/NOTICE": "7b618f2fcf2949dcc749cf71b9ef24692393cf8cd0e5bd6f7bc0467fc68c5001",
+    "reuse/licenses/jars/opentelemetry-jmx-metrics.jar-889b32f2875e/META-INF/licenses/antlr2-license.txt": "05dcdb9c1022b35eef6a1c570e19d637aebff76db93bc8250a9b30526faaf390",
+    "reuse/licenses/jars/opentelemetry-jmx-metrics.jar-889b32f2875e/META-INF/licenses/antlr4-license.txt": "84c213fbceee99041bb1632c4518be2aa7bafc7fb4202b1134acb3d00f575050",
+    "reuse/licenses/jars/opentelemetry-jmx-metrics.jar-889b32f2875e/META-INF/licenses/asm-license.txt": "5d2b9e63c9cba7276c7c4d5dd99417dd6e778f5c6873d40916c4d97516ad859f",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-account-linking/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-emailpassword-vercel/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-emailverification-then-password-thirdpartyemailpassword/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-hash-router/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-hasura-thirdpartyemailpassword/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-i18next/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-localstorage/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-multifactorauth-phone-chooser/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-multifactorauth-recovery-codes/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-multiple-email-sign-in/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-no-session-on-sign-up-thirdpartyemailpassword/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-sign-in-up-split-emailpassword/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-thirdparty-google-onetap/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-thirdparty-popup/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-thirdpartyemailpassword-passwordless/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/examples/with-update-email-post-verification/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/LICENSE.md": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/aws/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/cloudflare-workers/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/express/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/fastify/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/hapi/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/koa/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/loopback/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/examples/nest/with-emailpassword/frontend/LICENSE.md": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69",
+    "reuse/licenses/supertokens__supertokens-plugin-interface/2550750188069110753decd06265a59fadefb427/LICENSE.md": "0c41d8440a1b31045cbb170c14fdb814a897151b4560f94ee4e421d850f6728c",
+    "reuse/licenses/supertokens__supertokens-postgresql-plugin/0b68fd14ca10baee2d0e3c31466984fccfb36c8a/LICENSE.md": "0c41d8440a1b31045cbb170c14fdb814a897151b4560f94ee4e421d850f6728c",
+    "reuse/licenses/supertokens__supertokens-react-native/ebae74d8661e24759f6f943d457d045d08087e61/LICENSE.md": "f1b92bc7d5a57caff825de5b4ae2d9d411768d9f7ca3f1118a380d7729a0a867",
+    "reuse/licenses/supertokens__supertokens-react-native/ebae74d8661e24759f6f943d457d045d08087e61/TestingApp/test/tough-cookie/LICENSE": "22ec6791c91ba42c0516a05f4cbdde019aae4687f8a38c5ca7e8a69ee68f851d",
+    "reuse/licenses/supertokens__supertokens-web-js/be2e0fd7dcade8352cdc9639abe968e5cda5b1cd/LICENSE.md": "6044e5052ecfdd1b4600c313a4c9558af8bcd904e0b42f4f2848511823e68816",
+    "reuse/package-files/PLGP-01.json": "014c24611b9bb82f5c86a7c189d210290a9e52137f1d93c98cb59a0f90b25195",
+    "reuse/package-files/PLGP-02.json": "84b306761efb3aa084f24760c12238b334d50488253748b7062413a9769287dc",
+    "reuse/package-files/PLGP-03.json": "ee35ee9697ee84cf718f1aad3c85c302106c108014844db820680b91aee1aeec",
+    "reuse/package-files/PLGP-04.json": "9b0579ef4293bcf995b9eaddc9f3590a1abb91360fd28eeac9425d0ba7096ea1",
+    "reuse/package-files/PLGP-05.json": "60e00537a0a9fb5bbace9cd53822d85b9704590d2839f69f97dde0e3b95b107d",
+    "reuse/package-files/PLGP-06.json": "73640274452ccc6fcb9e06f903d548f090ee9f048ce97759dd9b38704196df16",
+    "reuse/package-files/PLGP-07.json": "f4741e1c1f6276872f8ae4c91e75913bcf9ed35d843e040a9aa356fcea84dbd4",
+    "reuse/package-files/PLGP-08.json": "a365ffc69a235d8d99cc9a5efdadf137c6060b225225cbf3acb09cd4b8641e5e",
+    "reuse/package-files/PLGP-09.json": "30e698c914838b840edfe2bb1df2bd4a4889533ebff50e094ff76be2ade8e977",
+    "reuse/package-files/PLGP-10.json": "32c1f3bdaa0b0f034eb607a01b91e8cc6e91d68d084dc7764bb2cb8910b025c5",
+    "reuse/package-files/PLGP-11.json": "8f17502dc3aebdff9b76e92be5945e5d39d1a7f36affb39ddcd052744c1f667e",
+    "reuse/package-files/PLGP-12.json": "7b29160924175e47b33a8a40866d2d628d6dd39240ab2490a0b04df40c23c03e",
+    "reuse/package-files/PLGP-13.json": "9d68c3d6acd5cd4d69b8d11a4229b2df57481fcf8200a4dd35e2191a8c6cb5b9",
+    "reuse/package-files/PLGP-14.json": "1e2b32706a441886c8c17858af9117be6647a2e2092675d1ff03e15e65089f3c",
+    "reuse/package-files/SDKP-01.json": "5bb1c8e61655e671f1430e5b77aabbe6cca0fb1353d4d001d04f374e8966f484",
+    "reuse/package-files/SDKP-04.json": "b948d0c263a016119f98b23e5093180e044e83f40ab51b066d3cbb7bcfddf639",
+    "reuse/package-files/SDKP-05.json": "928f2de7357efb918c3c6d2046f7a3ba9314aaf70c0487be2139055ebefea5a8",
+    "reuse/package-files/SDKP-06.json": "19186c7ff4da1e089118944aceeb87670d1d14cdbac553da3d69660a5b23fb40",
+    "tests/evidence/test_release_gate.py": "6bd20645389a9b325cac0d2b31e770a0d433835ba76bbce1b143b7839e972512",
+    "tests/foundation/keycloak_probe.py": "5feb5f5a716229a5fb8a7b38a58482fec28685aeca16d24544ea51cf927c34a7",
+    "tools/audit_sources.py": "8ef6af596ed6cb5e19ab54f52fb3e3cac5282c3173457ccbdefac0e5cb22840e",
+    "tools/bootstrap_baseline.py": "38a4d7f457bcd8d9e4c999c69e7b47a16472c91169023b0bac52078f468bf97e",
+    "tools/build_oss_core.py": "983d0b21c7551638921108c8634a8a7edd37e588fa082fda6e97fe7811f1e383",
+    "tools/capture_contracts.py": "f59e764ed7a39e071ad59d79ab30b04aec06065de6c3f22bd386f80868f55b5a",
+    "tools/ledger.py": "eaf67e5165dea6500f20cc5c40df970bdc5c096fe09c26f5440e9e8b42085550",
+    "tools/run_keycloak_probe.py": "585e70ced59446c3b2ef65d8ff7c56c3909e614b36f66b67c2853885c5e78af7",
+    "tools/validate_release.py": "ce3969aa076a8d37c93e4d811bff5323b215b2a78a10cd7531af9df2a594853b"
+  },
+  "source_tree_sha256": "7fc4d2aba2cbb5c7ee49a211f4791eed4e44bd81f2535311caaeb451bf88a3d1",
+  "source_changed_during_run": true,
+  "dependency_hashes": {},
+  "environment": {
+    "python": "3.11.8",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "executable": "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe"
+  },
+  "test_count": 30,
+  "tests": [
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_ai_security_review_does_not_satisfy_independent_review",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_api_contract_must_be_current_hashed_source",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_api_placeholder_values_are_unfilled",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_api_route_presence_without_complete_contract_fails",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_baseline_wording_tamper_fails_even_with_rehashed_ledger_reference",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_changed_dependency_evidence_fails_even_when_source_hash_is_corrected",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_changed_dependency_lock_invalidates_run",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_changed_implementation_and_new_source_file_invalidate_evidence",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_changed_logs_and_report_hashes_are_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_critical_security_findings_block_review",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_deprecated_business_api_cannot_be_excused_as_vendor_licensing",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_duplicate_json_keys_are_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_evidence_recorder_refuses_overwrite",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_executed_positive_and_negative_fixture_can_support_claim_validation_only",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_integrity_test_profile_cannot_qualify_authentication",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_missing_substituted_and_duplicated_ids_fail",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_modified_manifest_cannot_rebaseline_scope",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_native_source_without_build_and_execution_is_unqualified",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_original_inventory_and_wording_are_anchored",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_original_wording_reference_cannot_be_substituted",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_path_traversal_cannot_read_external_evidence",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_planned_inventory_cannot_pass_release",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_private_core_exposure_is_required",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_run_with_missing_tests_or_duplicate_ids_fails",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_skipped_tests_fail_runner_and_release_even_if_exit_is_forged",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_status_schema_and_blocker_details_are_enforced",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_unexecuted_or_same_positive_negative_ids_fail",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_unsupported_verified_claim_is_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_verified_milestone_cannot_ignore_its_required_items",
+      "status": "passed"
+    },
+    {
+      "id": "test_release_gate.ReleaseGateTests.test_verified_milestone_with_unverified_dependency_fails",
+      "status": "passed"
+    }
+  ],
+  "output": {
+    "path": "evidence/integrity/release-gate-tests-20260908-01.log",
+    "sha256": "2da4534bcfc52f89c6bc5045c31dda19ecee645478bc608a2f9533cf99a8cdb5"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "tools/validate_release.py",
+    "--output",
+    "evidence/integrity/release-check-20260908-02.json"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788905715.8872685,
+  "elapsed_seconds": 1.067,
+  "input_sha256": {
+    "tools/validate_release.py": "06738c687fdae44568da834c9a8b19477ca2db72fbb19a318301148c1c990ee7",
+    "tools/ledger.py": "bd2d8ccec0fd098acafe6b4c7d2cb3590c818a98cb33775713e7d6e531fc6c3b",
+    "ledger/implementation.json": "303f3041a6fe2096da1df1902adadbb57ee0b37e8da9ec8f51a7924dc67c6cb3"
+  },
+  "inputs_changed": false,
+  "output_sha256": "2029bc6dbc901b30959cfac86b79a510716215d70ed65f0c6b7f258ae99e5ab7",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

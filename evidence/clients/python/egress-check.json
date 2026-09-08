@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-09-08T21:36:46.316743+00:00",
+  "command": "docker exec expertauth-python-app python <socket-connect-check>",
+  "checks": [
+    {
+      "target": "supertokens.com",
+      "port": 443,
+      "reachable": false,
+      "error_type": "gaierror"
+    },
+    {
+      "target": "1.1.1.1",
+      "port": 443,
+      "reachable": false,
+      "error_type": "OSError"
+    }
+  ],
+  "exit_code": 0,
+  "all_external_connections_blocked": true,
+  "paired_functional_evidence": "evidence/clients/python/probe-report.json",
+  "scope": "this local Python password/session flow only; other required independence surfaces remain unqualified"
+}

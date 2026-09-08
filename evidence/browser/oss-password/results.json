@@ -1,0 +1,13 @@
+{
+  "checks": [
+    {
+      "id": "BROWSER-OSS-001",
+      "status": "failed",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Sign up', exact: true })\n"
+    }
+  ],
+  "pass": 0,
+  "fail": 1,
+  "skipped": 0,
+  "scope": "Actual Chromium password and cookie-session flow; not native platforms or full React profile"
+}

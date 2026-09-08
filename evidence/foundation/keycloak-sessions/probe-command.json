@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-09-08T22:10:20.875973+00:00",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-kc-sessions-proof",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth,target=/work,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\foundation\\keycloak-sessions,target=/work/evidence/foundation/keycloak-sessions",
+    "-w",
+    "/work",
+    "expertauth-python-app:0.1.0",
+    "python",
+    "tests/foundation/keycloak_sessions.py"
+  ],
+  "exit_code": 1,
+  "stdout": "KC-CLUSTER-TWO-REPLICAS-SHARED-POSTGRES: passed\nKC-CLUSTER-CROSS-REPLICA-AUTHENTICATION: passed\nKC-ENGINE-COOKIE-AND-TOKEN-RESPONSE-CONTRACT: passed\nKC-CLUSTER-BEARER-VALIDATION-ON-BOTH-REPLICAS: passed\nKC-CLUSTER-SERIAL-REFRESH-ROTATION: passed\nKC-CLUSTER-STALE-REFRESH-DENY-WITH-CHILD-SURVIVAL: failed\nKC-CLUSTER-CONCURRENT-REFRESH-SINGLE-SURVIVING-ROTATION: failed\nKC-CLUSTER-POSTCOMMIT-RESPONSE-LOSS-RECOVERY: failed\nKC-CLUSTER-CLIENT-SPECIFIC-REVOCATION-ISOLATION: passed\nKC-CLUSTER-GLOBAL-RP-LOGOUT: passed\n{\"executed\": 10, \"passed\": 7, \"failed\": 3, \"unexecuted\": 0, \"exit_code\": 1}\n",
+  "stderr": ""
+}

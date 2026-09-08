@@ -1,0 +1,2 @@
+# Preserve immutable baseline and evidence bytes on every checkout/platform.
+* -text

@@ -1,0 +1,13 @@
+{
+  "command_argv": [
+    "expert-auth/tools/audit_sources.py",
+    "--validate"
+  ],
+  "exit_status": 0,
+  "finished_at": "2026-09-08T21:26:21.266742+00:00",
+  "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+  "script_sha256": "295081743ebb3d4b722c271b3cb3864cdf35ec209860b6f21190403a53707e43",
+  "started_at": "2026-09-08T21:26:21.257461+00:00",
+  "stderr": "",
+  "stdout": "{\"kind\": \"Source audit consistency only; not authentication implementation tests\", \"passed\": 68, \"failed\": 0}\n"
+}

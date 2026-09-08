@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.shibboleth</groupId>
+        <artifactId>parent</artifactId>
+        <version>17.2.3</version>
+    </parent>
+
+    <name>Shibboleth Shared Components</name>
+    <description>
+        A multi-module project aggregating a number of shared
+        Shibboleth components.
+
+        These were previously known as java-support and spring-extensions.
+    </description>
+
+    <artifactId>shib-shared-parent</artifactId>
+    <version>9.2.3</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <!-- Old grab-bags. -->
+        <module>shib-support</module>
+        <module>shib-spring</module>
+
+        <!-- Refactored modules. -->
+        <module>shib-cli</module>
+        <module>shib-networking</module>
+        <module>shib-networking-spring</module>
+        <module>shib-security</module>
+        <module>shib-security-spring</module>
+        <module>shib-service</module>
+        <module>shib-testing</module>
+        <module>shib-velocity</module>
+        <module>shib-velocity-spring</module>
+
+        <module>shib-shared-bom</module>
+
+    </modules>
+
+    <properties>
+        <shibboleth.projectName>java-shib-shared</shibboleth.projectName>
+        <checkstyle.configLocation>${project.basedir}/resources/checkstyle/checkstyle.xml</checkstyle.configLocation>
+    </properties>
+
+    <dependencies>
+    <!-- This file should contain NO additional dependencies unless they truly apply to every "every module. See IDP-1620. -->
+        <dependency>
+            <groupId>${slf4j.groupId}</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+        </dependency>
+
+        <!-- Provided Dependencies -->
+
+        <!-- Runtime Dependencies -->
+
+        <!-- Test Dependencies -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>        
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.nashorn</groupId>
+            <artifactId>nashorn-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Compile Dependencies -->
+        
+            <!-- Provided Dependencies -->
+            
+            <!-- Runtime Dependencies -->
+            
+            <!-- Test Dependencies -->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Automatic-Module-Name>${automatic.module.name}</Automatic-Module-Name>
+                            <Sealed>true</Sealed>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+             </plugin>
+        </plugins>
+    </build>
+
+</project>

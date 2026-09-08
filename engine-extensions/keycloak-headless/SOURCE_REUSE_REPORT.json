@@ -1,0 +1,306 @@
+{
+  "timestamp_utc": "2026-09-08T21:58:28.757202+00:00",
+  "source_version": "26.7.3",
+  "source_commit": "6d238b6558037085cc25c915893c3d301a80243e",
+  "source_license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "files": [
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/authentication/authenticators/browser/UsernamePasswordForm.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/authentication/authenticators/browser/UsernamePasswordForm.java",
+      "sha256": "36516125ab4c214cde9f5f0198bc64c989eb2e1405025978759fc8f846391bb6",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonPasswordAuthenticator.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Inherited authenticate/action/password validation",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/authentication/authenticators/browser/AbstractUsernameFormAuthenticator.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/authentication/authenticators/browser/AbstractUsernameFormAuthenticator.java",
+      "sha256": "29305acc4f67629662db050b968a392732919ebd8a313467a3a5ff8e1ffa835d",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonPasswordAuthenticator.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Inherited credential checks, dummy hashing, brute-force enforcement, user context",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/authentication/authenticators/browser/OTPFormAuthenticator.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/authentication/authenticators/browser/OTPFormAuthenticator.java",
+      "sha256": "d6d2529e66b28581288b1d1b704116f1fd11e08e4507ef3a1e1dbcf0181c504e",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonOtpAuthenticator.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Inherited OTP action and credential-provider validation",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/credential/OTPCredentialProvider.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/credential/OTPCredentialProvider.java",
+      "sha256": "937b84bc3d1df9f8d41f8b563c73404a06889e283cfbcbaa65d2f520445b61b9",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonOtpAuthenticator.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Engine-owned OTP and SingleUseObjectProvider replay policy",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "server-spi/src/main/java/org/keycloak/models/credential/OTPCredentialModel.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/server-spi/src/main/java/org/keycloak/models/credential/OTPCredentialModel.java",
+      "sha256": "fa622feaabda14ac1038cf2ff0b65956ddbadd109032e82f348dd83939e23c3a",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "prepare_lab.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Synthetic credential import representation and base32 encoding",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/authentication/authenticators/browser/UsernamePasswordFormFactory.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/authentication/authenticators/browser/UsernamePasswordFormFactory.java",
+      "sha256": "82fae63ed52329b2bacc71bb2bb8bd06439d3ce4adf65196c04c3fc454bbd6be",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonPasswordFactory.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Inherited factory metadata with unique extension provider ID",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/authentication/authenticators/browser/OTPFormAuthenticatorFactory.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/authentication/authenticators/browser/OTPFormAuthenticatorFactory.java",
+      "sha256": "e67ff43ba371a42ee08ac6709ac5b281009d35c79b751a4c33649523d7badb8c",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonOtpFactory.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Inherited factory metadata with unique extension provider ID",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "server-spi-private/src/main/java/org/keycloak/authentication/AuthenticationFlowContext.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/server-spi-private/src/main/java/org/keycloak/authentication/AuthenticationFlowContext.java",
+      "sha256": "9ad3987544f59ade27031f128821e3ff9f6fa29bc296666ac1b9ade931540cdd",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonChallenge.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Engine-created access code and action URL",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/authentication/AuthenticationProcessor.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/authentication/AuthenticationProcessor.java",
+      "sha256": "56bef16aa0d4572159753994c72bfc500841a017519bdc614b900f83e98b7b2d",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "JsonChallenge.java",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Engine action URL/session code and flow transitions",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/services/resources/SessionCodeChecks.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/services/resources/SessionCodeChecks.java",
+      "sha256": "b30954d13b0872876b6af431f6c47fc73cb328287aadb25a64c884b13c161e68",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "keycloak_headless_probe.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Engine action/session/tab validation and restart behavior",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "core/src/main/java/org/keycloak/representations/idm/RealmRepresentation.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/core/src/main/java/org/keycloak/representations/idm/RealmRepresentation.java",
+      "sha256": "b7ab73ab3c534ed28fc61d7b8abe49045ff7a903dd815fa2111a298c3b733c2f",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "prepare_lab.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Realm policy and flow import contract",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "core/src/main/java/org/keycloak/representations/idm/OrganizationRepresentation.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/core/src/main/java/org/keycloak/representations/idm/OrganizationRepresentation.java",
+      "sha256": "f7f363bb2ef9ad19f68ef37f38f05e8447c07802b07cbea0d90b4d85784823f2",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "prepare_lab.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Real organization membership import representation",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "core/src/main/java/org/keycloak/representations/idm/MemberRepresentation.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/core/src/main/java/org/keycloak/representations/idm/MemberRepresentation.java",
+      "sha256": "a18cb9a029e0137978885ca88a29d0f90168cd3e19bbd796111779f739cd39f9",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "prepare_lab.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Real unmanaged organization membership representation",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "model/storage-private/src/main/java/org/keycloak/storage/datastore/DefaultExportImportManager.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/model/storage-private/src/main/java/org/keycloak/storage/datastore/DefaultExportImportManager.java",
+      "sha256": "4f7cccc52bad9322276062c9b5738e6d5c91beea088eb2d591938574d88bc346",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "prepare_lab.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Official organization/member import implementation",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    },
+    {
+      "repository": "keycloak/keycloak",
+      "commit": "6d238b6558037085cc25c915893c3d301a80243e",
+      "source_path": "services/src/main/java/org/keycloak/organization/protocol/mappers/oidc/OrganizationMembershipMapper.java",
+      "url": "https://raw.githubusercontent.com/keycloak/keycloak/6d238b6558037085cc25c915893c3d301a80243e/services/src/main/java/org/keycloak/organization/protocol/mappers/oidc/OrganizationMembershipMapper.java",
+      "sha256": "9499f80503fa9469827c5f5cc86902c78ede5c22814816ea5193073d57c7b587",
+      "license": "Apache-2.0",
+      "license_source": "LICENSE.txt at same commit; file-level headers examined where present",
+      "destination_or_dependency": "prepare_lab.py",
+      "reuse_boundary": "unmodified pinned runtime dependency; source examined, not copied",
+      "purpose": "Built-in selected-organization signed claim mapping",
+      "modifications_to_upstream_file": [],
+      "requirements_mapping": [
+        "MFA-002",
+        "MFA-009"
+      ],
+      "milestone_mapping": "M1 foundation headless/intermediate MFA",
+      "validation": "evidence/foundation/keycloak-headless/probe-report.json"
+    }
+  ],
+  "original_extension_files": [
+    "src/main/java/org/expertauth/keycloak/JsonChallenge.java",
+    "src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java",
+    "src/main/java/org/expertauth/keycloak/JsonOtpFactory.java",
+    "src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java",
+    "src/main/java/org/expertauth/keycloak/JsonPasswordFactory.java",
+    "src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory"
+  ],
+  "source_code_copied": false,
+  "new_authentication_or_refresh_store": false,
+  "candidate_selected": false,
+  "warning": "Keycloak runtime marks the Authenticator SPI internal; version pin and regression qualification are required",
+  "independent_security_review": "blocked-not-performed"
+}

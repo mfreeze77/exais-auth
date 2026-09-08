@@ -1,0 +1,37 @@
+Sending build context to Docker daemon  56.66MB
+
+Step 1/10 : FROM gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2
+ ---> 67b8c4bfd2b0
+Step 2/10 : USER root
+ ---> Using cache
+ ---> 5810fd0230a7
+Step 3/10 : RUN mkdir -p /opt/expertauth/logs /opt/expertauth/.started /run/expertauth && chown -R gradle:gradle /opt/expertauth
+ ---> Using cache
+ ---> d441c7f96fd6
+Step 4/10 : COPY --chown=gradle:gradle lib /opt/expertauth/lib
+ ---> Using cache
+ ---> 528a0076b4bc
+Step 5/10 : COPY --chown=gradle:gradle plugin /opt/expertauth/plugin
+ ---> Using cache
+ ---> 1357e230b71f
+Step 6/10 : COPY --chown=gradle:gradle version.yaml /opt/expertauth/version.yaml
+ ---> Using cache
+ ---> 5409359e2b26
+Step 7/10 : USER gradle
+ ---> Using cache
+ ---> 6cfa9d4e1189
+Step 8/10 : WORKDIR /opt/expertauth
+ ---> Using cache
+ ---> 1fe463e61b93
+Step 9/10 : EXPOSE 3567
+ ---> Using cache
+ ---> 9a1b31502081
+Step 10/10 : CMD ["java", "-Xmx512m", "--add-opens=java.base/java.lang=ALL-UNNAMED", "--add-opens=java.base/java.util=ALL-UNNAMED", "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED", "-cp", "/opt/expertauth/lib/*", "io.supertokens.Main", "/opt/expertauth", "configFile=/run/expertauth/config.yaml", "forceNoInMemDB=true"]
+ ---> Using cache
+ ---> 274bb9f3fba8
+Successfully built 274bb9f3fba8
+Successfully tagged expertauth-oss-core:12.2.0-probe
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

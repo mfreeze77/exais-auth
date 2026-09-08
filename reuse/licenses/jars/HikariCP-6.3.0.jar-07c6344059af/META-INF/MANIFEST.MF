@@ -1,0 +1,42 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1742836776175
+Build-Jdk-Spec: 11
+Bundle-Description: Ultimate JDBC Connection Pool
+Bundle-DocURL: https://github.com/brettwooldridge
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: HikariCP
+Bundle-SymbolicName: com.zaxxer.HikariCP
+Bundle-Vendor: Zaxxer.com
+Bundle-Version: 6.3.0
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: com.zaxxer.hikari;uses:="com.zaxxer.hikari.metrics,com
+ .zaxxer.hikari.util,javax.naming,javax.naming.spi,javax.sql";version=
+ "6.3.0",com.zaxxer.hikari.hibernate;uses:="com.zaxxer.hikari,org.hibe
+ rnate,org.hibernate.engine.jdbc.connections.spi,org.hibernate.service
+ .spi";version="6.3.0",com.zaxxer.hikari.metrics;version="6.3.0",com.z
+ axxer.hikari.metrics.dropwizard;uses:="com.codahale.metrics,com.codah
+ ale.metrics.health,com.zaxxer.hikari,com.zaxxer.hikari.metrics,com.za
+ xxer.hikari.pool,io.dropwizard.metrics5";version="6.3.0",com.zaxxer.h
+ ikari.metrics.micrometer;uses:="com.zaxxer.hikari.metrics,io.micromet
+ er.core.instrument";version="6.3.0",com.zaxxer.hikari.metrics.prometh
+ eus;uses:="com.zaxxer.hikari.metrics";version="6.3.0",com.zaxxer.hika
+ ri.pool;uses:="com.zaxxer.hikari,com.zaxxer.hikari.metrics,com.zaxxer
+ .hikari.util,javax.sql";version="6.3.0",com.zaxxer.hikari.util;uses:=
+ "javax.management,javax.sql";version="6.3.0"
+Import-Package: com.codahale.metrics;resolution:=optional;version="[3.
+ 2,4)",com.codahale.metrics.health;resolution:=optional;version="[3.2,
+ 4)",io.dropwizard.metrics5;resolution:=optional;version="[5.0,6)",io.
+ micrometer.core.instrument;resolution:=optional,javax.management,java
+ x.naming,javax.naming.spi,javax.sql,javax.sql.rowset,javax.sql.rowset
+ .serial,javax.sql.rowset.spi,org.hibernate;resolution:=optional;versi
+ on="[5.4,6)",org.hibernate.cfg;resolution:=optional;version="[5.4,6)"
+ ,org.hibernate.engine.jdbc.connections.spi;resolution:=optional;versi
+ on="[5.4,6)",org.hibernate.service;resolution:=optional;version="[5.4
+ ,6)",org.hibernate.service.spi;resolution:=optional;version="[5.4,6)"
+ ,org.slf4j;version="[1.6,2)"
+Originally-Created-By: Apache Maven Bundle Plugin
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Tool: Bnd-5.1.1.202006162103
+

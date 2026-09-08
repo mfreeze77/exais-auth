@@ -1,0 +1,6 @@
+{
+  "name": "expertauth-browser-qualification",
+  "private": true,
+  "type": "module",
+  "dependencies": { "playwright": "1.62.1" }
+}

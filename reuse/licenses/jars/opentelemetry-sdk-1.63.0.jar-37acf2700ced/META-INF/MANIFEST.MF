@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: io.opentelemetry.sdk
+Built-By: runner
+Built-JDK: 21.0.11
+Bundle-ManifestVersion: 2
+Bundle-Name: opentelemetry-sdk
+Bundle-SymbolicName: opentelemetry-sdk
+Bundle-Version: 1.63.0
+Created-By: 21.0.11 (Eclipse Adoptium)
+Export-Package: io.opentelemetry.sdk;version="1.63.0";uses:="io.opente
+ lemetry.api,io.opentelemetry.api.logs,io.opentelemetry.api.metrics,io
+ .opentelemetry.api.trace,io.opentelemetry.context.propagation,io.open
+ telemetry.sdk.common,io.opentelemetry.sdk.logs,io.opentelemetry.sdk.m
+ etrics,io.opentelemetry.sdk.trace",io.opentelemetry.sdk.internal;vers
+ ion="1.63.0";uses:="io.opentelemetry.api.incubator,io.opentelemetry.a
+ pi.incubator.config,io.opentelemetry.sdk"
+Implementation-Title: all
+Implementation-Version: 1.63.0
+Import-Package: javax.annotation;version="3.0.2";resolution:=optional,
+ io.opentelemetry.api.incubator;version="1.63.0";resolution:=optional,
+ io.opentelemetry.api.incubator.config;version="1.63.0";resolution:=op
+ tional,io.opentelemetry.api;version="[1.63,2)",io.opentelemetry.api.l
+ ogs;version="[1.63,2)",io.opentelemetry.api.metrics;version="[1.63,2)
+ ",io.opentelemetry.api.trace;version="[1.63,2)",io.opentelemetry.cont
+ ext.propagation;version="[1.63,2)",io.opentelemetry.sdk.common;versio
+ n="[1.63,2)",io.opentelemetry.sdk.logs;version="[1.63,2)",io.opentele
+ metry.sdk.metrics;version="[1.63,2)",io.opentelemetry.sdk.trace;versi
+ on="[1.63,2)",java.io,java.lang,java.lang.reflect,java.util,java.util
+ .concurrent,java.util.concurrent.atomic,java.util.logging
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.2.3.202603250810
+

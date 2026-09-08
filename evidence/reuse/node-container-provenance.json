@@ -1,0 +1,12 @@
+{
+  "image": "node:22-bookworm",
+  "repo_digests": [
+    "node@sha256:0557ac14e0d45d02ed563067b82856ca5e7aa3437fa28d98d4350ea9c3d9494a"
+  ],
+  "image_query_exit_code": 0,
+  "node": "v22.23.2",
+  "qualification_sha256": "d413c185d56e095d8820f932d984632774e5035f51ea0875f46fd986429026a7",
+  "fixture_sha256": "d120ee650ca9195b47810500e0ddc74296f4ffdd1bbf6cd5a480bb4af93dffda",
+  "execution_exit_code": 0,
+  "scope": "Isolated npm override fixture; no application package edits or external provider messages"
+}

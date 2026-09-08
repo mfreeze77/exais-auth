@@ -1,0 +1,108 @@
+{
+  "name": "expert-auth-full-parity-plan",
+  "version": "1.0",
+  "status": "planning-package-not-authentication-implementation",
+  "research_baseline": "2026-09-08",
+  "files": [
+    {
+      "path": "FULL_PARITY_PLAN.md",
+      "bytes": 25638,
+      "sha256": "68d233204945c4e6a6e9e36112f5dd5cfa0e550a60e4c17790b15f7091531fd5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3109,
+      "sha256": "3952a0b54063b1712bf1aeeba41f4ecbbb23b76ccff522aa71870cd30f82576b"
+    },
+    {
+      "path": "docs/API_OPERATIONS.md",
+      "bytes": 17008,
+      "sha256": "c702b6ec91cd31d8f04cddbd43e14948371c3ad1755414bb02b317f2e6de68f2"
+    },
+    {
+      "path": "docs/BACKLOG.md",
+      "bytes": 15654,
+      "sha256": "dd98368113c4efe3c9719df9f721c39bdbbc4641d98535b1768c078f6bc08409"
+    },
+    {
+      "path": "docs/CONFIGURATION_AND_DATA_MODEL.md",
+      "bytes": 7796,
+      "sha256": "e190cb0ae0d703d488a3b26232b1e7078d307636fd3691be5e25d9d72e19a140"
+    },
+    {
+      "path": "docs/FEATURE_MATRIX.md",
+      "bytes": 51141,
+      "sha256": "41d25e94eaa0573b29d0f50f77000ce0789e2c1a2bd12f69f5268395313f2b74"
+    },
+    {
+      "path": "docs/HARVEST_PLAN.md",
+      "bytes": 5529,
+      "sha256": "4e05926c53f1315974c77cee7b4f96ea25c1edfb5b23b23385263bf91984b47d"
+    },
+    {
+      "path": "docs/SECURITY_ACCEPTANCE.md",
+      "bytes": 11803,
+      "sha256": "e5550effc582f90286bb561fa48e6121494011f189d54fb3a7bbea4b63e192e0"
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "bytes": 5358,
+      "sha256": "649ce5dff53b3860460f2c177398e0582bf4ccd281e3ce5e268f1d72fd876b59"
+    },
+    {
+      "path": "registry/api-operations.json",
+      "bytes": 123442,
+      "sha256": "d99a8f09a3825ec3c24fb6eddb1f82b17900729f1a22b28253d136fdf7dbfc10"
+    },
+    {
+      "path": "registry/baseline-lock.template.json",
+      "bytes": 1138,
+      "sha256": "44aa19aab353910d583b8a542d144b81fe245035a8142f8f0d1b790bc0b39230"
+    },
+    {
+      "path": "registry/families.json",
+      "bytes": 6012,
+      "sha256": "37cd07707c797bf4f5f61a26154276469fde6d812f2af48e78b06ff1e9e8c126"
+    },
+    {
+      "path": "registry/milestones.json",
+      "bytes": 4503,
+      "sha256": "2e0e2e9791e44508f6981f262e79b771a56e8908e2e9b4e95fa8c168d80dfb25"
+    },
+    {
+      "path": "registry/requirements.json",
+      "bytes": 134769,
+      "sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36"
+    },
+    {
+      "path": "registry/sdk-and-plugins.json",
+      "bytes": 6134,
+      "sha256": "0f298a253b652868edf3ecaf5778dd43168588d4d18842c32331caeff9f0017f"
+    },
+    {
+      "path": "registry/sources.json",
+      "bytes": 7501,
+      "sha256": "a9c22cc6518671dd4568e104e18a4482642ff702cf6aef7cea1df883a5ca9626"
+    },
+    {
+      "path": "registry/work-packages.json",
+      "bytes": 17980,
+      "sha256": "0582f4ec5be5c198a315646826ad5fec00d5489444b90fb19a0a6d95a83ead08"
+    },
+    {
+      "path": "tools/validate_plan.py",
+      "bytes": 7269,
+      "sha256": "17c3b568d986f2fbf535768c572e58541d45b16f731cfa55db2d739a689c5416"
+    },
+    {
+      "path": "validation-report.json",
+      "bytes": 900,
+      "sha256": "bf49f095e9a5c8420d3826a394d44cc9f5365f4b7a2815702f92132668428a68"
+    },
+    {
+      "path": "validator-self-tests.json",
+      "bytes": 315,
+      "sha256": "795bc4dffbd3ce1226188a846fe3512e641d1008e493d2c2729554ad8cd2641a"
+    }
+  ]
+}

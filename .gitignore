@@ -1,0 +1,14 @@
+.cache/
+.runtime/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+dist/
+artifacts/
+test-results/
+playwright-report/
+examples/node-react/public/app.js

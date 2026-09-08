@@ -1,0 +1,47 @@
+Sending build context to Docker daemon   93.7kB
+
+Step 1/11 : FROM node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+ ---> d649c27dae7b
+Step 2/11 : WORKDIR /app
+ ---> Using cache
+ ---> ead541259731
+Step 3/11 : COPY package.json package-lock.json ./
+ ---> Using cache
+ ---> d5ade166e8df
+Step 4/11 : RUN npm ci --ignore-scripts
+ ---> Using cache
+ ---> 73add44eb2d1
+Step 5/11 : COPY server.js client.jsx build.mjs ./
+ ---> b68faba4b3f8
+Step 6/11 : COPY public ./public
+ ---> 58a637c0c8e0
+Step 7/11 : RUN npm run build
+ ---> Running in 880e7dafd91d
+
+> @expertauth/foundation-node-react@0.0.1 build
+> node build.mjs
+
+ ---> Removed intermediate container 880e7dafd91d
+ ---> fe2fea1c5851
+Step 8/11 : ENV NODE_ENV=production
+ ---> Running in 91da64236389
+ ---> Removed intermediate container 91da64236389
+ ---> ee883bfeb9bc
+Step 9/11 : USER node
+ ---> Running in 93d8d66c42d2
+ ---> Removed intermediate container 93d8d66c42d2
+ ---> f3ee7bf14af7
+Step 10/11 : EXPOSE 3000
+ ---> Running in 62131be34f6f
+ ---> Removed intermediate container 62131be34f6f
+ ---> 5d5bbcd3cc0f
+Step 11/11 : CMD ["node", "server.js"]
+ ---> Running in 7f7dc71a440f
+ ---> Removed intermediate container 7f7dc71a440f
+ ---> 0086084f4285
+Successfully built 0086084f4285
+Successfully tagged expertauth-node-react:0.0.4
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

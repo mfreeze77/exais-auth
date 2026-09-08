@@ -1,0 +1,21 @@
+{
+  "name": "@expertauth/foundation-node-react",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "jose": "6.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "supertokens-auth-react": "0.51.3",
+    "supertokens-node": "24.0.3"
+  },
+  "devDependencies": { "esbuild": "0.28.2" },
+  "overrides": { "supertokens-node": { "nodemailer": "9.1.1" } }
+}

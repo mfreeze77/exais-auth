@@ -1,0 +1,958 @@
+{
+  "schema": "foundation-characterization-v1",
+  "engine": "audited-supertokens-core-oss",
+  "declared_core_release": "12.2.0",
+  "source_commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+  "cdi_version": "5.3",
+  "additional_characterized_profile": {
+    "cdi_version": "5.6",
+    "refresh_token_rotation_grace_period": 0
+  },
+  "probe_sha256": "bf41cac60d205be861705601c0167ba9fca85b6276151e7f91722f5ba24a8476",
+  "source_handlers": [
+    {
+      "path": "src/main/java/io/supertokens/webserver/WebserverAPI.java",
+      "sha256": "f49a235ae9ff2b31c62f0b9748c78228af75232002ec73dbb6548baf0d447fbf",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/emailpassword/SignUpAPI.java",
+      "sha256": "df7ad62fad2213c463ba975ea3852517383afddbe538c2c3c94b7776d54de088",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/emailpassword/SignInAPI.java",
+      "sha256": "59252c0318aa316efcd162e3e3fa89107ba381e0effe34903ebde420bd41a3cd",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/session/SessionAPI.java",
+      "sha256": "0a765ad30e8f9ff46bc8ded0656cdf6a0f7900ab5adc753589dec126b6fb3b5b",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/session/VerifySessionAPI.java",
+      "sha256": "ccf24af5899585bf4a43e3b1e437c45cf4873b187c305ec0eb6ea9057073952f",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "sha256": "7cd1d87aa1944c47b1bfdcbb4167f088c34e325fdee683f044893fedb3075589",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/session/SessionRemoveAPI.java",
+      "sha256": "2f83b65d50126cb9b9dc54ed2e9b4df3b5dae8004b3447400ff977c1afc4427c",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/session/Session.java",
+      "sha256": "cc12e99ef8c1935b01a797c68a236404941eb6b0bc69421c41717b2b5accfa12",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/multitenancy/CreateOrUpdateAppV2API.java",
+      "sha256": "64cec7f3c7a5a1a49b97d20b69dd1d0a719617982cb2c1fecd4264d833ce8576",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/multitenancy/CreateOrUpdateTenantOrGetTenantV2API.java",
+      "sha256": "66ace4de2045a6ff6ee7eaea3d2c042ee08f2e8a4a882eae798fd9eb9403bc03",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/multitenancy/BaseCreateOrUpdate.java",
+      "sha256": "f457822fb78c35e67dff62a22eb4de48a920bf3c9479a7addbaec75d1dca76c4",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/multitenancy/AssociateUserToTenantAPI.java",
+      "sha256": "b2243200196bf3bf395c1c953495c268965dd9a4ffa4972fe8312ce45300a368",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/multitenancy/DisassociateUserFromTenant.java",
+      "sha256": "adf03e695b3f0c9ff576a75d8c274033595b0cd75983bcdc440a8b747b9df80a",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/accountlinking/CreatePrimaryUserAPI.java",
+      "sha256": "7f0e32bb42b5dedd48c05f2be8afcc11a193619cd759fa3235634b12a3675815",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/accountlinking/LinkAccountsAPI.java",
+      "sha256": "4be0b56c85950617ef68c340656b0e66c7f38edd093c0d58ad821af8dec5b37a",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/accountlinking/UnlinkAccountAPI.java",
+      "sha256": "388b23b7813225bdb9f606343a6f778da8ca07e143cc2654cecd5f959c33d32b",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "src/main/java/io/supertokens/webserver/api/thirdparty/SignInUpAPI.java",
+      "sha256": "9ff0ee9976fe99e8c2e73813a285cd0bf34c4c3895b4d45ba57575bde9d90ff2",
+      "license": "Apache-2.0"
+    }
+  ],
+  "started_at": "2026-09-08T21:33:48.989949+00:00",
+  "finished_at": "2026-09-08T21:33:50.176418+00:00",
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "replicas": [
+      "http://core-a:3567",
+      "http://core-b:3567"
+    ],
+    "shared_database": "launcher PostgreSQL; cross-replica persistence exercised by probe"
+  },
+  "foundation_passed": false,
+  "production_approved": false,
+  "harness_error": null,
+  "results": [
+    {
+      "test_id": "OSS-PRIVATE-001",
+      "outcome": "passed",
+      "requirements": [
+        "CFG-004"
+      ],
+      "note": "Private credential endpoint rejects absent and wrong API keys.",
+      "observed": {
+        "statuses": [
+          401,
+          401
+        ]
+      }
+    },
+    {
+      "test_id": "OSS-PASSWORD-001",
+      "outcome": "passed",
+      "requirements": [
+        "PWD-001"
+      ],
+      "note": "Signup on A and actual password verification on B preserve identity.",
+      "observed": {}
+    },
+    {
+      "test_id": "OSS-PASSWORD-NEGATIVE-001",
+      "outcome": "passed",
+      "requirements": [
+        "PWD-001",
+        "IDN-012"
+      ],
+      "note": "Wrong password rejected; same-tenant duplicate cannot create another identity.",
+      "observed": {
+        "wrong_password_status": "WRONG_CREDENTIALS_ERROR",
+        "duplicate_status": "EMAIL_ALREADY_EXISTS_ERROR"
+      }
+    },
+    {
+      "test_id": "OSS-PASSWORD-RACE-001",
+      "outcome": "passed",
+      "requirements": [
+        "IDN-012",
+        "PWD-001"
+      ],
+      "note": "Two-replica duplicate signup converges on one identity.",
+      "observed": {
+        "statuses": [
+          "EMAIL_ALREADY_EXISTS_ERROR",
+          "OK"
+        ]
+      }
+    },
+    {
+      "test_id": "OSS-SESSION-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-001",
+        "SES-011"
+      ],
+      "note": "Session minted on A verifies against B; identity/data owned by Core.",
+      "observed": {}
+    },
+    {
+      "test_id": "OSS-CSRF-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-007"
+      ],
+      "note": "Core anti-CSRF token mismatch rejected; browser cookie behavior remains unqualified.",
+      "observed": {
+        "status": "TRY_REFRESH_TOKEN"
+      }
+    },
+    {
+      "test_id": "OSS-REFRESH-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003"
+      ],
+      "note": "Refresh on B and stateful access verification on A preserve authoritative session.",
+      "observed": {}
+    },
+    {
+      "test_id": "OSS-REVOKE-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-005",
+        "SES-006"
+      ],
+      "note": "First online check and refresh on B reject revocation from A; one sample, not a propagation SLA.",
+      "observed": {
+        "online_status": "UNAUTHORISED",
+        "refresh_status": "UNAUTHORISED",
+        "first_check_duration_ms": 3.742
+      }
+    },
+    {
+      "test_id": "OSS-OFFLINE-REVOCATION-OBSERVED",
+      "outcome": "observed",
+      "requirements": [
+        "SES-002",
+        "SES-006"
+      ],
+      "core_status": "OK",
+      "http_status": 200,
+      "note": "Core checkDatabase=false characterization only. This is not an independent local JWT verifier; no immediate offline revocation claim."
+    },
+    {
+      "test_id": "OSS-REFRESH-RACE-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "note": "CDI5.3 candidates converge after one child is promoted by stateful verification; sibling cannot extend an independent chain. Theft response does not itself prove adapter revocation.",
+      "observed": {
+        "initial_statuses": [
+          "OK",
+          "OK"
+        ],
+        "sibling_status": "TOKEN_THEFT_DETECTED",
+        "winner_status": "OK"
+      }
+    },
+    {
+      "test_id": "OSS-RESPONSE-LOSS-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "note": "Disconnect after response headers without consuming body, then retry on B. After retry child promotion the original parent is rejected. Pre-commit crashes and partial network transmission remain untested.",
+      "observed": {
+        "discarded_response_http": 200,
+        "retry_status": "OK",
+        "stale_parent_status": "TOKEN_THEFT_DETECTED"
+      }
+    },
+    {
+      "test_id": "OSS-LOGOUT-RACE-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-005"
+      ],
+      "note": "Logout wins after concurrent transactions finish; no refresh resurrection on B.",
+      "observed": {
+        "racing_refresh_status": "UNAUTHORISED",
+        "post_race_status": "UNAUTHORISED"
+      }
+    },
+    {
+      "test_id": "OSS-APP-PROVISION-A",
+      "outcome": "unavailable",
+      "requirements": [
+        "IDN-001",
+        "IDN-011",
+        "BAS-003"
+      ],
+      "reason": "Application provisioning unavailable on unactivated audited Core",
+      "http_status": 402,
+      "core_status": null,
+      "entitlement_boundary_observed": true
+    },
+    {
+      "test_id": "OSS-APP-PROVISION-B",
+      "outcome": "unavailable",
+      "requirements": [
+        "IDN-001",
+        "IDN-011",
+        "BAS-003"
+      ],
+      "reason": "Application provisioning unavailable on unactivated audited Core",
+      "http_status": 402,
+      "core_status": null,
+      "entitlement_boundary_observed": true
+    },
+    {
+      "test_id": "OSS-ISOLATION-FOUR-SCOPES",
+      "outcome": "unavailable",
+      "requirements": [
+        "IDN-001",
+        "IDN-003"
+      ],
+      "reason": "Four required app/tenant scopes were not provisioned",
+      "http_status": null,
+      "core_status": null,
+      "entitlement_boundary_observed": false
+    },
+    {
+      "test_id": "OSS-DEFAULT-APP-TENANT",
+      "outcome": "unavailable",
+      "requirements": [
+        "IDN-003",
+        "IDN-011",
+        "BAS-003"
+      ],
+      "reason": "Default-app tenant provisioning unavailable",
+      "http_status": 402,
+      "core_status": null,
+      "entitlement_boundary_observed": true
+    },
+    {
+      "test_id": "OSS-LINK-001",
+      "outcome": "unavailable",
+      "requirements": [
+        "LNK-001",
+        "LNK-003",
+        "BAS-003"
+      ],
+      "reason": "Authoritative linking unavailable without activation; no entitlement bypass attempted",
+      "http_status": 402,
+      "core_status": null,
+      "entitlement_boundary_observed": true
+    },
+    {
+      "test_id": "OSS56-REFRESH-REUSE-001",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "note": "Separate CDI5.6/grace0 profile rotates at refresh; old-parent reuse rejects and revokes authoritative session across replicas. This differs from CDI5.3 promotion behavior.",
+      "observed": {
+        "stale_status": "TOKEN_THEFT_DETECTED",
+        "reuse_subtype": "RECENT_PREV",
+        "online_status": "UNAUTHORISED",
+        "descendant_status": "UNAUTHORISED"
+      }
+    },
+    {
+      "test_id": "OSS56-GRACE0-RACE-OBSERVED",
+      "outcome": "observed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "cdi_version": "5.6",
+      "configured_grace_seconds": 0,
+      "initial_statuses": [
+        "OK",
+        "TOKEN_THEFT_DETECTED"
+      ],
+      "successor_refresh_statuses": [
+        "UNAUTHORISED"
+      ],
+      "note": "Grace0 may classify a legitimate concurrent refresh as reuse and revoke the family. This observation does not qualify availability or response-loss recovery; a declared positive-grace profile needs separate tests."
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/hello",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": null,
+      "duration_ms": 14.028,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/hello",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": null,
+      "duration_ms": 3.856,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 401,
+      "core_status": null,
+      "duration_ms": 2.487,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 401,
+      "core_status": null,
+      "duration_ms": 1.977,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 103.577,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 105.011,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "WRONG_CREDENTIALS_ERROR",
+      "duration_ms": 96.301,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "EMAIL_ALREADY_EXISTS_ERROR",
+      "duration_ms": 94.556,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "EMAIL_ALREADY_EXISTS_ERROR",
+      "duration_ms": 97.13,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 105.685,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 11.058,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 4.269,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "TRY_REFRESH_TOKEN",
+      "duration_ms": 2.768,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 11.01,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 8.457,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 4.405,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 3.69,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 3.944,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 2.773,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 12.287,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 7.372,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 11.827,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 6.777,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "TOKEN_THEFT_DETECTED",
+      "duration_ms": 7.361,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 9.521,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 4.658,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 11.053,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 9.115,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 8.28,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "TOKEN_THEFT_DETECTED",
+      "duration_ms": 6.928,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 4.588,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 10.853,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 4.858,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 5.111,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 3.259,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "PUT",
+      "path": "/recipe/multitenancy/app/v2",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 402,
+      "core_status": null,
+      "duration_ms": 2.442,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "PUT",
+      "path": "/recipe/multitenancy/app/v2",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 402,
+      "core_status": null,
+      "duration_ms": 2.124,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "PUT",
+      "path": "/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 402,
+      "core_status": null,
+      "duration_ms": 1.878,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 104.522,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 103.88,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/accountlinking/user/primary",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 402,
+      "core_status": null,
+      "duration_ms": 3.686,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/accountlinking/user/link",
+      "replica": 0,
+      "cdi_version": "5.3",
+      "http_status": 402,
+      "core_status": null,
+      "duration_ms": 3.655,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": 0,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 10.115,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 10.65,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 3.459,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "TOKEN_THEFT_DETECTED",
+      "duration_ms": 9.743,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 3.527,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 2.703,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": 0,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 11.409,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 8.251,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "TOKEN_THEFT_DETECTED",
+      "duration_ms": 12.99,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "UNAUTHORISED",
+      "duration_ms": 3.117,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi_version": "5.6",
+      "http_status": 200,
+      "core_status": "OK",
+      "duration_ms": 2.011,
+      "request_body_recorded": false,
+      "response_body_recorded": false
+    }
+  ],
+  "remaining": [
+    "Representative Node/React and Python adapter contracts",
+    "Embedded intermediate MFA and hooks",
+    "End-user linking proof of control and concurrent privilege changes",
+    "Browser cookie/header and native lifecycle",
+    "Pre-commit crash and network fault injection",
+    "Configured tenant permission isolation",
+    "Independent security review and vendor-egress operational qualification"
+  ],
+  "claim_limit": "Passed probe cases are narrow observations; baseline requirements are not individually marked verified by this harness."
+}

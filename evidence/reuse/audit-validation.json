@@ -1,0 +1,287 @@
+{
+  "checks": [
+    {
+      "count": 8,
+      "passed": true,
+      "test": "reuse-profile-retention-sdks"
+    },
+    {
+      "count": 14,
+      "passed": true,
+      "test": "reuse-profile-retention-plugins"
+    },
+    {
+      "count": 10,
+      "passed": true,
+      "test": "reuse-profile-retention-integrations"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-01"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-01"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-SDKP-01"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-02"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-02"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-03"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-03"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-04"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-04"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-SDKP-04"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-05"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-05"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-SDKP-05"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-06"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-06"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-SDKP-06"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-07"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-07"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-SDKP-08"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-SDKP-08"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-01"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-01"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-01"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-02"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-02"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-02"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-03"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-03"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-03"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-04"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-04"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-04"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-05"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-05"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-05"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-06"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-06"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-06"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-07"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-07"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-07"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-08"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-08"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-08"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-09"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-09"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-09"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-10"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-10"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-10"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-11"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-11"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-11"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-12"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-12"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-12"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-13"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-13"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-13"
+    },
+    {
+      "passed": true,
+      "test": "immutable-candidate-PLGP-14"
+    },
+    {
+      "passed": true,
+      "test": "source-manifest-PLGP-14"
+    },
+    {
+      "passed": true,
+      "test": "package-manifest-PLGP-14"
+    },
+    {
+      "passed": true,
+      "test": "core-no-ee-content-in-manifest"
+    },
+    {
+      "passed": true,
+      "test": "core-restricted-paths-not-inspected"
+    },
+    {
+      "passed": true,
+      "test": "no-profile-functional-success-claims"
+    }
+  ],
+  "failed": 0,
+  "inputs": {
+    "baseline/expert-auth-full-parity-plan-v1.0/registry/sdk-and-plugins.json": "0f298a253b652868edf3ecaf5778dd43168588d4d18842c32331caeff9f0017f",
+    "reuse/profiles.json": "e137fcc94e767a76b999138f60f4c20c7b58b0ee47791d51d9343658fb39230a"
+  },
+  "kind": "Source audit consistency only; not authentication implementation tests",
+  "passed": 68,
+  "script_sha256": "e36f72b5a0dd23fcb191c5189d65d41c61781622ed9eac9cf97dcadd8eea35b7"
+}

@@ -1,0 +1,220 @@
+{
+  "timestamp_utc": "2026-09-08T21:58:51.054789+00:00",
+  "command": "python tests/foundation/keycloak_headless_probe.py",
+  "keycloak_version": "26.7.3",
+  "keycloak_source_commit": "6d238b6558037085cc25c915893c3d301a80243e",
+  "python": "3.12.13 (main, Aug  5 2026, 01:10:24) [GCC 14.2.0]",
+  "client_packages": {
+    "httpx": "0.28.1",
+    "PyJWT": "2.13.0",
+    "pyotp": "2.10.0"
+  },
+  "candidate_selected": false,
+  "foundation_gate_passed": false,
+  "expected_tests": 16,
+  "executed": 16,
+  "passed": 16,
+  "failed": 0,
+  "unexecuted": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "tests": [
+    {
+      "id": "KC-JSON-INITIAL-PASSWORD-CHALLENGE",
+      "status": "passed",
+      "duration_ms": 56.58,
+      "details": {
+        "content_type": "application/json",
+        "step": "password",
+        "final_session": false,
+        "fields": [
+          "username",
+          "password"
+        ]
+      }
+    },
+    {
+      "id": "KC-JSON-WRONG-PASSWORD-DENIED",
+      "status": "passed",
+      "duration_ms": 32.4,
+      "details": {
+        "http_status": 401,
+        "step": "password",
+        "final_session": false
+      }
+    },
+    {
+      "id": "KC-JSON-PASSWORD-ADVANCES-TO-REQUIRED-TOTP",
+      "status": "passed",
+      "duration_ms": 27.81,
+      "details": {
+        "step": "totp",
+        "final_session": false,
+        "fields": [
+          "otp"
+        ]
+      }
+    },
+    {
+      "id": "KC-JSON-INVALID-TOTP-DENIED",
+      "status": "passed",
+      "duration_ms": 8.07,
+      "details": {
+        "http_status": 401,
+        "final_session": false
+      }
+    },
+    {
+      "id": "KC-JSON-MISSING-TOTP-REMAINS-INTERMEDIATE",
+      "status": "passed",
+      "duration_ms": 6.18,
+      "details": {
+        "http_status": 200,
+        "final_session": false
+      }
+    },
+    {
+      "id": "KC-NO-TOKENS-BEFORE-FINAL-FACTOR",
+      "status": "passed",
+      "duration_ms": 6.47,
+      "details": {
+        "http_status": 400,
+        "token_issued": false
+      }
+    },
+    {
+      "id": "KC-JSON-TOTP-SUCCESS-ENGINE-CODE-STATE",
+      "status": "passed",
+      "duration_ms": 38.81,
+      "details": {
+        "http_status": 302,
+        "state_preserved": true,
+        "engine_final_session": true
+      }
+    },
+    {
+      "id": "KC-AUTHORIZATION-CODE-PKCE-TOKEN-EXCHANGE",
+      "status": "passed",
+      "duration_ms": 27.27,
+      "details": {
+        "http_status": 200,
+        "id_token_signature_verified": true,
+        "issuer_audience_nonce_verified": true,
+        "grant": "authorization_code+S256-PKCE"
+      }
+    },
+    {
+      "id": "KC-AUTHORIZATION-CODE-REPLAY-DENIED",
+      "status": "passed",
+      "duration_ms": 36.75,
+      "details": {
+        "http_status": 400
+      }
+    },
+    {
+      "id": "KC-TOTP-CROSS-SESSION-REPLAY-DENIED",
+      "status": "passed",
+      "duration_ms": 117.09,
+      "details": {
+        "http_status": 401,
+        "otp_code_reusable": false,
+        "engine_replay_store": "SingleUseObjectProvider",
+        "second_final_session": false
+      }
+    },
+    {
+      "id": "KC-MISSING-ACTION-SESSION-CODE-DENIED",
+      "status": "passed",
+      "duration_ms": 17.65,
+      "details": {
+        "http_status": 200,
+        "content_type": "application/json",
+        "final_session": false,
+        "engine_owned_error_response": true
+      }
+    },
+    {
+      "id": "KC-TAMPERED-ACTION-SESSION-CODE-DENIED",
+      "status": "passed",
+      "duration_ms": 18.11,
+      "details": {
+        "http_status": 302,
+        "content_type": null,
+        "final_session": false,
+        "engine_owned_error_response": true
+      }
+    },
+    {
+      "id": "KC-TAMPERED-TAB-STATE-DENIED",
+      "status": "passed",
+      "duration_ms": 24.84,
+      "details": {
+        "http_status": 302,
+        "content_type": null,
+        "final_session": false,
+        "engine_owned_error_response": true
+      }
+    },
+    {
+      "id": "KC-CROSS-BROWSER-ACTION-SUBSTITUTION-DENIED",
+      "status": "passed",
+      "duration_ms": 36.7,
+      "details": {
+        "http_status": 302,
+        "content_type": null,
+        "final_session": false,
+        "engine_owned_error_response": true
+      }
+    },
+    {
+      "id": "KC-MISSING-AUTHENTICATION-COOKIE-DENIED",
+      "status": "passed",
+      "duration_ms": 444.74,
+      "details": {
+        "http_status": 400,
+        "content_type": "text/html;charset=utf-8",
+        "final_session": false,
+        "engine_owned_error_response": true
+      }
+    },
+    {
+      "id": "KC-ENGINE-BRUTE-FORCE-POLICY-RETAINED",
+      "status": "passed",
+      "duration_ms": 148.19,
+      "details": {
+        "failed_attempts": 3,
+        "correct_password_during_lockout_http_status": 401,
+        "final_session": false
+      }
+    }
+  ],
+  "input_sha256": {
+    "engine-extensions/keycloak-headless/.dockerignore": "d26aa35d3c2326c0c4b37dcfd551394ddecba612449f1602c2107cd5926495ba",
+    "engine-extensions/keycloak-headless/.gitignore": "374c3ddc95f13f3bebd423179b58e00fa18d5f1ce47757b70beadf00810d3124",
+    "engine-extensions/keycloak-headless/Dockerfile": "105f3456ec486b1b216c0a95523221277fe51acd46b4e63226689366d57f9b93",
+    "engine-extensions/keycloak-headless/LICENSES/keycloak-LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "engine-extensions/keycloak-headless/README.md": "c01e8eb3a407db2e3e7e2e20f84dcbe04f9b2430abd38ef9ae481e98f49adc48",
+    "engine-extensions/keycloak-headless/SOURCE_REUSE_REPORT.json": "3d267f210c6c8fe73c6cf931235c2bcc9e427fd141270cb8bb0f760f1115b63e",
+    "engine-extensions/keycloak-headless/audit_sources.py": "8f68cd1002d0e05e5875213653d63dfdc3ea21d9a4db863f56e16059eaa28f92",
+    "engine-extensions/keycloak-headless/build.gradle": "76bbd7aaf043b83499b25fc47184a6464486fc33a7d6ffe7c09978f31c714d3f",
+    "engine-extensions/keycloak-headless/gradle/verification-metadata.xml": "2dc3ea1a67997e887cc2eb1d16a03fd413f2abcad598e1addaac957c3de9a5c6",
+    "engine-extensions/keycloak-headless/gradle.lockfile": "5988981640e69c2b874e726cf140a4645c4f4f8c116b3923a9aa5533db1895af",
+    "engine-extensions/keycloak-headless/prepare_lab.py": "901942dc424bdb592ced5e1124fe6f2c2d68e344d3db0c368e7509132eb9e0e6",
+    "engine-extensions/keycloak-headless/settings.gradle": "c8683b2e018e5524091fba98d64e9d6c430d05cd53178e9776436cb09b29777d",
+    "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonChallenge.java": "05f943bcae2a607bce065989658815d15a8c5e5c043865ba0c1292193dd23a28",
+    "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java": "f8599677dfafdf7647861da9c7eedaf7d23d584f88ce65fc4c323be32fc2435d",
+    "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpFactory.java": "f68ba9ec20ae87bfb50e6244b57dd96e977bb4a8fcb6e8283603fcbd477f9ed5",
+    "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java": "884dcdb68fbc2e11703eb1f34091da8bf35153c757d466573df522a5cda0d84a",
+    "engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordFactory.java": "7a17a06a3ab9a652a3d175f19bb0afae59e11b52251c533b89a78d287cffde18",
+    "engine-extensions/keycloak-headless/src/main/resources/META-INF/services/org.keycloak.authentication.AuthenticatorFactory": "d880f256d16dfd7143372bfb028eeefb6807103549b436fcb047c615a7cdee5d",
+    "tests/foundation/keycloak_headless_probe.py": "43db56a213704db188425425e15a6e21eef16967c97966fd93561a274fb76007"
+  },
+  "limitations": [
+    "Bounded custom password and pre-enrolled TOTP challenge profile only",
+    "Session/action-code validation errors outside the authenticator may be Keycloak HTML responses; no HTML is parsed",
+    "Not a SuperTokens FDI-compatible API",
+    "Authenticator SPI is marked internal by Keycloak and requires per-version qualification",
+    "H2 single-node isolated lab, not operational production evidence",
+    "Other foundation cases and independent security review remain unqualified"
+  ]
+}

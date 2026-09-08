@@ -1,0 +1,69 @@
+{
+  "results_sha256": "e5910580daecfa8be78c2ad11c3ed903dc6b63f0633ae2f3c5f8318e0be28df5",
+  "method": "Separate process, fresh admin token, supported engine read APIs after completed race",
+  "realm": "ea-broker-239652545592-a",
+  "users": [
+    {
+      "username": "alpha-provider.same-provider",
+      "user_fingerprint": "19efa801aaaed57d",
+      "credential_types": [],
+      "links": []
+    },
+    {
+      "username": "beta-provider.same-provider",
+      "user_fingerprint": "275fb839992b5b70",
+      "credential_types": [],
+      "links": [
+        {
+          "alias": "beta-provider",
+          "upstream_subject_fingerprint": "353f3bcd49a1a245"
+        }
+      ]
+    },
+    {
+      "username": "local-target",
+      "user_fingerprint": "dcbcd51cddf2ad2e",
+      "credential_types": [
+        "password"
+      ],
+      "links": []
+    },
+    {
+      "username": "race-target-0",
+      "user_fingerprint": "af1a983df5008109",
+      "credential_types": [
+        "password"
+      ],
+      "links": [
+        {
+          "alias": "race-provider",
+          "upstream_subject_fingerprint": "ec06320b246db031"
+        }
+      ]
+    },
+    {
+      "username": "race-target-1",
+      "user_fingerprint": "606627f092d5203c",
+      "credential_types": [
+        "password"
+      ],
+      "links": [
+        {
+          "alias": "race-provider",
+          "upstream_subject_fingerprint": "ec06320b246db031"
+        }
+      ]
+    },
+    {
+      "username": "shared-provider.same-provider",
+      "user_fingerprint": "4883330a6d7727ae",
+      "credential_types": [],
+      "links": [
+        {
+          "alias": "shared-provider",
+          "upstream_subject_fingerprint": "353f3bcd49a1a245"
+        }
+      ]
+    }
+  ]
+}

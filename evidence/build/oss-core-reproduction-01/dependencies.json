@@ -1,0 +1,674 @@
+[
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.tomcat.embed",
+        "name": "tomcat-embed-core",
+        "version": "11.0.25",
+        "filename": "tomcat-embed-core-11.0.25.jar",
+        "sha256": "282b65b9fe43647b1459c0df11101f8599a58de5832075acff485c3705ba4894"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.google.code.gson",
+        "name": "gson",
+        "version": "2.13.1",
+        "filename": "gson-2.13.1.jar",
+        "sha256": "94855942d4992f112946d3de1c334e709237b8126d8130bf07807c018a4a2120"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.webauthn4j",
+        "name": "webauthn4j-core",
+        "version": "0.28.6.RELEASE",
+        "filename": "webauthn4j-core-0.28.6.RELEASE.jar",
+        "sha256": "d8a8f4b735bb9067fc2afd13f8c9ff723a5bad76341a83a4051a998cccff61ab"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.webauthn4j",
+        "name": "webauthn4j-util",
+        "version": "0.28.6.RELEASE",
+        "filename": "webauthn4j-util-0.28.6.RELEASE.jar",
+        "sha256": "ad70dd0c03f7ff7b8515cdc7da3a03f6c970d7a174fcb9347f1c411776b0e80c"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.fasterxml.jackson.dataformat",
+        "name": "jackson-dataformat-cbor",
+        "version": "2.22.1",
+        "filename": "jackson-dataformat-cbor-2.22.1.jar",
+        "sha256": "5c6e49843e46aaeebd3ffc777ad221ac2208f3e36e24c56779ac6fabdfb1d499"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.auth0",
+        "name": "java-jwt",
+        "version": "4.4.0",
+        "filename": "java-jwt-4.4.0.jar",
+        "sha256": "173aab2a30727e5586e13055fb6c4e27112453f5d8cf1136b3369c674cbe011f"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-saml-impl",
+        "version": "5.2.3",
+        "filename": "opensaml-saml-impl-5.2.3.jar",
+        "sha256": "9f04221e172dc426f90fb3873d0148a0744edbf9e7a37de7ee0e6a34f7b74581"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-xmlsec-impl",
+        "version": "5.2.3",
+        "filename": "opensaml-xmlsec-impl-5.2.3.jar",
+        "sha256": "cc67fc1bd9cb435cdbe7483ef04513c83cc9619a3015c04ad41bb6cc0eb6e68e"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-soap-impl",
+        "version": "5.2.3",
+        "filename": "opensaml-soap-impl-5.2.3.jar",
+        "sha256": "b6a38b04741401de8b697ca773f200edb2421347e1eb0aa220355596d5675bf9"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-core-impl",
+        "version": "5.2.3",
+        "filename": "opensaml-core-impl-5.2.3.jar",
+        "sha256": "af8604462837a7931d4688ccca3404db325ef7abff7a70a36206a9c4dd7fe953"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.dropwizard.metrics",
+        "name": "metrics-json",
+        "version": "4.2.39",
+        "filename": "metrics-json-4.2.39.jar",
+        "sha256": "8726b15affd61992a4ecd0ed1dc3936782781e7fa0fdc47be04d338f9341dd46"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.fasterxml.jackson.datatype",
+        "name": "jackson-datatype-jsr310",
+        "version": "2.22.1",
+        "filename": "jackson-datatype-jsr310-2.22.1.jar",
+        "sha256": "85da45b7e5e565418963ff8f0dcb184365b0557c15468933f4318dde5c3ce845"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.fasterxml.jackson.core",
+        "name": "jackson-databind",
+        "version": "2.22.1",
+        "filename": "jackson-databind-2.22.1.jar",
+        "sha256": "7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.fasterxml.jackson.core",
+        "name": "jackson-core",
+        "version": "2.22.1",
+        "filename": "jackson-core-2.22.1.jar",
+        "sha256": "941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.fasterxml.jackson.dataformat",
+        "name": "jackson-dataformat-yaml",
+        "version": "2.22.1",
+        "filename": "jackson-dataformat-yaml-2.22.1.jar",
+        "sha256": "cc3a0e540791a9a1cbcd7584767b84572ffda0b72823856558f47dea69ae8ed1"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-security-impl",
+        "version": "5.2.3",
+        "filename": "opensaml-security-impl-5.2.3.jar",
+        "sha256": "21cc4cc73551f4ded22e8390286b9a4202b48c5054498bcd263f393f30d441a1"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-saml-api",
+        "version": "5.2.3",
+        "filename": "opensaml-saml-api-5.2.3.jar",
+        "sha256": "cce72578ec8df5dd18cb71c88bba89bd196c640281c199ce875e2aa44154f93f"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-soap-api",
+        "version": "5.2.3",
+        "filename": "opensaml-soap-api-5.2.3.jar",
+        "sha256": "1b503de27e275bbe9014b4d503ce80a8b8dcfcb0c47fff9e48f14b05cb2788ab"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-xmlsec-api",
+        "version": "5.2.3",
+        "filename": "opensaml-xmlsec-api-5.2.3.jar",
+        "sha256": "3401e9e309fd170f4b9ea0d8fc68b5b778c2374bf654371378bce21952d6c6b9"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-security-api",
+        "version": "5.2.3",
+        "filename": "opensaml-security-api-5.2.3.jar",
+        "sha256": "2053f9ae1f37a87cf94117ea61395080eb3ec71c631aa71dd2a6c386dd8ff3af"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-profile-api",
+        "version": "5.2.3",
+        "filename": "opensaml-profile-api-5.2.3.jar",
+        "sha256": "3c150e2db1dee689b776c604d601adcc060d0305c6eabffa17f213509f5587f8"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-messaging-api",
+        "version": "5.2.3",
+        "filename": "opensaml-messaging-api-5.2.3.jar",
+        "sha256": "53e9a343afcdefdfaad4987d63598a2284c1bf98b99761c8baea1a69c2f7ebcd"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-storage-api",
+        "version": "5.2.3",
+        "filename": "opensaml-storage-api-5.2.3.jar",
+        "sha256": "07402db8880c7da7143c57f1c2ea3cf08e1e80e1470d86409e2db56e1d3fb02a"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.opensaml",
+        "name": "opensaml-core-api",
+        "version": "5.2.3",
+        "filename": "opensaml-core-api-5.2.3.jar",
+        "sha256": "40ed25f0892dfb833aa2b917bd2be1e10cb7c788efb3276b66b19338b80c29f6"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "net.shibboleth",
+        "name": "shib-security",
+        "version": "9.2.3",
+        "filename": "shib-security-9.2.3.jar",
+        "sha256": "46c53c48a6e1930f145add7f65ed51ab9273de9e3dc746b82e5d695d25bb0ba8"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "net.shibboleth",
+        "name": "shib-networking",
+        "version": "9.2.3",
+        "filename": "shib-networking-9.2.3.jar",
+        "sha256": "cca1d53b5a5bfab21320ed68ee77c5e0f87af53753d69711a52af87cced94861"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "net.shibboleth",
+        "name": "shib-velocity",
+        "version": "9.2.3",
+        "filename": "shib-velocity-9.2.3.jar",
+        "sha256": "42f0fc3c53eae0b7d241b6e7c5a4c782100c78fe67d3527c1df67ba513a830c8"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "net.shibboleth",
+        "name": "shib-support",
+        "version": "9.2.3",
+        "filename": "shib-support-9.2.3.jar",
+        "sha256": "c68f5668d23aa30a2a5b672dd03b46882bb0ce1185cf02240c4c99eee9bd94b0"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.google.guava",
+        "name": "guava",
+        "version": "33.0.0-jre",
+        "filename": "guava-33.0.0-jre.jar",
+        "sha256": "f4d85c3e4d411694337cb873abea09b242b664bb013320be6105327c45991537"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.google.code.findbugs",
+        "name": "jsr305",
+        "version": "3.0.2",
+        "filename": "jsr305-3.0.2.jar",
+        "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.xerial",
+        "name": "sqlite-jdbc",
+        "version": "3.45.1.0",
+        "filename": "sqlite-jdbc-3.45.1.0.jar",
+        "sha256": "f5f5404fa5a60f9e0b15e7bea2ea2d137e255f01babd0bfcb9dafcd2e3bf9cd2"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.mindrot",
+        "name": "jbcrypt",
+        "version": "0.4",
+        "filename": "jbcrypt-0.4.jar",
+        "sha256": "e183f6f59404fc1e12073cfea4ace7ea103c900463cd21fb609a7c617ecdf624"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-exporter-otlp",
+        "version": "1.63.0",
+        "filename": "opentelemetry-exporter-otlp-1.63.0.jar",
+        "sha256": "4877e560f0ca03675cfb99ed5457c0d1875e953381e029f198280aca8a1d0f47"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-exporter-sender-okhttp",
+        "version": "1.63.0",
+        "filename": "opentelemetry-exporter-sender-okhttp-1.63.0.jar",
+        "sha256": "5821c0fda70dd188c11a855ed2d76d410ec4fd91d7315299e11e1318e3cb1d58"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.squareup.okhttp3",
+        "name": "okhttp-jvm",
+        "version": "5.3.2",
+        "filename": "okhttp-jvm-5.3.2.jar",
+        "sha256": "c771f48075b763f6c322055e21129a94b7de4c1faf3f8f58ace320b0c9517a30"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.squareup.okio",
+        "name": "okio-jvm",
+        "version": "3.16.4",
+        "filename": "okio-jvm-3.16.4.jar",
+        "sha256": "2196b993cd34dbbd919e7e01f57a4781b58bee80f86106163e287c20343a96a7"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.jetbrains.kotlin",
+        "name": "kotlin-stdlib",
+        "version": "2.2.21",
+        "filename": "kotlin-stdlib-2.2.21.jar",
+        "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.jetbrains",
+        "name": "annotations",
+        "version": "13.0",
+        "filename": "annotations-13.0.jar",
+        "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "de.mkammerer",
+        "name": "argon2-jvm",
+        "version": "2.11",
+        "filename": "argon2-jvm-2.11.jar",
+        "sha256": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.lambdaworks",
+        "name": "scrypt",
+        "version": "1.4.0",
+        "filename": "scrypt-1.4.0.jar",
+        "sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.eatthepath",
+        "name": "java-otp",
+        "version": "0.4.0",
+        "filename": "java-otp-0.4.0.jar",
+        "sha256": "c430c1039189635e4b6b7daee98b0c56288e459a3b8ec851cb7bcb9918107247"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.santuario",
+        "name": "xmlsec",
+        "version": "3.0.6",
+        "filename": "xmlsec-3.0.6.jar",
+        "sha256": "395eccc3496063ac7b1d6af2422a11670ee5ded807f51542818eccd5fbb5e20c"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "commons-codec",
+        "name": "commons-codec",
+        "version": "1.18.0",
+        "filename": "commons-codec-1.18.0.jar",
+        "sha256": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.googlecode.libphonenumber",
+        "name": "libphonenumber",
+        "version": "8.13.25",
+        "filename": "libphonenumber-8.13.25.jar",
+        "sha256": "43f54cb4b10f907b1dec3b3bbfbbc3eb902ad26769da20b1edbb944a589f2407"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "ch.qos.logback",
+        "name": "logback-classic",
+        "version": "1.5.38",
+        "filename": "logback-classic-1.5.38.jar",
+        "sha256": "afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "ch.qos.logback",
+        "name": "logback-core",
+        "version": "1.5.38",
+        "filename": "logback-core-1.5.38.jar",
+        "sha256": "a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-exporter-logging",
+        "version": "1.63.0",
+        "filename": "opentelemetry-exporter-logging-1.63.0.jar",
+        "sha256": "6d85a64b76977a60a57204304925ef216445adc7154d4103136caf6e11306307"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-sdk",
+        "version": "1.63.0",
+        "filename": "opentelemetry-sdk-1.63.0.jar",
+        "sha256": "37acf2700ced98f59ac719e0551726d62eb085d659eb9f7c8e61f228c230902e"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-sdk-trace",
+        "version": "1.63.0",
+        "filename": "opentelemetry-sdk-trace-1.63.0.jar",
+        "sha256": "b3ad84c289d421d8ae0062d782043385b84e0394b859f6329dc02dae2485e7c3"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-sdk-metrics",
+        "version": "1.63.0",
+        "filename": "opentelemetry-sdk-metrics-1.63.0.jar",
+        "sha256": "2140ff82be356e0d77a206f5f7f4868d22d49efd4976d00dee2fc52f1d8c670e"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-sdk-logs",
+        "version": "1.63.0",
+        "filename": "opentelemetry-sdk-logs-1.63.0.jar",
+        "sha256": "85c4f207f2a437321af7864e45f92637b7ca5e9c9611103e2ff322bc9e6c4bd7"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-sdk-common",
+        "version": "1.63.0",
+        "filename": "opentelemetry-sdk-common-1.63.0.jar",
+        "sha256": "75ecc937b6ad84efd838f445ee7f810f123c54d8c57ecbbec9196f009fe18cd6"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-exporter-otlp-common",
+        "version": "1.63.0",
+        "filename": "opentelemetry-exporter-otlp-common-1.63.0.jar",
+        "sha256": "987fb841ea9c4b13699fc5c1afc842c5e83b38e18222821cdf9e6449c4cd5483"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-exporter-common",
+        "version": "1.63.0",
+        "filename": "opentelemetry-exporter-common-1.63.0.jar",
+        "sha256": "f288746055a9118d24a662cd7526cd5eb495ff37e5e4e54798a751b4bbe56e20"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-api",
+        "version": "1.63.0",
+        "filename": "opentelemetry-api-1.63.0.jar",
+        "sha256": "07377d6f3fb2ccfb8b8b713290bf48759f9218d4e72467f3ccee55895926ee4b"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry.semconv",
+        "name": "opentelemetry-semconv",
+        "version": "1.42.0",
+        "filename": "opentelemetry-semconv-1.42.0.jar",
+        "sha256": "eb56685bfb9d26b1c95a171b38015747fc3085dd7f63aca26dfd87352ccbbe40"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.aspectj",
+        "name": "aspectjrt",
+        "version": "1.9.24",
+        "filename": "aspectjrt-1.9.24.jar",
+        "sha256": "38eeea5f17ad49b708afe11473867a99407f656ae140824ce8d6fc0c19fd4802"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.velocity",
+        "name": "velocity-engine-core",
+        "version": "2.4.1",
+        "filename": "velocity-engine-core-2.4.1.jar",
+        "sha256": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.commons",
+        "name": "commons-lang3",
+        "version": "3.20.0",
+        "filename": "commons-lang3-3.20.0.jar",
+        "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.httpcomponents.client5",
+        "name": "httpclient5-cache",
+        "version": "5.6.4",
+        "filename": "httpclient5-cache-5.6.4.jar",
+        "sha256": "c425cb6db4863480982899092d1d283f84c0f32914a59bf2de479e69daa8fa11"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.httpcomponents.client5",
+        "name": "httpclient5",
+        "version": "5.6.4",
+        "filename": "httpclient5-5.6.4.jar",
+        "sha256": "bdef5f8841145cd76c4c605ff301bc840eea0d5292332b7b892a93316c0d8ee1"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.httpcomponents.core5",
+        "name": "httpcore5-h2",
+        "version": "5.4.3",
+        "filename": "httpcore5-h2-5.4.3.jar",
+        "sha256": "c7db7026b8e2dea39132b04a6069f6671e2858309b20a146ec5c7dd6ed73a0b6"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.httpcomponents.core5",
+        "name": "httpcore5",
+        "version": "5.4.3",
+        "filename": "httpcore5-5.4.3.jar",
+        "sha256": "18bfbbabb478dfb67f31aeaf428c387f3c3df654582e1309f708ee1f3086830a"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-context",
+        "version": "1.63.0",
+        "filename": "opentelemetry-context-1.63.0.jar",
+        "sha256": "f96d13d1db4bf090eeb36d0c4e211e048a1ef48a59d833569b33aae4b4760a77"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.opentelemetry",
+        "name": "opentelemetry-common",
+        "version": "1.63.0",
+        "filename": "opentelemetry-common-1.63.0.jar",
+        "sha256": "6e0ab4fa86b2581848328cc25c00188d6b0826f039055aec85352ebcf64b05df"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.cryptacular",
+        "name": "cryptacular",
+        "version": "1.3.0",
+        "filename": "cryptacular-1.3.0.jar",
+        "sha256": "5bef5b396aba0607bd972365991f833f7d8f16af506f2ade1f589fe344105123"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.google.guava",
+        "name": "failureaccess",
+        "version": "1.0.2",
+        "filename": "failureaccess-1.0.2.jar",
+        "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.bouncycastle",
+        "name": "bcpkix-jdk18on",
+        "version": "1.84",
+        "filename": "bcpkix-jdk18on-1.84.jar",
+        "sha256": "c87f16ed9e5ec61bc94151e9f3646ac44e50cd448121ce84367fa4b7ec7ec1bb"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "io.dropwizard.metrics",
+        "name": "metrics-core",
+        "version": "4.2.39",
+        "filename": "metrics-core-4.2.39.jar",
+        "sha256": "cc7b1352cd8077974b70b3e365c4f13aa93f5786ce1dea538be5451ed23600c9"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.slf4j",
+        "name": "slf4j-api",
+        "version": "2.0.17",
+        "filename": "slf4j-api-2.0.17.jar",
+        "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.bouncycastle",
+        "name": "bcutil-jdk18on",
+        "version": "1.84",
+        "filename": "bcutil-jdk18on-1.84.jar",
+        "sha256": "b374e16963421fb9cfb01cc20d7ad8fd2f8b8188e3eef0ec0a8965e245f7619a"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.bouncycastle",
+        "name": "bcprov-jdk18on",
+        "version": "1.84",
+        "filename": "bcprov-jdk18on-1.84.jar",
+        "sha256": "64d6c5a6121fcd927152dd182cbed39afe0fda641a970d9bcc0c9cb1858b2731"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "de.mkammerer",
+        "name": "argon2-jvm-nolibs",
+        "version": "2.11",
+        "filename": "argon2-jvm-nolibs-2.11.jar",
+        "sha256": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.google.guava",
+        "name": "listenablefuture",
+        "version": "9999.0-empty-to-avoid-conflict-with-guava",
+        "filename": "listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+        "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.fasterxml.jackson.core",
+        "name": "jackson-annotations",
+        "version": "2.22",
+        "filename": "jackson-annotations-2.22.jar",
+        "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "net.java.dev.jna",
+        "name": "jna",
+        "version": "5.8.0",
+        "filename": "jna-5.8.0.jar",
+        "sha256": "930273cc1c492f25661ea62413a6da3fd7f6e01bf1c4dcc0817fc8696a7b07ac"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "com.google.errorprone",
+        "name": "error_prone_annotations",
+        "version": "2.38.0",
+        "filename": "error_prone_annotations-2.38.0.jar",
+        "sha256": "6661d5335090a5fc61dd869d2095bc6c1e2156e3aa47a6e4ababdf64c99a7889"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.checkerframework",
+        "name": "checker-qual",
+        "version": "3.41.0",
+        "filename": "checker-qual-3.41.0.jar",
+        "sha256": "2f9f245bf68e4259d610894f2406dc1f6363dc639302bd566e8272e4f4541172"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.yaml",
+        "name": "snakeyaml",
+        "version": "2.5",
+        "filename": "snakeyaml-2.5.jar",
+        "sha256": "e6682acf1ace77508ef13649cbf4f8d09d2cf5457bdb61d25ffb6ac0233d78dd"
+    },
+    {
+        "project": "supertokens-core",
+        "group": "org.apache.tomcat",
+        "name": "tomcat-annotations-api",
+        "version": "11.0.25",
+        "filename": "tomcat-annotations-api-11.0.25.jar",
+        "sha256": "d32cc2aad115b27456ce075b2167b3d549aa9ca75439d67f6a60bcc057d7212d"
+    },
+    {
+        "project": "supertokens-postgresql-plugin",
+        "group": "com.zaxxer",
+        "name": "HikariCP",
+        "version": "6.3.0",
+        "filename": "HikariCP-6.3.0.jar",
+        "sha256": "07c6344059af30a135144209c7c8bd666b8823124422ec859864d209d4ab7ca1"
+    },
+    {
+        "project": "supertokens-postgresql-plugin",
+        "group": "org.postgresql",
+        "name": "postgresql",
+        "version": "42.7.13",
+        "filename": "postgresql-42.7.13.jar",
+        "sha256": "6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
+    },
+    {
+        "project": "supertokens-postgresql-plugin",
+        "group": "org.checkerframework",
+        "name": "checker-qual",
+        "version": "3.55.1",
+        "filename": "checker-qual-3.55.1.jar",
+        "sha256": "857658c8bdcbff794949a8d9922f88d63ee3751c203c7cd7d21ea97f9e745288"
+    },
+    {
+        "project": "supertokens-postgresql-plugin",
+        "group": "org.slf4j",
+        "name": "slf4j-api",
+        "version": "1.7.36",
+        "filename": "slf4j-api-1.7.36.jar",
+        "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+    }
+]

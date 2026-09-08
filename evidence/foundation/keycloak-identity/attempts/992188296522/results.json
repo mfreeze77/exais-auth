@@ -1,0 +1,333 @@
+{
+  "engine": "Keycloak",
+  "version": "26.7.3",
+  "source_commit": "6d238b6558037085cc25c915893c3d301a80243e",
+  "run": "992188296522",
+  "fixture_realm_prefix": "ea-broker-992188296522",
+  "elapsed_seconds": 2.658,
+  "script_sha256": "2d11834bc6cf1049a49697a8262f82e56c0345ca174f3e0744a00653c4056b6e",
+  "results": [
+    {
+      "test_id": "KC-BROKER-PROVIDER-SUB-a-alpha",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "SOC-002",
+        "SOC-003",
+        "IDN-003"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Actual signed local OIDC provider authentication and PKCE token exchange; no admin-created identity link."
+    },
+    {
+      "test_id": "KC-BROKER-PROVIDER-SUB-a-beta",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "SOC-002",
+        "SOC-003",
+        "IDN-003"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Actual signed local OIDC provider authentication and PKCE token exchange; no admin-created identity link."
+    },
+    {
+      "test_id": "KC-BROKER-PROVIDER-SUB-b-alpha",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "SOC-002",
+        "SOC-003",
+        "IDN-003"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Actual signed local OIDC provider authentication and PKCE token exchange; no admin-created identity link."
+    },
+    {
+      "test_id": "KC-BROKER-PROVIDER-SUB-b-beta",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "SOC-002",
+        "SOC-003",
+        "IDN-003"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Actual signed local OIDC provider authentication and PKCE token exchange; no admin-created identity link."
+    },
+    {
+      "test_id": "KC-BROKER-APP-TENANT-ISOLATION",
+      "actual": 4,
+      "expected": 4,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-001",
+        "IDN-003"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Same upstream issuer/subject/email across two applications and two provider aliases per realm yields four isolated engine users."
+    },
+    {
+      "test_id": "KC-BROKER-SHARED-ALIAS-a",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-004"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Explicitly configured shared provider alias reuses the same engine identity; tenant session/membership/permissions require separate policy qualification."
+    },
+    {
+      "test_id": "KC-BROKER-SHARED-ALIAS-b",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-004"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Explicitly configured shared provider alias reuses the same engine identity; tenant session/membership/permissions require separate policy qualification."
+    },
+    {
+      "test_id": "KC-BROKER-FEDERATED-CREDENTIAL-INVENTORY",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-005"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Federated-only user has stable engine user ID and provider tuple; imported login does not silently create a password credential."
+    },
+    {
+      "test_id": "KC-BROKER-LAST-METHOD-UNLINK",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "LNK-006"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Self-service account unlink rejects sole provider with no password. An unauthorized response would not count as policy enforcement."
+    },
+    {
+      "test_id": "KC-BROKER-AIA-LINK",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "LNK-003",
+        "LNK-005"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Supported idp_link AIA confirmed by user and followed through real owned-provider authentication; no administrative link insertion."
+    },
+    {
+      "test_id": "KC-BROKER-LINK-STABLE-PRIMARY",
+      "actual": true,
+      "expected": true,
+      "outcome": "passed",
+      "requirements": [
+        "IDN-005",
+        "LNK-005"
+      ],
+      "qualification_scope": "Bounded Keycloak candidate characterization only",
+      "note": "Engine user subject remains stable after supported linking. No separate recipe-user UUID is exposed by this native model."
+    }
+  ],
+  "browser_steps": [
+    {
+      "realm": "ea-broker-992188296522-a",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-a",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-b",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-b",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-a",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-a",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-b",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-b",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-idp/protocol/openid-connect/auth",
+      "forms": [
+        {
+          "id": "kc-form-login",
+          "fields": [
+            "credentialId",
+            "password",
+            "username"
+          ],
+          "buttons": {
+            "login": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-idp/login-actions/authenticate"
+        }
+      ]
+    },
+    {
+      "realm": "ea-broker-992188296522-a",
+      "step": 0,
+      "status": 200,
+      "path": "/realms/ea-broker-992188296522-a/login-actions/required-action",
+      "forms": [
+        {
+          "id": null,
+          "fields": [],
+          "buttons": {
+            "continue": "",
+            "cancel-aia": ""
+          },
+          "action_path": "/realms/ea-broker-992188296522-a/login-actions/required-action"
+        }
+      ]
+    }
+  ],
+  "error": null,
+  "foundation_passed": false,
+  "production_approved": false,
+  "provider_qualification": "Owned local OIDC provider realm; not a third-party live-provider test",
+  "unqualified": [
+    "Independent tenant session/permission policy",
+    "Recipe-method identity lifecycle mapping",
+    "Concurrent linking/unlinking",
+    "Session consequences and recent-authentication policy",
+    "Native/live third-party providers and independent security review"
+  ]
+}

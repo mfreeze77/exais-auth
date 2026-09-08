@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "sources": [
+    {
+      "id": "FDI-4.2.0",
+      "surface": "FDI",
+      "repository": "supertokens/frontend-driver-interface",
+      "revision": "b7e8581d196a5e4d45a9431ca614b8aa68384008",
+      "discovery_branch": "4.2",
+      "path": "api_spec.yaml",
+      "protocol_version": "4.2.0",
+      "sha256": "f427c98da9d6873b92df2956ddd06e9d321fb5c1adaf9c5d4b191c17cbea33ce",
+      "baseline_source_ids": ["S02", "S22"],
+      "role": "reference-only; additional upstream operations do not expand the frozen baseline"
+    },
+    {
+      "id": "CDI-5.3.0",
+      "surface": "CDI",
+      "repository": "supertokens/core-driver-interface",
+      "revision": "51072a01e22477833fbba250d5ce27d09541327c",
+      "discovery_branch": "5.3",
+      "path": "api_spec.yaml",
+      "protocol_version": "5.3.0",
+      "sha256": "853552e76d5e35e10619e42adca33470fc56dda038af87ba195f07ab7aabfb98",
+      "baseline_source_ids": ["S03", "S21"],
+      "role": "reference-only; not a claim of support by the selected engine"
+    },
+    {
+      "id": "CDI-5.3.0-bulk-fix",
+      "surface": "CDI",
+      "repository": "supertokens/core-driver-interface",
+      "revision": "e15e4693498f9c0bbbcc2b90ac33959a476703a1",
+      "discovery_branch": "fix/bulk-import-missing-endpoints",
+      "path": "api_spec.yaml",
+      "protocol_version": "5.3.0",
+      "sha256": "3a95185e4681472a23be97629b52bfcbb8957a0bfdf076dbed70a39a3d7521f7",
+      "baseline_source_ids": ["S03", "S21"],
+      "role": "supplemental reference for CDI-028 and CDI-030; unmerged-branch publication and runtime compatibility require verification"
+    }
+  ]
+}

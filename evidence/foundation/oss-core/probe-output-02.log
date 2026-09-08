@@ -1,0 +1,18 @@
+OSS-PRIVATE-001: passed
+OSS-PASSWORD-001: passed
+OSS-PASSWORD-NEGATIVE-001: passed
+OSS-PASSWORD-RACE-001: passed
+OSS-SESSION-001: passed
+OSS-CSRF-001: passed
+OSS-REFRESH-001: passed
+OSS-REVOKE-001: passed
+OSS-REFRESH-RACE-001: passed
+OSS-RESPONSE-LOSS-001: passed
+OSS-LOGOUT-RACE-001: passed
+OSS-APP-PROVISION-A: unavailable (Application provisioning unavailable on unactivated audited Core)
+OSS-APP-PROVISION-B: unavailable (Application provisioning unavailable on unactivated audited Core)
+OSS-ISOLATION-FOUR-SCOPES: unavailable (Four required app/tenant scopes were not provisioned)
+OSS-DEFAULT-APP-TENANT: unavailable (Default-app tenant provisioning unavailable)
+OSS-LINK-001: unavailable (Authoritative linking unavailable without activation; no entitlement bypass attempted)
+OSS56-REFRESH-REUSE-001: passed
+{"harness_error": null, "foundation_passed": false, "passed": 12, "failed": 0, "unavailable": 5}

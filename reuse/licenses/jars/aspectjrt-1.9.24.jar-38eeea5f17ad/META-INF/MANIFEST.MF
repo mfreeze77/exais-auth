@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.9.9
+Built-By: aclement
+Build-Jdk: 23.0.2
+Automatic-Module-Name: org.aspectj.runtime
+
+Name: org/aspectj/lang/
+Bundle-Version: 1.9.24
+Implementation-Version: 1.9.24
+Specification-Title: AspectJ Runtime Classes
+Specification-Version: 1.9.24
+Bundle-Copyright: (C) Copyright 1999-2001 Xerox Corporation, 2002 Palo A
+ lto Research Center, Incorporated (PARC), 2003-2020 Contributors. All R
+ ights Reserved
+Implementation-Title: org.aspectj.runtime
+Bundle-Name: AspectJ Runtime
+Implementation-Vendor: https://www.eclipse.org/aspectj/
+Specification-Vendor: https://www.eclipse.org/aspectj/
+

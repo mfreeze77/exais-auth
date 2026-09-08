@@ -1,0 +1,48 @@
+{
+  "timestamp_utc": "2026-09-08T22:12:55.690Z",
+  "profile": "real-chromium-react-private-keycloak-candidate",
+  "auth_completion": false,
+  "foundation_passed": false,
+  "browser_version": "151.0.7922.34",
+  "tests": [
+    {
+      "id": "KC-CLIENT-SIGNED-MISSING-TENANT",
+      "status": "passed"
+    },
+    {
+      "id": "KC-CLIENT-SIGNED-WRONG-AUDIENCE",
+      "status": "passed"
+    },
+    {
+      "id": "KC-CLIENT-REACT-PASSWORD-TOTP-RESOURCE",
+      "status": "failed",
+      "error_type": "TimeoutError"
+    },
+    {
+      "id": "KC-CLIENT-BROWSER-BOUNDARY-HTTPONLY-CSRF",
+      "status": "failed",
+      "error_type": "AssertionError"
+    },
+    {
+      "id": "KC-CLIENT-REACT-REFRESH-LOGOUT",
+      "status": "failed",
+      "error_type": "TimeoutError"
+    }
+  ],
+  "source_sha256": {
+    "examples/keycloak-clients/server.mjs": "39f9556ecf2b274b8d7981816f4a752c2af00a14345549139c2ed2060f137c9f",
+    "examples/keycloak-clients/client.jsx": "7c7d12ada968d97a0af166720d528f4286f8ddb41b6f896f9746a32a0fcf257a",
+    "examples/keycloak-clients/python_client.py": "8e5e4a51b4ca0e5b813842ca8a94018a99956c164b26825a25a25f1c6eab1a0c",
+    "examples/keycloak-clients/browser-probe.mjs": "9c85395465f25735221c16332451900222ee07fd5b925d4457bfde1de1a94793",
+    "examples/keycloak-clients/package.json": "62bb20016e349acbdf3368bc33bd778b5b92a0f58eb6d1ef0ad7758d62137f7b",
+    "examples/keycloak-clients/package-lock.json": "a1b15cab430aeb529fc2fc585126e3f501ccf6d5095c0c780674c6aba94f0e01",
+    "examples/keycloak-clients/requirements-test.txt": "ff66549f44cee8cc24eff69e6807f659ce8720ddd57c28818b445605610e4f45",
+    "examples/keycloak-clients/public/index.html": "5ec8301509cabf234ae137f68b96526f9da88231c6786b51c556cc25c4fc9212",
+    "examples/keycloak-clients/public/style.css": "8349755bcde7bbd8ec9a0ffd194f7f44e0ae61c877f05aeaa3251e2147d83b52"
+  },
+  "limits": [
+    "Single candidate application and alpha organization",
+    "Browser only Chromium Linux; Safari, Firefox and native SDK qualification incomplete",
+    "Headless password/TOTP does not prove all original FDI/CDI APIs, providers, SDK/plugin profiles, or independent security review"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "recorded_at": "2026-09-08T22:11:41.455202+00:00",
+  "profile": "candidate-python-to-node-to-private-keycloak-json-spi",
+  "auth_completion": false,
+  "foundation_passed": false,
+  "source_sha256": {
+    "tests/foundation/keycloak_clients.py": "ec356b64c86975a04db8dcb0c39d62a46ee3e8555cecb45ff6c9920a4e32b9de",
+    "examples/keycloak-clients/audit-dependencies.mjs": "d29049cb7235f21066c9281c1084886ca453a9b7ccf5cd30eac513c2caf0b069",
+    "examples/keycloak-clients/browser-probe.mjs": "9c85395465f25735221c16332451900222ee07fd5b925d4457bfde1de1a94793",
+    "examples/keycloak-clients/build.mjs": "82a827217104af2397b6da8e2e72033a4c29672c512681cad9a60614e3ba1232",
+    "examples/keycloak-clients/server.mjs": "ca13a543f6af6fd95b74d252ae45cef4071cc2467b945ef208ddd19d87fa6e26",
+    "examples/keycloak-clients/audit-python.py": "a7c32912edfba7d2e7151ad06c4e86d31e8a6d189df16885a94b1969f783cc3a",
+    "examples/keycloak-clients/prepare-client-lab.py": "bd63cac1a225497ac479c632362cd614ae05f420021f1819c38411f6eb41f108",
+    "examples/keycloak-clients/python_client.py": "8e5e4a51b4ca0e5b813842ca8a94018a99956c164b26825a25a25f1c6eab1a0c",
+    "examples/keycloak-clients/client.jsx": "7c7d12ada968d97a0af166720d528f4286f8ddb41b6f896f9746a32a0fcf257a",
+    "examples/keycloak-clients/package.json": "62bb20016e349acbdf3368bc33bd778b5b92a0f58eb6d1ef0ad7758d62137f7b",
+    "examples/keycloak-clients/package-lock.json": "a1b15cab430aeb529fc2fc585126e3f501ccf6d5095c0c780674c6aba94f0e01",
+    "examples/keycloak-clients/requirements-test.txt": "ff66549f44cee8cc24eff69e6807f659ce8720ddd57c28818b445605610e4f45",
+    "examples/keycloak-clients/Dockerfile": "f2cdf15f59cae99c66c269170fc4ecfa109ea41f901f26cda530839b598bdd4a"
+  },
+  "tests": [
+    {
+      "id": "__main__.ClientProof.test_01_python_password_totp_resource_refresh_logout",
+      "status": "failed",
+      "error_type": "AssertionError",
+      "detail": "Tuples differ: (403, None, False) != (200, 'AUTHENTICATED', True)\n\nFirst differing element 0:\n403\n200\n\n- (403, None, False)\n+ (200, 'AUTHENTICATED', True)"
+    },
+    {
+      "id": "__main__.ClientProof.test_02_missing_csrf_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_03_cross_origin_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_04_unsupported_tenant_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_05_action_url_injection_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_06_cross_browser_transaction_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_07_wrong_password_keeps_unauthenticated_state",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_08_consumed_action_replay_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_09_concurrent_action_has_one_owner",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_10_wrong_totp_keeps_unauthenticated_state",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_11_factor_out_of_order_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_12_public_callback_injection_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_13_unsigned_or_malformed_access_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_14_refresh_without_session_rejected",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_15_refresh_rejects_caller_supplied_token",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_16_unicode_action_rejected_safely",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.ClientProof.test_17_python_client_rejects_external_url",
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "executed": 17,
+    "passed": 16,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "limits": [
+    "Single candidate backend/engine instance; no durable preauth failover",
+    "Password/TOTP proof only; original SDK families and 205 API contract not qualified",
+    "No independent human security review",
+    "Resource verification is offline JWT; previously copied access JWT remains usable until expiry"
+  ]
+}

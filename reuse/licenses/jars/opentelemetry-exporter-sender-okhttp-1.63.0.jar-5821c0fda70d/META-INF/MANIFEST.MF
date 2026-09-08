@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: io.opentelemetry.exporter.sender.okhttp.interna
+ l
+Built-By: runner
+Built-JDK: 21.0.11
+Bundle-ManifestVersion: 2
+Bundle-Name: opentelemetry-exporter-sender-okhttp
+Bundle-SymbolicName: opentelemetry-exporter-sender-okhttp
+Bundle-Version: 1.63.0
+Created-By: 21.0.11 (Eclipse Adoptium)
+Export-Package: io.opentelemetry.exporter.sender.okhttp.internal;versi
+ on="1.63.0";uses:="io.opentelemetry.sdk.common,io.opentelemetry.sdk.c
+ ommon.export,javax.annotation,javax.net.ssl,okhttp3,okio"
+Implementation-Title: okhttp
+Implementation-Version: 1.63.0
+Import-Package: okhttp3;version="[5.3,6)";resolution:=optional,okio;ve
+ rsion="[3.17,4)";resolution:=optional,org.jspecify.annotations;versio
+ n="[1.0,2)";resolution:=optional,javax.annotation;version="3.0.2";res
+ olution:=optional,io.opentelemetry.api.impl;version="[1.63,2)",io.ope
+ ntelemetry.context;version="[1.63,2)",io.opentelemetry.exporter.inter
+ nal;version="[1.63,2)",io.opentelemetry.sdk.common;version="[1.63,2)"
+ ,io.opentelemetry.sdk.common.export;version="[1.63,2)",io.opentelemet
+ ry.sdk.common.internal;version="[1.63,2)",java.io,java.lang,java.lang
+ .invoke,java.net,java.nio,java.nio.charset,java.time,java.util,java.u
+ til.concurrent,java.util.function,java.util.logging,java.util.stream,
+ javax.net.ssl
+Provide-Capability: osgi.serviceloader;osgi.serviceloader="io.opentele
+ metry.sdk.common.export.GrpcSenderProvider",osgi.serviceloader;osgi.s
+ erviceloader="io.opentelemetry.sdk.common.export.HttpSenderProvider"
+Require-Capability: osgi.extender;filter:="(osgi.extender=osgi.service
+ loader.registrar)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-7.2.3.202603250810
+

@@ -1,0 +1,361 @@
+{
+  "image_id": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+  "postgres_digest": "postgres@sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+  "network": "expertauth-oss-proof",
+  "internal": true,
+  "published_ports": [],
+  "artifacts": [
+    {
+      "path": "lib/core-12.2.0.jar",
+      "sha256": "d16e9d760ace7e9c5cd9b888df1e67bcfdad730b25a5c56a50f52e1b2229c539"
+    },
+    {
+      "path": "lib/annotations-13.0.jar",
+      "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    },
+    {
+      "path": "lib/argon2-jvm-2.11.jar",
+      "sha256": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1"
+    },
+    {
+      "path": "lib/argon2-jvm-nolibs-2.11.jar",
+      "sha256": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804"
+    },
+    {
+      "path": "lib/aspectjrt-1.9.24.jar",
+      "sha256": "38eeea5f17ad49b708afe11473867a99407f656ae140824ce8d6fc0c19fd4802"
+    },
+    {
+      "path": "lib/bcpkix-jdk18on-1.84.jar",
+      "sha256": "c87f16ed9e5ec61bc94151e9f3646ac44e50cd448121ce84367fa4b7ec7ec1bb"
+    },
+    {
+      "path": "lib/bcprov-jdk18on-1.84.jar",
+      "sha256": "64d6c5a6121fcd927152dd182cbed39afe0fda641a970d9bcc0c9cb1858b2731"
+    },
+    {
+      "path": "lib/bcutil-jdk18on-1.84.jar",
+      "sha256": "b374e16963421fb9cfb01cc20d7ad8fd2f8b8188e3eef0ec0a8965e245f7619a"
+    },
+    {
+      "path": "lib/checker-qual-3.41.0.jar",
+      "sha256": "2f9f245bf68e4259d610894f2406dc1f6363dc639302bd566e8272e4f4541172"
+    },
+    {
+      "path": "lib/commons-codec-1.18.0.jar",
+      "sha256": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4"
+    },
+    {
+      "path": "lib/commons-lang3-3.20.0.jar",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+    },
+    {
+      "path": "lib/cryptacular-1.3.0.jar",
+      "sha256": "5bef5b396aba0607bd972365991f833f7d8f16af506f2ade1f589fe344105123"
+    },
+    {
+      "path": "lib/error_prone_annotations-2.38.0.jar",
+      "sha256": "6661d5335090a5fc61dd869d2095bc6c1e2156e3aa47a6e4ababdf64c99a7889"
+    },
+    {
+      "path": "lib/failureaccess-1.0.2.jar",
+      "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+    },
+    {
+      "path": "lib/gson-2.13.1.jar",
+      "sha256": "94855942d4992f112946d3de1c334e709237b8126d8130bf07807c018a4a2120"
+    },
+    {
+      "path": "lib/guava-33.0.0-jre.jar",
+      "sha256": "f4d85c3e4d411694337cb873abea09b242b664bb013320be6105327c45991537"
+    },
+    {
+      "path": "lib/httpclient5-5.6.4.jar",
+      "sha256": "bdef5f8841145cd76c4c605ff301bc840eea0d5292332b7b892a93316c0d8ee1"
+    },
+    {
+      "path": "lib/httpclient5-cache-5.6.4.jar",
+      "sha256": "c425cb6db4863480982899092d1d283f84c0f32914a59bf2de479e69daa8fa11"
+    },
+    {
+      "path": "lib/httpcore5-5.4.3.jar",
+      "sha256": "18bfbbabb478dfb67f31aeaf428c387f3c3df654582e1309f708ee1f3086830a"
+    },
+    {
+      "path": "lib/httpcore5-h2-5.4.3.jar",
+      "sha256": "c7db7026b8e2dea39132b04a6069f6671e2858309b20a146ec5c7dd6ed73a0b6"
+    },
+    {
+      "path": "lib/jackson-annotations-2.22.jar",
+      "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+    },
+    {
+      "path": "lib/jackson-core-2.22.1.jar",
+      "sha256": "941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+    },
+    {
+      "path": "lib/jackson-databind-2.22.1.jar",
+      "sha256": "7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+    },
+    {
+      "path": "lib/jackson-dataformat-cbor-2.22.1.jar",
+      "sha256": "5c6e49843e46aaeebd3ffc777ad221ac2208f3e36e24c56779ac6fabdfb1d499"
+    },
+    {
+      "path": "lib/jackson-dataformat-yaml-2.22.1.jar",
+      "sha256": "cc3a0e540791a9a1cbcd7584767b84572ffda0b72823856558f47dea69ae8ed1"
+    },
+    {
+      "path": "lib/jackson-datatype-jsr310-2.22.1.jar",
+      "sha256": "85da45b7e5e565418963ff8f0dcb184365b0557c15468933f4318dde5c3ce845"
+    },
+    {
+      "path": "lib/java-jwt-4.4.0.jar",
+      "sha256": "173aab2a30727e5586e13055fb6c4e27112453f5d8cf1136b3369c674cbe011f"
+    },
+    {
+      "path": "lib/java-otp-0.4.0.jar",
+      "sha256": "c430c1039189635e4b6b7daee98b0c56288e459a3b8ec851cb7bcb9918107247"
+    },
+    {
+      "path": "lib/jbcrypt-0.4.jar",
+      "sha256": "e183f6f59404fc1e12073cfea4ace7ea103c900463cd21fb609a7c617ecdf624"
+    },
+    {
+      "path": "lib/jna-5.8.0.jar",
+      "sha256": "930273cc1c492f25661ea62413a6da3fd7f6e01bf1c4dcc0817fc8696a7b07ac"
+    },
+    {
+      "path": "lib/jsr305-3.0.2.jar",
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    },
+    {
+      "path": "lib/kotlin-stdlib-2.2.21.jar",
+      "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+    },
+    {
+      "path": "lib/libphonenumber-8.13.25.jar",
+      "sha256": "43f54cb4b10f907b1dec3b3bbfbbc3eb902ad26769da20b1edbb944a589f2407"
+    },
+    {
+      "path": "lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+      "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+    },
+    {
+      "path": "lib/logback-classic-1.5.38.jar",
+      "sha256": "afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700"
+    },
+    {
+      "path": "lib/logback-core-1.5.38.jar",
+      "sha256": "a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883"
+    },
+    {
+      "path": "lib/metrics-core-4.2.39.jar",
+      "sha256": "cc7b1352cd8077974b70b3e365c4f13aa93f5786ce1dea538be5451ed23600c9"
+    },
+    {
+      "path": "lib/metrics-json-4.2.39.jar",
+      "sha256": "8726b15affd61992a4ecd0ed1dc3936782781e7fa0fdc47be04d338f9341dd46"
+    },
+    {
+      "path": "lib/okhttp-jvm-5.3.2.jar",
+      "sha256": "c771f48075b763f6c322055e21129a94b7de4c1faf3f8f58ace320b0c9517a30"
+    },
+    {
+      "path": "lib/okio-jvm-3.16.4.jar",
+      "sha256": "2196b993cd34dbbd919e7e01f57a4781b58bee80f86106163e287c20343a96a7"
+    },
+    {
+      "path": "lib/opensaml-core-api-5.2.3.jar",
+      "sha256": "40ed25f0892dfb833aa2b917bd2be1e10cb7c788efb3276b66b19338b80c29f6"
+    },
+    {
+      "path": "lib/opensaml-core-impl-5.2.3.jar",
+      "sha256": "af8604462837a7931d4688ccca3404db325ef7abff7a70a36206a9c4dd7fe953"
+    },
+    {
+      "path": "lib/opensaml-messaging-api-5.2.3.jar",
+      "sha256": "53e9a343afcdefdfaad4987d63598a2284c1bf98b99761c8baea1a69c2f7ebcd"
+    },
+    {
+      "path": "lib/opensaml-profile-api-5.2.3.jar",
+      "sha256": "3c150e2db1dee689b776c604d601adcc060d0305c6eabffa17f213509f5587f8"
+    },
+    {
+      "path": "lib/opensaml-saml-api-5.2.3.jar",
+      "sha256": "cce72578ec8df5dd18cb71c88bba89bd196c640281c199ce875e2aa44154f93f"
+    },
+    {
+      "path": "lib/opensaml-saml-impl-5.2.3.jar",
+      "sha256": "9f04221e172dc426f90fb3873d0148a0744edbf9e7a37de7ee0e6a34f7b74581"
+    },
+    {
+      "path": "lib/opensaml-security-api-5.2.3.jar",
+      "sha256": "2053f9ae1f37a87cf94117ea61395080eb3ec71c631aa71dd2a6c386dd8ff3af"
+    },
+    {
+      "path": "lib/opensaml-security-impl-5.2.3.jar",
+      "sha256": "21cc4cc73551f4ded22e8390286b9a4202b48c5054498bcd263f393f30d441a1"
+    },
+    {
+      "path": "lib/opensaml-soap-api-5.2.3.jar",
+      "sha256": "1b503de27e275bbe9014b4d503ce80a8b8dcfcb0c47fff9e48f14b05cb2788ab"
+    },
+    {
+      "path": "lib/opensaml-soap-impl-5.2.3.jar",
+      "sha256": "b6a38b04741401de8b697ca773f200edb2421347e1eb0aa220355596d5675bf9"
+    },
+    {
+      "path": "lib/opensaml-storage-api-5.2.3.jar",
+      "sha256": "07402db8880c7da7143c57f1c2ea3cf08e1e80e1470d86409e2db56e1d3fb02a"
+    },
+    {
+      "path": "lib/opensaml-xmlsec-api-5.2.3.jar",
+      "sha256": "3401e9e309fd170f4b9ea0d8fc68b5b778c2374bf654371378bce21952d6c6b9"
+    },
+    {
+      "path": "lib/opensaml-xmlsec-impl-5.2.3.jar",
+      "sha256": "cc67fc1bd9cb435cdbe7483ef04513c83cc9619a3015c04ad41bb6cc0eb6e68e"
+    },
+    {
+      "path": "lib/opentelemetry-api-1.63.0.jar",
+      "sha256": "07377d6f3fb2ccfb8b8b713290bf48759f9218d4e72467f3ccee55895926ee4b"
+    },
+    {
+      "path": "lib/opentelemetry-common-1.63.0.jar",
+      "sha256": "6e0ab4fa86b2581848328cc25c00188d6b0826f039055aec85352ebcf64b05df"
+    },
+    {
+      "path": "lib/opentelemetry-context-1.63.0.jar",
+      "sha256": "f96d13d1db4bf090eeb36d0c4e211e048a1ef48a59d833569b33aae4b4760a77"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-common-1.63.0.jar",
+      "sha256": "f288746055a9118d24a662cd7526cd5eb495ff37e5e4e54798a751b4bbe56e20"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-logging-1.63.0.jar",
+      "sha256": "6d85a64b76977a60a57204304925ef216445adc7154d4103136caf6e11306307"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-otlp-1.63.0.jar",
+      "sha256": "4877e560f0ca03675cfb99ed5457c0d1875e953381e029f198280aca8a1d0f47"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-otlp-common-1.63.0.jar",
+      "sha256": "987fb841ea9c4b13699fc5c1afc842c5e83b38e18222821cdf9e6449c4cd5483"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-sender-okhttp-1.63.0.jar",
+      "sha256": "5821c0fda70dd188c11a855ed2d76d410ec4fd91d7315299e11e1318e3cb1d58"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-1.63.0.jar",
+      "sha256": "37acf2700ced98f59ac719e0551726d62eb085d659eb9f7c8e61f228c230902e"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-common-1.63.0.jar",
+      "sha256": "75ecc937b6ad84efd838f445ee7f810f123c54d8c57ecbbec9196f009fe18cd6"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-logs-1.63.0.jar",
+      "sha256": "85c4f207f2a437321af7864e45f92637b7ca5e9c9611103e2ff322bc9e6c4bd7"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-metrics-1.63.0.jar",
+      "sha256": "2140ff82be356e0d77a206f5f7f4868d22d49efd4976d00dee2fc52f1d8c670e"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-trace-1.63.0.jar",
+      "sha256": "b3ad84c289d421d8ae0062d782043385b84e0394b859f6329dc02dae2485e7c3"
+    },
+    {
+      "path": "lib/opentelemetry-semconv-1.42.0.jar",
+      "sha256": "eb56685bfb9d26b1c95a171b38015747fc3085dd7f63aca26dfd87352ccbbe40"
+    },
+    {
+      "path": "lib/scrypt-1.4.0.jar",
+      "sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4"
+    },
+    {
+      "path": "lib/shib-networking-9.2.3.jar",
+      "sha256": "cca1d53b5a5bfab21320ed68ee77c5e0f87af53753d69711a52af87cced94861"
+    },
+    {
+      "path": "lib/shib-security-9.2.3.jar",
+      "sha256": "46c53c48a6e1930f145add7f65ed51ab9273de9e3dc746b82e5d695d25bb0ba8"
+    },
+    {
+      "path": "lib/shib-support-9.2.3.jar",
+      "sha256": "c68f5668d23aa30a2a5b672dd03b46882bb0ce1185cf02240c4c99eee9bd94b0"
+    },
+    {
+      "path": "lib/shib-velocity-9.2.3.jar",
+      "sha256": "42f0fc3c53eae0b7d241b6e7c5a4c782100c78fe67d3527c1df67ba513a830c8"
+    },
+    {
+      "path": "lib/slf4j-api-2.0.17.jar",
+      "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+    },
+    {
+      "path": "lib/snakeyaml-2.5.jar",
+      "sha256": "e6682acf1ace77508ef13649cbf4f8d09d2cf5457bdb61d25ffb6ac0233d78dd"
+    },
+    {
+      "path": "lib/sqlite-jdbc-3.45.1.0.jar",
+      "sha256": "f5f5404fa5a60f9e0b15e7bea2ea2d137e255f01babd0bfcb9dafcd2e3bf9cd2"
+    },
+    {
+      "path": "lib/tomcat-annotations-api-11.0.25.jar",
+      "sha256": "d32cc2aad115b27456ce075b2167b3d549aa9ca75439d67f6a60bcc057d7212d"
+    },
+    {
+      "path": "lib/tomcat-embed-core-11.0.25.jar",
+      "sha256": "282b65b9fe43647b1459c0df11101f8599a58de5832075acff485c3705ba4894"
+    },
+    {
+      "path": "lib/velocity-engine-core-2.4.1.jar",
+      "sha256": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231"
+    },
+    {
+      "path": "lib/webauthn4j-core-0.28.6.RELEASE.jar",
+      "sha256": "d8a8f4b735bb9067fc2afd13f8c9ff723a5bad76341a83a4051a998cccff61ab"
+    },
+    {
+      "path": "lib/webauthn4j-util-0.28.6.RELEASE.jar",
+      "sha256": "ad70dd0c03f7ff7b8515cdc7da3a03f6c970d7a174fcb9347f1c411776b0e80c"
+    },
+    {
+      "path": "lib/xmlsec-3.0.6.jar",
+      "sha256": "395eccc3496063ac7b1d6af2422a11670ee5ded807f51542818eccd5fbb5e20c"
+    },
+    {
+      "path": "lib/plugin-interface-10.0.0.jar",
+      "sha256": "b26b00e1dd31dd0e651689c8dc482842b9c96c521e2b5e9df1092d41d1765f3c"
+    },
+    {
+      "path": "plugin/postgresql-plugin-9.8.0.jar",
+      "sha256": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705"
+    },
+    {
+      "path": "plugin/checker-qual-3.55.1.jar",
+      "sha256": "857658c8bdcbff794949a8d9922f88d63ee3751c203c7cd7d21ea97f9e745288"
+    },
+    {
+      "path": "plugin/HikariCP-6.3.0.jar",
+      "sha256": "07c6344059af30a135144209c7c8bd666b8823124422ec859864d209d4ab7ca1"
+    },
+    {
+      "path": "plugin/postgresql-42.7.13.jar",
+      "sha256": "6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
+    },
+    {
+      "path": "plugin/slf4j-api-1.7.36.jar",
+      "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+    }
+  ],
+  "remaining": "Wait for core-a startup, then launch core-b using the documented command; run actual readiness and two-replica probe.",
+  "production_approved": false,
+  "source_build_tested": true,
+  "runtime_authentication_tested": false
+}

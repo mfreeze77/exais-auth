@@ -1,0 +1,12 @@
+FROM gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2 AS build
+WORKDIR /work
+COPY settings.gradle build.gradle gradle.lockfile ./
+COPY gradle ./gradle
+COPY src ./src
+RUN gradle --no-daemon --dependency-verification strict jar
+
+FROM quay.io/keycloak/keycloak@sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54
+COPY --from=build --chown=keycloak:keycloak /work/build/libs/expertauth-keycloak-headless-0.1.0.jar /opt/keycloak/providers/
+RUN /opt/keycloak/bin/kc.sh build --db=postgres
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
+CMD ["start", "--optimized", "--import-realm", "--http-enabled=true", "--http-port=8080", "--hostname=http://kc-cluster.example.test:8080"]

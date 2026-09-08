@@ -1,0 +1,77 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "nodemailer": {
+      "name": "nodemailer",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1158513,
+          "name": "nodemailer",
+          "dependency": "nodemailer",
+          "title": "Nodemailer: Message-level raw option bypasses disableFileAccess/disableUrlAccess, enabling arbitrary file read and full-response SSRF in the delivered message",
+          "url": "https://github.com/advisories/GHSA-p6gq-j5cr-w38f",
+          "severity": "high",
+          "cwe": [
+            "CWE-73",
+            "CWE-918"
+          ],
+          "cvss": {
+            "score": 7.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N"
+          },
+          "range": "<=9.0.0"
+        }
+      ],
+      "effects": [
+        "supertokens-node"
+      ],
+      "range": "<=9.0.0",
+      "nodes": [
+        "node_modules/nodemailer"
+      ],
+      "fixAvailable": {
+        "name": "supertokens-node",
+        "version": "9.2.3",
+        "isSemVerMajor": true
+      }
+    },
+    "supertokens-node": {
+      "name": "supertokens-node",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "nodemailer"
+      ],
+      "effects": [],
+      "range": ">=9.3.0",
+      "nodes": [
+        "node_modules/supertokens-node"
+      ],
+      "fixAvailable": {
+        "name": "supertokens-node",
+        "version": "9.2.3",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 2,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 136,
+      "dev": 27,
+      "optional": 26,
+      "peer": 5,
+      "peerOptional": 0,
+      "total": 167
+    }
+  }
+}

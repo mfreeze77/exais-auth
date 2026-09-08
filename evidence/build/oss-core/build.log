@@ -1,0 +1,41 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :supertokens-plugin-interface:compileJava
+> Task :supertokens-core:compileJava SKIPPED
+> Task :supertokens-core:compileAspectj
+/workspace/supertokens-core/src/main/java/io/supertokens/telemetry/MethodSpanner.java:35 [warning] advice defined in io.supertokens.telemetry.MethodSpanner has not been applied [Xlint:adviceDidNotMatch]
+
+1 warning
+	
+
+> Task :supertokens-core:processResources NO-SOURCE
+> Task :supertokens-core:classes
+> Task :supertokens-core:jar
+> Task :supertokens-core:copyJars
+> Task :supertokens-plugin-interface:processResources NO-SOURCE
+> Task :supertokens-plugin-interface:classes
+> Task :supertokens-plugin-interface:jar
+> Task :supertokens-postgresql-plugin:compileJava SKIPPED
+> Task :supertokens-postgresql-plugin:compileAspectj
+> Task :supertokens-postgresql-plugin:generateMetaInf
+> Task :supertokens-postgresql-plugin:processResources
+> Task :supertokens-postgresql-plugin:classes
+> Task :supertokens-postgresql-plugin:jar
+> Task :supertokens-postgresql-plugin:copyJars
+> Task :runtimeInventory
+Persisted dependency lock state for project ':supertokens-core'
+Persisted dependency lock state for project ':supertokens-plugin-interface'
+Persisted dependency lock state for project ':supertokens-postgresql-plugin'
+Persisted dependency lock state for buildscript of project ':supertokens-core'
+Persisted dependency lock state for buildscript of project ':supertokens-postgresql-plugin'
+
+[Incubating] Problems report is available at: file:///workspace/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 8s
+11 actionable tasks: 11 executed

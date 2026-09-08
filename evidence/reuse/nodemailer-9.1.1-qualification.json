@@ -1,0 +1,111 @@
+{
+  "kind": "Isolated dependency qualification; local test SMTP sink, not live-provider or product acceptance",
+  "started_at": "2026-09-08T21:35:36.923Z",
+  "node": "v22.23.2",
+  "tests": [
+    {
+      "id": "NM9-positive-text-and-html",
+      "status": "passed"
+    },
+    {
+      "id": "NM9-raw-file-policy-blocks-read",
+      "status": "passed"
+    },
+    {
+      "id": "NM9-raw-url-policy-blocks-loopback-fetch",
+      "status": "passed"
+    },
+    {
+      "id": "NM9-message-cannot-reopen-file-policy",
+      "status": "passed"
+    },
+    {
+      "id": "NM9-attachment-file-policy-blocks-read",
+      "status": "passed"
+    },
+    {
+      "id": "ST24-NM9-emailpassword-smtp-text-html",
+      "status": "passed"
+    },
+    {
+      "id": "ST24-NM9-emailverification-smtp-text-html",
+      "status": "passed"
+    },
+    {
+      "id": "ST24-NM9-passwordless-smtp-text-html",
+      "status": "passed"
+    },
+    {
+      "id": "ST24-NM9-webauthn-smtp-text-html",
+      "status": "passed"
+    }
+  ],
+  "npm": {
+    "install": {
+      "exit_code": 0,
+      "stdout": "\nadded 77 packages, and audited 78 packages in 4s\n\nfound 0 vulnerabilities\n",
+      "stderr": "npm warn deprecated scmp@2.1.0: Just use Node.js's crypto.timingSafeEqual()\nnpm warn deprecated crypto-js@4.2.0: Active development of CryptoJS has been discontinued. This library is no longer maintained.\nnpm notice\nnpm notice New major version of npm available! 10.9.8 -> 12.0.2\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2\nnpm notice To update run: npm install -g npm@12.0.2\nnpm notice\n"
+    },
+    "audit": {
+      "exit_code": 0,
+      "result": {
+        "auditReportVersion": 2,
+        "vulnerabilities": {},
+        "metadata": {
+          "vulnerabilities": {
+            "info": 0,
+            "low": 0,
+            "moderate": 0,
+            "high": 0,
+            "critical": 0,
+            "total": 0
+          },
+          "dependencies": {
+            "prod": 78,
+            "dev": 0,
+            "optional": 0,
+            "peer": 0,
+            "peerOptional": 0,
+            "total": 77
+          }
+        }
+      },
+      "stderr": ""
+    }
+  },
+  "original_lock_sha256": "1d0422e47334943f68511c4a611abe9bc3c853859de37fe261333c401cb1e391",
+  "test_package_spec": {
+    "name": "expertauth-nodemailer-qualification",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+      "supertokens-node": "24.0.3"
+    },
+    "overrides": {
+      "supertokens-node": {
+        "nodemailer": "9.1.1"
+      }
+    }
+  },
+  "isolated_lock_sha256": "3514cd24ff3a1308bbefcc608c1a1263d190b9bceab6f2c8a25eaf268177c617",
+  "resolved_nodemailer": {
+    "version": "9.1.1",
+    "resolved": "https://registry.npmjs.org/nodemailer/-/nodemailer-9.1.1.tgz",
+    "integrity": "sha512-izw9mVKFix6YSnC9eLgV6g1opl9DUlRio9ZNcq+Wu9Ujn2UwF+8Nl0B8nz22kEC+CTZCvinkxwJ0DeFbb6NwcQ==",
+    "license": "MIT-0",
+    "engines": {
+      "node": ">=6.0.0"
+    }
+  },
+  "local_smtp_messages": 8,
+  "outbound_provider_messages": 0,
+  "finished_at": "2026-09-08T21:35:41.798Z",
+  "passed": 9,
+  "failed": 0,
+  "limitations": [
+    "Major dependency override outside the original SDK semver declaration",
+    "No live SMTP provider, OAuth transport, TLS certificate, full authentication UI, or load/concurrency qualification",
+    "SMTP sink is a synthetic local test fixture; it is not product email delivery implementation"
+  ],
+  "source_sha256": "d120ee650ca9195b47810500e0ddc74296f4ffdd1bbf6cd5a480bb4af93dffda"
+}

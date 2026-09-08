@@ -1,0 +1,25 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-oss-proof",
+    "--env-file",
+    ".runtime/oss-core/runtime.env",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/workspace",
+    "-w",
+    "/workspace",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "tests/foundation/oss_core_probe.py"
+  ],
+  "started_at": "2026-09-08T21:33:48.366305+00:00",
+  "finished_at": "2026-09-08T21:33:50.546336+00:00",
+  "exit_code": 0,
+  "stdout_stderr_artifact": "evidence/foundation/oss-core/probe-output-02.log",
+  "stdout_stderr_sha256": "9ec2f0026e25a5e486764d4db06890d05f93a520d58e751a4e1bb7fccb492548",
+  "secrets": "Environment file values not recorded",
+  "image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139"
+}

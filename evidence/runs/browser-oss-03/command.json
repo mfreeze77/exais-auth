@@ -1,0 +1,31 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-oss-proof",
+    "--ipc=host",
+    "-e",
+    "EVIDENCE_DIR=/repo/evidence/browser/oss-password-03",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo",
+    "-w",
+    "/repo/tests/browser",
+    "mcr.microsoft.com/playwright@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+    "node",
+    "oss-password.mjs"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788904677.0094278,
+  "elapsed_seconds": 12.426,
+  "input_sha256": {
+    "tests/browser/oss-password.mjs": "8d88f7021f696f5414a4692d9f5644b9e34ab121ecd06e7351bde6377bab8e45",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d",
+    "examples/node-react/client.jsx": "8c8385870cb06ae6742db8f6aac69f03d0a7cc889e8626f017cc97f66e8b240c",
+    "examples/node-react/server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+  },
+  "inputs_changed": false,
+  "output_sha256": "a9ff9fada5e3bc6b4f2f68a542047f629306a57545838408e6ed82f186cd5f10",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

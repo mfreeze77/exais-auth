@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-09-08T21:36:24.345634+00:00",
+  "build_command": [
+    "docker",
+    "build",
+    "-t",
+    "expertauth-python-app:0.1.0",
+    "examples/python"
+  ],
+  "build_exit_code": 0,
+  "build_output": "Sending build context to Docker daemon  13.82kB\n\nStep 1/9 : FROM python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36\n ---> 229a2c5bfa27\nStep 2/9 : ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_DISABLE_PIP_VERSION_CHECK=1\n ---> Using cache\n ---> 1a668725213d\nStep 3/9 : WORKDIR /app\n ---> Using cache\n ---> 70e13762af90\nStep 4/9 : COPY requirements.lock /app/requirements.lock\n ---> Using cache\n ---> c40ee7077457\nStep 5/9 : RUN pip install --no-cache-dir --require-hashes --only-binary=:all: -r /app/requirements.lock\n ---> Using cache\n ---> 5b60c1b2f7fd\nStep 6/9 : COPY app.py /app/app.py\n ---> Using cache\n ---> 0dc325bdedb6\nStep 7/9 : USER 65532:65532\n ---> Using cache\n ---> 2b6a6d8fffa1\nStep 8/9 : EXPOSE 8300\n ---> Using cache\n ---> bede7d7169d5\nStep 9/9 : CMD [\"uvicorn\", \"app:app\", \"--host\", \"0.0.0.0\", \"--port\", \"8300\", \"--no-access-log\"]\n ---> Using cache\n ---> 9ff0be83fb3d\nSuccessfully built 9ff0be83fb3d\nSuccessfully tagged expertauth-python-app:0.1.0\nDEPRECATED: The legacy builder is deprecated and will be removed in a future release.\n            Install the buildx component to build images with BuildKit:\n            https://docs.docker.com/go/buildx/\n\n",
+  "image_id": "sha256:9ff0be83fb3d2a65ae124332484b6f494e45f189cc74e0b8ebef6ba121035353",
+  "running_image_id": "sha256:9ff0be83fb3d2a65ae124332484b6f494e45f189cc74e0b8ebef6ba121035353",
+  "running_image_matches_built": true,
+  "container_name": "/expertauth-python-app",
+  "running": true,
+  "rootfs_read_only": true,
+  "container_user": "65532:65532",
+  "published_ports": {},
+  "network": "expertauth-oss-proof",
+  "network_internal": true,
+  "runtime_source_sha256": {
+    "/app/app.py": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b",
+    "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+  },
+  "runtime_source_matches_workspace": true,
+  "run_command_without_secrets": "docker run -d --name expertauth-python-app --network expertauth-oss-proof --network-alias python-app --env-file .runtime/oss-core/runtime.env --env PYTHON_API_DOMAIN=http://localhost:8300 --env WEBSITE_DOMAIN=http://localhost:8300 --read-only --tmpfs /tmp:rw,noexec,nosuid,size=16m expertauth-python-app:0.1.0",
+  "source_sha256": {
+    "examples\\python\\app.py": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b",
+    "examples\\python\\Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612",
+    "examples\\python\\requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "tests\\clients\\python_probe.py": "cf2223901ef3411fefc42f9c342e30da05d5c503452e660272bca90cc8507cf6"
+  }
+}

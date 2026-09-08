@@ -1,0 +1,2 @@
+rootProject.name = 'expertauth-audited-core-build'
+include 'supertokens-core', 'supertokens-plugin-interface', 'supertokens-postgresql-plugin'

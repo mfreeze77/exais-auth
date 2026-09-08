@@ -1,0 +1,2 @@
+org.expertauth.keycloak.JsonPasswordFactory
+org.expertauth.keycloak.JsonOtpFactory

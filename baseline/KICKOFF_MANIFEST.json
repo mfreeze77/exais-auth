@@ -1,0 +1,27 @@
+{
+  "kind": "kickoff-and-original-plan",
+  "version": "1.0",
+  "implementation_status": "not_implemented_by_this_bundle",
+  "files": [
+    {
+      "path": "EXPERTAUTH_KICKOFF.md",
+      "bytes": 18400,
+      "sha256": "df2dcdd13354bddc039ee9f7e55561c9555fca1f92b178abd18859df83e5cea1"
+    },
+    {
+      "path": "EXPERTAUTH_GOAL.txt",
+      "bytes": 2003,
+      "sha256": "67b69494e67781231ec05d21aecb8d961f86d44fe19c8dea2d126ce9b5d0f486"
+    },
+    {
+      "path": "expert-auth-full-parity-plan-v1.0.zip",
+      "bytes": 94438,
+      "sha256": "58f013dc0ae6fe9981206d4594e78d8efd0cde2f1a00f15bbdfbaec12ee918ed"
+    },
+    {
+      "path": "ExpertAuth_Full_Parity_Plan.md",
+      "bytes": 25638,
+      "sha256": "68d233204945c4e6a6e9e36112f5dd5cfa0e550a60e4c17790b15f7091531fd5"
+    }
+  ]
+}

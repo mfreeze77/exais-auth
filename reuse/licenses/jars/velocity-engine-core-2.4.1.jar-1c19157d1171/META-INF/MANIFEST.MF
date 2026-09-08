@@ -1,0 +1,82 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Build-Jdk-Spec: 21
+Specification-Title: Apache Velocity - Engine
+Specification-Version: 2.4
+Specification-Vendor: The Apache Software Foundation
+Implementation-Title: Apache Velocity - Engine
+Implementation-Version: 2.4.1
+Implementation-Vendor: The Apache Software Foundation
+Bundle-Description: Apache Velocity is a general purpose template engine
+ .
+Bundle-DocURL: https://www.apache.org/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Apache Velocity - Engine
+Bundle-SymbolicName: org.apache.velocity.engine-core
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.4.1
+Export-Package: org.apache.velocity;uses:="org.apache.velocity.context,o
+ rg.apache.velocity.exception,org.apache.velocity.runtime.resource";vers
+ ion="2.4.1",org.apache.velocity.app;uses:="org.apache.velocity,org.apac
+ he.velocity.context,org.apache.velocity.exception,org.apache.velocity.r
+ untime,org.slf4j";version="2.4.1",org.apache.velocity.app.event;uses:="
+ org.apache.velocity.context,org.apache.velocity.runtime,org.apache.velo
+ city.util.introspection,org.slf4j";version="2.4.1",org.apache.velocity.
+ app.event.implement;uses:="org.apache.velocity.app.event,org.apache.vel
+ ocity.context,org.apache.velocity.runtime,org.apache.velocity.util,org.
+ apache.velocity.util.introspection,org.slf4j";version="2.4.1",org.apach
+ e.velocity.context;uses:="org.apache.velocity,org.apache.velocity.app.e
+ vent,org.apache.velocity.runtime.resource,org.apache.velocity.util.intr
+ ospection";version="2.4.1",org.apache.velocity.exception;uses:="org.apa
+ che.velocity.runtime.parser,org.apache.velocity.util.introspection";ver
+ sion="2.4.1",org.apache.velocity.io;version="2.4.1",org.apache.velocity
+ .runtime;uses:="org.apache.velocity,org.apache.velocity.app.event,org.a
+ pache.velocity.context,org.apache.velocity.exception,org.apache.velocit
+ y.runtime.directive,org.apache.velocity.runtime.parser,org.apache.veloc
+ ity.runtime.parser.node,org.apache.velocity.runtime.resource,org.apache
+ .velocity.util,org.apache.velocity.util.introspection,org.slf4j";versio
+ n="2.4.1",org.apache.velocity.runtime.defaults;version="2.4.1",org.apac
+ he.velocity.runtime.directive;uses:="org.apache.velocity,org.apache.vel
+ ocity.context,org.apache.velocity.exception,org.apache.velocity.runtime
+ ,org.apache.velocity.runtime.parser,org.apache.velocity.runtime.parser.
+ node,org.apache.velocity.runtime.resource,org.apache.velocity.util.intr
+ ospection,org.slf4j";version="2.4.1",org.apache.velocity.runtime.direct
+ ive.contrib;uses:="org.apache.velocity.context,org.apache.velocity.exce
+ ption,org.apache.velocity.runtime,org.apache.velocity.runtime.directive
+ ,org.apache.velocity.runtime.parser,org.apache.velocity.runtime.parser.
+ node";version="2.4.1",org.apache.velocity.runtime.parser;uses:="org.apa
+ che.velocity,org.apache.velocity.exception,org.apache.velocity.runtime,
+ org.apache.velocity.runtime.directive,org.apache.velocity.runtime.parse
+ r.node,org.apache.velocity.util.introspection,org.slf4j";version="2.4.1
+ ",org.apache.velocity.runtime.parser.node;uses:="org.apache.velocity,or
+ g.apache.velocity.context,org.apache.velocity.exception,org.apache.velo
+ city.runtime,org.apache.velocity.runtime.parser,org.apache.velocity.uti
+ l.introspection,org.slf4j";version="2.4.1",org.apache.velocity.runtime.
+ resource;uses:="org.apache.velocity.exception,org.apache.velocity.runti
+ me,org.apache.velocity.runtime.resource.loader,org.slf4j";version="2.4.
+ 1",org.apache.velocity.runtime.resource.loader;uses:="javax.sql,org.apa
+ che.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.
+ runtime.resource,org.apache.velocity.runtime.resource.util,org.apache.v
+ elocity.util,org.slf4j";version="2.4.1",org.apache.velocity.runtime.res
+ ource.util;version="2.4.1",org.apache.velocity.runtime.visitor;uses:="o
+ rg.apache.velocity.context,org.apache.velocity.runtime.parser.node";ver
+ sion="2.4.1",org.apache.velocity.util;uses:="org.apache.velocity.contex
+ t,org.apache.velocity.runtime,org.apache.velocity.runtime.directive,org
+ .apache.velocity.runtime.parser.node,org.apache.velocity.util.introspec
+ tion,org.slf4j";version="2.4.1",org.apache.velocity.util.introspection;
+ uses:="org.apache.velocity.runtime,org.apache.velocity.runtime.parser.n
+ ode,org.apache.velocity.util,org.slf4j";version="2.4.1"
+Import-Package: javax.naming,javax.sql,org.apache.commons.lang3;version=
+ "[3.17,4)",org.apache.commons.lang3.reflect;version="[3.17,4)",org.apac
+ he.commons.lang3.tuple;version="[3.17,4)",org.apache.velocity,org.apach
+ e.velocity.app.event,org.apache.velocity.context,org.apache.velocity.ex
+ ception,org.apache.velocity.io,org.apache.velocity.runtime,org.apache.v
+ elocity.runtime.directive,org.apache.velocity.runtime.parser,org.apache
+ .velocity.runtime.parser.node,org.apache.velocity.runtime.resource,org.
+ apache.velocity.runtime.resource.loader,org.apache.velocity.runtime.res
+ ource.util,org.apache.velocity.util,org.apache.velocity.util.introspect
+ ion,org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-6.3.1.202206071316
+

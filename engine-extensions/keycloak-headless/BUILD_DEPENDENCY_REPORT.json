@@ -1,0 +1,87 @@
+{
+  "timestamp_utc": "2026-09-08T22:15:32.053461+00:00",
+  "command": "python audit_build_dependencies.py",
+  "exit_code": 0,
+  "artifact_count": 6,
+  "artifacts": [
+    {
+      "coordinate": "jakarta.ws.rs:jakarta.ws.rs-api:3.1.0",
+      "url": "https://repo.maven.apache.org/maven2/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar",
+      "artifact_sha256": "6b3b3628b8b4aedda0d24c3354335e985497d8ef3c510b8f3028e920d5b8663d",
+      "license": "EPL-2.0 OR GPL-2.0-only WITH Classpath-exception-2.0",
+      "license_evidence": [
+        {
+          "archive_path": "META-INF/LICENSE.md",
+          "retained_path": "LICENSES/jakarta.ws.rs-api-3.1.0-LICENSE.md",
+          "sha256": "6e1f002892b81cbe0647019b150c8a056efc1add565671a4f8af629b6cd2cc7b"
+        },
+        {
+          "archive_path": "META-INF/NOTICE.md",
+          "retained_path": "LICENSES/jakarta.ws.rs-api-3.1.0-NOTICE.md",
+          "sha256": "92d8933dc362b0f0246fd291f721ef487144e8a7f93c9b095feca872a2e3b4c1"
+        }
+      ],
+      "scope": "compileOnly, transitive=false",
+      "shaded_into_extension": false,
+      "upstream_classes_modified": false
+    },
+    {
+      "coordinate": "org.keycloak:keycloak-common:26.7.3",
+      "url": "https://repo.maven.apache.org/maven2/org/keycloak/keycloak-common/26.7.3/keycloak-common-26.7.3.jar",
+      "artifact_sha256": "3efe76b71318bb6a313644de022f452c1b7f4de62998a64c8da9c74de0241128",
+      "license": "Apache-2.0",
+      "license_evidence": "LICENSES/keycloak-LICENSE.txt and pinned source report",
+      "scope": "compileOnly, transitive=false",
+      "shaded_into_extension": false,
+      "upstream_classes_modified": false
+    },
+    {
+      "coordinate": "org.keycloak:keycloak-core:26.7.3",
+      "url": "https://repo.maven.apache.org/maven2/org/keycloak/keycloak-core/26.7.3/keycloak-core-26.7.3.jar",
+      "artifact_sha256": "1e87be2515b29de06924247e70f6ca3a5945a481289d1ba4b181b11ebdfd6f71",
+      "license": "Apache-2.0",
+      "license_evidence": "LICENSES/keycloak-LICENSE.txt and pinned source report",
+      "scope": "compileOnly, transitive=false",
+      "shaded_into_extension": false,
+      "upstream_classes_modified": false
+    },
+    {
+      "coordinate": "org.keycloak:keycloak-server-spi:26.7.3",
+      "url": "https://repo.maven.apache.org/maven2/org/keycloak/keycloak-server-spi/26.7.3/keycloak-server-spi-26.7.3.jar",
+      "artifact_sha256": "674d3b223c4660157d2add3d9a3b5add4345a646a8517e922507b688eb74c964",
+      "license": "Apache-2.0",
+      "license_evidence": "LICENSES/keycloak-LICENSE.txt and pinned source report",
+      "scope": "compileOnly, transitive=false",
+      "shaded_into_extension": false,
+      "upstream_classes_modified": false
+    },
+    {
+      "coordinate": "org.keycloak:keycloak-server-spi-private:26.7.3",
+      "url": "https://repo.maven.apache.org/maven2/org/keycloak/keycloak-server-spi-private/26.7.3/keycloak-server-spi-private-26.7.3.jar",
+      "artifact_sha256": "b2ea7aab2eaba5f046c81b61cbbaf2c35f24180c6b85d126aa57a1cb7d05741e",
+      "license": "Apache-2.0",
+      "license_evidence": "LICENSES/keycloak-LICENSE.txt and pinned source report",
+      "scope": "compileOnly, transitive=false",
+      "shaded_into_extension": false,
+      "upstream_classes_modified": false
+    },
+    {
+      "coordinate": "org.keycloak:keycloak-services:26.7.3",
+      "url": "https://repo.maven.apache.org/maven2/org/keycloak/keycloak-services/26.7.3/keycloak-services-26.7.3.jar",
+      "artifact_sha256": "245127ecae84d509522ec01aefdc7b13aaa577ff645498bac43debc981ef0630",
+      "license": "Apache-2.0",
+      "license_evidence": "LICENSES/keycloak-LICENSE.txt and pinned source report",
+      "scope": "compileOnly, transitive=false",
+      "shaded_into_extension": false,
+      "upstream_classes_modified": false
+    }
+  ],
+  "dependency_metadata": "gradle/verification-metadata.xml also pins parent and imported BOM metadata",
+  "license_boundary": "Original extension JAR contains no copied upstream classes or bundled dependency JARs. Pinned Keycloak runtime image and its full component-license audit are separate from this build-only report.",
+  "input_sha256": {
+    "audit_build_dependencies.py": "6cb56b429cddb19a9ad2f8e036d4e62a5419058bf20bca0f7cc3de67a0e687c5",
+    "build.gradle": "7eb8f041ef0ea55fc0a2eda2b6783e574a929f2d1ed4a176fff1dd9bd3d15f16",
+    "gradle.lockfile": "5988981640e69c2b874e726cf140a4645c4f4f8c116b3923a9aa5533db1895af",
+    "gradle/verification-metadata.xml": "2dc3ea1a67997e887cc2eb1d16a03fd413f2abcad598e1addaac957c3de9a5c6"
+  }
+}

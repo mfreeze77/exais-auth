@@ -1,0 +1,30 @@
+plugins { id 'java' }
+
+group = 'org.expertauth'
+version = '0.1.0'
+
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+repositories { mavenCentral() }
+
+// Compile against the actual pinned SPI boundary. Runtime classes are owned by
+// the pinned Keycloak image and are never shaded into this extension JAR.
+dependencies {
+    compileOnly('org.keycloak:keycloak-services:26.7.3') { transitive = false }
+    compileOnly('org.keycloak:keycloak-server-spi:26.7.3') { transitive = false }
+    compileOnly('org.keycloak:keycloak-server-spi-private:26.7.3') { transitive = false }
+    compileOnly('org.keycloak:keycloak-core:26.7.3') { transitive = false }
+    compileOnly('org.keycloak:keycloak-common:26.7.3') { transitive = false }
+    compileOnly('jakarta.ws.rs:jakarta.ws.rs-api:3.1.0') { transitive = false }
+}
+
+dependencyLocking { lockAllConfigurations() }
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+    filePermissions { unix('0644') }
+    dirPermissions { unix('0755') }
+}
+jar {
+    manifest { attributes 'Implementation-Title': 'ExpertAuth Keycloak JSON challenge SPI', 'Implementation-Version': project.version, 'Keycloak-Source-Commit': '6d238b6558037085cc25c915893c3d301a80243e' }
+}

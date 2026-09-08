@@ -1,0 +1,1033 @@
+{
+  "format_version": 1,
+  "mapping_review": "Explicit mapping of each original normalized inventory name to an upstream operation identifier; runtime equivalence remains unverified. All same-ID path variants are retained.",
+  "operations": [
+    {
+      "id": "FDI-001",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "exampleAppAPI"
+    },
+    {
+      "id": "FDI-002",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "emailExists"
+    },
+    {
+      "id": "FDI-003",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "emailExistsDepr"
+    },
+    {
+      "id": "FDI-004",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordResetToken"
+    },
+    {
+      "id": "FDI-005",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordReset"
+    },
+    {
+      "id": "FDI-006",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "signIn"
+    },
+    {
+      "id": "FDI-007",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "signUp"
+    },
+    {
+      "id": "FDI-008",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "getVerifyEmail"
+    },
+    {
+      "id": "FDI-009",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "verifyEmailToken"
+    },
+    {
+      "id": "FDI-010",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "verifyEmail"
+    },
+    {
+      "id": "FDI-011",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "getJWKS"
+    },
+    {
+      "id": "FDI-012",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "getMFAInfo"
+    },
+    {
+      "id": "FDI-013",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "loginmethods"
+    },
+    {
+      "id": "FDI-014",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthLoginGET"
+    },
+    {
+      "id": "FDI-015",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthEndSessionPOST"
+    },
+    {
+      "id": "FDI-016",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthEndSessionGET"
+    },
+    {
+      "id": "FDI-017",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthTokenPOST"
+    },
+    {
+      "id": "FDI-018",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthLoginInfoGET"
+    },
+    {
+      "id": "FDI-019",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthUserInfoGET"
+    },
+    {
+      "id": "FDI-020",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthIntrospectPOST"
+    },
+    {
+      "id": "FDI-021",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthLogoutPOST"
+    },
+    {
+      "id": "FDI-022",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthRevokePOST"
+    },
+    {
+      "id": "FDI-023",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "oauthAuthGET"
+    },
+    {
+      "id": "FDI-024",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "getOpenIdDiscoveryConfiguration"
+    },
+    {
+      "id": "FDI-025",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessEmailExists"
+    },
+    {
+      "id": "FDI-026",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessEmailExistsDepr"
+    },
+    {
+      "id": "FDI-027",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessPhoneNumberExists"
+    },
+    {
+      "id": "FDI-028",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessPhoneNumberExistsDepr"
+    },
+    {
+      "id": "FDI-029",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessSignInUpConsume"
+    },
+    {
+      "id": "FDI-030",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessSignInUpResend"
+    },
+    {
+      "id": "FDI-031",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "passwordlessSignInUpStart"
+    },
+    {
+      "id": "FDI-032",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "refresh"
+    },
+    {
+      "id": "FDI-033",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "signout"
+    },
+    {
+      "id": "FDI-034",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "authorisationUrl"
+    },
+    {
+      "id": "FDI-035",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "thirdPartyCallbackApple"
+    },
+    {
+      "id": "FDI-036",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "signInUp"
+    },
+    {
+      "id": "FDI-037",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "createTOTPDevice"
+    },
+    {
+      "id": "FDI-038",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "listTOTPdevices"
+    },
+    {
+      "id": "FDI-039",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "removeTOTPDevice"
+    },
+    {
+      "id": "FDI-040",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "verifyTOTP"
+    },
+    {
+      "id": "FDI-041",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "verifyTOTPDevice"
+    },
+    {
+      "id": "FDI-042",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnEmailExists"
+    },
+    {
+      "id": "FDI-043",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnGenerateRecoverAccountToken"
+    },
+    {
+      "id": "FDI-044",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnRegisterOptions"
+    },
+    {
+      "id": "FDI-045",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnSignInOptions"
+    },
+    {
+      "id": "FDI-046",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnRecoverAccount"
+    },
+    {
+      "id": "FDI-047",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnRegisterCredential"
+    },
+    {
+      "id": "FDI-048",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnSignIn"
+    },
+    {
+      "id": "FDI-049",
+      "source_id": "FDI-4.2.0",
+      "upstream_operation_id": "webauthnSignUp"
+    },
+    {
+      "id": "CDI-001",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteHello"
+    },
+    {
+      "id": "CDI-002",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteLicense"
+    },
+    {
+      "id": "CDI-003",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteUser"
+    },
+    {
+      "id": "CDI-004",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getActiveUsersCount"
+    },
+    {
+      "id": "CDI-005",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getApiVersion"
+    },
+    {
+      "id": "CDI-006",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getConfig"
+    },
+    {
+      "id": "CDI-007",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getFeatureFlag"
+    },
+    {
+      "id": "CDI-008",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getHello"
+    },
+    {
+      "id": "CDI-009",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getHelloOnRootPath"
+    },
+    {
+      "id": "CDI-010",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getLicense"
+    },
+    {
+      "id": "CDI-011",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getRequestsStats"
+    },
+    {
+      "id": "CDI-012",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getSearchTags"
+    },
+    {
+      "id": "CDI-013",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getTelemetry"
+    },
+    {
+      "id": "CDI-014",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getUserId"
+    },
+    {
+      "id": "CDI-015",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getUsers"
+    },
+    {
+      "id": "CDI-016",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getUsersByAccountInfo"
+    },
+    {
+      "id": "CDI-017",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getUsersCount"
+    },
+    {
+      "id": "CDI-018",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": null,
+      "upstream_path": "/appid-<appId>/.well-known/jwks.json"
+    },
+    {
+      "id": "CDI-019",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "postHello"
+    },
+    {
+      "id": "CDI-020",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "putHello"
+    },
+    {
+      "id": "CDI-021",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "setLicense"
+    },
+    {
+      "id": "CDI-022",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "canLinkAccounts"
+    },
+    {
+      "id": "CDI-023",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "canCreatePrimaryUser"
+    },
+    {
+      "id": "CDI-024",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createPrimaryUser"
+    },
+    {
+      "id": "CDI-025",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "linkAccounts"
+    },
+    {
+      "id": "CDI-026",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "unlinkAccounts"
+    },
+    {
+      "id": "CDI-027",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "addBulkImportUsers"
+    },
+    {
+      "id": "CDI-028",
+      "source_id": "CDI-5.3.0-bulk-fix",
+      "upstream_operation_id": "countBulkImportUsers"
+    },
+    {
+      "id": "CDI-029",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteBulkImportUsers"
+    },
+    {
+      "id": "CDI-030",
+      "source_id": "CDI-5.3.0-bulk-fix",
+      "upstream_operation_id": "importOneUserWithBulkImport"
+    },
+    {
+      "id": "CDI-031",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getBulkImportUsers"
+    },
+    {
+      "id": "CDI-032",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createDashboardUser"
+    },
+    {
+      "id": "CDI-033",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteDashboardUser"
+    },
+    {
+      "id": "CDI-034",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getAllDashboardUsers"
+    },
+    {
+      "id": "CDI-035",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getAllSessionsForDashboardUser"
+    },
+    {
+      "id": "CDI-036",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "tenantCoreConfigForDashboardGET"
+    },
+    {
+      "id": "CDI-037",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "RevokeDashboardUsersSession"
+    },
+    {
+      "id": "CDI-038",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "signInDashboardUser"
+    },
+    {
+      "id": "CDI-039",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "updateDashboardUser"
+    },
+    {
+      "id": "CDI-040",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "verifyDashboardUserSession"
+    },
+    {
+      "id": "CDI-041",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordResetPasswordConsumeToken"
+    },
+    {
+      "id": "CDI-042",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordGetPasswordResetToken"
+    },
+    {
+      "id": "CDI-043",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordGetUser"
+    },
+    {
+      "id": "CDI-044",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userImport"
+    },
+    {
+      "id": "CDI-045",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordGetPasswordReset"
+    },
+    {
+      "id": "CDI-046",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordSignin"
+    },
+    {
+      "id": "CDI-047",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordSignup"
+    },
+    {
+      "id": "CDI-048",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailPasswordPutUser"
+    },
+    {
+      "id": "CDI-049",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailVerificationVerifyGet"
+    },
+    {
+      "id": "CDI-050",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailVerificationVerifyToken"
+    },
+    {
+      "id": "CDI-051",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailVerificationVerifyTokenRemove"
+    },
+    {
+      "id": "CDI-052",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailVerificationVerifyRemove"
+    },
+    {
+      "id": "CDI-053",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "emailVerificationVerify"
+    },
+    {
+      "id": "CDI-054",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createSignedJWT"
+    },
+    {
+      "id": "CDI-055",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": null,
+      "upstream_path": "/appid-<appId>/recipe/jwt/jwks"
+    },
+    {
+      "id": "CDI-056",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "addUserToTenant"
+    },
+    {
+      "id": "CDI-057",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteTenantPOST"
+    },
+    {
+      "id": "CDI-058",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteAppPOST"
+    },
+    {
+      "id": "CDI-059",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteTenantConfigPOST"
+    },
+    {
+      "id": "CDI-060",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "tenantConfigV2Get"
+    },
+    {
+      "id": "CDI-061",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "tenantConfigGet"
+    },
+    {
+      "id": "CDI-062",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "appListV2GET"
+    },
+    {
+      "id": "CDI-063",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "appListGET"
+    },
+    {
+      "id": "CDI-064",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "connectionUriDomainListV2GET"
+    },
+    {
+      "id": "CDI-065",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "connectionUriDomainListGET"
+    },
+    {
+      "id": "CDI-066",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "tenantListV2GET"
+    },
+    {
+      "id": "CDI-067",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "tenantListGET"
+    },
+    {
+      "id": "CDI-068",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteConnectionUriDomainPOST"
+    },
+    {
+      "id": "CDI-069",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeUserFromTenant"
+    },
+    {
+      "id": "CDI-070",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateAppV2PUT"
+    },
+    {
+      "id": "CDI-071",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateAppPUT"
+    },
+    {
+      "id": "CDI-072",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateConnectionURIDomainV2PUT"
+    },
+    {
+      "id": "CDI-073",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateConnectionURIDomainPUT"
+    },
+    {
+      "id": "CDI-074",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateTenantV2PUT"
+    },
+    {
+      "id": "CDI-075",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateTenantPUT"
+    },
+    {
+      "id": "CDI-076",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOrUpdateTenantConfigPUT"
+    },
+    {
+      "id": "CDI-077",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "acceptOAuth2ConsentRequest"
+    },
+    {
+      "id": "CDI-078",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "acceptOAuth2LoginRequest"
+    },
+    {
+      "id": "CDI-079",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "acceptOAuth2LogoutRequest"
+    },
+    {
+      "id": "CDI-080",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createOAuth2Client"
+    },
+    {
+      "id": "CDI-081",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getOAuth2Auth"
+    },
+    {
+      "id": "CDI-082",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getOAuth2Client"
+    },
+    {
+      "id": "CDI-083",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getOAuth2ConsentRequest"
+    },
+    {
+      "id": "CDI-084",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getOAuth2LoginRequest"
+    },
+    {
+      "id": "CDI-085",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getOAuth2SessionsLogout"
+    },
+    {
+      "id": "CDI-086",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getOAuth2Token"
+    },
+    {
+      "id": "CDI-087",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "introspectOAuth2Token"
+    },
+    {
+      "id": "CDI-088",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "listOAuth2Clients"
+    },
+    {
+      "id": "CDI-089",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "rejectOAuth2ConsentRequest"
+    },
+    {
+      "id": "CDI-090",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "rejectOAuth2LoginRequest"
+    },
+    {
+      "id": "CDI-091",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "rejectOAuth2LogoutRequest"
+    },
+    {
+      "id": "CDI-092",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeOAuth2Client"
+    },
+    {
+      "id": "CDI-093",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "revokeOAuth2Session"
+    },
+    {
+      "id": "CDI-094",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "revokeOAuth2Token"
+    },
+    {
+      "id": "CDI-095",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "revokeOAuth2Tokens"
+    },
+    {
+      "id": "CDI-096",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "updateOAuth2Client"
+    },
+    {
+      "id": "CDI-097",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessCheckCode"
+    },
+    {
+      "id": "CDI-098",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessTryUseCode"
+    },
+    {
+      "id": "CDI-099",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessGetUser"
+    },
+    {
+      "id": "CDI-100",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessListCodes"
+    },
+    {
+      "id": "CDI-101",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessRevokeAllCodesOfUser"
+    },
+    {
+      "id": "CDI-102",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessRevokeCode"
+    },
+    {
+      "id": "CDI-103",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessStartSignIn"
+    },
+    {
+      "id": "CDI-104",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "passwordlessPutUser"
+    },
+    {
+      "id": "CDI-105",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createNewSession"
+    },
+    {
+      "id": "CDI-106",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "deleteSession"
+    },
+    {
+      "id": "CDI-107",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getJWTData"
+    },
+    {
+      "id": "CDI-108",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getSessionData"
+    },
+    {
+      "id": "CDI-109",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getSessionInfo"
+    },
+    {
+      "id": "CDI-110",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getUserSessionHandles"
+    },
+    {
+      "id": "CDI-111",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "refreshSession"
+    },
+    {
+      "id": "CDI-112",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "regenerateSession"
+    },
+    {
+      "id": "CDI-113",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "putJWTData"
+    },
+    {
+      "id": "CDI-114",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "putSessionData"
+    },
+    {
+      "id": "CDI-115",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "verifySession"
+    },
+    {
+      "id": "CDI-116",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "thirdPartyGetUser"
+    },
+    {
+      "id": "CDI-117",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "thirdPartyGetUsersByEmail"
+    },
+    {
+      "id": "CDI-118",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "thirdPartySigninup"
+    },
+    {
+      "id": "CDI-119",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "createTotpDevice"
+    },
+    {
+      "id": "CDI-120",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "importTotpDevice"
+    },
+    {
+      "id": "CDI-121",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getTotpDevices"
+    },
+    {
+      "id": "CDI-122",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeTotpDevice"
+    },
+    {
+      "id": "CDI-123",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "updateTotpDeviceName"
+    },
+    {
+      "id": "CDI-124",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "verifyTotpCode"
+    },
+    {
+      "id": "CDI-125",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "verifyTotpDevice"
+    },
+    {
+      "id": "CDI-126",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userMetadataRead"
+    },
+    {
+      "id": "CDI-127",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userMetadataDelete"
+    },
+    {
+      "id": "CDI-128",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userMetadataUpdate"
+    },
+    {
+      "id": "CDI-129",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "addUserRole"
+    },
+    {
+      "id": "CDI-130",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "putRole"
+    },
+    {
+      "id": "CDI-131",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeRole"
+    },
+    {
+      "id": "CDI-132",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getRoles"
+    },
+    {
+      "id": "CDI-133",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getPermissionRoles"
+    },
+    {
+      "id": "CDI-134",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getRolePermissions"
+    },
+    {
+      "id": "CDI-135",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getUserRoles"
+    },
+    {
+      "id": "CDI-136",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getRoleUsers"
+    },
+    {
+      "id": "CDI-137",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeRolePermissions"
+    },
+    {
+      "id": "CDI-138",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeUserRole"
+    },
+    {
+      "id": "CDI-139",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userIdMappingCreateMapping"
+    },
+    {
+      "id": "CDI-140",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userIdMappingGetMapping"
+    },
+    {
+      "id": "CDI-141",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userIdMappingRemoveMapping"
+    },
+    {
+      "id": "CDI-142",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "userIdMappingUpateExternalUserIdInfo"
+    },
+    {
+      "id": "CDI-143",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "consumeWebAuthNToken"
+    },
+    {
+      "id": "CDI-144",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "generateSigninOptions"
+    },
+    {
+      "id": "CDI-145",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "generateTokenForRecovery"
+    },
+    {
+      "id": "CDI-146",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "generateRegistrationOptions"
+    },
+    {
+      "id": "CDI-147",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getWebAuthNCredential"
+    },
+    {
+      "id": "CDI-148",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "getWebAuthNOptions"
+    },
+    {
+      "id": "CDI-149",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "listWebAuthNCredentials"
+    },
+    {
+      "id": "CDI-150",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "recoverWebAuthNUser"
+    },
+    {
+      "id": "CDI-151",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "registerWebAuthNCredential"
+    },
+    {
+      "id": "CDI-152",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeWebAuthNCredential"
+    },
+    {
+      "id": "CDI-153",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "removeWebAuthNOptions"
+    },
+    {
+      "id": "CDI-154",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "signInWebAuthNUser"
+    },
+    {
+      "id": "CDI-155",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "signUpWebAuthNUser"
+    },
+    {
+      "id": "CDI-156",
+      "source_id": "CDI-5.3.0",
+      "upstream_operation_id": "updateEmail"
+    }
+  ]
+}
