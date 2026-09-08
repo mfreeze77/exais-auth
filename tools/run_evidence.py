@@ -37,9 +37,11 @@ def main():
     text = run.stdout + run.stderr
     for secret in secret_values:
         text = text.replace(secret,'[REDACTED]')
-    (output/'output.log').write_text(text,encoding='utf-8')
+    # Hash the exact stored bytes. Windows text-mode CRLF conversion previously
+    # made the advertised LF digest differ from the output.log artifact.
+    (output/'output.log').write_bytes(text.encode('utf-8'))
     record = {'command':command,'exit_code':run.returncode,'started_unix':started,'elapsed_seconds':round(time.time()-started,3),
-              'input_sha256':inputs,'inputs_changed':hashes()!=inputs,'output_sha256':hashlib.sha256(text.encode()).hexdigest(),
+              'input_sha256':inputs,'inputs_changed':hashes()!=inputs,'output_sha256':hashlib.sha256((output/'output.log').read_bytes()).hexdigest(),
               'scope':'command execution only; requirement acceptance must be reviewed separately'}
     (output/'command.json').write_text(json.dumps(record,indent=2)+'\n')
     print(text)

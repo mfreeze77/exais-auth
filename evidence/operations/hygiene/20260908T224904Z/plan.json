@@ -1,0 +1,25 @@
+{
+  "Execute": false,
+  "RetireContainers": [
+    null
+  ],
+  "RemoveImageTags": [],
+  "RemoveScratch": [
+    ".cache/engine-build-1788904893131443100",
+    ".cache/oss-runtime-image",
+    ".cache/runtime-license-probe-01",
+    ".cache/runtime-license-probe-02",
+    ".cache/extracted-checkpoints/20260908T222718Z-a632c0",
+    ".cache/extracted-checkpoints/20260908T222920Z-23f3d2"
+  ],
+  "KeepImages": [
+    "expertauth-oss-core:12.2.0-probe",
+    "expertauth-node-react:0.0.5",
+    "expertauth-python-app:0.1.0",
+    "expertauth-kc-headless:0.1.0",
+    "expertauth-kc-headless-postgres:0.1.0",
+    "expertauth-kc-clients-node:0.0.1"
+  ],
+  "VolumesDeleted": [],
+  "UnrelatedResourcesTouched": false
+}

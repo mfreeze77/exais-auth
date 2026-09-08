@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: NODE-LIVE-001 readiness performs an authenticated database query
+ok 1 - NODE-LIVE-001 readiness performs an authenticated database query
+  ---
+  duration_ms: 40.214424
+  type: 'test'
+  ...
+# Subtest: NODE-PWD-001 signup creates a real online-verifiable session
+ok 2 - NODE-PWD-001 signup creates a real online-verifiable session
+  ---
+  duration_ms: 252.542689
+  type: 'test'
+  ...
+# Subtest: NODE-PWD-002 wrong password produces no session
+ok 3 - NODE-PWD-002 wrong password produces no session
+  ---
+  duration_ms: 277.161929
+  type: 'test'
+  ...
+# Subtest: NODE-SESSION-001 no token and malformed token rejected
+ok 4 - NODE-SESSION-001 no token and malformed token rejected
+  ---
+  duration_ms: 4.991818
+  type: 'test'
+  ...
+# Subtest: NODE-SESSION-002 refresh rotates and logout blocks online access and refresh
+ok 5 - NODE-SESSION-002 refresh rotates and logout blocks online access and refresh
+  ---
+  duration_ms: 208.045414
+  type: 'test'
+  ...
+# Subtest: NODE-TENANT-001 valid session cannot substitute its tenant
+ok 6 - NODE-TENANT-001 valid session cannot substitute its tenant
+  ---
+  duration_ms: 154.77126
+  type: 'test'
+  ...
+# Subtest: NODE-ORIGIN-001 foreign origin cannot submit authenticated or anonymous calls
+ok 7 - NODE-ORIGIN-001 foreign origin cannot submit authenticated or anonymous calls
+  ---
+  duration_ms: 2.927663
+  type: 'test'
+  ...
+# Subtest: NODE-PRIVATE-001 Core business APIs are not public routes
+ok 8 - NODE-PRIVATE-001 Core business APIs are not public routes
+  ---
+  duration_ms: 6.817857
+  type: 'test'
+  ...
+# Subtest: NODE-COOKIE-001 cookie attributes and refresh CSRF
+ok 9 - NODE-COOKIE-001 cookie attributes and refresh CSRF
+  ---
+  duration_ms: 146.599351
+  type: 'test'
+  ...
+# Subtest: NODE-LIMIT-001 oversized JSON rejected without reflecting payload
+ok 10 - NODE-LIMIT-001 oversized JSON rejected without reflecting payload
+  ---
+  duration_ms: 4.292969
+  type: 'test'
+  ...
+# Subtest: NODE-OFFLINE-001 real Core-signed wrong issuer and audience tokens are rejected
+ok 11 - NODE-OFFLINE-001 real Core-signed wrong issuer and audience tokens are rejected
+  ---
+  duration_ms: 181.854039
+  type: 'test'
+  ...
+# Subtest: NODE-OFFLINE-002 malformed and unsigned tokens cannot access offline route
+ok 12 - NODE-OFFLINE-002 malformed and unsigned tokens cannot access offline route
+  ---
+  duration_ms: 4.90969
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1380.624954

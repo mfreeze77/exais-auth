@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-09-08T22:28:04.508347+00:00",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "expertauth-oss-proof",
+    "--env-file",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\runtime.env",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth,target=/work,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\contracts\\runtime-paths,target=/work/evidence/contracts/runtime-paths",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\contracts,target=/work/contracts",
+    "-w",
+    "/work",
+    "expertauth-python-app:0.1.0",
+    "python",
+    "tests/contracts/runtime_path_probe.py",
+    "--probe"
+  ],
+  "exit_code": 1,
+  "stdout": "FDI-026 deprecated-fdi-existing-absent-required-query: passed\nCDI-099 deprecated-passwordless-read-by-id-and-email: passed\nCDI-104 passwordless-update-persisted-and-negative-fields: passed\nCDI-116 deprecated-thirdparty-read-by-id-and-provider-pair: passed\nFDI-026 literal-published-unicode-path-not-a-wire-route: passed\nCDI-099 literal-published-unicode-path-not-a-wire-route: passed\nCDI-104 literal-published-unicode-path-not-a-wire-route: passed\nCDI-116 literal-published-unicode-path-not-a-wire-route: passed\nCDI-099 core-authentication-and-version-boundary: passed\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/tests/contracts/runtime_path_probe.py\", line 306, in <module>\n    raise SystemExit(run() if args.run else probe())\n                                            ^^^^^^^\n  File \"/work/tests/contracts/runtime_path_probe.py\", line 272, in probe\n    write(OUT / \"probe-report.json\", report)\n  File \"/work/tests/contracts/runtime_path_probe.py\", line 62, in write\n    path.write_text(json.dumps(data, indent=2, ensure_ascii=True) + \"\\n\", encoding=\"utf-8\")\n  File \"/usr/local/lib/python3.12/pathlib.py\", line 1047, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: '/work/evidence/contracts/runtime-paths/probe-report.json'\n"
+}

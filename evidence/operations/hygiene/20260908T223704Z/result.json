@@ -1,0 +1,23 @@
+{
+  "ContainersRemoved": 15,
+  "TaggedImagesRemoved": 8,
+  "RemovedKnownTaskDangling": [
+    "sha256:04d3a2eb2c459ee1ed0375313c45b148794f99507d8f07aadf249b7a07bf5c33",
+    "sha256:7dadc8f825ff146c2f6c9ddbca9d21a6b8a72e5ac63e1d753fc03c195fc10ef0",
+    "sha256:ddc4b5bdab19c0067d09d950fd47b9c859cde4173a33fae9522c7991a92f1648"
+  ],
+  "ScratchBytesRemoved": 463715868,
+  "NetworksRemoved": [
+    "expertauth-foundation-kc",
+    "expertauth-kc-clients-proof",
+    "expertauth-kc-headless-proof",
+    "expertauth-kc-sessions-proof"
+  ],
+  "VolumesDeleted": [],
+  "DatabaseBackups": ".runtime/retired-labs/20260908T223704Z",
+  "PreservedCoreContainers": [
+    "expertauth-oss-core-a",
+    "expertauth-oss-postgres"
+  ],
+  "Complete": false
+}

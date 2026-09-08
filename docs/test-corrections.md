@@ -39,3 +39,21 @@ Source evidence now excludes ignored local runtime secrets, `.env` files and
 generated archive output; `.env.example` remains part of source verification.
 An adversarial evidence test checks those boundaries. `.gitattributes` disables
 newline conversion so immutable baseline and evidence hashes survive Git checkout.
+
+## Windows report-write correction
+
+The hygiene review found a separate Python text-write issue: `run_evidence.py`
+hashed LF output before Windows stored CRLF bytes, and the extracted-ZIP wrapper
+did the same for its report pointer. Git preservation did not cause this issue.
+Future output logs/reports are now written as exact UTF-8 bytes. The extracted
+report file is unchanged and its `latest.json` pointer now uses the actual file
+digest, as recorded in `evidence/extracted-checkpoint/README.md`.
+
+`evidence/integrity/command-log-newline-audit-20260908T225555Z.json` records33
+historical CRLF digest mismatches,2 new exact-digest records and0 unexplained
+mismatches. It hashes the untouched original records and output files. Those
+historical mismatched records are not eligible as exact-digest release evidence;
+the forensic correction index does not rerun or certify their tests. Candidate
+execution observations remain limited to their recorded cases. All baseline
+acceptance rows remain unverified. Subsequent evidence must use the corrected
+writer and actual file hashes.

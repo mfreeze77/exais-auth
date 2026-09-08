@@ -1,0 +1,16 @@
+{
+  "Execute": false,
+  "RetireContainers": [],
+  "RemoveImageTags": [],
+  "RemoveScratch": [],
+  "KeepImages": [
+    "expertauth-oss-core:12.2.0-probe",
+    "expertauth-node-react:0.0.5",
+    "expertauth-python-app:0.1.0",
+    "expertauth-kc-headless:0.1.0",
+    "expertauth-kc-headless-postgres:0.1.0",
+    "expertauth-kc-clients-node:0.0.1"
+  ],
+  "VolumesDeleted": [],
+  "UnrelatedResourcesTouched": false
+}

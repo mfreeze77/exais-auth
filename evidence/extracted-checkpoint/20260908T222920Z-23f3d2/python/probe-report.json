@@ -1,0 +1,220 @@
+{
+  "timestamp_utc": "2026-09-08T22:30:17.491030+00:00",
+  "command": "python tests/clients/python_probe.py --url http:[REDACTED_LONG_VALUE]:8300",
+  "environment": {
+    "python": "3.12.13 (main, Aug  5 2026, 01:10:24) [GCC 14.2.0]",
+    "packages": {
+      "supertokens-python": "0.31.3",
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.4",
+      "httpx": "0.28.1",
+      "starlette": "1.6.0"
+    }
+  },
+  "target": "http:[REDACTED_LONG_VALUE]:8300",
+  "scope": "SDKP-02 representative FastAPI password/session header/cookie profile; live real Core",
+  "cookie_client": "OrderedCookieClient applies response Set-Cookie headers in wire order; no browser qualification claimed",
+  "expected_tests": 19,
+  "executed": 19,
+  "passed": 19,
+  "failed": 0,
+  "unexecuted": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "tests": [
+    {
+      "id": "PY-READY-CORE-CDI54",
+      "status": "passed",
+      "duration_ms": 13.44,
+      "details": {
+        "http_status": 200,
+        "sdk": "supertokens-python@0.31.3",
+        "cdi_required": "5.4"
+      }
+    },
+    {
+      "id": "PY-NO-SESSION-DENIED",
+      "status": "passed",
+      "duration_ms": 1.4,
+      "details": {
+        "http_status": 401
+      }
+    },
+    {
+      "id": "PY-MALFORMED-TOKEN-DENIED",
+      "status": "passed",
+      "duration_ms": 1.12,
+      "details": {
+        "http_status": 401
+      }
+    },
+    {
+      "id": "PY-HEADER-SIGNUP",
+      "status": "passed",
+      "duration_ms": 218.69,
+      "details": {
+        "http_status": 200,
+        "status": "OK",
+        "token_headers": [
+          "st-access-token",
+          "st-refresh-token"
+        ]
+      }
+    },
+    {
+      "id": "PY-HEADER-ONLINE-PROTECTED",
+      "status": "passed",
+      "duration_ms": 13.64,
+      "details": {
+        "http_status": 200,
+        "tenant": "public",
+        "verification": "signature-and-online-session-check"
+      }
+    },
+    {
+      "id": "PY-WRONG-PASSWORD-DENIED",
+      "status": "passed",
+      "duration_ms": 133.32,
+      "details": {
+        "http_status": 200,
+        "status": "WRONG_CREDENTIALS_ERROR"
+      }
+    },
+    {
+      "id": "PY-DUPLICATE-SIGNUP-DENIED",
+      "status": "passed",
+      "duration_ms": 122.52,
+      "details": {
+        "http_status": 200,
+        "status": "FIELD_ERROR"
+      }
+    },
+    {
+      "id": "PY-HEADER-SIGNIN",
+      "status": "passed",
+      "duration_ms": 159.45,
+      "details": {
+        "http_status": 200,
+        "status": "OK"
+      }
+    },
+    {
+      "id": "PY-HEADER-REFRESH",
+      "status": "passed",
+      "duration_ms": 14.87,
+      "details": {
+        "http_status": 200,
+        "token_headers": [
+          "st-access-token",
+          "st-refresh-token"
+        ]
+      }
+    },
+    {
+      "id": "PY-HEADER-LOGOUT",
+      "status": "passed",
+      "duration_ms": 22.03,
+      "details": {
+        "http_status": 200
+      }
+    },
+    {
+      "id": "PY-LOGOUT-ONLINE-ACCESS-DENIED",
+      "status": "passed",
+      "duration_ms": 9.68,
+      "details": {
+        "http_status": 401,
+        "online_revocation_observed": true
+      }
+    },
+    {
+      "id": "PY-LOGOUT-REFRESH-DENIED",
+      "status": "passed",
+      "duration_ms": 12.0,
+      "details": {
+        "http_status": 401
+      }
+    },
+    {
+      "id": "PY-RESET-DELIVERY-DISABLED",
+      "status": "passed",
+      "duration_ms": 1.63,
+      "details": {
+        "http_status": 404,
+        "qualification": "delivery-blocked-no-local-transport"
+      }
+    },
+    {
+      "id": "PY-COOKIE-SIGNUP-ATTRIBUTES",
+      "status": "passed",
+      "duration_ms": 157.51,
+      "details": {
+        "http_status": 200,
+        "cookie_names": [
+          "sAccessToken",
+          "sRefreshToken"
+        ],
+        "http_only": true,
+        "same_site": "lax",
+        "secure": false,
+        "secure_scope": "local HTTP proof only"
+      }
+    },
+    {
+      "id": "PY-COOKIE-ONLINE-PROTECTED",
+      "status": "passed",
+      "duration_ms": 9.48,
+      "details": {
+        "http_status": 200
+      }
+    },
+    {
+      "id": "PY-COOKIE-CSRF-MISSING-HEADER-DENIED",
+      "status": "passed",
+      "duration_ms": 1.42,
+      "details": {
+        "http_status": 401
+      }
+    },
+    {
+      "id": "PY-COOKIE-CSRF-HEADER-ACCEPTED",
+      "status": "passed",
+      "duration_ms": 9.07,
+      "details": {
+        "http_status": 200
+      }
+    },
+    {
+      "id": "PY-COOKIE-REFRESH",
+      "status": "passed",
+      "duration_ms": 13.02,
+      "details": {
+        "http_status": 200
+      }
+    },
+    {
+      "id": "PY-COOKIE-LOGOUT-CLEAR-AND-DENY",
+      "status": "passed",
+      "duration_ms": 24.36,
+      "details": {
+        "http_status": 200,
+        "post_logout_http_status": 401,
+        "cookies_cleared": true
+      }
+    }
+  ],
+  "input_sha256": {
+    "examples/python/app.py": "[REDACTED_LONG_VALUE]",
+    "examples/python/Dockerfile": "[REDACTED_LONG_VALUE]",
+    "examples/python/requirements.lock": "[REDACTED_LONG_VALUE]",
+    "tests/clients/python_probe.py": "[REDACTED_LONG_VALUE]"
+  },
+  "not_qualified": [
+    "all other Python SDK recipes",
+    "live social providers",
+    "password reset delivery",
+    "TLS cookie Secure behavior",
+    "complete SDK/framework matrix",
+    "independent security review"
+  ]
+}

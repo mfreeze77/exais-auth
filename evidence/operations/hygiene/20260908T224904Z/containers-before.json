@@ -1,0 +1,38 @@
+[
+  {
+    "Id": "e70eb7f5731de1cc3d7b0fe232b903e027a48230495200475e76e7343b6c7254",
+    "Name": "/expertauth-oss-core-a",
+    "Image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5",
+        "Source": "/var/lib/docker/volumes/456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5/_data",
+        "Destination": "/home/gradle/.gradle"
+      },
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+        "Destination": "/run/expertauth/config.yaml"
+      }
+    ],
+    "Retire": false
+  },
+  {
+    "Id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+    "Name": "/expertauth-oss-postgres",
+    "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "expertauth-oss-proof-pg",
+        "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+        "Destination": "/var/lib/postgresql/data"
+      }
+    ],
+    "Retire": false
+  }
+]

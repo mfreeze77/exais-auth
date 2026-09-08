@@ -1,0 +1,213 @@
+[
+  {
+    "Id": "5c5ba9b7609d0e3976062ef122b2a386ef5a410d4b84aef1be54aaeacb797f46",
+    "Name": "/expertauth-extracted-20260908t222920z-23f3d2-python",
+    "Image": "sha256:cdd25eaf7eb586901356aee94f208b5bb0ba2838453e9445bddf96d9df8311d8",
+    "Running": false,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "c4a804da0cd0352f049728393a7501e30b579513ac92c46d54ee47b318f6eedd",
+    "Name": "/expertauth-extracted-20260908t222920z-23f3d2-node",
+    "Image": "sha256:6364abfe41ee2209d288d6be3b1eab58348a0a30a505cfa82bf81847376a78e0",
+    "Running": false,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "5ec82780effd5a0dc3279f1761b55ff3ff0fc6e1f3ecf7c81038f9061078f609",
+    "Name": "/expertauth-runtime-path-node",
+    "Image": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\contracts\\runtime-paths\\node-path-app.mjs",
+        "Destination": "/work/node-path-app.mjs"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "5002eea019d394c7ad29d6c7eeeaa9868fae43f5bee6764ac5783de3214ac98c",
+    "Name": "/expertauth-extracted-20260908t222718z-a632c0-python",
+    "Image": "sha256:b3a1f0aae82a6672abc234eb9b9094b0a9fd159942d9a52e8908fceb7b5835cb",
+    "Running": false,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "7eb254351f60cb96efa541a4d77543c3da7971cb1a417f99f7f9de92cb55d9a1",
+    "Name": "/expertauth-extracted-20260908t222718z-a632c0-node",
+    "Image": "sha256:41659e919cb299befd97d15d2ab1ec48265b87ba77ceb64c7ff904c016894e59",
+    "Running": false,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "454abdffe3818c60a1bac553469bb8870b7a61bd847d0e9e0594e432ce3bc47b",
+    "Name": "/expertauth-kc-clients-node",
+    "Image": "sha256:698f514bba46f6221b1f6594769465544c20d3ee1a9356a124649b3027ee8bb7",
+    "Running": true,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "f1395a89a7da037cc8d989ea25cea0df18b1f3b5ef607a0f5de5942fe5f9817a",
+    "Name": "/expertauth-kc-clients-engine",
+    "Image": "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth/examples/keycloak-clients/.runtime/realm-import.json",
+        "Destination": "/opt/keycloak/data/import/realm-import.json"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "dca75ba6c0760d00ae516cd7e7ed245e4357dbd3955677cc8a350f16c037eed7",
+    "Name": "/expertauth-kc-sessions-b",
+    "Image": "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\engine-extensions\\keycloak-headless\\.runtime\\cluster\\realm-import.json",
+        "Destination": "/opt/keycloak/data/import/realm-import.json"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "7e80d00e1b50b3674b6722078a71838f1bf35538758550f9ff918e2c72c76775",
+    "Name": "/expertauth-kc-sessions-a",
+    "Image": "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\engine-extensions\\keycloak-headless\\.runtime\\cluster\\realm-import.json",
+        "Destination": "/opt/keycloak/data/import/realm-import.json"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "5834d382ae0e1d387ced361bc2cc5980c8534d64a098a09b9cb5f6a5902790e7",
+    "Name": "/expertauth-kc-sessions-pg",
+    "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "f71c6feca9d18dc267dc8d395c584a9ed0c293fce2112f906dfbc76dab6a93ba",
+        "Source": "/var/lib/docker/volumes/f71c6feca9d18dc267dc8d395c584a9ed0c293fce2112f906dfbc76dab6a93ba/_data",
+        "Destination": "/var/lib/postgresql/data"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "2444211f92323ce49c36104eb2f4f231313108595f96b8833b3107950309ad11",
+    "Name": "/expertauth-node-react",
+    "Image": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "Running": true,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "ab6d404d659fcea61318139f8440721508bd5ea111eda3bcf4efafcf0c8f916f",
+    "Name": "/expertauth-kc-headless-server",
+    "Image": "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\engine-extensions\\keycloak-headless\\.runtime\\realm-import.json",
+        "Destination": "/opt/keycloak/data/import/realm-import.json"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "8c48724848250c0438642529a624f246a24ab962fd8ca877aa20d08971f65d4b",
+    "Name": "/expertauth-python-app",
+    "Image": "sha256:9ff0be83fb3d2a65ae124332484b6f494e45f189cc74e0b8ebef6ba121035353",
+    "Running": true,
+    "Mounts": [],
+    "Retire": true
+  },
+  {
+    "Id": "38c421b1eec7a21fdf1229daff2671039ce4b23c55946297d259e25bf4e3bc29",
+    "Name": "/expertauth-oss-core-b",
+    "Image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth/.runtime/oss-core/config.yaml",
+        "Destination": "/run/expertauth/config.yaml"
+      },
+      {
+        "Type": "volume",
+        "Name": "c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a",
+        "Source": "/var/lib/docker/volumes/c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a/_data",
+        "Destination": "/home/gradle/.gradle"
+      }
+    ],
+    "Retire": true
+  },
+  {
+    "Id": "e70eb7f5731de1cc3d7b0fe232b903e027a48230495200475e76e7343b6c7254",
+    "Name": "/expertauth-oss-core-a",
+    "Image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "bind",
+        "Name": null,
+        "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+        "Destination": "/run/expertauth/config.yaml"
+      },
+      {
+        "Type": "volume",
+        "Name": "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5",
+        "Source": "/var/lib/docker/volumes/456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5/_data",
+        "Destination": "/home/gradle/.gradle"
+      }
+    ],
+    "Retire": false
+  },
+  {
+    "Id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+    "Name": "/expertauth-oss-postgres",
+    "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+    "Running": true,
+    "Mounts": [
+      {
+        "Type": "volume",
+        "Name": "expertauth-oss-proof-pg",
+        "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+        "Destination": "/var/lib/postgresql/data"
+      }
+    ],
+    "Retire": false
+  },
+  {
+    "Id": "6c43e11a6f63a11c4a54bdb319efb851d0f13d49fde435ef2581df7424bd8d02",
+    "Name": "/expertauth-foundation-kc",
+    "Image": "sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54",
+    "Running": true,
+    "Mounts": [],
+    "Retire": true
+  }
+]

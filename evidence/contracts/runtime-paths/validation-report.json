@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-09-08T22:31:19.200038+00:00",
+  "exit_code": 0,
+  "checked_hashes": 29,
+  "mismatches": [],
+  "exact_four_original_ids_preserved": true,
+  "no_full_contract_completion_claim": true,
+  "resolution_sha256": "a2007613c85dd175e1dc248736d0355bcb22f694057c0f30539ec3800c30f35a",
+  "probe_sha256": "67988ba9e5acc04cd03c489a8281a5158bcbd2ba8e41106a67070d53dc80fd9e"
+}

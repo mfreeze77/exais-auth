@@ -1,0 +1,24 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo",
+    "-w",
+    "/repo",
+    "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "python",
+    "tools/fetch_runtime_notice_sources.py"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788906381.8767006,
+  "elapsed_seconds": 4.728,
+  "input_sha256": {
+    "tools/fetch_runtime_notice_sources.py": "d935a519cac7b27cbba41df58399ece4c4cdf2e44c470587206ac977fecc8f82",
+    "reuse/runtime-dependencies.json": "d24b8a383108071e66444e10532e9d61e859aab92126c543000b81f53592a812"
+  },
+  "inputs_changed": false,
+  "output_sha256": "948ff3ae4384ec553427f1b5a9462a6e65b8c385aede4244c29bd8e19e200207",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

@@ -54,6 +54,29 @@ network/security settings were changed. Build tools require Docker, Python3.11+
 and disk/RAM for the pinned Java/Node/Python images. `.runtime/` secrets are local
 only. Do not copy them into a release or use these synthetic credentials elsewhere.
 
+The hygiene checkpoint retired all candidate/example containers except Core-a and
+PostgreSQL; it also retired stale images, networks and duplicate extracted/build
+trees. H2 databases and raw logs were backed up under ignored `.runtime/retired-*`.
+Read `AGENTS.md` and `evidence/operations/hygiene/README.md` before starting resources.
+Do not launch the two-replica lab merely for source/license/docs work. Inventory
+first, reuse content-addressed builds, and stop/remove temporary resources in
+`finally`. Older runners require this cleanup treatment before their next use.
+
+The exact old source ZIP has35 fresh-extraction application checks, documented in
+`evidence/extracted-checkpoint/README.md`; Core/database state was reused, so this
+does not qualify full-stack restore. Current wrapper cleanup changes have their
+own12 integrity/filesystem checks. Four API wire-path resolutions are preserved in
+`contracts/runtime-path-resolutions.json`, with9 real checks and original IDs intact.
+
+Unfinished license work is in `tools/assemble_runtime_licenses.py` and
+`tools/fetch_runtime_notice_sources.py`. The final acquisition report is
+`evidence/reuse/runtime-source-notices/fetch-20260908T222746Z.json` (83 available,
+1 source JAR unavailable). Preserve the43MB source cache; do not refetch unchanged
+archives or generate more prototype trees. Add a reviewed locked-download mode,
+resolve applicable notices/source obligations, then integrate the assembler into
+the runtime image with evidence of actual image contents. It is not yet connected
+to `deploy/oss-core.Dockerfile` and does not close distribution licensing.
+
 For the tested Node/React and Python examples, use their own README commands.
 Keycloak JSON extension and representative client commands/evidence are in their
 respective `engine-extensions/keycloak-headless` and `examples/keycloak-clients`

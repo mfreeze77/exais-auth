@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-09-08T22:29:23.043518+00:00",
+  "command_argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--user",
+    "0:0",
+    "--network",
+    "expertauth-oss-proof",
+    "--env-file",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\runtime.env",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth,target=/work,readonly",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\contracts\\runtime-paths,target=/work/evidence/contracts/runtime-paths",
+    "--mount",
+    "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\contracts,target=/work/contracts",
+    "-w",
+    "/work",
+    "expertauth-python-app:0.1.0",
+    "python",
+    "tests/contracts/runtime_path_probe.py",
+    "--probe"
+  ],
+  "exit_code": 0,
+  "stdout": "FDI-026 deprecated-fdi-existing-absent-required-query: passed\nCDI-099 deprecated-passwordless-read-by-id-and-email: passed\nCDI-104 passwordless-update-persisted-and-negative-fields: passed\nCDI-116 deprecated-thirdparty-read-by-id-and-provider-pair: passed\nFDI-026 literal-published-unicode-path-not-a-wire-route: passed\nCDI-099 literal-published-unicode-path-not-a-wire-route: passed\nCDI-104 literal-published-unicode-path-not-a-wire-route: passed\nCDI-116 literal-published-unicode-path-not-a-wire-route: passed\nCDI-099 core-authentication-and-version-boundary: passed\n{\"executed\": 9, \"passed\": 9, \"failed\": 0, \"exit_code\": 0}\n",
+  "stderr": ""
+}

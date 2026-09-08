@@ -1,0 +1,17 @@
+{
+  "command": [
+    "pwsh",
+    "-NoProfile",
+    "-File",
+    "tools/cleanup_checkpoint_resources.ps1"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788907744.1745715,
+  "elapsed_seconds": 0.744,
+  "input_sha256": {
+    "tools/cleanup_checkpoint_resources.ps1": "26a41e8d132bae078fa03390c3d0f78b9b3ef067fe46ed56d646382c2d9c212a"
+  },
+  "inputs_changed": false,
+  "output_sha256": "6ac67a7cc6bf2256d1760c04720c81fc6e1a090bc19a67de64ee67a8179ed4cd",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

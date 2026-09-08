@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-09-08T22:29:21.110650+00:00",
+  "exit_code": 0,
+  "containers": [
+    {
+      "container": "expertauth-runtime-path-node",
+      "container_id": "5ec82780effd5a0dc3279f1761b55ff3ff0fc6e1f3ecf7c81038f9061078f609",
+      "image_id": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+      "published_ports": {}
+    },
+    {
+      "container": "expertauth-oss-core-a",
+      "container_id": "e70eb7f5731de1cc3d7b0fe232b903e027a48230495200475e76e7343b6c7254",
+      "image_id": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+      "published_ports": {}
+    }
+  ],
+  "sdk_runtime": {
+    "version": "24.0.3",
+    "files": {
+      "lib/build/recipe/passwordless/recipe.js": "c0d0b38364554800d2691e30f21116c0a836e1d9334bf74e7f641119faa3e8db",
+      "lib/build/recipe/passwordless/constants.js": "4b6690d2f1ab0ead7e4d604bdab8f3e9b694a98bf3070859962d60f3fb7058ac",
+      "lib/build/recipe/passwordless/api/emailExists.js": "626ca35a007e0d7e5913a2420cafac524e85ebdf67f8f84793229bb7a30d4b32"
+    }
+  },
+  "sdk_files_match_pinned_source": true,
+  "node_app_sha256": "d7debf79c07b364194de65985e438c69f21d4e7865e0faa9a7635dd819eef635",
+  "candidate_selected": false
+}

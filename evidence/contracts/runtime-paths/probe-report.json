@@ -1,0 +1,272 @@
+{
+  "timestamp_utc": "2026-09-08T22:29:22.420953+00:00",
+  "command": "python tests/contracts/runtime_path_probe.py --run",
+  "original_ids": [
+    "FDI-026",
+    "CDI-099",
+    "CDI-104",
+    "CDI-116"
+  ],
+  "expected_checks": 9,
+  "executed": 9,
+  "passed": 9,
+  "failed": 0,
+  "skipped": 0,
+  "exit_code": 0,
+  "tests": [
+    {
+      "original_id": "FDI-026",
+      "test": "deprecated-fdi-existing-absent-required-query",
+      "status": "passed",
+      "details": {
+        "requests": [
+          {
+            "http_status": 200,
+            "content_type": "application/json; charset=utf-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "exists",
+              "status"
+            ],
+            "raw_path_ascii": "/auth/public/signup/email/exists?email=runtime-path-b8c7b5ca30b1328294%40example.invalid",
+            "set_cookie_count": 0
+          },
+          {
+            "http_status": 200,
+            "content_type": "application/json; charset=utf-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "exists",
+              "status"
+            ],
+            "raw_path_ascii": "/auth/public/signup/email/exists?email=absent-runtime-path-b8c7b5ca30b1328294%40example.invalid",
+            "set_cookie_count": 0
+          },
+          {
+            "http_status": 200,
+            "content_type": "application/json; charset=utf-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "exists",
+              "status"
+            ],
+            "raw_path_ascii": "/auth/signup/email/exists?email=runtime-path-b8c7b5ca30b1328294%40example.invalid",
+            "set_cookie_count": 0
+          },
+          {
+            "http_status": 200,
+            "content_type": "application/json; charset=utf-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "exists",
+              "status"
+            ],
+            "raw_path_ascii": "/auth/signup/email/exists?email=absent-runtime-path-b8c7b5ca30b1328294%40example.invalid",
+            "set_cookie_count": 0
+          }
+        ],
+        "missing_email_http": 400,
+        "deprecated_route_supported": true
+      }
+    },
+    {
+      "original_id": "CDI-099",
+      "test": "deprecated-passwordless-read-by-id-and-email",
+      "status": "passed",
+      "details": {
+        "requests": [
+          {
+            "http_status": 200,
+            "content_type": "application/json;charset=UTF-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "status",
+              "user"
+            ],
+            "raw_path_ascii": "/appid-public/public/recipe/user?userId=f31f21e6-978b-4357-8ed5-82efda08a515",
+            "set_cookie_count": 0
+          },
+          {
+            "http_status": 200,
+            "content_type": "application/json;charset=UTF-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "status",
+              "user"
+            ],
+            "raw_path_ascii": "/appid-public/public/recipe/user?email=runtime-path-b8c7b5ca30b1328294%40example.invalid",
+            "set_cookie_count": 0
+          }
+        ],
+        "absent_email_status": "UNKNOWN_EMAIL_ERROR",
+        "ambiguous_selector_http": 400
+      }
+    },
+    {
+      "original_id": "CDI-104",
+      "test": "passwordless-update-persisted-and-negative-fields",
+      "status": "passed",
+      "details": {
+        "update": {
+          "http_status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "application_status": "OK",
+          "top_level_fields": [
+            "status"
+          ],
+          "raw_path_ascii": "/appid-public/public/recipe/user",
+          "set_cookie_count": 0
+        },
+        "legacy_identifier_http": 400,
+        "persisted_reread": true,
+        "old_contact_no_longer_matches": true,
+        "clearing_sole_contact_http": 400,
+        "source_schema_delta": "CDI >=4.0 requires recipeUserId; published 5.3 required userId conflicts with property/source"
+      }
+    },
+    {
+      "original_id": "CDI-116",
+      "test": "deprecated-thirdparty-read-by-id-and-provider-pair",
+      "status": "passed",
+      "details": {
+        "requests": [
+          {
+            "http_status": 200,
+            "content_type": "application/json;charset=UTF-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "status",
+              "user"
+            ],
+            "raw_path_ascii": "/appid-public/public/recipe/user?userId=bdd8e716-11d6-45d1-9930-a12f28473717",
+            "set_cookie_count": 0
+          },
+          {
+            "http_status": 200,
+            "content_type": "application/json;charset=UTF-8",
+            "application_status": "OK",
+            "top_level_fields": [
+              "status",
+              "user"
+            ],
+            "raw_path_ascii": "/appid-public/public/recipe/user?thirdPartyId=runtime-path-fixture&thirdPartyUserId=synthetic-b8c7b5ca30b1328294",
+            "set_cookie_count": 0
+          }
+        ],
+        "absent_pair_status": "UNKNOWN_THIRD_PARTY_USER_ERROR",
+        "incomplete_pair_http": 400,
+        "live_provider_authentication_qualified": false
+      }
+    },
+    {
+      "original_id": "FDI-026",
+      "test": "literal-published-unicode-path-not-a-wire-route",
+      "status": "passed",
+      "details": {
+        "response": {
+          "http_status": 404,
+          "content_type": "application/json; charset=utf-8",
+          "application_status": null,
+          "top_level_fields": [
+            "error"
+          ],
+          "raw_path_ascii": "/auth/public/signup/email/exists%E2%A0%80%E2%A0%80?email=runtime-path-updated-b8c7b5ca30b1328294%40example.invalid",
+          "set_cookie_count": 0
+        },
+        "literal_unicode_escape": "/auth/public/signup/email/exists\\u2800\\u2800",
+        "suffix_codepoints": [
+          "U+2800",
+          "U+2800"
+        ]
+      }
+    },
+    {
+      "original_id": "CDI-099",
+      "test": "literal-published-unicode-path-not-a-wire-route",
+      "status": "passed",
+      "details": {
+        "response": {
+          "http_status": 404,
+          "content_type": "text/html;charset=UTF-8",
+          "application_status": null,
+          "top_level_fields": [],
+          "raw_path_ascii": "/appid-public/public/recipe/user%E2%A0%80%E2%A0%80?userId=f31f21e6-978b-4357-8ed5-82efda08a515",
+          "set_cookie_count": 0
+        },
+        "literal_unicode_escape": "/appid-public/public/recipe/user\\u2800\\u2800",
+        "suffix_codepoints": [
+          "U+2800",
+          "U+2800"
+        ]
+      }
+    },
+    {
+      "original_id": "CDI-104",
+      "test": "literal-published-unicode-path-not-a-wire-route",
+      "status": "passed",
+      "details": {
+        "response": {
+          "http_status": 404,
+          "content_type": "text/html;charset=UTF-8",
+          "application_status": null,
+          "top_level_fields": [],
+          "raw_path_ascii": "/appid-public/public/recipe/user%E2%A0%80%E2%A0%80",
+          "set_cookie_count": 0
+        },
+        "literal_unicode_escape": "/appid-public/public/recipe/user\\u2800\\u2800",
+        "suffix_codepoints": [
+          "U+2800",
+          "U+2800"
+        ]
+      }
+    },
+    {
+      "original_id": "CDI-116",
+      "test": "literal-published-unicode-path-not-a-wire-route",
+      "status": "passed",
+      "details": {
+        "response": {
+          "http_status": 404,
+          "content_type": "text/html;charset=UTF-8",
+          "application_status": null,
+          "top_level_fields": [],
+          "raw_path_ascii": "/appid-public/public/recipe/user%E2%A0%80?userId=bdd8e716-11d6-45d1-9930-a12f28473717",
+          "set_cookie_count": 0
+        },
+        "literal_unicode_escape": "/appid-public/public/recipe/user\\u2800",
+        "suffix_codepoints": [
+          "U+2800"
+        ]
+      }
+    },
+    {
+      "original_id": "CDI-099",
+      "test": "core-authentication-and-version-boundary",
+      "status": "passed",
+      "details": {
+        "missing_api_key_http": 401,
+        "unsupported_cdi_http": 400,
+        "api_key_header": "api-key",
+        "cdi_version": "5.3"
+      }
+    }
+  ],
+  "fixture": {
+    "passwordless": "Real Core-generated code consumed internally, synthetic contact updated and read back",
+    "thirdparty": "Trusted internal Core synthetic identity record only; no live OAuth/provider authentication claim",
+    "external_delivery_calls": 0
+  },
+  "candidate_selected": false,
+  "complete_api_contracts": false,
+  "original_input_sha256": {
+    "contracts/api-contracts.json": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe",
+    "contracts/operation-map.json": "5536efd372375a606b3abfcb5ba267145c9dfd94e1cc24378581bdc63679db5c",
+    "baseline-lock.json": "7236557c1910c8b1d74d82a476a54e469358a57ca6ed274ab04879ffbd36b9c1"
+  },
+  "input_sha256": {
+    "tests/contracts/runtime_path_probe.py": "08213cb742edada3ab3023fe23e0e227e94a85b6ab775c880f8acdfafbae69c2",
+    "evidence/contracts/runtime-paths/source-report.json": "aaf1875c1050afe36d5f8435d05027c197751116917064764f748594ff38506c",
+    "evidence/contracts/runtime-paths/runtime-report.json": "5ba7615bd5259b951ce8629650e3a94db0cfce7c4ae4542f0c47674447cde235",
+    "evidence/contracts/runtime-paths/node-path-app.mjs": "d7debf79c07b364194de65985e438c69f21d4e7865e0faa9a7635dd819eef635"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "timestamp_utc": "2026-09-08T22:29:15.188508+00:00",
+  "exit_code": 0,
+  "source_count": 21,
+  "files": [
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+      "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/LICENSE.md",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/Webserver.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/Webserver.java",
+      "sha256": "2b178ed47dc6df25a41e37633bb26856a069669966569df93e0e831e54ddcd39",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/Webserver.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/RecipeRouter.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/RecipeRouter.java",
+      "sha256": "dcb95f3d3c1bb33d44418dedc30a322e7da5e6dcc40abd631c4b10ca9e2416ee",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/RecipeRouter.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/WebserverAPI.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/WebserverAPI.java",
+      "sha256": "f49a235ae9ff2b31c62f0b9748c78228af75232002ec73dbb6548baf0d447fbf",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/WebserverAPI.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/passwordless/UserAPI.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/api/passwordless/UserAPI.java",
+      "sha256": "a385c5736280dffad1dc86a0e5ad0695c9a3973b554801bee2cea8a3d90f05bc",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/api/passwordless/UserAPI.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/passwordless/CreateCodeAPI.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/api/passwordless/CreateCodeAPI.java",
+      "sha256": "90d4d67799d29837a3a1b3a8d84823c739676a45bc50a9559e4e6a6f6cda2179",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/api/passwordless/CreateCodeAPI.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/passwordless/ConsumeCodeAPI.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/api/passwordless/ConsumeCodeAPI.java",
+      "sha256": "6e1c98afdc59ae32b53614bc13aac212c8a93a684e57cec027a700cb6a89b947",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/api/passwordless/ConsumeCodeAPI.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/thirdparty/UserAPI.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/api/thirdparty/UserAPI.java",
+      "sha256": "225950b60d052bfb590c35f480150effda4ab6eb156bc89b4d79e04afdae79fb",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/api/thirdparty/UserAPI.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/thirdparty/SignInUpAPI.java",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/src/main/java/io/supertokens/webserver/api/thirdparty/SignInUpAPI.java",
+      "sha256": "9ff0ee9976fe99e8c2e73813a285cd0bf34c4c3895b4d45ba57575bde9d90ff2",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/core/src/main/java/io/supertokens/webserver/api/thirdparty/SignInUpAPI.java",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/LICENSE.md",
+      "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/LICENSE.md",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "package.json",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/package.json",
+      "sha256": "824d3e0fcaa1fa7434a2e61008bff7317d418219db88ae383f024b4bec60b618",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/package.json",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/passwordless/recipe.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/recipe/passwordless/recipe.ts",
+      "sha256": "24bddced590745d300cea4d6155556e38e44920e99cce5afec1862a0978519b1",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/recipe/passwordless/recipe.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/passwordless/constants.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/recipe/passwordless/constants.ts",
+      "sha256": "c987ed5a80324ba2b2f7d05f688ea7243eec653a15e27d95022707a6d462c54a",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/recipe/passwordless/constants.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/passwordless/api/emailExists.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/recipe/passwordless/api/emailExists.ts",
+      "sha256": "90127c2351b2ba78c09d1fadc6ef1bf72968aad4822229a41af506e9f6891d43",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/recipe/passwordless/api/emailExists.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/passwordless/api/implementation.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/recipe/passwordless/api/implementation.ts",
+      "sha256": "c09a71cb37a78188be117ba4dda05abd8d2b600d4f9f7867c6d251e378a772dd",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/recipe/passwordless/api/implementation.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/passwordless/recipeImplementation.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/recipe/passwordless/recipeImplementation.ts",
+      "sha256": "f141a5441d7243d4ad4894ec390e40ba64655141e1394da6530ee4f4b5c1c414",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/recipe/passwordless/recipeImplementation.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipeModule.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/recipeModule.ts",
+      "sha256": "51773e1529afb30340bcf58a2d064f7fa2f448ef268a8b277424d0510d856de9",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/recipeModule.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/normalisedURLPath.ts",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/normalisedURLPath.ts",
+      "sha256": "93634246eb1fe9ccf4c98bf19bdb0168906730f5576d6fba42f392005fbc5946",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/ts/normalisedURLPath.ts",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/build/recipe/passwordless/recipe.js",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/build/recipe/passwordless/recipe.js",
+      "sha256": "c0d0b38364554800d2691e30f21116c0a836e1d9334bf74e7f641119faa3e8db",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/build/recipe/passwordless/recipe.js",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/build/recipe/passwordless/constants.js",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/build/recipe/passwordless/constants.js",
+      "sha256": "4b6690d2f1ab0ead7e4d604bdab8f3e9b694a98bf3070859962d60f3fb7058ac",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/build/recipe/passwordless/constants.js",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "commit": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/build/recipe/passwordless/api/emailExists.js",
+      "url": "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/build/recipe/passwordless/api/emailExists.js",
+      "sha256": "626ca35a007e0d7e5913a2420cafac524e85ebdf67f8f84793229bb7a30d4b32",
+      "license": "Apache-2.0",
+      "retained_path": "evidence/contracts/runtime-paths/source/node/lib/build/recipe/passwordless/api/emailExists.js",
+      "modifications": [],
+      "purpose": "Read-only route/dispatch/schema facts or synthetic fixture setup; no new engine implementation"
+    }
+  ],
+  "unlicensed_openapi_copied": false,
+  "input_sha256": {
+    "tests/contracts/runtime_path_probe.py": "08213cb742edada3ab3023fe23e0e227e94a85b6ab775c880f8acdfafbae69c2"
+  }
+}

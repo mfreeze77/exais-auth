@@ -1,0 +1,175 @@
+{
+  "format_version": "1.0",
+  "purpose": "Supplement to immutable capture for exactly four original IDs; no original schema replacement",
+  "candidate_selected": false,
+  "complete": false,
+  "original_capture_sha256": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe",
+  "source_pins": {
+    "core": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+    "node": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c"
+  },
+  "resolution_count": 4,
+  "operations": [
+    {
+      "id": "FDI-026",
+      "original_capture_unchanged": true,
+      "original_path_unicode_escape": "/{apiBasePath}/<tenantId>/signup/email/exists\\u2800\\u2800",
+      "original_capture_source": "FDI-4.2.0",
+      "method": "GET",
+      "rid": "passwordless",
+      "version_header": "fdi-version",
+      "tested_version_header_value": "4.2",
+      "runtime_path_template": "/{apiBasePath}/<tenantId>/signup/email/exists",
+      "tested_wire_paths": [
+        "/auth/public/signup/email/exists",
+        "/auth/signup/email/exists"
+      ],
+      "path_derivation": "Independently read exact ASCII route constants/getPath implementations and recipe dispatch in pinned Apache sources, then tested both implementation route and unaltered published Unicode path",
+      "deprecated_in_baseline": true,
+      "deprecated_route_runtime_support": "supported-at-tested-pin",
+      "path_resolution_status": "resolved-source-and-runtime",
+      "tested_scope": "default app/public tenant only",
+      "behavioral_evidence": "evidence/contracts/runtime-paths/probe-report.json",
+      "source_evidence": "evidence/contracts/runtime-paths/source-report.json",
+      "full_schema_redistribution": "unresolved-original-OpenAPI; only independent licensed-source facts added",
+      "full_operation_qualification": false,
+      "unknowns": [
+        "all non-public app/tenant enforcement cases",
+        "full legacy version matrix",
+        "exhaustive schema/errors and all SDK/profile behavior"
+      ],
+      "minimal_source_schema_facts": {
+        "query": {
+          "email": "required string"
+        },
+        "success": {
+          "status": "OK",
+          "exists": "boolean"
+        },
+        "missing_email_http": 400,
+        "mutates_identity": false
+      }
+    },
+    {
+      "id": "CDI-099",
+      "original_capture_unchanged": true,
+      "original_path_unicode_escape": "/appid-<appId>/<tenantId>/recipe/user\\u2800\\u2800",
+      "original_capture_source": "CDI-5.3.0",
+      "method": "GET",
+      "rid": "passwordless",
+      "version_header": "cdi-version",
+      "tested_version_header_value": "5.3",
+      "runtime_path_template": "/appid-<appId>/<tenantId>/recipe/user",
+      "tested_wire_paths": [
+        "/appid-public/public/recipe/user"
+      ],
+      "path_derivation": "Independently read exact ASCII route constants/getPath implementations and recipe dispatch in pinned Apache sources, then tested both implementation route and unaltered published Unicode path",
+      "deprecated_in_baseline": true,
+      "deprecated_route_runtime_support": "supported-at-tested-pin",
+      "path_resolution_status": "resolved-source-and-runtime",
+      "tested_scope": "default app/public tenant only",
+      "behavioral_evidence": "evidence/contracts/runtime-paths/probe-report.json",
+      "source_evidence": "evidence/contracts/runtime-paths/source-report.json",
+      "full_schema_redistribution": "unresolved-original-OpenAPI; only independent licensed-source facts added",
+      "full_operation_qualification": false,
+      "unknowns": [
+        "all non-public app/tenant enforcement cases",
+        "full legacy version matrix",
+        "exhaustive schema/errors and all SDK/profile behavior"
+      ],
+      "minimal_source_schema_facts": {
+        "selectors": "Exactly one of userId, email, phoneNumber",
+        "lookup_scope": "userId app-specific/public tenant; email or phone tenant-specific",
+        "success_status": "OK",
+        "unknown_statuses": [
+          "UNKNOWN_USER_ID_ERROR",
+          "UNKNOWN_EMAIL_ERROR",
+          "UNKNOWN_PHONE_NUMBER_ERROR"
+        ]
+      },
+      "rid_dispatch_fact": "RecipeRouter selects exact rid; missing/unmatched rid falls back to the first registered emailpassword handler, so it must not be relied on to select this operation"
+    },
+    {
+      "id": "CDI-104",
+      "original_capture_unchanged": true,
+      "original_path_unicode_escape": "/appid-<appId>/<tenantId>/recipe/user\\u2800\\u2800",
+      "original_capture_source": "CDI-5.3.0",
+      "method": "PUT",
+      "rid": "passwordless",
+      "version_header": "cdi-version",
+      "tested_version_header_value": "5.3",
+      "runtime_path_template": "/appid-<appId>/<tenantId>/recipe/user",
+      "tested_wire_paths": [
+        "/appid-public/public/recipe/user"
+      ],
+      "path_derivation": "Independently read exact ASCII route constants/getPath implementations and recipe dispatch in pinned Apache sources, then tested both implementation route and unaltered published Unicode path",
+      "deprecated_in_baseline": false,
+      "deprecated_route_runtime_support": "supported-at-tested-pin",
+      "path_resolution_status": "resolved-source-and-runtime",
+      "tested_scope": "default app/public tenant only",
+      "behavioral_evidence": "evidence/contracts/runtime-paths/probe-report.json",
+      "source_evidence": "evidence/contracts/runtime-paths/source-report.json",
+      "full_schema_redistribution": "unresolved-original-OpenAPI; only independent licensed-source facts added",
+      "full_operation_qualification": false,
+      "unknowns": [
+        "all non-public app/tenant enforcement cases",
+        "full legacy version matrix",
+        "exhaustive schema/errors and all SDK/profile behavior"
+      ],
+      "minimal_source_schema_facts": {
+        "required_identifier": {
+          "CDI_below_4.0": "userId",
+          "CDI_4.0_and_later": "recipeUserId"
+        },
+        "optional_updates": {
+          "email": "omitted leaves unchanged; string replaces; null requests removal",
+          "phoneNumber": "omitted leaves unchanged; string replaces; null requests removal"
+        },
+        "sole_contact_removal": "HTTP 400",
+        "scope": "app-specific/public tenant",
+        "success_status": "OK",
+        "published_schema_conflict": "CDI 5.3 source capture declares required userId while defining recipeUserId; live/pinned implementation requires recipeUserId"
+      },
+      "rid_dispatch_fact": "RecipeRouter selects exact rid; missing/unmatched rid falls back to the first registered emailpassword handler, so it must not be relied on to select this operation"
+    },
+    {
+      "id": "CDI-116",
+      "original_capture_unchanged": true,
+      "original_path_unicode_escape": "/appid-<appId>/<tenantId>/recipe/user\\u2800",
+      "original_capture_source": "CDI-5.3.0",
+      "method": "GET",
+      "rid": "thirdparty",
+      "version_header": "cdi-version",
+      "tested_version_header_value": "5.3",
+      "runtime_path_template": "/appid-<appId>/<tenantId>/recipe/user",
+      "tested_wire_paths": [
+        "/appid-public/public/recipe/user"
+      ],
+      "path_derivation": "Independently read exact ASCII route constants/getPath implementations and recipe dispatch in pinned Apache sources, then tested both implementation route and unaltered published Unicode path",
+      "deprecated_in_baseline": true,
+      "deprecated_route_runtime_support": "supported-at-tested-pin",
+      "path_resolution_status": "resolved-source-and-runtime",
+      "tested_scope": "default app/public tenant only",
+      "behavioral_evidence": "evidence/contracts/runtime-paths/probe-report.json",
+      "source_evidence": "evidence/contracts/runtime-paths/source-report.json",
+      "full_schema_redistribution": "unresolved-original-OpenAPI; only independent licensed-source facts added",
+      "full_operation_qualification": false,
+      "unknowns": [
+        "all non-public app/tenant enforcement cases",
+        "full legacy version matrix",
+        "exhaustive schema/errors and all SDK/profile behavior"
+      ],
+      "minimal_source_schema_facts": {
+        "selectors": "Either userId or both thirdPartyId and thirdPartyUserId; not both forms",
+        "success_status": "OK",
+        "unknown_statuses": [
+          "UNKNOWN_USER_ID_ERROR",
+          "UNKNOWN_THIRD_PARTY_USER_ERROR"
+        ],
+        "lookup_scope": "userId app-specific/public tenant; provider pair tenant-specific"
+      },
+      "rid_dispatch_fact": "RecipeRouter selects exact rid; missing/unmatched rid falls back to the first registered emailpassword handler, so it must not be relied on to select this operation"
+    }
+  ],
+  "probe_exit_code": 0
+}

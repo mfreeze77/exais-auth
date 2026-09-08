@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "tools/cleanup_checkpoint_resources.ps1"
+  ],
+  "exit_code": 4294901760,
+  "started_unix": 1788907737.243659,
+  "elapsed_seconds": 0.051,
+  "input_sha256": {
+    "tools/cleanup_checkpoint_resources.ps1": "26a41e8d132bae078fa03390c3d0f78b9b3ef067fe46ed56d646382c2d9c212a"
+  },
+  "inputs_changed": false,
+  "output_sha256": "12411d0c0a39a150855ea9b18ac3d4d2140f8fcfb8d942d9eb61a19aa0bb5095",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

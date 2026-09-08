@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "tools/capture_contracts.py",
+    "--validate"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788907976.2759123,
+  "elapsed_seconds": 0.1,
+  "input_sha256": {
+    "contracts/api-contracts.json": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe",
+    "contracts/runtime-path-resolutions.json": "a2007613c85dd175e1dc248736d0355bcb22f694057c0f30539ec3800c30f35a"
+  },
+  "inputs_changed": false,
+  "output_sha256": "0ec85db3e1fc999bf1446ce040285c38da1564e82375779fed9edc9aa09037da",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

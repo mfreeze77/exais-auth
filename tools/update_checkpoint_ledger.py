@@ -40,10 +40,16 @@ def main():
         row['status']='blocked'
         row['contract_reference']=artifact(ROOT,'contracts/api-contracts.json')
         row['blockers']=['All205 original IDs accounted; source-schema redistribution and complete runtime/differential qualification remain unresolved. Candidate routes are not full API parity.']
+    for identifier in ('FDI-026','CDI-099','CDI-104','CDI-116'):
+        row = index[identifier]
+        row['implementation'] = [artifact(ROOT, path) for path in ['contracts/runtime-path-resolutions.json','tests/contracts/runtime_path_probe.py']]
+        row['candidate_evidence'] = [artifact(ROOT, path) for path in ['evidence/contracts/runtime-paths/probe-report.json','evidence/contracts/runtime-paths/source-report.json','evidence/contracts/runtime-paths/validation-report.json']]
+        row['qualification_note'] = 'ASCII wire paths independently derived from pinned Apache sources and tested;9 actual checks across4 original IDs passed. Original capture unchanged. Complete schemas/versions/tenants and operation qualification remain blocked; CDI-104 legacy identifier discrepancy preserved.'
     for identifier, note in [('M0','Exact schemas, full license/distribution closure and unavailable advanced reference behavior remain unqualified.'),('M1','Identity/link concurrency gate failed; headless/client/session evidence cannot select an engine until every foundation case passes.'),('WP-001','205 IDs captured as source facts, not schema-complete behavior-qualified contracts.'),('WP-002','Full SDK/plugin/native/container license distribution closure incomplete.'),('WP-003','Owned reference labs operate; advanced entitled reference cases unavailable.'),('WP-004','Candidate proof is incomplete and has failed identity safety cases.'),('TST-006','Required independent human security review has not occurred.'),('WP-036','Required independent human security review and final release acceptance unavailable.')]:
         index[identifier]['status']='blocked'
         index[identifier]['blockers']=[note]
     data['checkpoint_claim']='PARTIAL: narrow candidate implementation only; zero complete baseline requirements or API operations certified'
+    data['delivery_checkpoint_artifacts'] = [artifact(ROOT, path) for path in ['evidence/extracted-checkpoint/20260908T222920Z-23f3d2/report.json','evidence/operations/hygiene/verification-20260908T225110Z.json','evidence/runs/hygiene-runner-integrity-03/command.json']]
     data['foundation_candidate_artifacts']=[artifact(ROOT,path) for path in ['evidence/foundation/keycloak-headless/build-report.json','evidence/foundation/keycloak-headless/probe-report.json','evidence/foundation/keycloak-clients/commands.json','evidence/foundation/keycloak-clients/http-results.json','evidence/foundation/keycloak-clients/browser-results.json','evidence/foundation/keycloak-sessions/probe-report.json']]
     index['WP-004']['implementation']=[artifact(ROOT,path) for path in ['engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java','engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java','examples/keycloak-clients/server.mjs','examples/keycloak-clients/python_client.py','tools/run_keycloak_cluster.py']]
     index['WP-004']['candidate_evidence']=data['foundation_candidate_artifacts']

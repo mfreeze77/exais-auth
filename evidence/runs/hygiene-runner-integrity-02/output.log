@@ -1,0 +1,17 @@
+test_case_collision (__main__.ArchiveGateTests.test_case_collision) ... ok
+test_changed_file_hash (__main__.ArchiveGateTests.test_changed_file_hash) ... ok
+test_environment_secret (__main__.ArchiveGateTests.test_environment_secret) ... ok
+test_missing_manifest_member (__main__.ArchiveGateTests.test_missing_manifest_member) ... ok
+test_path_traversal (__main__.ArchiveGateTests.test_path_traversal) ... ok
+test_scratch_retirement_cannot_remove_repository (__main__.ArchiveGateTests.test_scratch_retirement_cannot_remove_repository) ... ok
+test_scratch_retirement_preserves_actual_diagnostics (__main__.ArchiveGateTests.test_scratch_retirement_preserves_actual_diagnostics) ... ok
+test_symlink (__main__.ArchiveGateTests.test_symlink) ... ok
+test_unlisted_member (__main__.ArchiveGateTests.test_unlisted_member) ... ok
+test_valid_synthetic_integrity_only (__main__.ArchiveGateTests.test_valid_synthetic_integrity_only) ... ok
+test_windows_drive (__main__.ArchiveGateTests.test_windows_drive) ... ok
+test_windows_reserved_name (__main__.ArchiveGateTests.test_windows_reserved_name) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.016s
+
+OK

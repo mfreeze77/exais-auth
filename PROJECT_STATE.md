@@ -15,7 +15,7 @@ Actual code and evidence:
   Source facts/hashes retained; no copied unlicensed schemas or behavioral pass claim.
 - Fail-closed ledger/release gate with adversarial tests; full completion correctly fails.
 - Core12.2.0/plugin-interface10.0.0/PostgreSQL-plugin9.8.0 compile from pinned source.
-  84 runtime JARs audited; no EE JAR. Two real replicas on private Docker network
+  84 runtime JARs audited; no EE JAR. Two real replicas were tested on a private network
   with PostgreSQL17.11 and vendor egress blocked. Source-build and probe evidence under
   `evidence/build/oss-core` and `evidence/foundation/oss-core`.
 - OSS Core probe: 12 narrow passes, 5 unavailable. Native app/tenant provisioning
@@ -40,6 +40,31 @@ Actual code and evidence:
   FDI/CDI/SDK coverage and preauthentication replica failover remain unqualified.
 - Fresh isolated OSS build consumed strict checksum/lock verification and reproduced
   all87 JAR hashes. Source fetch reconstructed1300 permitted files with zero EE paths.
+- Four original Unicode path ambiguities (FDI-026, CDI-099, CDI-104, CDI-116) now
+  have independently authored Apache-source and runtime resolutions:9 actual checks
+  passed. The original capture is unchanged. CDI-104's legacy identifier discrepancy
+  is explicit; this does not close full schema or operation qualification.
+- The exact `69c68e8b4994` source ZIP was freshly extracted, manifest-checked and its
+  Node/React and Python images built from the extraction.12 Node HTTP,19 Python HTTP
+  and4 Chromium checks passed. Existing Core/PostgreSQL were reused; this is not a
+  fresh full-stack restore, migration or complete release qualification. See
+  `evidence/extracted-checkpoint/README.md` for the exact ZIP and source bindings.
+
+Disk/Docker hygiene:15 temporary task containers,8 stale image tags,4 networks and
+463,715,868 bytes of duplicate scratch were removed. Only Core-a and PostgreSQL
+remain as containers, with6 retained task image tags. Retired H2 databases and raw
+proof logs were backed up and their hashes verified. No volumes were deleted;
+unrelated projects/shared base images were outside scope. Candidate labs and example
+servers are stopped/removed, not currently running. See `evidence/operations/hygiene`.
+The updated archive runner retires its own resources and fails on cleanup errors;
+its12 integrity/filesystem tests passed, but its revised full Docker flow has not
+been rerun. `AGENTS.md` requires the same lifecycle for all further work.
+
+Runtime-license packaging is unfinished:83 pinned Maven source siblings were fetched
+to a bounded43MB cache;1 coordinate returned404 for its source JAR.
+The notice assembler/fetcher are preserved work in progress, not wired into the
+Dockerfile or approved for distribution. Locked acquisition, notice/source/relink
+obligations, container OS review and final distribution approval remain open.
 
 Editable ledger currently maps19 requirements to partial implementation,10 to blockers,
 7 to failed candidate checks and229 to planned work. All205 API rows remain blocked

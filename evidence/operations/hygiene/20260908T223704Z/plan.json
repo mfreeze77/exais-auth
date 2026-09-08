@@ -1,0 +1,48 @@
+{
+  "Execute": true,
+  "RetireContainers": [
+    "/expertauth-extracted-20260908t222920z-23f3d2-python",
+    "/expertauth-extracted-20260908t222920z-23f3d2-node",
+    "/expertauth-runtime-path-node",
+    "/expertauth-extracted-20260908t222718z-a632c0-python",
+    "/expertauth-extracted-20260908t222718z-a632c0-node",
+    "/expertauth-kc-clients-node",
+    "/expertauth-kc-clients-engine",
+    "/expertauth-kc-sessions-b",
+    "/expertauth-kc-sessions-a",
+    "/expertauth-kc-sessions-pg",
+    "/expertauth-node-react",
+    "/expertauth-kc-headless-server",
+    "/expertauth-python-app",
+    "/expertauth-oss-core-b",
+    "/expertauth-foundation-kc"
+  ],
+  "RemoveImageTags": [
+    "expertauth-extracted-20260908t222920z-23f3d2-python:proof",
+    "expertauth-extracted-20260908t222920z-23f3d2-node:proof",
+    "expertauth-extracted-20260908t222718z-a632c0-python:proof",
+    "expertauth-extracted-20260908t222718z-a632c0-node:proof",
+    "expertauth-node-react:0.0.4",
+    "expertauth-node-react:0.0.3",
+    "expertauth-node-react:0.0.2",
+    "expertauth-node-react:0.0.1"
+  ],
+  "RemoveScratch": [
+    ".cache/engine-build-1788904893131443100",
+    ".cache/oss-runtime-image",
+    ".cache/runtime-license-probe-01",
+    ".cache/runtime-license-probe-02",
+    ".cache/extracted-checkpoints/20260908T222718Z-a632c0",
+    ".cache/extracted-checkpoints/20260908T222920Z-23f3d2"
+  ],
+  "KeepImages": [
+    "expertauth-oss-core:12.2.0-probe",
+    "expertauth-node-react:0.0.5",
+    "expertauth-python-app:0.1.0",
+    "expertauth-kc-headless:0.1.0",
+    "expertauth-kc-headless-postgres:0.1.0",
+    "expertauth-kc-clients-node:0.0.1"
+  ],
+  "VolumesDeleted": [],
+  "UnrelatedResourcesTouched": false
+}

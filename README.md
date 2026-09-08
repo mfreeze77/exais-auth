@@ -30,6 +30,11 @@ reviewed Gradle locks and checksum metadata; use `--clean --evidence-name NEW_NA
 for a new build directory and separate evidence. The recorded clean rebuild matched
 all87 original JAR hashes.
 
+The cleanup checkpoint leaves only Core-a/PostgreSQL running. Other candidate and
+example containers were retired with database/log backups. Read `AGENTS.md` before
+starting labs; inspect resources, reuse cached builds and remove temporary resources
+after tests. The cleanup evidence is under `evidence/operations/hygiene`.
+
 The Node/React and Python representative applications are under `examples/`. They
 exercise the audited-source candidate; they are not evidence that Keycloak already
 implements their FDI/CDI contracts. Deployment, migrations, native SDKs and all remaining

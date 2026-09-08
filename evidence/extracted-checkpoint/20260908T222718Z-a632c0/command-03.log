@@ -1,0 +1,62 @@
+Sending build context to Docker daemon   98.3kB
+Step 1/11 : FROM node@sha256:[REDACTED_LONG_VALUE]
+ ---> d649c27dae7b
+Step 2/11 : WORKDIR /app
+ ---> Running in 6f856b2d5fc2
+ ---> Removed intermediate container 6f856b2d5fc2
+ ---> ddb7d5209ee3
+Step 3/11 : COPY package.json package-lock.json ./
+ ---> 5b00cbffbfe9
+Step 4/11 : RUN npm ci --ignore-scripts
+ ---> Running in f4758aa6c14f
+[91mnpm warn deprecated scmp@2.1.0: Just use Node.js's crypto.timingSafeEqual()
+[0m[91mnpm warn deprecated @simplewebauthn/types@12.0.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+[0m[91mnpm warn deprecated crypto-js@4.2.0: Active development of CryptoJS has been discontinued. This library is no longer maintained.
+[0m
+added 143 packages, and audited 144 packages in 3s
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[91mnpm notice
+npm notice New major version of npm available! 10.9.8 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
+[0m ---> Removed intermediate container f4758aa6c14f
+ ---> 0401c462cc6c
+Step 5/11 : COPY server.js client.jsx build.mjs ./
+ ---> 60f3214d0256
+Step 6/11 : COPY public ./public
+ ---> bf52acf8bb0b
+Step 7/11 : RUN npm run build
+ ---> Running in 6994d808a019
+
+> @expertauth/foundation-node-react@0.0.1 build
+> node build.mjs
+
+ ---> Removed intermediate container 6994d808a019
+ ---> e533f4003e27
+Step 8/11 : ENV NODE_ENV=production
+ ---> Running in fbfe38906d24
+ ---> Removed intermediate container fbfe38906d24
+ ---> b3cc454988ca
+Step 9/11 : USER node
+ ---> Running in 23821e18044d
+ ---> Removed intermediate container 23821e18044d
+ ---> 07ede16c7ea2
+Step 10/11 : EXPOSE 3000
+ ---> Running in a12e2fbc0576
+ ---> Removed intermediate container a12e2fbc0576
+ ---> e6aec59a1f61
+Step 11/11 : CMD ["node", "server.js"]
+ ---> Running in 0d8e8197d90d
+ ---> Removed intermediate container 0d8e8197d90d
+ ---> 41659e919cb2
+Successfully built 41659e919cb2
+Successfully tagged expertauth-extracted-20260908t222718z-a632c0-node:proof
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

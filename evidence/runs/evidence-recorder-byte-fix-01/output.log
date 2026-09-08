@@ -1,0 +1,6 @@
+test_evidence_recorder_refuses_overwrite (test_release_gate.ReleaseGateTests.test_evidence_recorder_refuses_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.368s
+
+OK

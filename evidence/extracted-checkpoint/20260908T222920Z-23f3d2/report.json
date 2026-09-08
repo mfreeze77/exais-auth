@@ -1,0 +1,481 @@
+{
+  "started_at": "2026-09-08T22:29:20.411859+00:00",
+  "source_zip": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\artifacts\\expertauth-partial-checkpoint-69c68e8b4994.zip",
+  "expected_zip_sha256": "fa2928981992492faf8f30bfb6485425080e23be4bbdc8a60195013c818623ad",
+  "wrapper_sha256": "b55e7c8fcd7816ba4f913da6c7219c4c7d26a55522a7da3a5dfdbd91c7149877",
+  "status": "QUALIFIED_REPRESENTATIVE_CHECKPOINT",
+  "complete": false,
+  "foundation_passed": false,
+  "full_stack_restore": false,
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "expertauth-oss-core-a",
+        "--format",
+        "{\"image\":\"{{.Image}}\",\"running\":{{.State.Running}}}"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.047,
+      "redacted_log": "command-01.log",
+      "raw_output_sha256": "994f7c6dad8a3e7d23270d163f0d1e76e06c8566e39280d2ff1106eb7521240d",
+      "redacted_output_sha256": "2afdbaa1ac25d2d03af822e8073bced0bf262d750fab5b9852d5abe11e4d5c78",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\01.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "network",
+        "inspect",
+        "expertauth-oss-proof",
+        "--format",
+        "{\"internal\":{{.Internal}}}"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.047,
+      "redacted_log": "command-02.log",
+      "raw_output_sha256": "00b766cf364b73f245484494b07dab36c95dd843e352549628154392ce947ae1",
+      "redacted_output_sha256": "831aaa25a3a0bedb36bfd3ea4e5f53a131f3b0f6c7f0e7276701b8aae3b2f440",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\02.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "build",
+        "--no-cache",
+        "-t",
+        "expertauth-extracted-20260908t222920z-23f3d2-node:proof",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\examples\\node-react"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 18.797,
+      "redacted_log": "command-03.log",
+      "raw_output_sha256": "85bc391cf76d91fa1ecf6c82b4d1309a337280fb7cb23abc3566e10a6375d3d3",
+      "redacted_output_sha256": "076e2eb980e46df84abffe985c076157224622fb9a1a591b88ed907399d3d06d",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\03.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "build",
+        "--no-cache",
+        "-t",
+        "expertauth-extracted-20260908t222920z-23f3d2-python:proof",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\examples\\python"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 29.875,
+      "redacted_log": "command-04.log",
+      "raw_output_sha256": "402bf5522e800582389e49f16f8ee0935ed20eb695d0c7521df90d424d14bd73",
+      "redacted_output_sha256": "49ce215fcef6c3ed7183f6e7ff45e5bf9eb5857a3579a8e976155eac7137563a",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\04.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-extracted-20260908t222920z-23f3d2-node:proof",
+        "--format",
+        "{{.Id}}"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.156,
+      "redacted_log": "command-05.log",
+      "raw_output_sha256": "adfcd51678f53c62e3b345e105fd2b9884da6be6bcd7b737fa7588ab19752fa8",
+      "redacted_output_sha256": "b49a42463ce0f72d7cb29c89271d3289ad3e7b34c6232fd8fdd8dfec906e1d7c",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\05.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-extracted-20260908t222920z-23f3d2-python:proof",
+        "--format",
+        "{{.Id}}"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.094,
+      "redacted_log": "command-06.log",
+      "raw_output_sha256": "e305e5ef700de04cdb596ccefbf8e907ff60e2a24289ba0fb6cbbd31834f2f5e",
+      "redacted_output_sha256": "b49a42463ce0f72d7cb29c89271d3289ad3e7b34c6232fd8fdd8dfec906e1d7c",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\06.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "-d",
+        "--name",
+        "expertauth-extracted-20260908t222920z-23f3d2-node",
+        "--network",
+        "expertauth-oss-proof",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\.runtime\\extracted-proof\\core-key.env",
+        "--network-alias",
+        "expertauth-extracted-20260908t222920z-23f3d2-node.example.test",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "-e",
+        "EXPERTAUTH_LOCAL_PROBE=true",
+        "-e",
+        "EXPERTAUTH_PUBLIC_ORIGIN=http://expertauth-extracted-20260908t222920z-23f3d2-node.example.test:3000",
+        "-e",
+        "EXPERTAUTH_CORE_URL=http://core-a:3567",
+        "expertauth-extracted-20260908t222920z-23f3d2-node:proof"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.391,
+      "redacted_log": "command-07.log",
+      "raw_output_sha256": "10434a6547ecd14c74661eb73b4f076707d74450297acf4a983e5b100e74559f",
+      "redacted_output_sha256": "b72ad5e1be808551893c87a8a388bd5954a715f9dafaf0a19b2c8159ab273cfd",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\07.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "-d",
+        "--name",
+        "expertauth-extracted-20260908t222920z-23f3d2-python",
+        "--network",
+        "expertauth-oss-proof",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\.runtime\\extracted-proof\\core-key.env",
+        "--network-alias",
+        "expertauth-extracted-20260908t222920z-23f3d2-python.example.test",
+        "--read-only",
+        "--tmpfs",
+        "/tmp:rw,noexec,nosuid,size=16m",
+        "-e",
+        "PYTHON_API_DOMAIN=http://expertauth-extracted-20260908t222920z-23f3d2-python.example.test:8300",
+        "-e",
+        "WEBSITE_DOMAIN=http://expertauth-extracted-20260908t222920z-23f3d2-python.example.test:8300",
+        "expertauth-extracted-20260908t222920z-23f3d2-python:proof"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.453,
+      "redacted_log": "command-08.log",
+      "raw_output_sha256": "80275400a49a2a19f25fd50b051f34d27a1793fd8d5e98d20c3a153e5ba5731b",
+      "redacted_output_sha256": "b72ad5e1be808551893c87a8a388bd5954a715f9dafaf0a19b2c8159ab273cfd",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\08.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-extracted-20260908t222920z-23f3d2-node",
+        "node",
+        "-e",
+        "fetch('http://localhost:3000/health/ready').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.187,
+      "redacted_log": "command-09.log",
+      "raw_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\09.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-extracted-20260908t222920z-23f3d2-python",
+        "python",
+        "-c",
+        "import urllib.request;urllib.request.urlopen('http://localhost:8300/ready',timeout=4)"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 1,
+      "elapsed_seconds": 0.282,
+      "redacted_log": "command-10.log",
+      "raw_output_sha256": "3392ae146fe3ff2af34cc3d19fdcab998125eb94303e2f9277d72ba099a4724c",
+      "redacted_output_sha256": "c070a48444cd6f708571ebd82df19dfd005213ca2c11d4929b8fc50580064ba5",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\10.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "expertauth-extracted-20260908t222920z-23f3d2-python",
+        "--format",
+        "{{.State.Running}}"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.047,
+      "redacted_log": "command-11.log",
+      "raw_output_sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+      "redacted_output_sha256": "49628009a4b6e1f4b66b9f3b6842423d60085f9ec94467f3ccbbf28862d78f7a",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\11.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "expertauth-extracted-20260908t222920z-23f3d2-python",
+        "python",
+        "-c",
+        "import urllib.request;urllib.request.urlopen('http://localhost:8300/ready',timeout=4)"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.281,
+      "redacted_log": "command-12.log",
+      "raw_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\12.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "expertauth-oss-proof",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\.runtime\\extracted-proof\\core-key.env",
+        "-e",
+        "EXPERTAUTH_TEST_URL=http://expertauth-extracted-20260908t222920z-23f3d2-node.example.test:3000",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth,target=/source,readonly",
+        "expertauth-extracted-20260908t222920z-23f3d2-node:proof",
+        "node",
+        "--test",
+        "/source/examples/node-react/test/live.test.js"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 2.172,
+      "redacted_log": "command-13.log",
+      "raw_output_sha256": "03c042c648cff62202a2fd0e3c9ad6342c21de3cb82fc93e34002dd026bd69c2",
+      "redacted_output_sha256": "32e70cbebd0583a59d22b6969f534ec5c51d29865296bcc424508b4b6f3ad028",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\13.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "expertauth-oss-proof",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth,target=/source,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\.runtime\\extracted-proof\\evidence,target=/proof-evidence",
+        "-w",
+        "/source",
+        "expertauth-extracted-20260908t222920z-23f3d2-python:proof",
+        "python",
+        "tests/clients/python_probe.py",
+        "--url",
+        "http://expertauth-extracted-20260908t222920z-23f3d2-python.example.test:8300",
+        "--origin",
+        "http://expertauth-extracted-20260908t222920z-23f3d2-python.example.test:8300",
+        "--evidence-dir",
+        "/proof-evidence/python"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 2.36,
+      "redacted_log": "command-14.log",
+      "raw_output_sha256": "d99286d7e593e7bf11c6f052cae99d04987775c7fd3058e3ee751d164f804f73",
+      "redacted_output_sha256": "f6e11bade3d90f4e0c087b40a1c21b66646759f214afd19175cfb7026c6e85bc",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\14.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\tests\\browser,target=/browser",
+        "-w",
+        "/browser",
+        "node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436",
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 2.859,
+      "redacted_log": "command-15.log",
+      "raw_output_sha256": "b40e552a9bfcac793e72a280b2fa6f45227041d5ec24395f3600aead89df56f5",
+      "redacted_output_sha256": "c320f9573cf33a347b3e815f9097f5cf66e0dac8535da446ead806b6e996bf32",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\15.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--network",
+        "expertauth-oss-proof",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth,target=/source,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth\\.runtime\\extracted-proof\\evidence,target=/proof-evidence",
+        "-w",
+        "/source/tests/browser",
+        "-e",
+        "TEST_ORIGIN=http://expertauth-extracted-20260908t222920z-23f3d2-node.example.test:3000",
+        "-e",
+        "EVIDENCE_DIR=/proof-evidence/browser",
+        "mcr.microsoft.com/playwright@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+        "node",
+        "oss-password.mjs"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 3.297,
+      "redacted_log": "command-16.log",
+      "raw_output_sha256": "e79ab4ef6a6903132ad16f8294a71ada8cf6d9fd7c76a3d5f5da738a005983ca",
+      "redacted_output_sha256": "06d8eeaa24501b757ab8c710ffd118255c66e1a02210a5991b016e87092b94c4",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\16.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "-t",
+        "5",
+        "expertauth-extracted-20260908t222920z-23f3d2-node"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 5.391,
+      "redacted_log": "command-17.log",
+      "raw_output_sha256": "d1cca2aed7a5b97c6337610e495e8c87af29c1f8daf7fe7870db6cbaf1740ae8",
+      "redacted_output_sha256": "9b8fd7c23c10f2fe88e57b1dcfb6864ee9a39d63f29bee200d4e0a02dcd79d76",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\17.log"
+    },
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "-t",
+        "5",
+        "expertauth-extracted-20260908t222920z-23f3d2-python"
+      ],
+      "cwd": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth",
+      "exit_code": 0,
+      "elapsed_seconds": 0.797,
+      "redacted_log": "command-18.log",
+      "raw_output_sha256": "6f66b677830466be32008e5513a87d69b3bc4a517b42737024f91d620b672d4a",
+      "redacted_output_sha256": "f96f159d92eb9afcb1d6540cb8ed4d8bf2c152cfcbdc6bc0f9f1c85059b36378",
+      "private_raw_log": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\raw-command-logs\\18.log"
+    }
+  ],
+  "source_changed_during_tests": false,
+  "test_results": {
+    "node_http": {
+      "passed": true,
+      "expected": 12,
+      "executed_pass_ids": [
+        "NODE-LIVE-001 readiness performs an authenticated database query",
+        "NODE-PWD-001 signup creates a real online-verifiable session",
+        "NODE-PWD-002 wrong password produces no session",
+        "NODE-SESSION-001 no token and malformed token rejected",
+        "NODE-SESSION-002 refresh rotates and logout blocks online access and refresh",
+        "NODE-TENANT-001 valid session cannot substitute its tenant",
+        "NODE-ORIGIN-001 foreign origin cannot submit authenticated or anonymous calls",
+        "NODE-PRIVATE-001 Core business APIs are not public routes",
+        "NODE-COOKIE-001 cookie attributes and refresh CSRF",
+        "NODE-LIMIT-001 oversized JSON rejected without reflecting payload",
+        "NODE-OFFLINE-001 real Core-signed wrong issuer and audience tokens are rejected",
+        "NODE-OFFLINE-002 malformed and unsigned tokens cannot access offline route"
+      ],
+      "exit_code": 0
+    },
+    "python_http": {
+      "passed": true,
+      "expected": 19,
+      "executed": 19,
+      "passed_count": 19,
+      "exit_code": 0
+    },
+    "node_chromium": {
+      "passed": true,
+      "expected": 4,
+      "passed_count": 4,
+      "exit_code": 0
+    }
+  },
+  "limits": [
+    "Uses existing owned Core and PostgreSQL; no fresh full-stack deployment, data restore or migration qualification",
+    "Representative Node/React and Python password/session profiles only",
+    "No original requirement/API/SDK family closure or independent security review",
+    "Synthetic users remain in the isolated existing Core database"
+  ],
+  "source_commit": "69c68e8b4994621c3e83c3b07377f470ecf1b006",
+  "verified_manifest_files": 724,
+  "manifest_sha256": "7636dd80ad2ef931c3e7b04c4c37bfc44ca83364bcdfaa453fb4bd76bb3603af",
+  "extracted_repository": ".cache\\extracted-checkpoints\\20260908T222920Z-23f3d2\\source\\expert-auth",
+  "zip_integrity_passed": true,
+  "reused_dependency": {
+    "container": "expertauth-oss-core-a",
+    "image": "sha256:274bb9f3fba8e7e957d4fbc0f5cd8c8e09a7fcdd0a343515ae83fb40d0666139",
+    "network": "expertauth-oss-proof",
+    "network_internal": true,
+    "database": "Existing isolated PostgreSQL state; not recreated/restored by this qualification"
+  },
+  "built_images": {
+    "node_react": {
+      "tag": "expertauth-extracted-20260908t222920z-23f3d2-node:proof",
+      "image": "sha256:6364abfe41ee2209d288d6be3b1eab58348a0a30a505cfa82bf81847376a78e0"
+    },
+    "python": {
+      "tag": "expertauth-extracted-20260908t222920z-23f3d2-python:proof",
+      "image": "sha256:cdd25eaf7eb586901356aee94f208b5bb0ba2838453e9445bddf96d9df8311d8"
+    }
+  },
+  "test_artifacts": [
+    {
+      "path": "browser\\desktop-account.png",
+      "sha256": "3e5b2140c32ee86c9c05258e6a0d3a56670d2ca655c81db357137d8c3566a566"
+    },
+    {
+      "path": "browser\\mobile-login.png",
+      "sha256": "5d756fe35588f821932b40fefd97ae4e5c5b39a7dce36a3539968da0419ce873"
+    },
+    {
+      "path": "browser\\results.json",
+      "sha256": "ea17361194b02fbd5401ab648a606e488a75ef8f7727803b235d8a1333bc9249"
+    },
+    {
+      "path": "python\\probe-report.json",
+      "sha256": "8ceb189ce8924754fa94bf2caeca4204b62881c579c3b6dad9dce565028201db"
+    }
+  ],
+  "changed_archive_files": [],
+  "executed_input_sha256": {
+    "examples/node-react/Dockerfile": "60690bb6fadf610305a1d20c5378b4ce9b0a536ed3783d73520b9e28a97155b3",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    "examples/node-react/server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb",
+    "examples/node-react/client.jsx": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a",
+    "examples/node-react/test/live.test.js": "2dd95d103a05d3c09fbeef19e6cb5ed5201bca409e6c70b92d5067b40c88d61b",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/app.py": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b",
+    "tests/clients/python_probe.py": "cf2223901ef3411fefc42f9c342e30da05d5c503452e660272bca90cc8507cf6",
+    "tests/browser/oss-password.mjs": "1b4386c52571a055ca7b3c93bfa945b6216902b100683bba9839b725fb093e30",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d"
+  },
+  "completed_at": "2026-09-08T22:30:33.813876+00:00",
+  "source_zip_unchanged": true
+}

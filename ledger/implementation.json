@@ -5663,7 +5663,16 @@
         "record_sha256": "143cc73b4549b1303ca052c9f742f5fe5416f257fdfca868daf34c76bc54154c"
       },
       "status": "blocked",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "contracts/runtime-path-resolutions.json",
+          "sha256": "a2007613c85dd175e1dc248736d0355bcb22f694057c0f30539ec3800c30f35a"
+        },
+        {
+          "path": "tests/contracts/runtime_path_probe.py",
+          "sha256": "08213cb742edada3ab3023fe23e0e227e94a85b6ab775c880f8acdfafbae69c2"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
@@ -5675,7 +5684,22 @@
       "contract_reference": {
         "path": "contracts/api-contracts.json",
         "sha256": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe"
-      }
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence/contracts/runtime-paths/probe-report.json",
+          "sha256": "67988ba9e5acc04cd03c489a8281a5158bcbd2ba8e41106a67070d53dc80fd9e"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/source-report.json",
+          "sha256": "aaf1875c1050afe36d5f8435d05027c197751116917064764f748594ff38506c"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/validation-report.json",
+          "sha256": "c6a40a790658260275403347f11114f3667e4a842b995a724c6a646c43b2b61b"
+        }
+      ],
+      "qualification_note": "ASCII wire paths independently derived from pinned Apache sources and tested;9 actual checks across4 original IDs passed. Original capture unchanged. Complete schemas/versions/tenants and operation qualification remain blocked; CDI-104 legacy identifier discrepancy preserved."
     },
     {
       "id": "FDI-027",
@@ -8347,7 +8371,16 @@
         "record_sha256": "210e4ff9409226cb532da4bc080fefa8dccae2e710d9983e851443de0974ede2"
       },
       "status": "blocked",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "contracts/runtime-path-resolutions.json",
+          "sha256": "a2007613c85dd175e1dc248736d0355bcb22f694057c0f30539ec3800c30f35a"
+        },
+        {
+          "path": "tests/contracts/runtime_path_probe.py",
+          "sha256": "08213cb742edada3ab3023fe23e0e227e94a85b6ab775c880f8acdfafbae69c2"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
@@ -8359,7 +8392,22 @@
       "contract_reference": {
         "path": "contracts/api-contracts.json",
         "sha256": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe"
-      }
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence/contracts/runtime-paths/probe-report.json",
+          "sha256": "67988ba9e5acc04cd03c489a8281a5158bcbd2ba8e41106a67070d53dc80fd9e"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/source-report.json",
+          "sha256": "aaf1875c1050afe36d5f8435d05027c197751116917064764f748594ff38506c"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/validation-report.json",
+          "sha256": "c6a40a790658260275403347f11114f3667e4a842b995a724c6a646c43b2b61b"
+        }
+      ],
+      "qualification_note": "ASCII wire paths independently derived from pinned Apache sources and tested;9 actual checks across4 original IDs passed. Original capture unchanged. Complete schemas/versions/tenants and operation qualification remain blocked; CDI-104 legacy identifier discrepancy preserved."
     },
     {
       "id": "CDI-100",
@@ -8457,7 +8505,16 @@
         "record_sha256": "695dd5f23a04f732b9bd597299ce4be8cf59262b798e79cf2e779aad0316de42"
       },
       "status": "blocked",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "contracts/runtime-path-resolutions.json",
+          "sha256": "a2007613c85dd175e1dc248736d0355bcb22f694057c0f30539ec3800c30f35a"
+        },
+        {
+          "path": "tests/contracts/runtime_path_probe.py",
+          "sha256": "08213cb742edada3ab3023fe23e0e227e94a85b6ab775c880f8acdfafbae69c2"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
@@ -8469,7 +8526,22 @@
       "contract_reference": {
         "path": "contracts/api-contracts.json",
         "sha256": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe"
-      }
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence/contracts/runtime-paths/probe-report.json",
+          "sha256": "67988ba9e5acc04cd03c489a8281a5158bcbd2ba8e41106a67070d53dc80fd9e"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/source-report.json",
+          "sha256": "aaf1875c1050afe36d5f8435d05027c197751116917064764f748594ff38506c"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/validation-report.json",
+          "sha256": "c6a40a790658260275403347f11114f3667e4a842b995a724c6a646c43b2b61b"
+        }
+      ],
+      "qualification_note": "ASCII wire paths independently derived from pinned Apache sources and tested;9 actual checks across4 original IDs passed. Original capture unchanged. Complete schemas/versions/tenants and operation qualification remain blocked; CDI-104 legacy identifier discrepancy preserved."
     },
     {
       "id": "CDI-105",
@@ -8721,7 +8793,16 @@
         "record_sha256": "588eae2896140f017bd610660e217043b5dad4cd01bd79d45c78116427b28220"
       },
       "status": "blocked",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "contracts/runtime-path-resolutions.json",
+          "sha256": "a2007613c85dd175e1dc248736d0355bcb22f694057c0f30539ec3800c30f35a"
+        },
+        {
+          "path": "tests/contracts/runtime_path_probe.py",
+          "sha256": "08213cb742edada3ab3023fe23e0e227e94a85b6ab775c880f8acdfafbae69c2"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
@@ -8733,7 +8814,22 @@
       "contract_reference": {
         "path": "contracts/api-contracts.json",
         "sha256": "43feb2ce90602f38d3fb31505016ade8812c077f857b3cf6796c845a40e2acbe"
-      }
+      },
+      "candidate_evidence": [
+        {
+          "path": "evidence/contracts/runtime-paths/probe-report.json",
+          "sha256": "67988ba9e5acc04cd03c489a8281a5158bcbd2ba8e41106a67070d53dc80fd9e"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/source-report.json",
+          "sha256": "aaf1875c1050afe36d5f8435d05027c197751116917064764f748594ff38506c"
+        },
+        {
+          "path": "evidence/contracts/runtime-paths/validation-report.json",
+          "sha256": "c6a40a790658260275403347f11114f3667e4a842b995a724c6a646c43b2b61b"
+        }
+      ],
+      "qualification_note": "ASCII wire paths independently derived from pinned Apache sources and tested;9 actual checks across4 original IDs passed. Original capture unchanged. Complete schemas/versions/tenants and operation qualification remain blocked; CDI-104 legacy identifier discrepancy preserved."
     },
     {
       "id": "CDI-117",
@@ -11044,6 +11140,20 @@
     {
       "path": "evidence/foundation/keycloak-sessions/probe-report.json",
       "sha256": "5942c716388f3a068d060477377df84e309476fb99ca33ad85296d9c5a9e1cdd"
+    }
+  ],
+  "delivery_checkpoint_artifacts": [
+    {
+      "path": "evidence/extracted-checkpoint/20260908T222920Z-23f3d2/report.json",
+      "sha256": "cf3e1c71a448f463996d5e064b3fe5df520479e21bfe7c85a1d5097555ada16a"
+    },
+    {
+      "path": "evidence/operations/hygiene/verification-20260908T225110Z.json",
+      "sha256": "45a0743c7e548457f1be7686a5c2dfbe5853f2af01170dd5d29ee84e2cecd655"
+    },
+    {
+      "path": "evidence/runs/hygiene-runner-integrity-03/command.json",
+      "sha256": "611604f77d714906bc6b247fe2ac2987a78369b8e6c408e43a15122c69ba8c7a"
     }
   ]
 }

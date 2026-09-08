@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "tools/qualify_extracted_checkpoint.py",
+    "--self-test"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788907870.6363058,
+  "elapsed_seconds": 0.099,
+  "input_sha256": {
+    "tools/qualify_extracted_checkpoint.py": "fd5319d7ac71815a7863391a09ec6eae9c386ea82049fafe1cf81fa6371fe8f3",
+    "AGENTS.md": "8bffc178e5369f50e752142c1c276ac82bf2505528e5e8fe751a48d2d12dab86"
+  },
+  "inputs_changed": false,
+  "output_sha256": "b3443a6ee26d309566d6a53831dc9c6947f0d7e93efe75e8eb2f1b08056efbb3",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}
