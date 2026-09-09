@@ -1,0 +1,46 @@
+{
+  "kind": "exact-superseded-candidate-retirement",
+  "passed": true,
+  "path": ".cache/core-reset/core-12.2.0-atomic-reset.jar",
+  "sha256": "8fc49b17a4521b8d704a27a39bcfac1aab3821db854bc7ee5f10c3c73dde9523",
+  "bytes": 1254808,
+  "source_and_build_evidence_preserved": true,
+  "current_candidates": [
+    {
+      "component": "core",
+      "path": ".cache/password-session/core-12.2.0.jar",
+      "bytes": 1258481,
+      "sha256": "eba1922f796368b4c8df7dc0cc5eaaa0dfe8ba96490a6bd44e18e7b97a1310a6",
+      "original_sha256": "d16e9d760ace7e9c5cd9b888df1e67bcfdad730b25a5c56a50f52e1b2229c539",
+      "changed": [
+        "io/supertokens/session/Session.class",
+        "io/supertokens/webserver/Webserver$TomcatReference.class",
+        "io/supertokens/webserver/Webserver.class"
+      ],
+      "added": [
+        "io/expertauth/core/AtomicPasswordReset$Rejected.class",
+        "io/expertauth/core/AtomicPasswordReset.class",
+        "io/expertauth/core/AtomicPasswordResetAPI.class",
+        "io/expertauth/core/AtomicPasswordSession$Insert.class",
+        "io/expertauth/core/AtomicPasswordSession$Rejected.class",
+        "io/expertauth/core/AtomicPasswordSession.class",
+        "io/expertauth/core/AtomicPasswordSessionAPI.class",
+        "io/expertauth/core/TransactionalSessionWriter.class"
+      ]
+    },
+    {
+      "component": "postgresql",
+      "path": ".cache/password-session/postgresql-plugin-9.8.0.jar",
+      "bytes": 408242,
+      "sha256": "d7a7ae7cefd18724658e3bc24f3351bcacc69439245433429d10879da487624c",
+      "original_sha256": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705",
+      "changed": [],
+      "added": [
+        "META-INF/services/io.expertauth.core.TransactionalSessionWriter",
+        "io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class"
+      ]
+    }
+  ],
+  "old_candidate_unmounted": true,
+  "tool_sha256": "a207a2ef4edef67365159cd3044ab6e54fbede3bce49716511d94053fa7a1f36"
+}

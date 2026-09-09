@@ -11,7 +11,18 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
-- An opt-in atomic password-reset Core adaptation now passes eight actual Core
+- The opt-in Node password profile now revalidates the credential and creates
+  its session in one Core-owned transaction. Both reset/sign-in orderings,
+  database-aborted insertion/retry, eight concurrent creations and external-ID
+  cases pass alongside the eight prior reset cases. Node passes 14 HTTP/SMTP,
+  10 TLS and 9 browser cases; eight concurrent users keep their own subjects,
+  and 36 observed session requests use the new private API with no legacy calls.
+  All 17 final-lab containers retire; no persistent database contact, new images
+  or volumes. Two candidate JARs total 1,666,723 bytes. Source-notice recompilation
+  produces byte-identical tested binaries. See `docs/password-session-transactions.md`.
+  Other SDK/namespace/link/MFA profiles, full operational qualification,
+  distribution and independent review remain open; no full requirement is verified.
+- The earlier reset-only Core adaptation passes eight actual Core
   cases, including two-replica concurrency, transaction abort/retry and external
   identity mappings. The Node/React profile passes13 HTTP,10 SMTP/TLS and9 browser
   cases, including real legacy-token rejection/reissue and older-Core readiness

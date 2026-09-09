@@ -1,5 +1,10 @@
 # Atomic password reset candidate
 
+The later [password-session transaction adaptation](password-session-transactions.md)
+closes the demonstrated validation/session-insertion race for the explicit Node
+password profile. Its tested binaries, current resume commands and remaining
+scope limits supersede this page's original single-JAR/race observations.
+
 This is an explicit, opt-in Core adaptation for the existing password method.
 It is working reference code, not foundation selection or complete PWD-006
 acceptance. The Node profile is `EXPERTAUTH_RESET_POLICY=atomic-v1`; the default

@@ -1,0 +1,2295 @@
+{
+  "kind": "isolated-atomic-reset-lab",
+  "started": "2026-09-09T08:03:16.150533+00:00",
+  "passed": false,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "independent_human_review": false,
+  "images_built": 0,
+  "image_downloads": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "published_ports": [],
+  "source_database_contacted": false,
+  "run_id": "d02db865bb76",
+  "inputs": {
+    "tools/run_atomic_reset_lab.py": "e2653891f833a40fb4cb830a2e87b888e6fbec83a149e91a71d6b05e0a28dade",
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tests/operations/AtomicResetProbe.java": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71",
+    "engine-extensions/core-reset/reuse.json": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c",
+    "tools/build_password_session.py": "3a3a8bd3f15b66b73b4387e1b36064da39516c45ec27deb8af30074df63adb0f",
+    "tools/build_core_reset.py": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24",
+    "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c",
+    "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64",
+    "engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java": "4e420fee569e245b952e6d214077e7fc11b502e4973a028868da0ec3d81202e1",
+    "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java": "49f2d6a6021cc2e04a7d2acdd70237f3456eba5ea6c71bd985596e17d8390791",
+    "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java": "d7ca4f75aa6d2e2e461028c02719fb1fd3bffa2d4f7d43e59857f4536b3b23bb",
+    "engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java": "870e18adc9ecff84ea371a064de77f43e25d829bf79d76de1baaa1adc2a94566",
+    "tests/operations/PasswordSessionProbe.java": "9c7c32ff30a968c0b6e562520da3bba64a60f6727ad0de3b0a54ff5723f7422b"
+  },
+  "compiled_jar_sha256": "eba1922f796368b4c8df7dc0cc5eaaa0dfe8ba96490a6bd44e18e7b97a1310a6",
+  "build_report_sha256": "38262c9c7aeb740678705811eb96d6806a9f26eac44f59f28bb16e1460bec01c",
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-postgres-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-postgres-d02db865bb76",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\postgres.cid",
+        "--network",
+        "expertauth-oss-proof",
+        "--cpus=2",
+        "--security-opt=no-new-privileges",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=atomic-reset-lab",
+        "--label",
+        "org.expertauth.run=d02db865bb76",
+        "-d",
+        "--memory=512m",
+        "--pids-limit=128",
+        "--tmpfs",
+        "/var/lib/postgresql/data:rw,nosuid,size=256m",
+        "--tmpfs",
+        "/var/run/postgresql:rw,nosuid,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\secrets\\postgres.env",
+        "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "a9ddf054fef9e974df2cdd6aced4c6a830a16ef90c57e90393b1d2f71662e0b1"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 373,
+        "sha256": "3dbe4d9ca0cf136580f312e23264b71b06e7a93769131755bb716c9b261c0c82"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187",
+        "pg_isready",
+        "-U",
+        "expertauth_reset",
+        "-d",
+        "expertauth_reset"
+      ],
+      "exit_code": 2,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 39,
+        "sha256": "7c926b87e40b26ec6ffb4c78f403571ac977ece539b51f52b4a58a6943d143ea"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187",
+        "pg_isready",
+        "-U",
+        "expertauth_reset",
+        "-d",
+        "expertauth_reset"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 49,
+        "sha256": "f18ee442b4cf890ac7577d29803f90a1d9c7e41b2d22bb807c482e8e2ec952a8"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187",
+        "pg_isready",
+        "-U",
+        "expertauth_reset",
+        "-d",
+        "expertauth_reset"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 49,
+        "sha256": "6e168fc3b5a0662104b5e5da92e87b870e8b7c65fec827d267115b5123d18614"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-core-a-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-core-a-d02db865bb76",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\core-a.cid",
+        "--network",
+        "expertauth-oss-proof",
+        "--cpus=2",
+        "--security-opt=no-new-privileges",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=atomic-reset-lab",
+        "--label",
+        "org.expertauth.run=d02db865bb76",
+        "-d",
+        "--memory=1g",
+        "--pids-limit=256",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=64m",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,noexec,size=1m",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\secrets\\core.yaml,target=/run/expertauth/config.yaml,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\password-session\\core-12.2.0.jar,target=/opt/expertauth/lib/core-12.2.0.jar,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\password-session\\postgresql-plugin-9.8.0.jar,target=/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar,readonly",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "bb5783f0fd51c8d94c957c2d7f7c2eecbe2514ca821002af06332652af35ae9a"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1218,
+        "sha256": "a38c11b04950c6251953e42da0c2668b288f78ad152db1f7971510bec809ec56"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c",
+        "sha256sum",
+        "/opt/expertauth/lib/core-12.2.0.jar"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 102,
+        "sha256": "602f974453ad8ac7d64dd4c422df1c1745ddb70f124037a26544dedf68388eba"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-ready-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-ready-d02db865bb76",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\ready.cid",
+        "--network",
+        "expertauth-oss-proof",
+        "--cpus=2",
+        "--security-opt=no-new-privileges",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=atomic-reset-lab",
+        "--label",
+        "org.expertauth.run=d02db865bb76",
+        "--read-only",
+        "--memory=512m",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--tmpfs",
+        "/tmp:rw,nosuid,nodev,noexec,size=64m",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,nodev,noexec,size=1m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\secrets\\worker.env",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\AtomicResetProbe.java,target=/src/AtomicResetProbe.java,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\atomic-reset\\session-01,target=/out",
+        "--entrypoint",
+        "java",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "-Xmx256m",
+        "-cp",
+        "/opt/expertauth/lib/*:/opt/expertauth/plugin/*",
+        "/src/AtomicResetProbe.java",
+        "--ready-a"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 15,
+        "sha256": "5e14e40959fca7910afc84bc78fef3e3d399d79cf1d430b7dba7edd558f1d3c5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-core-b-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-core-b-d02db865bb76",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\core-b.cid",
+        "--network",
+        "expertauth-oss-proof",
+        "--cpus=2",
+        "--security-opt=no-new-privileges",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=atomic-reset-lab",
+        "--label",
+        "org.expertauth.run=d02db865bb76",
+        "-d",
+        "--memory=1g",
+        "--pids-limit=256",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=64m",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,noexec,size=1m",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\secrets\\core.yaml,target=/run/expertauth/config.yaml,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\password-session\\core-12.2.0.jar,target=/opt/expertauth/lib/core-12.2.0.jar,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\password-session\\postgresql-plugin-9.8.0.jar,target=/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar,readonly",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "11fab2acaa700682bd9f9ec8215001da8eb8e209060bdaa2ddaed4f67f91b93a"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1218,
+        "sha256": "73f9159d0c4d8a0909effc3c85bc5a27db4c5fd9c023e6365ca717bccbe5e468"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "exec",
+        "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e",
+        "sha256sum",
+        "/opt/expertauth/lib/core-12.2.0.jar"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 102,
+        "sha256": "602f974453ad8ac7d64dd4c422df1c1745ddb70f124037a26544dedf68388eba"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-worker-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-worker-d02db865bb76",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\worker.cid",
+        "--network",
+        "expertauth-oss-proof",
+        "--cpus=2",
+        "--security-opt=no-new-privileges",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=atomic-reset-lab",
+        "--label",
+        "org.expertauth.run=d02db865bb76",
+        "--read-only",
+        "--memory=512m",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--tmpfs",
+        "/tmp:rw,nosuid,nodev,noexec,size=64m",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,nodev,noexec,size=1m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\secrets\\worker.env",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\AtomicResetProbe.java,target=/src/AtomicResetProbe.java,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\atomic-reset\\session-01,target=/out",
+        "--entrypoint",
+        "java",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "-Xmx256m",
+        "-cp",
+        "/opt/expertauth/lib/*:/opt/expertauth/plugin/*",
+        "/src/AtomicResetProbe.java"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 597,
+        "sha256": "609682fc06d475326f5de99750bac1729897f0beda4f5ee94a3e71eb97ab6f96"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-session-worker-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-session-worker-d02db865bb76",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\session-worker.cid",
+        "--network",
+        "expertauth-oss-proof",
+        "--cpus=2",
+        "--security-opt=no-new-privileges",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=atomic-reset-lab",
+        "--label",
+        "org.expertauth.run=d02db865bb76",
+        "--read-only",
+        "--memory=512m",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--tmpfs",
+        "/tmp:rw,nosuid,nodev,noexec,size=64m",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,nodev,noexec,size=1m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\session-01\\secrets\\worker.env",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\AtomicResetProbe.java,target=/src/AtomicResetProbe.java,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\atomic-reset\\session-01,target=/out",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\PasswordSessionProbe.java,target=/src/PasswordSessionProbe.java,readonly",
+        "--entrypoint",
+        "sh",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "-eu",
+        "-c",
+        "javac -proc:none --release 21 -cp '/opt/expertauth/lib/*:/opt/expertauth/plugin/*' -d /tmp/probe /src/*.java && java -Xmx256m -cp '/tmp/probe:/opt/expertauth/lib/*:/opt/expertauth/plugin/*' PasswordSessionProbe"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 255,
+        "sha256": "3e18b83d92fe9776f3273c1269aafc23bea212007b140f54d85b2d00a914f383"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "f2826f5f95ced420bcc8a5c605a2d2ed2ef86858d59a086ec21ad4bfdd8b09e3"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "bytes": 88,
+        "sha256": "dbaba131b77ace54a10e6841d33623f07bed4e7a80ac03243ac4997881332eb8"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-session-worker-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 4030,
+        "sha256": "13aa0d7f0923f9ce0940fd6ec6e8e276323837fb9260dfc6315f985894f4f6fd"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "d11008cca38c29a46e849213a05cf4d31f1d7e1f324e483b2c06b5eb23ef4cbe"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "bytes": 88,
+        "sha256": "dd02b1a0c99fc434fa919d2c5488c2c372e192ec2cd497faef84c0c8c74d0d12"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-worker-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 4030,
+        "sha256": "13aa0d7f0923f9ce0940fd6ec6e8e276323837fb9260dfc6315f985894f4f6fd"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "fac31f01489175dd4b1ef1fa41bff89c60327d2bf532344ef75a198b79d5122f"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "bytes": 88,
+        "sha256": "8981515e90659c21e5247b1e4ad517078f41ff075318b86168af7997f8cad60b"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-ready-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 4030,
+        "sha256": "13aa0d7f0923f9ce0940fd6ec6e8e276323837fb9260dfc6315f985894f4f6fd"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1218,
+        "sha256": "bd41a98a3a7d108e13512eec8828d9f5a078f010e44d4321d6afe8a1defbfd62"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "logs",
+        "--tail",
+        "120",
+        "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 353,
+        "sha256": "c607779682021c80a99c5fa9e95773fca0f80726d73c60f389cbe6ed2271617e"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "--time=5",
+        "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 120,
+        "sha256": "7d0d50d73c2efdeeb1506d51e7c27c78ad31347e5087b23ca74ae6102a0cd120"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "bytes": 88,
+        "sha256": "67eb8552d267006f2214bf647b1dd12d3473306820e8628c72599aeb1a271a59"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-core-b-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 3965,
+        "sha256": "68be6cff79d65e221e4b98c3d93d27105cf19c349102917a98d45778867e1e72"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1218,
+        "sha256": "a38c11b04950c6251953e42da0c2668b288f78ad152db1f7971510bec809ec56"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "logs",
+        "--tail",
+        "120",
+        "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 353,
+        "sha256": "c607779682021c80a99c5fa9e95773fca0f80726d73c60f389cbe6ed2271617e"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "--time=5",
+        "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 120,
+        "sha256": "f3206719f9b05df5b96aaddcaf0821f92e3182cc8cdaa73d08642dddbcd3b562"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "bytes": 88,
+        "sha256": "e84c2b055703d30c57e0edc6704f56a1af06e95ac7d60466049b02deac671c67"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-core-a-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 3900,
+        "sha256": "c4f494ad34643520ca29aa2096a384558d910df7c66d1155e2ce718e6f792d83"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 373,
+        "sha256": "3dbe4d9ca0cf136580f312e23264b71b06e7a93769131755bb716c9b261c0c82"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "stop",
+        "--time=5",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 120,
+        "sha256": "dab97e06dbd7634e4c9043bde9a7a1196b2b9785b78a58040eb009921303ff99"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}},\"mounts\":{{json .Mounts}},\"ports\":{{json .HostConfig.PortBindings}}}",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 374,
+        "sha256": "27a6e2668ab022020980541a9154d6ce2f5f4764f86d8986975fbd3136777bd9"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "rm",
+        "-f",
+        "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 112,
+        "sha256": "467b231e34c2a5dae2fea0ecafb8e6b79ff527e8bd9e9bbc3950945f82c3ceca"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-reset-postgres-d02db865bb76$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "bytes": 3835,
+        "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "errors": [
+    "Command failed: 20"
+  ],
+  "created_containers": [
+    {
+      "role": "postgres",
+      "id": "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187",
+      "name": "expertauth-reset-postgres-d02db865bb76",
+      "image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675"
+    },
+    {
+      "role": "core-a",
+      "id": "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c",
+      "name": "expertauth-reset-core-a-d02db865bb76",
+      "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+    },
+    {
+      "role": "ready",
+      "id": "fac31f01489175dd4b1ef1fa41bff89c60327d2bf532344ef75a198b79d5122f",
+      "name": "expertauth-reset-ready-d02db865bb76",
+      "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+    },
+    {
+      "role": "core-b",
+      "id": "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e",
+      "name": "expertauth-reset-core-b-d02db865bb76",
+      "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+    },
+    {
+      "role": "worker",
+      "id": "d11008cca38c29a46e849213a05cf4d31f1d7e1f324e483b2c06b5eb23ef4cbe",
+      "name": "expertauth-reset-worker-d02db865bb76",
+      "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+    },
+    {
+      "role": "session-worker",
+      "id": "f2826f5f95ced420bcc8a5c605a2d2ed2ef86858d59a086ec21ad4bfdd8b09e3",
+      "name": "expertauth-reset-session-worker-d02db865bb76",
+      "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+    }
+  ],
+  "retired_containers": [
+    {
+      "role": "session-worker",
+      "id": "f2826f5f95ced420bcc8a5c605a2d2ed2ef86858d59a086ec21ad4bfdd8b09e3"
+    },
+    {
+      "role": "worker",
+      "id": "d11008cca38c29a46e849213a05cf4d31f1d7e1f324e483b2c06b5eb23ef4cbe"
+    },
+    {
+      "role": "ready",
+      "id": "fac31f01489175dd4b1ef1fa41bff89c60327d2bf532344ef75a198b79d5122f"
+    },
+    {
+      "role": "core-b",
+      "id": "2ec5ea5cbd2981617ab8bf16117a2899137af85c4bc71957cdca1494e54a3e3e"
+    },
+    {
+      "role": "core-a",
+      "id": "f7968890a8d98d46aa7512b98025b905f706f9f4ca2a7361b8b5c7c96b59628c"
+    },
+    {
+      "role": "postgres",
+      "id": "933afd37b4655a86e4db42be418cf5ada4a8ab3bebc01ec41eb436447ba89187"
+    }
+  ],
+  "resources_before": {
+    "containers": [
+      "0744c8b857cdbb612d3e910259c7f9d83f6a5fb24e1af03a49ab10cc57eb2c31",
+      "0789ad902055db990a6cc6871cd3d53fdd5d4210688d21be36e0e1f7f83d741e",
+      "07fe974ee3934a712d360a3d5c74c221d9ddc78cc835600fe1ebafdca8668254",
+      "093c4b7935c0c558b60b891fc43797bd1465fa3ba6daec5bbaab4f72c985f32a",
+      "0eaf38f69b0c0792d56533c95e651b1d24802af418b95abc2140bdebdf392e42",
+      "12704093fb7f4dbd670b011759cc981ee47582e13807ebe35af7f35f5ad7ebf8",
+      "1301b389cb3a914cc0f59f523da9978669a83be17325362349e90b663fa496de",
+      "1849f9015945fc395fe3ec45ffbd38873e7bda3224c23cce21f60a04e85b8262",
+      "1a82e23d41ef1481282442bf6060b4e1cc098aba4693bfe527511c0d430cb612",
+      "1ec294eafdc6241631a9baa8009b15950851b98c2bfbd16c30d8b117dd87bbd5",
+      "2151feba7d5f7e03fa6b41c424ef6740aa03e70dc030755f3ea4cf04a6d84d47",
+      "21c8f5ef922a0d0ccba0fe319687bdd4951fd463c2c6d53a4edf599c0e05a420",
+      "279d24040a86bb29bdbc7681ab86a681c1f1186d93089877f0523bb9aa60ce1d",
+      "2a040bf091fceef347bde5be34e2c15d2c9b2fc9884eb3c9067d9ff3cf8a36a9",
+      "2bb7f7bcec0c88b2d9c395d112b95fbbf47d3a76b4c4dffa06f6ed38a555f896",
+      "30ccb9898982e8f230db8fd1ca155e3c1c7b54f813ba521a43619b0ce7319f27",
+      "31bbff2e40b7964bf920f93694c83eb07fd8f213bacc3d87788b0c733512bef8",
+      "342c6075e6756a279bd50a117ab7a0f768bd028b39319f0a9c874a85df00e296",
+      "399c68d4d7e716709e3c431cc91f25bc1ee72c3d1f6c19f7c81e44695804066b",
+      "3a705de90017562f3730b66e3902a633c51b2f8eaaabc399e7b315b4221cd6f2",
+      "3b180315630b0bdaacfde6ffadc9bbb8cf99b3ffbe6498005930bc2a3c574e40",
+      "3df449c75fb33778da4fe88e8242c5a14410e21fc979db913cf8b4b513b9a370",
+      "529bd5cc01da4aeb35a432f07d41f2d8d9ccf3df806a1671d2c223d403292d86",
+      "564449ec0d4dd6bcdee5c9cd52a983168f3d5de296eaeaf666087f60f1b7429d",
+      "693b9bbb502310a2dc6d9f35878b82702e9f42db295ea6dcc492750943f60543",
+      "77f564db877614cf31ccaf13d9b9d1860ea3adeaa11abed775a4018cb4127b12",
+      "79d7bc16ee3bf5f028318079f7378c3312500135697067776c113a10f0bead59",
+      "79da30414f019f16db34ba4f0348948507b97b02998c422d248cd8635e058b7d",
+      "7cb69fe0adf1476cf942d6b94e30c3c4c576a1fc5e68d1ed69566eb2a3122bd8",
+      "7f8ba72d934025ed0c1f2be1d9e9c928fcea2f37e8e940e44fe00f24aa2da3ff",
+      "7fd63753234ebea0e83fd74490dd66cd5358d83b65bbfdc392e2aaa1f09f612b",
+      "8084033a54b583479aa03eb580617e7bf87a50adc3b2e37a3f4c13b1cf6cf634",
+      "853e967c2d3b9d1abab2449e4f92809fc6d269dddb8efe7696ea6420e82f4b6d",
+      "8886b8ef726ba0512e53244741da96aab04d439e4e72eef421c1d6fe55453915",
+      "8e8944e75a564d406f3788a6361ff28373cb2f6c83c1eeaa1fb90d1340da22d2",
+      "8fc19a725636aa22897ed0560ebccb7199c071c7dec311f2ceb2f1ca774f8630",
+      "937f8fc564d7810aca9bf28f3467f7f4f67749c1518f4c333458c30453e7e8ac",
+      "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "95aa17ee9755be707e6ed59714913b18179c03fec64794ea13e19b94ab5f4533",
+      "9e6ef66399a3bd682efb988eb353bec00448e2ccc8f0c53490351ba789a80817",
+      "a764be004f21728318988279293e43dc4bc51ff88121873c5f022e6ede40d6b5",
+      "a76e33e579823bf975ed86b21ed0fa67d2e03094dcb1c90844451d0c30f6b220",
+      "a856aad9d8162af66547b5e595a0b827489c88ec796c21ed467c7a9d4c3020d0",
+      "aad4afcb7c1d2597bdcb245b6862bcb9098336c33e272a88f4bdf7f38737a28d",
+      "ac15027ee20c96772f07c6434fb7da81a807bbf874e7346a944e345b6f37c5da",
+      "be81ba513db389ee96999bfbf6e101fbf141b428ead6a81395e34fdce9826c4a",
+      "c05ce38336b328da369730c09efef5fa8aafbc37c8f4c7e56db0fda558500d42",
+      "c1612ba6733c898ab20886d0d87bfb1f4130645b497cbdbb2046994a3223ec51",
+      "cc82f67e9c19e35b2cb979db09dae203e3f0b1d6ef23d0b026d3cbea721ada71",
+      "ceb2d2434b17d9b9f91745cc761755c3ae2e94568f8652b1eb7bf76496fcac2f",
+      "d4a2a474edffac49e35ba7cf4c6e44073399eb7a9e7b4de468279cc710ba4a86",
+      "d6ed8578b72685dc4d45689021ed005a0c41b2eabb04b9ea68c19472b78020ae",
+      "dcc3b4966a4817185f2718403fa31c61c11742bbf8144f601138cd6bc3755f43",
+      "ddcc3b69351e2cb931ff3da9e6b52786ecf14d860081015f329dfa6410b456e6",
+      "dfd9c5aeb6352d7b548b169418536d86937f9415a1390b6332ab7dc43fcf36d1",
+      "e1da910a994f5a75273ce03774fd81229f669330fd63d248fbddfe57082d051e",
+      "f81662f31167a970a73c40f822368dee70ea25704ba859d22b099acdd16d3ab3",
+      "f9493663599315efd0ce9649f47fbf4b18be7f89af02fc0f9884123f9ba242a7",
+      "ff8f86a4378898c231bd213c5a2fac00a9e18317c3580f706321059607a6c3c9"
+    ],
+    "images": [
+      "sha256:0557ac14e0d45d02ed563067b82856ca5e7aa3437fa28d98d4350ea9c3d9494a",
+      "sha256:0896a80b7fdb51cb1e67bc031c60662472419eb74e015540c9d8a215cf50eda1",
+      "sha256:0c1d39aa81ce5deaa8c3ef6d37ae138c6374bebd9b916cb9b830c410cb1d5be3",
+      "sha256:0daef39faf0989639e1260200b0221a73ff6be63eb0b6a5a405dc1d564847f06",
+      "sha256:0ee87ff20c408105deac99080e559e86ff238449df46f297110fe0563bb0b089",
+      "sha256:127052aea93336efc71674f6d3693269ea55714cc030f1c423f2f2954889f637",
+      "sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dce",
+      "sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e",
+      "sha256:14d80d083e5b53145f416bbbd36238336c9de4016c43fd950eb2eb845670583b",
+      "sha256:154f05fd33dc552b2d3cbece4296482949d172d82d4e87a369c8415532573369",
+      "sha256:1694ff069f0c9dafb283c36765175606866769f5d72f2ed56b6a0f1be922fc37",
+      "sha256:1856ff83cead70c38d2bb7e7ced556a470667799a14861ae2acc383d42ef6212",
+      "sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73",
+      "sha256:19b30d97b51b291c77dbc953a88f3fe7005b870345606f9ad3dffebc49ca2fe8",
+      "sha256:1a54b3ed12c228bc52c0a8d0e899b53b675754ba584cc316487f33a67c2ad699",
+      "sha256:1c2c046bc09ed40fad370b599a0b1ae7987f55b01e247cf27a7c27cd97e5bbc7",
+      "sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+      "sha256:24f7917b02166592ee3e5293d3396a26671434090fc8f5a04446f9082b790982",
+      "sha256:25976e9d34a0fab1f278cae931f34c8303d97bf0c0d7f85b6b4dcf641d7702a4",
+      "sha256:29607f10dcaf90e5ef5b51829bb40a250ebcd2fe2f84833f074b157c7d326df0",
+      "sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0",
+      "sha256:2d7d29b504e7166f6d0c7655a18ebf5def5b37b029f8c4f8667e434ba774844f",
+      "sha256:2f00f46fc7bbde4c3e100b56eb70807c4accd9ca34148fc6ba6c14081780060d",
+      "sha256:3266bc9e8bee1acc8a77386eefaf574987d2729b8c5ec35b0dbd6ddbc40b0ce2",
+      "sha256:32d921043428f795c1e447947d14c6d04213f17636e22eb55048e9e46a77defd",
+      "sha256:3369903f13da379a0cbe4fe3d37ad9d0b58638d4fd1c0e51656f4c7c1dce89c1",
+      "sha256:34c729127386abec1c610b2aa024e39b4498dc2b4a72a0798ae21fbdc1b0493b",
+      "sha256:369d8f0bb1fbf84c28b90d9af62dea8ef1b90d261fbc321f211dbba96883613c",
+      "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7",
+      "sha256:3b44767883ac77bddae0160cc27b6b039345e23fa3504f4159efaa32264ab57f",
+      "sha256:3c04fe30d995e7faea025271620d725fd1d57339ebc08aa51250b57c06814667",
+      "sha256:3d0f7584ed7d04e27fa050d6683a74746608faf21f202be78460d679cc56461f",
+      "sha256:415562f006b8f11e664a84c9363b3296c3a05cc8c91ff3561186924c6690dda8",
+      "sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366",
+      "sha256:463eaf6072688fe96ac64fa623fe73e1dbe25d8ad6c34404a669ad3ce1f104b6",
+      "sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d",
+      "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+      "sha256:4bcd25ed1ee53fe8c709cb54de37cc8b5a9ec1dc248e1bd115f7354d166228e1",
+      "sha256:4c03d7306e1e7f64732f58f5c12b56f7f44ca30eb09f4813409eb3d12f3cbb24",
+      "sha256:4ed62a6f7fe75bb732d998215b54b90b0db033e27e64a5d6bfcd6927b0f87cf7",
+      "sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7",
+      "sha256:55868ba8ed9e274c067f6c2653934fa9de6ea78a9931b35679f3dba26040ecce",
+      "sha256:593bacda3e4d5f632f94dfe2ef73dec666ffbb07fdf0bdeb3129567634c99a80",
+      "sha256:5b6ef1aef84e3168da2110504ad7740306d071dee714d48e1acc46063b4e20ae",
+      "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+      "sha256:5c8931cda015626e14e57c41d7cd1a466d47ff76203e7119401421634c373f7b",
+      "sha256:5cab74e7f8a5e7c5f1c8a9e6268b1f352f053c36c656f493308340bcecbc636c",
+      "sha256:5d4c143943a5c033c6ff1845f0c60538b80640fdbeecfe561b1d2d3541c622e4",
+      "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+      "sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648",
+      "sha256:5f9a271f84457f05da79e62f8be6b322c3fb238f07e6288ac5cb62e8e668d121",
+      "sha256:60577793484ed5947c4c119ab1c5664325450bdc97d0f37ea78cd6079debe2a1",
+      "sha256:60c27e7d4d6c7dc0aef6f36c9a8a86e7b4b8689c1d81bcef0762462b069a6afe",
+      "sha256:60f2dd5137a54b6e3acda4167594f4e81882fe82a156686e3b269d4b1c3cadbd",
+      "sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2",
+      "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "sha256:68209f4258825a72dec2b3f5437c92297e10267361a4efb9cc78aecefc89f7e4",
+      "sha256:698f514bba46f6221b1f6594769465544c20d3ee1a9356a124649b3027ee8bb7",
+      "sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+      "sha256:711d630f966b9a9835c9e080e6a9cd3a526db76fcc84b70b22c2db5c9dc6b977",
+      "sha256:73b598708be0e276ecf95ebb7e8a37fc1cfa68f4a20c0f2bafab958e8ea8f4ba",
+      "sha256:752ea8a2f758c34002a0461bd9f1cee4f9a3c36d48494586f60ffce1fc708e0e",
+      "sha256:7619db47382ed06efd6f4f763758bf3444bb18564b622bfc7b553582d81adbef",
+      "sha256:766913e4d90af441f657bf9ab4f722228197bf0a7c99a53cdcf6f3f20f570021",
+      "sha256:7958605b474b3d264a969cb3a123d6aa00ad1e1fe9da8a69984dabb704d93317",
+      "sha256:7c36c77a27a9598e326352bda63d6ba5adaa3131e74445dfed0a641b309c8b18",
+      "sha256:7c848cc37ab72701dc6c4f685ac90f9a04996916b644f47be9edc6060372383a",
+      "sha256:81411b1ec943e27b7af4286bf4967969fb4c2601ffd1c6ee6d09b16a8dc3164a",
+      "sha256:81bf557407e36eacf5bf23ee67bc03cb1957d6a91c3552b3755e848120b48dbb",
+      "sha256:81dc45d05a7444ead8c92a389621fafabc8e40f8fd1a19d7e5df14e61e98bc1a",
+      "sha256:867e4c1540927c1bc1a5d77741ff1fbe5dc2111eb9129c094caf4c673b56fcce",
+      "sha256:872cb5ebe37770b0c1656b6f85a114accf7fbfcb316505b4fc4dce3f1aff3421",
+      "sha256:883bc7bdc37d0b566b1940946f03a4c86de0fb9eb4f7ce725fcc2d4bb8bd44ca",
+      "sha256:894269cdfac1ea1412a4ec552f73f15f4550febb21b47fdf4a2cfeea3148373a",
+      "sha256:8a8d55343d6fc456cb183453e3094ff140b984157b36b48f817dd581654f2aec",
+      "sha256:8cbee1481529d6b514907588f4a3e507c2cba7c040967d7c2e5ee25aef347092",
+      "sha256:8efad3e9f7ccb3b0251b296249e304cff910b7f0de0c013b7fa024bb64e10d3f",
+      "sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5",
+      "sha256:90732706c7404e7af0fe3fc01340695fdcf128411769219d62fab8520d52baac",
+      "sha256:941dd88d68808ced6931950757c5644142a9ab4ca0d2181a04f287c5b571ac19",
+      "sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6",
+      "sha256:9bef0ef1e268f60627da9ba7d7605e8831d5b56ad07487d24d1aa386336d1944",
+      "sha256:9c283d1fff2bda332ec066160f06b24c448ff6f310a30e442675d2e36e724c2d",
+      "sha256:9c900dea9e8fb7e16277c179b555cc72d29a352dbc33cff48ad5a0412fd5bfc7",
+      "sha256:9cd7f155b110eb1c178148b0a3a1a354d0848140361170eaa35d7a6cf4f7bf1a",
+      "sha256:a1ea29fa28355559ef137d71fc570e508a214ec84ff8083e39bc5428980b015e",
+      "sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373",
+      "sha256:a4198ba8ed4aa88e89bbb0c3ab27f439d4d29eb1f8b4e54c1dff7b53a1ac4daf",
+      "sha256:a5b8a30db2db7b572e1a391b3a84f4785e37c055f8be2b38966ef6529dc2d063",
+      "sha256:a6a10906d67530b0cf8e54183c51d556edb5fa1cbb5673ff31ca471b41874aeb",
+      "sha256:a87c80c61acf28050fdf0ea560f9c9e557e02b9978feb299369aded909ea1ffd",
+      "sha256:ac20a90db03e87f7a35b364c1d15dbaaa9c7419992dd860b68d53c2e702d867d",
+      "sha256:ac5ea6df00de858c207758dd27c257161c4af524d0de1329fbfd57b66b2c920c",
+      "sha256:aebffd553eaf86ee87752c9f696e816cc0a8d63e4fd27f006fa2e84bdc90941e",
+      "sha256:aed275db67dacdc0a911d71961567e460649222dc993b9e96eeb033e64273935",
+      "sha256:af32e97399febea808609119bb21544d0265c58a02836576e32a2d082c262c17",
+      "sha256:b1589e7f0c3d52c1c06661a03bd215913dfbaff5fe17da18f2a8d507ecd91a0c",
+      "sha256:b2f49e2f14c0ebc4544539ff0bf62f998d03541eaf5b435dbdc5be71745695b5",
+      "sha256:b3896bc517b76c353ebfd12cad3f11e835539f0cfe6405ccbf2bc3a61e7fa0a5",
+      "sha256:b535b0f3c1cb8b5b43c8225172c8dac3cda55d07864360db7700e782d197c2a1",
+      "sha256:b73e12cabad91f918470c6aedccb11a80c699cdae995227fe9ad71ff6a28d368",
+      "sha256:bc62979fc90c7afcb13fd46e20575ba8d57e315ad9e82b8666828c40a59ed969",
+      "sha256:be1190afcb28352bfddc4ddeb71470835d16462af68d310f9f4bca710961a41e",
+      "sha256:be5c3a418960cb0a1c27622d0abbfeabd36c20e800170bcb86a7f4ab80649cd5",
+      "sha256:c02d00b0f40c39dde9fb2ad27c73ca32e9352fee903acdbabf645617bf31d258",
+      "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+      "sha256:c2f303c2425ac91a08f95ca53c3efde66ededc1e93d7c407f330212d6da33d80",
+      "sha256:c40748e7be861dbe67f4a14721bcd34a62813a6242ad6631fcd38f8793465eb3",
+      "sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32",
+      "sha256:c7a737f15ba3e67253b0db2f0283f98a9cfcfe63dd55c5cee94d1c97f236d06d",
+      "sha256:c85bfebc522c75e6d877420b836caf0117c66bd51b7301d2e0d3eef032055dba",
+      "sha256:cbff9d1a9041b316010f2da6b701b6c0d597718cb90928c85eb597334a0d23d4",
+      "sha256:ccb73a1a005d80c33cfb757325331fbe269512843ddd4dcacef5e63d111f45b7",
+      "sha256:cd0e8aa1efeec5e3c6ef57e93f3b0c7b3d2a2fc82c6a31a769c674356776b0af",
+      "sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685",
+      "sha256:d0199e2a90bf7a206a485b115323a75bc946f30b463d704c5435a454aca084dd",
+      "sha256:d3a9d8ac27bb7e05e333ef25b634d2625adaa85336ab729954b9e94859bf6fa7",
+      "sha256:d522157b5c139bd277f65ea448a9c5ac9acab07c9d1c8f0aef248cc598d02447",
+      "sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436",
+      "sha256:d7d3b07d96453b8e788d2342ba40c59b7d4a3d2b80b342bf96e82ed11d0f451f",
+      "sha256:d849dfe2daaaf4582a7ad5178622700c28cd37f5fac0b3365accdde2013f1e66",
+      "sha256:d9b4541e214bcd85196d6e92e2753ac6d0ea699f0af5741f8c6cccbfcf00ef4b",
+      "sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+      "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+      "sha256:e11b714f9153a07f7706c96cc6fad2f5603318c6217e8093c9dba6a2941c6c5d",
+      "sha256:e87bd94f69a1b9dc7a9cd5ddd99b5fd7aa2149686239d618f58cb20955704c05",
+      "sha256:eb2494f2dc2d10e1061ba2b4ea3eacdec112b6bde888460c1aa4daa13a6b25de",
+      "sha256:f0d83e708dc40ad8606259c888f9617bfdc64b598bca1054c29d78d4a7110dab",
+      "sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+      "sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293",
+      "sha256:ff02b58f971e7d7d156a1267e283fcbbeee91773b6aa36c49dac28ecfe28eadf",
+      "sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54"
+    ],
+    "volumes": [
+      "001e36219e1101695820eb167ce0ed0a6c02b91c7a8944324825b8694b4379b5",
+      "0382e5a8a4788b9c30c2431a37b86a4855c5f274bb8fa735a9441114c21626f5",
+      "0536c517aa943d6a4937892a76793c4b98a7426a99386dbaa9fcaeb0555c5e07",
+      "060e3f12c07cd4725f15c4e45dc146234a3583218022013f2650a03f4b09d950",
+      "062ff50727041df2dac034ff7bb51946b09e2e6629df7ed1b09e28c61f43b3e4",
+      "06810cfff0496b6a9b029040c2b0442c712ceb9148c3fd7d27405673b456374a",
+      "07226d57da48f0c22de0c14336043a41c20ba8065a074bd56ada5f5a1376754d",
+      "0b90832cf12defca62c702e0470234d30719207cd42008d871e5dd69b5e51d75",
+      "0cf403433c460ba197e2d617c6193ea61ace0cb97a75d73ba7ad3ccc13d14742",
+      "0d7ffe077b2f6ed7f0dc2b1240bb3e600c49bb0950792ed76133da1372653327",
+      "0dbb54ee716964e5625627fbad7401c4587bb591963df8eb0e19c87b0d3b6045",
+      "10e2d3b5bad93b5bb455d876cb1de27ebf2d4f38725f7389aadb9493336c26eb",
+      "1117aefd65b7c6663b428f5f303830149e0275e09df03e6eba39fc5c36d96037",
+      "11649fb97064c131920e2af1242316624b9cb4775e8c426ab8feff3022f482be",
+      "16adab7cf35496adb02b93e7cc98b69039f9b2b6634426ee079fa0e483842a19",
+      "17a26d8be5753fab32c8a726a61bc0749064ce66b2d4fd18076bcdd288205b57",
+      "17af031a38275ebb04181d9bfc7a0a439651d574bd1d54f949a923596db2a294",
+      "17dd1de1da44986899fdb1aa2512409e8738461220559bcc597439fe9b66e148",
+      "180fcbbb9145a1eb549cf8ba27abdd7cd1b2e17f1fc07694501dcfea87ba7275",
+      "230338bd12088f3749b4cd00bf9f2864c18cea6c8092fb37b803339554b57a7e",
+      "23118277254b8752f1cf01eae17aa9611a1b227f29043394ec43f8d2efeaa79e",
+      "239799ca730469ccd258af2e2be75e81359d8bd6c5b771f55db1c86838ddab5e",
+      "27d17b300f942e99498270d4fa37b49e924514e2b657b2eba81ca4df5a70f27b",
+      "2a63740272e7568c4d975823be8062a617908f45739b893b33bb966e90125b36",
+      "2c15a45788f55cfcb2b96331faf6456b24df89aa5a27dbe4a0a2e1c5450191b1",
+      "2e99591d14d0b78836ff6a9730b4cb52e221ed58f7e0176fcada18978824e62c",
+      "303e2317756ea3c5af093519a131851437e56b4c420b4920145831864696c557",
+      "30e218f7b4a73e3ed90978ac78d7b7b598cd72297e192ab6af5d07bde88b24c5",
+      "3186414f2bb89b7fffd7ddb1912bd6e5e0a6f534b7baaed98ba772a3dfb62149",
+      "35814eee447a2e997dcaf7d9e755525c690354468e1127bed8b3b9e19ccbdb1c",
+      "3780bf21f426e8511e6048dc7e5576eaef8a43870a8cb5e03ee66c43184bf87d",
+      "3cdd216c3b0195495f4e728ee8849527efb591be294b40b6e16aa91b49b2122b",
+      "4144ce72806dd5c7a177d6bf76ac3c19af4b42cf91a9588bed578cdbe98b70ec",
+      "41d9d847e70319da571bc3a5d5f8fe8e0a82b2a5f5fc796334a94b8900c2b879",
+      "425b025487498eb8909d4e67a03270ecb7c3ab52c2a3130fb56e5408328066d1",
+      "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5",
+      "46085a8818fc98c79fd4bacbf4ea4be9d87704757e59a0331dcdafc499f8a510",
+      "462dec2a6a3d70244fa58faaddd06fa23060cbcfdbec1ca804752f5d7dcfca50",
+      "4a3b16c00634d318d1694741a1f214a937852a316ca418ded1109f13f9013b37",
+      "4cbda987806dc7604dbe7e4aa1e0f844f4d693d50958679e047f556998c35970",
+      "51c2d61db0b6c549af2ad7d22423e844cd046b47c0ec237c7eaabdacc21ab845",
+      "5b72e44b9d64d74169d25f0b36f8571e59267f56ceaee9204d742f4eb875dd8c",
+      "5b99aa704e36f4e740c88a1930dfab55113adf236ffe85918b6760cfa05b90b2",
+      "5c8464fdd31dac382dbccc51a8ce20a05b186d177060961789ee0c668c78f25a",
+      "5e64aed1fa41fd5bfb5aa6b477deb57bb7f036fdd1e597f375876ea35189ee3c",
+      "6c86116580b581d1a29c1cf01c89d0b6a66250794fd39dc36b0b0baf11e23faf",
+      "6e33bd6fd72e9f233af171f1c5d276e43208ebf33d78e53b20a39868eff778b2",
+      "6e7ff8c9afe65f0207a0c4d5cec2874afaa5a4e4e3292b78bd97cbcbde5f80d2",
+      "6ec8b0d73f5bdf7f3a9820f69065b3bf57e0e9314bd3fbe9c86d63b514307b6c",
+      "6edb6d5b1549199ba66d5860dac397f6a603762e4f6edf109e1809c8826a43dd",
+      "7025540ba7b801f79d8144130ce2eea1713118e3789322703f2e78ac64ca9b54",
+      "702c5558f5a9c10396f67f907a88d29871b7dff1cd695c7a4334b32b840deec8",
+      "70762247ce570cbd2ae73564961c18b7dabe69ff6bf6284c97eab870595b4e04",
+      "759f4c465ab012d2acfeb466effe4de9d6b7c36c9d3a2483115b7b42fefe8b59",
+      "773acb06eb3ea42ffea56d84b894f6a856b3cf72005acc94c68cf06e28768e88",
+      "7a991e928c9a6133471fea7fe6ce1c82040f4d9df6bc019f910fe133add46289",
+      "7acbd23405130f0eb5e5415a5769a69a794bd5a77d2f87be341ca306c336d3eb",
+      "7b33db0d36d2cc9ce4dfa7dc4faeeb1ebf092a6c79c683dd49277a14b769f874",
+      "7c55745a5d10bfc6762d3b4ab415fce81e7d56490ab27977e593b640f54bd8e8",
+      "7e02fb346bb5dfad3bc8b21fccd513b2cf192c44966ae4f3f85b0a9f7a9ed975",
+      "7e9c8d4d2f55ad889c5812b788f79aec46a4e42ebb81c9b71e855d721037fe72",
+      "7ee52ba21877fd5ffc079a3df5207baf43d2005ce512c2d8157c1144f04b7eca",
+      "80d878a156f4a9b4c33143ce5565ef296bd8f292ec5a9e4255dacc5adb87f609",
+      "88b0d244a1c00c67d138efea988198fbac8df7f7a6786dc7a07dc5655db45446",
+      "8b08e112ecf922758f140144547026bbc3bb588729f22a4e6437b9d2e63ec55e",
+      "8e4ca7a9ed585046cdcc085f009359e8174acd4c29f14122b4079a66742f3f71",
+      "90cd0d12d5e3638866b94100630b349c70ca49e037efa0fbcad055aabb654734",
+      "91abcb729129ec764c117edc49c98d784b3dc0843943a55747a642c54ac3a829",
+      "94a01c6097d8c32e88698d9b66f5f3c1b2587e2c233524c181c467391b22e4ab",
+      "94f978db0b58a4cf2bcd17202b29c3c88d4b2d3e5601b44a635498079c3c2518",
+      "968824ceadffda856d23876cd7a4255f8ddac2cd2fedd6a57f0aa1e79a5b802c",
+      "9694aa880684acdda675d16c6fee0770aff410026d4e0562e5fbf8d9424b0c98",
+      "9871fa30c850285fa6de19162a6fde83f73c56f455fa93b8be45639417ea0df9",
+      "99fa5f0f82dfe3279ddf8abdbd54c80e0259fb3cdcf79d0dbcfaf7528e2b2b7b",
+      "a32016c0ec6f2d80a445773661f63c845579ef247d4ca7e44f0b962e6b2424fd",
+      "a5cac196b5b06408670cd6ec2a961d487412fdfaafa5fc0a9999afc1cd433903",
+      "aa0878931e49b873ccbc57a70c7a0d822278368cc0dc4bedea540a9d25455889",
+      "ai-ff_auction-postgres-data",
+      "ai-platform-dev_dev-desktop-node_modules",
+      "ai-platform-dev_dev-excel-mcp-node_modules",
+      "ai-platform-dev_dev-excel-pnpm-store",
+      "ai-platform-dev_dev-excel-root-node_modules",
+      "ai-platform-dev_dev-mcp-node_modules",
+      "ai-platform-dev_dev-mcp-packages-db-node_modules",
+      "ai-platform-dev_dev-packages-agents-runtime-node_modules",
+      "ai-platform-dev_dev-packages-config-node_modules",
+      "ai-platform-dev_dev-packages-connected-systems-node_modules",
+      "ai-platform-dev_dev-packages-db-node_modules",
+      "ai-platform-dev_dev-packages-pdf-core-node_modules",
+      "ai-platform-dev_dev-packages-ui-node_modules",
+      "ai-platform-dev_dev-pnpm-store",
+      "ai-platform-dev_dev-web-next",
+      "ai-platform-dev_dev-web-node_modules",
+      "ai-platform-dev_dev-web-packages-db-node_modules",
+      "ai-platform-dev_dev-worker-packages-db-node_modules",
+      "ai-platform-dev_dev-worker-pnpm-store",
+      "ai-platform-dev_dev-worker-root-node_modules",
+      "app-dev-postgres-data",
+      "app-postgres-data",
+      "app-shared-storage",
+      "bc977b76dc8ca43ef26145772bda528d2d839660bac4b2477d53a73e4a0a9b79",
+      "bce0e9dba8c53e93a66e2197d4b4f237bad079204d9adbaa91bcc3942cec1d80",
+      "bde770cc8260f452ecb66792638011fd61368d915b01d6b8af73169343c3ec75",
+      "c1540ffecbbb78f4ba84528f822acd84bb7a0728242baff3c07f009a9a47280f",
+      "c4cd63b5784180399cee11f63635ac6c33899bc3f023010afc3f55355fbe0868",
+      "c50f044ef8e7e681bd28027a94ca9b765d4bbd00566ac796fd44adb9360a38b0",
+      "c5612e6ae4ef4c724bc8fbc8acd12950fa16b32cff15122f6bd5f31d15ddaf52",
+      "c74a94fcf0586d7a02922b81dc0b2d5d6796381eba094123b71767896352f5cc",
+      "c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a",
+      "c87c9ca8745873692e124c751f769ed2c5915aa7fb76360dc3402e9d0176b031",
+      "c98b6c736d56464b9e544bebc6263510ca6304683a0bdd4e14a42d42a4604e7f",
+      "cb250a3bea231b4a89e826d5a028f8a4b987cd6de5faba705d13fb707b1b1cf0",
+      "cbb22c763436faadb67d8a42be694e8cc826c87f002904882a435781c47e503a",
+      "csc-ai-dev_dev-desktop-node_modules",
+      "csc-ai-dev_dev-excel-mcp-node_modules",
+      "csc-ai-dev_dev-excel-pnpm-store",
+      "csc-ai-dev_dev-excel-root-node_modules",
+      "csc-ai-dev_dev-mcp-node_modules",
+      "csc-ai-dev_dev-mcp-packages-db-node_modules",
+      "csc-ai-dev_dev-packages-agents-runtime-node_modules",
+      "csc-ai-dev_dev-packages-config-node_modules",
+      "csc-ai-dev_dev-packages-connected-systems-node_modules",
+      "csc-ai-dev_dev-packages-db-node_modules",
+      "csc-ai-dev_dev-packages-pdf-core-node_modules",
+      "csc-ai-dev_dev-packages-ui-node_modules",
+      "csc-ai-dev_dev-pnpm-store",
+      "csc-ai-dev_dev-root-node_modules",
+      "csc-ai-dev_dev-web-next",
+      "csc-ai-dev_dev-web-node_modules",
+      "csc-ai-dev_dev-web-packages-db-node_modules",
+      "csc-ai-dev_dev-worker-node_modules",
+      "csc-ai-dev_dev-worker-packages-db-node_modules",
+      "csc-ai-dev_dev-worker-pnpm-store",
+      "csc-ai-dev_dev-worker-root-node_modules",
+      "csc-ai_dev-desktop-node_modules",
+      "csc-ai_dev-excel-mcp-node_modules",
+      "csc-ai_dev-mcp-node_modules",
+      "csc-ai_dev-mcp-packages-db-node_modules",
+      "csc-ai_dev-mcp-pnpm-store",
+      "csc-ai_dev-mcp-root-node_modules",
+      "csc-ai_dev-packages-agents-runtime-node_modules",
+      "csc-ai_dev-packages-config-node_modules",
+      "csc-ai_dev-packages-connected-systems-node_modules",
+      "csc-ai_dev-packages-db-node_modules",
+      "csc-ai_dev-packages-pdf-core-node_modules",
+      "csc-ai_dev-packages-ui-node_modules",
+      "csc-ai_dev-pnpm-store",
+      "csc-ai_dev-root-node_modules",
+      "csc-ai_dev-web-next",
+      "csc-ai_dev-web-node_modules",
+      "csc-ai_dev-web-packages-db-node_modules",
+      "csc-ai_dev-web-pnpm-store",
+      "csc-ai_dev-web-root-node_modules",
+      "csc-ai_dev-worker-node_modules",
+      "csc-dev-postgres-data",
+      "csc-postgres-data",
+      "csc-shared-storage",
+      "d136eb05dd2dbea66f76c63d4a49c1d27d76a0f86a053e4a108036ae706f1367",
+      "d3590e24ab5b8144629a9baf9aa835d3644b7fa1d6e875509cfbbae306396442",
+      "d3a2a48ee4e4afbb4d28fafe2f71a60f1ff6259615248633aa930a56cdbb4e60",
+      "d9b85e4aa7de845351f55bc07fbf6999ba6cff4d108a73916b5d5a63b3e33b43",
+      "db67b04f129d0c949529101b393c5678cae28522609d81cd7189d24e037ac9ee",
+      "ddeb28ed9d097270b38b418705178bd47b3b855d5797d404258b3f7c341b12c0",
+      "de4d6f27aec228e1dc4c00883cb08ae0fe5d9b56205dc3a31f1d274600fc79fb",
+      "drugwars-blocks-ngrok_mem0_history",
+      "drugwars-blocks-ngrok_mem0_postgres_db",
+      "drugwars-blocks-ngrok_server-data",
+      "drugwars-blocks-playbot-node-modules",
+      "drugwars-blocks_client_node_modules",
+      "drugwars-blocks_mem0_history",
+      "drugwars-blocks_mem0_postgres_db",
+      "drugwars-blocks_playbot_node_modules",
+      "drugwars-blocks_server_node_modules",
+      "e3111f25dbc7768e599891d6389845fba99d06d4c3e9ea45a4078f31d1428a82",
+      "exais-admin-ui-node-modules",
+      "exais-vector-store-ks-state-civics_minio-data",
+      "exais-vector-store-ks-state-civics_object-store",
+      "exais-vector-store-ks-state-civics_postgres-data",
+      "exais-vector-store-ks-state-civics_qdrant-data",
+      "exais-vector-store-ks-state-civics_redis-data",
+      "exais-vector-store-local_minio-data",
+      "exais-vector-store-local_object-store",
+      "exais-vector-store-local_postgres-data",
+      "exais-vector-store-local_qdrant-data",
+      "exais-vector-store-local_redis-data",
+      "expertauth-gradle-cache",
+      "expertauth-oss-proof-pg",
+      "f02d269c10a6125319080a9d1040568b077ff21b14c0ab6d1848a4cfdb045890",
+      "f037ecc27f567d49077a7163e962628a25c0a02a2c94b0a59ff5c34e799bd322",
+      "f1c6ba07757046e9635f2bd9b76e7f5233a6a9d2071b954df4532f4522c2759f",
+      "f59d5362427bb041e52cc3fa2ee1fa4c068f18579b089fb590be9c553670e2fc",
+      "f61ce4f0da2e46f92f276a43bab9deb9bab87c8053132e4adbb338dc3ea3733d",
+      "f6ed6f8ea69f0847703ff0ebda293cdace69424457aa08a4a3a1ba24b5fbd2b1",
+      "f71c6feca9d18dc267dc8d395c584a9ed0c293fce2112f906dfbc76dab6a93ba",
+      "f7a0f8c418956d8bf26b9dd5c2ce1457dba4505a331aa49e1ed1332d8adb133b",
+      "f90de93d26346df4edd421c8fa4b497c6bb1c5a7f591399a078e8f86bab56118",
+      "fac8b12863a84e2c363de6d988edd5228ae221c2861a3eef901d1c7fbffaf243",
+      "fd5b327700cdd073f7db350541cfc1807e678d2fa6f3d535c8a5a5dbd7d72ebd",
+      "fe9a612d253cf72130f041d7a3ab765cf742af97d80c119bcb3d034b8ea22ddc",
+      "ks638-pgdata-20260907t192250z",
+      "ks638-release-current-pgdata-20260908",
+      "ks638-release-pgdata-20260908",
+      "osborne-ai_dev-excel-mcp-node_modules",
+      "osborne-ai_dev-excel-pnpm-store",
+      "osborne-ai_dev-excel-root-node_modules",
+      "osborne-ai_dev-mcp-node_modules",
+      "osborne-ai_dev-mcp-packages-db-node_modules",
+      "osborne-ai_dev-mcp-pnpm-store",
+      "osborne-ai_dev-mcp-root-node_modules",
+      "osborne-ai_dev-packages-agents-runtime-node_modules",
+      "osborne-ai_dev-packages-config-node_modules",
+      "osborne-ai_dev-packages-db-node_modules",
+      "osborne-ai_dev-packages-ui-node_modules",
+      "osborne-ai_dev-pnpm-store",
+      "osborne-ai_dev-root-node_modules",
+      "osborne-ai_dev-web-next",
+      "osborne-ai_dev-web-node_modules",
+      "osborne-ai_dev-web-packages-db-node_modules",
+      "osborne-ai_dev-worker-node_modules",
+      "osborne-ai_dev-worker-packages-db-node_modules",
+      "osborne-ai_dev-worker-pnpm-store",
+      "osborne-ai_dev-worker-root-node_modules",
+      "osborne-postgres-data",
+      "osborne-shared-storage",
+      "saopqc2_hatchet_config",
+      "saopqc2_hatchet_postgres",
+      "saopqc2_saop_artifacts",
+      "saopqc2_saop_postgres",
+      "saopqc_hatchet_config",
+      "saopqc_hatchet_postgres",
+      "saopqc_saop_artifacts",
+      "saopqc_saop_postgres",
+      "senne-ai-dev_dev-desktop-node_modules",
+      "senne-ai-dev_dev-excel-mcp-node_modules",
+      "senne-ai-dev_dev-excel-pnpm-store",
+      "senne-ai-dev_dev-excel-root-node_modules",
+      "senne-ai-dev_dev-mcp-node_modules",
+      "senne-ai-dev_dev-mcp-packages-db-node_modules",
+      "senne-ai-dev_dev-packages-agents-runtime-node_modules",
+      "senne-ai-dev_dev-packages-config-node_modules",
+      "senne-ai-dev_dev-packages-connected-systems-node_modules",
+      "senne-ai-dev_dev-packages-db-node_modules",
+      "senne-ai-dev_dev-packages-pdf-core-node_modules",
+      "senne-ai-dev_dev-packages-ui-node_modules",
+      "senne-ai-dev_dev-pnpm-store",
+      "senne-ai-dev_dev-root-node_modules",
+      "senne-ai-dev_dev-web-next",
+      "senne-ai-dev_dev-web-node_modules",
+      "senne-ai-dev_dev-web-packages-db-node_modules",
+      "senne-ai-dev_dev-worker-node_modules",
+      "senne-ai-dev_dev-worker-packages-db-node_modules",
+      "senne-ai-dev_dev-worker-pnpm-store",
+      "senne-ai-dev_dev-worker-root-node_modules",
+      "senne-dev-postgres-data",
+      "senne-dev-shared-storage",
+      "statecivicsai_document_storage",
+      "statecivicsai_postgres_data",
+      "statecivicsai_youtube_creds",
+      "tkt251-pnpm-store",
+      "tkt251-web-node-modules",
+      "vicoa_vicoa-postgres"
+    ],
+    "networks": [
+      "0195884c33be62490d3248cb6258da0a3321fb5781125bf688c58067d90a5494",
+      "0aa3bf5a5b7bf1ec448755684027d6a9e518309b682f770be34de6133aadddd5",
+      "0c92d4cd6d6059dc825024e4f8afcb3fbcfdaaec8ca5af59ef970261733610e7",
+      "14298255f167e331805f757b27c4e35e2ef2c2ea641e38b0162923790929cc57",
+      "153b9aa3cbe366bb3a32a43dbe6ab1aa96ea37306749ad02ef5da6ae69b387a8",
+      "2d89c06bfb2176ef0f1006d67a1d35ef02a5404e24c9e743698abc781ec01e50",
+      "3518006679f9aac1fa959be16f1b553e3dddc62f6f8b4200419f80048ebeb8ca",
+      "4c1d1692f3d135a60a3b33599316d927fc7f437e5c5311134415597c057f998a",
+      "60b8fad36369df1a1624eaadde8f403f57f8228263df06558e69b3839becb91e",
+      "6e9cf72d4bce50586c2519fd5f6e410b324531ddb0ff3243096409b9ad91a3ee",
+      "74d8a106f034872cfafe27acf48eb8e4e7e61c5ee18040c1e3744d0f027e42d1",
+      "85c4fea04ea6758194952e68fee4d7df835ae368e4929a26718c013937e97fb0",
+      "8720904552f445673f89780ad3ceb8579069cc588d6ead4d9b92063580906d9b",
+      "8ffa584b9bdde50d238ff2210d05bccc927c16587f8c663d3134180f6d184ad3",
+      "91259834f88732d3de433ab5a49d4ad1725f03d593983be511e558ca58db137b",
+      "a21aaae6cc47cdff3fa9faae748da3c56e583651bc84664c65983ae685f9e770",
+      "a6afc2b3ad61b0b80672e5085919dad2056ed770f130a220e9f710e2d8d30d79",
+      "c3cdb59fca6b020184606d5a5cdff5ac769db331445f29a8d2bae363dd31b224",
+      "c524e045a3c65bef207701204beb2b0956db293a95369378190ed5021ca7cb0b",
+      "c529a772aa406ec6f563b1f40a57c3466570ba2903fc234cf37205dabc92014b",
+      "cac024d845527c30a122ddae7e58b1e86537204caecb1958246f92a88d9e7518",
+      "ce7536d34edeb710bff39e4cb60255cbd3664a254220f26c65c14381ce2b63bc",
+      "dd863498357a80989012cd8b4c4102e392d6fd68dafad2715e52e26c78c6a845",
+      "ea8acce43a813d541ae1d33d5b5c20770e8b00fc803bb9b99ab8ef20e5a69e07",
+      "eea14a41c76ea795e7172a6357366aaeb3462fbc6ba17c009d4ba1704a0df01b"
+    ]
+  },
+  "source_before": {
+    "expertauth-oss-core-a": {
+      "Id": "1849f9015945fc395fe3ec45ffbd38873e7bda3224c23cce21f60a04e85b8262",
+      "Name": "/expertauth-oss-core-a",
+      "Image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+          "Destination": "/run/expertauth/config.yaml",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "started": "2026-09-09T02:13:42.54598468Z",
+      "running": true,
+      "ports": {}
+    },
+    "expertauth-oss-postgres": {
+      "Id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "Name": "/expertauth-oss-postgres",
+      "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Name": "expertauth-oss-proof-pg",
+          "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "started": "2026-09-09T00:37:51.233368299Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "core_artifacts": [
+    {
+      "component": "core",
+      "path": ".cache/password-session/core-12.2.0.jar",
+      "bytes": 1258481,
+      "sha256": "eba1922f796368b4c8df7dc0cc5eaaa0dfe8ba96490a6bd44e18e7b97a1310a6",
+      "original_sha256": "d16e9d760ace7e9c5cd9b888df1e67bcfdad730b25a5c56a50f52e1b2229c539",
+      "changed": [
+        "io/supertokens/session/Session.class",
+        "io/supertokens/webserver/Webserver$TomcatReference.class",
+        "io/supertokens/webserver/Webserver.class"
+      ],
+      "added": [
+        "io/expertauth/core/AtomicPasswordReset$Rejected.class",
+        "io/expertauth/core/AtomicPasswordReset.class",
+        "io/expertauth/core/AtomicPasswordResetAPI.class",
+        "io/expertauth/core/AtomicPasswordSession$Insert.class",
+        "io/expertauth/core/AtomicPasswordSession$Rejected.class",
+        "io/expertauth/core/AtomicPasswordSession.class",
+        "io/expertauth/core/AtomicPasswordSessionAPI.class",
+        "io/expertauth/core/TransactionalSessionWriter.class"
+      ]
+    },
+    {
+      "component": "postgresql",
+      "path": ".cache/password-session/postgresql-plugin-9.8.0.jar",
+      "bytes": 408242,
+      "sha256": "d7a7ae7cefd18724658e3bc24f3351bcacc69439245433429d10879da487624c",
+      "original_sha256": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705",
+      "changed": [],
+      "added": [
+        "META-INF/services/io.expertauth.core.TransactionalSessionWriter",
+        "io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class"
+      ]
+    }
+  ],
+  "password_session_build": "compile-02",
+  "probe_sha256": "0d1e8e3ed29613e255db276be4d28b3be44dc9368b0f36ffd2d2ff73eb53ed7c",
+  "resources_after": {
+    "containers": [
+      "0744c8b857cdbb612d3e910259c7f9d83f6a5fb24e1af03a49ab10cc57eb2c31",
+      "0789ad902055db990a6cc6871cd3d53fdd5d4210688d21be36e0e1f7f83d741e",
+      "07fe974ee3934a712d360a3d5c74c221d9ddc78cc835600fe1ebafdca8668254",
+      "093c4b7935c0c558b60b891fc43797bd1465fa3ba6daec5bbaab4f72c985f32a",
+      "0eaf38f69b0c0792d56533c95e651b1d24802af418b95abc2140bdebdf392e42",
+      "12704093fb7f4dbd670b011759cc981ee47582e13807ebe35af7f35f5ad7ebf8",
+      "1301b389cb3a914cc0f59f523da9978669a83be17325362349e90b663fa496de",
+      "1849f9015945fc395fe3ec45ffbd38873e7bda3224c23cce21f60a04e85b8262",
+      "1a82e23d41ef1481282442bf6060b4e1cc098aba4693bfe527511c0d430cb612",
+      "1ec294eafdc6241631a9baa8009b15950851b98c2bfbd16c30d8b117dd87bbd5",
+      "2151feba7d5f7e03fa6b41c424ef6740aa03e70dc030755f3ea4cf04a6d84d47",
+      "21c8f5ef922a0d0ccba0fe319687bdd4951fd463c2c6d53a4edf599c0e05a420",
+      "279d24040a86bb29bdbc7681ab86a681c1f1186d93089877f0523bb9aa60ce1d",
+      "2a040bf091fceef347bde5be34e2c15d2c9b2fc9884eb3c9067d9ff3cf8a36a9",
+      "2bb7f7bcec0c88b2d9c395d112b95fbbf47d3a76b4c4dffa06f6ed38a555f896",
+      "30ccb9898982e8f230db8fd1ca155e3c1c7b54f813ba521a43619b0ce7319f27",
+      "31bbff2e40b7964bf920f93694c83eb07fd8f213bacc3d87788b0c733512bef8",
+      "342c6075e6756a279bd50a117ab7a0f768bd028b39319f0a9c874a85df00e296",
+      "399c68d4d7e716709e3c431cc91f25bc1ee72c3d1f6c19f7c81e44695804066b",
+      "3a705de90017562f3730b66e3902a633c51b2f8eaaabc399e7b315b4221cd6f2",
+      "3b180315630b0bdaacfde6ffadc9bbb8cf99b3ffbe6498005930bc2a3c574e40",
+      "3df449c75fb33778da4fe88e8242c5a14410e21fc979db913cf8b4b513b9a370",
+      "529bd5cc01da4aeb35a432f07d41f2d8d9ccf3df806a1671d2c223d403292d86",
+      "564449ec0d4dd6bcdee5c9cd52a983168f3d5de296eaeaf666087f60f1b7429d",
+      "693b9bbb502310a2dc6d9f35878b82702e9f42db295ea6dcc492750943f60543",
+      "77f564db877614cf31ccaf13d9b9d1860ea3adeaa11abed775a4018cb4127b12",
+      "79d7bc16ee3bf5f028318079f7378c3312500135697067776c113a10f0bead59",
+      "79da30414f019f16db34ba4f0348948507b97b02998c422d248cd8635e058b7d",
+      "7cb69fe0adf1476cf942d6b94e30c3c4c576a1fc5e68d1ed69566eb2a3122bd8",
+      "7f8ba72d934025ed0c1f2be1d9e9c928fcea2f37e8e940e44fe00f24aa2da3ff",
+      "7fd63753234ebea0e83fd74490dd66cd5358d83b65bbfdc392e2aaa1f09f612b",
+      "8084033a54b583479aa03eb580617e7bf87a50adc3b2e37a3f4c13b1cf6cf634",
+      "853e967c2d3b9d1abab2449e4f92809fc6d269dddb8efe7696ea6420e82f4b6d",
+      "8886b8ef726ba0512e53244741da96aab04d439e4e72eef421c1d6fe55453915",
+      "8e8944e75a564d406f3788a6361ff28373cb2f6c83c1eeaa1fb90d1340da22d2",
+      "8fc19a725636aa22897ed0560ebccb7199c071c7dec311f2ceb2f1ca774f8630",
+      "937f8fc564d7810aca9bf28f3467f7f4f67749c1518f4c333458c30453e7e8ac",
+      "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "95aa17ee9755be707e6ed59714913b18179c03fec64794ea13e19b94ab5f4533",
+      "9e6ef66399a3bd682efb988eb353bec00448e2ccc8f0c53490351ba789a80817",
+      "a764be004f21728318988279293e43dc4bc51ff88121873c5f022e6ede40d6b5",
+      "a76e33e579823bf975ed86b21ed0fa67d2e03094dcb1c90844451d0c30f6b220",
+      "a856aad9d8162af66547b5e595a0b827489c88ec796c21ed467c7a9d4c3020d0",
+      "aad4afcb7c1d2597bdcb245b6862bcb9098336c33e272a88f4bdf7f38737a28d",
+      "ac15027ee20c96772f07c6434fb7da81a807bbf874e7346a944e345b6f37c5da",
+      "be81ba513db389ee96999bfbf6e101fbf141b428ead6a81395e34fdce9826c4a",
+      "c05ce38336b328da369730c09efef5fa8aafbc37c8f4c7e56db0fda558500d42",
+      "c1612ba6733c898ab20886d0d87bfb1f4130645b497cbdbb2046994a3223ec51",
+      "cc82f67e9c19e35b2cb979db09dae203e3f0b1d6ef23d0b026d3cbea721ada71",
+      "ceb2d2434b17d9b9f91745cc761755c3ae2e94568f8652b1eb7bf76496fcac2f",
+      "d4a2a474edffac49e35ba7cf4c6e44073399eb7a9e7b4de468279cc710ba4a86",
+      "d6ed8578b72685dc4d45689021ed005a0c41b2eabb04b9ea68c19472b78020ae",
+      "dcc3b4966a4817185f2718403fa31c61c11742bbf8144f601138cd6bc3755f43",
+      "ddcc3b69351e2cb931ff3da9e6b52786ecf14d860081015f329dfa6410b456e6",
+      "dfd9c5aeb6352d7b548b169418536d86937f9415a1390b6332ab7dc43fcf36d1",
+      "e1da910a994f5a75273ce03774fd81229f669330fd63d248fbddfe57082d051e",
+      "f81662f31167a970a73c40f822368dee70ea25704ba859d22b099acdd16d3ab3",
+      "f9493663599315efd0ce9649f47fbf4b18be7f89af02fc0f9884123f9ba242a7",
+      "ff8f86a4378898c231bd213c5a2fac00a9e18317c3580f706321059607a6c3c9"
+    ],
+    "images": [
+      "sha256:0557ac14e0d45d02ed563067b82856ca5e7aa3437fa28d98d4350ea9c3d9494a",
+      "sha256:0896a80b7fdb51cb1e67bc031c60662472419eb74e015540c9d8a215cf50eda1",
+      "sha256:0c1d39aa81ce5deaa8c3ef6d37ae138c6374bebd9b916cb9b830c410cb1d5be3",
+      "sha256:0daef39faf0989639e1260200b0221a73ff6be63eb0b6a5a405dc1d564847f06",
+      "sha256:0ee87ff20c408105deac99080e559e86ff238449df46f297110fe0563bb0b089",
+      "sha256:127052aea93336efc71674f6d3693269ea55714cc030f1c423f2f2954889f637",
+      "sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dce",
+      "sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e",
+      "sha256:14d80d083e5b53145f416bbbd36238336c9de4016c43fd950eb2eb845670583b",
+      "sha256:154f05fd33dc552b2d3cbece4296482949d172d82d4e87a369c8415532573369",
+      "sha256:1694ff069f0c9dafb283c36765175606866769f5d72f2ed56b6a0f1be922fc37",
+      "sha256:1856ff83cead70c38d2bb7e7ced556a470667799a14861ae2acc383d42ef6212",
+      "sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73",
+      "sha256:19b30d97b51b291c77dbc953a88f3fe7005b870345606f9ad3dffebc49ca2fe8",
+      "sha256:1a54b3ed12c228bc52c0a8d0e899b53b675754ba584cc316487f33a67c2ad699",
+      "sha256:1c2c046bc09ed40fad370b599a0b1ae7987f55b01e247cf27a7c27cd97e5bbc7",
+      "sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+      "sha256:24f7917b02166592ee3e5293d3396a26671434090fc8f5a04446f9082b790982",
+      "sha256:25976e9d34a0fab1f278cae931f34c8303d97bf0c0d7f85b6b4dcf641d7702a4",
+      "sha256:29607f10dcaf90e5ef5b51829bb40a250ebcd2fe2f84833f074b157c7d326df0",
+      "sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0",
+      "sha256:2d7d29b504e7166f6d0c7655a18ebf5def5b37b029f8c4f8667e434ba774844f",
+      "sha256:2f00f46fc7bbde4c3e100b56eb70807c4accd9ca34148fc6ba6c14081780060d",
+      "sha256:3266bc9e8bee1acc8a77386eefaf574987d2729b8c5ec35b0dbd6ddbc40b0ce2",
+      "sha256:32d921043428f795c1e447947d14c6d04213f17636e22eb55048e9e46a77defd",
+      "sha256:3369903f13da379a0cbe4fe3d37ad9d0b58638d4fd1c0e51656f4c7c1dce89c1",
+      "sha256:34c729127386abec1c610b2aa024e39b4498dc2b4a72a0798ae21fbdc1b0493b",
+      "sha256:369d8f0bb1fbf84c28b90d9af62dea8ef1b90d261fbc321f211dbba96883613c",
+      "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7",
+      "sha256:3b44767883ac77bddae0160cc27b6b039345e23fa3504f4159efaa32264ab57f",
+      "sha256:3c04fe30d995e7faea025271620d725fd1d57339ebc08aa51250b57c06814667",
+      "sha256:3d0f7584ed7d04e27fa050d6683a74746608faf21f202be78460d679cc56461f",
+      "sha256:415562f006b8f11e664a84c9363b3296c3a05cc8c91ff3561186924c6690dda8",
+      "sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366",
+      "sha256:463eaf6072688fe96ac64fa623fe73e1dbe25d8ad6c34404a669ad3ce1f104b6",
+      "sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d",
+      "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+      "sha256:4bcd25ed1ee53fe8c709cb54de37cc8b5a9ec1dc248e1bd115f7354d166228e1",
+      "sha256:4c03d7306e1e7f64732f58f5c12b56f7f44ca30eb09f4813409eb3d12f3cbb24",
+      "sha256:4ed62a6f7fe75bb732d998215b54b90b0db033e27e64a5d6bfcd6927b0f87cf7",
+      "sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7",
+      "sha256:55868ba8ed9e274c067f6c2653934fa9de6ea78a9931b35679f3dba26040ecce",
+      "sha256:593bacda3e4d5f632f94dfe2ef73dec666ffbb07fdf0bdeb3129567634c99a80",
+      "sha256:5b6ef1aef84e3168da2110504ad7740306d071dee714d48e1acc46063b4e20ae",
+      "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+      "sha256:5c8931cda015626e14e57c41d7cd1a466d47ff76203e7119401421634c373f7b",
+      "sha256:5cab74e7f8a5e7c5f1c8a9e6268b1f352f053c36c656f493308340bcecbc636c",
+      "sha256:5d4c143943a5c033c6ff1845f0c60538b80640fdbeecfe561b1d2d3541c622e4",
+      "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+      "sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648",
+      "sha256:5f9a271f84457f05da79e62f8be6b322c3fb238f07e6288ac5cb62e8e668d121",
+      "sha256:60577793484ed5947c4c119ab1c5664325450bdc97d0f37ea78cd6079debe2a1",
+      "sha256:60c27e7d4d6c7dc0aef6f36c9a8a86e7b4b8689c1d81bcef0762462b069a6afe",
+      "sha256:60f2dd5137a54b6e3acda4167594f4e81882fe82a156686e3b269d4b1c3cadbd",
+      "sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2",
+      "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "sha256:68209f4258825a72dec2b3f5437c92297e10267361a4efb9cc78aecefc89f7e4",
+      "sha256:698f514bba46f6221b1f6594769465544c20d3ee1a9356a124649b3027ee8bb7",
+      "sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+      "sha256:711d630f966b9a9835c9e080e6a9cd3a526db76fcc84b70b22c2db5c9dc6b977",
+      "sha256:73b598708be0e276ecf95ebb7e8a37fc1cfa68f4a20c0f2bafab958e8ea8f4ba",
+      "sha256:752ea8a2f758c34002a0461bd9f1cee4f9a3c36d48494586f60ffce1fc708e0e",
+      "sha256:7619db47382ed06efd6f4f763758bf3444bb18564b622bfc7b553582d81adbef",
+      "sha256:766913e4d90af441f657bf9ab4f722228197bf0a7c99a53cdcf6f3f20f570021",
+      "sha256:7958605b474b3d264a969cb3a123d6aa00ad1e1fe9da8a69984dabb704d93317",
+      "sha256:7c36c77a27a9598e326352bda63d6ba5adaa3131e74445dfed0a641b309c8b18",
+      "sha256:7c848cc37ab72701dc6c4f685ac90f9a04996916b644f47be9edc6060372383a",
+      "sha256:81411b1ec943e27b7af4286bf4967969fb4c2601ffd1c6ee6d09b16a8dc3164a",
+      "sha256:81bf557407e36eacf5bf23ee67bc03cb1957d6a91c3552b3755e848120b48dbb",
+      "sha256:81dc45d05a7444ead8c92a389621fafabc8e40f8fd1a19d7e5df14e61e98bc1a",
+      "sha256:867e4c1540927c1bc1a5d77741ff1fbe5dc2111eb9129c094caf4c673b56fcce",
+      "sha256:872cb5ebe37770b0c1656b6f85a114accf7fbfcb316505b4fc4dce3f1aff3421",
+      "sha256:883bc7bdc37d0b566b1940946f03a4c86de0fb9eb4f7ce725fcc2d4bb8bd44ca",
+      "sha256:894269cdfac1ea1412a4ec552f73f15f4550febb21b47fdf4a2cfeea3148373a",
+      "sha256:8a8d55343d6fc456cb183453e3094ff140b984157b36b48f817dd581654f2aec",
+      "sha256:8cbee1481529d6b514907588f4a3e507c2cba7c040967d7c2e5ee25aef347092",
+      "sha256:8efad3e9f7ccb3b0251b296249e304cff910b7f0de0c013b7fa024bb64e10d3f",
+      "sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5",
+      "sha256:90732706c7404e7af0fe3fc01340695fdcf128411769219d62fab8520d52baac",
+      "sha256:941dd88d68808ced6931950757c5644142a9ab4ca0d2181a04f287c5b571ac19",
+      "sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6",
+      "sha256:9bef0ef1e268f60627da9ba7d7605e8831d5b56ad07487d24d1aa386336d1944",
+      "sha256:9c283d1fff2bda332ec066160f06b24c448ff6f310a30e442675d2e36e724c2d",
+      "sha256:9c900dea9e8fb7e16277c179b555cc72d29a352dbc33cff48ad5a0412fd5bfc7",
+      "sha256:9cd7f155b110eb1c178148b0a3a1a354d0848140361170eaa35d7a6cf4f7bf1a",
+      "sha256:a1ea29fa28355559ef137d71fc570e508a214ec84ff8083e39bc5428980b015e",
+      "sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373",
+      "sha256:a4198ba8ed4aa88e89bbb0c3ab27f439d4d29eb1f8b4e54c1dff7b53a1ac4daf",
+      "sha256:a5b8a30db2db7b572e1a391b3a84f4785e37c055f8be2b38966ef6529dc2d063",
+      "sha256:a6a10906d67530b0cf8e54183c51d556edb5fa1cbb5673ff31ca471b41874aeb",
+      "sha256:a87c80c61acf28050fdf0ea560f9c9e557e02b9978feb299369aded909ea1ffd",
+      "sha256:ac20a90db03e87f7a35b364c1d15dbaaa9c7419992dd860b68d53c2e702d867d",
+      "sha256:ac5ea6df00de858c207758dd27c257161c4af524d0de1329fbfd57b66b2c920c",
+      "sha256:aebffd553eaf86ee87752c9f696e816cc0a8d63e4fd27f006fa2e84bdc90941e",
+      "sha256:aed275db67dacdc0a911d71961567e460649222dc993b9e96eeb033e64273935",
+      "sha256:af32e97399febea808609119bb21544d0265c58a02836576e32a2d082c262c17",
+      "sha256:b1589e7f0c3d52c1c06661a03bd215913dfbaff5fe17da18f2a8d507ecd91a0c",
+      "sha256:b2f49e2f14c0ebc4544539ff0bf62f998d03541eaf5b435dbdc5be71745695b5",
+      "sha256:b3896bc517b76c353ebfd12cad3f11e835539f0cfe6405ccbf2bc3a61e7fa0a5",
+      "sha256:b535b0f3c1cb8b5b43c8225172c8dac3cda55d07864360db7700e782d197c2a1",
+      "sha256:b73e12cabad91f918470c6aedccb11a80c699cdae995227fe9ad71ff6a28d368",
+      "sha256:bc62979fc90c7afcb13fd46e20575ba8d57e315ad9e82b8666828c40a59ed969",
+      "sha256:be1190afcb28352bfddc4ddeb71470835d16462af68d310f9f4bca710961a41e",
+      "sha256:be5c3a418960cb0a1c27622d0abbfeabd36c20e800170bcb86a7f4ab80649cd5",
+      "sha256:c02d00b0f40c39dde9fb2ad27c73ca32e9352fee903acdbabf645617bf31d258",
+      "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+      "sha256:c2f303c2425ac91a08f95ca53c3efde66ededc1e93d7c407f330212d6da33d80",
+      "sha256:c40748e7be861dbe67f4a14721bcd34a62813a6242ad6631fcd38f8793465eb3",
+      "sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32",
+      "sha256:c7a737f15ba3e67253b0db2f0283f98a9cfcfe63dd55c5cee94d1c97f236d06d",
+      "sha256:c85bfebc522c75e6d877420b836caf0117c66bd51b7301d2e0d3eef032055dba",
+      "sha256:cbff9d1a9041b316010f2da6b701b6c0d597718cb90928c85eb597334a0d23d4",
+      "sha256:ccb73a1a005d80c33cfb757325331fbe269512843ddd4dcacef5e63d111f45b7",
+      "sha256:cd0e8aa1efeec5e3c6ef57e93f3b0c7b3d2a2fc82c6a31a769c674356776b0af",
+      "sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685",
+      "sha256:d0199e2a90bf7a206a485b115323a75bc946f30b463d704c5435a454aca084dd",
+      "sha256:d3a9d8ac27bb7e05e333ef25b634d2625adaa85336ab729954b9e94859bf6fa7",
+      "sha256:d522157b5c139bd277f65ea448a9c5ac9acab07c9d1c8f0aef248cc598d02447",
+      "sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436",
+      "sha256:d7d3b07d96453b8e788d2342ba40c59b7d4a3d2b80b342bf96e82ed11d0f451f",
+      "sha256:d849dfe2daaaf4582a7ad5178622700c28cd37f5fac0b3365accdde2013f1e66",
+      "sha256:d9b4541e214bcd85196d6e92e2753ac6d0ea699f0af5741f8c6cccbfcf00ef4b",
+      "sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+      "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+      "sha256:e11b714f9153a07f7706c96cc6fad2f5603318c6217e8093c9dba6a2941c6c5d",
+      "sha256:e87bd94f69a1b9dc7a9cd5ddd99b5fd7aa2149686239d618f58cb20955704c05",
+      "sha256:eb2494f2dc2d10e1061ba2b4ea3eacdec112b6bde888460c1aa4daa13a6b25de",
+      "sha256:f0d83e708dc40ad8606259c888f9617bfdc64b598bca1054c29d78d4a7110dab",
+      "sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+      "sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293",
+      "sha256:ff02b58f971e7d7d156a1267e283fcbbeee91773b6aa36c49dac28ecfe28eadf",
+      "sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54"
+    ],
+    "volumes": [
+      "001e36219e1101695820eb167ce0ed0a6c02b91c7a8944324825b8694b4379b5",
+      "0382e5a8a4788b9c30c2431a37b86a4855c5f274bb8fa735a9441114c21626f5",
+      "0536c517aa943d6a4937892a76793c4b98a7426a99386dbaa9fcaeb0555c5e07",
+      "060e3f12c07cd4725f15c4e45dc146234a3583218022013f2650a03f4b09d950",
+      "062ff50727041df2dac034ff7bb51946b09e2e6629df7ed1b09e28c61f43b3e4",
+      "06810cfff0496b6a9b029040c2b0442c712ceb9148c3fd7d27405673b456374a",
+      "07226d57da48f0c22de0c14336043a41c20ba8065a074bd56ada5f5a1376754d",
+      "0b90832cf12defca62c702e0470234d30719207cd42008d871e5dd69b5e51d75",
+      "0cf403433c460ba197e2d617c6193ea61ace0cb97a75d73ba7ad3ccc13d14742",
+      "0d7ffe077b2f6ed7f0dc2b1240bb3e600c49bb0950792ed76133da1372653327",
+      "0dbb54ee716964e5625627fbad7401c4587bb591963df8eb0e19c87b0d3b6045",
+      "10e2d3b5bad93b5bb455d876cb1de27ebf2d4f38725f7389aadb9493336c26eb",
+      "1117aefd65b7c6663b428f5f303830149e0275e09df03e6eba39fc5c36d96037",
+      "11649fb97064c131920e2af1242316624b9cb4775e8c426ab8feff3022f482be",
+      "16adab7cf35496adb02b93e7cc98b69039f9b2b6634426ee079fa0e483842a19",
+      "17a26d8be5753fab32c8a726a61bc0749064ce66b2d4fd18076bcdd288205b57",
+      "17af031a38275ebb04181d9bfc7a0a439651d574bd1d54f949a923596db2a294",
+      "17dd1de1da44986899fdb1aa2512409e8738461220559bcc597439fe9b66e148",
+      "180fcbbb9145a1eb549cf8ba27abdd7cd1b2e17f1fc07694501dcfea87ba7275",
+      "230338bd12088f3749b4cd00bf9f2864c18cea6c8092fb37b803339554b57a7e",
+      "23118277254b8752f1cf01eae17aa9611a1b227f29043394ec43f8d2efeaa79e",
+      "239799ca730469ccd258af2e2be75e81359d8bd6c5b771f55db1c86838ddab5e",
+      "27d17b300f942e99498270d4fa37b49e924514e2b657b2eba81ca4df5a70f27b",
+      "2a63740272e7568c4d975823be8062a617908f45739b893b33bb966e90125b36",
+      "2c15a45788f55cfcb2b96331faf6456b24df89aa5a27dbe4a0a2e1c5450191b1",
+      "2e99591d14d0b78836ff6a9730b4cb52e221ed58f7e0176fcada18978824e62c",
+      "303e2317756ea3c5af093519a131851437e56b4c420b4920145831864696c557",
+      "30e218f7b4a73e3ed90978ac78d7b7b598cd72297e192ab6af5d07bde88b24c5",
+      "3186414f2bb89b7fffd7ddb1912bd6e5e0a6f534b7baaed98ba772a3dfb62149",
+      "35814eee447a2e997dcaf7d9e755525c690354468e1127bed8b3b9e19ccbdb1c",
+      "3780bf21f426e8511e6048dc7e5576eaef8a43870a8cb5e03ee66c43184bf87d",
+      "3cdd216c3b0195495f4e728ee8849527efb591be294b40b6e16aa91b49b2122b",
+      "4144ce72806dd5c7a177d6bf76ac3c19af4b42cf91a9588bed578cdbe98b70ec",
+      "41d9d847e70319da571bc3a5d5f8fe8e0a82b2a5f5fc796334a94b8900c2b879",
+      "425b025487498eb8909d4e67a03270ecb7c3ab52c2a3130fb56e5408328066d1",
+      "456eb3eb7a4d77ee72291c8ce71378c799871beb9f5831924e582a6ea23b17e5",
+      "46085a8818fc98c79fd4bacbf4ea4be9d87704757e59a0331dcdafc499f8a510",
+      "462dec2a6a3d70244fa58faaddd06fa23060cbcfdbec1ca804752f5d7dcfca50",
+      "4a3b16c00634d318d1694741a1f214a937852a316ca418ded1109f13f9013b37",
+      "4cbda987806dc7604dbe7e4aa1e0f844f4d693d50958679e047f556998c35970",
+      "51c2d61db0b6c549af2ad7d22423e844cd046b47c0ec237c7eaabdacc21ab845",
+      "5b72e44b9d64d74169d25f0b36f8571e59267f56ceaee9204d742f4eb875dd8c",
+      "5b99aa704e36f4e740c88a1930dfab55113adf236ffe85918b6760cfa05b90b2",
+      "5c8464fdd31dac382dbccc51a8ce20a05b186d177060961789ee0c668c78f25a",
+      "5e64aed1fa41fd5bfb5aa6b477deb57bb7f036fdd1e597f375876ea35189ee3c",
+      "6c86116580b581d1a29c1cf01c89d0b6a66250794fd39dc36b0b0baf11e23faf",
+      "6e33bd6fd72e9f233af171f1c5d276e43208ebf33d78e53b20a39868eff778b2",
+      "6e7ff8c9afe65f0207a0c4d5cec2874afaa5a4e4e3292b78bd97cbcbde5f80d2",
+      "6ec8b0d73f5bdf7f3a9820f69065b3bf57e0e9314bd3fbe9c86d63b514307b6c",
+      "6edb6d5b1549199ba66d5860dac397f6a603762e4f6edf109e1809c8826a43dd",
+      "7025540ba7b801f79d8144130ce2eea1713118e3789322703f2e78ac64ca9b54",
+      "702c5558f5a9c10396f67f907a88d29871b7dff1cd695c7a4334b32b840deec8",
+      "70762247ce570cbd2ae73564961c18b7dabe69ff6bf6284c97eab870595b4e04",
+      "759f4c465ab012d2acfeb466effe4de9d6b7c36c9d3a2483115b7b42fefe8b59",
+      "773acb06eb3ea42ffea56d84b894f6a856b3cf72005acc94c68cf06e28768e88",
+      "7a991e928c9a6133471fea7fe6ce1c82040f4d9df6bc019f910fe133add46289",
+      "7acbd23405130f0eb5e5415a5769a69a794bd5a77d2f87be341ca306c336d3eb",
+      "7b33db0d36d2cc9ce4dfa7dc4faeeb1ebf092a6c79c683dd49277a14b769f874",
+      "7c55745a5d10bfc6762d3b4ab415fce81e7d56490ab27977e593b640f54bd8e8",
+      "7e02fb346bb5dfad3bc8b21fccd513b2cf192c44966ae4f3f85b0a9f7a9ed975",
+      "7e9c8d4d2f55ad889c5812b788f79aec46a4e42ebb81c9b71e855d721037fe72",
+      "7ee52ba21877fd5ffc079a3df5207baf43d2005ce512c2d8157c1144f04b7eca",
+      "80d878a156f4a9b4c33143ce5565ef296bd8f292ec5a9e4255dacc5adb87f609",
+      "88b0d244a1c00c67d138efea988198fbac8df7f7a6786dc7a07dc5655db45446",
+      "8b08e112ecf922758f140144547026bbc3bb588729f22a4e6437b9d2e63ec55e",
+      "8e4ca7a9ed585046cdcc085f009359e8174acd4c29f14122b4079a66742f3f71",
+      "90cd0d12d5e3638866b94100630b349c70ca49e037efa0fbcad055aabb654734",
+      "91abcb729129ec764c117edc49c98d784b3dc0843943a55747a642c54ac3a829",
+      "94a01c6097d8c32e88698d9b66f5f3c1b2587e2c233524c181c467391b22e4ab",
+      "94f978db0b58a4cf2bcd17202b29c3c88d4b2d3e5601b44a635498079c3c2518",
+      "968824ceadffda856d23876cd7a4255f8ddac2cd2fedd6a57f0aa1e79a5b802c",
+      "9694aa880684acdda675d16c6fee0770aff410026d4e0562e5fbf8d9424b0c98",
+      "9871fa30c850285fa6de19162a6fde83f73c56f455fa93b8be45639417ea0df9",
+      "99fa5f0f82dfe3279ddf8abdbd54c80e0259fb3cdcf79d0dbcfaf7528e2b2b7b",
+      "a32016c0ec6f2d80a445773661f63c845579ef247d4ca7e44f0b962e6b2424fd",
+      "a5cac196b5b06408670cd6ec2a961d487412fdfaafa5fc0a9999afc1cd433903",
+      "aa0878931e49b873ccbc57a70c7a0d822278368cc0dc4bedea540a9d25455889",
+      "ai-ff_auction-postgres-data",
+      "ai-platform-dev_dev-desktop-node_modules",
+      "ai-platform-dev_dev-excel-mcp-node_modules",
+      "ai-platform-dev_dev-excel-pnpm-store",
+      "ai-platform-dev_dev-excel-root-node_modules",
+      "ai-platform-dev_dev-mcp-node_modules",
+      "ai-platform-dev_dev-mcp-packages-db-node_modules",
+      "ai-platform-dev_dev-packages-agents-runtime-node_modules",
+      "ai-platform-dev_dev-packages-config-node_modules",
+      "ai-platform-dev_dev-packages-connected-systems-node_modules",
+      "ai-platform-dev_dev-packages-db-node_modules",
+      "ai-platform-dev_dev-packages-pdf-core-node_modules",
+      "ai-platform-dev_dev-packages-ui-node_modules",
+      "ai-platform-dev_dev-pnpm-store",
+      "ai-platform-dev_dev-web-next",
+      "ai-platform-dev_dev-web-node_modules",
+      "ai-platform-dev_dev-web-packages-db-node_modules",
+      "ai-platform-dev_dev-worker-packages-db-node_modules",
+      "ai-platform-dev_dev-worker-pnpm-store",
+      "ai-platform-dev_dev-worker-root-node_modules",
+      "app-dev-postgres-data",
+      "app-postgres-data",
+      "app-shared-storage",
+      "bc977b76dc8ca43ef26145772bda528d2d839660bac4b2477d53a73e4a0a9b79",
+      "bce0e9dba8c53e93a66e2197d4b4f237bad079204d9adbaa91bcc3942cec1d80",
+      "bde770cc8260f452ecb66792638011fd61368d915b01d6b8af73169343c3ec75",
+      "c1540ffecbbb78f4ba84528f822acd84bb7a0728242baff3c07f009a9a47280f",
+      "c4cd63b5784180399cee11f63635ac6c33899bc3f023010afc3f55355fbe0868",
+      "c50f044ef8e7e681bd28027a94ca9b765d4bbd00566ac796fd44adb9360a38b0",
+      "c5612e6ae4ef4c724bc8fbc8acd12950fa16b32cff15122f6bd5f31d15ddaf52",
+      "c74a94fcf0586d7a02922b81dc0b2d5d6796381eba094123b71767896352f5cc",
+      "c78c0ded0f18f185c72de7f891cbc4eb90bfdc252348507d27fe5c7a1772da3a",
+      "c87c9ca8745873692e124c751f769ed2c5915aa7fb76360dc3402e9d0176b031",
+      "c98b6c736d56464b9e544bebc6263510ca6304683a0bdd4e14a42d42a4604e7f",
+      "cb250a3bea231b4a89e826d5a028f8a4b987cd6de5faba705d13fb707b1b1cf0",
+      "cbb22c763436faadb67d8a42be694e8cc826c87f002904882a435781c47e503a",
+      "csc-ai-dev_dev-desktop-node_modules",
+      "csc-ai-dev_dev-excel-mcp-node_modules",
+      "csc-ai-dev_dev-excel-pnpm-store",
+      "csc-ai-dev_dev-excel-root-node_modules",
+      "csc-ai-dev_dev-mcp-node_modules",
+      "csc-ai-dev_dev-mcp-packages-db-node_modules",
+      "csc-ai-dev_dev-packages-agents-runtime-node_modules",
+      "csc-ai-dev_dev-packages-config-node_modules",
+      "csc-ai-dev_dev-packages-connected-systems-node_modules",
+      "csc-ai-dev_dev-packages-db-node_modules",
+      "csc-ai-dev_dev-packages-pdf-core-node_modules",
+      "csc-ai-dev_dev-packages-ui-node_modules",
+      "csc-ai-dev_dev-pnpm-store",
+      "csc-ai-dev_dev-root-node_modules",
+      "csc-ai-dev_dev-web-next",
+      "csc-ai-dev_dev-web-node_modules",
+      "csc-ai-dev_dev-web-packages-db-node_modules",
+      "csc-ai-dev_dev-worker-node_modules",
+      "csc-ai-dev_dev-worker-packages-db-node_modules",
+      "csc-ai-dev_dev-worker-pnpm-store",
+      "csc-ai-dev_dev-worker-root-node_modules",
+      "csc-ai_dev-desktop-node_modules",
+      "csc-ai_dev-excel-mcp-node_modules",
+      "csc-ai_dev-mcp-node_modules",
+      "csc-ai_dev-mcp-packages-db-node_modules",
+      "csc-ai_dev-mcp-pnpm-store",
+      "csc-ai_dev-mcp-root-node_modules",
+      "csc-ai_dev-packages-agents-runtime-node_modules",
+      "csc-ai_dev-packages-config-node_modules",
+      "csc-ai_dev-packages-connected-systems-node_modules",
+      "csc-ai_dev-packages-db-node_modules",
+      "csc-ai_dev-packages-pdf-core-node_modules",
+      "csc-ai_dev-packages-ui-node_modules",
+      "csc-ai_dev-pnpm-store",
+      "csc-ai_dev-root-node_modules",
+      "csc-ai_dev-web-next",
+      "csc-ai_dev-web-node_modules",
+      "csc-ai_dev-web-packages-db-node_modules",
+      "csc-ai_dev-web-pnpm-store",
+      "csc-ai_dev-web-root-node_modules",
+      "csc-ai_dev-worker-node_modules",
+      "csc-dev-postgres-data",
+      "csc-postgres-data",
+      "csc-shared-storage",
+      "d136eb05dd2dbea66f76c63d4a49c1d27d76a0f86a053e4a108036ae706f1367",
+      "d3590e24ab5b8144629a9baf9aa835d3644b7fa1d6e875509cfbbae306396442",
+      "d3a2a48ee4e4afbb4d28fafe2f71a60f1ff6259615248633aa930a56cdbb4e60",
+      "d9b85e4aa7de845351f55bc07fbf6999ba6cff4d108a73916b5d5a63b3e33b43",
+      "db67b04f129d0c949529101b393c5678cae28522609d81cd7189d24e037ac9ee",
+      "ddeb28ed9d097270b38b418705178bd47b3b855d5797d404258b3f7c341b12c0",
+      "de4d6f27aec228e1dc4c00883cb08ae0fe5d9b56205dc3a31f1d274600fc79fb",
+      "drugwars-blocks-ngrok_mem0_history",
+      "drugwars-blocks-ngrok_mem0_postgres_db",
+      "drugwars-blocks-ngrok_server-data",
+      "drugwars-blocks-playbot-node-modules",
+      "drugwars-blocks_client_node_modules",
+      "drugwars-blocks_mem0_history",
+      "drugwars-blocks_mem0_postgres_db",
+      "drugwars-blocks_playbot_node_modules",
+      "drugwars-blocks_server_node_modules",
+      "e3111f25dbc7768e599891d6389845fba99d06d4c3e9ea45a4078f31d1428a82",
+      "exais-admin-ui-node-modules",
+      "exais-vector-store-ks-state-civics_minio-data",
+      "exais-vector-store-ks-state-civics_object-store",
+      "exais-vector-store-ks-state-civics_postgres-data",
+      "exais-vector-store-ks-state-civics_qdrant-data",
+      "exais-vector-store-ks-state-civics_redis-data",
+      "exais-vector-store-local_minio-data",
+      "exais-vector-store-local_object-store",
+      "exais-vector-store-local_postgres-data",
+      "exais-vector-store-local_qdrant-data",
+      "exais-vector-store-local_redis-data",
+      "expertauth-gradle-cache",
+      "expertauth-oss-proof-pg",
+      "f02d269c10a6125319080a9d1040568b077ff21b14c0ab6d1848a4cfdb045890",
+      "f037ecc27f567d49077a7163e962628a25c0a02a2c94b0a59ff5c34e799bd322",
+      "f1c6ba07757046e9635f2bd9b76e7f5233a6a9d2071b954df4532f4522c2759f",
+      "f59d5362427bb041e52cc3fa2ee1fa4c068f18579b089fb590be9c553670e2fc",
+      "f61ce4f0da2e46f92f276a43bab9deb9bab87c8053132e4adbb338dc3ea3733d",
+      "f6ed6f8ea69f0847703ff0ebda293cdace69424457aa08a4a3a1ba24b5fbd2b1",
+      "f71c6feca9d18dc267dc8d395c584a9ed0c293fce2112f906dfbc76dab6a93ba",
+      "f7a0f8c418956d8bf26b9dd5c2ce1457dba4505a331aa49e1ed1332d8adb133b",
+      "f90de93d26346df4edd421c8fa4b497c6bb1c5a7f591399a078e8f86bab56118",
+      "fac8b12863a84e2c363de6d988edd5228ae221c2861a3eef901d1c7fbffaf243",
+      "fd5b327700cdd073f7db350541cfc1807e678d2fa6f3d535c8a5a5dbd7d72ebd",
+      "fe9a612d253cf72130f041d7a3ab765cf742af97d80c119bcb3d034b8ea22ddc",
+      "ks638-pgdata-20260907t192250z",
+      "ks638-release-current-pgdata-20260908",
+      "ks638-release-pgdata-20260908",
+      "osborne-ai_dev-excel-mcp-node_modules",
+      "osborne-ai_dev-excel-pnpm-store",
+      "osborne-ai_dev-excel-root-node_modules",
+      "osborne-ai_dev-mcp-node_modules",
+      "osborne-ai_dev-mcp-packages-db-node_modules",
+      "osborne-ai_dev-mcp-pnpm-store",
+      "osborne-ai_dev-mcp-root-node_modules",
+      "osborne-ai_dev-packages-agents-runtime-node_modules",
+      "osborne-ai_dev-packages-config-node_modules",
+      "osborne-ai_dev-packages-db-node_modules",
+      "osborne-ai_dev-packages-ui-node_modules",
+      "osborne-ai_dev-pnpm-store",
+      "osborne-ai_dev-root-node_modules",
+      "osborne-ai_dev-web-next",
+      "osborne-ai_dev-web-node_modules",
+      "osborne-ai_dev-web-packages-db-node_modules",
+      "osborne-ai_dev-worker-node_modules",
+      "osborne-ai_dev-worker-packages-db-node_modules",
+      "osborne-ai_dev-worker-pnpm-store",
+      "osborne-ai_dev-worker-root-node_modules",
+      "osborne-postgres-data",
+      "osborne-shared-storage",
+      "saopqc2_hatchet_config",
+      "saopqc2_hatchet_postgres",
+      "saopqc2_saop_artifacts",
+      "saopqc2_saop_postgres",
+      "saopqc_hatchet_config",
+      "saopqc_hatchet_postgres",
+      "saopqc_saop_artifacts",
+      "saopqc_saop_postgres",
+      "senne-ai-dev_dev-desktop-node_modules",
+      "senne-ai-dev_dev-excel-mcp-node_modules",
+      "senne-ai-dev_dev-excel-pnpm-store",
+      "senne-ai-dev_dev-excel-root-node_modules",
+      "senne-ai-dev_dev-mcp-node_modules",
+      "senne-ai-dev_dev-mcp-packages-db-node_modules",
+      "senne-ai-dev_dev-packages-agents-runtime-node_modules",
+      "senne-ai-dev_dev-packages-config-node_modules",
+      "senne-ai-dev_dev-packages-connected-systems-node_modules",
+      "senne-ai-dev_dev-packages-db-node_modules",
+      "senne-ai-dev_dev-packages-pdf-core-node_modules",
+      "senne-ai-dev_dev-packages-ui-node_modules",
+      "senne-ai-dev_dev-pnpm-store",
+      "senne-ai-dev_dev-root-node_modules",
+      "senne-ai-dev_dev-web-next",
+      "senne-ai-dev_dev-web-node_modules",
+      "senne-ai-dev_dev-web-packages-db-node_modules",
+      "senne-ai-dev_dev-worker-node_modules",
+      "senne-ai-dev_dev-worker-packages-db-node_modules",
+      "senne-ai-dev_dev-worker-pnpm-store",
+      "senne-ai-dev_dev-worker-root-node_modules",
+      "senne-dev-postgres-data",
+      "senne-dev-shared-storage",
+      "statecivicsai_document_storage",
+      "statecivicsai_postgres_data",
+      "statecivicsai_youtube_creds",
+      "tkt251-pnpm-store",
+      "tkt251-web-node-modules",
+      "vicoa_vicoa-postgres"
+    ],
+    "networks": [
+      "0195884c33be62490d3248cb6258da0a3321fb5781125bf688c58067d90a5494",
+      "0aa3bf5a5b7bf1ec448755684027d6a9e518309b682f770be34de6133aadddd5",
+      "0c92d4cd6d6059dc825024e4f8afcb3fbcfdaaec8ca5af59ef970261733610e7",
+      "14298255f167e331805f757b27c4e35e2ef2c2ea641e38b0162923790929cc57",
+      "153b9aa3cbe366bb3a32a43dbe6ab1aa96ea37306749ad02ef5da6ae69b387a8",
+      "2d89c06bfb2176ef0f1006d67a1d35ef02a5404e24c9e743698abc781ec01e50",
+      "3518006679f9aac1fa959be16f1b553e3dddc62f6f8b4200419f80048ebeb8ca",
+      "4c1d1692f3d135a60a3b33599316d927fc7f437e5c5311134415597c057f998a",
+      "60b8fad36369df1a1624eaadde8f403f57f8228263df06558e69b3839becb91e",
+      "6e9cf72d4bce50586c2519fd5f6e410b324531ddb0ff3243096409b9ad91a3ee",
+      "74d8a106f034872cfafe27acf48eb8e4e7e61c5ee18040c1e3744d0f027e42d1",
+      "85c4fea04ea6758194952e68fee4d7df835ae368e4929a26718c013937e97fb0",
+      "8720904552f445673f89780ad3ceb8579069cc588d6ead4d9b92063580906d9b",
+      "8ffa584b9bdde50d238ff2210d05bccc927c16587f8c663d3134180f6d184ad3",
+      "91259834f88732d3de433ab5a49d4ad1725f03d593983be511e558ca58db137b",
+      "a21aaae6cc47cdff3fa9faae748da3c56e583651bc84664c65983ae685f9e770",
+      "a6afc2b3ad61b0b80672e5085919dad2056ed770f130a220e9f710e2d8d30d79",
+      "c3cdb59fca6b020184606d5a5cdff5ac769db331445f29a8d2bae363dd31b224",
+      "c524e045a3c65bef207701204beb2b0956db293a95369378190ed5021ca7cb0b",
+      "c529a772aa406ec6f563b1f40a57c3466570ba2903fc234cf37205dabc92014b",
+      "cac024d845527c30a122ddae7e58b1e86537204caecb1958246f92a88d9e7518",
+      "ce7536d34edeb710bff39e4cb60255cbd3664a254220f26c65c14381ce2b63bc",
+      "dd863498357a80989012cd8b4c4102e392d6fd68dafad2715e52e26c78c6a845",
+      "ea8acce43a813d541ae1d33d5b5c20770e8b00fc803bb9b99ab8ef20e5a69e07",
+      "eea14a41c76ea795e7172a6357366aaeb3462fbc6ba17c009d4ba1704a0df01b"
+    ]
+  },
+  "resources_unchanged": true,
+  "source_after": {
+    "expertauth-oss-core-a": {
+      "Id": "1849f9015945fc395fe3ec45ffbd38873e7bda3224c23cce21f60a04e85b8262",
+      "Name": "/expertauth-oss-core-a",
+      "Image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+          "Destination": "/run/expertauth/config.yaml",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "started": "2026-09-09T02:13:42.54598468Z",
+      "running": true,
+      "ports": {}
+    },
+    "expertauth-oss-postgres": {
+      "Id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "Name": "/expertauth-oss-postgres",
+      "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "Mounts": [
+        {
+          "Type": "volume",
+          "Name": "expertauth-oss-proof-pg",
+          "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "started": "2026-09-09T00:37:51.233368299Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "source_unchanged": true,
+  "inputs_unchanged": true,
+  "finished": "2026-09-09T08:03:48.417082+00:00"
+}

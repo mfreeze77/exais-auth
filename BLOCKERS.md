@@ -50,9 +50,11 @@
   atomic Core profile passes a real transaction-abort/retry proof and32 actual
   Node/SMTP/React checks. Its current code is source/JAR-mounted, not installed
   into retained images. Configured cross-tenant and linked-account behavior,
-  legacy-writer coexistence and full migration remain unqualified. Sign-in that
-  validates the old password before reset but creates a session afterward is
-  unresolved. The default upstream profile still has separate transactions and
+  legacy-writer coexistence and full migration remain unqualified. The new
+  explicit password-session API closes the demonstrated validation/insertion
+  race in the Node profile with actual two-replica ordering and database-abort
+  proof. Other SDK/legacy session writers remain unqualified. Read
+  `docs/password-session-transactions.md`. The default upstream profile still has separate transactions and
   a crash gap; known/unknown SMTP timing differs. See `docs/atomic-password-reset.md`.
   Durable delivery outbox/retries, policy, bounce handling and password-change
   notifications remain absent. Updated Node image4c03d7306e1e passes a complete

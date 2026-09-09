@@ -9,17 +9,29 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest feature work is `docs/atomic-password-reset.md`: an explicit Core-owned
+Latest work is `docs/password-session-transactions.md`: Core now revalidates the
+password under its user lock and inserts the session in that same transaction.
+Sixteen Core cases and 33 Node/SMTP/React behavior cases pass, plus actual-wire
+and cleanup verification. The candidate is the two JARs built by
+`tools/build_password_session.py`; use `--session-build compile-03` in the Core
+or Node labs. Compile-03 includes explicit modification notices and reproduced
+exactly the runtime-tested compile-02 bytes. The Node proxy receiver defect and
+initial wrong-table race-test failure remain recorded, not waived. All temporary
+containers were retired and no image was built. Full foundation, other SDK and
+configured namespace/link/MFA profiles, load/migration/distribution and independent
+human review remain open. Read the current scope and resume commands there.
+
+Earlier work is `docs/atomic-password-reset.md`: an explicit Core-owned
 transaction now covers token consumption, password change and existing-session
 deletion. Eight actual Core checks and32 Node/SMTP/React checks pass. Read its
-exact binary/source/evidence and outstanding race/migration boundaries before
-changing it. No image was built; use the single retained JAR and source-mounted
-lab for unchanged code. Installed Core/Node images do not contain these changes.
+exact historical binary/source/evidence and migration boundaries before changing
+it. Its reset-only JAR has been superseded and retired; use the current two-JAR
+candidate and commands above. Installed Core/Node images do not contain these changes.
 The failed node-02 mount-order check remains preserved; node-03 saves and compares
 the complete stable before/after projections and retires all17 containers.
-The next implementation work must resolve the old-password-validation versus
-new-session-issuance race and full engine/distribution gates without adding a
-second identity/session store or bypassing an entitlement. Do not repeat passing
+The later password-session work resolves that demonstrated race for its explicit
+Node profile. Full engine/distribution and other SDK gates remain open; do not add
+a second identity/session store or bypass an entitlement. Do not repeat passing
 labs for new timestamps. Rebuild/install a changed binary only with bounded
 replacement and its own actual installed-image qualification.
 

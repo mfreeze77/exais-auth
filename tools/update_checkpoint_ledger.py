@@ -199,6 +199,36 @@ def main():
         index[identifier]['observed_test_ids'] = list(dict.fromkeys(index[identifier].get('observed_test_ids',[]) +
             [r['id'] for r in read_json(ROOT/'evidence/operations/atomic-reset/run-02/probe-report.json')['rows']] +
             [r['id'] for r in read_json(ROOT/'evidence/operations/password-reset/atomic-node-03/probe-results.json')['rows']]))
+    password_session_sources = ['engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java',
+        'engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java',
+        'engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java',
+        'engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java',
+        'tools/build_password_session.py','tools/run_atomic_reset_lab.py','tools/run_password_reset_lab.py',
+        'examples/node-react/server.js','tests/operations/PasswordSessionProbe.java','tests/operations/password_reset_probe.mjs',
+        'tests/operations/password_session_wire.mjs','tools/report_password_session_reuse.py',
+        'reuse/password-session-components.json','tools/verify_password_session_evidence.py','docs/password-session-transactions.md']
+    password_session_reports = ['evidence/operations/password-session-build/compile-03/'+name for name in
+        ('report.json','Session.java','Webserver.java','core-members.json','postgresql-members.json')]
+    password_session_reports += ['evidence/operations/atomic-reset/session-02/'+name for name in
+        ('report.json','probe-report.json','password-session-report.json')]
+    password_session_reports += ['evidence/operations/atomic-reset/session-node-02/report.json',
+        'evidence/operations/atomic-reset/password-session-validation.json']
+    password_session_reports += ['evidence/operations/password-reset/atomic-session-node-02/'+name for name in
+        ('report.json','probe-results.json','browser-results.json','tls-results.json','wire/good.jsonl','reset-success.png')]
+    password_session_note = 'Current explicit atomic-v1 Node sign-in/signup profile uses supported request-scoped SDK API/network overrides and Core password-session API, CDI5.4. Original hasher and token minting are reused; credential/hash/identity-mapping recheck and session insertion share one user-locked transaction through a PostgreSQL storage writer, without nested connection borrow or adapter-owned state.16 actual Core cases pass (8 reset and8 password-session), including both lock orderings, backend termination at insertion with no leaked session/retry, eight concurrent creations and external IDs. Node passes14 HTTP/SMTP,10 TLS and9 Chromium behavior cases; eight distinct concurrent users preserve subjects. Test-only unmodified-fetch observation records36 successful new private session calls and zero legacy calls; all17 final-lab containers retire, original database uncontacted, no images/volumes/networks retained. Compile03 adds explicit source modification notices and reproduces tested compile02 Core/plugin bytes exactly.128 correspondence checks are integrity only. Prior wrong-table test and lost-proxy-receiver failures remain preserved. This resolves the demonstrated validation/insertion race for this profile only; earlier atomic-only evidence and limitations remain historical. Other SDKs/legacy writers, configured namespace/link/MFA/step-up, missing-writer deployment faults, lost committed responses, load/pool saturation, migration/rolling deployment, complete transitive/native/OS distribution and independent human review remain unqualified. No foundation or full requirement/API/profile pass is inferred.'
+    data['password_session_candidate_artifacts'] = [artifact(ROOT,p) for p in password_session_reports]
+    for identifier in ('PWD-006','SES-001','SES-005','SES-006','SDK-001','SDKP-01','SDK-005','SDKP-05','WP-009','WP-010'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in password_session_sources]
+        index[identifier]['candidate_evidence'] += data['password_session_candidate_artifacts']
+        index[identifier]['qualification_note'] += ' ' + password_session_note
+        index[identifier]['observed_test_ids'] = list(dict.fromkeys(index[identifier].get('observed_test_ids',[]) +
+            [r['id'] for r in read_json(ROOT/'evidence/operations/atomic-reset/session-02/password-session-report.json')['rows']] +
+            [r['id'] for r in read_json(ROOT/'evidence/operations/password-reset/atomic-session-node-02/probe-results.json')['rows']]))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/checkpoint-retention-before-password-session.json',
+        'evidence/operations/hygiene/reset-only-candidate-retirement.json',
+        'evidence/operations/hygiene/verification-20260909T083106Z.json',
+        'evidence/operations/atomic-reset/password-session-checkpoint-checks.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')
