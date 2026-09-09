@@ -1,0 +1,76 @@
+[
+  {
+    "stage": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+    "event": "started"
+  },
+  {
+    "event": "response",
+    "path": "/auth/session/refresh",
+    "status": 401
+  },
+  {
+    "event": "response",
+    "path": "/auth/signin",
+    "status": 200
+  },
+  {
+    "stage": "initial-password",
+    "event": "signin-returned"
+  },
+  {
+    "event": "response",
+    "path": "/api/session/online",
+    "status": 200
+  },
+  {
+    "stage": "online-session",
+    "event": "response-received"
+  },
+  {
+    "stage": "online-session",
+    "event": "body-parsed"
+  },
+  {
+    "stage": "initial-password",
+    "event": "online-confirmed"
+  },
+  {
+    "event": "response",
+    "path": "/auth/signout",
+    "status": 200
+  },
+  {
+    "stage": "signed-out",
+    "event": "signin-form-visible"
+  },
+  {
+    "stage": "signed-out",
+    "event": "cookies-cleared"
+  },
+  {
+    "event": "response",
+    "path": "/api/session/online",
+    "status": 401
+  },
+  {
+    "stage": "signed-out",
+    "event": "online-denied"
+  },
+  {
+    "stage": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+    "event": "passed"
+  },
+  {
+    "stage": "BROWSER-PWDRESET-002-REQUEST-EMAIL",
+    "event": "started"
+  },
+  {
+    "event": "response",
+    "path": "/auth/reset-password",
+    "status": 200
+  },
+  {
+    "stage": "BROWSER-PWDRESET-002-REQUEST-EMAIL",
+    "event": "failed"
+  }
+]

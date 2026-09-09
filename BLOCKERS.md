@@ -45,6 +45,19 @@
   affected profile blocked when implemented; mocks cannot replace these tests.
 - Independent human security/licensing review has not occurred. An AI review does
   not meet TST-006/WP-036 or authorize production.
+- PWD-006/WP-009/WP-010: real reset email/token/React behavior passes in the
+  source-mounted candidate lab. Configured cross-tenant and linked-account
+  behavior remains unqualified. Password commit and session revocation are
+  separate transactions with a crash gap; known/unknown SMTP timing differs.
+  Durable delivery outbox/retries, policy, bounce handling and password-change
+  notifications remain absent. Updated Node Dockerfile image/fresh deployment
+  has not been built. Actual worker-crash cleanup passes, but fallback timeout
+  and Docker daemon outage paths remain untested. See `docs/password-reset.md`.
+- Hygiene exception: automatic approval review rejected exact recursive removal
+  of the95-file,277,260-byte generated Node compile cache at
+  `examples/node-react/undefined` with only "blocked by policy". It remains
+  ignored locally and excluded from artifacts; no alternate deletion was tried.
+  Earlier rejected scratch cleanup exceptions remain preserved separately.
 - OPS-004/OPS-011: Python readiness now fails during an actual database outage and
   recovers with existing-session continuity. This does not qualify traffic removal,
   other dependency failure classes, load, database HA, crash recovery or backup

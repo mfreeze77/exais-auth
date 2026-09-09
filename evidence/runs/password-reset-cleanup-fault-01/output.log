@@ -1,0 +1,1 @@
+{"passed": false, "errors": ["Temporary operation failed: worker"], "containers_created": 6, "containers_retired": 6, "resources_restored": true}

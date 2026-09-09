@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "id": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+      "status": "passed",
+      "elapsed_ms": 854,
+      "details": {
+        "signin_http_status": 200,
+        "online_session_http_status": 200,
+        "logout_http_status": 200,
+        "after_logout_http_status": 401
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-002-REQUEST-EMAIL",
+      "status": "failed",
+      "elapsed_ms": 15074,
+      "error": "Required password reset browser behavior was not established"
+    }
+  ],
+  "source_sha256": "3a27f688beb7c2b9d7f2389aed9e3fad6ccb10766a8d95679173a6732e6843a9",
+  "live_provider_tested": false
+}

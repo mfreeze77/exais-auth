@@ -1,0 +1,22 @@
+{
+  "schema": "expertauth-password-reset-cleanup-followup-v1",
+  "started": "2026-09-09T04:19:04.735571+00:00",
+  "ok": true,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "cdi_version": "5.4",
+  "ownership_validated_before_mutation": true,
+  "original_identity_set_restored": true,
+  "baseline_identity_count": 52,
+  "fixture_count": 11,
+  "initial_identity_count": 52,
+  "final_identity_count": 52,
+  "planned_delete_count": 0,
+  "already_absent_fixture_count": 11,
+  "delete_requests_attempted": 0,
+  "delete_requests_succeeded": 0,
+  "errors": [],
+  "source_sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b",
+  "finished": "2026-09-09T04:19:04.778763+00:00",
+  "elapsed_ms": 43.19
+}

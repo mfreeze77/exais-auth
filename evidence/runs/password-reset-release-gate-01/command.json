@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/validate_release.py"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788930294.7915254,
+  "elapsed_seconds": 2.189,
+  "input_sha256": {
+    "ledger/implementation.json": "4999a1a5f4fe0e99b834c0fb08845a9ccd492926d22b1d5d8f6cef60fe687ca1",
+    "tools/validate_release.py": "06738c687fdae44568da834c9a8b19477ca2db72fbb19a318301148c1c990ee7"
+  },
+  "inputs_changed": false,
+  "output_sha256": "333fa8f5eb6669bd8e1df506153eab83ae19ada05004e23c855cc8fff8e36ccf",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

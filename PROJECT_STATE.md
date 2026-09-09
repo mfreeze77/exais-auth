@@ -11,6 +11,16 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- Node/React password reset now uses real authenticated TLS SMTP and the engine's
+  one-time token/password APIs. Combined run-16 passes10 transport,11 HTTP/SMTP
+  and9 Chromium checks, including eight concurrent consumers with one winner.
+  All12 temporary containers and11 synthetic identities were removed; the original
+  52 identities and source processes/configuration are preserved. A separate
+  exit73 worker fault proves fallback deletion of one owned identity and removal
+  of all6 temporary containers. Read `docs/password-reset.md` for exact sources,
+  prior failures and commands. PWD-006 remains implemented-unverified: configured
+  tenant/link cases, atomic password-change/session-revocation, durable outbox,
+  full new image build and independent review remain open. No engine was selected.
 - A real encrypted recovery drill now restores the candidate database, signing
   material and configuration into temporary PostgreSQL/Core instances.28 format
   tests and19 operational checks pass; one historical snapshot state is separately
@@ -113,7 +123,16 @@ The updated archive runner retires its own resources and fails on cleanup errors
 its12 integrity/filesystem tests passed, but its revised full Docker flow has not
 been rerun. `AGENTS.md` requires the same lifecycle for all further work.
 
-Runtime notice packaging now runs in Core image `60c7677d0a91`:474 installed files
+Current hygiene verification `verification-20260909T050303Z.json` passes all10
+checks: two persistent containers, six current task image tags and no dangling
+project-labeled images. The reset slice added only one pinned17.16MB Mailpit
+image; source/bundle and test changes reused cached dependency images. The oldest
+generated checkpoint ZIP (12,715,973logical bytes) was retired after full
+hash/CRC/member/ancestry verification; its sidecars/history and two newer ZIPs
+were preserved before making the next checkpoint. A277,260-byte host compile
+cache remains locally ignored because automatic review rejected its cleanup.
+
+Historical notice packaging ran in Core image `60c7677d0a91`:474 installed files
 were hash-verified, including87 unchanged executable JARs,87 embedded notice texts,
 and5 supplemental scrypt/libffi notices mapped to release bytes. The83 available
 Maven source archives are locked and verified offline in the existing43MB cache;

@@ -1,0 +1,126 @@
+{
+  "schema": "expertauth-offline-node-client-build-v1",
+  "started": "2026-09-09T04:38:27.574728+00:00",
+  "compiled": false,
+  "browser_passed": false,
+  "foundation_passed": false,
+  "full_image_qualified": false,
+  "scope": "Compilation of current React source against an existing immutable dependency image only",
+  "image": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+  "image_builds": 0,
+  "image_downloads": 0,
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "network": "none",
+  "container_name": "expertauth-node-client-build-2bb1148707b6",
+  "container_id": null,
+  "container_labels": {
+    "org.expertauth.project": "expert-auth",
+    "org.expertauth.purpose": "node-client-build",
+    "org.expertauth.run": "reset-route-01",
+    "org.expertauth.instance": "2bb1148707b6"
+  },
+  "container_retired": true,
+  "inputs_unchanged": true,
+  "preserved_public_unchanged": true,
+  "compiler_tool_sha256": "2b3c5a1e9108ef239cbc5cfcaa4a643045afe081c0ce2b2c4254bb7160c987d1",
+  "commands": [
+    {
+      "label": "require-cached-image",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"volumes\":{{json .Config.Volumes}}}",
+        "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-01.stdout",
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "path": "command-01.stderr",
+        "bytes": 111,
+        "sha256": "134f47ad13fc01d3a869459f58b2bc658b4dae3d8c976d4b8423faefdfb55141"
+      }
+    },
+    {
+      "label": "containers-after",
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-02.stdout",
+        "bytes": 3835,
+        "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+      },
+      "stderr": {
+        "path": "command-02.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "name-absent-after",
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-node-client-build-2bb1148707b6$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-03.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "command-03.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "errors": [
+    "Required immutable image is unavailable locally; no pull is permitted"
+  ],
+  "inputs_before": {
+    "examples/node-react/client.jsx": "20d02e20153155a2af76e649f0c1e033bbce924ba36cc54688c0d29085c7a268",
+    "examples/node-react/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "preserved_public_before": {
+    "directories": [],
+    "files": {
+      "index.html": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a"
+    }
+  },
+  "index_before_sha256": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a",
+  "container_count_after": 59,
+  "inputs_after": {
+    "examples/node-react/client.jsx": "20d02e20153155a2af76e649f0c1e033bbce924ba36cc54688c0d29085c7a268",
+    "examples/node-react/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "preserved_public_after": {
+    "directories": [],
+    "files": {
+      "index.html": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a"
+    }
+  },
+  "index_after_sha256": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a",
+  "finished": "2026-09-09T04:38:27.996731+00:00",
+  "elapsed_ms": 422.0
+}

@@ -1,0 +1,325 @@
+{
+  "schema": "expertauth-password-reset-orchestration-v1",
+  "started": "2026-09-09T04:07:28.802094+00:00",
+  "inputs": {
+    "tools/run_password_reset_lab.py": "f18e34c4e9037012bc38f7d0de7380c0766581909f99e83a09178a7db3d784ef",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "tests/operations/password_reset_tls.py": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025",
+    "tests/operations/password_reset_probe.mjs": "5108ea460a51ea69b30fb92498e272728b06f5e9fa6a2a9bdb6e78532106ab01",
+    "tests/browser/password-reset.mjs": "bcbde2c32e222f04fe819f6eadfa43c7816df9e368d6827446d8786508a480df",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d",
+    "examples/node-react/server.js": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96",
+    "examples/node-react/email-delivery.js": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca",
+    "examples/node-react/test/email-delivery.test.js": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    "examples/node-react/client.jsx": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a",
+    "examples/node-react/Dockerfile": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+  },
+  "images": {
+    "python": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+    "node": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "core": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+    "browser": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+    "mail": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+  },
+  "application_mode": "cached dependency image with exact read-only source mounts",
+  "passed": false,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "image_builds": 0,
+  "image_downloads": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "published_ports": [],
+  "commands": [
+    {
+      "label": "launch-certificates",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-certificates-cfb6c4d46e",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\certificates.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=cfb6c4d46e",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user=0",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_reset_tls.py:/script.py:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\run-04:/out",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/script.py",
+        "prepare",
+        "--directory",
+        "/private",
+        "--mail-host",
+        "reset-mail-cfb6c4d46e.example.test"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 231,
+        "sha256": "e6e3b9f060b9454356c1fc422ec33e17b57d063b9cf7d32b30d0db3c48939cc1"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-mail",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-mail-cfb6c4d46e",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\mail.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=cfb6c4d46e",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-mail-cfb6c4d46e.example.test",
+        "--tmpfs",
+        "/data:rw,nosuid,noexec,size=64m",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\secrets\\mail.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\secrets:/run/mailpit:ro",
+        "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 1320,
+        "sha256": "f8575c6a9b40fedd0822899e0c964babeb8fd6d324121d291aa5f0d5f0fc60a0"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-tls-proof",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-tls-proof-cfb6c4d46e",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\tls-proof.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=cfb6c4d46e",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user=0",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_reset_tls.py:/script.py:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\run-04:/out",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/script.py",
+        "verify",
+        "--directory",
+        "/private",
+        "--output",
+        "/out/tls-results.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 141,
+        "sha256": "6383c6218b14d06355fc609a905f236b39d0e265d475cc2408756cb0e510446b"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-client-file-ownership",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-client-file-ownership-cfb6c4d46e",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\client-file-ownership.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=cfb6c4d46e",
+        "--network=none",
+        "--read-only",
+        "--user=0",
+        "--memory=128m",
+        "--cpus=1",
+        "--pids-limit=32",
+        "--cap-drop=ALL",
+        "--cap-add=CHOWN",
+        "--security-opt=no-new-privileges",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\run-04\\secrets:/private",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "-c",
+        "from pathlib import Path; import os; p=Path(\"/private\"); [(os.chown(p/n,1000,1000),os.chmod(p/n,0o400)) for n in [\"smtp-password\",\"wrong-password\"]]; os.chmod(p/\"ca.crt\",0o444)"
+      ],
+      "exit_code": 1,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 151,
+        "sha256": "814c6156d15af3d2fff3f893b691f68695e45953a3d3d609c8c6646015c22a25"
+      }
+    },
+    {
+      "label": "logs-mail",
+      "argv": [
+        "logs",
+        "370623cb3b2d6742247ef5c5c0563bc726cc2c910e84a31fc4d9585885cc4b9b"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 1278,
+        "sha256": "9f0b2374a35d002cd04e311eb70271a9c43b42fcafca34cbd89efb87801e4eb2"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-mail",
+      "argv": [
+        "stop",
+        "--time=3",
+        "370623cb3b2d6742247ef5c5c0563bc726cc2c910e84a31fc4d9585885cc4b9b"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 120,
+        "sha256": "195ab24b72ef8781483da546c9b9bf0a7028325dfd34c9401f1f055a039cf381"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "created_containers": [
+    {
+      "role": "certificates",
+      "name": "expertauth-reset-certificates-cfb6c4d46e",
+      "id": "3cf745705c2be32de3aad532b213e335d3f17dc91d170747c1f999a2fba09cd4",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "mail",
+      "name": "expertauth-reset-mail-cfb6c4d46e",
+      "id": "370623cb3b2d6742247ef5c5c0563bc726cc2c910e84a31fc4d9585885cc4b9b",
+      "image": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+    },
+    {
+      "role": "tls-proof",
+      "name": "expertauth-reset-tls-proof-cfb6c4d46e",
+      "id": "579e0e3f8cfc212682edae915e847e8ab7c36a89d5677742223e209a5df2697e",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "client-file-ownership",
+      "name": "expertauth-reset-client-file-ownership-cfb6c4d46e",
+      "id": "82a171007dd999aae15f24cf78757bb49b6dcc4c439eed8b099aa76144cb2cdd",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    }
+  ],
+  "retired_containers": [
+    {
+      "role": "client-file-ownership",
+      "id": "82a171007dd999aae15f24cf78757bb49b6dcc4c439eed8b099aa76144cb2cdd"
+    },
+    {
+      "role": "tls-proof",
+      "id": "579e0e3f8cfc212682edae915e847e8ab7c36a89d5677742223e209a5df2697e"
+    },
+    {
+      "role": "mail",
+      "id": "370623cb3b2d6742247ef5c5c0563bc726cc2c910e84a31fc4d9585885cc4b9b"
+    },
+    {
+      "role": "certificates",
+      "id": "3cf745705c2be32de3aad532b213e335d3f17dc91d170747c1f999a2fba09cd4"
+    }
+  ],
+  "errors": [
+    "Temporary operation failed: client-file-ownership"
+  ],
+  "tmpfs_limits_mib": {
+    "mail_database": 64,
+    "mail_tmp": 16,
+    "core_gradle": 16,
+    "node_tmp": 16,
+    "browser_tmp": 256,
+    "browser_shm": 256
+  },
+  "private_directory": ".runtime/password-reset/run-04",
+  "source_processes_and_mounts_unchanged": true,
+  "source_configuration_unchanged": true,
+  "resources_restored": true,
+  "inputs_unchanged": true,
+  "finished": "2026-09-09T04:07:40.332183+00:00"
+}

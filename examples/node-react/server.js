@@ -7,6 +7,7 @@ import { verifySession } from 'supertokens-node/recipe/session/framework/express
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { createRemoteJWKSet, customFetch, jwtVerify } from 'jose';
+import { createPasswordResetEmailDelivery, PasswordResetDeliveryError } from './email-delivery.js';
 
 const origin = new URL(process.env.EXPERTAUTH_PUBLIC_ORIGIN || 'http://localhost:7300').origin;
 const coreURL = process.env.EXPERTAUTH_CORE_URL || 'http://core-a:3567';
@@ -15,6 +16,7 @@ if (!apiKey || apiKey.length < 20) throw new Error('A private Core API key is re
 if (process.env.NODE_ENV === 'production' && !origin.startsWith('https://') && process.env.EXPERTAUTH_LOCAL_PROBE !== 'true') {
   throw new Error('Production public origin must use HTTPS');
 }
+const passwordResetDelivery = createPasswordResetEmailDelivery(process.env, origin);
 
 supertokens.init({
   framework: 'express',
@@ -23,7 +25,32 @@ supertokens.init({
   telemetry: false,
   recipeList: [
     EmailPassword.init({
-      emailDelivery: { service: { async sendEmail() { throw new Error('Local recovery delivery is not configured'); } } },
+      emailDelivery: passwordResetDelivery || { service: { async sendEmail() { throw new Error('Local recovery delivery is not configured'); } } },
+      override: { apis: original => {
+        if (!passwordResetDelivery) return { ...original, generatePasswordResetTokenPOST: undefined, passwordResetPOST: undefined };
+        return { ...original,
+          generatePasswordResetTokenPOST: async input => {
+            try { return await original.generatePasswordResetTokenPOST(input); }
+            catch (error) {
+              // SMTP failure must not distinguish an existing address from an
+              // unknown one. The delivery adapter records a fixed private error.
+              // There is no durable delivery queue yet; callers can request again.
+              if (error instanceof PasswordResetDeliveryError) return { status: 'OK' };
+              throw error;
+            }
+          },
+          passwordResetPOST: async input => {
+            const result = await original.passwordResetPOST(input);
+            if (result.status === 'OK') {
+              // The engine owns both operations. Success is returned only after
+              // online revocation. This is not one atomic reset/revoke transaction;
+              // crash recovery between these calls remains unqualified.
+              await Session.revokeAllSessionsForUser(result.user.id, true, undefined, input.userContext);
+            }
+            return result;
+          },
+        };
+      } },
     }),
     Session.init({ cookieSecure: origin.startsWith('https://'), cookieSameSite: 'lax', antiCsrf: 'VIA_CUSTOM_HEADER',
       override: { functions: original => ({ ...original, createNewSession: input => original.createNewSession({

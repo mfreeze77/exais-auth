@@ -1,0 +1,17 @@
+{
+  "rows": [
+    {
+      "id": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+      "status": "failed",
+      "elapsed_ms": 207179,
+      "error": "Required password reset browser behavior was not established"
+    },
+    {
+      "id": "BROWSER-PWDRESET-CONTEXT-CLEANUP",
+      "status": "failed",
+      "error": "Owned browser context did not close"
+    }
+  ],
+  "source_sha256": "f210df91586d826dc165ca58a0bc4fe615fadcbc27582d9d6ec358c865bb8325",
+  "live_provider_tested": false
+}

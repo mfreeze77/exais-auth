@@ -1299,7 +1299,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -1405,14 +1405,131 @@
         "registry_sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36",
         "record_sha256": "ae8d6b61f69314046b237318afafce2d072883ffb965e0af053aba92d8de45d4"
       },
-      "status": "planned",
-      "implementation": [],
+      "status": "implemented-unverified",
+      "implementation": [
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "Full original acceptance and final-engine qualification remain open."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        }
+      ],
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
+      "observed_test_ids": [
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "PWD-007",
@@ -2449,7 +2566,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -2495,7 +2612,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -2717,7 +2834,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -2799,7 +2916,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -2845,7 +2962,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -2939,7 +3056,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -4520,7 +4637,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -4582,7 +4699,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/python/app.py",
@@ -5159,11 +5276,59 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/node-react/package-lock.json",
           "sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
         },
         {
           "path": "contracts/session-policy-oss-node-cdi54-v1.json",
@@ -5196,6 +5361,54 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
           "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
         },
@@ -5216,7 +5429,7 @@
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open.",
+      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
       "observed_test_ids": []
     },
     {
@@ -5401,11 +5614,59 @@
       "implementation": [
         {
           "path": "examples/node-react/client.jsx",
-          "sha256": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a"
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
         },
         {
           "path": "tests/browser/oss-password.mjs",
           "sha256": "1b4386c52571a055ca7b3c93bfa945b6216902b100683bba9839b725fb093e30"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
         },
         {
           "path": "contracts/session-policy-oss-node-cdi54-v1.json",
@@ -5442,6 +5703,54 @@
           "sha256": "856ea89f7be5ebaf8081b35aa9653238d1910ca869c04783f95c4df5ae54fbbd"
         },
         {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
           "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
         },
@@ -5462,7 +5771,7 @@
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.",
+      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
       "observed_test_ids": [
         "BROWSER-OSS-001",
         "BROWSER-OSS-002",
@@ -6232,7 +6541,7 @@
       "implementation": [
         {
           "path": "examples/node-react/client.jsx",
-          "sha256": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a"
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
         },
         {
           "path": "tests/browser/oss-password.mjs",
@@ -10954,11 +11263,59 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb"
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
         },
         {
           "path": "examples/node-react/package-lock.json",
           "sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
         },
         {
           "path": "contracts/session-policy-oss-node-cdi54-v1.json",
@@ -10991,6 +11348,54 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
           "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
         },
@@ -11011,7 +11416,7 @@
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open.",
+      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
       "observed_test_ids": []
     },
     {
@@ -11196,11 +11601,59 @@
       "implementation": [
         {
           "path": "examples/node-react/client.jsx",
-          "sha256": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a"
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
         },
         {
           "path": "tests/browser/oss-password.mjs",
           "sha256": "1b4386c52571a055ca7b3c93bfa945b6216902b100683bba9839b725fb093e30"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
         },
         {
           "path": "contracts/session-policy-oss-node-cdi54-v1.json",
@@ -11237,6 +11690,54 @@
           "sha256": "856ea89f7be5ebaf8081b35aa9653238d1910ca869c04783f95c4df5ae54fbbd"
         },
         {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
           "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
         },
@@ -11257,7 +11758,7 @@
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.",
+      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
       "observed_test_ids": [
         "BROWSER-OSS-001",
         "BROWSER-OSS-002",
@@ -12334,13 +12835,115 @@
         "record_sha256": "8c9b42a0554ebed510f6be625850f11eed20705f0e5eef56b6d2a95e78f54568"
       },
       "status": "planned",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "WP-008 and foundation prerequisites unmet; this independent reference slice does not close the package."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        }
+      ],
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification."
     },
     {
       "id": "WP-010",
@@ -12350,13 +12953,115 @@
         "record_sha256": "575b1da7d541760ccd7d45543fe3af70af494d7bb5f7fcd6257e857d6ef98733"
       },
       "status": "planned",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+        },
+        {
+          "path": "examples/node-react/email-delivery.js",
+          "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+        },
+        {
+          "path": "examples/node-react/client.jsx",
+          "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+        },
+        {
+          "path": "examples/node-react/test/email-delivery.test.js",
+          "sha256": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85"
+        },
+        {
+          "path": "tests/browser/password-reset.mjs",
+          "sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+        },
+        {
+          "path": "tests/operations/password_reset_tls.py",
+          "sha256": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025"
+        },
+        {
+          "path": "tests/operations/password_reset_cleanup.py",
+          "sha256": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+        },
+        {
+          "path": "reuse/password-reset-components.json",
+          "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "WP-007 and foundation prerequisites unmet; this independent reference slice does not close the package."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/password-reset/run-16/report.json",
+          "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-results.json",
+          "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/browser-results.json",
+          "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/tls-results.json",
+          "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/runner-source.py",
+          "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+        },
+        {
+          "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+          "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+          "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+        },
+        {
+          "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+          "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+        },
+        {
+          "path": "evidence/runs/password-reset-unit-01/command.json",
+          "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+        },
+        {
+          "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+          "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+        },
+        {
+          "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+          "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+        },
+        {
+          "path": "evidence/operations/password-reset/evidence-validation.json",
+          "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        }
+      ],
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification."
     },
     {
       "id": "WP-011",
@@ -12898,6 +13603,18 @@
     {
       "path": "evidence/operations/hygiene/checkpoint-retention-before-recovery.json",
       "sha256": "c14f002c3e518367e9555cf2cda0fe96b9167050a0b16a2a47c7c486c2f055bf"
+    },
+    {
+      "path": "evidence/operations/hygiene/verification-20260909T050303Z.json",
+      "sha256": "faf6c986c2c8961d03f0af913ed3e2246683c9dc68fd54763de903783f2f016d"
+    },
+    {
+      "path": "evidence/operations/hygiene/password-reset-host-cache-blocked.json",
+      "sha256": "bdfd57b649fd30fc6e2fa92c1eb3b9ced1cd9e797239cc682acd3734b592ec6d"
+    },
+    {
+      "path": "evidence/operations/hygiene/checkpoint-retention-before-password-reset.json",
+      "sha256": "76c748fbbb707f1d07c9c980c598b8bf0148767c37c981e359699dda3c05d414"
     }
   ],
   "runtime_distribution_artifacts": [
@@ -13192,6 +13909,56 @@
     {
       "path": "evidence/runs/encrypted-recovery-evidence-validation-01/command.json",
       "sha256": "92d63b59e93d33e5aacb87f8ebb7ceb7b1615dd8927521998f2b01d22f5106c3"
+    }
+  ],
+  "password_reset_candidate_artifacts": [
+    {
+      "path": "evidence/operations/password-reset/run-16/report.json",
+      "sha256": "4c9391eb3214154ebcacd592cc16ef5bdf8f44ee25872108c11069b4a44bd4aa"
+    },
+    {
+      "path": "evidence/operations/password-reset/run-16/probe-results.json",
+      "sha256": "70f1705f55464ce1c729c920d03fb9e50f68e2b4c09a7e14c900d0d8d3c97962"
+    },
+    {
+      "path": "evidence/operations/password-reset/run-16/browser-results.json",
+      "sha256": "522f2f9740762c912f287d2dfed5ae278d324748d8c426c7d8529d20d7263d02"
+    },
+    {
+      "path": "evidence/operations/password-reset/run-16/tls-results.json",
+      "sha256": "9a0fa5feb9663020b18ddc20dcc15445237098e906102b2523625e9643cff58b"
+    },
+    {
+      "path": "evidence/operations/password-reset/run-16/runner-source.py",
+      "sha256": "acf541ad7281933e930fa0d1ced9e2a43f4b486188d7aa4e4666d1bd1fbfd35c"
+    },
+    {
+      "path": "evidence/operations/password-reset/run-16/probe-source.mjs",
+      "sha256": "dd2a4dc929f510e926fbdc68101f1571ff556b03d30c150079db1f49e4627bf9"
+    },
+    {
+      "path": "evidence/operations/password-reset/cleanup-fault-01/report.json",
+      "sha256": "30d4a4630f89ee6c9ddcda9a76f9c37b799fda885eb81c6b9fd3d84c71a336c1"
+    },
+    {
+      "path": "evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json",
+      "sha256": "c6fb861da1a0c60352846dc23500365ee1318bf3c4b6604886cb58703d00ab9c"
+    },
+    {
+      "path": "evidence/runs/password-reset-unit-01/command.json",
+      "sha256": "190df6d9314c07c0ae7ede720d9505aa3c73baead509c68e067f9a619e38cd4b"
+    },
+    {
+      "path": "evidence/runs/password-reset-cleanup-fault-01/command.json",
+      "sha256": "16057b678899fd1de8a22c024e27c903e28919354a0aca4225d70814cb1f76ad"
+    },
+    {
+      "path": "evidence/operations/node-client-build/reset-client-03/report.json",
+      "sha256": "75d49175530f3ef8eb23cc8a5fec45c68810d7c3420add6fde6f5e491315af50"
+    },
+    {
+      "path": "evidence/operations/password-reset/evidence-validation.json",
+      "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
     }
   ]
 }

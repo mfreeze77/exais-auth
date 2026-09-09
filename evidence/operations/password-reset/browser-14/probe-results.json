@@ -1,0 +1,44 @@
+{
+  "schema": "expertauth-password-reset-lab-v1",
+  "started": "2026-09-09T04:39:29.643Z",
+  "finished": "2026-09-09T04:39:46.133Z",
+  "rows": [
+    {
+      "id": "RESET-BROWSER-REAL-REACT-FLOW",
+      "status": "failed",
+      "requirement": "PWD-006",
+      "error": "Actual assertion or operation failed",
+      "elapsed_ms": 16362
+    },
+    {
+      "id": "RESET-OWNED-FIXTURE-CLEANUP",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 37,
+      "source_identity_count": 52,
+      "owned_fixture_count": 1,
+      "original_identity_set_restored": true
+    }
+  ],
+  "wire": [
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    }
+  ],
+  "passed": false,
+  "mode": "browser-only",
+  "skipped": 0,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "live_provider_tested": false,
+  "independent_security_review": false,
+  "limitations": [
+    "No configured cross-tenant proof",
+    "Reset/password-update/session-revoke are separate transactions",
+    "SMTP timing privacy and durable outbox remain unqualified",
+    "Browser HTTP is internal lab transport; SMTP and mailbox use verified TLS"
+  ]
+}

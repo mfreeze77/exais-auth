@@ -1,0 +1,7 @@
+{
+  "id": "26bdede37c8bc35ebfa2ca97ef8ff8c42a9f22acc07f8dd272b9cb0e28043b06",
+  "name": "expertauth-reset-mail-f3dea0a197",
+  "removed": true,
+  "cause": "Complete CID write and asynchronous --rm retirement must be awaited",
+  "original_failure_report_preserved": true
+}

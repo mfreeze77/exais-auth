@@ -9,7 +9,25 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest operational work is `docs/encrypted-recovery.md` and
+Latest feature work is `docs/password-reset.md`: run-16 passes10 actual transport,
+11 HTTP/SMTP and9 Chromium checks, with all12 containers and11 fixtures removed.
+The cleanup-fault proof deliberately exits73, then removes one owned identity
+through Core and all6 containers. Original52 identities are preserved. Product
+source hashes match the combined run; its older runner/worker snapshots are
+retained because the later cleanup-fault changes were tested separately.
+Use the documented cached compiler and source-mounted lab commands for changed
+code. Do not repeat unchanged passes or use host npm networking as a fallback.
+The updated full Node Dockerfile still needs a bounded cached build, installed
+file/license checks, regression and exact old-image retirement; retain one
+current image per component. No foundation/dependency gate is waived.
+
+The only new cached test image in this feature slice is pinned Mailpit1.31.1
+(17,164,101 image-record bytes). Temporary services expose no ports or volumes.
+Automatic review rejected deletion of the277,260-byte generated host cache at
+`examples/node-react/undefined`; it is ignored but still present. Do not retry
+that rejected deletion through another tool. See the exact hygiene evidence.
+
+The prior operational work is `docs/encrypted-recovery.md` and
 `evidence/operations/recovery/run-01`:28 format tests,19 operational passes and
 one historical-state characterization. The real dump/config/key-material restore
 uses cached images and temporary PostgreSQL storage; all9 clients/services were
@@ -36,6 +54,10 @@ history. Their checksum/manifest/validation sidecars remain; the two newest
 validated rollback ZIPs were kept before making this checkpoint. Read
 `evidence/operations/hygiene/checkpoint-retention-before-recovery.json` before
 looking for an older ZIP. This never applies to supplied acceptance archives.
+The next retention record is
+`evidence/operations/hygiene/checkpoint-retention-before-password-reset.json`:
+dc125668bb75's ZIP was verified and retired (12,715,973logical bytes), keeping
+ae8e3f5502d5 and83daae7876f3 plus all sidecars/history before the new checkpoint.
 
 Latest source/packaging checkpoint: read `docs/native-source-correspondence.md`.
 The corrected notice tree has89 archive notice texts and390 files. Core image

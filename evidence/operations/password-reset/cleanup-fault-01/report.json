@@ -1,0 +1,472 @@
+{
+  "schema": "expertauth-password-reset-orchestration-v1",
+  "started": "2026-09-09T04:47:52.488720+00:00",
+  "inputs": {
+    "tools/run_password_reset_lab.py": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "tests/operations/password_reset_cleanup.py": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b",
+    "tests/operations/password_reset_tls.py": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025",
+    "tests/operations/password_reset_probe.mjs": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d",
+    "tests/browser/password-reset.mjs": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d",
+    "examples/node-react/server.js": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96",
+    "examples/node-react/email-delivery.js": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca",
+    "examples/node-react/test/email-delivery.test.js": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    "examples/node-react/client.jsx": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7",
+    "examples/node-react/Dockerfile": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d",
+    "examples/node-react/public/app.js": "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e",
+    "examples/node-react/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29"
+  },
+  "images": {
+    "python": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+    "node": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "core": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+    "browser": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+    "mail": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+  },
+  "application_mode": "cached dependency image with exact read-only source mounts",
+  "passed": false,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "mode": "cleanup-fault",
+  "image_builds": 0,
+  "image_downloads": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "published_ports": [],
+  "commands": [
+    {
+      "label": "launch-certificates",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-certificates-1e6e87998d",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\certificates.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=1e6e87998d",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user=0",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_reset_tls.py:/script.py:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\cleanup-fault-01:/out",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/script.py",
+        "prepare",
+        "--directory",
+        "/private",
+        "--mail-host",
+        "reset-mail-1e6e87998d.example.test"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 231,
+        "sha256": "5ea029cd3785d10435931b43f941215ed35698ce1bb437363623478c1f0d255b"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-mail",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-mail-1e6e87998d",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\mail.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=1e6e87998d",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-mail-1e6e87998d.example.test",
+        "--tmpfs",
+        "/data:rw,nosuid,noexec,size=64m",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\mail.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets:/run/mailpit:ro",
+        "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 610,
+        "sha256": "8c8b83572d25a0fa7512381470ab599232482e32c4f7e6859f0479e9621b74ad"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-client-file-ownership",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-client-file-ownership-1e6e87998d",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\client-file-ownership.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=1e6e87998d",
+        "--network=none",
+        "--read-only",
+        "--user=0",
+        "--memory=128m",
+        "--cpus=1",
+        "--pids-limit=32",
+        "--cap-drop=ALL",
+        "--cap-add=CHOWN",
+        "--security-opt=no-new-privileges",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets:/private",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "-c",
+        "from pathlib import Path; import os; p=Path(\"/private\"); [(os.chmod(p/n,0o400),os.chown(p/n,1000,1000)) for n in [\"smtp-password\",\"wrong-password\"]]; os.chmod(p/\"ca.crt\",0o444)"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-good",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-good-1e6e87998d",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\good.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=1e6e87998d",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-good-1e6e87998d.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\good.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react\\server.js:/app/server.js:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react\\public\\app.js:/app/public/app.js:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react\\email-delivery.js:/app/email-delivery.js:ro",
+        "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-worker",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-worker-1e6e87998d",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\worker.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=1e6e87998d",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=2g",
+        "--cpus=2",
+        "--pids-limit=256",
+        "--shm-size=256m",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\worker.env",
+        "-e",
+        "NODE_EXTRA_CA_CERTS=/private/ca.crt",
+        "-e",
+        "PRIVATE_DIR=/private",
+        "-e",
+        "EVIDENCE_DIR=/out",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\cleanup-fault-01:/out",
+        "--entrypoint",
+        "node",
+        "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+        "/repo/tests/operations/password_reset_probe.mjs"
+      ],
+      "exit_code": 73,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-good",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "ec266ac90aaba8dcd92bff85a4ae13195fe1ffb89916966ed2ce4efc7da1fb32"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "2fc1966668e085425bc30ae3cb56d5b195857e3f7e73baa0ac8c48ee8e39f2f0"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-mail",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "0d1ec4433cfdc3730ae487ed9ba31d623f71b9b74d40382e0a1f257b6fe02628"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "19df85c35a7906a7d961aa5b1f799a9c0ddd2ac6fec7c19635bb5013e9bd7f8c"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-cleanup-fallback",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-cleanup-fallback-1e6e87998d",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\cleanup-fallback.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=1e6e87998d",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user=0",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\worker.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\cleanup-fault-01\\secrets\\fixtures.json:/private/fixtures.json:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_reset_cleanup.py:/script.py:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\cleanup-fault-01:/out",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/script.py",
+        "--fixtures",
+        "/private/fixtures.json",
+        "--output",
+        "/out/cleanup-followup.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 75,
+        "sha256": "c35e139bd7d21752e1c4eeebd46a303cc558daea14f1678b7bea3b3120a8ee33"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "created_containers": [
+    {
+      "role": "certificates",
+      "name": "expertauth-reset-certificates-1e6e87998d",
+      "id": "89fd8a130879305553f0f26b4483297b0ba1e45943a68369527cefd2200ece89",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "mail",
+      "name": "expertauth-reset-mail-1e6e87998d",
+      "id": "0d1ec4433cfdc3730ae487ed9ba31d623f71b9b74d40382e0a1f257b6fe02628",
+      "image": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+    },
+    {
+      "role": "client-file-ownership",
+      "name": "expertauth-reset-client-file-ownership-1e6e87998d",
+      "id": "62e2a65ffeb0b1aa55803a988d5cf0661203f1452a5e3c46ffb308e0cefd76e0",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "good",
+      "name": "expertauth-reset-good-1e6e87998d",
+      "id": "ec266ac90aaba8dcd92bff85a4ae13195fe1ffb89916966ed2ce4efc7da1fb32",
+      "image": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf"
+    },
+    {
+      "role": "worker",
+      "name": "expertauth-reset-worker-1e6e87998d",
+      "id": "3a9e35a8ac09c6b153a9a5f7241133db79c0f8e38237cf5f1da175e08c2e5a57",
+      "image": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e"
+    },
+    {
+      "role": "cleanup-fallback",
+      "name": "expertauth-reset-cleanup-fallback-1e6e87998d",
+      "id": "e96d53b15a806c2713e72c952fa85f1a651b4c64a39f697733d874e0fa03fc6b",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    }
+  ],
+  "retired_containers": [
+    {
+      "role": "worker",
+      "id": "3a9e35a8ac09c6b153a9a5f7241133db79c0f8e38237cf5f1da175e08c2e5a57"
+    },
+    {
+      "role": "good",
+      "id": "ec266ac90aaba8dcd92bff85a4ae13195fe1ffb89916966ed2ce4efc7da1fb32"
+    },
+    {
+      "role": "client-file-ownership",
+      "id": "62e2a65ffeb0b1aa55803a988d5cf0661203f1452a5e3c46ffb308e0cefd76e0"
+    },
+    {
+      "role": "mail",
+      "id": "0d1ec4433cfdc3730ae487ed9ba31d623f71b9b74d40382e0a1f257b6fe02628"
+    },
+    {
+      "role": "certificates",
+      "id": "89fd8a130879305553f0f26b4483297b0ba1e45943a68369527cefd2200ece89"
+    },
+    {
+      "role": "cleanup-fallback",
+      "id": "e96d53b15a806c2713e72c952fa85f1a651b4c64a39f697733d874e0fa03fc6b"
+    }
+  ],
+  "errors": [
+    "Temporary operation failed: worker"
+  ],
+  "tmpfs_limits_mib": {
+    "mail_database": 64,
+    "mail_tmp": 16,
+    "core_gradle": 16,
+    "node_tmp": 16,
+    "browser_tmp": 256,
+    "browser_shm": 256
+  },
+  "private_directory": ".runtime/password-reset/cleanup-fault-01",
+  "installed_input_hashes": {
+    "good": [
+      "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ]
+  },
+  "identity_cleanup_fallback": true,
+  "source_processes_and_mounts_unchanged": true,
+  "source_configuration_unchanged": true,
+  "resources_restored": true,
+  "inputs_unchanged": true,
+  "finished": "2026-09-09T04:48:09.339877+00:00",
+  "cleanup_fault_passed": true,
+  "cleanup_fault_limitations": [
+    "Actual worker process exit after signup tested; fallback process timeout and daemon outage are not injected."
+  ]
+}

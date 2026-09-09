@@ -1,0 +1,111 @@
+{
+  "schema": "expertauth-mailpit-primary-source-research-v1",
+  "observed_at": "2026-09-09T03:42:43Z",
+  "status": "SOURCE_AND_OFFICIAL_PACKAGE_METADATA_OBSERVED_RUNTIME_UNTESTED",
+  "scope": "Private test SMTP receiver for real application email delivery; not live-provider qualification",
+  "release": {
+    "tag": "v1.31.1",
+    "published_date": "2026-09-05",
+    "latest_stable_observed": true,
+    "repository": "https://github.com/axllent/mailpit",
+    "commit": "17a70ba7a87dc96c04646a59493389ec17af5cfb",
+    "release_url": "https://github.com/axllent/mailpit/releases/tag/v1.31.1",
+    "commit_url": "https://github.com/axllent/mailpit/commit/17a70ba7a87dc96c04646a59493389ec17af5cfb",
+    "maintenance_observation": "Release updates Go and Node dependencies, adds an allowed-hosts option, and includes SMTP and SSRF hardening fixes; this is not a complete current advisory audit."
+  },
+  "image": {
+    "selected_reference": "ghcr.io/axllent/mailpit:v1.31.1@sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7",
+    "platform": "linux/amd64",
+    "platform_manifest_digest": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7",
+    "release_index_digest": "sha256:98b916bd3c8d61f7633a52d3ea2f58d00620cb01ca57ab59edde68c347a95365",
+    "digest_evidence_kind": "Official GitHub Container Registry package page text; registry manifest bytes not acquired",
+    "package_url": "https://github.com/axllent/mailpit/pkgs/container/mailpit/1212685443?tag=v1.31.1",
+    "official_mirror_documentation": "https://mailpit.axllent.org/docs/install/docker/",
+    "release_build_workflow": "https://raw.githubusercontent.com/axllent/mailpit/17a70ba7a87dc96c04646a59493389ec17af5cfb/.github/workflows/build-docker.yml",
+    "compressed_layer_bytes": null,
+    "uncompressed_image_bytes": null,
+    "config_digest": null,
+    "size_status": "UNOBSERVED: public registry metadata could not be retrieved by the web tool; no size estimate is asserted",
+    "parent_followup": "Inspect registry manifest/config and sum compressed layer sizes before acquiring this one platform image; record actual image size after acquisition.",
+    "docker_hub_digest_equivalence": "Not observed; do not transfer the GHCR digest to Docker Hub without registry verification",
+    "locally_pulled_or_run_by_research_agent": false
+  },
+  "license": {
+    "project_license": "MIT",
+    "source_path": "LICENSE",
+    "source_commit": "17a70ba7a87dc96c04646a59493389ec17af5cfb",
+    "source_url": "https://raw.githubusercontent.com/axllent/mailpit/17a70ba7a87dc96c04646a59493389ec17af5cfb/LICENSE",
+    "copyright_line": "Copyright (c) 2022-Now() Ralph Slooten",
+    "grant_status": "MIT grant and retention condition read from immutable primary source",
+    "retention": "Preserve the copyright and permission notice when distributing copies or substantial portions.",
+    "exact_source_bytes_sha256": null,
+    "source_bytes_status": "Web text inspected; raw byte artifact not retained, so no reconstructed byte hash asserted",
+    "full_library_and_image_license_closure": false,
+    "dockerfile_url": "https://raw.githubusercontent.com/axllent/mailpit/17a70ba7a87dc96c04646a59493389ec17af5cfb/Dockerfile",
+    "build_observation": "Dockerfile uses golang:alpine and alpine:latest moving bases, npm ci, Go dependencies, and generates third-party license text. It builds with CGO_ENABLED=0 and installs tzdata. The image digest pins an artifact; it does not prove a reproducible source build or complete Go, frontend and OS license closure."
+  },
+  "smtp": {
+    "default_port": 1025,
+    "default_security": "Unencrypted and unauthenticated until configured",
+    "documentation_url": "https://mailpit.axllent.org/docs/configuration/smtp/",
+    "pinned_config_url": "https://raw.githubusercontent.com/axllent/mailpit/17a70ba7a87dc96c04646a59493389ec17af5cfb/config/config.go",
+    "recommended_starttls_environment": {
+      "MP_SMTP_BIND_ADDR": "0.0.0.0:1025",
+      "MP_SMTP_TLS_CERT": "/run/mailpit/tls.crt",
+      "MP_SMTP_TLS_KEY": "/run/mailpit/tls.key",
+      "MP_SMTP_REQUIRE_STARTTLS": "true",
+      "MP_SMTP_AUTH_FILE": "/run/mailpit/smtp-auth"
+    },
+    "implicit_tls_alternative": "Keep the certificate/key/auth-file settings, set MP_SMTP_REQUIRE_TLS=true, and omit MP_SMTP_REQUIRE_STARTTLS. TLS starts immediately on the configured SMTP port; STARTTLS is disabled.",
+    "client_trust_requirement": "Trust the test CA and validate the certificate hostname; successful delivery with verification disabled does not prove authenticated TLS.",
+    "configuration_constraints": [
+      "Providing a certificate/key alone enables optional STARTTLS; require it explicitly for the STARTTLS probe.",
+      "Do not set both SMTP_REQUIRE_TLS and SMTP_REQUIRE_STARTTLS.",
+      "Do not enable MP_SMTP_AUTH_ALLOW_INSECURE or MP_SMTP_AUTH_ACCEPT_ANY for the authenticated probe."
+    ],
+    "authentication_mechanisms": ["PLAIN", "LOGIN"],
+    "password_file_format": "One username:password entry per line; plaintext and documented htpasswd hash formats are supported.",
+    "password_file_caveat": "The pinned auth parser splits credentials on all whitespace; use generated credentials without whitespace. Restart Mailpit after changing the file. An empty credential input returns without setting credentials, so validate a nonempty file and run wrong/missing-credential negative tests.",
+    "password_documentation_url": "https://mailpit.axllent.org/docs/configuration/passwords/",
+    "auth_parser_url": "https://raw.githubusercontent.com/axllent/mailpit/17a70ba7a87dc96c04646a59493389ec17af5cfb/internal/auth/auth.go"
+  },
+  "api": {
+    "default_port": 8025,
+    "list": "GET /api/v1/messages?start=0&limit=50",
+    "list_shape": "Lowercase messages array, newest first; message entries use ID, To, Subject and Username. To entries contain Address and Name.",
+    "body": "GET /api/v1/message/{ID}",
+    "body_shape": "JSON includes HTML, Text, Subject, To and Username; reading this endpoint marks the message read.",
+    "raw_message": "GET /api/v1/message/{ID}/raw",
+    "raw_message_content_type": "text/plain",
+    "polling_guidance": "Use the exact returned ID after matching a fresh unique recipient and subject; do not rely on latest under concurrent delivery. Keep password-reset URLs and message bodies private.",
+    "authentication": "Set MP_UI_AUTH_FILE to a separate nonempty credential file. UI and read APIs then require HTTP Basic authentication; SMTP credentials are a separate configuration.",
+    "optional_https": "MP_UI_TLS_CERT and MP_UI_TLS_KEY enable HTTPS on the UI/API listener.",
+    "documentation_url": "https://mailpit.axllent.org/docs/api-v1/",
+    "http_configuration_url": "https://mailpit.axllent.org/docs/configuration/http/",
+    "pinned_openapi_url": "https://raw.githubusercontent.com/axllent/mailpit/17a70ba7a87dc96c04646a59493389ec17af5cfb/server/ui/api/v1/swagger.json"
+  },
+  "suggested_bounded_test_options": {
+    "MP_DISABLE_VERSION_CHECK": "true",
+    "MP_SMTP_DISABLE_RDNS": "true",
+    "MP_MAX_MESSAGES": "50",
+    "MP_MAX_MESSAGE_SIZE": "5",
+    "MP_ALLOWED_HOSTS": "mailpit:8025"
+  },
+  "options_source": "https://mailpit.axllent.org/docs/configuration/runtime-options/",
+  "runtime_qualification": {
+    "smtp_delivery_tested": false,
+    "wrong_or_missing_smtp_credentials_tested": false,
+    "certificate_validation_tested": false,
+    "read_api_authentication_tested": false,
+    "password_reset_tested": false,
+    "live_email_provider_tested": false,
+    "independent_security_review": false,
+    "foundation_engine_selected": false
+  },
+  "research_failures_preserved": [
+    "Web retrieval of Docker Hub tag metadata failed; no layer sizes or Docker Hub digest asserted.",
+    "Web retrieval of the immutable GHCR registry manifest failed; digest comes from the official package page only."
+  ],
+  "resources_created": [],
+  "container_actions": []
+}

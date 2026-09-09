@@ -6,6 +6,13 @@ license-enforcement changes were performed.
 
 Material unresolved findings:
 
+- Password reset succeeds through verified authenticated TLS SMTP and rejects
+  replay/concurrent losing consumers. Reset commit and session revocation are
+  separate engine calls: a crash between them can retain old sessions. Equal
+  known/unknown-email response bodies do not eliminate transport timing leakage.
+  Configured cross-tenant/link cases and durable outbox/retries remain open.
+  The real exit73 worker-cleanup proof removes its one owned account; fallback
+  timeout/daemon outage are not qualified. See `docs/password-reset.md`.
 - Keycloak26.7.3 broker linking can persist one provider subject on two primary
   accounts under concurrent supported flows. Parallel self-service unlink can
   remove all login methods. Fresh realms and an independent persistence read

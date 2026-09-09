@@ -1,0 +1,70 @@
+{
+  "certificate_sha256": {
+    "ca_pem": "403cee10384382dcdf1914414e38d2d28d8a17296cec7b25da90fd8980be963c",
+    "leaf_pem": "66acfda2b59493762701a0951f33f062679102498fa1d6c805969f25ac27ec50"
+  },
+  "checks": [
+    {
+      "code": "HTTP_200",
+      "id": "https_valid_basic_auth",
+      "passed": true
+    },
+    {
+      "code": "SMTP_AUTH_AND_NOOP_OK",
+      "id": "smtp_good_login_noop",
+      "passed": true
+    },
+    {
+      "code": "SMTP_AUTH_REJECTED",
+      "id": "smtp_wrong_login_rejected",
+      "passed": true
+    },
+    {
+      "code": "SMTP_AUTH_REQUIRED",
+      "id": "smtp_send_after_wrong_login_rejected",
+      "passed": true
+    },
+    {
+      "code": "SMTP_AUTH_REQUIRED",
+      "id": "smtp_missing_login_send_rejected",
+      "passed": true
+    },
+    {
+      "code": "TLS_CERTIFICATE_REJECTED",
+      "id": "smtp_untrusted_ca_rejected",
+      "passed": true
+    },
+    {
+      "code": "PLAINTEXT_SMTP_REJECTED",
+      "id": "smtp_plaintext_rejected",
+      "passed": true
+    },
+    {
+      "code": "HTTP_401",
+      "id": "https_missing_basic_auth_rejected",
+      "passed": true
+    },
+    {
+      "code": "HTTP_401",
+      "id": "https_wrong_basic_auth_rejected",
+      "passed": true
+    },
+    {
+      "code": "MAILBOX_UNCHANGED",
+      "id": "negative_probes_accept_no_messages",
+      "passed": true
+    }
+  ],
+  "cryptography_version": "50.0.1",
+  "errors": [],
+  "finished": "2026-09-09T04:08:55.462371+00:00",
+  "independent_security_review": false,
+  "live_provider_qualified": false,
+  "mailbox_count_after": 0,
+  "mailbox_count_before": 0,
+  "passed": true,
+  "schema": "expertauth-password-reset-tls-v1",
+  "started": "2026-09-09T04:08:50.026789+00:00",
+  "status": "PASS",
+  "timeout_seconds": 5
+}

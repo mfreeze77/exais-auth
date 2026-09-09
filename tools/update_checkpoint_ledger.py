@@ -52,6 +52,23 @@ def main():
     for identifier in ('SDK-002','SDKP-02'):
         index[identifier]['candidate_evidence'] += data['operational_candidate_artifacts']
     attach(['SDK-005','SDKP-05','TST-007'],['examples/node-react/client.jsx','tests/browser/oss-password.mjs'],['evidence/runs/browser-oss-05/command.json','evidence/browser/oss-password-05/results.json'], 'Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.',tests=['BROWSER-OSS-001','BROWSER-OSS-002','BROWSER-OSS-003','BROWSER-OSS-004'])
+    reset_sources = ['examples/node-react/server.js','examples/node-react/email-delivery.js','examples/node-react/client.jsx','examples/node-react/Dockerfile','examples/node-react/test/email-delivery.test.js','tests/browser/password-reset.mjs','tests/operations/password_reset_probe.mjs','tests/operations/password_reset_tls.py','tests/operations/password_reset_cleanup.py','tools/run_password_reset_lab.py','tools/build_node_client.py','reuse/password-reset-components.json']
+    reset_reports = ['evidence/operations/password-reset/run-16/report.json','evidence/operations/password-reset/run-16/probe-results.json','evidence/operations/password-reset/run-16/browser-results.json','evidence/operations/password-reset/run-16/tls-results.json','evidence/operations/password-reset/run-16/runner-source.py','evidence/operations/password-reset/run-16/probe-source.mjs','evidence/operations/password-reset/cleanup-fault-01/report.json','evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json','evidence/runs/password-reset-unit-01/command.json','evidence/runs/password-reset-cleanup-fault-01/command.json','evidence/operations/node-client-build/reset-client-03/report.json']
+    reset_reports.append('evidence/operations/password-reset/evidence-validation.json')
+    reset_note = 'Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.'
+    reset_probe = read_json(ROOT/'evidence/operations/password-reset/run-16/probe-results.json')
+    attach(['PWD-006'],reset_sources,reset_reports,reset_note,
+           tests=[row['id'] for row in reset_probe['rows'] if row['status']=='passed'])
+    data['password_reset_candidate_artifacts'] = [artifact(ROOT,p) for p in reset_reports]
+    for identifier in ('SDK-001','SDKP-01','SDK-005','SDKP-05'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in reset_sources]
+        index[identifier]['candidate_evidence'] += data['password_reset_candidate_artifacts']
+        index[identifier]['qualification_note'] += ' ' + reset_note
+    for identifier, prerequisite in (('WP-009','WP-008'),('WP-010','WP-007')):
+        index[identifier]['implementation'] = [artifact(ROOT,p) for p in reset_sources]
+        index[identifier]['candidate_evidence'] = data['password_reset_candidate_artifacts']
+        index[identifier]['qualification_note'] = reset_note
+        index[identifier]['blockers'] = [prerequisite + ' and foundation prerequisites unmet; this independent reference slice does not close the package.']
     attach(['SES-003','SES-004'],['tools/run_keycloak_cluster.py','tests/foundation/keycloak_sessions.py','tests/foundation/oss_core_probe.py'],['evidence/foundation/keycloak-sessions/probe-report.json','evidence/foundation/oss-core/results.json'], 'Keycloak strict-profile7 passes/3 failures and separate Core CDI5.6 zero-grace availability failure remain. Maintained Node CDI5.4 has narrow transport/restart/browser passes but fails uncoordinated raw-header availability; complete versioned policy and foundation remain unqualified.',state='failed')
     for identifier in ('SDK-007','SDKP-07'):
         index[identifier]['status']='blocked'
@@ -71,6 +88,7 @@ def main():
     data['checkpoint_claim']='PARTIAL: narrow candidate implementation only; zero complete baseline requirements or API operations certified'
     data['delivery_checkpoint_artifacts'] = [artifact(ROOT, path) for path in ['evidence/extracted-checkpoint/20260908T222920Z-23f3d2/report.json','evidence/operations/hygiene/verification-20260909T032659Z.json','evidence/runs/encrypted-recovery-hygiene-01/command.json','evidence/operations/hygiene/legacy-python-intermediates.json','evidence/operations/hygiene/legacy-python-fixture-parent.json']]
     data['delivery_checkpoint_artifacts'].append(artifact(ROOT,'evidence/operations/hygiene/checkpoint-retention-before-recovery.json'))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in ['evidence/operations/hygiene/verification-20260909T050303Z.json','evidence/operations/hygiene/password-reset-host-cache-blocked.json','evidence/operations/hygiene/checkpoint-retention-before-password-reset.json']]
     data['foundation_candidate_artifacts']=[artifact(ROOT,path) for path in ['evidence/foundation/keycloak-headless/build-report.json','evidence/foundation/keycloak-headless/probe-report.json','evidence/foundation/keycloak-clients/commands.json','evidence/foundation/keycloak-clients/http-results.json','evidence/foundation/keycloak-clients/browser-results.json','evidence/foundation/keycloak-sessions/probe-report.json']]
     runtime_sources = ['tools/build_oss_runtime.py','tools/assemble_runtime_licenses.py','tools/fetch_runtime_notice_sources.py','tools/replace_oss_notice_image.py','deploy/oss-core.Dockerfile','reuse/runtime-source-archives.lock.json']
     runtime_sources += ['tools/capture_native_sources.py','tools/run_native_source_capture.py','tools/qualify_native_argon2.py','tools/verify_notice_revision.py','reuse/native-header-notices.lock.json','tests/reuse/test_native_source_capture.py','tests/reuse/test_runtime_distribution.py']

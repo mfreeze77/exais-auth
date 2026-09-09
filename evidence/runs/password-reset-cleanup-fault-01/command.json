@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/run_password_reset_lab.py",
+    "--name",
+    "cleanup-fault-01",
+    "--cleanup-fault"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788929270.4248936,
+  "elapsed_seconds": 18.928,
+  "input_sha256": {
+    "tools/run_password_reset_lab.py": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8",
+    "tests/operations/password_reset_probe.mjs": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d",
+    "tests/operations/password_reset_cleanup.py": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b"
+  },
+  "inputs_changed": false,
+  "output_sha256": "e7773cf374463b3ce65b8da3c4740d4b24e7e634d4d08c78d29de3ce8868e124",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

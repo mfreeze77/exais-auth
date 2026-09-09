@@ -1,0 +1,280 @@
+{
+  "schema": "expertauth-offline-node-client-build-v1",
+  "started": "2026-09-09T04:39:13.221528+00:00",
+  "compiled": true,
+  "browser_passed": false,
+  "foundation_passed": false,
+  "full_image_qualified": false,
+  "scope": "Compilation of current React source against an existing immutable dependency image only",
+  "image": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+  "image_builds": 0,
+  "image_downloads": 0,
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "network": "none",
+  "container_name": "expertauth-node-client-build-2c7eb2a5aaf2",
+  "container_id": "c5aff322b5a2f09048e7b502628ac92ab363d747dba1f79c7437759c35e38854",
+  "container_labels": {
+    "org.expertauth.project": "expert-auth",
+    "org.expertauth.purpose": "node-client-build",
+    "org.expertauth.run": "reset-route-02",
+    "org.expertauth.instance": "2c7eb2a5aaf2"
+  },
+  "container_retired": true,
+  "inputs_unchanged": true,
+  "preserved_public_unchanged": true,
+  "compiler_tool_sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf",
+  "commands": [
+    {
+      "label": "require-cached-image",
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"volumes\":{{json (index .Config \"Volumes\")}}}",
+        "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-01.stdout",
+        "bytes": 96,
+        "sha256": "d665ec5794ce298f80f6e4183a9d35eba92dd008b5d1d3e65eb85767a30750e9"
+      },
+      "stderr": {
+        "path": "command-01.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "containers-before",
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-02.stdout",
+        "bytes": 3835,
+        "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+      },
+      "stderr": {
+        "path": "command-02.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "name-collision-check",
+      "argv": [
+        "docker",
+        "container",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}}}",
+        "expertauth-node-client-build-2c7eb2a5aaf2"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-03.stdout",
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "path": "command-03.stderr",
+        "bytes": 89,
+        "sha256": "8a2b08b3477da3673c901ae1c30090fb2a878911fd839e24ab345702bb11b18f"
+      }
+    },
+    {
+      "label": "compile-client",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-node-client-build-2c7eb2a5aaf2",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\node-client-build\\reset-route-02\\container.cid",
+        "--network=none",
+        "--read-only",
+        "--user=0",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--tmpfs",
+        "/tmp:rw,nosuid,nodev,size=32m",
+        "--workdir=/app",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=node-client-build",
+        "--label",
+        "org.expertauth.run=reset-route-02",
+        "--label",
+        "org.expertauth.instance=2c7eb2a5aaf2",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react\\client.jsx,target=/app/client.jsx,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react\\build.mjs,target=/app/build.mjs,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react\\public,target=/app/public",
+        "--entrypoint",
+        "node",
+        "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+        "--import",
+        "data:text/javascript;base64,CmltcG9ydCB7IHJlYWRGaWxlU3luYywgb3BlblN5bmMsIHJlYWRTeW5jLCBjbG9zZVN5bmMgfSBmcm9tICdub2RlOmZzJzsKaW1wb3J0IHsgY3JlYXRlSGFzaCB9IGZyb20gJ25vZGU6Y3J5cHRvJzsKaW1wb3J0IHsgY3JlYXRlUmVxdWlyZSB9IGZyb20gJ25vZGU6bW9kdWxlJzsKY29uc3QgcmVxdWlyZSA9IGNyZWF0ZVJlcXVpcmUoJy9hcHAvYnVpbGQubWpzJyk7CmNvbnN0IGhhc2ggPSBwYXRoID0+IHsKICBjb25zdCBmZCA9IG9wZW5TeW5jKHBhdGgsICdyJyksIHZhbHVlID0gY3JlYXRlSGFzaCgnc2hhMjU2JyksIGJ1ZmZlciA9IEJ1ZmZlci5hbGxvYyg2NTUzNik7CiAgdHJ5IHsgbGV0IHNpemU7IHdoaWxlICgoc2l6ZSA9IHJlYWRTeW5jKGZkLCBidWZmZXIsIDAsIGJ1ZmZlci5sZW5ndGgsIG51bGwpKSkgdmFsdWUudXBkYXRlKGJ1ZmZlci5zdWJhcnJheSgwLCBzaXplKSk7IH0KICBmaW5hbGx5IHsgY2xvc2VTeW5jKGZkKTsgfQogIHJldHVybiB2YWx1ZS5kaWdlc3QoJ2hleCcpOwp9Owpjb25zdCBlc2J1aWxkID0gcmVxdWlyZSgnZXNidWlsZCcpOwpjb25zdCBtb2R1bGVQYXRoID0gcmVxdWlyZS5yZXNvbHZlKCdlc2J1aWxkJyk7CmNvbnN0IGxvY2sgPSBKU09OLnBhcnNlKHJlYWRGaWxlU3luYygnL2FwcC9wYWNrYWdlLWxvY2suanNvbicsICd1dGY4JykpOwpjb25zdCBleHBlY3RlZCA9IHsiL2FwcC9jbGllbnQuanN4IjoiMjBkMDJlMjAxNTMxNTVhMmFmNzZlNjQ5ZjBjMWUwMzNiYmNlOTI0YmEzNmNjNTQ2ODhjMGQyOTA4NWM3YTI2OCIsIi9hcHAvYnVpbGQubWpzIjoiN2E3NGJkMzk4MDZmMGRmZmVhNzUwYmRlMjQ3MzRjMWYzYWY5ZmRlOGNhZDg1NGRkMTg5ZjY0NDQzMDFkZGIyOSIsIi9hcHAvcGFja2FnZS1sb2NrLmpzb24iOiIxMDg0M2Q2NzA0NzQ2NjA2YzQxYTgwZmNlMWUxNTA4YWU0NDQxOGZlNzFlYWU5ZjAxOTRkZDIxYjhlZWZiZDFiIn07CmNvbnN0IGluc3RhbGxlZCA9IE9iamVjdC5mcm9tRW50cmllcyhPYmplY3Qua2V5cyhleHBlY3RlZCkubWFwKHBhdGggPT4gW3BhdGgsIGhhc2gocGF0aCldKSk7CmNvbnN0IG1ldGFkYXRhID0gewogIG5vZGU6IHsgdmVyc2lvbjogcHJvY2Vzcy52ZXJzaW9uLCBwbGF0Zm9ybTogcHJvY2Vzcy5wbGF0Zm9ybSwgYXJjaGl0ZWN0dXJlOiBwcm9jZXNzLmFyY2gsCiAgICBleGVjdXRhYmxlOiBwcm9jZXNzLmV4ZWNQYXRoLCBleGVjdXRhYmxlX3NoYTI1NjogaGFzaChwcm9jZXNzLmV4ZWNQYXRoKSB9LAogIGVzYnVpbGQ6IHsgdmVyc2lvbjogZXNidWlsZC52ZXJzaW9uLCBtb2R1bGVfcGF0aDogbW9kdWxlUGF0aCwgbW9kdWxlX3NoYTI1NjogaGFzaChtb2R1bGVQYXRoKSwKICAgIHBhY2thZ2Vfc2hhMjU2OiBoYXNoKCcvYXBwL25vZGVfbW9kdWxlcy9lc2J1aWxkL3BhY2thZ2UuanNvbicpIH0sCiAgaW5zdGFsbGVkX2lucHV0X3NoYTI1NjogaW5zdGFsbGVkLAp9Owpwcm9jZXNzLnN0ZG91dC53cml0ZSgnRVhQRVJUQVVUSF9DT01QSUxFUl9NRVRBREFUQSAnICsgSlNPTi5zdHJpbmdpZnkobWV0YWRhdGEpICsgJ1xuJyk7CmlmIChPYmplY3Qua2V5cyhleHBlY3RlZCkuc29tZShwYXRoID0+IGluc3RhbGxlZFtwYXRoXSAhPT0gZXhwZWN0ZWRbcGF0aF0pIHx8CiAgICBlc2J1aWxkLnZlcnNpb24gIT09IGxvY2sucGFja2FnZXM/Llsnbm9kZV9tb2R1bGVzL2VzYnVpbGQnXT8udmVyc2lvbikgewogIHRocm93IG5ldyBFcnJvcignQ29tcGlsZXIgaW5wdXRzIG9yIGluc3RhbGxlZCBsb2NrZWQgZXNidWlsZCB2ZXJzaW9uIGRpZmZlcicpOwp9Cg==",
+        "/app/build.mjs"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-04.stdout",
+        "bytes": 763,
+        "sha256": "683f5efd0e894a667414ec94a3db0cd4ff17db5754bff1c9f952162fc467ada9"
+      },
+      "stderr": {
+        "path": "command-04.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "cleanup-inspect",
+      "argv": [
+        "docker",
+        "container",
+        "inspect",
+        "--format",
+        "{\"id\":{{json .Id}},\"name\":{{json .Name}},\"image\":{{json .Image}},\"labels\":{{json .Config.Labels}},\"running\":{{json .State.Running}}}",
+        "c5aff322b5a2f09048e7b502628ac92ab363d747dba1f79c7437759c35e38854"
+      ],
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-05.stdout",
+        "bytes": 1,
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      "stderr": {
+        "path": "command-05.stderr",
+        "bytes": 112,
+        "sha256": "3cd4b8c28f3e71306fb8d28d58e52a1aef8c6226797623f6b88430b21e89a1b8"
+      }
+    },
+    {
+      "label": "containers-after",
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-06.stdout",
+        "bytes": 3835,
+        "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+      },
+      "stderr": {
+        "path": "command-06.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "name-absent-after",
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--filter",
+        "name=^/expertauth-node-client-build-2c7eb2a5aaf2$"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "command-07.stdout",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "command-07.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "errors": [],
+  "inputs_before": {
+    "examples/node-react/client.jsx": "20d02e20153155a2af76e649f0c1e033bbce924ba36cc54688c0d29085c7a268",
+    "examples/node-react/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "preserved_public_before": {
+    "directories": [],
+    "files": {
+      "index.html": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a"
+    }
+  },
+  "index_before_sha256": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a",
+  "container_count_before": 59,
+  "metadata_preload_sha256": "76687216d5a128d3684a69c331edcb6c7e33ff7cd78b2e252f31b973c1b6a77f",
+  "installed_compiler": {
+    "node": {
+      "version": "v22.23.2",
+      "platform": "linux",
+      "architecture": "x64",
+      "executable": "/usr/local/bin/node",
+      "executable_sha256": "3517c2df0b2f8cd7f422b4b8450ef81c6889f08eb03e281d6de9079b15e6a327"
+    },
+    "esbuild": {
+      "version": "0.28.2",
+      "module_path": "/app/node_modules/esbuild/lib/main.js",
+      "module_sha256": "61ec0ba144ff93f4bf0e96ad6fab6f430ede0aa13e27ace8063ed63ba416b3cd",
+      "package_sha256": "9d0bc453f4e791553c4cc2298ba023b409241fd9801e494741666eb0f6051490"
+    },
+    "installed_input_sha256": {
+      "/app/client.jsx": "20d02e20153155a2af76e649f0c1e033bbce924ba36cc54688c0d29085c7a268",
+      "/app/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29",
+      "/app/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+    }
+  },
+  "generated_bundle": {
+    "path": "examples/node-react/public/app.js",
+    "bytes": 589422,
+    "sha256": "06d7a2d0a1b920ea82e7b83874bb2213c8d04eae470780c75db9b97a87fc5418"
+  },
+  "compiler_exit_code": 0,
+  "container_count_after": 59,
+  "inputs_after": {
+    "examples/node-react/client.jsx": "20d02e20153155a2af76e649f0c1e033bbce924ba36cc54688c0d29085c7a268",
+    "examples/node-react/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "preserved_public_after": {
+    "directories": [],
+    "files": {
+      "index.html": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a"
+    }
+  },
+  "index_after_sha256": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a",
+  "generated_bundle_after": {
+    "path": "examples/node-react/public/app.js",
+    "bytes": 589422,
+    "sha256": "06d7a2d0a1b920ea82e7b83874bb2213c8d04eae470780c75db9b97a87fc5418"
+  },
+  "finished": "2026-09-09T04:39:15.658971+00:00",
+  "elapsed_ms": 2438.0
+}

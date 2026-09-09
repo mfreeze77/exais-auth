@@ -8,7 +8,13 @@ redistribution rights and differential/error/side-effect coverage remain unresol
 See `contracts/README.md`, `api-contracts.json` and their source/licensing report.
 
 The working OSS Node/React and Python examples exercise password/session subsets.
-The current Python image `7a4bb6dcfd63` passes19 HTTP regression checks after the
+The new Node/React reset subset uses optional authenticated TLS SMTP and engine
+reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks;
+the source-mounted candidate does not qualify a new image or complete SDK/API
+profile. Nonexistent-tenant rejection is distinct from configured-tenant isolation.
+No original API ID is promoted by this result. See `docs/password-reset.md`.
+
+The current Python image `5bffadb83aa3` passes19 HTTP regression checks after the
 readiness correction. Its public `/ready` response still uses the same healthy
 shape, but now requires authenticated exact Core storage access as well as CDI5.4.
 Both successful and failed readiness responses prohibit caching. A real database

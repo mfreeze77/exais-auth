@@ -1,0 +1,13 @@
+{
+  "schema": "expertauth-mailpit-artifact-metadata-v1",
+  "platform_manifest_digest": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7",
+  "config_digest": "sha256:eb6a74c41b32eb13f088b299bfc73677a9c6583d551620db150607c62f481675",
+  "compressed_layer_bytes": 17160571,
+  "compressed_limit_bytes": 67108864,
+  "platform": "linux/amd64",
+  "source_commit": "17a70ba7a87dc96c04646a59493389ec17af5cfb",
+  "license_sha256": "9dade1b3ace5dd6c36ca58eef466ae7dd9afe52bfb978deffa44645f6f0a2aa9",
+  "image_pulled": false,
+  "full_transitive_license_closure": false,
+  "runtime_qualified": false
+}

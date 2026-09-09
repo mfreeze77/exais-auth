@@ -42,6 +42,12 @@ storage. Its two-action security reconciliation and measured results remain
 distinct from full recovery acceptance. The hygiene verifier now also requires
 zero dangling project-labeled images.
 
+The [password reset example](docs/password-reset.md) now completes real React
+recovery through self-hosted authenticated TLS SMTP. Its combined proof passes
+10 transport, 11 HTTP/SMTP and 9 browser checks; a forced worker crash also
+qualifies exact owned-account/container cleanup. Full PWD-006, configured tenant
+isolation, durable delivery and the rebuilt Node image remain unqualified.
+
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image
 inspection without starting services. Native and full distribution licensing remain

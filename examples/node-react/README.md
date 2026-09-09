@@ -13,8 +13,10 @@ The backend has same-origin enforcement, bounded JSON, private Core authenticati
 online session/resource guards and explicit offline JWT verification. The offline
 route validates signature, issuer, audience, expiry and required claims but cannot
 promise immediate logout revocation. `/api/session` is SDK hybrid verification;
-`/api/session/online` performs the online check. Recovery delivery is unfinished and
-the configured delivery service fails instead of contacting a vendor.
+`/api/session/online` performs the online check. Password reset now uses optional
+authenticated SMTP with verified implicit TLS; without SMTP both reset endpoints
+are disabled. See [password reset evidence and setup](../../docs/password-reset.md).
+Its source/bundle mount lab passes; the updated full image has not been rebuilt.
 
 From the repository root after starting the private OSS lab:
 

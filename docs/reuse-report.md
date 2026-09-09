@@ -5,6 +5,17 @@ real package/archive inspection. It does not select an identity engine, qualify
 any SDK, or approve a production distribution. Requirements BAS-002, BAS-004,
 and BAS-005 remain subject to complete dependency, build, and release evidence.
 
+Password-reset file-specific reuse is in `reuse/password-reset-components.json`:
+33 selected maintained JS files, five authored product files, immutable revisions,
+licenses, notices, exact hashes and actual run-16 evidence. Twenty-five selected
+files match original npm member manifests; two website files match the retained
+installed audit. Six Nodemailer9.1.1 files have current hashes, while correspondence
+to original9.1.1 tarball members remains unproven because the broad old inventory
+describes8.0.11. This distinction is not hidden by the qualified dependency override.
+The test-only Mailpit1.31.1 OCI digest and MIT notice are pinned; full Go/OS
+source-build/transitive distribution closure is not inferred. No Mailpit binary
+or private certificate/key material is included in the source checkpoint.
+
 `reuse/engine-candidates.json`, `reuse/core-build-dependencies.json`, and
 `reuse/profiles.json` are the component index. `reuse/files/` and
 `reuse/package-files/` record individual paths, SHA-256, source revision, license
