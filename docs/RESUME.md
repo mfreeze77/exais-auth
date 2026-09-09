@@ -19,6 +19,10 @@ The initial de6439a31552 ZIP omitted five files due to upstream export attribute
 and failed native extraction. The corrected packager includes exact committed
 blobs. Read `package-completeness-01` and require the new native-extraction sidecar;
 do not reuse that defective ZIP as a complete native source checkpoint.
+The subsequent e628d516dd74 ZIP contained all source but exposed absent cache/runtime
+parent directories. Both initializations are fixed and the fresh-source check
+reproduces the Core-tested library. Require the final archive's separate successful
+native-extraction report; both earlier failures remain preserved.
 
 Latest work is `docs/guarded-session-operations.md`. Current Core is `db1d29ba6244`,
 current Node is `2a02e08d5fcb`, and the current binary build is `guarded-01`.

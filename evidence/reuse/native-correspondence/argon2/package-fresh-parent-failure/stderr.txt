@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\mfrie\Ai_Projects\exai auth\expert-auth\.runtime\extracted-native\4dc85308b68b463d97245f757559ff99\source\tools\build_native_argon2.py", line 139, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "C:\Users\mfrie\Ai_Projects\exai auth\expert-auth\.runtime\extracted-native\4dc85308b68b463d97245f757559ff99\source\tools\build_native_argon2.py", line 55, in main
+    output.mkdir(parents=True);cache.mkdir()
+                               ^^^^^^^^^^^^^
+  File "C:\Users\mfrie\AppData\Local\Programs\Python\Python311\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\extracted-native\\4dc85308b68b463d97245f757559ff99\\source\\.cache\\native-argon2'

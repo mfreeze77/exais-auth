@@ -1,0 +1,19 @@
+{
+  "kind": "current-native-checkpoint-correspondence",
+  "passed": true,
+  "checks": {
+    "fresh_builder_matches_current_source": true,
+    "native_source_inputs_match": true,
+    "fresh_build_passed": true,
+    "fresh_library_matches_Core_tested_bytes": true,
+    "single_original_candidate_unchanged": true,
+    "compiler_retired": true,
+    "ledger_idempotent": true,
+    "tools/ledger.py check": true,
+    "tools/validate_release.py --claims-only": true,
+    "tools/validate_release.py": true
+  },
+  "complete": false,
+  "authentication_tests": false,
+  "historical_core_probe_runner_snapshot_preserved": true
+}

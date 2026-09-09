@@ -1,0 +1,11 @@
+{
+  "kind": "actual-fresh-native-bootstrap-failure",
+  "passed": false,
+  "complete": false,
+  "archive_sha256": "635fe74f4647fc1bfd4b8dccfbcaa23ce5f354f5c8ebe203e1ca40486739c287",
+  "commit": "e628d516dd7408a6482f82c49398864d75f46d03",
+  "missing_sources": false,
+  "cause": "Fresh extracted root lacks .cache and .runtime parents. Builder used mkdir without parents=True.",
+  "remedy": "Create both bounded parent paths; qualify a fresh75-file source directory and then the final ZIP.",
+  "source_binary_modified": false
+}

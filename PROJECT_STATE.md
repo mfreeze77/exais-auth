@@ -22,6 +22,9 @@ Actual code and evidence:
   upstream export attributes. That failure is preserved. The corrected packager
   reads exact committed blobs;25 actual-Git/secret-boundary checks pass. Fresh ZIP
   native-build evidence is a separate sidecar and must pass before delivery.
+  A subsequent fresh checkout exposed missing cache/runtime parent creation;
+  both are fixed. A fresh75-input directory now reproduces the Core-tested
+  library and retires all scratch; that failure also remains preserved.
 - Current Core `db1d29ba6244` and Node `2a02e08d5fcb` enforce the five-second
   profile at dedicated Core refresh/verify routes. A healthy preflight followed
   by a mismatched replica is refused without credentials or fallback; the actual

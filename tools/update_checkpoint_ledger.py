@@ -501,10 +501,13 @@ def main():
         'evidence/reuse/native-correspondence/argon2/native-source-request.json',
         'evidence/reuse/native-correspondence/argon2/native-source/acquisition.json',
         'evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json',
+        'evidence/reuse/native-correspondence/argon2/native-build/fresh-source-01/report.json',
+        'evidence/reuse/native-correspondence/argon2/native-build/fresh-source-01/child-report.json',
         'evidence/foundation/refresh-grace/native-argon2-01/report.json',
         'evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json',
         'evidence/reuse/native-correspondence/argon2/package-completeness-01/report.json',
         'evidence/reuse/native-correspondence/argon2/package-completeness-01/failure.json']
+    native_reports += ['evidence/reuse/native-correspondence/argon2/package-fresh-parent-failure/diagnosis.json']
     data['native_argon2_candidate_artifacts']=[artifact(ROOT,p) for p in native_reports]
     data['native_argon2_failed_history']=[artifact(ROOT,'evidence/reuse/native-correspondence/argon2/native-build/'+run+'/'+p)
         for run in ('linux-01','linux-02') for p in ('report.json','build_native_argon2.py')]
@@ -528,6 +531,7 @@ def main():
         'evidence/operations/hygiene/verification-20260909T121421Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-native-argon2.json',
         'evidence/operations/hygiene/checkpoint-retention-native-incomplete.json',
+        'evidence/operations/hygiene/checkpoint-retention-native-bootstrap.json',
         'evidence/reuse/native-correspondence/argon2/checkpoint-checks-01/report.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)

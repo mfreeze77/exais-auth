@@ -1,0 +1,22 @@
+{
+  "kind": "retire-demonstrably-incomplete-generated-checkpoint",
+  "utc": "2026-09-09T12:28:24.420456+00:00",
+  "passed": true,
+  "name": "expertauth-partial-checkpoint-e628d516dd74.zip",
+  "sha256": "635fe74f4647fc1bfd4b8dccfbcaa23ce5f354f5c8ebe203e1ca40486739c287",
+  "bytes": 43942969,
+  "manifest_members_verified": 4304,
+  "source_commit_preserved": "e628d516dd7408a6482f82c49398864d75f46d03",
+  "reason": "Actual fresh extracted native builder failed absent parent directories. Both parent creations corrected and a fresh-source build matches the Core-tested native binary. Source/evidence and original sidecars are preserved.",
+  "retained_validated_recovery_archives": [
+    {
+      "name": "expertauth-partial-checkpoint-40c8589b0921.zip",
+      "sha256": "88c2d317dd6ddb8084d8c3b1359955879678400fa0cd401fde4481872d90bab9"
+    },
+    {
+      "name": "expertauth-partial-checkpoint-d446a27861bc.zip",
+      "sha256": "f0829beab42da1ee980b163656c4585273dcecb57d1e6d6d7faf183cd5622ecb"
+    }
+  ],
+  "supplied_archives_touched": false
+}

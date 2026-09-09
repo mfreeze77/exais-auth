@@ -86,3 +86,11 @@ python -B tools/verify_extracted_native.py --zip artifacts/NEW_CHECKPOINT.zip
 That helper extracts75 exact source/build inputs, performs the original native
 build/tests, compares the result to the Core-tested library, retains its report,
 and removes its temporary source tree, binary and compiler container.
+
+The next e628d516dd74 archive contained all75 inputs but exposed missing parent
+directory creation in a fresh checkout. Both `.cache` and `.runtime` creation
+now include their parents. `native-build/fresh-source-01` starts without either
+directory, passes the original native build/tests and reproduces the Core-tested
+library byte-for-byte; its scratch and compiler retire. The prior failure remains
+under `package-fresh-parent-failure`. This fixes bootstrap tooling only; the C
+source and Core-tested library are unchanged.
