@@ -255,6 +255,73 @@ def main():
         'tools/verify_extracted_node.py',
         'evidence/operations/hygiene/verification-20260909T084810Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-atomic-node-install.json')]
+    installed_core_sources = ['tools/core_compiler_inputs.py','tools/build_password_session.py',
+        'tools/atomic_core_identity.py','tools/build_atomic_core_runtime.py','tools/replace_atomic_core.py',
+        'tools/run_atomic_reset_lab.py','tools/run_password_reset_lab.py','tools/run_recovery_drill.py',
+        'tools/run_sdk_session_faults.py','tools/verify_atomic_core_installation.py',
+        'tests/operations/core_upgrade_probe.py','docs/installed-atomic-core.md']
+    installed_core_reports = ['evidence/operations/password-session-build/compile-04/'+p for p in
+        ('report.json','core-members.json','postgresql-members.json','Session.java','Webserver.java')]
+    installed_core_reports += ['evidence/operations/atomic-core-image/installed-02/'+p for p in
+        ('report.json','qualification.json','notice-manifest.json','adaptation-runtime.cdx.json','correspondence.json')]
+    installed_core_reports += ['evidence/operations/atomic-reset/image-core-installed-02/'+p for p in
+        ('report.json','probe-report.json','password-session-report.json')]
+    installed_core_reports += ['evidence/operations/atomic-reset/image-node-installed-02/report.json']
+    installed_core_reports += ['evidence/operations/password-reset/atomic-image-node-installed-02/'+p for p in
+        ('report.json','probe-results.json','tls-results.json','browser-results.json',
+         'wire/good.jsonl','wire/missing-writer.jsonl','reset-success.png')]
+    installed_core_reports += ['evidence/operations/atomic-core-replacement/installed-02/'+p for p in
+        ('report.json','seed.json','upgraded.json','rollback.json','final.json','cleanup.json')]
+    data['installed_atomic_core_candidate_artifacts'] = [artifact(ROOT,p) for p in installed_core_reports]
+    data['installed_atomic_core_failed_history'] = [artifact(ROOT,'evidence/operations/atomic-core-image/installed-01/report.json')]
+    installed_core_note = ('Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; '
+        'healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 '
+        'audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs '
+        'unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser '
+        'and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback '
+        'and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is '
+        'removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are '
+        'preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte '
+        'pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; '
+        'only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers '
+        'and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and '
+        'failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, '
+        'not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier '
+        'Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK '
+        'versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain '
+        'unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified.')
+    installed_core_test_ids = []
+    for report_path in ('evidence/operations/atomic-reset/image-core-installed-02/probe-report.json',
+                        'evidence/operations/atomic-reset/image-core-installed-02/password-session-report.json',
+                        'evidence/operations/password-reset/atomic-image-node-installed-02/probe-results.json'):
+        installed_core_test_ids += [r['id'] for r in read_json(ROOT/report_path)['rows'] if r['status']=='passed']
+    for phase in ('seed','upgraded','rollback','final','cleanup'):
+        installed_core_test_ids += [r['id'] for r in read_json(ROOT/('evidence/operations/atomic-core-replacement/installed-02/'+phase+'.json'))['rows'] if r['status']=='passed']
+    # These three rows have only this bounded slice; preserve their planned status.
+    # Reset this updater-owned mapping so repeat execution does not accumulate it.
+    for identifier in ('OPS-007','MIG-010','WP-031'):
+        index[identifier]['implementation'] = []
+        index[identifier]['candidate_evidence'] = []
+        index[identifier]['qualification_note'] = ''
+        index[identifier]['observed_test_ids'] = []
+        index[identifier]['blockers'] = ['Full original rolling/SDK or migration/reconciliation criteria and prerequisite packages remain unmet.']
+    for identifier in ('BAS-002','BAS-004','BAS-005','PWD-006','SES-001','SES-005','SES-006',
+                       'SDK-001','SDKP-01','SDK-005','SDKP-05','OPS-004','OPS-007','OPS-011','MIG-010',
+                       'WP-002','WP-009','WP-010','WP-031','WP-033'):
+        row = index[identifier]
+        row['implementation'] += [artifact(ROOT,p) for p in installed_core_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['installed_atomic_core_candidate_artifacts'])
+        row['qualification_note'] = row.get('qualification_note','') + ' ' + installed_core_note
+        row['observed_test_ids'] = list(dict.fromkeys(row.get('observed_test_ids',[])+installed_core_test_ids))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'tools/verify_checkpoint_hygiene.py',
+        'evidence/operations/hygiene/verification-20260909T085940Z.json',
+        'evidence/operations/hygiene/verification-20260909T093045Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-installed-atomic-core.json')]
+    for identifier in ('BAS-001','TST-001'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in ('tools/package_checkpoint.py','tests/evidence/test_checkpoint_secrets.py')]
+        index[identifier]['candidate_evidence'] += [artifact(ROOT,'evidence/runs/checkpoint-secret-file-tests-06/command.json')]
+        index[identifier]['qualification_note'] += ' Rollback-journal passwords and both session generations are now scanned, including interrupted temporary saves.22 focused scanner cases pass; malformed, oversized and incomplete journals fail closed. Link/reparse branches and generic secret discovery remain unqualified.'
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

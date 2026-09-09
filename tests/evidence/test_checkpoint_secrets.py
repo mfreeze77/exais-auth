@@ -1,3 +1,4 @@
+import json
 import sys
 import tempfile
 import unittest
@@ -95,6 +96,55 @@ class CheckpointSecretTests(unittest.TestCase):
     def test_name_outside_launcher_namespace_is_not_exempt(self):
         self.private.parent.rename(self.private.parent.with_name('not.a.launcher.run'))
         self.assertIn(b'/run/mailpit/smtp-password',local_secrets(self.root))
+
+    def upgrade_fixture(self, name='fixture.json', value=None):
+        directory=self.root/'.runtime/atomic-core-replacement/installed-02/fixture'
+        directory.mkdir(parents=True,exist_ok=True)
+        path=directory/name
+        state=value if value is not None else {
+            'password':'upgrade-private-password',
+            'session':{'accessToken':{'token':'legacy-access'},'refreshToken':{'token':'legacy-refresh'}},
+            'atomic_session':{'accessToken':{'token':'atomic-access'},'refreshToken':{'token':'atomic-refresh'}}}
+        path.write_text(json.dumps(state))
+        return path
+
+    def test_upgrade_password_and_both_session_generations_are_protected(self):
+        self.upgrade_fixture()
+        files={str(i):v for i,v in enumerate((b'upgrade-private-password',b'legacy-access',b'legacy-refresh',b'atomic-access',b'atomic-refresh'))}
+        self.assertEqual(secret_leaks(files,local_secrets(self.root)),list(files))
+        self.assertEqual(secret_leaks({'source':b"Path('/private/fixture.json')"},local_secrets(self.root)),[])
+
+    def test_interrupted_upgrade_save_protects_both_journals(self):
+        self.upgrade_fixture()
+        self.upgrade_fixture('fixture.tmp',{'password':'interrupted-password'})
+        values=local_secrets(self.root)
+        self.assertIn(b'upgrade-private-password',values)
+        self.assertIn(b'interrupted-password',values)
+
+    def test_seed_before_session_is_protected(self):
+        self.upgrade_fixture(value={'password':'seed-only-password'})
+        self.assertIn(b'seed-only-password',local_secrets(self.root))
+
+    def test_corrupt_or_incomplete_upgrade_journal_fails_closed(self):
+        path=self.upgrade_fixture()
+        for raw in ('{', '[]', '{}', '{"password":"p","session":{}}', '{"password":"p","session":{"accessToken":{"token":"a"},"refreshToken":{"token":null}}}'):
+            with self.subTest(raw=raw):
+                path.write_text(raw)
+                with self.assertRaises((AssertionError,ValueError,KeyError)):
+                    local_secrets(self.root)
+
+    def test_oversized_or_directory_upgrade_journal_fails_closed(self):
+        path=self.upgrade_fixture()
+        path.write_bytes(b'x'*262145)
+        with self.assertRaisesRegex(AssertionError,'size or file type'):
+            local_secrets(self.root)
+        path.unlink(); path.mkdir()
+        with self.assertRaisesRegex(AssertionError,'size or file type'):
+            local_secrets(self.root)
+
+    def test_controller_failure_before_journal_is_allowed(self):
+        (self.root/'.runtime/atomic-core-replacement/installed-02').mkdir(parents=True)
+        self.assertEqual(local_secrets(self.root),{b'short-pwd',b'wrong-pwd'})
 
 
 if __name__=='__main__':

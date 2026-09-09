@@ -31,7 +31,9 @@
   supplemental scrypt/libffi notices are preserved with release-byte mappings.
   New native correspondence work identifies all59 release members and corrects
   the source notice assembler (two JNA license texts plus three scrypt headers).
-  Those additions are installed and479 running files verified in image5ec6ccc3fd5d.
+  Those additions were installed and479 running files verified in image5ec6ccc3fd5d.
+  Its replacement03b4458c532f preserves the original notices and adds four atomic
+  adaptation files; all483 running files now match. Distribution gaps remain.
   JNA's make_sunver.pl
   grant, SQLite JNI/extension terms, native toolchains/build correspondence and
   source/relink delivery remain open. The unresolved JNA source is local-only,
@@ -50,7 +52,10 @@
   atomic Core profile passes a real transaction-abort/retry proof and32 actual
   Node/SMTP/React checks. The later installed Node profile passes 34 behavior
   checks, including actual missing-PostgreSQL-writer denial and recovery. Core
-  still needs installation and qualification of its JAR pair. Configured cross-tenant and linked-account behavior,
+  image `03b4458c532f` now installs the pair and passes the 16 Core/34 Node cases
+  without healthy-path overlays, plus 14 local upgrade/rollback cases. Full fresh-host
+  bootstrap and rolling/failure-path migration remain unqualified. Read
+  `docs/installed-atomic-core.md`. Configured cross-tenant and linked-account behavior,
   legacy-writer coexistence and full migration remain unqualified. The new
   explicit password-session API closes the demonstrated validation/insertion
   race in the Node profile with actual two-replica ordering and database-abort
@@ -58,7 +63,7 @@
   `docs/password-session-transactions.md`. The default upstream profile still has separate transactions and
   a crash gap; known/unknown SMTP timing differs. See `docs/atomic-password-reset.md`.
   Durable delivery outbox/retries, policy, bounce handling and password-change
-  notifications remain absent. Updated Node image4c03d7306e1e passes a complete
+  notifications remain absent. Current Node image9375a5bc093d passes a complete
   offline build and installed regressions. Fresh archive acquisition and a disconnected offline install/compile now pass;
   full fresh-stack bootstrap remains unqualified because image orchestration
   requires the retained private lab and previous image. Cache crash/stale-lock

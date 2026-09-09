@@ -18,8 +18,11 @@ Material unresolved findings:
   checks without app overlays. A real new-Core/old-plugin mismatch fails readiness
   and sign-in without issuing tokens/cookies or adding a session; healthy-writer
   retry succeeds. Original archive bytes and source bindings were checked before
-  promotion, and the old image was removed. Core still uses two explicit JAR
-  mounts. Foundation and complete distribution remain unqualified. New
+  promotion, and the old image was removed. Core image `03b4458c532f` now installs
+  the JAR pair and passes 16 Core and 34 Node cases without healthy-path overlays.
+  Fourteen local upgrade/rollback cases preserve sessions, password access and
+  the original identity/schema state. Foundation, rolling-upgrade failure paths
+  and complete distribution remain unqualified. New
   deadline-expiry, daemon-outage and promotion/rollback faults are unexecuted.
   See `docs/atomic-node-installation.md` for exact evidence and failed-run history.
 - Password reset succeeds through verified authenticated TLS SMTP and rejects

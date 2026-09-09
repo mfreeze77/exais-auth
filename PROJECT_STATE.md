@@ -11,12 +11,22 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- Core image `03b4458c532f` now contains the atomic Core/plugin JAR pair and passes
+  16 Core, 34 installed Node/SMTP/TLS/browser and 14 actual upgrade/rollback cases.
+  Healthy flows use no JAR/application overlays. All 483 running files match;
+  the schema, database process/configuration and 52 original identities are
+  preserved. The prior Core container/image are retired, all temporary helpers
+  and build contexts removed, and six task tags remain. Full foundation,
+  distribution and fresh-host/rolling deployment remain unqualified. Read
+  `docs/installed-atomic-core.md` for exact pins, evidence and limitations.
+  Packaging scans the new private rollback password/token journals and interrupted
+  saves; all22 focused scanner cases pass. Generic secret discovery remains open.
 - The installed Node atomic profile now passes 34 actual HTTP/SMTP/TLS/browser
   behavior checks. A new Core paired with an old PostgreSQL plugin stays not-ready
   and issues no authentication tokens or sessions; the healthy writer can retry.
   Image `9375a5bc093d` replaces `4c03d7306e1e`, which was retired. Each build run
   retired all 23 helper/lab containers; current hygiene is two retained containers,
-  six tags and no dangling task images. Core is still JAR-mounted. Read
+  six tags and no dangling task images. Core was still JAR-mounted in that run. Read
   `docs/atomic-node-installation.md` for exact bytes, failed-run history and scope.
 - The opt-in Node password profile now revalidates the credential and creates
   its session in one Core-owned transaction. Both reset/sign-in orderings,
@@ -111,7 +121,7 @@ Actual code and evidence:
   The corrected notice assembler preserves JNA's two full short-named licenses
   and three scrypt header notices:89 archive notice texts,390 generated files.
   Ten package/source-request tests pass, plus an actual fetched-hash rejection
-  with container cleanup. The corrected package is installed in Core image
+  with container cleanup. The corrected package was installed in historical Core image
   `5ec6ccc3fd5d`: all479 files match, including87 unchanged executable JARs.
   PostgreSQL kept its exact container/start time/mounts;19 Python HTTP checks
   passed after replacement and removed both test users. The previous Core

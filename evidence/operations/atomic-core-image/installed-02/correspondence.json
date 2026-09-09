@@ -1,0 +1,1956 @@
+{
+  "kind": "installed-core-evidence-correspondence",
+  "passed": true,
+  "complete": false,
+  "independent_review": false,
+  "started": "2026-09-09T09:30:41.915856+00:00",
+  "tool_sha256": "51409b5fcc3a379859cd482873512ceb77ca564a1ee6cd5a48b46343707fe099",
+  "checks": [
+    {
+      "check": "Build and immutable qualification agree",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_atomic_core_runtime.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_oss_runtime.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/assemble_runtime_licenses.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/replace_atomic_core.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/core_upgrade_probe.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/wait_oss_storage.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/PasswordSessionProbe.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/password_session_wire.mjs",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source deploy/oss-core.Dockerfile",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source reuse/password-session-components.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source reuse/oss-core-runtime.cdx.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source evidence/operations/password-session-build/compile-04/report.json",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-001.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-001.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-002.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-002.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-003.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-003.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-004.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-004.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-005.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-005.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-006.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-006.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-007.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-007.stderr",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-008.stdout",
+      "passed": true
+    },
+    {
+      "check": "Build command bytes command-008.stderr",
+      "passed": true
+    },
+    {
+      "check": "Standalone JDK recompiles the previously tested bytes",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Compiler cleanup",
+      "passed": true
+    },
+    {
+      "check": "Candidate JAR core",
+      "passed": true
+    },
+    {
+      "check": "Every compiled member core",
+      "passed": true
+    },
+    {
+      "check": "Candidate JAR postgresql",
+      "passed": true
+    },
+    {
+      "check": "Every compiled member postgresql",
+      "passed": true
+    },
+    {
+      "check": "Installed parent core_test",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/reuse.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/PasswordSessionProbe.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "Parent resource/source preservation core_test",
+      "passed": true
+    },
+    {
+      "check": "All parent containers retired core_test",
+      "passed": true
+    },
+    {
+      "check": "No installed Core overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "No installed Core overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "Eight actual Core cases probe-report.json",
+      "passed": true
+    },
+    {
+      "check": "Eight actual Core cases password-session-report.json",
+      "passed": true
+    },
+    {
+      "check": "Installed parent node_test",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/reuse.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/PasswordSessionProbe.java",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "Parent resource/source preservation node_test",
+      "passed": true
+    },
+    {
+      "check": "All parent containers retired node_test",
+      "passed": true
+    },
+    {
+      "check": "No installed Core overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "Exact installed Core/Node child",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/password_reset_cleanup.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/password_reset_tls.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/browser/password-reset.mjs",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/test/email-delivery.test.js",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/public/app.js",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/password_session_wire.mjs",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "All installed Node child resources restored",
+      "passed": true
+    },
+    {
+      "check": "Actual installed Node cases probe-results.json",
+      "passed": true
+    },
+    {
+      "check": "Actual installed Node cases browser-results.json",
+      "passed": true
+    },
+    {
+      "check": "Ten actual TLS cases",
+      "passed": true
+    },
+    {
+      "check": "Bounded actual session wire good",
+      "passed": true
+    },
+    {
+      "check": "Bounded actual session wire missing-writer",
+      "passed": true
+    },
+    {
+      "check": "Successful exact replacement qualification",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/replace_atomic_core.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tools/wait_oss_storage.py",
+      "passed": true
+    },
+    {
+      "check": "Current/captured source tests/operations/core_upgrade_probe.py",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "Private command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "Private command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "Actual migration/rollback phase seed",
+      "passed": true
+    },
+    {
+      "check": "Actual migration/rollback phase upgraded",
+      "passed": true
+    },
+    {
+      "check": "Actual migration/rollback phase rollback",
+      "passed": true
+    },
+    {
+      "check": "Actual migration/rollback phase final",
+      "passed": true
+    },
+    {
+      "check": "Actual migration/rollback phase cleanup",
+      "passed": true
+    },
+    {
+      "check": "Database schema/process/mount preservation",
+      "passed": true
+    },
+    {
+      "check": "All upgrade helpers retired",
+      "passed": true
+    },
+    {
+      "check": "Preserved private configuration .runtime\\oss-core\\config.yaml",
+      "passed": true
+    },
+    {
+      "check": "Preserved private configuration .runtime\\oss-core\\runtime.env",
+      "passed": true
+    },
+    {
+      "check": "Notice package binds current inputs",
+      "passed": true
+    },
+    {
+      "check": "87-component scope preserves licensing limits",
+      "passed": true
+    },
+    {
+      "check": "Current owned image matches qualification",
+      "passed": true
+    },
+    {
+      "check": "Every running JAR and notice file matches",
+      "passed": true
+    },
+    {
+      "check": "Full final resource inventory including untagged images",
+      "passed": true
+    },
+    {
+      "check": "Old runtime image retired",
+      "passed": true
+    },
+    {
+      "check": "Build scratch removed",
+      "passed": true
+    },
+    {
+      "check": "Full gates remain unapproved",
+      "passed": true
+    }
+  ],
+  "reports": {
+    "evidence/operations/atomic-core-image/installed-02/report.json": "70dbf16a087dea2cfb76981a9757f7190c0c69ecc79c55a8e2078bc2ff499873",
+    "evidence/operations/atomic-core-image/installed-02/qualification.json": "088f4870c7fc62f5052aba82d9afe11f74b076b41727632d877ffc7ef81d0b45",
+    "evidence/operations/password-session-build/compile-04/report.json": "01c1c91f1a31a3d80971859c2ef7765e33daaf88551b18b29020d6b0f1be4b1e",
+    "evidence/operations/atomic-reset/image-core-installed-02/report.json": "3681ea7b954cd7945208439f7f070a69482a9c0dcc1e7ce353523380c1f69f7d",
+    "evidence/operations/atomic-reset/image-core-installed-02/probe-report.json": "d3eebc7644910de62319f1be455a2ba0f5dfeff44fd4a25ac9d0d05ef49c2c10",
+    "evidence/operations/atomic-reset/image-core-installed-02/password-session-report.json": "cc1946e5162956c4c98c991334cc611c1d943aa3edd06a2455a661097fafdc3d",
+    "evidence/operations/atomic-reset/image-node-installed-02/report.json": "e9a14e69c3ea1d612bdec507cedc84c89cfa0822c157c7418029d910ff749866",
+    "evidence/operations/password-reset/atomic-image-node-installed-02/report.json": "6151de39fd27a6a35fa6c822c2e21b9f6b88034e49bb12e5bec742d4dcd715fc",
+    "evidence/operations/password-reset/atomic-image-node-installed-02/probe-results.json": "6e8460436078e23de4abc3bf431e01f8291c0cb9e1c37038d7d361bbb739c368",
+    "evidence/operations/password-reset/atomic-image-node-installed-02/browser-results.json": "c280fa9ce1695391fb28bd01dd406e20fad611dfb397694d277efdebfabb624b",
+    "evidence/operations/password-reset/atomic-image-node-installed-02/tls-results.json": "85e337fbc49f160ef89865e3c106f274469c80943a7f5cb0cda3c3a2458d0cb6",
+    "evidence/operations/atomic-core-replacement/installed-02/report.json": "5f075c2283a31f549bf794640df4d687c4b9f34e71f614195ab1e0f1128fb66d",
+    "evidence/operations/atomic-core-replacement/installed-02/seed.json": "107008e08c590216471831786089e9460555fdd1e3603b115782e4e19e648ade",
+    "evidence/operations/atomic-core-replacement/installed-02/upgraded.json": "a9b405ee4094db6d0e9e311f80ebaa9e4fef8106a18ebd86cd4f2ae28b3f9c3a",
+    "evidence/operations/atomic-core-replacement/installed-02/rollback.json": "f0723d670bb1264a30ea5f7d89f0d2cc7b5f4b4475d232390f50727159d90d94",
+    "evidence/operations/atomic-core-replacement/installed-02/final.json": "2e97596e7068a414ce2bfe2b1f7fc7255fbcc05543f30f8b799f8f08c5f0b4be",
+    "evidence/operations/atomic-core-replacement/installed-02/cleanup.json": "5aee8bcbde8db872d391947047267e191766a544c89d0134857644010eb8253b",
+    "evidence/operations/atomic-core-image/installed-02/notice-manifest.json": "9e6b8913240abadddcca0e9dd2036044e0d98e9337de5c7e724b1f1f25128aca",
+    "evidence/operations/atomic-core-image/installed-02/adaptation-runtime.cdx.json": "2d91808fddd3992c13479b4afc2deb4deeddeb562d63dd4cbae1e738fba44346"
+  },
+  "finished": "2026-09-09T09:30:44.234518+00:00"
+}

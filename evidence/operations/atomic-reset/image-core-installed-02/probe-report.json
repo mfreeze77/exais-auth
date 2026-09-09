@@ -1,0 +1,665 @@
+{
+  "kind": "actual-atomic-reset-core-probe",
+  "started": "2026-09-09T09:24:04.288621243Z",
+  "subset_passed": true,
+  "full_PWD_006_qualified": false,
+  "foundation_passed": false,
+  "independent_human_review": false,
+  "credential_values_recorded": false,
+  "rows": [
+    {
+      "id": "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+      "status": "passed"
+    },
+    {
+      "valid_token_retained_for_next_case": true,
+      "id": "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+      "status": "passed"
+    },
+    {
+      "owned_sessions_revoked": 2,
+      "unrelated_identity_preserved": true,
+      "id": "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+      "status": "passed"
+    },
+    {
+      "id": "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+      "status": "passed"
+    },
+    {
+      "consumers": 8,
+      "committed_winners": 1,
+      "id": "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+      "status": "passed"
+    },
+    {
+      "blocked_at_session_delete": true,
+      "identified_backend_terminated": true,
+      "old_password_and_sessions_preserved_after_abort": true,
+      "same_token_retry_succeeded": true,
+      "id": "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+      "status": "passed"
+    },
+    {
+      "id": "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+      "status": "passed"
+    },
+    {
+      "configured_lifetime_ms": 6000,
+      "wait_ms": 6500,
+      "id": "ATOMIC-RESET-CONFIGURED-EXPIRY",
+      "status": "passed"
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 57,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 50,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 401,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "elapsed_ms": 7,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 145,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 120,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 37,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 53,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 16,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 18,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "PASSWORD_INPUT_INVALID",
+      "elapsed_ms": 3,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "PASSWORD_INPUT_INVALID",
+      "elapsed_ms": 3,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 2,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 125,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 120,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 108,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 96,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 7,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 13,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 97,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 3,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 96,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 153,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 159,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 213,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 217,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 221,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 225,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 230,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 233,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 99,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 97,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 97,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 93,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 93,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 93,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 94,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 90,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 91,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 10,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 500,
+      "status": "ATOMIC_RESET_OPERATION_FAILED",
+      "elapsed_ms": 131,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 96,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 94,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 10,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 92,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 93,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 3,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 93,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/userid/map",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 10,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 93,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 3,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 95,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    }
+  ],
+  "blocked_qualification": [
+    "Two configured tenant/application namespaces and linked-account cases require a capable unrestricted foundation",
+    "Sign-in authenticated before reset but issuing a session afterward remains a separate unresolved race",
+    "Node/React atomic-profile integration, live-provider/native and independent human review not covered by this Core probe"
+  ],
+  "finished": "2026-09-09T09:24:14.320882393Z"
+}

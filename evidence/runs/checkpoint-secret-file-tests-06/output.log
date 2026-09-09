@@ -1,0 +1,27 @@
+test_controller_failure_before_journal_is_allowed (test_checkpoint_secrets.CheckpointSecretTests.test_controller_failure_before_journal_is_allowed) ... ok
+test_corrupt_or_incomplete_upgrade_journal_fails_closed (test_checkpoint_secrets.CheckpointSecretTests.test_corrupt_or_incomplete_upgrade_journal_fails_closed) ... ok
+test_direct_secret_values_remain_protected (test_checkpoint_secrets.CheckpointSecretTests.test_direct_secret_values_remain_protected) ... ok
+test_directory_target_fails_closed (test_checkpoint_secrets.CheckpointSecretTests.test_directory_target_fails_closed) ... ok
+test_interrupted_upgrade_save_protects_both_journals (test_checkpoint_secrets.CheckpointSecretTests.test_interrupted_upgrade_save_protects_both_journals) ... ok
+test_invalid_or_oversized_credentials_fail_closed (test_checkpoint_secrets.CheckpointSecretTests.test_invalid_or_oversized_credentials_fail_closed) ... ok
+test_known_key_outside_owned_layout_is_not_exempt (test_checkpoint_secrets.CheckpointSecretTests.test_known_key_outside_owned_layout_is_not_exempt) ... ok
+test_launcher_authorized_leading_underscore_name (test_checkpoint_secrets.CheckpointSecretTests.test_launcher_authorized_leading_underscore_name) ... ok
+test_missing_negative_target_cannot_exempt_reference (test_checkpoint_secrets.CheckpointSecretTests.test_missing_negative_target_cannot_exempt_reference) ... ok
+test_missing_target_cannot_exempt_reference (test_checkpoint_secrets.CheckpointSecretTests.test_missing_target_cannot_exempt_reference) ... ok
+test_missing_writer_profile_scans_actual_smtp_credentials (test_checkpoint_secrets.CheckpointSecretTests.test_missing_writer_profile_scans_actual_smtp_credentials) ... ok
+test_name_outside_launcher_namespace_is_not_exempt (test_checkpoint_secrets.CheckpointSecretTests.test_name_outside_launcher_namespace_is_not_exempt) ... ok
+test_one_byte_secret_remains_protected (test_checkpoint_secrets.CheckpointSecretTests.test_one_byte_secret_remains_protected) ... ok
+test_oversized_or_directory_upgrade_journal_fails_closed (test_checkpoint_secrets.CheckpointSecretTests.test_oversized_or_directory_upgrade_journal_fails_closed) ... ok
+test_path_is_allowed_but_both_real_credentials_are_rejected (test_checkpoint_secrets.CheckpointSecretTests.test_path_is_allowed_but_both_real_credentials_are_rejected) ... ok
+test_seed_before_session_is_protected (test_checkpoint_secrets.CheckpointSecretTests.test_seed_before_session_is_protected) ... ok
+test_significant_spaces_and_bom_are_preserved (test_checkpoint_secrets.CheckpointSecretTests.test_significant_spaces_and_bom_are_preserved) ... ok
+test_unknown_file_setting_is_not_exempt (test_checkpoint_secrets.CheckpointSecretTests.test_unknown_file_setting_is_not_exempt) ... ok
+test_unknown_mount_path_is_not_opened_or_exempt (test_checkpoint_secrets.CheckpointSecretTests.test_unknown_mount_path_is_not_opened_or_exempt) ... ok
+test_unsupported_core_profile_scans_actual_smtp_credentials (test_checkpoint_secrets.CheckpointSecretTests.test_unsupported_core_profile_scans_actual_smtp_credentials) ... ok
+test_upgrade_password_and_both_session_generations_are_protected (test_checkpoint_secrets.CheckpointSecretTests.test_upgrade_password_and_both_session_generations_are_protected) ... ok
+test_wrong_auth_mount_scans_both_files (test_checkpoint_secrets.CheckpointSecretTests.test_wrong_auth_mount_scans_both_files) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.157s
+
+OK

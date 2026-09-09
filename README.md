@@ -10,6 +10,12 @@ real API tests and license evidence are retained separately from plan integrity 
 
 ## Reproduce the source-built alternative lab
 
+The current candidate is documented in [installed Core qualification](docs/installed-atomic-core.md).
+Both Core and Node contain their current atomic integration; local upgrade and
+rollback pass. Use those current commands for an existing lab. The original
+bootstrap sequence below is historical and must not be used as an in-place
+replacement of the atomic runtime. Full clean-host bootstrap remains unqualified.
+
 Requirements: Docker Linux containers and Python3.11+ on the host. The recipe keeps
 Core and PostgreSQL off public ports. Build-time internet access downloads pinned
 permitted sources/dependencies; the running lab network has no external egress.
@@ -57,14 +63,16 @@ its temporary container is removed after verification.
 The opt-in [atomic reset adaptation](docs/atomic-password-reset.md) now commits
 token consumption, password change and existing-session deletion in one Core
 transaction. Eight real Core cases and32 Node/SMTP/React cases pass, including
-database abort/retry and legacy-token reissue. It uses explicit source/JAR mounts
-and creates no new Docker image. Full foundation, migration and security-review
+database abort/retry and legacy-token reissue. That historical run used explicit
+source/JAR mounts and created no new image. Full foundation, migration and security-review
 acceptance remain open. The later [password-session adaptation](docs/password-session-transactions.md)
 closes the demonstrated race for the explicit Node password profile:16 Core
 cases and33 HTTP/SMTP/browser cases pass, with actual wire and cleanup evidence.
 The latest [installed Node profile](docs/atomic-node-installation.md) passes
 34 behavior checks, including missing-storage-writer denial and recovery. Its
-new image replaces the prior Node image; Core still uses the exact JAR mounts.
+new image replaces the prior Node image. The subsequent
+[installed Core qualification](docs/installed-atomic-core.md) removes the healthy
+Core JAR mounts and proves a bounded local upgrade, rollback and re-upgrade.
 
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image

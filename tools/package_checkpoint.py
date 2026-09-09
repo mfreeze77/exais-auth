@@ -28,6 +28,51 @@ def safe(name):
     assert not any(part in {'.git','.runtime','.cache','.docker','node_modules','artifacts'} for part in path.parts)
     assert path.name=='.env.example' or not (path.name=='.env' or path.name.startswith('.env.'))
 
+def upgrade_fixture_secrets(root):
+    """Protect the exact private rollback journal, including interrupted saves."""
+    values=set()
+    runtime=root/'.runtime'
+    parent=runtime/'atomic-core-replacement'
+    def regular(entry):
+        assert not entry.is_symlink() and not getattr(entry.lstat(),'st_file_attributes',0)&0x400, 'Upgrade fixture path is a link or reparse point'
+    if not parent.exists() and not parent.is_symlink():
+        return values
+    regular(runtime); regular(parent)
+    assert parent.is_dir(), 'Upgrade fixture parent is not a directory'
+    for run in parent.iterdir():
+        regular(run)
+        assert run.is_dir() and re.fullmatch(r'[A-Za-z0-9_-]{1,64}',run.name), 'Invalid upgrade fixture run'
+        directory=run/'fixture'
+        if not directory.exists() and not directory.is_symlink():
+            continue  # A controller can fail before creating its journal directory.
+        regular(directory)
+        assert directory.is_dir(), 'Upgrade fixture directory differs'
+        for name in ('fixture.json','fixture.tmp'):
+            path=directory/name
+            if not path.exists() and not path.is_symlink():
+                continue
+            regular(path)
+            assert path.is_file() and 0 < path.stat().st_size <= 262144, 'Upgrade fixture size or file type invalid'
+            assert path.resolve().parent==directory.resolve(), 'Upgrade fixture escaped its directory'
+            raw=path.read_bytes()
+            assert 0 < len(raw) <= 262144, 'Upgrade fixture changed size'
+            state=json.loads(raw)
+            assert isinstance(state,dict), 'Upgrade fixture must be an object'
+            def credential(value):
+                assert isinstance(value,str) and 0 < len(value.encode('utf-8')) <= 65536, 'Upgrade credential invalid'
+                values.add(value.encode('utf-8'))
+            credential(state['password'])
+            for key in ('session','atomic_session'):
+                if key not in state:
+                    continue  # Seed is durably saved before any session exists.
+                session=state[key]
+                assert isinstance(session,dict), 'Upgrade session invalid'
+                for token in ('accessToken','refreshToken'):
+                    assert isinstance(session.get(token),dict), 'Upgrade session token missing'
+                    credential(session[token]['token'])
+    return values
+
+
 def local_secrets(root):
     """Scan credential bytes, resolving only the lab's explicit SMTP mounts.
 
@@ -72,6 +117,7 @@ def local_secrets(root):
                 continue
             if any(word in key for word in ('PASSWORD','SECRET','API_KEY')) and len(value)>=16:
                 secrets.add(value.encode())
+    secrets.update(upgrade_fixture_secrets(root))
     return secrets
 
 def secret_leaks(files, secrets):

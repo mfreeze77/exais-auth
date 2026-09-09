@@ -9,11 +9,21 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest deployment work is `docs/atomic-node-installation.md`: the installed Node
+Latest deployment work is `docs/installed-atomic-core.md`: both images now contain
+their current integration. Core image `03b4458c532f` passes 16 Core, 34 Node and
+14 local upgrade/rollback cases. The old Core image was retired only after those
+checks. Use compile-04 and the installed-image commands there; old compile-03
+launcher prerequisites and original notice-only deployment commands are historical.
+Full fresh-host bootstrap, configured tenancy/linking, the failed refresh profiles,
+distribution and independent review remain open. The frozen SES-003/004 criteria
+require a documented tested race/retry versus replay policy; a zero-grace policy's
+failure does not select or qualify an alternative policy automatically.
+
+Earlier deployment work is `docs/atomic-node-installation.md`: the installed Node
 image passes 34 behavior checks, including missing-writer denial and recovery.
-Use its exact image/build commands. The previous Node image was retired after
-qualification; the Core image still needs installation/qualification of its two
-candidate JARs. Full fresh-stack startup remains unresolved.
+The previous Node image was retired after qualification. Core still required
+JAR mounts in that historical run; the installed Core work above closes that
+specific gap. Full fresh-stack startup remains unresolved.
 
 Earlier work is `docs/password-session-transactions.md`: Core now revalidates the
 password under its user lock and inserts the session in that same transaction.
@@ -32,8 +42,8 @@ transaction now covers token consumption, password change and existing-session
 deletion. Eight actual Core checks and32 Node/SMTP/React checks pass. Read its
 exact historical binary/source/evidence and migration boundaries before changing
 it. Its reset-only JAR has been superseded and retired; use the current two-JAR
-candidate and commands above. The installed Core image does not contain these changes;
-the later installed Node image does.
+candidate and commands above. Both current installed images contain the changes;
+the original reset-only run used explicit mounts.
 The failed node-02 mount-order check remains preserved; node-03 saves and compares
 the complete stable before/after projections and retires all17 containers.
 The later password-session work resolves that demonstrated race for its explicit

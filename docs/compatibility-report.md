@@ -11,8 +11,11 @@ The working OSS Node/React and Python examples exercise password/session subsets
 The new Node/React reset subset uses optional authenticated TLS SMTP and engine
 reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks.
 The current installed Node image `9375a5bc093d` passes 34 behavior checks for
-the opt-in atomic profile, with no app source/bundle mounts. Core uses the exact
-two-JAR adaptation. A new Core paired with its old PostgreSQL plugin correctly
+the opt-in atomic profile, with no app source/bundle mounts. Core image
+`03b4458c532f` now contains the exact two-JAR adaptation and passes its 16 Core
+cases without overlays. Fourteen local upgrade/rollback cases preserve legacy
+and newly issued sessions across the original/adapted binaries; this does not
+qualify a rolling upgrade or cross-version SDK matrix. A new Core paired with its old PostgreSQL plugin correctly
 rejects readiness and session creation without issuing credentials or adding a
 session. The healthy writer can retry. Its dependencies match the prior audited
 tree; the earlier Node image `4c03d7306e1e` was retired. See

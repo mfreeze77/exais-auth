@@ -1,5 +1,10 @@
 # Password validation and session creation
 
+The [installed Core qualification](installed-atomic-core.md) now covers both
+images without healthy-path JAR/application mounts, including real local
+upgrade/rollback continuity. Its compile-04 supersedes the old compiler-image
+dependency while preserving the tested JAR bytes.
+
 The later [installed Node qualification](atomic-node-installation.md) passes
 34 behavior checks, including the missing-writer deployment fault. Node now
 contains this integration in its image; Core still uses the two JAR mounts.

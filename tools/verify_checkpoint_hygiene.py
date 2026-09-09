@@ -31,7 +31,7 @@ def main():
     images = [json.loads(line) for line in docker(
         'image', 'ls', '--filter', 'reference=expertauth*', '--no-trunc',
         '--format', '{"tag":"{{.Repository}}:{{.Tag}}","id":"{{.ID}}","size":"{{.Size}}"}')]
-    dangling_task_images = docker('image', 'ls', '--filter', 'dangling=true',
+    dangling_task_images = docker('image', 'ls', '--all', '--filter', 'dangling=true',
                                   '--filter', 'label=org.expertauth.project=expert-auth',
                                   '--no-trunc', '--format', '{{.ID}}')
     networks = docker('network', 'ls', '--filter', 'name=expertauth', '--format', '{{.Name}}')

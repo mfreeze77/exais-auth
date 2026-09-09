@@ -3,7 +3,8 @@
 The current installed atomic Node profile is documented in
 [atomic-node-installation.md](atomic-node-installation.md). It replaces the
 historical image described below; earlier evidence applies to its recorded
-source hashes. The Core adaptation still requires its explicit JAR mounts.
+source hashes. Core used explicit JAR mounts in that historical run. The current
+[installed Core qualification](installed-atomic-core.md) closes that specific gap.
 
 The complete updated Dockerfile built offline and its installed application
 passed the password-reset lab. This is a reference-candidate result; no engine,

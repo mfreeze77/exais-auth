@@ -1,5 +1,9 @@
 # Installed Node password/session profile
 
+Later [installed Core qualification](installed-atomic-core.md) closes the Core
+image gap described in this historical Node run and adds local rollback proof.
+Use its compile-04 and current installed-image commands for resumption.
+
 The current `expertauth-node-react:0.0.5` image contains the opt-in atomic reset
 and password-session integration. Its immutable image ID is
 `sha256:9375a5bc093d7210da4daa7a06c55e39c1401df56b0dec2b78d5f4816470442f`.

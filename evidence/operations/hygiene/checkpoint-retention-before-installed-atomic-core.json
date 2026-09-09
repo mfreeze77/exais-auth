@@ -1,0 +1,66 @@
+{
+  "started": "2026-09-09T09:32:13.310640+00:00",
+  "passed": true,
+  "complete": false,
+  "tool_sha256": "99f53502fd29ebbe0a12f42d10e1e06146a1e4d9cde7588b6129aeecb94a73c2",
+  "pins": [
+    [
+      "60b652be155e",
+      "d696eb9a75482f8474c62f57cb85f868d696df619ea6ff16891662c6a68a34e8"
+    ],
+    [
+      "e4da907422d0",
+      "4cdbab0418c54bfe5f9703f3949b0b4a02a4f66407e27d16d205cc9e3a2cd17b"
+    ],
+    [
+      "18354410d030",
+      "163cd04862a863d511e7975e455a90535eb8d4598083e2ec1d85822d1c32d335"
+    ]
+  ],
+  "rows": [
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-60b652be155e.zip",
+      "sha256": "d696eb9a75482f8474c62f57cb85f868d696df619ea6ff16891662c6a68a34e8",
+      "bytes": 21613927,
+      "commit": "60b652be155e7567639f3e7703a85abde406daec",
+      "every_member_and_crc_verified": true,
+      "retired": true,
+      "sidecar_sha256": {
+        "expertauth-partial-checkpoint-60b652be155e.manifest.json": "93d36e756d8712b7d3acfb5d1bcb5502ab45a9696586dea6e603672845f81f21",
+        "expertauth-partial-checkpoint-60b652be155e.validation.json": "213336c39719031c29a2cc4b845b37219dcd294d4e82a9dc4d2084faffa9ac4c",
+        "expertauth-partial-checkpoint-60b652be155e.zip.sha256": "3cf8b5635173396b8fb3885ec2248577d5ebf551b33249da3e1190332afba390"
+      }
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-e4da907422d0.zip",
+      "sha256": "4cdbab0418c54bfe5f9703f3949b0b4a02a4f66407e27d16d205cc9e3a2cd17b",
+      "bytes": 22960283,
+      "commit": "e4da907422d0be7231d2c3932b422ac021358246",
+      "every_member_and_crc_verified": true,
+      "retired": false,
+      "sidecar_sha256": {
+        "expertauth-partial-checkpoint-e4da907422d0.manifest.json": "76f17fcb6eeebede0d05cc6caa38116fa2cf21601b0f3cd6d305d938d35497f1",
+        "expertauth-partial-checkpoint-e4da907422d0.validation.json": "e3608069edb0ca5fd65fb2f459149da43677081c2b58d6a4181535406f597361",
+        "expertauth-partial-checkpoint-e4da907422d0.zip.sha256": "1a82ccd30f788029631e668849d53c28d7f85c5d1214180b5e3a415e878c7e3d"
+      }
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-18354410d030.zip",
+      "sha256": "163cd04862a863d511e7975e455a90535eb8d4598083e2ec1d85822d1c32d335",
+      "bytes": 25758446,
+      "commit": "18354410d03065286a7f3afa3b2b253c85b4dddd",
+      "every_member_and_crc_verified": true,
+      "retired": false,
+      "sidecar_sha256": {
+        "expertauth-partial-checkpoint-18354410d030.manifest.json": "75b3821466d9e94fae79a7339123b3f62ff11fcbb25a88798c4b75470ba31d61",
+        "expertauth-partial-checkpoint-18354410d030.validation.json": "2797b371beeedfe0198003c4f3851918a914ba875829ff96ce0f004b457fc54a",
+        "expertauth-partial-checkpoint-18354410d030.zip.sha256": "01a14b13632a374545ad9bdcc4930a36cd550edace0d11bbae7e72f438930728"
+      }
+    }
+  ],
+  "errors": [],
+  "deletion_performed": true,
+  "maximum_after_next_checkpoint": 3,
+  "preflight_passed": true,
+  "finished": "2026-09-09T09:32:14.985408+00:00"
+}
