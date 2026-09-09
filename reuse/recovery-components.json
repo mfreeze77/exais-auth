@@ -1,0 +1,71 @@
+{
+  "kind": "file-specific-recovery-reuse",
+  "independent_license_approval": false,
+  "authored_files": [
+    {
+      "path": "tools/recovery_bundle.py",
+      "sha256": "5c4bba4eaa8b49a9ff6f38fa3005529791b9a933f9aab72e3a333bfed6ee949d",
+      "origin": "New repository-authored orchestration or test; no cipher code copied"
+    },
+    {
+      "path": "tools/run_recovery_drill.py",
+      "sha256": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+      "origin": "New repository-authored orchestration or test; no cipher code copied"
+    },
+    {
+      "path": "tests/operations/recovery_probe.py",
+      "sha256": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e",
+      "origin": "New repository-authored orchestration or test; no cipher code copied"
+    },
+    {
+      "path": "tests/operations/test_recovery_bundle.py",
+      "sha256": "cf7e70c9609c025940dbdb9a1f0f1e569527073e5c6891cfb97075be6222a6af",
+      "origin": "New repository-authored orchestration or test; no cipher code copied"
+    }
+  ],
+  "cryptography": {
+    "version": "50.0.1",
+    "wheel_sha256": "51afcfceb15597cf2635068e4ac9a56b2abde622edde17f37d85fd7b5306497a",
+    "license_expression": "Apache-2.0 OR BSD-3-Clause",
+    "members": [
+      {
+        "path": "cryptography/fernet.py",
+        "bytes": 7687,
+        "sha256": "dac2c23ce99e8e13956ee75c4b742c3353c8b876f109e45c46d5a49dc437982a"
+      },
+      {
+        "path": "cryptography-50.0.1.dist-info/licenses/LICENSE",
+        "bytes": 197,
+        "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb"
+      },
+      {
+        "path": "cryptography-50.0.1.dist-info/licenses/LICENSE.APACHE",
+        "bytes": 11360,
+        "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe"
+      },
+      {
+        "path": "cryptography-50.0.1.dist-info/licenses/LICENSE.BSD",
+        "bytes": 1532,
+        "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb"
+      }
+    ],
+    "installed_byte_evidence": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+    "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+  },
+  "postgresql": {
+    "image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+    "tools": [
+      "pg_dump",
+      "pg_restore"
+    ],
+    "source_not_copied": true
+  },
+  "identity_session_engine": {
+    "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+    "modifications": false
+  },
+  "limits": [
+    "Container/native/transitive distribution review and independent human review remain open.",
+    "Existing installed-byte audit is bound to the same immutable Python image; no new binary is downloaded or bundled."
+  ]
+}

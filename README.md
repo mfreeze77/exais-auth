@@ -36,6 +36,12 @@ example containers were retired with database/log backups. Read `AGENTS.md` befo
 starting labs; inspect resources, reuse cached builds and remove temporary resources
 after tests. The cleanup evidence is under `evidence/operations/hygiene`.
 
+The bounded [encrypted recovery drill](docs/encrypted-recovery.md) uses those
+cached images to restore a real database/configuration backup into temporary
+storage. Its two-action security reconciliation and measured results remain
+distinct from full recovery acceptance. The hygiene verifier now also requires
+zero dangling project-labeled images.
+
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image
 inspection without starting services. Native and full distribution licensing remain

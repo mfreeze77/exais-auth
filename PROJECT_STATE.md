@@ -11,6 +11,20 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- A real encrypted recovery drill now restores the candidate database, signing
+  material and configuration into temporary PostgreSQL/Core instances.28 format
+  tests and19 operational checks pass; one historical snapshot state is separately
+  characterized. Two post-snapshot revoke/delete actions are replayed before the
+  restored app starts, and unexpired old refresh tokens/deleted credentials stay
+  denied. All9 temporary containers retire, source processes/mounts stay unchanged
+  and its original52-identity set is restored. This is a two-action lab, not a
+  general durable reconciliation journal, full OPS-006/WP-033 or final-engine
+  acceptance. Read `docs/encrypted-recovery.md` for measured evidence and limits.
+- Hygiene now checks untagged task images as well as the6 current component tags.
+  Three unused legacy Python build/fixture image records were retired by exact
+  ID with no force/parent prune. No dangling project-labeled image remains;
+  persistent containers, shared parents, tags, networks and volumes are preserved.
+  The current10-check hygiene report is `verification-20260909T032659Z.json`.
 - Python's full Dockerfile now builds offline through the existing BuildKit
   builder from49 hash-pinned wheels, retaining one20,367,857-byte cache. New image
   `5bffadb83aa3` passes3,349 wheel-file comparisons,63 notice checks,418 immutable

@@ -17,6 +17,11 @@ The user's explicit disk/Docker hygiene instruction applies to every agent.
   Preserve small private raw logs under ignored `.runtime/` when needed, plus
   sanitized reports and source/ZIP hashes. Keep necessary source/dependency caches
   bounded; never make repeated anonymous copies of the same build.
+- Keep at most three recent generated source-checkpoint ZIPs. Before retiring an
+  older generated ZIP, verify its exact path/hash/CRC/manifest and source-commit
+  ancestry, retain newer validated recovery ZIPs, and preserve its checksum,
+  manifest, validation sidecars and source/evidence history. Supplied acceptance
+  archives and the immutable baseline are never checkpoint-retention targets.
 - Before recursive removal, verify the resolved absolute target is inside the
   intended workspace cache. Preserve repository files, immutable baseline,
   persistent databases, user work and unrelated Docker resources. Back up H2 data

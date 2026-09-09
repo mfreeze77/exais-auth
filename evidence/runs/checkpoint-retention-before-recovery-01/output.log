@@ -1,0 +1,1 @@
+{"report": "evidence/operations/hygiene/checkpoint-retention-before-recovery.json", "passed": true, "logical_archive_bytes_removed": 63343231, "retained_validated_zips": 2, "errors": []}

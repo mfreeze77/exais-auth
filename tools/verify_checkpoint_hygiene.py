@@ -31,6 +31,9 @@ def main():
     images = [json.loads(line) for line in docker(
         'image', 'ls', '--filter', 'reference=expertauth*', '--no-trunc',
         '--format', '{"tag":"{{.Repository}}:{{.Tag}}","id":"{{.ID}}","size":"{{.Size}}"}')]
+    dangling_task_images = docker('image', 'ls', '--filter', 'dangling=true',
+                                  '--filter', 'label=org.expertauth.project=expert-auth',
+                                  '--no-trunc', '--format', '{{.ID}}')
     networks = docker('network', 'ls', '--filter', 'name=expertauth', '--format', '{{.Name}}')
     volumes = docker('volume', 'ls', '--filter', 'name=expertauth', '--format', '{{.Name}}')
     checks = []
@@ -45,6 +48,7 @@ def main():
     check('8 original stale tags absent', len(plan['RemoveImageTags']) == 8 and
           not set(plan['RemoveImageTags']).intersection(row['tag'] for row in images))
     check('6 bounded retained task tags', len(images) == 6 and {row['tag'] for row in images} == set(plan['KeepImages']))
+    check('no dangling project-labeled images remain', not dangling_task_images)
     check('6 obsolete scratch directories absent', len(plan['RemoveScratch']) == 6 and
           all(not (ROOT / path).exists() for path in plan['RemoveScratch']))
     check('only owned OSS network remains', networks == ['expertauth-oss-proof'])
@@ -71,6 +75,7 @@ def main():
     report = {'timestamp_utc': datetime.now(timezone.utc).isoformat(), 'hygiene_verified': passed,
               'authentication_complete': False, 'docker_mutations': 0, 'checks': checks,
               'containers': containers, 'images': images, 'networks': networks, 'volumes': volumes,
+              'dangling_task_images': dangling_task_images,
               'historical_reports': extracted_reports, 'verifier_sha256': sha(Path(__file__)),
               'limits': ['Docker shared layers are not summed as freed physical host disk',
                          'Unrelated Docker resources and volumes were not cleanup targets',

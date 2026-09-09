@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-09-09T03:26:35.452060+00:00",
+  "target": "sha256:fa94fb47cebff6532330795a1f1ad6ed731c4a9acf763293286cb5cea39b863d",
+  "labels": {
+    "org.expertauth.lifecycle.fixture": "b332b3b649674a188cf6dae578a1bb24",
+    "org.expertauth.project": "expert-auth",
+    "org.expertauth.purpose": "python-foundation"
+  },
+  "historical_parent_already_absent": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "provenance": "evidence/operations/python-image-lifecycle/source-drift-01/helper-evidence/build-output.log",
+  "physical_host_bytes_freed": null,
+  "errors": [],
+  "removal_output": "Deleted: sha256:fa94fb47cebff6532330795a1f1ad6ed731c4a9acf763293286cb5cea39b863d\n",
+  "containers_volumes_networks_unchanged": true,
+  "named_tags_unchanged": true,
+  "remaining_dangling_task_images": [],
+  "passed": true
+}

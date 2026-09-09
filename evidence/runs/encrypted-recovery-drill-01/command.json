@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/run_recovery_drill.py",
+    "--name",
+    "run-01"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788924276.5567672,
+  "elapsed_seconds": 22.211,
+  "input_sha256": {
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "tools/recovery_bundle.py": "5c4bba4eaa8b49a9ff6f38fa3005529791b9a933f9aab72e3a333bfed6ee949d",
+    "tests/operations/recovery_probe.py": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e",
+    "tests/operations/test_recovery_bundle.py": "cf7e70c9609c025940dbdb9a1f0f1e569527073e5c6891cfb97075be6222a6af"
+  },
+  "inputs_changed": false,
+  "output_sha256": "a8d3f5de0db830ffb5236d466508b34cf94f918005ec150c519425d5071994df",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

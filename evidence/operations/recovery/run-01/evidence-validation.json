@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-09-09T03:30:02.506955+00:00",
+  "scope": "Evidence integrity and private-value scan only; no additional authentication tests",
+  "passed": true,
+  "checks": [
+    {
+      "check": "source hashes still match executed inputs",
+      "passed": true
+    },
+    {
+      "check": "public artifacts match exact run hashes",
+      "passed": true
+    },
+    {
+      "check": "exact stage accounting",
+      "passed": true
+    },
+    {
+      "check": "no full acceptance claim",
+      "passed": true
+    },
+    {
+      "check": "unchanged source and no Docker delta",
+      "passed": true
+    },
+    {
+      "check": "all nine owned containers recorded",
+      "passed": true
+    },
+    {
+      "check": "all three authenticated payload hashes match",
+      "passed": true
+    },
+    {
+      "check": "archive retained with exact hash",
+      "passed": true
+    },
+    {
+      "check": "retained private artifacts match captured hashes",
+      "passed": true
+    },
+    {
+      "check": "known duplicate plaintext removed",
+      "passed": true
+    },
+    {
+      "check": "real format unit tests passed",
+      "passed": true
+    },
+    {
+      "check": "public recovery artifacts exclude known private fixture values and keys",
+      "passed": true
+    },
+    {
+      "check": "reused cryptography wheel pin",
+      "passed": true
+    }
+  ],
+  "run_report_sha256": "8ef48a00a84aa3866de49996535a8ebc5d52dcd19c20f723ce2d47e47558bf05",
+  "probe_report_sha256": "bce3cbbb0f8dfc30894c9e26ade0f178300ed11350ad5dbf56ecc2f648e43368",
+  "reuse_report_sha256": "097475d8306622dd8d7d1576b5dad04658b6f8c28e0499f1961209bf4e593fdb"
+}

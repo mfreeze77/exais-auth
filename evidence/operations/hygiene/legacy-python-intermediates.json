@@ -1,0 +1,44 @@
+{
+  "started": "2026-09-09T03:24:27.404269+00:00",
+  "tool_sha256": "dc91e64d33761ad267afd56564363a0d4b9f4d63c02047fb9037a2b11add1702",
+  "scope": "Two exact legacy Python image records; no force, parent prune, volume or container mutation",
+  "physical_host_bytes_freed": null,
+  "images": [
+    {
+      "id": "sha256:eea3027f238275812536382f10d4b24d1d325c7789f63e1b232ecb068c452c3f",
+      "parent": "sha256:fa94fb47cebff6532330795a1f1ad6ed731c4a9acf763293286cb5cea39b863d",
+      "labels": {
+        "org.expertauth.lifecycle.fixture": "b332b3b649674a188cf6dae578a1bb24",
+        "org.expertauth.project": "expert-auth",
+        "org.expertauth.purpose": "python-foundation"
+      },
+      "created": "2026-09-09T01:05:13.124386088Z",
+      "docker_inspect_size": 77948262,
+      "tags": [],
+      "consumers": [],
+      "removal_output": "Deleted: sha256:eea3027f238275812536382f10d4b24d1d325c7789f63e1b232ecb068c452c3f\n"
+    },
+    {
+      "id": "sha256:b6bc50314f3598fe92e1140905648e0b8078b39703e70ffcb7d2870c19170916",
+      "parent": "sha256:4f8751c411b6f299376e00443d30f50daf7a98f9d5d73a121b06b5200ae6a899",
+      "labels": {
+        "org.expertauth.project": "expert-auth"
+      },
+      "created": "2026-09-09T00:36:26.583645201Z",
+      "docker_inspect_size": 77947693,
+      "tags": [],
+      "consumers": [],
+      "removal_output": "Deleted: sha256:b6bc50314f3598fe92e1140905648e0b8078b39703e70ffcb7d2870c19170916\n"
+    }
+  ],
+  "errors": [],
+  "remaining_target_ids": [],
+  "preserved_parent_ids": [
+    "sha256:fa94fb47cebff6532330795a1f1ad6ed731c4a9acf763293286cb5cea39b863d",
+    "sha256:4f8751c411b6f299376e00443d30f50daf7a98f9d5d73a121b06b5200ae6a899"
+  ],
+  "containers_volumes_networks_unchanged": true,
+  "named_tags_unchanged": true,
+  "passed": true,
+  "finished": "2026-09-09T03:24:29.785932+00:00"
+}

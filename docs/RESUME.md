@@ -9,6 +9,34 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
+Latest operational work is `docs/encrypted-recovery.md` and
+`evidence/operations/recovery/run-01`:28 format tests,19 operational passes and
+one historical-state characterization. The real dump/config/key-material restore
+uses cached images and temporary PostgreSQL storage; all9 clients/services were
+removed. The general post-backup security-change journal, key custody/rotation,
+failure-path injection and full OPS-006/WP-033 acceptance remain open. To test a
+changed recovery implementation, use a fresh name:
+
+```powershell
+python -B tools/run_recovery_drill.py --name NEW_UNIQUE_RECOVERY_NAME
+```
+
+Do not repeat unchanged passing drills for timestamps. Preserve the encrypted
+archive and its separately located44-byte key under ignored `.runtime/`; never
+put private state into the ZIP. The runner never restores/stops the source DB.
+Current hygiene includes the no-dangling-project-images check. Three obsolete
+Python intermediate image records were removed by exact ID; no global or parent
+prune occurred. Reports and executed commands are under `evidence/operations/hygiene`
+and `evidence/runs/legacy-python-*`. The one-shot retirement tool must not be
+rerun; its exact targets are already absent.
+Generated archive retention is now bounded to three recent source ZIPs. Six
+older duplicate ZIPs totaling63,343,231logical bytes were retired after exact
+hash/CRC/manifest checks and proof their source commits remain in current Git
+history. Their checksum/manifest/validation sidecars remain; the two newest
+validated rollback ZIPs were kept before making this checkpoint. Read
+`evidence/operations/hygiene/checkpoint-retention-before-recovery.json` before
+looking for an older ZIP. This never applies to supplied acceptance archives.
+
 Latest source/packaging checkpoint: read `docs/native-source-correspondence.md`.
 The corrected notice tree has89 archive notice texts and390 files. Core image
 `5ec6ccc3fd5d` now contains all479 verified installed files (87JARs unchanged).

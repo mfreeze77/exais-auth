@@ -1,0 +1,276 @@
+{
+  "schema": "expertauth-isolated-recovery-http-worker-v1",
+  "started": "2026-09-09T03:24:42.792982+00:00",
+  "scope": "Two owned post-snapshot actions reconciled before restored application startup",
+  "foundation_passed": false,
+  "full_recovery_qualified": false,
+  "full_AT_OPS_006_passed": false,
+  "full_WP033_passed": false,
+  "drill_passed": true,
+  "ok": true,
+  "cleanup_only": false,
+  "fdi_version": "4.2",
+  "cdi_version": "5.4",
+  "transport": "Maintained Python SDK header sessions and real Core HTTP",
+  "input_sha256": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e",
+  "private_fixture_values_in_evidence": false,
+  "restored_app_contacted_before_reconciliation": false,
+  "errors": [],
+  "rows": [
+    {
+      "id": "RECOVERY-SOURCE-INITIAL-IDENTITY-SET",
+      "status": "passed",
+      "elapsed_ms": 36.78,
+      "details": {
+        "source_identity_count": 52,
+        "pagination_present": false
+      }
+    },
+    {
+      "id": "RECOVERY-SOURCE-TWO-SIGNUPS",
+      "status": "passed",
+      "elapsed_ms": 460.61,
+      "details": {
+        "signup_http_statuses": [
+          200,
+          200
+        ],
+        "created_fixtures": 2
+      }
+    },
+    {
+      "id": "RECOVERY-SOURCE-SNAPSHOT-SESSIONS",
+      "status": "passed",
+      "elapsed_ms": 99.0,
+      "details": {
+        "protected_http_statuses": [
+          200,
+          200
+        ],
+        "snapshot_sessions": 2,
+        "online_session_verification": true,
+        "refresh_lifetime_source": "Core stored session expiry in milliseconds; no token decoding",
+        "public_jwks": {
+          "key_count": 2,
+          "canonical_json_sha256": "6ffc2dea20727691ae19db9aa6110b0149b3bd0f957894b62fbbaf799281b12a",
+          "canonicalization": "Object keys sorted; JWKS keys ordered by canonical key JSON"
+        }
+      }
+    },
+    {
+      "id": "RECOVERY-HOST-SNAPSHOT",
+      "status": "passed",
+      "elapsed_ms": 1710.01,
+      "details": {
+        "host_control": "snapshot",
+        "acknowledged": true
+      }
+    },
+    {
+      "id": "RECOVERY-SOURCE-REVOKE",
+      "status": "passed",
+      "elapsed_ms": 53.22,
+      "details": {
+        "http_status": 200,
+        "session_handles_revoked": 1
+      }
+    },
+    {
+      "id": "RECOVERY-SOURCE-DELETE",
+      "status": "passed",
+      "elapsed_ms": 57.58,
+      "details": {
+        "http_status": 200,
+        "deleted_identity_absent": true
+      }
+    },
+    {
+      "id": "RECOVERY-HOST-RESTORE",
+      "status": "passed",
+      "elapsed_ms": 4731.43,
+      "details": {
+        "host_control": "restore",
+        "acknowledged": true,
+        "database_backed_readiness": true,
+        "readiness_attempts": 5,
+        "readiness_elapsed_ms": 2104.57,
+        "readiness_limit_seconds": 40
+      }
+    },
+    {
+      "id": "RECOVERY-HISTORICAL-STATE-CHARACTERIZATION",
+      "status": "characterized",
+      "elapsed_ms": 108.9,
+      "details": {
+        "historical_fixture_users_present": 2,
+        "historical_sessions_present": 2,
+        "historical_refresh_lifetimes_preserved": true,
+        "public_jwks": {
+          "key_count": 2,
+          "canonical_json_sha256": "6ffc2dea20727691ae19db9aa6110b0149b3bd0f957894b62fbbaf799281b12a",
+          "canonicalization": "Object keys sorted; JWKS keys ordered by canonical key JSON"
+        },
+        "public_jwks_matches_snapshot": true,
+        "acceptable_final_recovery": false,
+        "application_start_gate": "reconciliation-required",
+        "classification": "Historical snapshot state characterized; not a passed final recovery check"
+      }
+    },
+    {
+      "id": "RECOVERY-RESTORED-REVOKE",
+      "status": "passed",
+      "elapsed_ms": 57.16,
+      "details": {
+        "http_status": 200,
+        "session_handles_revoked": 1
+      }
+    },
+    {
+      "id": "RECOVERY-RESTORED-DELETE",
+      "status": "passed",
+      "elapsed_ms": 80.86,
+      "details": {
+        "http_status": 200,
+        "deleted_identity_absent": true
+      }
+    },
+    {
+      "id": "RECOVERY-RECONCILED-CORE-STATE",
+      "status": "passed",
+      "elapsed_ms": 48.33,
+      "details": {
+        "owned_actions_replayed": 2,
+        "survivor_present": true,
+        "deleted_identity_absent": true,
+        "old_sessions_remaining": 0,
+        "restored_application_not_started": true
+      }
+    },
+    {
+      "id": "RECOVERY-HOST-START-RESTORED-APP",
+      "status": "passed",
+      "elapsed_ms": 2518.36,
+      "details": {
+        "host_control": "start_restored_app",
+        "acknowledged": true
+      }
+    },
+    {
+      "id": "RECOVERY-SOURCE-OLD-REFRESH-DENIED",
+      "status": "passed",
+      "elapsed_ms": 25.37,
+      "details": {
+        "http_statuses": [
+          401,
+          401
+        ],
+        "owned_old_refresh_tokens_denied": 2,
+        "denial_while_original_refresh_lifetime_remaining": true,
+        "remaining_lifetime_seconds": [
+          8639990.06,
+          8639990.23
+        ]
+      }
+    },
+    {
+      "id": "RECOVERY-RESTORED-OLD-REFRESH-DENIED",
+      "status": "passed",
+      "elapsed_ms": 56.06,
+      "details": {
+        "http_statuses": [
+          401,
+          401
+        ],
+        "owned_old_refresh_tokens_denied": 2,
+        "denial_while_original_refresh_lifetime_remaining": true,
+        "remaining_lifetime_seconds": [
+          8639989.98,
+          8639990.15
+        ]
+      }
+    },
+    {
+      "id": "RECOVERY-DELETED-SIGNIN-DENIED",
+      "status": "passed",
+      "elapsed_ms": 28.09,
+      "details": {
+        "http_statuses": [
+          200,
+          200
+        ],
+        "source_and_restored_credentials_rejected": true
+      }
+    },
+    {
+      "id": "RECOVERY-SURVIVOR-NEW-SIGNIN-PROTECTED",
+      "status": "passed",
+      "elapsed_ms": 301.69,
+      "details": {
+        "signin_http_status": 200,
+        "protected_http_status": 200,
+        "original_survivor_identity_preserved": true
+      }
+    },
+    {
+      "id": "RECOVERY-SURVIVOR-LOGOUT-REFRESH-DENIED",
+      "status": "passed",
+      "elapsed_ms": 58.6,
+      "details": {
+        "logout_http_status": 200,
+        "refresh_after_logout_http_status": 401,
+        "denial_while_original_refresh_lifetime_remaining": true,
+        "remaining_lifetime_seconds": 8639999.83
+      }
+    },
+    {
+      "id": "RECOVERY-CLEANUP-SOURCE",
+      "status": "passed",
+      "elapsed_ms": 61.43,
+      "details": {
+        "owned_identity_count": 2,
+        "delete_requests": 1,
+        "owned_identities_confirmed_absent": 2,
+        "existing_identity_email_ownership_required": true
+      }
+    },
+    {
+      "id": "RECOVERY-CLEANUP-RESTORED",
+      "status": "passed",
+      "elapsed_ms": 72.4,
+      "details": {
+        "owned_identity_count": 2,
+        "delete_requests": 1,
+        "owned_identities_confirmed_absent": 2,
+        "existing_identity_email_ownership_required": true
+      }
+    },
+    {
+      "id": "RECOVERY-SOURCE-IDENTITY-SET-RESTORED",
+      "status": "passed",
+      "elapsed_ms": 7.92,
+      "details": {
+        "source_identity_set_exactly_restored": true,
+        "source_identity_count": 52
+      }
+    }
+  ],
+  "expected_checks": 20,
+  "skipped": 0,
+  "blocked": [
+    "Generalized durable reconciliation journal and transactional capture of all security changes",
+    "Credential-policy, identity-policy and key changes after snapshot",
+    "Backup encryption/key management and recipient recovery governance",
+    "Production recovery objectives, full operational matrix and independent review"
+  ],
+  "updated": "2026-09-09T03:24:53.832765+00:00",
+  "executed": 20,
+  "passed": 19,
+  "characterized": 1,
+  "failed": 0,
+  "unexecuted": 0,
+  "elapsed_ms": 11039.87,
+  "fixtures_with_recorded_identity": 2,
+  "final": true,
+  "exit_code": 0,
+  "finished": "2026-09-09T03:24:53.822773+00:00"
+}

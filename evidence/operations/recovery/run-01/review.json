@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-09-09T03:34:14.149120+00:00",
+  "kind": "AI implementation and evidence review; not independent human security review",
+  "independent_human_security_review_passed": false,
+  "foundation_passed": false,
+  "full_recovery_qualified": false,
+  "reviewers": [
+    "root integration",
+    "evidence_gate bounded read-only QC"
+  ],
+  "input_sha256": {
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "tools/recovery_bundle.py": "5c4bba4eaa8b49a9ff6f38fa3005529791b9a933f9aab72e3a333bfed6ee949d",
+    "tests/operations/recovery_probe.py": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e",
+    "tests/operations/test_recovery_bundle.py": "cf7e70c9609c025940dbdb9a1f0f1e569527073e5c6891cfb97075be6222a6af",
+    "docs/encrypted-recovery.md": "ad3650d21cb652fb99c38642d87c3f61660548da716177e33bfaad536875fab9",
+    "reuse/recovery-components.json": "097475d8306622dd8d7d1576b5dad04658b6f8c28e0499f1961209bf4e593fdb",
+    "ledger/implementation.json": "c3e02d049b4c33a51e182e98e2ac80e616e6936ba5acbaa31bb249aeb36c2631",
+    "evidence/operations/recovery/run-01/report.json": "8ef48a00a84aa3866de49996535a8ebc5d52dcd19c20f723ce2d47e47558bf05",
+    "evidence/operations/recovery/run-01/probe-report.json": "bce3cbbb0f8dfc30894c9e26ade0f178300ed11350ad5dbf56ecc2f648e43368",
+    "evidence/operations/recovery/run-01/evidence-validation.json": "8dda4a3a8b7bc708afef7bef311b29b3a22fb19a5fae7752917d5a020044625e"
+  },
+  "findings": [
+    {
+      "issue": "Incorrect runner Dockerfile path prevented preflight",
+      "resolution": "Corrected before runtime to deploy/oss-core.Dockerfile"
+    },
+    {
+      "issue": "Private transcript write could abort finally before container cleanup",
+      "resolution": "Guarded independently before runtime; disk-full fault injection remains unexecuted"
+    },
+    {
+      "issue": "Session revocation default included linked accounts beyond enumerated fixture scope",
+      "resolution": "Explicit false flag before runtime; only owned fixture actions executed"
+    },
+    {
+      "issue": "Drill timing described as whole wrapper time",
+      "resolution": "Documentation distinguishes20.958s report interval from22.211s enclosing command"
+    }
+  ],
+  "conclusion": "No concrete high/medium blocker found in reviewed private-lab scope. Actual28format tests and19operational checks pass; one historical-state observation is characterized. Full foundation and recovery remain unqualified.",
+  "limitations": [
+    "AI review is not TST-006/WP-036 independent review.",
+    "Timeout, disk-full and fallback-cleanup runtime fault injection remain unexecuted.",
+    "General durable reconciliation, key management and full operational acceptance remain open."
+  ]
+}

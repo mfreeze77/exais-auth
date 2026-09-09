@@ -1,0 +1,1059 @@
+{
+  "schema": "expertauth-recovery-drill-v1",
+  "started": "2026-09-09T03:24:37.801198+00:00",
+  "inputs": {
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tools/recovery_bundle.py": "5c4bba4eaa8b49a9ff6f38fa3005529791b9a933f9aab72e3a333bfed6ee949d",
+    "tests/operations/test_recovery_bundle.py": "cf7e70c9609c025940dbdb9a1f0f1e569527073e5c6891cfb97075be6222a6af",
+    "tests/operations/recovery_probe.py": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "deploy/oss-core.Dockerfile": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6"
+  },
+  "foundation_passed": false,
+  "full_recovery_qualified": false,
+  "errors": [],
+  "images": {
+    "python": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+    "core": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+    "postgres": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675"
+  },
+  "docker_total_memory_bytes": 16685633536,
+  "created_containers": [
+    {
+      "role": "utility-1",
+      "name": "expertauth-recovery-utility-1-04a63b62f2bc",
+      "id": "cca2b8a998728b14c6fe989946533bfb344c3fb8f6cf07d3a3a413eaf5cdadb6",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "source-app",
+      "name": "expertauth-recovery-source-app-04a63b62f2bc",
+      "id": "1adaaa2e288f7a03de957c35f613a5c92932587603814c6e8ba4402c3c1ae712",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "utility-2",
+      "name": "expertauth-recovery-utility-2-04a63b62f2bc",
+      "id": "630c4e35c4c78991ce0a07e747d1bdc2235d78aa1d9e29dedca371910b7b6720",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "utility-3",
+      "name": "expertauth-recovery-utility-3-04a63b62f2bc",
+      "id": "4b9256b2a131136ab6cb48b8f5a776d803764cbaed0368de286c9dd7b1984e40",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "utility-4",
+      "name": "expertauth-recovery-utility-4-04a63b62f2bc",
+      "id": "815219db9b39b869c193eb5e58848ce9c8ac4fc44d7e83e8dd61e0bfb950886f",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "postgres",
+      "name": "expertauth-recovery-postgres-04a63b62f2bc",
+      "id": "79914c4cb0c8084ecf681009e7649a2ee74dfed7e3edf79f8e81cfa76d77b8f4",
+      "image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675"
+    },
+    {
+      "role": "core",
+      "name": "expertauth-recovery-core-04a63b62f2bc",
+      "id": "1f7569f746800bdf06e153323b53ad85fac280584cbecd8e509a9ea5320cad3b",
+      "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+    },
+    {
+      "role": "restored-app",
+      "name": "expertauth-recovery-restored-app-04a63b62f2bc",
+      "id": "0b1a260e1263d34834294ccf70858bdc91eef52f5237d9d4dbad07b7cc14b431",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "probe",
+      "name": "expertauth-recovery-probe-04a63b62f2bc",
+      "id": "e7e21c33161229753975a0903a2d2787e247ce8b5ce4000fa2ee95230fd8c521",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    }
+  ],
+  "commands": [
+    {
+      "label": "bundle-tests",
+      "argv": [
+        "run",
+        "--rm",
+        "-i",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-utility-1-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\utility-1.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network=none",
+        "--read-only",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=64m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery-keys\\run-01:/keys:ro",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/repo/tests/operations",
+        "-p",
+        "test_recovery_bundle.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 937.0,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 3307,
+        "sha256": "9dcbf46645da327dd650cd7980690bec973945128672d72fa69bdd0920e9da56"
+      }
+    },
+    {
+      "label": "launch-source-app",
+      "argv": [
+        "run",
+        "--rm",
+        "-d",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-source-app-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\source-app.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=64m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\probe.env",
+        "-e",
+        "SUPERTOKENS_CONNECTION_URI=http://expertauth-oss-core-a:3567",
+        "-e",
+        "PYTHON_API_DOMAIN=http://recovery-04a63b62f2bc.example.test:8300",
+        "-e",
+        "WEBSITE_DOMAIN=http://recovery-04a63b62f2bc.example.test:8300",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 375.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "9814a2ba9cbe3a5f30fa463ab9b3eab4ee22f8c076dd6396607f5446d9a998d0"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "source-pg-dump",
+      "argv": [
+        "exec",
+        "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+        "pg_dump",
+        "-U",
+        "expertauth",
+        "-d",
+        "expertauth",
+        "-Fc"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 187.0,
+      "stdout": {
+        "bytes": 186055,
+        "sha256": "d3582f0eec5aa92e7ff87cb04f31ff23b1a4d02411b3f1a78e87b288f0a06cf8"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "keygen",
+      "argv": [
+        "run",
+        "--rm",
+        "-i",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-utility-2-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\utility-2.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network=none",
+        "--read-only",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=64m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery-keys\\run-01:/keys",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/repo/tools/recovery_bundle.py",
+        "keygen",
+        "--key",
+        "/keys/bundle.key"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 610.0,
+      "stdout": {
+        "bytes": 43,
+        "sha256": "39703b3436c661a1ee6f2f1a440e4ce65c07532e09b26ca4a086d485a35f4ae5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "pack",
+      "argv": [
+        "run",
+        "--rm",
+        "-i",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-utility-3-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\utility-3.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network=none",
+        "--read-only",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=64m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery-keys\\run-01:/keys:ro",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/repo/tools/recovery_bundle.py",
+        "pack",
+        "--source",
+        "/private/source",
+        "--key",
+        "/keys/bundle.key",
+        "--archive",
+        "/private/backup.fernet"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 640.0,
+      "stdout": {
+        "bytes": 597,
+        "sha256": "7e952fbc60edb19ef07e974ad62130faa415af31948c138b3cfb5759de9da19c"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "unpack",
+      "argv": [
+        "run",
+        "--rm",
+        "-i",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-utility-4-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\utility-4.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network=none",
+        "--read-only",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=64m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery-keys\\run-01:/keys:ro",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/repo/tools/recovery_bundle.py",
+        "unpack",
+        "--archive",
+        "/private/backup.fernet",
+        "--key",
+        "/keys/bundle.key",
+        "--destination",
+        "/private/restored"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 578.0,
+      "stdout": {
+        "bytes": 599,
+        "sha256": "260851100be383ead1493816320e6bc165fea6374c15c02a0346912069fbd04c"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-postgres",
+      "argv": [
+        "run",
+        "--rm",
+        "-d",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-postgres-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\postgres.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network",
+        "expertauth-oss-proof",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/var/lib/postgresql/data:rw,nosuid,size=256m",
+        "--tmpfs",
+        "/var/run/postgresql:rw,nosuid,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\postgres.env",
+        "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 422.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "7f084cd975ef338988c5eeb6fcc6c75280f76a7928e49c42dda2e2fcf5130fe3"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "restore-into-new-local-database",
+      "argv": [
+        "exec",
+        "-i",
+        "79914c4cb0c8084ecf681009e7649a2ee74dfed7e3edf79f8e81cfa76d77b8f4",
+        "pg_restore",
+        "--exit-on-error",
+        "--single-transaction",
+        "--no-owner",
+        "--no-privileges",
+        "-U",
+        "expertauth",
+        "-d",
+        "expertauth_restore"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 203.0,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-core",
+      "argv": [
+        "run",
+        "--rm",
+        "-d",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-core-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\core.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network",
+        "expertauth-oss-proof",
+        "--memory=1g",
+        "--cpus=2",
+        "--pids-limit=256",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,noexec,nosuid,size=16m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\restored-core.yaml:/run/expertauth/config.yaml:ro",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 406.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "312b1d4ecbb1158e07ab8c14d98191081b80957d426a38f5d75b64259c9d793f"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-restored-app",
+      "argv": [
+        "run",
+        "--rm",
+        "-d",
+        "--pull=never",
+        "--name",
+        "expertauth-recovery-restored-app-04a63b62f2bc",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\restored-app.cid",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=encrypted-recovery-drill",
+        "--label",
+        "org.expertauth.run=04a63b62f2bc",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--memory=512m",
+        "--cpus=2",
+        "--pids-limit=128",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=64m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\probe.env",
+        "-e",
+        "SUPERTOKENS_CONNECTION_URI=http://expertauth-recovery-core-04a63b62f2bc:3567",
+        "-e",
+        "PYTHON_API_DOMAIN=http://recovery-04a63b62f2bc.example.test:8300",
+        "-e",
+        "WEBSITE_DOMAIN=http://recovery-04a63b62f2bc.example.test:8300",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 375.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "64258cebd1a37be3e42a5bba561454be67b26b372726599e8133214b0af6607b"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "stop-restored-app",
+      "argv": [
+        "stop",
+        "-t",
+        "5",
+        "0b1a260e1263d34834294ccf70858bdc91eef52f5237d9d4dbad07b7cc14b431"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 687.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "64258cebd1a37be3e42a5bba561454be67b26b372726599e8133214b0af6607b"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "stop-core",
+      "argv": [
+        "stop",
+        "-t",
+        "5",
+        "1f7569f746800bdf06e153323b53ad85fac280584cbecd8e509a9ea5320cad3b"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 735.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "312b1d4ecbb1158e07ab8c14d98191081b80957d426a38f5d75b64259c9d793f"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "stop-postgres",
+      "argv": [
+        "stop",
+        "-t",
+        "5",
+        "79914c4cb0c8084ecf681009e7649a2ee74dfed7e3edf79f8e81cfa76d77b8f4"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 453.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "7f084cd975ef338988c5eeb6fcc6c75280f76a7928e49c42dda2e2fcf5130fe3"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "stop-source-app",
+      "argv": [
+        "stop",
+        "-t",
+        "5",
+        "1adaaa2e288f7a03de957c35f613a5c92932587603814c6e8ba4402c3c1ae712"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 578.0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "9814a2ba9cbe3a5f30fa463ab9b3eab4ee22f8c076dd6396607f5446d9a998d0"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "controls": [
+    {
+      "action": "snapshot",
+      "completed": "2026-09-09T03:24:45.163943+00:00",
+      "elapsed_ms": 1687.0
+    },
+    {
+      "action": "restore",
+      "completed": "2026-09-09T03:24:47.974963+00:00",
+      "elapsed_ms": 2594.0
+    },
+    {
+      "action": "start_restored_app",
+      "completed": "2026-09-09T03:24:52.986521+00:00",
+      "elapsed_ms": 2453.0
+    }
+  ],
+  "image_builds": 0,
+  "image_downloads": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "published_ports": [],
+  "limits": {
+    "plaintext_bytes": 33554432,
+    "archive_bytes": 50331648,
+    "postgres_tmpfs_mib": 256,
+    "postgres_memory_mib": 512,
+    "core_memory_mib": 1024,
+    "python_memory_mib": 512,
+    "worker_timeout_seconds": 300
+  },
+  "private_directory": ".runtime/recovery/run-01",
+  "external_key_directory": ".runtime/recovery-keys/run-01",
+  "limitations": [
+    "Reference lab; foundation and WP-032 dependencies are unqualified.",
+    "Only two owned post-snapshot revoke/delete actions are replayed; no general durable reconciliation journal.",
+    "No off-machine key custody, key-loss recovery, key rotation, PITR, HA, scale or provider/native proof.",
+    "No independent human security review."
+  ],
+  "installed_application": {
+    "source-app": {
+      "/app/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+      "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+    },
+    "restored-app": {
+      "/app/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+      "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+    }
+  },
+  "worker_argv": [
+    "run",
+    "--rm",
+    "-i",
+    "--pull=never",
+    "--name",
+    "expertauth-recovery-probe-04a63b62f2bc",
+    "--cidfile",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\probe.cid",
+    "--label",
+    "org.expertauth.project=expert-auth",
+    "--label",
+    "org.expertauth.purpose=encrypted-recovery-drill",
+    "--label",
+    "org.expertauth.run=04a63b62f2bc",
+    "--network",
+    "expertauth-oss-proof",
+    "--read-only",
+    "--memory=512m",
+    "--cpus=2",
+    "--pids-limit=128",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--tmpfs",
+    "/tmp:rw,nosuid,size=64m",
+    "--env-file",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\probe.env",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\recovery\\run-01:/evidence",
+    "-v",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\recovery\\run-01\\worker:/private",
+    "-e",
+    "EVIDENCE_DIR=/evidence",
+    "-e",
+    "PRIVATE_DIR=/private",
+    "-e",
+    "SOURCE_APP_URL=http://expertauth-recovery-source-app-04a63b62f2bc:8300",
+    "-e",
+    "RESTORED_APP_URL=http://expertauth-recovery-restored-app-04a63b62f2bc:8300",
+    "-e",
+    "SOURCE_CORE_URL=http://expertauth-oss-core-a:3567",
+    "-e",
+    "RESTORED_CORE_URL=http://expertauth-recovery-core-04a63b62f2bc:3567",
+    "-e",
+    "LOGICAL_ORIGIN=http://recovery-04a63b62f2bc.example.test:8300",
+    "--entrypoint",
+    "python",
+    "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+    "-B",
+    "/repo/tests/operations/recovery_probe.py"
+  ],
+  "source_database_bytes": 12121779,
+  "snapshot_started": "2026-09-09T03:24:43.717876+00:00",
+  "snapshot_finished": "2026-09-09T03:24:43.905916+00:00",
+  "keygen": {
+    "key_bytes": 44,
+    "status": "KEY_CREATED"
+  },
+  "pack": {
+    "archive_bytes": 249804,
+    "archive_sha256": "cb655b84cb0d939a8a7494e8b21ce6011feb81d9db05ca1efdb7aa487e80b601",
+    "files": {
+      "core-config.yaml": {
+        "bytes": 596,
+        "sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718"
+      },
+      "database.pgdump": {
+        "bytes": 186055,
+        "sha256": "d3582f0eec5aa92e7ff87cb04f31ff23b1a4d02411b3f1a78e87b288f0a06cf8"
+      },
+      "runtime.env": {
+        "bytes": 224,
+        "sha256": "0973f3a49a316ee5f4fb75f1e6a19191560dd1c9a72481863c6e45d0745b0300"
+      }
+    },
+    "inventory_sha256": "2d4ee8ff2088fac636d74f67e715538ef938c6cb394b9e5d4d524f2225a224af",
+    "plaintext_bytes": 187290,
+    "status": "PACKED"
+  },
+  "backup_elapsed_ms": 1594.0,
+  "unpack": {
+    "archive_bytes": 249804,
+    "archive_sha256": "cb655b84cb0d939a8a7494e8b21ce6011feb81d9db05ca1efdb7aa487e80b601",
+    "files": {
+      "core-config.yaml": {
+        "bytes": 596,
+        "sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718"
+      },
+      "database.pgdump": {
+        "bytes": 186055,
+        "sha256": "d3582f0eec5aa92e7ff87cb04f31ff23b1a4d02411b3f1a78e87b288f0a06cf8"
+      },
+      "runtime.env": {
+        "bytes": 224,
+        "sha256": "0973f3a49a316ee5f4fb75f1e6a19191560dd1c9a72481863c6e45d0745b0300"
+      }
+    },
+    "inventory_sha256": "2d4ee8ff2088fac636d74f67e715538ef938c6cb394b9e5d4d524f2225a224af",
+    "plaintext_bytes": 187290,
+    "status": "UNPACKED"
+  },
+  "configuration_routing_changes": [
+    "postgresql_host",
+    "postgresql_database_name"
+  ],
+  "restored_config_sha256": "0fa24d83b6cd1e77409922ad8d383c28193a6e9a0fac968f8fe7b2ebf683e3e1",
+  "restore_requested_elapsed_ms": 2516.0,
+  "restored_database_isolated": true,
+  "worker_exit_code": 0,
+  "worker_output": {
+    "bytes": 196,
+    "sha256": "03517601d4ca5a26e517789448420b6f9474d2a2b9c832d4eeca2f1058658c70"
+  },
+  "source_services_unchanged": true,
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "resources_restored": true,
+  "inputs_unchanged": true,
+  "private_artifacts": [
+    {
+      "path": ".runtime/recovery/run-01/backup.fernet",
+      "bytes": 249804,
+      "sha256": "cb655b84cb0d939a8a7494e8b21ce6011feb81d9db05ca1efdb7aa487e80b601"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-001.stderr",
+      "bytes": 3307,
+      "sha256": "9dcbf46645da327dd650cd7980690bec973945128672d72fa69bdd0920e9da56"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-001.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-002.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-002.stdout",
+      "bytes": 65,
+      "sha256": "9814a2ba9cbe3a5f30fa463ab9b3eab4ee22f8c076dd6396607f5446d9a998d0"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-003.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-004.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-004.stdout",
+      "bytes": 43,
+      "sha256": "39703b3436c661a1ee6f2f1a440e4ce65c07532e09b26ca4a086d485a35f4ae5"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-005.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-005.stdout",
+      "bytes": 597,
+      "sha256": "7e952fbc60edb19ef07e974ad62130faa415af31948c138b3cfb5759de9da19c"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-006.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-006.stdout",
+      "bytes": 599,
+      "sha256": "260851100be383ead1493816320e6bc165fea6374c15c02a0346912069fbd04c"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-007.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-007.stdout",
+      "bytes": 65,
+      "sha256": "7f084cd975ef338988c5eeb6fcc6c75280f76a7928e49c42dda2e2fcf5130fe3"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-008.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-008.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-009.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-009.stdout",
+      "bytes": 65,
+      "sha256": "312b1d4ecbb1158e07ab8c14d98191081b80957d426a38f5d75b64259c9d793f"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-010.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-010.stdout",
+      "bytes": 65,
+      "sha256": "64258cebd1a37be3e42a5bba561454be67b26b372726599e8133214b0af6607b"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-011.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-011.stdout",
+      "bytes": 65,
+      "sha256": "64258cebd1a37be3e42a5bba561454be67b26b372726599e8133214b0af6607b"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-012.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-012.stdout",
+      "bytes": 65,
+      "sha256": "312b1d4ecbb1158e07ab8c14d98191081b80957d426a38f5d75b64259c9d793f"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-013.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-013.stdout",
+      "bytes": 65,
+      "sha256": "7f084cd975ef338988c5eeb6fcc6c75280f76a7928e49c42dda2e2fcf5130fe3"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-014.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/recovery/run-01/command-014.stdout",
+      "bytes": 65,
+      "sha256": "9814a2ba9cbe3a5f30fa463ab9b3eab4ee22f8c076dd6396607f5446d9a998d0"
+    },
+    {
+      "path": ".runtime/recovery/run-01/core.cid",
+      "bytes": 64,
+      "sha256": "cef2731177b4c28d069228b0525a73fd07a0cb7d8289032708b62c4634e21fe5"
+    },
+    {
+      "path": ".runtime/recovery/run-01/postgres.cid",
+      "bytes": 64,
+      "sha256": "f0aac7d3a88f4478449394a1172eec56a67fc0e931da8f7a3bb0f0e80c735a2f"
+    },
+    {
+      "path": ".runtime/recovery/run-01/postgres.env",
+      "bytes": 142,
+      "sha256": "890a38cd3afcbc36de134c78d4e47f7fd9875ab4d4563d7a2df17ba31522b00c"
+    },
+    {
+      "path": ".runtime/recovery/run-01/probe.cid",
+      "bytes": 64,
+      "sha256": "dd791739bdd38f89622204deaba7771727941a341b544050287d8abf850274c4"
+    },
+    {
+      "path": ".runtime/recovery/run-01/probe.env",
+      "bytes": 90,
+      "sha256": "f892a0f054eaa125781d2d84d901942ed17713521a01f4ef19f08816a33e9171"
+    },
+    {
+      "path": ".runtime/recovery/run-01/restored/core-config.yaml",
+      "bytes": 596,
+      "sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718"
+    },
+    {
+      "path": ".runtime/recovery/run-01/restored/database.pgdump",
+      "bytes": 186055,
+      "sha256": "d3582f0eec5aa92e7ff87cb04f31ff23b1a4d02411b3f1a78e87b288f0a06cf8"
+    },
+    {
+      "path": ".runtime/recovery/run-01/restored/runtime.env",
+      "bytes": 224,
+      "sha256": "0973f3a49a316ee5f4fb75f1e6a19191560dd1c9a72481863c6e45d0745b0300"
+    },
+    {
+      "path": ".runtime/recovery/run-01/restored-app.cid",
+      "bytes": 64,
+      "sha256": "5dc5e9432459fcde26c5609819edac4793f59864014a1742993eb9e558f6968a"
+    },
+    {
+      "path": ".runtime/recovery/run-01/restored-core.yaml",
+      "bytes": 637,
+      "sha256": "0fa24d83b6cd1e77409922ad8d383c28193a6e9a0fac968f8fe7b2ebf683e3e1"
+    },
+    {
+      "path": ".runtime/recovery/run-01/source/core-config.yaml",
+      "bytes": 596,
+      "sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718"
+    },
+    {
+      "path": ".runtime/recovery/run-01/source/database.pgdump",
+      "bytes": 186055,
+      "sha256": "d3582f0eec5aa92e7ff87cb04f31ff23b1a4d02411b3f1a78e87b288f0a06cf8"
+    },
+    {
+      "path": ".runtime/recovery/run-01/source/runtime.env",
+      "bytes": 224,
+      "sha256": "0973f3a49a316ee5f4fb75f1e6a19191560dd1c9a72481863c6e45d0745b0300"
+    },
+    {
+      "path": ".runtime/recovery/run-01/source-app.cid",
+      "bytes": 64,
+      "sha256": "07364d2bfa7612d16e09e3ecc96046d6ccb65fa1f72c9c238d9e002dd4f22a96"
+    },
+    {
+      "path": ".runtime/recovery/run-01/utility-1.cid",
+      "bytes": 64,
+      "sha256": "b9de0c8bc46c08502114bc48ae0b59f85d79d4675353be681c5de3de495e8934"
+    },
+    {
+      "path": ".runtime/recovery/run-01/utility-2.cid",
+      "bytes": 64,
+      "sha256": "0b86c03d87f10dffc0119e666f88a484db7dad4ea55da10260b0fea14cbf1553"
+    },
+    {
+      "path": ".runtime/recovery/run-01/utility-3.cid",
+      "bytes": 64,
+      "sha256": "ce49f6e8a71defeb49091dee00d7585f683c65b696d4afa05951b8c4b9bda035"
+    },
+    {
+      "path": ".runtime/recovery/run-01/utility-4.cid",
+      "bytes": 64,
+      "sha256": "b6d29c984cc3673a55fa5e50fe65b646625494838a66e28898f69630791defc1"
+    },
+    {
+      "path": ".runtime/recovery/run-01/worker/reconciliation.json",
+      "bytes": 870,
+      "sha256": "fe70e78a1cf087e5ddb1f1370df2ded7cab2847e4d678320641c801b3213f3e2"
+    },
+    {
+      "path": ".runtime/recovery/run-01/worker/state.json",
+      "bytes": 8420,
+      "sha256": "5eb4226727c2783346d3149c87678b44a07594bfbb4fd305eef0b7a9d563a603"
+    },
+    {
+      "path": ".runtime/recovery/run-01/worker-output.log",
+      "bytes": 196,
+      "sha256": "03517601d4ca5a26e517789448420b6f9474d2a2b9c832d4eeca2f1058658c70"
+    }
+  ],
+  "duplicate_plaintext_removed": [
+    ".runtime/recovery/run-01/source/core-config.yaml",
+    ".runtime/recovery/run-01/source/database.pgdump",
+    ".runtime/recovery/run-01/source/runtime.env",
+    ".runtime/recovery/run-01/restored/core-config.yaml",
+    ".runtime/recovery/run-01/restored/database.pgdump",
+    ".runtime/recovery/run-01/restored/runtime.env"
+  ],
+  "private_bytes_retained": 264356,
+  "external_key_retained": true,
+  "finished": "2026-09-09T03:24:58.759119+00:00",
+  "bounded_drill_passed": true,
+  "artifacts": [
+    {
+      "path": "bundle-unittest.log",
+      "sha256": "9dcbf46645da327dd650cd7980690bec973945128672d72fa69bdd0920e9da56"
+    },
+    {
+      "path": "probe-report.json",
+      "sha256": "bce3cbbb0f8dfc30894c9e26ade0f178300ed11350ad5dbf56ecc2f648e43368"
+    }
+  ]
+}

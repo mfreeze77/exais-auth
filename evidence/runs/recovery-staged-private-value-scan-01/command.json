@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-c",
+    "import pathlib,json,subprocess\nroot=pathlib.Path.cwd()\nvalues=[]\nfor path in (root/'.runtime').rglob('*.env'):\n    for line in path.read_text().splitlines():\n        if '=' in line:\n            k,v=line.split('=',1)\n            if any(t in k for t in ('PASSWORD','SECRET','API_KEY')) and len(v)>=16:values.append(v.encode())\nstate=json.loads((root/'.runtime/recovery/run-01/worker/state.json').read_text())\nfor user in state['users']:\n    for k in ('email','password','user_id','access_token','refresh_token','new_access_token','new_refresh_token'):\n        if user.get(k):values.append(user[k].encode())\nvalues.append((root/'.runtime/recovery-keys/run-01/bundle.key').read_bytes())\nnames=subprocess.run(['git','diff','--cached','--name-only','-z'],capture_output=True,check=True).stdout.decode().strip('\\x00').split('\\x00')\nleaks=[]\nfor name in names:\n    body=subprocess.run(['git','show',':'+name],capture_output=True,check=True).stdout\n    if any(value in body for value in values):leaks.append(name)\nassert not leaks,'Known private values found in staged paths: '+repr(leaks)\nprint(json.dumps({'staged_files_checked':len(names),'known_private_value_scan_passed':True,'private_values_printed':False}))"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788924906.2123654,
+  "elapsed_seconds": 0.832,
+  "input_sha256": {},
+  "inputs_changed": false,
+  "output_sha256": "e77825ccb9cb129498a54b8a78f308b868cdf8cb08d9ba27612df290d0b272dc",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

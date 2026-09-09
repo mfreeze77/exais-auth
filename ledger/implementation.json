@@ -4886,14 +4886,85 @@
         "registry_sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36",
         "record_sha256": "f6d1e885ee47b2891d9a019843cfae09a096ecc76140983b17b664d34dc63b90"
       },
-      "status": "planned",
-      "implementation": [],
+      "status": "implemented-unverified",
+      "implementation": [
+        {
+          "path": "tools/recovery_bundle.py",
+          "sha256": "5c4bba4eaa8b49a9ff6f38fa3005529791b9a933f9aab72e3a333bfed6ee949d"
+        },
+        {
+          "path": "tools/run_recovery_drill.py",
+          "sha256": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978"
+        },
+        {
+          "path": "tests/operations/recovery_probe.py",
+          "sha256": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e"
+        },
+        {
+          "path": "tests/operations/test_recovery_bundle.py",
+          "sha256": "cf7e70c9609c025940dbdb9a1f0f1e569527073e5c6891cfb97075be6222a6af"
+        },
+        {
+          "path": "reuse/recovery-components.json",
+          "sha256": "097475d8306622dd8d7d1576b5dad04658b6f8c28e0499f1961209bf4e593fdb"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "Full original acceptance and final-engine qualification remain open."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/recovery/run-01/report.json",
+          "sha256": "8ef48a00a84aa3866de49996535a8ebc5d52dcd19c20f723ce2d47e47558bf05"
+        },
+        {
+          "path": "evidence/operations/recovery/run-01/probe-report.json",
+          "sha256": "bce3cbbb0f8dfc30894c9e26ade0f178300ed11350ad5dbf56ecc2f648e43368"
+        },
+        {
+          "path": "evidence/operations/recovery/run-01/bundle-unittest.log",
+          "sha256": "9dcbf46645da327dd650cd7980690bec973945128672d72fa69bdd0920e9da56"
+        },
+        {
+          "path": "evidence/operations/recovery/run-01/evidence-validation.json",
+          "sha256": "8dda4a3a8b7bc708afef7bef311b29b3a22fb19a5fae7752917d5a020044625e"
+        },
+        {
+          "path": "evidence/runs/encrypted-recovery-drill-01/command.json",
+          "sha256": "a5a90d93bab5ea277a4869b55bebdc9f21da3bc15ec7ba99cb2282552198c466"
+        },
+        {
+          "path": "evidence/runs/encrypted-recovery-evidence-validation-01/command.json",
+          "sha256": "92d63b59e93d33e5aacb87f8ebb7ceb7b1615dd8927521998f2b01d22f5106c3"
+        }
+      ],
+      "qualification_note": "Reference-candidate encrypted backup/configuration restore into isolated tmpfs PostgreSQL/Core:28 real format tests,19 operational passes and1 historical-state characterization. Two owned post-snapshot revoke/delete actions replayed before restored-app startup; unexpired refresh tokens and deleted credentials denied, signing keys preserved. All9temporary containers and2fixture identities cleaned; original52identity set restored. No generalized durable reconciliation journal, off-machine key custody/rotation, PITR/HA, large-data/ACLs, failure-path injection, final engine or independent review qualification. WP-032/WP-033 dependency gates remain unmet.",
+      "observed_test_ids": [
+        "RECOVERY-SOURCE-INITIAL-IDENTITY-SET",
+        "RECOVERY-SOURCE-TWO-SIGNUPS",
+        "RECOVERY-SOURCE-SNAPSHOT-SESSIONS",
+        "RECOVERY-HOST-SNAPSHOT",
+        "RECOVERY-SOURCE-REVOKE",
+        "RECOVERY-SOURCE-DELETE",
+        "RECOVERY-HOST-RESTORE",
+        "RECOVERY-RESTORED-REVOKE",
+        "RECOVERY-RESTORED-DELETE",
+        "RECOVERY-RECONCILED-CORE-STATE",
+        "RECOVERY-HOST-START-RESTORED-APP",
+        "RECOVERY-SOURCE-OLD-REFRESH-DENIED",
+        "RECOVERY-RESTORED-OLD-REFRESH-DENIED",
+        "RECOVERY-DELETED-SIGNIN-DENIED",
+        "RECOVERY-SURVIVOR-NEW-SIGNIN-PROTECTED",
+        "RECOVERY-SURVIVOR-LOGOUT-REFRESH-DENIED",
+        "RECOVERY-CLEANUP-SOURCE",
+        "RECOVERY-CLEANUP-RESTORED",
+        "RECOVERY-SOURCE-IDENTITY-SET-RESTORED"
+      ]
     },
     {
       "id": "OPS-007",
@@ -12647,13 +12718,63 @@
         "record_sha256": "796edda1394b3a716a6602a4486fb9afe5ed97a650f142075482e7ad1d46ebe5"
       },
       "status": "planned",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "tools/recovery_bundle.py",
+          "sha256": "5c4bba4eaa8b49a9ff6f38fa3005529791b9a933f9aab72e3a333bfed6ee949d"
+        },
+        {
+          "path": "tools/run_recovery_drill.py",
+          "sha256": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978"
+        },
+        {
+          "path": "tests/operations/recovery_probe.py",
+          "sha256": "e0df315b140424e6dec7f38b8dc07dab8b08e99a8e70f9105658f13eb17b7d0e"
+        },
+        {
+          "path": "tests/operations/test_recovery_bundle.py",
+          "sha256": "cf7e70c9609c025940dbdb9a1f0f1e569527073e5c6891cfb97075be6222a6af"
+        },
+        {
+          "path": "reuse/recovery-components.json",
+          "sha256": "097475d8306622dd8d7d1576b5dad04658b6f8c28e0499f1961209bf4e593fdb"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "WP-032 and foundation prerequisites unmet; bounded independent reference-lab tooling does not close this package."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/recovery/run-01/report.json",
+          "sha256": "8ef48a00a84aa3866de49996535a8ebc5d52dcd19c20f723ce2d47e47558bf05"
+        },
+        {
+          "path": "evidence/operations/recovery/run-01/probe-report.json",
+          "sha256": "bce3cbbb0f8dfc30894c9e26ade0f178300ed11350ad5dbf56ecc2f648e43368"
+        },
+        {
+          "path": "evidence/operations/recovery/run-01/bundle-unittest.log",
+          "sha256": "9dcbf46645da327dd650cd7980690bec973945128672d72fa69bdd0920e9da56"
+        },
+        {
+          "path": "evidence/operations/recovery/run-01/evidence-validation.json",
+          "sha256": "8dda4a3a8b7bc708afef7bef311b29b3a22fb19a5fae7752917d5a020044625e"
+        },
+        {
+          "path": "evidence/runs/encrypted-recovery-drill-01/command.json",
+          "sha256": "a5a90d93bab5ea277a4869b55bebdc9f21da3bc15ec7ba99cb2282552198c466"
+        },
+        {
+          "path": "evidence/runs/encrypted-recovery-evidence-validation-01/command.json",
+          "sha256": "92d63b59e93d33e5aacb87f8ebb7ceb7b1615dd8927521998f2b01d22f5106c3"
+        }
+      ],
+      "qualification_note": "Reference-candidate encrypted backup/configuration restore into isolated tmpfs PostgreSQL/Core:28 real format tests,19 operational passes and1 historical-state characterization. Two owned post-snapshot revoke/delete actions replayed before restored-app startup; unexpired refresh tokens and deleted credentials denied, signing keys preserved. All9temporary containers and2fixture identities cleaned; original52identity set restored. No generalized durable reconciliation journal, off-machine key custody/rotation, PITR/HA, large-data/ACLs, failure-path injection, final engine or independent review qualification. WP-032/WP-033 dependency gates remain unmet."
     },
     {
       "id": "WP-034",
@@ -12759,12 +12880,24 @@
       "sha256": "cf3e1c71a448f463996d5e064b3fe5df520479e21bfe7c85a1d5097555ada16a"
     },
     {
-      "path": "evidence/operations/hygiene/verification-20260909T010630Z.json",
-      "sha256": "8931fd32bc90a5ee6549a4cd2f8832c67071accbe9352a5128bec8cc37a50443"
+      "path": "evidence/operations/hygiene/verification-20260909T032659Z.json",
+      "sha256": "6ef64baa180e8dbb37ecc42505b7a65019ddf7e36bd4255f8873a595bbdd6550"
     },
     {
-      "path": "evidence/runs/hygiene-runner-integrity-03/command.json",
-      "sha256": "611604f77d714906bc6b247fe2ac2987a78369b8e6c408e43a15122c69ba8c7a"
+      "path": "evidence/runs/encrypted-recovery-hygiene-01/command.json",
+      "sha256": "b1a5110d4f27ca3101da6673d59bd1a0615c292cb51132881543113c3e2a0ab6"
+    },
+    {
+      "path": "evidence/operations/hygiene/legacy-python-intermediates.json",
+      "sha256": "855ed3bab95efbbcbbda7b04fd187ee732e91a067f8b53a7366806926ab5a13f"
+    },
+    {
+      "path": "evidence/operations/hygiene/legacy-python-fixture-parent.json",
+      "sha256": "ddb91b2af0b8de85ae643c8e544a5f9375870ef1f6394a8c63d480e4f33faa6e"
+    },
+    {
+      "path": "evidence/operations/hygiene/checkpoint-retention-before-recovery.json",
+      "sha256": "c14f002c3e518367e9555cf2cda0fe96b9167050a0b16a2a47c7c486c2f055bf"
     }
   ],
   "runtime_distribution_artifacts": [
@@ -13033,6 +13166,32 @@
     {
       "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
       "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
+    }
+  ],
+  "recovery_candidate_artifacts": [
+    {
+      "path": "evidence/operations/recovery/run-01/report.json",
+      "sha256": "8ef48a00a84aa3866de49996535a8ebc5d52dcd19c20f723ce2d47e47558bf05"
+    },
+    {
+      "path": "evidence/operations/recovery/run-01/probe-report.json",
+      "sha256": "bce3cbbb0f8dfc30894c9e26ade0f178300ed11350ad5dbf56ecc2f648e43368"
+    },
+    {
+      "path": "evidence/operations/recovery/run-01/bundle-unittest.log",
+      "sha256": "9dcbf46645da327dd650cd7980690bec973945128672d72fa69bdd0920e9da56"
+    },
+    {
+      "path": "evidence/operations/recovery/run-01/evidence-validation.json",
+      "sha256": "8dda4a3a8b7bc708afef7bef311b29b3a22fb19a5fae7752917d5a020044625e"
+    },
+    {
+      "path": "evidence/runs/encrypted-recovery-drill-01/command.json",
+      "sha256": "a5a90d93bab5ea277a4869b55bebdc9f21da3bc15ec7ba99cb2282552198c466"
+    },
+    {
+      "path": "evidence/runs/encrypted-recovery-evidence-validation-01/command.json",
+      "sha256": "92d63b59e93d33e5aacb87f8ebb7ceb7b1615dd8927521998f2b01d22f5106c3"
     }
   ]
 }

@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-09-09T03:32:38.890055+00:00",
+  "scope": "Only six exact generated source checkpoint ZIPs; preserve newest two, every manifest/checksum/validation sidecar, source commits and all supplied baseline files",
+  "policy": "At most three recent generated source ZIPs after packaging the next checkpoint; source/evidence history remains in Git and its newest validated bundle",
+  "rows": [
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-ae8e3f5502d5.zip",
+      "sha256": "0185ab15ae0dd6d825c781aaba41a2962d60db5bebb77662a00b38a0a3345db0",
+      "bytes": 12952090,
+      "commit": "ae8e3f5502d5eb5b15e1009b07be924917e1f1a7",
+      "action": "keep",
+      "manifest_sha256": "d01ddc49d7c42e9eb6ecfcb2ec4f69ff4e7e654c552fed9052ac0b36e8b9e4cf",
+      "validation_sha256": "c79f70cef99d766fd69607c7b7559fd551e22bf900e7b72d093f2c70cd5879e9"
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-dc125668bb75.zip",
+      "sha256": "e4ef8a2752597ff71a8acd94314743c5be8845a60af8cf76e6b812178cf6a337",
+      "bytes": 12715973,
+      "commit": "dc125668bb7508bac11b408fa6c5041769c9d954",
+      "action": "keep",
+      "manifest_sha256": "7519d36c1c994c8f6540ccfce89dbbf379087730519cb8503bd26cb229690fa2",
+      "validation_sha256": "aa5a40a860c7d6c06e0e7ee07337c2dadfe1c0d756e5c3fefd462ab0bb477d3f"
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-69c68e8b4994.zip",
+      "sha256": "fa2928981992492faf8f30bfb6485425080e23be4bbdc8a60195013c818623ad",
+      "bytes": 9431859,
+      "commit": "69c68e8b4994621c3e83c3b07377f470ecf1b006",
+      "action": "retire-duplicate-generated-zip",
+      "manifest_sha256": "7636dd80ad2ef931c3e7b04c4c37bfc44ca83364bcdfaa453fb4bd76bb3603af",
+      "validation_sha256": "bd7c7d50dd8fc003b6ab960620dbe9d13f7fadf774d140df09819dccd250d9e2",
+      "retired": true
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-6c3179600b3b.zip",
+      "sha256": "c9b3b0e31798ad93b7ec8a6de487dde2df6033388def1b42f3e53b6bca401f4d",
+      "bytes": 10831120,
+      "commit": "6c3179600b3b9207dd95f1b93c6bab10eb4e5cb5",
+      "action": "retire-duplicate-generated-zip",
+      "manifest_sha256": "079dce0093485983e3a15363874ebf41b533fe46b94c11ce9da9d1285e77de23",
+      "validation_sha256": "55e822e6fd85600b1e1191d64eac30f6cb58fe0ed485fd11b770965afe4d3e30",
+      "retired": true
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-a8efedf156c0.zip",
+      "sha256": "25832742bd30b360b2bd6af1352bf4c5a7ed916fd3a59848d762de21bb1f691b",
+      "bytes": 12124251,
+      "commit": "a8efedf156c06c4ebc722fbe9af42bdee32b2aba",
+      "action": "retire-duplicate-generated-zip",
+      "manifest_sha256": "44ce8e31aa54fcb0f324cecaaff032662faf44d1f1e24490d984cb78c15412d0",
+      "validation_sha256": "a981bd89afc91ef1637229a95caca23f2330317cd38237b2e7194193657be166",
+      "retired": true
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-cfff072df86a.zip",
+      "sha256": "5af4777a475d4b3843f75ff4359802ab51f77c1da81187df3047f93a757dfdd6",
+      "bytes": 10420047,
+      "commit": "cfff072df86a5d7a0f32b9168a788ca3a3bb9bcc",
+      "action": "retire-duplicate-generated-zip",
+      "manifest_sha256": "27236ea1e37febe2014f4d763518ae32f57f8eb57c3a44625191d587722c81ef",
+      "validation_sha256": "e2956749d648028c04ed143ac530368ed046a8f8981bdf69d79a92d233d0744d",
+      "retired": true
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-d3cc4b0b65a7.zip",
+      "sha256": "d0109b8c40cb3b75fa5d47e1530f19322027ebc55ddffe0e49b0da68a44aa649",
+      "bytes": 9936452,
+      "commit": "d3cc4b0b65a78481261a4e138ad3dcd6d4c512af",
+      "action": "retire-duplicate-generated-zip",
+      "manifest_sha256": "f320ff896c6c6faba767c28f85ec404c650a07706129e1d87da8a83123856584",
+      "validation_sha256": "dd4deee053d4e12dd3de070a8ee1432ec1bd2a3e61ff222df960813500221e1b",
+      "retired": true
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-fefb9daa2d1d.zip",
+      "sha256": "c25dcfe3cb1776be3a3c1e7c06271f1e57598661c844552ca28f06af1f551398",
+      "bytes": 10599502,
+      "commit": "fefb9daa2d1da99e5aebbffe10a4785f183153da",
+      "action": "retire-duplicate-generated-zip",
+      "manifest_sha256": "10fc92942ca503b92a44c63a78bb9704a9091b3c121d669cfcbba967ad6c7b2c",
+      "validation_sha256": "e27883fbf1977f4c03d12fb13b08e9017aa9601a37e7319a62bb6c7fbf79a7aa",
+      "retired": true
+    }
+  ],
+  "errors": [],
+  "logical_archive_bytes_removed": 63343231,
+  "physical_host_bytes_freed": null,
+  "passed": true
+}

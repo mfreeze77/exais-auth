@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/retire_legacy_python_images.py"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788924260.6106033,
+  "elapsed_seconds": 9.182,
+  "input_sha256": {
+    "tools/retire_legacy_python_images.py": "dc91e64d33761ad267afd56564363a0d4b9f4d63c02047fb9037a2b11add1702"
+  },
+  "inputs_changed": false,
+  "output_sha256": "b5aa64e4f7826111117547608f07a5c0724a150fde05f0cf41effe5beb6296db",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

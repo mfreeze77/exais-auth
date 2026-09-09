@@ -1,0 +1,4 @@
+{"control": "snapshot", "state": "running"}
+{"control": "restore", "state": "running"}
+{"control": "start_restored_app", "state": "running"}
+{"report": "evidence/operations/recovery/run-01", "bounded_drill_passed": true, "full_recovery_qualified": false, "errors": []}
