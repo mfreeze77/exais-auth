@@ -32,7 +32,7 @@ the corrected package requires a newly qualified image and scoped replacement.
 No image was built or service replaced by this source/packaging checkpoint.
 
 Ten tests pass: eight actual cached-archive/package checks and two source-request
-tests, including13 real CLI rejections before any acquisition. They are tooling
+tests, including15 real CLI rejections before any acquisition. They are tooling
 and package checks; no authentication acceptance is inferred. Independent agents
 also verified source mappings and found the request guard flaws subsequently
 corrected. These agents do not satisfy the required independent human review.

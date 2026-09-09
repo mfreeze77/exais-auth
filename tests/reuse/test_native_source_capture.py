@@ -32,7 +32,8 @@ class NativeSourceCaptureTests(unittest.TestCase):
             row = copy.deepcopy(template)
             row['expected_bytes'] = value
             rows.append(row)
-        for path in ['acquisition.json', 'container.json', 'Acquisition.json', '../outside.h']:
+        for path in ['acquisition.json', 'container.json', 'Acquisition.json', '../outside.h',
+                     'acquisition.json/note.h', 'container.json/note.h']:
             row = copy.deepcopy(template)
             row['path'] = path
             rows.append(row)

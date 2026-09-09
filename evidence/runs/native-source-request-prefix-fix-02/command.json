@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reuse",
+    "-p",
+    "test_native_source_capture.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788918876.544121,
+  "elapsed_seconds": 2.643,
+  "input_sha256": {
+    "tools/capture_native_sources.py": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42",
+    "tools/run_native_source_capture.py": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8",
+    "tests/reuse/test_native_source_capture.py": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
+  },
+  "inputs_changed": false,
+  "output_sha256": "4b2b113642c5050d2c42d25eb76ef4bafcac1e273729c285fc4ae7d89177e63d",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

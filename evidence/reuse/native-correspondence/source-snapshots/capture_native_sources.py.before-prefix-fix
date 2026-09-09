@@ -75,8 +75,7 @@ def validate_source_request(request):
     for row in rows:
         path = row['path']
         safe_path(path)
-        require(PurePosixPath(path).parts[0].casefold() not in {'acquisition.json', 'container.json'},
-                'Reserved acquisition artifact path')
+        require(path.casefold() not in {'acquisition.json', 'container.json'}, 'Reserved acquisition artifact path')
         require(path not in seen, 'Duplicate source path')
         seen.add(path)
         url = urlsplit(approved_url(row['url']))

@@ -1,0 +1,56 @@
+{
+  "schema": "expertauth-native-notice-final-validation-v1",
+  "inputs": {
+    "tools/capture_native_sources.py": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42",
+    "tools/run_native_source_capture.py": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8",
+    "tools/assemble_runtime_licenses.py": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff",
+    "tests/reuse/test_native_source_capture.py": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3",
+    "tests/reuse/test_runtime_distribution.py": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe",
+    "ledger/implementation.json": "88ed39e02737a904fac5db4249fb4768f8087bc3a6f843b5cf6be1a17f69258a",
+    "tools/validate_release.py": "06738c687fdae44568da834c9a8b19477ca2db72fbb19a318301148c1c990ee7",
+    "tools/update_checkpoint_ledger.py": "c4ae092e617a23f97cc3c32095f9fd37357178b6f6997af939c426b8c9b47cbf"
+  },
+  "checks": [
+    {
+      "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
+      "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d",
+      "current_input_hashes_verified": 3
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json",
+      "sha256": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a",
+      "current_input_hashes_verified": 306
+    }
+  ],
+  "release_returncode": 1,
+  "release_issues": 557,
+  "release_report_sha256": "aaadacf8b884e8bd4ab2810d4411a8559bbcf81a2ca0438c9ded119270d19df2",
+  "superseded_intermediate_artifacts_retired": [
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-9df00bb6265d.zip",
+      "bytes": 12107070,
+      "sha256": "37fb62240e31f29375c2d7efaee354e9f25c50b76181ca09b2b0394a552daab5"
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-9df00bb6265d.zip.sha256",
+      "bytes": 114,
+      "sha256": "26aa680f1350a59cb981793a645d5b0846231158dff550513eb8f0f98c5485ed"
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-9df00bb6265d.manifest.json",
+      "bytes": 260815,
+      "sha256": "0bef5e5b470ad6c56c284faf949baf596d22c61d4dd3bc7cebe6629e63ffe7dd"
+    },
+    {
+      "path": "artifacts/expertauth-partial-checkpoint-9df00bb6265d.validation.json",
+      "bytes": 32012,
+      "sha256": "72a18ecad0210716cd146e86a1924a30685ef7830ac5cb0e56d53ec0e1c32848"
+    }
+  ],
+  "source_history_preserved_commit": "9df00bb6265d",
+  "retired_bytes": 12400011,
+  "complete": false,
+  "image_contents_verified": false,
+  "native_build_qualified": false,
+  "independent_review_passed": false
+}

@@ -107,7 +107,7 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
         },
         {
           "path": "tools/run_native_source_capture.py",
@@ -127,7 +127,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -210,6 +210,10 @@
         {
           "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
           "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
+        },
+        {
+          "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
+          "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
         }
       ],
       "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
@@ -297,7 +301,7 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
         },
         {
           "path": "tools/run_native_source_capture.py",
@@ -317,7 +321,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -400,6 +404,10 @@
         {
           "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
           "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
+        },
+        {
+          "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
+          "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
         }
       ],
       "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
@@ -452,7 +460,7 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
         },
         {
           "path": "tools/run_native_source_capture.py",
@@ -472,7 +480,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -555,6 +563,10 @@
         {
           "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
           "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
+        },
+        {
+          "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
+          "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
         }
       ],
       "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
@@ -11429,7 +11441,7 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
         },
         {
           "path": "tools/run_native_source_capture.py",
@@ -11449,7 +11461,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -11524,6 +11536,10 @@
         {
           "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
           "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
+        },
+        {
+          "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
+          "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
         }
       ]
     },
@@ -12282,6 +12298,10 @@
     {
       "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
       "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
+    },
+    {
+      "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
+      "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
     }
   ],
   "session_candidate_artifacts": [
