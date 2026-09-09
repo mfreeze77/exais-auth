@@ -9,12 +9,17 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest native work is `docs/native-argon2-build.md`:68 pinned PHC files, two
-identical Linux x86-64 builds, original C tests and actual Core cross-library
-password/import/reset/concurrency cases. All temporary resources retired; Core
-and Node images are unchanged. Continue with supported nolibs installation and
-native/OS/source/relink closure. Automatic rehash is still absent: actual login
-preserves imported hashes. Other foundation and qualification gates remain open.
+Latest work is `docs/installed-native-argon2.md`: Core `e8c460664ac5` now contains
+the source-built library, 68 original source files and startup integrity checks.
+Seven startup cases, both native peer profiles, Core/Node/React regressions and
+local upgrade/rollback pass. Node remains `2a02e08d5fcb`; binary build remains
+`guarded-01`. The old Core image and all helpers/context retire; two containers,
+six task tags and zero dangling project images remain. Preserve
+`--native-argon2-build linux-03` in the current Core build command. Test-only
+changes reuse the current image; use `--native-argon2-installed` for native labs.
+The separate installed-peer run qualifies later runner/probe bytes. Continue
+native/OS/source/relink and maintained-version closure. Automatic rehash remains
+absent; foundation, full profiles and independent review remain open.
 The initial de6439a31552 ZIP omitted five files due to upstream export attributes
 and failed native extraction. The corrected packager includes exact committed
 blobs. Read `package-completeness-01` and require the new native-extraction sidecar;
@@ -24,8 +29,8 @@ parent directories. Both initializations are fixed and the fresh-source check
 reproduces the Core-tested library. Require the final archive's separate successful
 native-extraction report; both earlier failures remain preserved.
 
-Latest work is `docs/guarded-session-operations.md`. Current Core is `db1d29ba6244`,
-current Node is `2a02e08d5fcb`, and the current binary build is `guarded-01`.
+Previous work is `docs/guarded-session-operations.md`. Core was `db1d29ba6244`;
+Node remains `2a02e08d5fcb`, and the current binary build is `guarded-01`.
 The dedicated Core refresh/verify routes enforce the explicit policy using the
 actual token tenant and the transaction's configuration object. Actual mismatched
 operations after healthy preflight and an older replica fail closed; mixed

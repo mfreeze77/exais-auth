@@ -1,5 +1,9 @@
 # Guarded Core session operations
 
+Current Core packaging is now `e8c460664ac5`, with unchanged `guarded-01` JARs.
+Read [installed native Argon2](installed-native-argon2.md) for current image build
+commands and startup/native qualification. The earlier Core pin below is historical.
+
 Status: PARTIAL; no foundation selected and no full baseline row qualified.
 
 The five-second session profile now uses private Core routes
@@ -113,7 +117,7 @@ python -B tools/run_refresh_grace_lab.py --name NEW_GUARDED_NODE --session-build
 python -B tools/run_refresh_grace_lab.py --name NEW_INSTALLED_NODE --session-build guarded-01 --with-node --policy-readiness --guarded-node --installed-node-image sha256:2a02e08d5fcbdd573974bb21247e4784b23870e86d0de1ced65121b3a11da19a
 python -B tools/build_node_runtime.py --name NEW_NODE_BUILD --session-build guarded-01 --qualify-refresh-grace
 python -B tools/build_password_session.py --name NEW_BINARY --candidate-from guarded-01
-python -B tools/build_atomic_core_runtime.py --name NEW_CORE_BUILD --session-build NEW_BINARY --qualify-refresh-grace --qualify-guarded-sessions
+python -B tools/build_atomic_core_runtime.py --name NEW_CORE_BUILD --session-build NEW_BINARY --native-argon2-build linux-03 --qualify-refresh-grace --qualify-guarded-sessions
 python -B tools/retire_password_session_candidate.py --image-build NEW_CORE_BUILD
 ```
 

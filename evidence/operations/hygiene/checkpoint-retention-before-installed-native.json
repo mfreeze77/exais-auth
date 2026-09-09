@@ -1,0 +1,33 @@
+{
+  "kind": "bounded-generated-checkpoint-retention",
+  "utc": "2026-09-09T13:07:10.332477+00:00",
+  "passed": true,
+  "supplied_archives_touched": false,
+  "verified": [
+    {
+      "name": "expertauth-partial-checkpoint-40c8589b0921.zip",
+      "sha256": "88c2d317dd6ddb8084d8c3b1359955879678400fa0cd401fde4481872d90bab9",
+      "bytes": 36514537,
+      "commit": "40c8589b09213191ddbca6fda5e006951857327f",
+      "files": 3679,
+      "retire": true
+    },
+    {
+      "name": "expertauth-partial-checkpoint-d446a27861bc.zip",
+      "sha256": "f0829beab42da1ee980b163656c4585273dcecb57d1e6d6d7faf183cd5622ecb",
+      "bytes": 40657230,
+      "commit": "d446a27861bc6e0a4c1ef72c87cfad1eabe42a5d",
+      "files": 4127,
+      "retire": false
+    },
+    {
+      "name": "expertauth-partial-checkpoint-7539ea967f2f.zip",
+      "sha256": "9ed30dfa75681361a94d0e80db77e775d75b047bbcb3c4e478fca57835bb0d5c",
+      "bytes": 44112706,
+      "commit": "7539ea967f2f3a8a48d7a240c9250f837c27867e",
+      "files": 4330,
+      "retire": false
+    }
+  ],
+  "retired_bytes": 36514537
+}

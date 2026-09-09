@@ -1,5 +1,13 @@
 # Compatibility checkpoint — partial
 
+Current Core `e8c460664ac5` and Node `2a02e08d5fcb` retain the guarded-01 API
+behavior with source-built Argon2 installed. Actual source/bundled and
+source/source creation/verification, imports, wrong-password denial, reset,
+concurrency and local rollback pass. Imported hashes remain unchanged after
+login, so rehash and the complete migration matrix remain open. See
+[installed native qualification](installed-native-argon2.md); earlier image pins
+below describe their historical runs, not the current retained images.
+
 The frozen205 API IDs comprise49 FDI and156 CDI operations. All IDs were resolved
 to pinned source facts, yielding207 path variants. Four original path artifacts and
 five newly observed upstream additions are recorded without rewriting the baseline.
@@ -10,7 +18,7 @@ See `contracts/README.md`, `api-contracts.json` and their source/licensing repor
 The working OSS Node/React and Python examples exercise password/session subsets.
 The new Node/React reset subset uses optional authenticated TLS SMTP and engine
 reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks.
-The current installed Node image `e02ab9bcd78e` passes 34 behavior checks for
+The earlier installed Node image `e02ab9bcd78e` passes 34 behavior checks for
 the opt-in atomic profile, with no app source/bundle mounts. Core image
 `03b4458c532f` now contains the exact two-JAR adaptation and passes its 16 Core
 cases without overlays. Fourteen local upgrade/rollback cases preserve legacy

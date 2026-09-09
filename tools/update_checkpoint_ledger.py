@@ -461,7 +461,7 @@ def main():
         guarded_reports+=['evidence/foundation/refresh-grace/'+run+'/'+p for p in files]
     data['guarded_session_operation_artifacts']=[artifact(ROOT,p) for p in guarded_reports]
     data['guarded_session_transform_failed_history']=[artifact(ROOT,'evidence/operations/session-policy-transform/anchors-01/'+p) for p in ('report.json','patch_session_policy.py')]
-    guarded_note=('Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit '
+    guarded_note=('Historical Coredb1d29ba6244 and current Node2a02e08d5fcb use private guarded refresh/verify routes with explicit '
         'OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh '
         'transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session '
         'store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; '
@@ -511,7 +511,7 @@ def main():
     data['native_argon2_candidate_artifacts']=[artifact(ROOT,p) for p in native_reports]
     data['native_argon2_failed_history']=[artifact(ROOT,'evidence/reuse/native-correspondence/argon2/native-build/'+run+'/'+p)
         for run in ('linux-01','linux-02') for p in ('report.json','build_native_argon2.py')]
-    native_note=('PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 '
+    native_note=('Historical source-mounted checkpoint: PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 '
         'builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core '
         'source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. '
         'Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is '
@@ -533,6 +533,57 @@ def main():
         'evidence/operations/hygiene/checkpoint-retention-native-incomplete.json',
         'evidence/operations/hygiene/checkpoint-retention-native-bootstrap.json',
         'evidence/reuse/native-correspondence/argon2/checkpoint-checks-01/report.json')]
+    installed_native_sources=['tools/install_native_argon2.py','tools/qualify_native_startup.py',
+        'deploy/native-argon2-start.sh','deploy/NativeArgon2Check.java','tools/build_atomic_core_runtime.py',
+        'tools/replace_atomic_core.py','tools/run_refresh_grace_lab.py','tests/foundation/NativePasswordProbe.java',
+        'tools/verify_installed_native.py','reuse/installed-native-argon2.json','docs/installed-native-argon2.md']
+    installed_native_reports=['evidence/operations/atomic-core-image/native-01/'+p for p in
+        ('report.json','qualification.json','notice-manifest.json','adaptation-runtime.cdx.json')]
+    installed_native_reports += ['evidence/operations/native-argon2-startup/image-native-01/report.json',
+        'evidence/operations/native-argon2-installation/correspondence-03.json',
+        'evidence/operations/atomic-core-replacement/native-01/report.json',
+        'evidence/operations/atomic-reset/image-core-native-01/report.json',
+        'evidence/operations/atomic-reset/image-core-native-01/probe-report.json',
+        'evidence/operations/atomic-reset/image-core-native-01/password-session-report.json',
+        'evidence/operations/atomic-reset/image-node-native-01/report.json']
+    for run,probe in [('image-native-native-01','native-password-report.json'),
+                      ('native-installed-peer-01','native-password-report.json'),
+                      ('image-guarded-native-01','guarded-report.json'),('image-core-native-01','probe-report.json')]:
+        installed_native_reports += ['evidence/foundation/refresh-grace/'+run+'/'+p for p in ('report.json',probe)]
+    installed_native_reports += ['evidence/operations/password-reset/atomic-image-node-native-01/'+p
+        for p in ('report.json','probe-results.json','browser-results.json','tls-results.json')]
+    data['installed_native_argon2_artifacts']=[artifact(ROOT,p) for p in installed_native_reports]
+    data['installed_native_verifier_failed_history']=[artifact(ROOT,'evidence/operations/native-argon2-installation/'+p)
+        for p in ('correspondence.json','correspondence-02.json','verify-before-retired-helper-fix.py',
+                  'verify-before-diagnostic-case-fix.py')]
+    installed_native_note=('Current Coree8c460664ac5 installs the source-built45aa95d580e7 Argon2 library through unchanged '
+        'LGPL3 nolibs/JNA bindings; removes only the verified native-only eight-member bundle. All68 PHC source/build/test/notice '
+        'files are installed. All554 installed files match;86JARs and87SBOMcomponents. Seven actual startup cases pass, separate '
+        'from authentication. Source/bundled and source/source Core profiles each pass10password/import/reset/concurrency rows '
+        'plus15-user cleanup and117requests. Both installed-peer process maps show the source library, with no native dependency '
+        'mount. The main build snapshots preserve older runner/probe bytes; a separate installed-peer lab qualifies their only '
+        'later changes without runtime rebuild. Core/plugin guarded-01 JARs and Node2a02e08d5fcb are unchanged. Sixteen atomic Core '
+        'cases,34Node/SMTP/TLS/React behavior checks,12grace cases,8guarded cases plus cleanup and14actual local upgrade/rollback '
+        'phases pass. Original PostgreSQL/schema/configuration/identity set preserved; operator BCRYPT and zero-grace policy '
+        'unchanged. Old Coredb1d29ba6244, all helpers, build context and scratch retire.269offline correspondence checks are not '
+        'authentication; two verifier failures concerning expected retired-helper absence and diagnostic case are preserved. '
+        'Imported hashes still do not rehash on login. Remaining native/OS, wrapper/source/relink, maintenance, full fresh-host, '
+        'migration, namespace/linking, all SDK/platform/provider profiles and independent review remain unqualified. No engine '
+        'selection, entitlement bypass or original acceptance status is promoted.')
+    installed_native_ids=[]
+    for run in ('image-native-native-01','native-installed-peer-01'):
+        installed_native_ids += [r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace'/run/'native-password-report.json')['rows']]
+    for identifier in ('BAS-002','BAS-004','BAS-005','PWD-001','PWD-005','PWD-006','MIG-002',
+                       'SES-003','SES-004','SES-005','SES-006','SES-017','SDK-001','SDKP-01','SDK-005','SDKP-05',
+                       'OPS-004','OPS-007','OPS-011','WP-002','WP-004','WP-009','WP-010','WP-033'):
+        row=index[identifier];row['implementation'] += [artifact(ROOT,p) for p in installed_native_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['installed_native_argon2_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+installed_native_note
+        if identifier in ('PWD-001','PWD-005','PWD-006','MIG-002','WP-002'):
+            row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+installed_native_ids))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/verification-20260909T125944Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-installed-native.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

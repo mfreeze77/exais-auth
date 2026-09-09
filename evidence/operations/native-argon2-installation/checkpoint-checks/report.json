@@ -1,0 +1,87 @@
+{
+  "kind": "installed-native-checkpoint-integrity",
+  "timestamp": "2026-09-09T13:08:52.187191+00:00",
+  "passed": true,
+  "complete": false,
+  "authentication_execution": false,
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-B",
+        "tools/ledger.py",
+        "check"
+      ],
+      "actual_exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "stdout_sha256": "ef61b78a766ba4bd7daedd772d09c162eb9793d6086c019c42db3065ea304b7e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errors_count": 0,
+      "complete": false
+    },
+    {
+      "argv": [
+        "python",
+        "-B",
+        "tools/capture_contracts.py",
+        "--validate"
+      ],
+      "actual_exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "stdout_sha256": "a899a47cd829a88ab5c806f8931ab39143e293143f41ad5e9f2944230a7a8536",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errors_count": 0,
+      "complete": false
+    },
+    {
+      "argv": [
+        "python",
+        "-B",
+        "tools/validate_release.py",
+        "--claims-only"
+      ],
+      "actual_exit": 0,
+      "expected_exit": 0,
+      "passed": true,
+      "stdout_sha256": "ac80cd7e612de36a6e018d70bdc98c259f7762ade2327c0bb1b1acd93d429467",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errors_count": 0,
+      "complete": false
+    },
+    {
+      "argv": [
+        "python",
+        "-B",
+        "tools/validate_release.py"
+      ],
+      "actual_exit": 1,
+      "expected_exit": 1,
+      "passed": true,
+      "stdout_sha256": "c2e8d856c5abae345410aa5ba8e9f43f0bc763d3620c0f246626bbb6aaf564d3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errors_count": 557,
+      "complete": false
+    }
+  ],
+  "syntax_files": [
+    "tools/build_atomic_core_runtime.py",
+    "tools/replace_atomic_core.py",
+    "tools/run_refresh_grace_lab.py",
+    "tools/install_native_argon2.py",
+    "tools/qualify_native_startup.py",
+    "tools/verify_installed_native.py",
+    "tools/update_checkpoint_ledger.py"
+  ],
+  "inputs": {
+    "tools/build_atomic_core_runtime.py": "5f4f3d33aa8d887b8707fa6c004f46b73c7b853860df25c597acc3ae221fe109",
+    "tools/replace_atomic_core.py": "1babab92a25b70015555f24008cfadd09ce91be2c96379693827f119e54cf1dd",
+    "tools/run_refresh_grace_lab.py": "97100c74d7455a378ec18166213559a2fad320cc76dc7a01c826c26cd8b22473",
+    "tools/install_native_argon2.py": "af810927ead1dd91595aad6903fa67ae5558c09bb46d84d59ad32dbc7cd4e113",
+    "tools/qualify_native_startup.py": "a5f1bf0e24b28adc899147df092650f6895a64ecf6b486067c48a5e37ff9147d",
+    "tools/verify_installed_native.py": "7343e7732e8308fa93339842d3379616e74493b95ab01452b32db1a896da031b",
+    "tools/update_checkpoint_ledger.py": "46627ee9ffc3dcd4075e36ce395915a88876f59c0d06ad8c4e56fd23062611f0",
+    "ledger/implementation.json": "03004300b7ca3e6fc02f70d09eb2573e9511157ae051519c0abb9ff60e237961"
+  }
+}

@@ -1,5 +1,13 @@
 # Security checkpoint — not independent approval
 
+The installed native Core profile checks library integrity and its actual load
+path before service startup. Seven startup cases and real native password/reset/
+concurrency regressions pass. Docker-privileged replacement, other JVM loader
+paths, live tampering, rehash, full platform/provider/maintenance coverage and
+independent review remain open. Read [the exact scope](installed-native-argon2.md).
+This is source-native packaging; it does not change the authoritative engine or
+entitlement checks. Current Core is `e8c460664ac5`; Node is `2a02e08d5fcb`.
+
 Foundation remains unapproved. Tests use isolated private containers and synthetic
 identities. No production, remote publication, spend, external account messages or
 license-enforcement changes were performed.

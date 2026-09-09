@@ -1,9 +1,10 @@
 # Source-built Argon2 qualification
 
-PARTIAL. A Linux x86-64 Argon2 library now builds from pinned source and runs
-actual Core password operations. The retained image is unchanged; the native
-library is a declared dependency mount in an isolated lab. No engine, complete
-baseline row, full migration or distribution gate is approved.
+PARTIAL. This records the earlier source-mounted native qualification. The
+subsequent [installed profile](installed-native-argon2.md) is now in retained Core
+`e8c460664ac5` and has separate startup/password/rollback evidence. Original
+source/test evidence below is preserved. No engine, complete baseline row, full
+migration or distribution gate is approved.
 
 The original wrapper recipe selects PHC20190702, now resolved to
 `62358ba2123abd17fccf2a108a301d4b52c01a7c`. All68 acquired source, test, build and
@@ -43,7 +44,8 @@ A uses the wrapper's documented jna.library.path; B uses the existing bundled
 library. Actual process maps and the mounted hash confirm A's source selection.
 Separate executable32MiB JNA tmpfs mounts permit library loading while ordinary
 /tmp stays nonexecutable. No Core/plugin JAR, primitive or entitlement changed.
-The GPL Java wrapper, JNA and other native/OS obligations remain unchanged.
+The LGPL3 Java wrapper (including incorporated GPL3 terms), JNA and other
+native/OS obligations remain unchanged.
 
 Failures linux-01 and linux-02 are preserved. First, a CRLF script failed before
 compilation; exact LF emission fixed it. Second, genkat could not execute on the
@@ -64,11 +66,11 @@ The builder preserves an existing `.cache/native-argon2` candidate. Do not delet
 it or repeat unchanged builds for timestamps. Changed integration tests can use:
 
 ```powershell
-python -B tools/run_refresh_grace_lab.py --name NEW_UNIQUE_NATIVE_LAB --session-build guarded-01 --native-argon2-build linux-03
+python -B tools/run_refresh_grace_lab.py --name NEW_UNIQUE_NATIVE_LAB --session-build guarded-01 --native-argon2-build linux-03 --native-argon2-installed
 ```
 
-Next: install through the wrapper's supported nolibs boundary, qualify the image
-and loader failure behavior, and close native/OS/source/relink obligations.
+The subsequent installed profile qualifies the nolibs boundary and seven startup
+cases. Next: close remaining native/OS/source/relink and maintenance obligations.
 Other platforms, full hash/rehash/migration scope, foundation and independent
 review remain unqualified.
 

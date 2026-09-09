@@ -1,5 +1,13 @@
 # ExpertAuth source reuse and licensing audit checkpoint
 
+The current [installed native Argon2 profile](installed-native-argon2.md) has
+file-specific source/destination/hash/license mappings in
+`reuse/installed-native-argon2.json`. The PHC source is unchanged and its CC0
+option is selected; the unchanged Java wrapper uses LGPL3, including GPL3 terms.
+Original eight-member native bundle removed; 68 corresponding source/build/test/
+notice files installed. Native/OS, wrapper/source/relink, maintained-version and
+independent distribution qualification remain open.
+
 The 2026-09-09 Node follow-up is documented in `docs/node-offline-build.md`.
 `docs/node-package-bootstrap.md` records the new locally authored acquisition,
 container runner and real registry/offline probes with file-specific reuse

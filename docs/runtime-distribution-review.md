@@ -1,5 +1,13 @@
 # OSS runtime distribution review
 
+Current Core `e8c460664ac5` removes the original eight-member Argon2 native-only
+bundle and installs the source-built PHC library through unchanged nolibs/JNA
+bindings. All 68 original native source/build/test/notice files accompany it.
+The current SBOM has 87 components and 86 JARs. Original inventory below remains
+historical; [installed-native-argon2.md](installed-native-argon2.md) and
+`reuse/installed-native-argon2.json` bind the replacement. Remaining native/OS,
+wrapper/source/relink, maintained-version and independent review gates stay open.
+
 **PARTIAL: archive integrity verified; distribution obligations and native build
 provenance remain unproven. This is evidence review, not license approval.**
 

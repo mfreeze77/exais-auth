@@ -1,0 +1,29 @@
+{
+  "id": "OSS-CDI56-GRACE5-V1",
+  "schema": "expertauth-candidate-session-policy-v1",
+  "acceptance_status": "unqualified-candidate",
+  "changes_immutable_baseline": false,
+  "baseline_ids": ["SES-003", "SES-004", "SES-005", "SES-006", "SES-017", "TST-005"],
+  "core_source_commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+  "wire_version": "5.6",
+  "refresh_token_rotation_grace_period_seconds": 5,
+  "recent_token_reuse_behaviour": "TOKEN_THEFT",
+  "authority": "Existing Core SQL transaction and PostgreSQL storage; no adapter refresh state.",
+  "states": [
+    "Refreshing current commits one successor verifier and records the retired verifier and rotation time.",
+    "Retrying that retired verifier inside five seconds replaces the successor; it does not extend the window or expiry.",
+    "After concurrent same-parent requests settle, exactly one returned successor matches authoritative current state. Displaced access tokens fail online verification.",
+    "Presenting a displaced refresh branch revokes the family as ORPHANED_BRANCH. Clients must serialize installation and use of their refreshed credentials; arbitrary concurrent use of both branches is not qualified.",
+    "Retired-parent replay after the window is RECENT_PREV; older ancestry is STALE_LINEAGE. Both revoke the intended family server-side before a successful theft response, preserving other families.",
+    "A database backend terminated after UPDATE but before commit must leave every rotation column unchanged and allow the original credential to retry.",
+    "A committed refresh response lost before downstream headers or truncated after eight body bytes permits window-root retry. The proof uses a real transport proxy and actual database state.",
+    "A successful response held across logout cannot resurrect the revoked server-side family when it is eventually delivered.",
+    "Legacy CDI5.4 and CDI5.6 transitions are characterized explicitly; they are not assumed to have identical retry semantics."
+  ],
+  "still_required": [
+    "Node24.0.3 declares only CDI5.4. This direct Core probe is not an unmodified Node, Python, browser or native SDK qualification.",
+    "Coordinated client credential installation, all concurrency orderings, crashes at revocation, restart/failover, offline residual windows and full security acceptance remain required.",
+    "Original strict-profile failures, foundation identity/licensing blockers, all original API entries and profile requirements remain binding.",
+    "Independent human security review has not occurred."
+  ]
+}

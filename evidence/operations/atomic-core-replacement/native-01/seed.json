@@ -1,0 +1,13 @@
+{
+  "phase": "seed",
+  "passed": true,
+  "rows": [
+    {
+      "id": "UPGRADE-SEED-LEGACY-SESSION",
+      "status": "passed"
+    }
+  ],
+  "complete": false,
+  "private_values_disclosed": false,
+  "original_identity_count": 52
+}

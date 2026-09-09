@@ -1,0 +1,1092 @@
+{
+  "kind": "installed-native-source-evidence-correspondence",
+  "passed": false,
+  "authentication_test_execution": false,
+  "complete": false,
+  "independent_review": false,
+  "checks": [
+    {
+      "check": "build input: tools/build_atomic_core_runtime.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/build_oss_runtime.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/assemble_runtime_licenses.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/replace_atomic_core.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/operations/core_upgrade_probe.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/wait_oss_storage.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/operations/PasswordSessionProbe.java",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/operations/password_session_wire.mjs",
+      "passed": true
+    },
+    {
+      "check": "build input: deploy/oss-core.Dockerfile",
+      "passed": true
+    },
+    {
+      "check": "build input: reuse/password-session-components.json",
+      "passed": true
+    },
+    {
+      "check": "build input: reuse/oss-core-runtime.cdx.json",
+      "passed": true
+    },
+    {
+      "check": "build input: reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "build input: engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "build snapshot: tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "build input: contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "build input: tests/foundation/GuardedSessionProbe.java",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/install_native_argon2.py",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/build_native_argon2.py",
+      "passed": true
+    },
+    {
+      "check": "build input: deploy/native-argon2-start.sh",
+      "passed": true
+    },
+    {
+      "check": "build input: deploy/NativeArgon2Check.java",
+      "passed": true
+    },
+    {
+      "check": "build input: reuse/native-argon2-components.json",
+      "passed": true
+    },
+    {
+      "check": "build input: tools/qualify_native_startup.py",
+      "passed": true
+    },
+    {
+      "check": "build snapshot: tests/foundation/NativePasswordProbe.java",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/.gitattributes",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/.gitignore",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/.travis.yml",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/Argon2.sln",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/CHANGELOG.md",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/LICENSE",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/Makefile",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/README.md",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/appveyor.yml",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/export.sh",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/include/argon2.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2d",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2d.shasum",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2d_v16",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2d_v16.shasum",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2i",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2i.shasum",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2i_v16",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2i_v16.shasum",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2id",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2id.shasum",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2id_v16",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/argon2id_v16.shasum",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/check-sums.ps1",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/check-sums.sh",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/test.ps1",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/kats/test.sh",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/libargon2.pc.in",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/man/argon2.1",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/argon2.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/bench.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/blake2/blake2-impl.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/blake2/blake2.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/blake2/blake2b.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/blake2/blamka-round-opt.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/blake2/blamka-round-ref.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/core.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/core.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/encoding.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/encoding.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/genkat.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/genkat.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/opt.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/ref.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/run.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/test.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/thread.c",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/src/thread.h",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2Opt/Argon2Opt.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2Opt/Argon2Opt.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptBench/Argon2OptBench.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptBench/Argon2OptBench.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptDll/Argon2OptDll.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptDll/Argon2OptDll.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2Ref/Argon2Ref.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2Ref/Argon2Ref.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefBench/Argon2RefBench.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefBench/Argon2RefBench.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefDll/Argon2RefDll.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefDll/Argon2RefDll.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "build input: evidence/reuse/native-correspondence/argon2/native-source/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "only separately qualified peer harness changed",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: tests/foundation/NativePasswordProbe.java",
+      "passed": true
+    },
+    {
+      "check": "peer input: tools/build_native_argon2.py",
+      "passed": true
+    },
+    {
+      "check": "peer input: evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+      "passed": true
+    },
+    {
+      "check": "peer input: .cache/native-argon2/libargon2.so",
+      "passed": true
+    },
+    {
+      "check": "peer ran current changed harness",
+      "passed": true
+    },
+    {
+      "check": "installed peer used unchanged image",
+      "passed": true
+    },
+    {
+      "check": "peer no overlays or resources",
+      "passed": true
+    },
+    {
+      "check": "actual installed native mapping: core-a",
+      "passed": true
+    },
+    {
+      "check": "actual installed native mapping: core-b",
+      "passed": true
+    },
+    {
+      "check": "peer report bound",
+      "passed": true
+    },
+    {
+      "check": "peer eleven passed rows, not full migration",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: native_startup_test",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: native_password_test",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: guarded_session_test",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: core_test",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: node_test",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: refresh_grace_test",
+      "passed": true
+    },
+    {
+      "check": "bound actual report: replacement",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-001.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-001.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-002.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-002.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-003.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-003.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": false
+    },
+    {
+      "check": "retained command: command-004.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-004.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-005.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-005.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-006.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-006.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-007.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-007.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-008.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-008.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-009.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-009.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-010.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-010.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-011.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-011.stderr",
+      "passed": true
+    },
+    {
+      "check": "build command returned zero",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-012.stdout",
+      "passed": true
+    },
+    {
+      "check": "retained command: command-012.stderr",
+      "passed": true
+    },
+    {
+      "check": "exact installed manifest count",
+      "passed": true
+    },
+    {
+      "check": "native-only bundle removed",
+      "passed": true
+    },
+    {
+      "check": "unchanged Java dependency: lib/argon2-jvm-nolibs-2.11.jar",
+      "passed": true
+    },
+    {
+      "check": "unchanged Java dependency: lib/jna-5.8.0.jar",
+      "passed": true
+    },
+    {
+      "check": "native candidate matches source build",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: .gitattributes",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: .gitignore",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: .travis.yml",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: Argon2.sln",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: CHANGELOG.md",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: LICENSE",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: Makefile",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: README.md",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: appveyor.yml",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: export.sh",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: include/argon2.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2d",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2d.shasum",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2d_v16",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2d_v16.shasum",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2i",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2i.shasum",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2i_v16",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2i_v16.shasum",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2id",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2id.shasum",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2id_v16",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/argon2id_v16.shasum",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/check-sums.ps1",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/check-sums.sh",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/test.ps1",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: kats/test.sh",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: libargon2.pc.in",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: man/argon2.1",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/argon2.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/bench.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/blake2/blake2-impl.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/blake2/blake2.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/blake2/blake2b.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/blake2/blamka-round-opt.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/blake2/blamka-round-ref.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/core.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/core.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/encoding.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/encoding.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/genkat.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/genkat.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/opt.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/ref.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/run.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/test.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/thread.c",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: src/thread.h",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2Opt/Argon2Opt.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2Opt/Argon2Opt.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptBench/Argon2OptBench.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptBench/Argon2OptBench.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptDll/Argon2OptDll.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptDll/Argon2OptDll.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2Ref/Argon2Ref.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2Ref/Argon2Ref.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefBench/Argon2RefBench.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefBench/Argon2RefBench.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefDll/Argon2RefDll.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefDll/Argon2RefDll.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj",
+      "passed": true
+    },
+    {
+      "check": "installed corresponding source: vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj.filters",
+      "passed": true
+    },
+    {
+      "check": "SBOM replacement",
+      "passed": true
+    },
+    {
+      "check": "actual upgrade/rollback committed and retired old image",
+      "passed": true
+    },
+    {
+      "check": "database/schema preserved",
+      "passed": true
+    }
+  ],
+  "build_report_sha256": "1f6358f4037f1c37058780f3b9e9d2f87869d8e12dec5a8994e2a9d0e5a23c1e",
+  "peer_report_sha256": "52d43a7a7366234ec85e7d54cef76658f91eb14a2e5d36a262b606121e7745f8",
+  "verifier_sha256": "974cae19f5732125bdc9b7eb3322c853bbb0d731d4ab30cc89db77c99ab1de77",
+  "changed_harness_qualified_separately": [
+    "tests/foundation/NativePasswordProbe.java",
+    "tools/run_refresh_grace_lab.py"
+  ]
+}

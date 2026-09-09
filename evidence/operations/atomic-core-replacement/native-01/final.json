@@ -1,0 +1,25 @@
+{
+  "phase": "final",
+  "passed": true,
+  "rows": [
+    {
+      "id": "UPGRADE-FINAL-LEGACY-ONLINE",
+      "status": "passed"
+    },
+    {
+      "id": "UPGRADE-FINAL-REFRESH",
+      "status": "passed"
+    },
+    {
+      "id": "UPGRADE-FINAL-PASSWORD",
+      "status": "passed"
+    },
+    {
+      "id": "UPGRADE-FINAL-ATOMIC-SESSION",
+      "status": "passed"
+    }
+  ],
+  "complete": false,
+  "private_values_disclosed": false,
+  "original_identity_count": 52
+}

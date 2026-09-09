@@ -1,0 +1,78 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/gradle?digest=sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "cpuquota": "200000",
+          "force-network-mode": "none",
+          "label:org.expertauth.adaptation": "password-session-v1",
+          "label:org.expertauth.build-run": "21c1b702d9304ea2b69dd6f23ac573f6",
+          "label:org.expertauth.project": "expert-auth",
+          "label:org.expertauth.purpose": "atomic-core-runtime",
+          "memory": "536870912"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ],
+        "root": {
+          "configSource": {
+            "path": "Dockerfile"
+          },
+          "request": {
+            "args": {
+              "cpuquota": "200000",
+              "force-network-mode": "none",
+              "label:org.expertauth.adaptation": "password-session-v1",
+              "label:org.expertauth.build-run": "21c1b702d9304ea2b69dd6f23ac573f6",
+              "label:org.expertauth.project": "expert-auth",
+              "label:org.expertauth.purpose": "atomic-core-runtime",
+              "memory": "536870912",
+              "vcs:localdir:context": ".cache\\runtime-image-atomic-79839e7d1b234051b3041e2cbb0fc5cb",
+              "vcs:localdir:dockerfile": ".cache\\runtime-image-atomic-79839e7d1b234051b3041e2cbb0fc5cb",
+              "vcs:revision": "7539ea967f2f3a8a48d7a240c9250f837c27867e"
+            }
+          }
+        },
+        "compatibilityVersion": 30
+      },
+      "environment": {
+        "dockerfileVersion": "1.25.0",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "default/default/h869hd37a45z539my994tqtvi",
+  "containerimage.config.digest": "sha256:111c375b9920917989031ea5c526f4910dfffeeb535fc157855da2a8a0948bbf",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43",
+    "size": 3720,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  },
+  "containerimage.digest": "sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43",
+  "image.name": "moby-dangling@sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43"
+}

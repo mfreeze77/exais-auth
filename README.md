@@ -8,9 +8,10 @@ The immutable acceptance baseline lives under `baseline/`; editable traceability
 `ledger/implementation.json`. Engine selection is pending in ADR-001. Source, builds,
 real API tests and license evidence are retained separately from plan integrity tests.
 
-The [source-built Argon2 candidate](docs/native-argon2-build.md) now passes original
-native tests and real cross-library Core password/import/reset/concurrency cases.
-The installed image is unchanged; native distribution and rehash gates remain open.
+The [installed source-built Argon2 profile](docs/installed-native-argon2.md) passes
+original native tests, real Core password/import/reset/concurrency cases, startup
+failure checks and local upgrade/rollback. Current Core is `e8c460664ac5`; Node is
+`2a02e08d5fcb`. Native distribution, rehash and full foundation gates remain open.
 
 ## Reproduce the source-built alternative lab
 

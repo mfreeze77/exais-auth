@@ -1,5 +1,10 @@
 # Runtime image notices and source retrieval
 
+Current Core `e8c460664ac5` verifies 554 installed files, including the native
+source package and 86 JARs. Its [installed native profile](installed-native-argon2.md)
+adds exact source/SBOM mappings and preserves historical attribution. Older file
+counts and image pins below belong to the recorded earlier notice checkpoints.
+
 The audited OSS candidate places its preserved notices under
 `/opt/expertauth/licenses`. The manifest records every installed notice/POM/SBOM
 file and its exact SHA-256, the applicable Maven coordinate, binary/source archive

@@ -11,13 +11,30 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
-- A149,528-byte Argon2 library builds twice identically from68 pinned PHC files.
+- Installed native Core `e8c460664ac5` replaces `db1d29ba6244` after seven
+  startup cases, source/bundled and source/source password/import/reset/
+  concurrency tests, 16 Core atomic cases, 34 Node/SMTP/TLS/React checks,
+  12 grace cases, eight guarded cases plus cleanup, and 14 actual local
+  upgrade/rollback phases. All 554 installed files match, including 86 JARs
+  and the source-built library; 68 native source files ship inside the image.
+  Node and the guarded-01 Core/plugin pair are unchanged. Later peer-harness
+  bytes have separate actual evidence; 269 offline correspondence checks bind
+  both generations. Two verifier mistakes are preserved and fixed: retired
+  Docker helpers correctly return a nonzero lookup with lowercase diagnostic.
+  Neither required a runtime rebuild or authentication rerun. All helpers/context
+  retire, old image is removed, database/configuration/identity state preserved.
+  Hygiene is two containers, six task tags, no dangling project images.
+  See `docs/installed-native-argon2.md`. Full native/source/relink, maintenance,
+  rehash, other platforms, foundation and independent review remain open.
+
+- The earlier source-mounted checkpoint built a149,528-byte Argon2 library
+  twice identically from68 pinned PHC files.
   Original C tests and ten actual Core password/import/reset/concurrency cases
   plus cleanup pass. All15 users and five lab containers retire; no image build,
   download or persistent change. Imported hashes stay unchanged: automatic rehash
   remains missing. Two build environment failures are preserved. See
-  `docs/native-argon2-build.md`; installed packaging, other platforms and full
-  source/distribution gates remain open.
+  `docs/native-argon2-build.md`; its installed packaging gap is addressed above.
+  Other platforms and full source/distribution gates remain open.
   Its first checkpoint's native extraction rejected five files omitted by Git's
   upstream export attributes. That failure is preserved. The corrected packager
   reads exact committed blobs;25 actual-Git/secret-boundary checks pass. Fresh ZIP
@@ -25,7 +42,7 @@ Actual code and evidence:
   A subsequent fresh checkout exposed missing cache/runtime parent creation;
   both are fixed. A fresh75-input directory now reproduces the Core-tested
   library and retires all scratch; that failure also remains preserved.
-- Current Core `db1d29ba6244` and Node `2a02e08d5fcb` enforce the five-second
+- Previous Core `db1d29ba6244` and current Node `2a02e08d5fcb` enforce the five-second
   profile at dedicated Core refresh/verify routes. A healthy preflight followed
   by a mismatched replica is refused without credentials or fallback; the actual
   older replica returns 404 for these routes. Mixed concurrent operations converge

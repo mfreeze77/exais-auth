@@ -1,0 +1,13 @@
+{
+  "phase": "cleanup",
+  "passed": true,
+  "rows": [
+    {
+      "id": "UPGRADE-EXACT-IDENTITY-SET-RESTORED",
+      "status": "passed"
+    }
+  ],
+  "complete": false,
+  "private_values_disclosed": false,
+  "original_identity_count": 52
+}

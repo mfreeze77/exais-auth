@@ -1,0 +1,180 @@
+/*
+ *    Copyright (c) 2020, VRAI Labs and/or its affiliates. All rights reserved.
+ *
+ *    This software is licensed under the Apache License, Version 2.0 (the
+ *    "License") as published by the Apache Software Foundation.
+ *
+ *    You may not use this file except in compliance with the License. You may
+ *    obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ *    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ *    License for the specific language governing permissions and limitations
+ *    under the License.
+ */
+
+package io.supertokens.webserver.api.session;
+
+import com.google.gson.JsonObject;
+import io.supertokens.ActiveUsers;
+import io.supertokens.Main;
+import io.supertokens.exceptions.AccessTokenPayloadError;
+import io.supertokens.exceptions.AccessTokenValidityOutOfRangeException;
+import io.supertokens.exceptions.TokenTheftDetectedException;
+import io.supertokens.exceptions.UnauthorisedException;
+import io.supertokens.jwt.exceptions.UnsupportedJWTSigningAlgorithmException;
+import io.supertokens.output.Logging;
+import io.supertokens.pluginInterface.RECIPE_ID;
+import io.supertokens.pluginInterface.STORAGE_TYPE;
+import io.supertokens.pluginInterface.Storage;
+import io.supertokens.pluginInterface.exceptions.StorageQueryException;
+import io.supertokens.pluginInterface.exceptions.StorageTransactionLogicException;
+import io.supertokens.pluginInterface.multitenancy.AppIdentifier;
+import io.supertokens.pluginInterface.multitenancy.TenantIdentifier;
+import io.supertokens.pluginInterface.multitenancy.exceptions.TenantOrAppNotFoundException;
+import io.supertokens.pluginInterface.useridmapping.UserIdMapping;
+import io.supertokens.session.Session;
+import io.supertokens.session.accessToken.AccessToken;
+import io.supertokens.session.info.SessionInformationHolder;
+import io.supertokens.storageLayer.StorageLayer;
+import io.supertokens.useridmapping.UserIdType;
+import io.supertokens.utils.SemVer;
+import io.supertokens.utils.Utils;
+import io.supertokens.webserver.InputParser;
+import io.supertokens.webserver.WebserverAPI;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+
+public class RefreshSessionAPI extends WebserverAPI {
+    private static final long serialVersionUID = 7142317017402226537L;
+
+    public RefreshSessionAPI(Main main) {
+        super(main, RECIPE_ID.SESSION.toString());
+    }
+
+    @Override
+    public String getPath() {
+        return "/recipe/session/refresh";
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        SemVer version = super.getVersionFromRequest(req);
+
+        // API is app specific, but session is updated based on tenantId obtained from the refreshToken
+        JsonObject input = InputParser.parseJsonObjectOrThrowError(req);
+        String refreshToken = InputParser.parseStringOrThrowError(input, "refreshToken", false);
+        String antiCsrfToken = InputParser.parseStringOrThrowError(input, "antiCsrfToken", true);
+        Boolean enableAntiCsrf = InputParser.parseBooleanOrThrowError(input, "enableAntiCsrf", false);
+        Boolean useDynamicSigningKey = version.greaterThanOrEqualTo(SemVer.v3_0)
+                ? InputParser.parseBooleanOrThrowError(input, "useDynamicSigningKey", version.lesserThan(SemVer.v5_0))
+                : null;
+        // Optional per-mint access token validity override (ms), CDI >= 5.6 only (PLAN-002 decision 11).
+        // Shorten-only; validated against the configured access_token_validity in Session.refreshSession.
+        Long accessTokenValidity = version.greaterThanOrEqualTo(SemVer.v5_6)
+                ? InputParser.parseLongOrThrowError(input, "accessTokenValidity", true)
+                : null;
+
+        assert enableAntiCsrf != null;
+        assert refreshToken != null;
+
+        TenantIdentifier tenantIdentifierForLogging = null;
+        try {
+            tenantIdentifierForLogging = getTenantIdentifier(req);
+        } catch (TenantOrAppNotFoundException e) {
+            throw new ServletException(e);
+        }
+
+        try {
+            AppIdentifier appIdentifier = this.getAppIdentifier(req);
+            AccessToken.VERSION accessTokenVersion = AccessToken.getAccessTokenVersionForCDI(version);
+
+            SessionInformationHolder sessionInfo = Session.refreshSession(appIdentifier, main,
+                    refreshToken, antiCsrfToken,
+                    enableAntiCsrf, accessTokenVersion,
+                    useDynamicSigningKey == null ? null : Boolean.FALSE.equals(useDynamicSigningKey), version,
+                    accessTokenValidity);
+            TenantIdentifier tenantIdentifier = new TenantIdentifier(appIdentifier.getConnectionUriDomain(),
+                    appIdentifier.getAppId(), sessionInfo.session.tenantId);
+            Storage storage = StorageLayer.getStorage(tenantIdentifier, main);
+
+            // Skip the userid_mapping lookup and the user_last_active upsert when the same
+            // session user_id was marked active recently. With default 1h access tokens and
+            // diverse user_ids this gate rarely fires — refreshes are typically further
+            // apart than the throttle window. Its real value is capping the blast radius
+            // of refresh loops, burst patterns (e.g. many tabs refreshing at once), and
+            // load tests that concentrate on a small user set; it is not expected to move
+            // the needle on steady-state per-request latency.
+            if (storage.getType() == STORAGE_TYPE.SQL
+                    && !ActiveUsers.wasRecentlyActive(appIdentifier, sessionInfo.session.userId)) {
+                try {
+                    UserIdMapping userIdMapping = io.supertokens.useridmapping.UserIdMapping.getUserIdMapping(
+                            appIdentifier, storage, sessionInfo.session.userId, UserIdType.ANY);
+                    if (userIdMapping != null) {
+                        ActiveUsers.updateLastActive(appIdentifier, main, userIdMapping.superTokensUserId);
+                    } else {
+                        ActiveUsers.updateLastActive(appIdentifier, main, sessionInfo.session.userId);
+                    }
+                    // Also mark by the session's user_id so the next refresh can short-circuit
+                    // the mapping lookup, not just the upsert.
+                    ActiveUsers.markRecentlyActive(appIdentifier, sessionInfo.session.userId);
+                } catch (StorageQueryException ignored) {
+                }
+            }
+
+            JsonObject result = sessionInfo.toJsonObject();
+
+            if (version.greaterThanOrEqualTo(SemVer.v2_21)) {
+                result.remove("idRefreshToken");
+            }
+
+            if (version.lesserThan(SemVer.v3_0)) {
+                result.get("session").getAsJsonObject().remove("tenantId");
+            }
+            if (version.lesserThan(SemVer.v4_0)) {
+                result.get("session").getAsJsonObject().remove("recipeUserId");
+            }
+            result.addProperty("status", "OK");
+            super.sendJsonResponse(200, result, resp);
+        } catch (StorageQueryException | StorageTransactionLogicException | TenantOrAppNotFoundException |
+                 UnsupportedJWTSigningAlgorithmException e) {
+            throw new ServletException(e);
+        } catch (AccessTokenValidityOutOfRangeException e) {
+            throw new ServletException(new BadRequestException(e.getMessage()));
+        } catch (AccessTokenPayloadError | UnauthorisedException e) {
+            Logging.debug(main, tenantIdentifierForLogging,
+                    Utils.exceptionStacktraceToString(e));
+            JsonObject reply = new JsonObject();
+            reply.addProperty("status", "UNAUTHORISED");
+            reply.addProperty("message", e.getMessage());
+            // CDI >= 5.6: a recent refresh-token reuse reported as UNAUTHORISED carries its subtype so
+            // consumers can route recent-reuse vs ordinary unauthorised. Null on every other unauthorised.
+            if (e instanceof UnauthorisedException && ((UnauthorisedException) e).reuseSubtype != null) {
+                reply.addProperty("recentTokenReuseSubtype", ((UnauthorisedException) e).reuseSubtype.name());
+            }
+            super.sendJsonResponse(200, reply, resp);
+        } catch (TokenTheftDetectedException e) {
+            Logging.debug(main, tenantIdentifierForLogging,
+                    Utils.exceptionStacktraceToString(e));
+            JsonObject reply = new JsonObject();
+            reply.addProperty("status", "TOKEN_THEFT_DETECTED");
+
+            JsonObject session = new JsonObject();
+            session.addProperty("handle", e.sessionHandle);
+            session.addProperty("userId", e.primaryUserId);
+            session.addProperty("recipeUserId", e.recipeUserId);
+            reply.add("session", session);
+            // CDI >= 5.6 refresh-time detection carries the reuse subtype (RECENT_PREV / ORPHANED_BRANCH /
+            // STALE_LINEAGE); null on legacy (CDI <= 5.4) theft so those responses stay byte-identical.
+            if (e.reuseSubtype != null) {
+                reply.addProperty("recentTokenReuseSubtype", e.reuseSubtype.name());
+            }
+
+            super.sendJsonResponse(200, reply, resp);
+        }
+    }
+}

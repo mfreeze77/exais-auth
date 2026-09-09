@@ -1,0 +1,69 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.12kB done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2
+#2 DONE 0.2s
+
+#3 [auth] library/gradle:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [auth] library/gradle:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.1s
+
+#6 [auth] library/gradle:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] library/gradle:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [1/9] FROM docker.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2
+#8 resolve docker.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2 0.0s done
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 62.92MB 4.7s done
+#9 DONE 4.8s
+
+#10 [2/9] RUN mkdir -p /opt/expertauth/logs /opt/expertauth/.started /run/expertauth && chown -R gradle:gradle /opt/expertauth
+#10 CACHED
+
+#11 [3/9] COPY --chown=gradle:gradle lib /opt/expertauth/lib
+#11 DONE 0.3s
+
+#12 [4/9] COPY --chown=gradle:gradle plugin /opt/expertauth/plugin
+#12 DONE 0.1s
+
+#13 [5/9] COPY --chown=gradle:gradle version.yaml /opt/expertauth/version.yaml
+#13 DONE 0.1s
+
+#14 [6/9] COPY --chown=gradle:gradle licenses /opt/expertauth/licenses
+#14 DONE 0.2s
+
+#15 [7/9] COPY --chown=root:root native /opt/expertauth/native
+#15 DONE 0.1s
+
+#16 [8/9] RUN mkdir -p /opt/expertauth/.native-tmp && chown gradle:gradle /opt/expertauth/.native-tmp && chmod 0700 /opt/expertauth/.native-tmp && chmod 0644 /opt/expertauth/native/*
+#16 DONE 0.1s
+
+#17 [9/9] WORKDIR /opt/expertauth
+#17 DONE 0.1s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 1.4s done
+#18 exporting manifest sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43 0.0s done
+#18 exporting config sha256:111c375b9920917989031ea5c526f4910dfffeeb535fc157855da2a8a0948bbf 0.0s done
+#18 naming to moby-dangling@sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43 done
+#18 unpacking to moby-dangling@sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43
+#18 unpacking to moby-dangling@sha256:e8c460664ac56573236447da65f4445481dd12b246c4bc4257e665aa4ce87b43 0.6s done
+#18 DONE 2.0s
+
+#19 resolving provenance for metadata file
+#19 DONE 0.0s

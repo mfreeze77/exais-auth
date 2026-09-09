@@ -1,0 +1,914 @@
+{
+  "schema": "expertauth-password-reset-lab-v1",
+  "started": "2026-09-09T12:46:43.525Z",
+  "finished": "2026-09-09T12:47:05.279Z",
+  "rows": [
+    {
+      "id": "PASSWORD-SESSION-MISSING-WRITER-FAILS-CLOSED",
+      "status": "passed",
+      "requirement": "SES-001",
+      "elapsed_ms": 936,
+      "live_http": 200,
+      "ready_http": 503,
+      "signin_http": 500,
+      "core_http": 503,
+      "no_auth_tokens_or_cookies": true,
+      "no_legacy_session_call": true,
+      "prior_session_preserved": true,
+      "no_failed_insert": true,
+      "healthy_writer_retry": true
+    },
+    {
+      "id": "PASSWORD-SESSION-EIGHT-DISTINCT-REQUEST-SCOPES",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 2937,
+      "distinct_users": 8,
+      "concurrent_signins": 8,
+      "all_subjects_matched": true
+    },
+    {
+      "id": "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 1164,
+      "legacy_token_rejected_without_consumption": true,
+      "explicit_reissue_succeeded": true,
+      "automatic_fallback": false
+    },
+    {
+      "id": "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 1063,
+      "database_reachable": true,
+      "readiness_http": 503,
+      "no_upstream_fallback": true,
+      "valid_token_preserved": true
+    },
+    {
+      "id": "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 732,
+      "old_online_and_refresh_denied": true,
+      "atomic_reset_revoke_qualified": false
+    },
+    {
+      "id": "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 737
+    },
+    {
+      "id": "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 986,
+      "consumers": 8,
+      "winners": 1,
+      "rejected_replays": 7
+    },
+    {
+      "id": "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 469
+    },
+    {
+      "id": "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 390,
+      "negative_http": 500,
+      "configured_cross_tenant_qualified": false
+    },
+    {
+      "id": "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 10,
+      "timing_enumeration_resistance_qualified": false
+    },
+    {
+      "id": "RESET-HTTP-007-CONFIGURED-EXPIRY",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 7702,
+      "configured_lifetime_ms": 5000,
+      "observed_wait_ms": 6749
+    },
+    {
+      "id": "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 452,
+      "durable_retry_queue_implemented": false
+    },
+    {
+      "id": "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 449,
+      "durable_retry_queue_implemented": false
+    },
+    {
+      "id": "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 439,
+      "durable_retry_queue_implemented": false
+    },
+    {
+      "id": "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 13
+    },
+    {
+      "id": "RESET-BROWSER-REAL-REACT-FLOW",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 3019,
+      "actual_browser_checks": 9
+    },
+    {
+      "id": "PASSWORD-SESSION-ACTUAL-CORE-WIRE",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 1,
+      "actual_session_requests": 38,
+      "legacy_session_requests": 0,
+      "request_or_token_bodies_recorded": false
+    },
+    {
+      "id": "RESET-OWNED-FIXTURE-CLEANUP",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 200,
+      "source_identity_count": 0,
+      "owned_fixture_count": 22,
+      "original_identity_set_restored": true
+    }
+  ],
+  "wire": [
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "missing-writer",
+      "path": "/health/live",
+      "http": 200,
+      "status": "alive"
+    },
+    {
+      "role": "missing-writer",
+      "path": "/health/ready",
+      "http": 503,
+      "status": "not-ready"
+    },
+    {
+      "role": "missing-writer",
+      "path": "/auth/signin",
+      "http": 500,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/session/refresh",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "unsupported",
+      "path": "/health/live",
+      "http": 200,
+      "status": "alive"
+    },
+    {
+      "role": "unsupported",
+      "path": "/health/ready",
+      "http": 503,
+      "status": "not-ready"
+    },
+    {
+      "role": "unsupported",
+      "path": "/auth/user/password/reset/token",
+      "http": 500,
+      "status": null
+    },
+    {
+      "role": "unsupported",
+      "path": "/auth/user/password/reset",
+      "http": 500,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/session/refresh",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/session/refresh",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "FIELD_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/session/refresh",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 200,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/api/session/online",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/session/refresh",
+      "http": 401,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/nonexistent-64d16338-69b5-4b3b-9ef2-f7069f9dfdec/user/password/reset",
+      "http": 500,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR"
+    },
+    {
+      "role": "expiry",
+      "path": "/auth/signin",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "wrong-auth",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "wrong-auth",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "untrusted",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "untrusted",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "outage",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "outage",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset/token",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "good",
+      "path": "/auth/user/password/reset",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "role": "disabled",
+      "path": "/auth/user/password/reset/token",
+      "http": 404,
+      "status": null
+    },
+    {
+      "role": "disabled",
+      "path": "/auth/user/password/reset",
+      "http": 404,
+      "status": null
+    },
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    }
+  ],
+  "passed": true,
+  "mode": "full-reference-lab",
+  "skipped": 0,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "live_provider_tested": false,
+  "independent_security_review": false,
+  "atomic_profile": true,
+  "limitations": [
+    "No configured cross-tenant proof",
+    "This HTTP probe does not inject transaction aborts or race ordering; see the separate exact-JAR Core proof. Other SDK and legacy session writers remain unqualified.",
+    "SMTP timing privacy and durable outbox remain unqualified",
+    "Browser HTTP is internal lab transport; SMTP and mailbox use verified TLS"
+  ]
+}
