@@ -49,7 +49,10 @@ qualifies exact owned-account/container cleanup. Full PWD-006, configured tenant
 isolation and durable delivery remain unqualified. The complete Node Dockerfile
 now builds offline and its installed image passes those reset checks. The
 [build report](docs/node-offline-build.md) records package correspondence,
-old-image retirement and the remaining fresh-bootstrap/distribution gaps.
+old-image retirement and the remaining fresh-stack/distribution gaps.
+[Locked archive acquisition](docs/node-package-bootstrap.md) now passes actual
+fresh registry and disconnected install/compile tests using one bounded cache;
+its temporary container is removed after verification.
 
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image

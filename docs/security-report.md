@@ -6,7 +6,15 @@ license-enforcement changes were performed.
 
 Material unresolved findings:
 
-- Updated Node image2c4ad0be07b8 passes the installed reset lab without app
+- The locked npm downloader now passes actual wrong-SRI response, concurrent
+  writer, corrupt/link/oversize/unknown-cache and wrong-origin rejection cases,
+  plus fresh registry and disconnected installation/compilation. Crash-safe
+  stale-lock/partial-file recovery and actual HTTP timeout/redirect/oversized or
+  truncated response faults remain unqualified. Deprecated/maintenance warnings
+  for three pinned transitive packages remain unresolved. No all-dependencies-
+  maintained, full distribution or independent-review claim follows. See
+  `docs/node-package-bootstrap.md`.
+- Updated Node image4c03d7306e1e passes the installed reset lab without app
   overlays. The complete offline build checks original archive bytes and source
   bindings before promotion. This closes the prior image-content evidence gap,
   not the reset transaction, foundation or complete distribution gates. New

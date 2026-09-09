@@ -1,0 +1,1 @@
+{"mountinfo":["801 777 0:139 / /work rw,nosuid,nodev,noexec,relatime - tmpfs tmpfs rw,size=196608k"],"mode":493,"sha256":"e1698a3d5c6c0798fee4fd3b5cc816651f460c63d390a7a26ea4beb0b1884100","execution":{"status":null,"error":"EACCES"}}

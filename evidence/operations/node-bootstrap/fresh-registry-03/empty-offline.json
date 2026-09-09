@@ -1,0 +1,39 @@
+{
+  "schema": "expertauth-npm-archive-acquisition-v1",
+  "passed": false,
+  "started": "2026-09-09T06:33:07.201Z",
+  "mode": "offline",
+  "network_requests": 0,
+  "downloaded_archives": 0,
+  "downloaded_bytes": 0,
+  "reused_archives": 0,
+  "cache_manifest_written": false,
+  "cache_lock_acquired": true,
+  "cache_lock_removed": true,
+  "errors": [
+    "ARCHIVE_MISSING_IN_OFFLINE_CACHE"
+  ],
+  "archives": [],
+  "limits": {
+    "packages": 512,
+    "archiveBytes": 33554432,
+    "cacheBytes": 134217728,
+    "requestMilliseconds": 15000,
+    "acquisitionMilliseconds": 180000
+  },
+  "foundation_passed": false,
+  "license_approval": false,
+  "native_platform_tests_passed": false,
+  "lock_sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+  "applicable_package_count": 143,
+  "excluded_package_count": 25,
+  "unique_archive_count": 141,
+  "cache_bytes_before": 0,
+  "cache_bytes_at_exclusive_lock": 37,
+  "active_archive": {
+    "lock_path": "node_modules/@esbuild/linux-x64",
+    "resolved": "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.28.2.tgz",
+    "integrity": "sha512-4xTZr1FUmSoQW4XIWmit3tzQrUTZM+N3P0XV8xROKYF50XfI7xeO90+1bZvNwxIufQ9hDQVRJH5YhgPVF8A/HQ=="
+  },
+  "finished": "2026-09-09T06:33:07.206Z"
+}

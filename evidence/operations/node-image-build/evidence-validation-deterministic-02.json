@@ -1,0 +1,559 @@
+{
+  "schema": "expertauth-node-build-evidence-integrity-v1",
+  "passed": true,
+  "started": "2026-09-09T06:46:48.898048+00:00",
+  "tool_sha256": "7ce9e3e56cc3a57e6702aa35636648edf0c7aaa56938e1ef6202987493e776bb",
+  "authentication_complete": false,
+  "independent_human_review": false,
+  "checks": [
+    {
+      "name": "current build input tools/build_node_runtime.py",
+      "passed": true
+    },
+    {
+      "name": "captured source binding tools/build_node_runtime.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/build_oss_runtime.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/build_oss_runtime.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/export_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/export_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tests/reuse/node_package_boundaries.mjs",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tests/reuse/node_package_boundaries.mjs",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/verify_node_runtime.mjs",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/verify_node_runtime.mjs",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tests/operations/password_reset_cleanup.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tests/operations/password_reset_cleanup.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "current build input tests/operations/password_reset_tls.py",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tests/operations/password_reset_tls.py",
+      "passed": true
+    },
+    {
+      "name": "current build input tests/browser/password-reset.mjs",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tests/browser/password-reset.mjs",
+      "passed": true
+    },
+    {
+      "name": "current build input tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "Git source binding tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "name": "captured source binding examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/.dockerignore",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/.dockerignore",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/package.json",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/package.json",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/public/index.html",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/public/index.html",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/public/app.js",
+      "passed": true
+    },
+    {
+      "name": "generated bundle binding",
+      "passed": true
+    },
+    {
+      "name": "current build input examples/node-react/test/email-delivery.test.js",
+      "passed": true
+    },
+    {
+      "name": "Git source binding examples/node-react/test/email-delivery.test.js",
+      "passed": true
+    },
+    {
+      "name": "build command log command-001.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-002.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-003.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-004.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-005.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-006.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-007.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-008.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-009.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-010.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-011.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-012.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-013.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-014.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-015.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-016.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-017.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-018.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-019.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-020.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-021.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-022.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-023.log",
+      "passed": true
+    },
+    {
+      "name": "build command log command-024.log",
+      "passed": true
+    },
+    {
+      "name": "child output stdout",
+      "passed": true
+    },
+    {
+      "name": "child output stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 1 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 1 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 2 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 2 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 3 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 3 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 4 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 4 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 5 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 5 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 6 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 6 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 7 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 7 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 8 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 8 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 9 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 9 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 10 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 10 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 11 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 11 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 12 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 12 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 13 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 13 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 14 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 14 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 15 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 15 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 16 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 16 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 17 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 17 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 18 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 18 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 19 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 19 stderr",
+      "passed": true
+    },
+    {
+      "name": "private reset command 20 stdout",
+      "passed": true
+    },
+    {
+      "name": "private reset command 20 stderr",
+      "passed": true
+    },
+    {
+      "name": "reset inputs match current bytes",
+      "passed": true
+    },
+    {
+      "name": "unchanged installed dependency_files",
+      "passed": true
+    },
+    {
+      "name": "unchanged installed dependency_directories",
+      "passed": true
+    },
+    {
+      "name": "canonical runtime inventory hash app_files",
+      "passed": true
+    },
+    {
+      "name": "canonical runtime inventory hash dependency_files",
+      "passed": true
+    },
+    {
+      "name": "canonical runtime inventory hash app_files",
+      "passed": true
+    },
+    {
+      "name": "canonical runtime inventory hash dependency_files",
+      "passed": true
+    },
+    {
+      "name": "original archive correspondence",
+      "passed": true,
+      "packages": 143,
+      "matched_members": 7629,
+      "separately_reported_mode_differences": 113
+    },
+    {
+      "name": "installed app source and bundle",
+      "passed": true
+    },
+    {
+      "name": "deterministic application file permissions",
+      "passed": true
+    },
+    {
+      "name": "actual recorded transport cases",
+      "passed": true,
+      "checks": 10
+    },
+    {
+      "name": "actual recorded cases probe-results.json",
+      "passed": true,
+      "rows": 13
+    },
+    {
+      "name": "actual recorded cases browser-results.json",
+      "passed": true,
+      "rows": 9
+    },
+    {
+      "name": "exact original fixture set restored",
+      "passed": true
+    },
+    {
+      "name": "normal installed-image run",
+      "passed": true
+    },
+    {
+      "name": "owned temporary container accounting",
+      "passed": true
+    },
+    {
+      "name": "build success with source/resource preservation",
+      "passed": true
+    },
+    {
+      "name": "foundation and licensing remain unqualified",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "private_values_disclosed": false,
+  "reports": {
+    "evidence/operations/node-image-build/deterministic-source-mode-02/report.json": "b1bb685e6b63571670488db3455e4be64c0a8ed3e6252380bdcbcab2066380c3",
+    "evidence/operations/password-reset/installed-deterministic-source-mode-02/report.json": "afc2f251a2d85d307a4fdb7ddfb41dc2ec6ba7ae59a59187b9396f4a78e43c00"
+  },
+  "finished": "2026-09-09T06:46:49.385290+00:00"
+}

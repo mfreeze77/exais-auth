@@ -1,0 +1,49 @@
+{
+  "timestamp_utc": "2026-09-09T06:51:22.743907+00:00",
+  "kind": "read-only-scoped-disk-inventory",
+  "paths": [
+    {
+      "path": ".cache/node-packages",
+      "files": 143,
+      "logical_file_bytes": 14891202
+    },
+    {
+      "path": ".cache/python-wheels",
+      "files": 49,
+      "logical_file_bytes": 20367857
+    },
+    {
+      "path": ".runtime/node-image-build",
+      "files": 0,
+      "logical_file_bytes": 0
+    },
+    {
+      "path": ".runtime/password-reset",
+      "files": 847,
+      "logical_file_bytes": 499334
+    },
+    {
+      "path": "examples/node-react/undefined",
+      "files": 95,
+      "logical_file_bytes": 277260
+    },
+    {
+      "path": "artifacts",
+      "files": 40,
+      "logical_file_bytes": 34505269
+    }
+  ],
+  "host_disk": {
+    "total": 2046749044736,
+    "used": 1747587407872,
+    "free": 299161636864
+  },
+  "task_hygiene_report": "evidence/operations/hygiene/verification-20260909T064650Z.json",
+  "retention_report": "evidence/operations/hygiene/checkpoint-retention-before-node-bootstrap.json",
+  "physical_host_bytes_freed": null,
+  "limits": [
+    "Logical file sizes and Docker image records are not physical Windows reclamation measurements.",
+    "Shared daemon resources were not pruned, restarted or compacted.",
+    "Known automatically rejected tiny scratch/cache deletions remain preserved; no alternative deletion attempted."
+  ]
+}

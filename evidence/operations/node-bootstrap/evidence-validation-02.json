@@ -1,0 +1,699 @@
+{
+  "passed": true,
+  "kind": "recorded-bootstrap-evidence-integrity",
+  "started": "2026-09-09T06:49:06.146861+00:00",
+  "tool_sha256": "5883f929d1e35ee69764f1517f0b169f967668a42fcb2e4fb0403fc5c49979f2",
+  "checks": [
+    {
+      "name": "executed source binding tools/run_node_bootstrap.py",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/run_node_bootstrap.py",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tools/fetch_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/fetch_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tools/export_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/export_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tools/verify_node_runtime.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/verify_node_runtime.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tests/reuse/node_bootstrap_probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tests/reuse/node_bootstrap_probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "name": "only disclosed historical Dockerfile directory fix",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/package.json",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/package.json",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/public/index.html",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged examples/node-react/public/index.html",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 1 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 1 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 2 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 2 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 3 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 3 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 4 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 4 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 5 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 5 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 6 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 6 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 7 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 7 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 8 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 8 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 9 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 9 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 10 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 10 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 11 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 11 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 12 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 12 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 13 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 13 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 14 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 14 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 15 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 15 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 16 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 16 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 17 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 17 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 18 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 18 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 19 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 19 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 20 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 20 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 21 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 21 stderr",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 22 stdout",
+      "passed": true
+    },
+    {
+      "name": "actual Docker command 22 stderr",
+      "passed": true
+    },
+    {
+      "name": "online actual cases",
+      "passed": true
+    },
+    {
+      "name": "online exact source pins",
+      "passed": true
+    },
+    {
+      "name": "online no wider acceptance claim",
+      "passed": true
+    },
+    {
+      "name": "offline actual cases",
+      "passed": true
+    },
+    {
+      "name": "offline exact source pins",
+      "passed": true
+    },
+    {
+      "name": "offline no wider acceptance claim",
+      "passed": true
+    },
+    {
+      "name": "actual install then compile",
+      "passed": true
+    },
+    {
+      "name": "successful offline command 0",
+      "passed": true
+    },
+    {
+      "name": "offline command 0 stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "offline command 0 stderr bytes",
+      "passed": true
+    },
+    {
+      "name": "successful offline command 1",
+      "passed": true
+    },
+    {
+      "name": "offline command 1 stdout bytes",
+      "passed": true
+    },
+    {
+      "name": "offline command 1 stderr bytes",
+      "passed": true
+    },
+    {
+      "name": "complete installed dependency tree unchanged",
+      "passed": true
+    },
+    {
+      "name": "explicit normalized app modes and unchanged bytes",
+      "passed": true
+    },
+    {
+      "name": "all original package members correspond",
+      "passed": true
+    },
+    {
+      "name": "offline phase disconnected and resources preserved",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "authentication_complete": false,
+  "independent_human_review": false,
+  "bound_files": {
+    "evidence/operations/node-bootstrap/fresh-registry-03/report.json": {
+      "bytes": 111408,
+      "sha256": "44e3eafdbf5b60c0f19f50c7304b207ef2b3b1a66afa2e5f79a2b5eec2acfa21"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tools/run_node_bootstrap.py": {
+      "bytes": 13202,
+      "sha256": "744582fbecbdfc2d42fd81a194d7cc473a4c9452ae3b19230a5be5a5193b4982"
+    },
+    "tools/run_node_bootstrap.py": {
+      "bytes": 13202,
+      "sha256": "744582fbecbdfc2d42fd81a194d7cc473a4c9452ae3b19230a5be5a5193b4982"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tools/fetch_node_packages.mjs": {
+      "bytes": 13865,
+      "sha256": "dceb192d6a9652190f26907e61a8ea721a0848180268edf177a3475112717714"
+    },
+    "tools/fetch_node_packages.mjs": {
+      "bytes": 13865,
+      "sha256": "dceb192d6a9652190f26907e61a8ea721a0848180268edf177a3475112717714"
+    },
+    "tools/export_node_packages.mjs": {
+      "bytes": 11166,
+      "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+    },
+    "tools/verify_node_runtime.mjs": {
+      "bytes": 22178,
+      "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tests/reuse/node_bootstrap_probe.mjs": {
+      "bytes": 12945,
+      "sha256": "05021ff5e8e4ac6edcbabf97c12a4f82f0720bf664c3667fd3c126d9e662f64c"
+    },
+    "tests/reuse/node_bootstrap_probe.mjs": {
+      "bytes": 12945,
+      "sha256": "05021ff5e8e4ac6edcbabf97c12a4f82f0720bf664c3667fd3c126d9e662f64c"
+    },
+    "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json": {
+      "bytes": 2498437,
+      "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/examples/node-react/Dockerfile": {
+      "bytes": 536,
+      "sha256": "43bfa854ec76a74871d22811af49197dd85ca64566d18c60e1e5d86b2f4ab06a"
+    },
+    "examples/node-react/Dockerfile": {
+      "bytes": 576,
+      "sha256": "dffaca66db7745635a13c580594fa255bef41627bd8654ad87c8d518d4282124"
+    },
+    "examples/node-react/package.json": {
+      "bytes": 540,
+      "sha256": "3d55c22be04d8f03ea08b38ad4349e7fe1d5ff9f9a73777c9ee36ac533af9a40"
+    },
+    "examples/node-react/package-lock.json": {
+      "bytes": 75156,
+      "sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+    },
+    "examples/node-react/server.js": {
+      "bytes": 7304,
+      "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+    },
+    "examples/node-react/email-delivery.js": {
+      "bytes": 5349,
+      "sha256": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca"
+    },
+    "examples/node-react/client.jsx": {
+      "bytes": 2649,
+      "sha256": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7"
+    },
+    "examples/node-react/build.mjs": {
+      "bytes": 199,
+      "sha256": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29"
+    },
+    "examples/node-react/public/index.html": {
+      "bytes": 1170,
+      "sha256": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-001.stdout": {
+      "bytes": 3835,
+      "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-001.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-002.stdout": {
+      "bytes": 19800,
+      "sha256": "83b5e1bc5882aca842ddaea16257f0a8190f88775d524ca6b50dcdc9d0cac025"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-002.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-003.stdout": {
+      "bytes": 12556,
+      "sha256": "3ecc367f9c9662f9b77ac20259d53225b753258ef5004a58522071e811fde7f5"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-003.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-004.stdout": {
+      "bytes": 1625,
+      "sha256": "3290a7071ba4b34dc47727bc01acb0714ca46ae143cfc2314584caa1a9b72369"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-004.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-005.stdout": {
+      "bytes": 96,
+      "sha256": "ef9fc07c9c9ddd8be4f0e9c5d1342ac4d396c5148084bbd721068b3512edfb03"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-005.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-006.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-006.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-007.stdout": {
+      "bytes": 65,
+      "sha256": "6e487a8ee37324e4a0e831487a032aeee3a1b097fa4dcbad958b20c3cfe9eadd"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-007.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-008.stdout": {
+      "bytes": 837,
+      "sha256": "af28f712daab647afc2a21b533f37df5c2cc5067d358426880bb80ee57ecca58"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-008.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-009.stdout": {
+      "bytes": 205,
+      "sha256": "c4d83a6380b09eb3c603fb169a3efe598c2dc875c3437a7edeb2deecb3314661"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-009.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-010.stdout": {
+      "bytes": 56,
+      "sha256": "618e07b4aedbe5ee56578c166faf6c303cf00de2eb878416c5afad9d3f6c3566"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-010.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-011.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-011.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-012.stdout": {
+      "bytes": 411,
+      "sha256": "9f6984f2ba8cc259cd9456d6cf7b17ee409f9d8b0ede585185117240a979dc44"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-012.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-013.stdout": {
+      "bytes": 57,
+      "sha256": "278f287422c58fb8180423e0ab9e1a9ed258cf7aaf9080dfafab82b3bd7b809e"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-013.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-014.stdout": {
+      "bytes": 411,
+      "sha256": "9f6984f2ba8cc259cd9456d6cf7b17ee409f9d8b0ede585185117240a979dc44"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-014.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-015.stdout": {
+      "bytes": 120,
+      "sha256": "9966906350526911fa86cdeca97469e9c1c85b100bbe79948b02ebc25f9cb2a0"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-015.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-016.stdout": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-016.stderr": {
+      "bytes": 112,
+      "sha256": "08d7158d0ecf9bbbc8bd8d2255f52e45cf59b29507c92287d21c8eb5d31673a5"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-017.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-017.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-018.stdout": {
+      "bytes": 3835,
+      "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-018.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-019.stdout": {
+      "bytes": 3835,
+      "sha256": "88f0bbc0a083f3f0a5fb652675e1e357453334213dfaa0d55a1f4f8b1ce5bc7b"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-019.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-020.stdout": {
+      "bytes": 19800,
+      "sha256": "069b030fcd6f6da8004d8fe7664a08c3edbeec79b53b3b96185cd84851ede079"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-020.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-021.stdout": {
+      "bytes": 12556,
+      "sha256": "3ecc367f9c9662f9b77ac20259d53225b753258ef5004a58522071e811fde7f5"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-021.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-022.stdout": {
+      "bytes": 1625,
+      "sha256": "3290a7071ba4b34dc47727bc01acb0714ca46ae143cfc2314584caa1a9b72369"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/command-022.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/online-probe.json": {
+      "bytes": 2028,
+      "sha256": "25674d2a592ef5a8000566b3f56ff3cbd1bcef1c1c1ff200941a53b55d48103c"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-probe.json": {
+      "bytes": 5332,
+      "sha256": "89609407175e0cd47079c9cdf6d022a56a56fd5054bc67bc6b772e98e20438c4"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-commands.json": {
+      "bytes": 867,
+      "sha256": "777d5e25b611ee1fc7df77aa8281c6d4e0468e2ea2c2da6ac333cdfe34245abb"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-command-0.stdout": {
+      "bytes": 26,
+      "sha256": "0110f1db6c61733c3dd4f87d609a2fb7726160aaee88d228cb088a05a5165114"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-command-0.stderr": {
+      "bytes": 348,
+      "sha256": "cd1ca2644e5e31afa94bf1024addb6483d5daebcab121c0612221d6fe9e9c349"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-command-1.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-command-1.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/fresh-runtime-report.json": {
+      "bytes": 2498437,
+      "sha256": "d5b5dc2b8b5e11c5c66e8a4a860c786b4ec94badf425deadca950ec34b134c31"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/concurrent-denied.json": {
+      "bytes": 922,
+      "sha256": "374c1cdc214822fefc488b99e29400bdfbe46eafd64423b48e6a64713e7f48b8"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/corrupt-cache.json": {
+      "bytes": 1245,
+      "sha256": "b0fb74708f926d46d3ff9699c38b491de9b4c1d792641fcc4550c7f7fdfd57f5"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/empty-offline.json": {
+      "bytes": 1255,
+      "sha256": "23d1e9cea89164ec2e27fe9e781a0f0211d44b47be1c838dcc659ade61390659"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/fresh-registry.json": {
+      "bytes": 103419,
+      "sha256": "9f820ae14037cfb718d21f6f7b50118f688458bb5783e214cb45d2c92c6d4f9d"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/linked-cache.json": {
+      "bytes": 898,
+      "sha256": "13d167013cd818fbee80cfddb104f5ddd51a543ae3555a8388cedf2fdd930688"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/offline-reuse.json": {
+      "bytes": 103284,
+      "sha256": "86ea7d78bbcb75596eafdcc33b2deeb81c49af227ab61c6940a8cd42a55cfa64"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/one-missing-resume.json": {
+      "bytes": 103287,
+      "sha256": "53cd213652fb401b85a12890860a61bbff8128c66ade5ac1bc79e1da513283a6"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/oversize-cache.json": {
+      "bytes": 897,
+      "sha256": "e7b67aab6fc42b25de81c9f70a11cbd04613538a43bb788f50739204e38d2b68"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/unapproved-origin.json": {
+      "bytes": 718,
+      "sha256": "8ff55e23ae61bf5aa4577b7d42ca2de79e78f47f0d021f0a52f048cf3dc2443b"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/unknown-cache.json": {
+      "bytes": 896,
+      "sha256": "327bce6daded4911ccc39360edffccde5d1fcb3fb70d0d44efff8b0a41b6e5ef"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/wrong-integrity.json": {
+      "bytes": 1222,
+      "sha256": "aac12de58851e526fe45b134409cba3afd8a4703ad0c04d7bdbba17de3a95816"
+    }
+  },
+  "historical_dockerfile_difference": "Added RUN --network=none mkdir -m 0755 public; current image separately qualified",
+  "finished": "2026-09-09T06:49:06.379651+00:00"
+}

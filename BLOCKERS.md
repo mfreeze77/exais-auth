@@ -50,9 +50,14 @@
   behavior remains unqualified. Password commit and session revocation are
   separate transactions with a crash gap; known/unknown SMTP timing differs.
   Durable delivery outbox/retries, policy, bounce handling and password-change
-  notifications remain absent. Updated Node image2c4ad0be07b8 passes a complete
-  offline build and installed regressions. Fresh stack/cache bootstrap remains
-  unqualified; the orchestration requires the retained private lab and image.
+  notifications remain absent. Updated Node image4c03d7306e1e passes a complete
+  offline build and installed regressions. Fresh archive acquisition and a disconnected offline install/compile now pass;
+  full fresh-stack bootstrap remains unqualified because image orchestration
+  requires the retained private lab and previous image. Cache crash/stale-lock
+  recovery and actual timeout/redirect/oversize-response faults remain untested.
+  Actual npm output flags scmp2.1.0, @simplewebauthn/types12.0.0 and crypto-js4.2.0
+  maintenance/deprecation issues; a compatible maintained update is unresolved.
+  See `docs/node-package-bootstrap.md`.
   Actual historical worker-crash cleanup passes, but new main-deadline expiry,
   fallback timeout, Docker daemon outage and image promotion/rollback faults
   remain untested. See `docs/password-reset.md` and `docs/node-offline-build.md`.

@@ -49,7 +49,7 @@ retires all 6 temporary containers. Its normal `passed` remains false;
 Fallback timeouts and Docker daemon failures were not injected.
 
 The complete updated image was subsequently built offline and tested in
-`evidence/operations/password-reset/installed-offline-build-02`. It passes the
+`evidence/operations/password-reset/installed-deterministic-source-mode-02`. It passes the
 same10 transport/11 HTTP/SMTP/9 browser checks with **no application source or
 bundle mounts**, again retiring12 containers and11 identities and preserving
 the original52. This also verifies the55 delivery unit checks inside the image.
@@ -81,9 +81,11 @@ The compiler runs offline inside the existing immutable Node image, checks its
 installed lock and esbuild version, and overwrites only the generated client
 bundle. `reset-client-03` produced the bundle tested in run-16, which used
 read-only source/bundle mounts. `promoted-node-01` reproduced the same589,321-byte
-bundle using current image2c4ad0be07b8. That image contains the updated application
-and passes the installed-image lab. A fresh extraction/stack/cache bootstrap
-has not been qualified. The image builder command and precise prerequisites
+bundle using the earlier image2c4ad0be07b8. The current image4c03d7306e1e
+contains the same application bytes with deterministic0644 file permissions and
+passes the installed-image lab. Fresh archive acquisition and disconnected
+installation/compilation now pass; full fresh extraction/stack bootstrap remains
+unqualified. See `docs/node-package-bootstrap.md`. The image builder command and precise prerequisites
 are documented in `docs/node-offline-build.md`.
 Private fixture credentials and raw logs stay under ignored `.runtime/`.
 

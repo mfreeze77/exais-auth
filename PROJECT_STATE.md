@@ -11,8 +11,21 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- Fresh npm archive acquisition now passes 11 actual registry/concurrency/cache
+  and disconnected install/compile checks. One temporary container retired; no
+  image, volume, network or extra host cache was retained. The single archive
+  cache remains 14,891,202 total bytes. Current Node image `4c03d7306e1e` fixes
+  deterministic application/directory permissions, passes 55 unit and 30
+  installed reset/SMTP/browser checks, and matches 7,629 original archive members.
+  All 16 build/reset containers retired; the previous image `2c4ad0be07b8` was
+  removed after promotion, with original 52 identities and persistent processes
+  preserved. Hygiene `verification-20260909T064650Z.json` passes 10 checks: two
+  retained containers, six current tags and no dangling project-labeled images.
+  Read `docs/node-package-bootstrap.md` for exact evidence, maintained-dependency
+  warnings and unqualified cache-crash/HTTP-fault/full-stack cases. No requirement
+  or API status was promoted.
 - The complete Node Dockerfile builds with networking disabled and a single
-  14,580,488-byte archive cache. Current image `2c4ad0be07b8` has all8 application
+  14,580,488-byte archive cache. Earlier image `2c4ad0be07b8` has all8 application
   files verified and7,629 original archive members matched across143 packages.
   Its installed reset lab passes10 transport,11 HTTP/SMTP and9 browser checks;
   55 delivery unit checks and8 archive-parser boundary checks pass separately.
@@ -22,7 +35,7 @@ Actual code and evidence:
   Hygiene `verification-20260909T055142Z.json` passes10 checks:2 containers,
   6 current tags, no dangling project-labeled images. Nodemailer9.1.1 original
   tarball correspondence is now established. Read `docs/node-offline-build.md`:
-  native/base-image licensing, fresh bootstrap, lifecycle faults and full
+  native/base-image licensing, full fresh-stack deployment, lifecycle faults and full
   authentication acceptance remain open; no requirement status was promoted.
 - Node/React password reset now uses real authenticated TLS SMTP and the engine's
   one-time token/password APIs. Combined run-16 passes10 transport,11 HTTP/SMTP
@@ -48,7 +61,7 @@ Actual code and evidence:
   Three unused legacy Python build/fixture image records were retired by exact
   ID with no force/parent prune. No dangling project-labeled image remains;
   persistent containers, shared parents, tags, networks and volumes are preserved.
-  The current10-check hygiene report is `verification-20260909T032659Z.json`.
+  That earlier 10-check hygiene report is `verification-20260909T032659Z.json`.
 - Python's full Dockerfile now builds offline through the existing BuildKit
   builder from49 hash-pinned wheels, retaining one20,367,857-byte cache. New image
   `5bffadb83aa3` passes3,349 wheel-file comparisons,63 notice checks,418 immutable
@@ -202,8 +215,8 @@ container OS review and independent distribution approval remain open. Four nati
 bundles need further work: scrypt, Argon2, JNA and SQLite JDBC. See
 `docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
 
-Editable ledger currently maps21 requirements to partial implementation,10 to blockers,
-7 to failed candidate checks and227 to planned work. All205 API rows remain blocked
+Editable ledger currently maps23 requirements to partial implementation,10 to blockers,
+7 to failed candidate checks and225 to planned work. All205 API rows remain blocked
 for complete contract/runtime qualification. These are statuses, not a completion rate.
 
 Read `BLOCKERS.md`, `docs/adr/001-foundation.md`, and the current evidence before

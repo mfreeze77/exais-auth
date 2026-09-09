@@ -1,0 +1,54 @@
+{
+  "schema": "expertauth-node-bootstrap-probe-v1",
+  "stage": "online",
+  "passed": true,
+  "started": "2026-09-09T06:23:28.066Z",
+  "rows": [
+    {
+      "id": "NPM-BOOTSTRAP-FRESH-REGISTRY-AND-EXCLUSIVE-LOCK",
+      "status": "passed",
+      "elapsed_ms": 7189,
+      "detail": {
+        "actual_requests": 141,
+        "downloaded_bytes": 14580488,
+        "packages": 143,
+        "concurrent_requests": 0,
+        "concurrent_rejection": "PACKAGE_CACHE_BUSY"
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-RESUME-ONE-MISSING-ARCHIVE",
+      "status": "passed",
+      "elapsed_ms": 215,
+      "detail": {
+        "fetched_archive": "_cacache/content-v2/sha512/86/fa/6823a928ae124c9de8f6f3975283a9eed7e7babb1b3bcc6dc16009b96f2a83b2024d5b0c7333acfa8998808104784c9df42660533b0a99530dd69721f701",
+        "fetched_bytes": 1620,
+        "actual_requests": 1,
+        "all_cache_bytes_restored": true
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-ACTUAL-RESPONSE-WRONG-INTEGRITY",
+      "status": "passed",
+      "elapsed_ms": 157,
+      "detail": {
+        "real_requests": 1,
+        "persisted_archives": 0,
+        "rejection": "ARCHIVE_HASH_MISMATCH"
+      }
+    }
+  ],
+  "errors": [],
+  "skipped": 0,
+  "foundation_passed": false,
+  "fresh_stack_deployment_qualified": false,
+  "license_approval": false,
+  "source_sha256": {
+    "tools/fetch_node_packages.mjs": "b8a7567c7cc57a2e7163fa3f064e62f254d34f43e834d6935ea6d50680664b43",
+    "tools/export_node_packages.mjs": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175",
+    "tools/verify_node_runtime.mjs": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79",
+    "tests/reuse/node_bootstrap_probe.mjs": "3ebebf1a1f3a7071afc5dc20e64e4b343e1cee85cc3e18ac20cd4de21e61144e",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "finished": "2026-09-09T06:23:35.633Z"
+}

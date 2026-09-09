@@ -15,12 +15,18 @@ The cleanup-fault proof deliberately exits73, then removes one owned identity
 through Core and all6 containers. Original52 identities are preserved. Product
 source hashes match the combined run; its older runner/worker snapshots are
 retained because the later cleanup-fault changes were tested separately.
-The complete Node Dockerfile now builds offline and installed image2c4ad0be07b8
+The complete Node Dockerfile now builds offline and installed image4c03d7306e1e
 passes those reset checks without application source/bundle mounts. All143
 packages match original archive contents; all8 application files match current
-source. The prior image and its6 legacy parents are retired. Read
+source with explicit0644 modes and a0755 public directory. Image2c4ad0be07b8
+was retired after the new installed-image checks and cleanup. Read
 `docs/node-offline-build.md` before changing this build. Its one14.58MB cache is
-retained; fresh cache/stack bootstrap and lifecycle fault branches remain open.
+retained. Fresh locked registry acquisition and disconnected install/compile
+now pass11 checks; see `docs/node-package-bootstrap.md`. Use the offline cache
+check normally, and explicit `--mode online` only to acquire missing archives.
+Full fresh-stack bootstrap, cache-crash recovery, HTTP faults and lifecycle fault
+branches remain open. Actual deprecated/unmaintained package warnings are
+preserved; source-byte correspondence does not prove maintenance.
 Use the cached compiler/source-mounted lab for app-only changes and the full
 image builder only when image content changes. Do not repeat unchanged passes
 or retry host npm networking. No foundation/dependency gate is waived.

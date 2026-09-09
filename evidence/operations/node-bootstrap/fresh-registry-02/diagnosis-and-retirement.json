@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-09-09T06:30:50.105783+00:00",
+  "historical_report_sha256": "753cfea0f1cf1a085bf9384635d849f6541b90ed9564cf0c5c311cbb9b9e6fbc",
+  "dependency_inventories_identical": true,
+  "fresh_runtime_original_member_audit_passed": true,
+  "app_mode_differences": [
+    {
+      "path": "build.mjs",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o777",
+      "file_bytes_identical": true
+    },
+    {
+      "path": "client.jsx",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o777",
+      "file_bytes_identical": true
+    },
+    {
+      "path": "email-delivery.js",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o777",
+      "file_bytes_identical": true
+    },
+    {
+      "path": "package-lock.json",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o644",
+      "file_bytes_identical": true
+    },
+    {
+      "path": "package.json",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o777",
+      "file_bytes_identical": true
+    },
+    {
+      "path": "public/index.html",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o777",
+      "file_bytes_identical": true
+    },
+    {
+      "path": "server.js",
+      "prior_mode": "0o755",
+      "fresh_mode": "0o777",
+      "file_bytes_identical": true
+    }
+  ],
+  "exact_cid": "6bb3ab18193774fd10f61218c8ebbcd0723142986d28eb88f209d4af6562d93e",
+  "verification_argv": [
+    "docker",
+    "ps",
+    "-aq",
+    "--no-trunc",
+    "--filter",
+    "id=6bb3ab18193774fd10f61218c8ebbcd0723142986d28eb88f209d4af6562d93e"
+  ],
+  "verification_exit_code": 0,
+  "container_absent": true,
+  "no_cleanup_mutation_needed": true,
+  "historical_run_stays_failed": true,
+  "cause": "Mode-inclusive app inventory differed after copying from Windows bind mounts; cleanup then raced successful Docker --rm and explicit rm observed No such container."
+}

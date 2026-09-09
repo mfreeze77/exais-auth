@@ -1,0 +1,52 @@
+{
+  "argv": [
+    "C:\\Program Files\\Docker\\cli-plugins\\docker-buildx.exe",
+    "build",
+    "--builder",
+    "default",
+    "--pull=false",
+    "--network=none",
+    "--resource",
+    "memory=512m",
+    "--resource",
+    "cpu-quota=200000",
+    "--progress=plain",
+    "--provenance=false",
+    "--file",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\node-image-build\\copy-mode-diagnosis-01\\Dockerfile",
+    "--output",
+    "type=local,dest=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\node-image-build\\copy-mode-diagnosis-01\\result",
+    "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\examples\\node-react"
+  ],
+  "exit_code": 0,
+  "images_unchanged": false,
+  "containers_created": 0,
+  "images_exported": 0,
+  "output_kind": "two small JSON files; normal bounded BuildKit cache",
+  "sources": {
+    "examples/node-react/public/index.html": "ef252042b1eecec7c59b07ddffa3eabaae9060c0076aeceb101ad3b7f9ae228a",
+    "evidence\\operations\\node-image-build\\copy-mode-diagnosis-01\\Dockerfile": "545f04caf9d5b039fd97f58e12d72d9caa54ea5fe95475728eed531f9b735783"
+  },
+  "files": {
+    "build.stderr": {
+      "bytes": 3075,
+      "sha256": "e0fb602dd0e2e670e7dfe7d14af42bb5b5fd03f71db3061550fdee4f76852e81"
+    },
+    "build.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Dockerfile": {
+      "bytes": 1432,
+      "sha256": "545f04caf9d5b039fd97f58e12d72d9caa54ea5fe95475728eed531f9b735783"
+    },
+    "result\\corrected.json": {
+      "bytes": 58,
+      "sha256": "4824a29147c7d45d8e8f8576cd793c5b2a3ddc9b4fc8c487c4c16314f63bf327"
+    },
+    "result\\original.json": {
+      "bytes": 76,
+      "sha256": "3f7e0872abd41a3a15b08657fa88794302984365d55d6832c0989392d2d3e8b4"
+    }
+  }
+}

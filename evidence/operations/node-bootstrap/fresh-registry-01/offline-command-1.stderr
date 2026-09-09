@@ -1,0 +1,14 @@
+/work/app/node_modules/esbuild/lib/main.js:1234
+      if (error) return callback(new Error(error), null);
+                                 ^
+
+Error: The service was stopped: spawn /work/app/node_modules/@esbuild/linux-x64/bin/esbuild EACCES
+    at /work/app/node_modules/esbuild/lib/main.js:1234:34
+    at responseCallbacks.<computed> (/work/app/node_modules/esbuild/lib/main.js:886:9)
+    at ChildProcess.afterClose (/work/app/node_modules/esbuild/lib/main.js:877:28)
+    at ChildProcess.emit (node:events:519:28)
+    at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+    at onErrorNT (node:internal/child_process:483:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+Node.js v22.23.2

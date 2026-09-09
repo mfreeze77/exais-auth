@@ -1,0 +1,82 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 575B done
+#1 DONE 0.0s
+
+#2 [context node_packages] load .dockerignore
+#2 transferring node_packages: 2B done
+#2 DONE 0.0s
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [auth] library/node:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+#5 DONE 0.2s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 100B done
+#6 DONE 0.0s
+
+#7 [context node_packages] load from client
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 DONE 0.0s
+
+#9 [auth] library/node:pull token for registry-1.docker.io
+#9 DONE 0.0s
+
+#10 [auth] library/node:pull token for registry-1.docker.io
+#10 DONE 0.0s
+
+#11 [stage-0 1/7] FROM docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+#11 resolve docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436 0.0s done
+#11 DONE 0.1s
+
+#12 [stage-0 2/7] WORKDIR /app
+#12 CACHED
+
+#8 [internal] load build context
+#8 transferring context: 260B done
+#8 DONE 0.0s
+
+#13 [stage-0 3/7] COPY --chmod=0644 package.json package-lock.json ./
+#13 DONE 0.1s
+
+#7 [context node_packages] load from client
+#7 transferring node_packages: 14.93MB 1.0s done
+#7 DONE 1.1s
+
+#14 [stage-0 4/7] RUN --network=none --mount=type=bind,from=node_packages,target=/npm-cache,rw     npm ci --offline --cache=/npm-cache --ignore-scripts --no-audit --no-fund
+#14 1.239 npm warn deprecated scmp@2.1.0: Just use Node.js's crypto.timingSafeEqual()
+#14 1.280 npm warn deprecated @simplewebauthn/types@12.0.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+#14 1.348 npm warn deprecated crypto-js@4.2.0: Active development of CryptoJS has been discontinued. This library is no longer maintained.
+#14 2.831 
+#14 2.831 added 143 packages in 3s
+#14 DONE 3.0s
+
+#15 [stage-0 5/7] COPY --chmod=0644 server.js email-delivery.js client.jsx build.mjs ./
+#15 DONE 0.1s
+
+#16 [stage-0 6/7] COPY --chmod=0644 public/index.html ./public/index.html
+#16 DONE 0.1s
+
+#17 [stage-0 7/7] RUN --network=none node build.mjs
+#17 DONE 0.2s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 1.9s done
+#18 exporting manifest sha256:b5f9dc32a0bf51f4796067a1a42dcdad029bf1fe74a97522568c278b890dc46a 0.0s done
+#18 exporting config sha256:4d6152cb0805797577dbe00faa309c69a9f50601ea740a120bd730d3adc44092 0.0s done
+#18 naming to moby-dangling@sha256:b5f9dc32a0bf51f4796067a1a42dcdad029bf1fe74a97522568c278b890dc46a done
+#18 unpacking to moby-dangling@sha256:b5f9dc32a0bf51f4796067a1a42dcdad029bf1fe74a97522568c278b890dc46a
+#18 unpacking to moby-dangling@sha256:b5f9dc32a0bf51f4796067a1a42dcdad029bf1fe74a97522568c278b890dc46a 0.9s done
+#18 DONE 2.9s
+
+#19 resolving provenance for metadata file
+#19 DONE 0.0s

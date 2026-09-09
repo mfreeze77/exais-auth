@@ -1,0 +1,63 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.47kB done
+#1 DONE 0.0s
+
+#2 [auth] library/node:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+#4 DONE 0.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 100B done
+#5 DONE 0.0s
+
+#6 [auth] library/node:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] library/node:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [corrected 1/5] FROM docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+#8 resolve docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436 0.0s done
+#8 DONE 0.0s
+
+#9 [corrected 2/5] WORKDIR /app
+#9 CACHED
+
+#10 [internal] load build context
+#10 transferring context: 65B done
+#10 DONE 0.0s
+
+#11 [corrected 3/5] RUN --network=none mkdir -m 0755 public
+#11 DONE 0.1s
+
+#12 [original 3/4] COPY --chmod=0644 public/index.html ./public/index.html
+#12 DONE 0.1s
+
+#13 [original 4/4] RUN --network=none node -e "const fs=require('node:fs'); const r={directory_mode:fs.statSync('/app/public').mode&511,file_mode:fs.statSync('/app/public/index.html').mode&511}; process.setgid(1000);process.setuid(1000);try{fs.readFileSync('/app/public/index.html');r.nonroot_read=true;}catch(e){r.nonroot_read=false;r.error=e.code;} fs.writeFileSync('/tmp/original.json',JSON.stringify(r));if(r.directory_mode!==420||r.nonroot_read||r.error!=='EACCES')process.exit(1);"
+#13 ...
+
+#14 [corrected 4/5] COPY --chmod=0644 public/index.html ./public/index.html
+#14 DONE 0.1s
+
+#15 [corrected 5/5] RUN --network=none node -e "const fs=require('node:fs'); const r={directory_mode:fs.statSync('/app/public').mode&511,file_mode:fs.statSync('/app/public/index.html').mode&511}; process.setgid(1000);process.setuid(1000);try{fs.readFileSync('/app/public/index.html');r.nonroot_read=true;}catch(e){r.nonroot_read=false;r.error=e.code;} fs.writeFileSync('/tmp/corrected.json',JSON.stringify(r));if(r.directory_mode!==493||r.file_mode!==420||!r.nonroot_read)process.exit(1);"
+#15 DONE 0.2s
+
+#13 [original 4/4] RUN --network=none node -e "const fs=require('node:fs'); const r={directory_mode:fs.statSync('/app/public').mode&511,file_mode:fs.statSync('/app/public/index.html').mode&511}; process.setgid(1000);process.setuid(1000);try{fs.readFileSync('/app/public/index.html');r.nonroot_read=true;}catch(e){r.nonroot_read=false;r.error=e.code;} fs.writeFileSync('/tmp/original.json',JSON.stringify(r));if(r.directory_mode!==420||r.nonroot_read||r.error!=='EACCES')process.exit(1);"
+#13 DONE 0.4s
+
+#16 [stage-2 1/2] COPY --from=original /tmp/original.json /original.json
+#16 DONE 0.1s
+
+#17 [stage-2 2/2] COPY --from=corrected /tmp/corrected.json /corrected.json
+#17 DONE 0.1s
+
+#18 exporting to client directory
+#18 copying files 221B 0.0s done
+#18 DONE 0.0s

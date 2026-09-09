@@ -1,0 +1,98 @@
+{
+  "schema": "expertauth-node-bootstrap-probe-v1",
+  "stage": "offline",
+  "passed": false,
+  "started": "2026-09-09T06:26:57.410Z",
+  "rows": [
+    {
+      "id": "NPM-BOOTSTRAP-OFFLINE-CACHE-REUSE",
+      "status": "passed",
+      "elapsed_ms": 97,
+      "detail": {
+        "archives": 141,
+        "network_requests": 0,
+        "all_cache_bytes_unchanged": true
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-EMPTY-OFFLINE-REJECTION",
+      "status": "passed",
+      "elapsed_ms": 9,
+      "detail": {
+        "rejection": "ARCHIVE_MISSING_IN_OFFLINE_CACHE",
+        "requests": 0,
+        "cache_lock_removed": true
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-CORRUPT-CACHE-PRESERVED",
+      "status": "passed",
+      "elapsed_ms": 12,
+      "detail": {
+        "rejection": "ARCHIVE_HASH_MISMATCH",
+        "requests": 0,
+        "cache_lock_removed": true
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-LINK-REJECTION",
+      "status": "passed",
+      "elapsed_ms": 10,
+      "detail": {
+        "rejection": "LINK_IN_PACKAGE_CACHE",
+        "requests": 0,
+        "cache_lock_removed": false
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-OVERSIZE-CACHE-REJECTION",
+      "status": "passed",
+      "elapsed_ms": 8,
+      "detail": {
+        "rejection": "CACHE_FILE_TOO_LARGE",
+        "requests": 0,
+        "cache_lock_removed": false
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-UNKNOWN-ENTRY-PRESERVED",
+      "status": "passed",
+      "elapsed_ms": 7,
+      "detail": {
+        "rejection": "UNKNOWN_CACHE_ENTRY",
+        "requests": 0,
+        "cache_lock_removed": false
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-UNAPPROVED-ORIGIN-REJECTION",
+      "status": "passed",
+      "elapsed_ms": 8,
+      "detail": {
+        "rejection": "UNAPPROVED_ARCHIVE_ORIGIN",
+        "requests": 0,
+        "cache_lock_removed": false
+      }
+    },
+    {
+      "id": "NPM-BOOTSTRAP-FRESH-OFFLINE-INSTALL-AND-COMPILE",
+      "status": "failed",
+      "error": "FRESH_INSTALLED_BYTES_DIFFER"
+    }
+  ],
+  "errors": [
+    "FRESH_INSTALLED_BYTES_DIFFER"
+  ],
+  "skipped": 0,
+  "foundation_passed": false,
+  "fresh_stack_deployment_qualified": false,
+  "license_approval": false,
+  "source_sha256": {
+    "tools/fetch_node_packages.mjs": "232c8150c422127ba8f8ba36616743eb36ef8d1135ee858017768db1d2a3ece4",
+    "tools/export_node_packages.mjs": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175",
+    "tools/verify_node_runtime.mjs": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79",
+    "tests/reuse/node_bootstrap_probe.mjs": "3ebebf1a1f3a7071afc5dc20e64e4b343e1cee85cc3e18ac20cd4de21e61144e",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "finished": "2026-09-09T06:27:00.568Z"
+}

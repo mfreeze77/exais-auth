@@ -9,12 +9,10 @@ from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
+import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-BUILD = ROOT / 'evidence/operations/node-image-build/offline-build-02'
-RESET = ROOT / 'evidence/operations/password-reset/installed-offline-build-02'
-PRIVATE = ROOT / '.runtime/password-reset/installed-offline-build-02'
 
 
 def digest(body):
@@ -37,7 +35,12 @@ def need(value, message):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', required=True)
+    parser.add_argument('--build-name', required=True)
     args = parser.parse_args()
+    need(re.fullmatch('[A-Za-z0-9_-]{1,54}', args.build_name), 'Invalid build name')
+    build_directory = ROOT / 'evidence/operations/node-image-build' / args.build_name
+    reset_directory = ROOT / 'evidence/operations/password-reset' / ('installed-' + args.build_name)
+    private_directory = ROOT / '.runtime/password-reset' / ('installed-' + args.build_name)
     destination = (ROOT / args.output).resolve()
     need(destination.is_relative_to((ROOT / 'evidence').resolve()) and not destination.exists(), 'Fresh evidence output required')
     result = {'schema': 'expertauth-node-build-evidence-integrity-v1', 'passed': False,
@@ -50,8 +53,8 @@ def main():
         need(value, name)
 
     try:
-        build, reset = read(BUILD / 'report.json'), read(RESET / 'report.json')
-        result['reports'] = {p.relative_to(ROOT).as_posix(): sha(p) for p in [BUILD / 'report.json', RESET / 'report.json']}
+        build, reset = read(build_directory / 'report.json'), read(reset_directory / 'report.json')
+        result['reports'] = {p.relative_to(ROOT).as_posix(): sha(p) for p in [build_directory / 'report.json', reset_directory / 'report.json']}
         for name, expected in build['input_sha256'].items():
             check('current build input ' + name, sha(ROOT / name) == expected)
             binding = build['source_bindings'][name]
@@ -63,16 +66,16 @@ def main():
             else:
                 check('generated bundle binding', name == 'examples/node-react/public/app.js' and binding['sha256'] == expected)
         for row in build['commands']:
-            check('build command log ' + row['log'], sha(BUILD / row['log']) == row['sha256'])
+            check('build command log ' + row['log'], sha(build_directory / row['log']) == row['sha256'])
         for stream in ('stdout', 'stderr'):
             row = build['reset_child'][stream]
-            check('child output ' + stream, sha(BUILD / row['path']) == row['sha256'])
+            check('child output ' + stream, sha(build_directory / row['path']) == row['sha256'])
         for index, row in enumerate(reset['commands'], 1):
             for stream in ('stdout', 'stderr'):
-                path = PRIVATE / f'command-{index:03d}.{stream}'
+                path = private_directory / f'command-{index:03d}.{stream}'
                 check(f'private reset command {index} {stream}', sha(path) == row[stream]['sha256'] and path.stat().st_size == row[stream]['bytes'])
         check('reset inputs match current bytes', all(sha(ROOT / name) == value for name, value in reset['inputs'].items()))
-        previous, candidate = (read(BUILD / kind / 'runtime-report.json') for kind in ('previous-runtime', 'candidate-runtime'))
+        previous, candidate = (read(build_directory / kind / 'runtime-report.json') for kind in ('previous-runtime', 'candidate-runtime'))
         for key in ('dependency_files', 'dependency_directories'):
             check('unchanged installed ' + key, candidate[key] == previous[key])
         for report in (previous, candidate):
@@ -85,13 +88,16 @@ def main():
               packages=len(candidate['packages']), matched_members=7629, separately_reported_mode_differences=candidate['tar_correspondence']['mode_differences'])
         check('installed app source and bundle', len(candidate['app_files']) == 8 and all(
               row['type'] == 'file' and sha(ROOT / 'examples/node-react' / row['path']) == row['sha256'] for row in candidate['app_files']))
-        transport = read(RESET / 'tls-results.json')
+        if build.get('installed_app_file_mode') is not None:
+            check('deterministic application file permissions', build['installed_app_file_mode'] == '0644' and
+                  all(row['mode'] == 0o644 for row in candidate['app_files']))
+        transport = read(reset_directory / 'tls-results.json')
         check('actual recorded transport cases', transport['passed'] and len(transport['checks']) == 10 and
               all(row['passed'] is True for row in transport['checks']), checks=10)
         for filename in ('probe-results.json', 'browser-results.json'):
-            report = read(RESET / filename)
+            report = read(reset_directory / filename)
             check('actual recorded cases ' + filename, bool(report['rows']) and all(row['status'] == 'passed' for row in report['rows']), rows=len(report['rows']))
-        cleanup = read(RESET / 'probe-results.json')['rows'][-1]
+        cleanup = read(reset_directory / 'probe-results.json')['rows'][-1]
         check('exact original fixture set restored', cleanup['original_identity_set_restored'] and cleanup['source_identity_count'] == 52 and cleanup['owned_fixture_count'] == 11)
         check('normal installed-image run', reset['passed'] and reset['installed_image_tested'] and not reset['foundation_passed'] and not reset['full_PWD_006_qualified'])
         check('owned temporary container accounting', len(reset['created_containers']) == len(reset['retired_containers']) == 12 and len(build['temporary_containers_retired']) == 4)

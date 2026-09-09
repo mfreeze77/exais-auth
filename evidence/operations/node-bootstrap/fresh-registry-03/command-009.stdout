@@ -1,0 +1,1 @@
+[{"path":"/cache","options":["rw","nosuid","nodev","noexec","relatime"]},{"path":"/tmp","options":["rw","nosuid","nodev","noexec","relatime"]},{"path":"/work","options":["rw","nosuid","nodev","relatime"]}]

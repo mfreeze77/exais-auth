@@ -1,0 +1,96 @@
+{
+  "rows": [
+    {
+      "id": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+      "status": "passed",
+      "elapsed_ms": 769,
+      "details": {
+        "signin_http_status": 200,
+        "online_session_http_status": 200,
+        "logout_http_status": 200,
+        "after_logout_http_status": 401
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-002-REQUEST-EMAIL",
+      "status": "passed",
+      "elapsed_ms": 185,
+      "details": {
+        "generate_reset_http_status": 200,
+        "generic_delivery_confirmation_visible": true,
+        "authenticated_session_created": false
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-003-REAL-MAIL-LINK",
+      "status": "passed",
+      "elapsed_ms": 7,
+      "details": {
+        "mailbox_callback_completed": true,
+        "recipient_and_mail_transport_verification_owned_by_runner": true,
+        "link_matches_application_origin_and_reset_path": true
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-004-CHANGE-PASSWORD",
+      "status": "passed",
+      "elapsed_ms": 264,
+      "details": {
+        "password_reset_http_status": 200,
+        "success_visible": true,
+        "authenticated_session_created": false
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-005-CONSUMED-LINK-REJECTED",
+      "status": "passed",
+      "elapsed_ms": 121,
+      "details": {
+        "password_reset_http_status": 200,
+        "consumed_token_error_visible": true,
+        "authenticated_session_created": false
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-006-OLD-PASSWORD-REJECTED",
+      "status": "passed",
+      "elapsed_ms": 310,
+      "details": {
+        "signin_http_status": 200,
+        "wrong_credentials_visible": true,
+        "online_session_http_status": 401
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-007-NEW-PASSWORD-SESSION",
+      "status": "passed",
+      "elapsed_ms": 307,
+      "details": {
+        "signin_http_status": 200,
+        "online_session_http_status": 200,
+        "original_identity_preserved": true,
+        "http_only_cookie_session_verified": true
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-008-LOGOUT",
+      "status": "passed",
+      "elapsed_ms": 228,
+      "details": {
+        "logout_http_status": 200,
+        "online_session_after_logout_http_status": 401,
+        "session_cookies_removed": true
+      }
+    },
+    {
+      "id": "BROWSER-PWDRESET-009-PAGE-ERRORS",
+      "status": "passed",
+      "elapsed_ms": 31,
+      "details": {
+        "page_error_count": 0
+      }
+    }
+  ],
+  "source_sha256": "8a880b9270107382783853b059f378a20cf317adfc66688026a74c669bb1a342",
+  "live_provider_tested": false
+}

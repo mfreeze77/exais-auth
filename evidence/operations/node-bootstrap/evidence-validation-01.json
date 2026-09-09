@@ -1,0 +1,121 @@
+{
+  "passed": false,
+  "kind": "recorded-bootstrap-evidence-integrity",
+  "started": "2026-09-09T06:48:46.112569+00:00",
+  "tool_sha256": "945ea59ac97c8f9984d0e20a5516ea4ff9008cfa9186226a9394a8a520fb8765",
+  "checks": [
+    {
+      "name": "executed source binding tools/run_node_bootstrap.py",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/run_node_bootstrap.py",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tools/fetch_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/fetch_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tools/export_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/export_node_packages.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tools/verify_node_runtime.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tools/verify_node_runtime.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding tests/reuse/node_bootstrap_probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged tests/reuse/node_bootstrap_probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "executed source binding evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "passed": true
+    },
+    {
+      "name": "current source unchanged evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "passed": true
+    },
+    {
+      "name": "executed source binding examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "name": "only disclosed historical Dockerfile directory fix",
+      "passed": false
+    }
+  ],
+  "errors": [
+    "only disclosed historical Dockerfile directory fix"
+  ],
+  "authentication_complete": false,
+  "independent_human_review": false,
+  "bound_files": {
+    "evidence/operations/node-bootstrap/fresh-registry-03/report.json": {
+      "bytes": 111408,
+      "sha256": "44e3eafdbf5b60c0f19f50c7304b207ef2b3b1a66afa2e5f79a2b5eec2acfa21"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tools/run_node_bootstrap.py": {
+      "bytes": 13202,
+      "sha256": "744582fbecbdfc2d42fd81a194d7cc473a4c9452ae3b19230a5be5a5193b4982"
+    },
+    "tools/run_node_bootstrap.py": {
+      "bytes": 13202,
+      "sha256": "744582fbecbdfc2d42fd81a194d7cc473a4c9452ae3b19230a5be5a5193b4982"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tools/fetch_node_packages.mjs": {
+      "bytes": 13865,
+      "sha256": "dceb192d6a9652190f26907e61a8ea721a0848180268edf177a3475112717714"
+    },
+    "tools/fetch_node_packages.mjs": {
+      "bytes": 13865,
+      "sha256": "dceb192d6a9652190f26907e61a8ea721a0848180268edf177a3475112717714"
+    },
+    "tools/export_node_packages.mjs": {
+      "bytes": 11166,
+      "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+    },
+    "tools/verify_node_runtime.mjs": {
+      "bytes": 22178,
+      "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tests/reuse/node_bootstrap_probe.mjs": {
+      "bytes": 12945,
+      "sha256": "05021ff5e8e4ac6edcbabf97c12a4f82f0720bf664c3667fd3c126d9e662f64c"
+    },
+    "tests/reuse/node_bootstrap_probe.mjs": {
+      "bytes": 12945,
+      "sha256": "05021ff5e8e4ac6edcbabf97c12a4f82f0720bf664c3667fd3c126d9e662f64c"
+    },
+    "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json": {
+      "bytes": 2498437,
+      "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+    },
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/examples/node-react/Dockerfile": {
+      "bytes": 536,
+      "sha256": "43bfa854ec76a74871d22811af49197dd85ca64566d18c60e1e5d86b2f4ab06a"
+    },
+    "examples/node-react/Dockerfile": {
+      "bytes": 576,
+      "sha256": "dffaca66db7745635a13c580594fa255bef41627bd8654ad87c8d518d4282124"
+    }
+  },
+  "historical_dockerfile_difference": null,
+  "finished": "2026-09-09T06:48:46.188088+00:00"
+}

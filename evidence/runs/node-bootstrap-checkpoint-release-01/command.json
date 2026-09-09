@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/validate_release.py",
+    "--output",
+    "evidence/integrity/node-bootstrap-release-check.json"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788936751.5511606,
+  "elapsed_seconds": 3.596,
+  "input_sha256": {
+    "ledger/implementation.json": "7bc14983ffaaea832b9973b0a9b5a582a2dd171243c6858fa24c4257d5c3124a",
+    "tools/validate_release.py": "06738c687fdae44568da834c9a8b19477ca2db72fbb19a318301148c1c990ee7"
+  },
+  "inputs_changed": false,
+  "output_sha256": "333fa8f5eb6669bd8e1df506153eab83ae19ada05004e23c855cc8fff8e36ccf",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

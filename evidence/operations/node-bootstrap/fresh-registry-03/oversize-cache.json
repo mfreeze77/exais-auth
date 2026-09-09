@@ -1,0 +1,32 @@
+{
+  "schema": "expertauth-npm-archive-acquisition-v1",
+  "passed": false,
+  "started": "2026-09-09T06:33:07.228Z",
+  "mode": "offline",
+  "network_requests": 0,
+  "downloaded_archives": 0,
+  "downloaded_bytes": 0,
+  "reused_archives": 0,
+  "cache_manifest_written": false,
+  "cache_lock_acquired": false,
+  "cache_lock_removed": false,
+  "errors": [
+    "CACHE_FILE_TOO_LARGE"
+  ],
+  "archives": [],
+  "limits": {
+    "packages": 512,
+    "archiveBytes": 33554432,
+    "cacheBytes": 134217728,
+    "requestMilliseconds": 15000,
+    "acquisitionMilliseconds": 180000
+  },
+  "foundation_passed": false,
+  "license_approval": false,
+  "native_platform_tests_passed": false,
+  "lock_sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+  "applicable_package_count": 143,
+  "excluded_package_count": 25,
+  "unique_archive_count": 141,
+  "finished": "2026-09-09T06:33:07.233Z"
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "source-artifact-preflight",
+  "known_private_credential_values_found": 0,
+  "candidate_files_scanned": 2133,
+  "python_sources_parsed": [
+    "tools/build_node_runtime.py",
+    "tools/update_checkpoint_ledger.py",
+    "tools/verify_node_build_evidence.py",
+    "evidence/operations/node-bootstrap/evidence-validation-01-source.py",
+    "evidence/operations/node-bootstrap/fresh-registry-01/source-snapshots/tools/run_node_bootstrap.py",
+    "evidence/operations/node-bootstrap/fresh-registry-02/source-snapshots/tools/run_node_bootstrap.py",
+    "evidence/operations/node-bootstrap/fresh-registry-03/source-snapshots/tools/run_node_bootstrap.py",
+    "evidence/operations/node-bootstrap/retained-cache-01/source-snapshots/tools/run_node_bootstrap.py",
+    "evidence/operations/node-image-build/deterministic-source-mode-01/source-snapshots/tools/build_node_runtime.py",
+    "evidence/operations/node-image-build/deterministic-source-mode-02/source-snapshots/tools/build_node_runtime.py",
+    "tools/retire_bootstrap_checkpoint_zip.py",
+    "tools/run_node_bootstrap.py",
+    "tools/verify_node_bootstrap_evidence.py"
+  ],
+  "baseline_changed_paths": [],
+  "authentication_complete": false
+}

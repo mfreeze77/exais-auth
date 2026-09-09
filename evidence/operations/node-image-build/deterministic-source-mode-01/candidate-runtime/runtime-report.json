@@ -1,0 +1,52 @@
+{
+  "schema": "expertauth-node-runtime-file-verification-v1",
+  "ok": false,
+  "inventory_verified": false,
+  "platform": {
+    "os": "linux",
+    "cpu": "x64",
+    "libc": "glibc"
+  },
+  "foundation_passed": false,
+  "browser_passed": false,
+  "native_platform_tests_passed": false,
+  "native_compiled_source_correspondence_verified": false,
+  "license_approval": false,
+  "limits": {
+    "files": 100000,
+    "fileBytes": 33554432,
+    "installedBytes": 536870912,
+    "archiveMembers": 50000,
+    "expandedArchiveBytes": 134217728,
+    "allExpandedBytes": 536870912,
+    "reportBytes": 67108864
+  },
+  "app_files": [],
+  "dependency_files": [],
+  "packages": [],
+  "native_members": [],
+  "errors": [
+    {
+      "code": "RUNTIME_VERIFICATION_PRECONDITION_OR_OPERATION_FAILED"
+    }
+  ],
+  "tar_correspondence": {
+    "verified": false,
+    "matched_files": 0,
+    "missing_files": 0,
+    "different_files": 0,
+    "extra_installed_files": 0,
+    "unsupported_entries": 0,
+    "failed_archives": 0,
+    "mode_differences": 0,
+    "package_count_verified": 0
+  },
+  "limitations": [
+    "File and original archive byte correspondence only; native compilation/toolchain/platform and license obligations remain separate",
+    "npm-generated .bin links and hidden install metadata are inventoried separately and are not original tarball members"
+  ],
+  "lock_sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+  "cache_report_sha256": "7765c03afff4ee816b703151384409d98527c2af2c219ece5204e99dd4422bf1",
+  "applicable_package_count": 143,
+  "excluded_package_count": 25
+}

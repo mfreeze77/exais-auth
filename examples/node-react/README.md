@@ -17,8 +17,10 @@ promise immediate logout revocation. `/api/session` is SDK hybrid verification;
 authenticated SMTP with verified implicit TLS; without SMTP both reset endpoints
 are disabled. See [password reset evidence and setup](../../docs/password-reset.md).
 Its full offline image and installed reset lab pass. Exact package/app byte
-correspondence and the remaining fresh-bootstrap gaps are described in
-[the build report](../../docs/node-offline-build.md).
+correspondence and the remaining full fresh-stack gaps are described in
+[the build report](../../docs/node-offline-build.md). The tested
+[archive bootstrap](../../docs/node-package-bootstrap.md) can populate the one
+bounded cache using explicit online mode; normal verification stays offline.
 
 From the repository root after starting the private OSS lab:
 

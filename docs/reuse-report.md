@@ -1,6 +1,11 @@
 # ExpertAuth source reuse and licensing audit checkpoint
 
 The 2026-09-09 Node follow-up is documented in `docs/node-offline-build.md`.
+`docs/node-package-bootstrap.md` records the new locally authored acquisition,
+container runner and real registry/offline probes with file-specific reuse
+boundaries. No SDK recipe, dependency lock or entitlement enforcement changed.
+The pinned graph's actual npm deprecation/maintenance warnings are preserved;
+maintained replacement/update qualification remains open.
 Its complete offline image audit matches 7,629 original archive members across 143
 packages and preserves the prior installed dependency tree. The new
 `reuse/nodemailer-9.1.1-source-correspondence.json` closes the historical selected

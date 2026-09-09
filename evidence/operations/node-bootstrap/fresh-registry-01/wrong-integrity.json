@@ -1,0 +1,38 @@
+{
+  "schema": "expertauth-npm-archive-acquisition-v1",
+  "passed": false,
+  "started": "2026-09-09T06:23:35.478Z",
+  "mode": "online",
+  "network_requests": 1,
+  "downloaded_archives": 0,
+  "downloaded_bytes": 0,
+  "reused_archives": 0,
+  "cache_manifest_written": false,
+  "cache_lock_acquired": true,
+  "cache_lock_removed": true,
+  "errors": [
+    "ARCHIVE_HASH_MISMATCH"
+  ],
+  "archives": [],
+  "limits": {
+    "packages": 512,
+    "archiveBytes": 33554432,
+    "cacheBytes": 134217728,
+    "requestMilliseconds": 15000,
+    "acquisitionMilliseconds": 180000
+  },
+  "foundation_passed": false,
+  "license_approval": false,
+  "native_platform_tests_passed": false,
+  "lock_sha256": "1668e7ed12255e5440b468533cc7b7f3d7786b4354c52c0764c9c5e645ca2542",
+  "applicable_package_count": 1,
+  "excluded_package_count": 0,
+  "unique_archive_count": 1,
+  "cache_bytes_before": 0,
+  "active_archive": {
+    "lock_path": "node_modules/is-promise",
+    "resolved": "https://registry.npmjs.org/is-promise/-/is-promise-4.0.0.tgz",
+    "integrity": "sha512-h/poI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ=="
+  },
+  "finished": "2026-09-09T06:23:35.630Z"
+}

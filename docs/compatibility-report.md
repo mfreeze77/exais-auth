@@ -10,9 +10,12 @@ See `contracts/README.md`, `api-contracts.json` and their source/licensing repor
 The working OSS Node/React and Python examples exercise password/session subsets.
 The new Node/React reset subset uses optional authenticated TLS SMTP and engine
 reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks.
-The subsequent full offline image2c4ad0be07b8 passes those checks with no app
+The current full offline image4c03d7306e1e passes those checks with no app
 source/bundle mounts; its installed dependencies match the prior audited tree.
-Neither proof qualifies a complete SDK/API profile or a fresh deployment.
+The package bootstrap now passes actual registry acquisition and disconnected
+installation/compilation with the same dependency bytes. This Linux x64/glibc
+proof does not qualify any excluded native platform or change the full profiles.
+Neither proof qualifies a complete SDK/API profile or a fresh identity-stack deployment.
 Nonexistent-tenant rejection is distinct from configured-tenant isolation.
 No original API ID is promoted by this result. See `docs/password-reset.md`.
 
