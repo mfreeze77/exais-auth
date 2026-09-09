@@ -1,0 +1,21 @@
+{
+  "kind": "actual-native-checkpoint-export-attribute-failure",
+  "passed": false,
+  "complete": false,
+  "zip": "expertauth-partial-checkpoint-de6439a31552.zip",
+  "zip_sha256": "fe0b517ea29fcb64e68f46749bd066995bf7df8f7edead227b6781cb884cd88e",
+  "commit": "de6439a315529f95a4658a263597861fcf52dfbc",
+  "missing_tracked_members": [
+    "evidence/reuse/native-correspondence/argon2/native-source/.gitattributes",
+    "evidence/reuse/native-correspondence/argon2/native-source/.gitignore",
+    "evidence/reuse/native-correspondence/argon2/native-source/.travis.yml",
+    "evidence/reuse/native-correspondence/argon2/native-source/appveyor.yml",
+    "evidence/reuse/native-correspondence/argon2/native-source/export.sh"
+  ],
+  "cause": "git archive applied immutable upstream .gitattributes export-ignore rules; original snapshot check compared against the already filtered archive.",
+  "remedy": "Read and hash every regular committed Git blob; reject unsafe/special paths. The original upstream attributes remain unchanged.",
+  "actual_extraction_exit": 1,
+  "native_build_executed": false,
+  "temporary_scratch_removed": true,
+  "regression_tests": "test_checkpoint_committed_files.py and test_checkpoint_secrets.py:25 passed."
+}

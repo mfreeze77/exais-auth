@@ -1,0 +1,7 @@
+{
+  "kind": "actual-git-snapshot-and-secret-boundary-tests",
+  "passed": true,
+  "exit_code": 0,
+  "authentication_tests": false,
+  "complete": false
+}

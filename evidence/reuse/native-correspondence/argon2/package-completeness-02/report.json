@@ -1,0 +1,10 @@
+{
+  "kind": "actual-native-source-tree-completeness",
+  "passed": true,
+  "complete": false,
+  "authentication_tests": false,
+  "commit_checked": "de6439a315529f95a4658a263597861fcf52dfbc",
+  "all_tracked_blobs_preserved": 4293,
+  "native_source_files_preserved": 68,
+  "corrected_packager_sha256": "0fd9e24c0c709b94a10fa1df13507b22124a5808ce80f4251831bb165ed99f99"
+}

@@ -18,6 +18,10 @@ Actual code and evidence:
   remains missing. Two build environment failures are preserved. See
   `docs/native-argon2-build.md`; installed packaging, other platforms and full
   source/distribution gates remain open.
+  Its first checkpoint's native extraction rejected five files omitted by Git's
+  upstream export attributes. That failure is preserved. The corrected packager
+  reads exact committed blobs;25 actual-Git/secret-boundary checks pass. Fresh ZIP
+  native-build evidence is a separate sidecar and must pass before delivery.
 - Current Core `db1d29ba6244` and Node `2a02e08d5fcb` enforce the five-second
   profile at dedicated Core refresh/verify routes. A healthy preflight followed
   by a mismatched replica is refused without credentials or fallback; the actual

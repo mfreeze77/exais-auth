@@ -1,0 +1,22 @@
+{
+  "kind": "retire-demonstrably-incomplete-generated-checkpoint",
+  "utc": "2026-09-09T12:22:51.623677+00:00",
+  "passed": true,
+  "name": "expertauth-partial-checkpoint-de6439a31552.zip",
+  "sha256": "fe0b517ea29fcb64e68f46749bd066995bf7df8f7edead227b6781cb884cd88e",
+  "bytes": 43787935,
+  "manifest_members_verified": 4290,
+  "source_commit_preserved": "de6439a315529f95a4658a263597861fcf52dfbc",
+  "reason": "Actual fresh native extraction rejects five tracked inputs omitted by upstream export-ignore. Corrected packager tests pass; source commit, complete manifest/checksum, original validation and failed extraction sidecars remain.",
+  "retained_validated_recovery_archives": [
+    {
+      "name": "expertauth-partial-checkpoint-40c8589b0921.zip",
+      "sha256": "88c2d317dd6ddb8084d8c3b1359955879678400fa0cd401fde4481872d90bab9"
+    },
+    {
+      "name": "expertauth-partial-checkpoint-d446a27861bc.zip",
+      "sha256": "f0829beab42da1ee980b163656c4585273dcecb57d1e6d6d7faf183cd5622ecb"
+    }
+  ],
+  "supplied_archives_touched": false
+}

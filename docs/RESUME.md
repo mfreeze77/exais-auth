@@ -15,6 +15,10 @@ password/import/reset/concurrency cases. All temporary resources retired; Core
 and Node images are unchanged. Continue with supported nolibs installation and
 native/OS/source/relink closure. Automatic rehash is still absent: actual login
 preserves imported hashes. Other foundation and qualification gates remain open.
+The initial de6439a31552 ZIP omitted five files due to upstream export attributes
+and failed native extraction. The corrected packager includes exact committed
+blobs. Read `package-completeness-01` and require the new native-extraction sidecar;
+do not reuse that defective ZIP as a complete native source checkpoint.
 
 Latest work is `docs/guarded-session-operations.md`. Current Core is `db1d29ba6244`,
 current Node is `2a02e08d5fcb`, and the current binary build is `guarded-01`.

@@ -71,3 +71,18 @@ Next: install through the wrapper's supported nolibs boundary, qualify the image
 and loader failure behavior, and close native/OS/source/relink obligations.
 Other platforms, full hash/rehash/migration scope, foundation and independent
 review remain unqualified.
+
+Checkpoint de6439a31552 failed its fresh native extraction: upstream export-ignore
+attributes omitted five tracked build/provenance files. The failure and exact ZIP
+identity are preserved under `package-completeness-01`. Packaging now reads and
+hash-verifies every regular committed Git blob, preserving upstream attributes
+without applying their export filters/substitutions. Three actual-Git regression
+cases and22 secret-boundary cases pass. A corrected ZIP must separately pass:
+
+```powershell
+python -B tools/verify_extracted_native.py --zip artifacts/NEW_CHECKPOINT.zip
+```
+
+That helper extracts75 exact source/build inputs, performs the original native
+build/tests, compares the result to the Core-tested library, retains its report,
+and removes its temporary source tree, binary and compiler container.

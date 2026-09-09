@@ -13,7 +13,6 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import sys
-import tarfile
 import tempfile
 import zipfile
 
@@ -27,6 +26,42 @@ def safe(name):
     assert not path.is_absolute() and '..' not in path.parts and '\\' not in name
     assert not any(part in {'.git','.runtime','.cache','.docker','node_modules','artifacts'} for part in path.parts)
     assert path.name=='.env.example' or not (path.name=='.env' or path.name.startswith('.env.'))
+
+def committed_files(root, commit):
+    """Read exact committed blobs, independent of nested export-ignore/export-subst.
+
+    Git archive intentionally applies upstream release-export policy. A resumable
+    ExpertAuth checkpoint must instead contain every permitted committed file.
+    Reject symlinks/submodules; verify each object's framing and Git content hash.
+    """
+    if not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}', commit):
+        raise ValueError('Exact commit identity required')
+    entries=[]
+    for raw in run(['git','ls-tree','-rz','--full-tree',commit],cwd=root).split(b'\0'):
+        if not raw:continue
+        metadata,name=raw.split(b'\t',1);mode,kind,oid=metadata.decode('ascii').split()
+        name=name.decode('utf-8');safe(name)
+        if mode not in {'100644','100755'} or kind!='blob' or not re.fullmatch(r'[0-9a-f]{40}|[0-9a-f]{64}',oid):
+            raise ValueError('Only regular committed source files are permitted')
+        entries.append((name,oid))
+    if not entries or len({name for name,oid in entries})!=len(entries):
+        raise ValueError('Missing or duplicate committed files')
+    objects=list(dict.fromkeys(oid for name,oid in entries))
+    result=subprocess.run(['git','cat-file','--batch'],input=('\n'.join(objects)+'\n').encode('ascii'),
+                          cwd=root,capture_output=True,check=True)
+    stream=io.BytesIO(result.stdout);bodies={}
+    for oid in objects:
+        header=stream.readline().decode('ascii').rstrip('\n').split()
+        if len(header)!=3 or header[:2]!=[oid,'blob'] or not header[2].isdigit():
+            raise ValueError('Git blob response framing differs')
+        size=int(header[2]);body=stream.read(size)
+        if len(body)!=size or stream.read(1)!=b'\n':raise ValueError('Truncated Git blob')
+        content=b'blob '+str(size).encode('ascii')+b'\0'+body
+        actual=(hashlib.sha1(content) if len(oid)==40 else hashlib.sha256(content)).hexdigest()
+        if actual!=oid:raise ValueError('Committed Git object hash differs')
+        bodies[oid]=body
+    if stream.read():raise ValueError('Unexpected extra Git blob response')
+    return {name:bodies[oid] for name,oid in entries}
 
 def upgrade_fixture_secrets(root):
     """Protect the exact private rollback journal, including interrupted saves."""
@@ -135,14 +170,7 @@ def main():
     assert len(list(target.glob('*.zip'))) < 3, 'Three-ZIP cap reached; verify and retire only an authorized old generated checkpoint before packaging'
     destination=target/f'{args.name}-{commit[:12]}.zip'
     assert not destination.exists(), 'Preserve existing artifacts; use a new snapshot name'
-    files={}
-    with tarfile.open(fileobj=io.BytesIO(run(['git','archive','--format=tar',commit]))) as archive:
-        for member in archive:
-            if member.isdir(): continue
-            assert member.isfile(), 'Symlink/special-file archives are not permitted'
-            safe(member.name)
-            assert member.name not in files
-            files[member.name]=archive.extractfile(member).read()
+    files=committed_files(ROOT,commit)
     # Known synthetic local secrets still must not enter a resumable source artifact.
     leaks=secret_leaks(files,local_secrets(ROOT))
     assert not leaks, f'Local secrets found in committed files: {leaks}'

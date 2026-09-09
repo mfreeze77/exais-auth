@@ -495,13 +495,16 @@ def main():
         'evidence/operations/hygiene/checkpoint-retention-before-guarded-sessions.json')]
     native_sources=['tools/build_native_argon2.py','tools/capture_native_sources.py','tools/run_native_source_capture.py',
         'tools/run_refresh_grace_lab.py','tests/foundation/NativePasswordProbe.java','tools/verify_extracted_native.py',
-        'reuse/native-argon2-components.json','docs/native-argon2-build.md']
+        'reuse/native-argon2-components.json','docs/native-argon2-build.md','tools/package_checkpoint.py',
+        'tests/evidence/test_checkpoint_committed_files.py']
     native_reports=['evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json',
         'evidence/reuse/native-correspondence/argon2/native-source-request.json',
         'evidence/reuse/native-correspondence/argon2/native-source/acquisition.json',
         'evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json',
         'evidence/foundation/refresh-grace/native-argon2-01/report.json',
-        'evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json']
+        'evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json',
+        'evidence/reuse/native-correspondence/argon2/package-completeness-01/report.json',
+        'evidence/reuse/native-correspondence/argon2/package-completeness-01/failure.json']
     data['native_argon2_candidate_artifacts']=[artifact(ROOT,p) for p in native_reports]
     data['native_argon2_failed_history']=[artifact(ROOT,'evidence/reuse/native-correspondence/argon2/native-build/'+run+'/'+p)
         for run in ('linux-01','linux-02') for p in ('report.json','build_native_argon2.py')]
@@ -524,6 +527,7 @@ def main():
     data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
         'evidence/operations/hygiene/verification-20260909T121421Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-native-argon2.json',
+        'evidence/operations/hygiene/checkpoint-retention-native-incomplete.json',
         'evidence/reuse/native-correspondence/argon2/checkpoint-checks-01/report.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
