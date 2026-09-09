@@ -1,0 +1,2 @@
+Two temporary adapted Core replicas started against their own database.
+{"passed": true, "foundation_passed": false, "created": 6, "retired": 6, "errors": [], "report": "evidence/operations/atomic-reset/image-core-policy-01"}

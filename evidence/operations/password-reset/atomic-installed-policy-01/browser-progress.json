@@ -1,0 +1,20 @@
+[
+  {
+    "stage": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+    "event": "started"
+  },
+  {
+    "event": "response",
+    "path": "/auth/session/refresh",
+    "status": 401
+  },
+  {
+    "event": "response",
+    "path": "/auth/signin",
+    "status": 200
+  },
+  {
+    "stage": "BROWSER-PWDRESET-001-INITIAL-PASSWORD",
+    "event": "failed"
+  }
+]

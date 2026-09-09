@@ -341,7 +341,7 @@ def main():
     data['session_grace_candidate_artifacts']=[artifact(ROOT,p) for p in grace_reports]
     data['session_grace_failed_history']=[artifact(ROOT,'evidence/foundation/refresh-grace/'+run+'/report.json') for run in
         ('node-01','node-02','startup-01','startup-02')]
-    grace_note = ('Current installed Nodee02ab9bcd78e explicitly adapts only private refresh/verify calls toCDI5.6 through '
+    grace_note = ('Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through '
         'the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation '
         'keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately '
         'declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one '
@@ -377,6 +377,64 @@ def main():
     data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
         'evidence/operations/hygiene/verification-20260909T101607Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-refresh-grace.json')]
+    policy_sources=['engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java',
+        'examples/node-react/server.js','tools/build_password_session.py','tools/password_session_candidates.py',
+        'tools/retire_password_session_candidate.py','tools/build_atomic_core_runtime.py','tools/build_node_runtime.py',
+        'tools/run_refresh_grace_lab.py','tests/foundation/session_policy_readiness.mjs','tests/operations/PasswordSessionProbe.java',
+        'tests/foundation/RefreshGraceProbe.java','tests/browser/password-reset.mjs','tests/evidence/test_password_session_candidates.py',
+        'tools/verify_session_policy_evidence.py','reuse/password-session-components.json','reuse/session-grace-components.json',
+        'docs/session-policy-readiness.md']
+    policy_reports=['evidence/operations/password-session-build/policy-01/'+p for p in ('report.json','core-members.json','postgresql-members.json')]
+    policy_reports+=['evidence/operations/password-session-build/candidate-guard-tests-01/report.json',
+        'evidence/operations/atomic-core-image/policy-01/report.json','evidence/operations/atomic-core-image/policy-01/qualification.json',
+        'evidence/operations/atomic-core-replacement/policy-01/report.json','evidence/operations/atomic-reset/image-core-policy-01/report.json',
+        'evidence/operations/atomic-reset/image-core-policy-01/probe-report.json','evidence/operations/atomic-reset/image-core-policy-01/password-session-report.json',
+        'evidence/operations/hygiene/password-session-retirement-policy-01.json',
+        'evidence/operations/node-image-build/policy-02/report.json','evidence/operations/node-image-build/evidence-validation-policy-02.json',
+        'evidence/operations/atomic-reset/installed-policy-02/report.json','evidence/foundation/refresh-grace/policy-evidence-validation-01.json',
+        'evidence/operations/atomic-reset/policy-browser-01/report.json','evidence/operations/password-reset/atomic-policy-browser-01/browser-results.json']
+    for run in ('atomic-image-node-policy-01','atomic-installed-policy-02'):
+        policy_reports+=['evidence/operations/password-reset/'+run+'/'+p for p in ('report.json','probe-results.json','tls-results.json','browser-results.json')]
+    for run,files in [('image-core-policy-01',('report.json','probe-report.json')),
+                      ('policy-source-01',('report.json','policy-results.json')),
+                      ('installed-policy-02',('report.json','sdk-results.json','browser-results.json','signed-out.png')),
+                      ('policy-policy-02',('report.json','policy-results.json'))]:
+        policy_reports+=['evidence/foundation/refresh-grace/'+run+'/'+p for p in files]
+    for phase in ('seed','upgraded','rollback','final','cleanup'):
+        policy_reports+=['evidence/operations/atomic-core-replacement/policy-01/'+phase+'.json']
+    data['effective_session_policy_artifacts']=[artifact(ROOT,p) for p in policy_reports]
+    data['effective_session_policy_failed_history']=[artifact(ROOT,p) for p in (
+        'evidence/operations/node-image-build/policy-01/report.json','evidence/operations/atomic-reset/installed-policy-01/report.json',
+        'evidence/operations/password-reset/atomic-installed-policy-01/report.json',
+        'evidence/operations/password-reset/atomic-installed-policy-01/browser-results.json',
+        'evidence/operations/password-reset/atomic-installed-policy-01/browser-progress.json')]
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/verification-20260909T105924Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-session-policy.json')]
+    policy_note=('Current Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core '
+        'configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. '
+        'Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. '
+        'Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth '
+        'business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains '
+        'explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured '
+        'real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback '
+        'phase cases pass. Current installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab '
+        'browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate '
+        'was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, '
+        'nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an '
+        'inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful '
+        'replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence '
+        'checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous '
+        'load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining '
+        'security/migration/operational orderings and foundation/distribution/independent review remain unqualified.')
+    policy_ids=[r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/policy-policy-02/policy-results.json')['rows']]
+    for identifier in ('BAS-002','BAS-004','BAS-005','SES-003','SES-004','SES-005','SES-006','SES-007','SES-017',
+                       'SDK-001','SDKP-01','SDK-005','SDKP-05','PWD-006','OPS-004','OPS-007','OPS-011',
+                       'WP-002','WP-004','WP-009','WP-010','WP-033'):
+        row=index[identifier];row['implementation'] += [artifact(ROOT,p) for p in policy_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['effective_session_policy_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+policy_note
+        row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+policy_ids))
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

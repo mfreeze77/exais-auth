@@ -52,4 +52,14 @@ coordinates32 protected requests across four tabs. This does not approve the
 upstream Node5.4/Python/native profiles, every client ordering, effective-policy
 readiness or the missing tenant/link/factor mapping. Original strict-profile
 failures stay preserved, and `selected_engine` remains null. Exact evidence and
-current image pins are in `docs/session-refresh-grace.md`.
+historical image pins are in `docs/session-refresh-grace.md`.
+
+Later 2026-09-09 addition: the current Core/Node candidate exposes and verifies
+effective grace/reuse settings. Real zero-grace, alternate-reuse and transport
+failure cases are refused; concurrent refusals and same-session recovery pass.
+Installed reset/grace/browser regressions and actual Core upgrade/rollback pass.
+The per-request preflight does not prove atomic policy consistency across
+heterogeneous replicas or a configuration change before the operation. All other
+foundation, configured namespace/link/factor, SDK/native/provider, licensing and
+independent-review gates remain binding. `selected_engine` stays null. Current
+pins, source and exact evidence are in `docs/session-policy-readiness.md`.

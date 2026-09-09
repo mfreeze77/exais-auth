@@ -1,0 +1,120 @@
+{
+  "timestamp_utc": "2026-09-09T10:59:24.646584+00:00",
+  "hygiene_verified": true,
+  "authentication_complete": false,
+  "docker_mutations": 0,
+  "checks": [
+    {
+      "check": "15 original retired container IDs absent",
+      "passed": true
+    },
+    {
+      "check": "only retained Core and PostgreSQL containers remain",
+      "passed": true
+    },
+    {
+      "check": "8 original stale tags absent",
+      "passed": true
+    },
+    {
+      "check": "6 bounded retained task tags",
+      "passed": true
+    },
+    {
+      "check": "no dangling project-labeled images remain",
+      "passed": true
+    },
+    {
+      "check": "6 obsolete scratch directories absent",
+      "passed": true
+    },
+    {
+      "check": "only owned OSS network remains",
+      "passed": true
+    },
+    {
+      "check": "Core database and reusable Gradle volumes preserved",
+      "passed": true
+    },
+    {
+      "check": "all 6 H2 backup file hashes unchanged",
+      "passed": true,
+      "checked_files": 6
+    },
+    {
+      "check": "all extracted-run raw command logs retained unchanged",
+      "passed": true,
+      "checked_logs": 43
+    }
+  ],
+  "containers": [
+    {
+      "id": "e52098625d556ccdbc9c257de7835ddfff9f4401fe3a0663fdb791990e07e555",
+      "name": "expertauth-oss-core-a",
+      "image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e",
+      "status": "Up 15 minutes"
+    },
+    {
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "name": "expertauth-oss-postgres",
+      "image": "postgres@sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "status": "Up 10 hours"
+    }
+  ],
+  "images": [
+    {
+      "tag": "expertauth-node-react:0.0.5",
+      "id": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c",
+      "size": "439MB"
+    },
+    {
+      "tag": "expertauth-oss-core:12.2.0-probe",
+      "id": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e",
+      "size": "1.37GB"
+    },
+    {
+      "tag": "expertauth-python-app:0.1.0",
+      "id": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+      "size": "299MB"
+    },
+    {
+      "tag": "expertauth-kc-clients-node:0.0.1",
+      "id": "sha256:698f514bba46f6221b1f6594769465544c20d3ee1a9356a124649b3027ee8bb7",
+      "size": "417MB"
+    },
+    {
+      "tag": "expertauth-kc-headless-postgres:0.1.0",
+      "id": "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+      "size": "762MB"
+    },
+    {
+      "tag": "expertauth-kc-headless:0.1.0",
+      "id": "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+      "size": "762MB"
+    }
+  ],
+  "networks": [
+    "expertauth-oss-proof"
+  ],
+  "volumes": [
+    "expertauth-gradle-cache",
+    "expertauth-oss-proof-pg"
+  ],
+  "dangling_task_images": [],
+  "historical_reports": [
+    {
+      "path": "evidence/extracted-checkpoint/20260908T222718Z-a632c0/report.json",
+      "sha256": "f3e97f87a6a1c238eef8b653af63068cc95e9ed608a4781f0ff4aa5b28e1cb08"
+    },
+    {
+      "path": "evidence/extracted-checkpoint/20260908T222920Z-23f3d2/report.json",
+      "sha256": "cf3e1c71a448f463996d5e064b3fe5df520479e21bfe7c85a1d5097555ada16a"
+    }
+  ],
+  "verifier_sha256": "b235f81d785f1661057f364cf70097cff5551b81fe71b01fc570434a0b50ace8",
+  "limits": [
+    "Docker shared layers are not summed as freed physical host disk",
+    "Unrelated Docker resources and volumes were not cleanup targets",
+    "Historical raw-log paths remain in immutable reports; verified copies now live in private retired-proof-logs"
+  ]
+}

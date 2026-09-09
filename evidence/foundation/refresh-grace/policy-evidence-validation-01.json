@@ -1,0 +1,2930 @@
+{
+  "kind": "effective-session-policy-evidence-correspondence",
+  "started": "2026-09-09T10:59:23.582968+00:00",
+  "passed": true,
+  "complete": false,
+  "authentication_tests_executed": false,
+  "independent_review": false,
+  "tool_sha256": "86850a89ba5bde280d2937b97ac68b4755cd6c4514e2ca6eed04c75f0fa95000",
+  "checks": [
+    {
+      "check": "old compiler pair preserved until qualified replacement",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "current compiler/engine source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "only intended core class changed",
+      "passed": true
+    },
+    {
+      "check": "candidate JAR full CRC and member hashes core",
+      "passed": true
+    },
+    {
+      "check": "only intended postgresql class changed",
+      "passed": true
+    },
+    {
+      "check": "plugin remains byte-identical",
+      "passed": true
+    },
+    {
+      "check": "candidate JAR full CRC and member hashes postgresql",
+      "passed": true
+    },
+    {
+      "check": "installed Core qualified with bounded cleanup",
+      "passed": true
+    },
+    {
+      "check": "old Core image retired",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/operations/atomic-reset/image-core-policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/operations/atomic-reset/image-node-policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/foundation/refresh-grace/image-core-policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/operations/atomic-core-replacement/policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "actual upgrade rollback re-upgrade preserves database",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-001.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-001.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-002.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-002.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-003.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-003.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-004.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-004.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-005.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-005.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-006.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-006.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-007.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-007.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-008.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-008.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-009.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-009.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-010.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-010.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-011.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-011.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-012.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-012.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-013.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-013.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-014.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-014.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-015.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-015.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-016.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-016.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-017.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-017.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-018.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-018.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-019.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-019.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-020.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-020.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-021.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-021.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-022.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-022.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-023.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-023.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-024.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-024.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-025.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-025.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-026.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-026.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-027.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-027.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-028.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-028.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-029.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-029.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-030.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-030.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-031.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-031.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-032.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-032.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-033.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-033.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-034.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-034.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-035.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-035.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-036.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-036.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-037.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-037.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-038.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-038.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-039.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-039.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-040.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-040.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-041.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-041.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-042.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-042.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-043.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-043.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-044.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-044.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-045.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-045.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-046.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-046.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-047.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-047.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-048.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-048.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-049.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement log .runtime/atomic-core-replacement/policy-01/command-049.stderr",
+      "passed": true
+    },
+    {
+      "check": "only superseded binary pair retired",
+      "passed": true
+    },
+    {
+      "check": "installed Node qualified including mismatch refusal",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/operations/atomic-reset/installed-policy-02/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/operations/password-reset/atomic-installed-policy-02/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/foundation/refresh-grace/installed-policy-02/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound child evidence/foundation/refresh-grace/policy-policy-02/report.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 passed within declared boundaries",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 resource and source preservation",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 all owned containers retired",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 exact installed Core",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 installed pair core-a",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 installed pair core-b",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer evidence/operations/password-session-build/policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 current product source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 current product source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 captured producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 exact result probe-report.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-policy-01 no failed/skipped cases probe-report.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 passed within declared boundaries",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 resource and source preservation",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 all owned containers retired",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 exact installed Core",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 installed pair core-a",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 installed pair core-b",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 installed pair core-c",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer evidence/operations/password-session-build/policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 current product source examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 captured producer tests/foundation/session_policy_readiness.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 50 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 50 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 51 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 51 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 52 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 actual command 52 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 exact result policy-results.json",
+      "passed": true
+    },
+    {
+      "check": "policy-source-01 no failed/skipped cases policy-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 passed within declared boundaries",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 resource and source preservation",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 all owned containers retired",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 exact installed Core",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 installed pair core-a",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 installed pair core-b",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer evidence/operations/password-session-build/policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 captured producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 current product source examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 actual command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 exact result sdk-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 no failed/skipped cases sdk-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 exact result browser-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 no failed/skipped cases browser-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-policy-02 exact installed Node without overlays",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 passed within declared boundaries",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 resource and source preservation",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 all owned containers retired",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 exact installed Core",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 installed pair core-a",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 installed pair core-b",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 installed pair core-c",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer evidence/operations/password-session-build/policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 current product source examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 captured producer tests/foundation/session_policy_readiness.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 50 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 50 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 51 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 actual command 51 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 exact result policy-results.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 no failed/skipped cases policy-results.json",
+      "passed": true
+    },
+    {
+      "check": "policy-policy-02 exact installed Node without overlays",
+      "passed": true
+    },
+    {
+      "check": "eight policy rows include seven checks and cleanup",
+      "passed": true
+    },
+    {
+      "check": "POLICY56-ZERO-GRACE-REJECTED refusal evidence",
+      "passed": true
+    },
+    {
+      "check": "POLICY56-REUSE-BEHAVIOUR-REJECTED refusal evidence",
+      "passed": true
+    },
+    {
+      "check": "POLICY56-UNAVAILABLE-REJECTED refusal evidence",
+      "passed": true
+    },
+    {
+      "check": "concurrent refusals and unchanged-session recovery",
+      "passed": true
+    },
+    {
+      "check": "actual adapted SDK and browser regression",
+      "passed": true
+    },
+    {
+      "check": "installed current Node application server.js",
+      "passed": true
+    },
+    {
+      "check": "installed current Node application client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed current Node application package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "actual adapted wire on both replicas",
+      "passed": true
+    },
+    {
+      "check": "real committed responses lost or truncated",
+      "passed": true
+    },
+    {
+      "check": "file-specific adaptation/license boundary",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest lib/ts/version.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact lib/ts/version.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest lib/ts/querier.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact lib/ts/querier.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest lib/ts/recipe/session/sessionFunctions.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact lib/ts/recipe/session/sessionFunctions.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest lib/ts/recipe/session/recipeImplementation.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact lib/ts/recipe/session/recipeImplementation.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding source_manifest lib/ts/recipe/session/index.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse binding license_artifact lib/ts/recipe/session/index.ts",
+      "passed": true
+    }
+  ],
+  "source_reports": {
+    "evidence/operations/password-session-build/policy-01/report.json": "46126ca1fcf4f2b82bedfc5befe36aa64f2d3bf52dee950ce70b818dcd7e54b3",
+    "evidence/operations/atomic-core-image/policy-01/report.json": "e63921368cc7d23ca1223fcf4fcdb2e27f16bca6ba82120037866f47b4e382ee",
+    "evidence/operations/atomic-reset/image-core-policy-01/report.json": "3ff966d0859f87b37748f1c8688a2e410c2239094a48816dde24eb666d1d4e08",
+    "evidence/operations/atomic-reset/image-node-policy-01/report.json": "5ad9ec5e6a93e6d76acc516d6c11e84b445b323e9893389504b06e2252106aa0",
+    "evidence/foundation/refresh-grace/image-core-policy-01/report.json": "70e8302f386f414f261ad5249ba2bce59c71d2908f342047e2db62197cbfe1bf",
+    "evidence/operations/atomic-core-replacement/policy-01/report.json": "ea5dc3b755ea5ee2259e8534cdb5b0726fa0f766ed87053805b21f0fcd1e61cb",
+    "evidence/operations/hygiene/password-session-retirement-policy-01.json": "f427e433733bf3d878e2fdeda7509c84d5706e74356a657b777d4f98ac35b3c6",
+    "evidence/operations/node-image-build/policy-02/report.json": "3eac6657af9d76250e5fae4333079893316fd465ce52fa0dee082e9bb0f9766d",
+    "evidence/operations/atomic-reset/installed-policy-02/report.json": "2ab037dbf19de582d127edec47b4a4fd9108a2345018406ff7b347957eb1b14d",
+    "evidence/operations/password-reset/atomic-installed-policy-02/report.json": "09b6ce099df7fc26ccca0f836776caf93d59da158cefffee8582ed7c029ddb48",
+    "evidence/foundation/refresh-grace/installed-policy-02/report.json": "5a7c9f3ba7298506c0407744b588ff3c9c66299afa61dffa23b972ee9ae6560b",
+    "evidence/foundation/refresh-grace/policy-policy-02/report.json": "a680ac687092ccca2e2c565f16b4b2837350cf9fdae2a032bb5b68e5d685c83d",
+    "evidence/foundation/refresh-grace/image-core-policy-01/probe-report.json": "5eaea0ec36032e79dc4fb99d5a398f05b4ad34ecb74846a558a36e3a6f3b0ead",
+    "evidence/foundation/refresh-grace/policy-source-01/report.json": "c517b9b82f9c9a107c99c1dc5b449e0512eb076343f75874d942e76cf20828e9",
+    "evidence/foundation/refresh-grace/policy-source-01/policy-results.json": "f5ba15600a107ed46b1305e463c95d97db862e4a545be65201d7aa462ccf3acd",
+    "evidence/foundation/refresh-grace/installed-policy-02/sdk-results.json": "b11c82f3ebf248017a4d7c26103c78b19c2ca6862c5897be13c9f6ef202c88f7",
+    "evidence/foundation/refresh-grace/installed-policy-02/browser-results.json": "c101d1351c6dcf030cd228ce7794cfeb77ce12a24ea07d9987b8d584cb106474",
+    "evidence/foundation/refresh-grace/policy-policy-02/policy-results.json": "326e5a1cb30f8449271e60191c5f9aa09f41857c2b17e1f3f5f578f3acb71de9",
+    "reuse/session-grace-components.json": "0054d29ae3d1ef9a70c2280e8dd4298583df47ac40b72237949e7bd01b6b84a4"
+  },
+  "errors": [],
+  "finished": "2026-09-09T10:59:25.157212+00:00"
+}

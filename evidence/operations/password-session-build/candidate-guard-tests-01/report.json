@@ -1,0 +1,15 @@
+{
+  "kind": "actual-filesystem-candidate-guard-tests",
+  "passed": true,
+  "exit_code": 0,
+  "tests": 8,
+  "authentication_acceptance": false,
+  "inputs": {
+    "tools/password_session_candidates.py": "4fcf4c382f15d544d4f65ebbacf9630a01f8b5406c21586f103f6f4baa736bb2",
+    "tests/evidence/test_password_session_candidates.py": "51b4633858f5fd1b9b1b4b957ebdab9d850efcd9d8fbaa7114d7d056e20eff6a"
+  },
+  "outputs": {
+    "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "58ab7345b4d5e41ecd39dc9483286e1dd78efc45c07ac253c86dc688bcc0b41e"
+  }
+}

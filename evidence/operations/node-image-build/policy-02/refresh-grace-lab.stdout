@@ -1,0 +1,13 @@
+Testing the explicit Node CDI5.6 adaptation and real browser coordination.
+{"check": "SDK56-SERIAL-ROTATION", "outcome": "passed"}
+{"check": "SDK56-PARENT-GRACE-RETRY", "outcome": "passed"}
+{"check": "SDK56-LOSS-COMPLETE", "outcome": "passed"}
+{"check": "SDK56-LOSS-PARTIAL", "outcome": "passed"}
+{"check": "SDK56-CONCURRENT-RESPONSES-CONVERGE", "outcome": "passed"}
+{"check": "SDK56-ORPHAN-REUSE-REVOKES-FAMILY", "outcome": "passed"}
+{"check": "SDK56-EXPIRED-PARENT-REPLAY", "outcome": "passed"}
+{"check": "SDK56-ONLINE-VERSUS-OFFLINE-REVOCATION", "outcome": "passed"}
+{"check": "SDK56-PUBLIC-PRIVATE-BOUNDARY", "outcome": "passed"}
+{"check": "SDK56-WIRE-AND-BROWSER-PROFILE", "outcome": "passed"}
+{"check": "SDK56-OWNED-FIXTURE-CLEANUP", "outcome": "passed"}
+{"passed": true, "report": "evidence/foundation/refresh-grace/installed-policy-02", "created": 6, "retired": 6, "errors": []}

@@ -1,0 +1,54 @@
+{
+  "schema": "expertauth-password-reset-lab-v1",
+  "started": "2026-09-09T10:55:21.491Z",
+  "finished": "2026-09-09T10:55:24.378Z",
+  "rows": [
+    {
+      "id": "RESET-BROWSER-REAL-REACT-FLOW",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 2783,
+      "actual_browser_checks": 9
+    },
+    {
+      "id": "PASSWORD-SESSION-ACTUAL-CORE-WIRE",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 1,
+      "actual_session_requests": 3,
+      "legacy_session_requests": 0,
+      "request_or_token_bodies_recorded": false
+    },
+    {
+      "id": "RESET-OWNED-FIXTURE-CLEANUP",
+      "status": "passed",
+      "requirement": "PWD-006",
+      "elapsed_ms": 29,
+      "source_identity_count": 0,
+      "owned_fixture_count": 1,
+      "original_identity_set_restored": true
+    }
+  ],
+  "wire": [
+    {
+      "role": "good",
+      "path": "/auth/signup",
+      "http": 200,
+      "status": "OK"
+    }
+  ],
+  "passed": true,
+  "mode": "browser-only",
+  "skipped": 0,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "live_provider_tested": false,
+  "independent_security_review": false,
+  "atomic_profile": true,
+  "limitations": [
+    "No configured cross-tenant proof",
+    "This HTTP probe does not inject transaction aborts or race ordering; see the separate exact-JAR Core proof. Other SDK and legacy session writers remain unqualified.",
+    "SMTP timing privacy and durable outbox remain unqualified",
+    "Browser HTTP is internal lab transport; SMTP and mailbox use verified TLS"
+  ]
+}

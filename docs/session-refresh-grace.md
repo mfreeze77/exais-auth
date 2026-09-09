@@ -1,7 +1,9 @@
 # Explicit CDI5.6 session candidate
 
-Current Node image: `sha256:e02ab9bcd78eb1e2f24d8ba7dc0a6424ec98261ba192f205d11f5aed291fed55`.
-Core remains `sha256:03b4458c532f0d1f212012967f849420761dea14c2c1636ad32c8ed29ee2e97d`.
+Current images and effective-policy readiness are in
+[session-policy-readiness.md](session-policy-readiness.md).
+The following original checkpoint used Node `e02ab9bcd78e` and Core `03b4458c532f`;
+both have been superseded and retired after qualification.
 This is a tested default-public-tenant candidate, not foundation or full SDK approval.
 
 The original SES-003/004 criteria require a tested race/retry state machine and
@@ -32,7 +34,8 @@ and `EXPERTAUTH_RESET_POLICY=atomic-v1`, against Core configured with
 `refresh_token_rotation_grace_period: 5` and `recent_token_reuse_behaviour: TOKEN_THEFT`.
 The retained original lab configuration was not changed. Its zero-grace setting
 must not be described as this profile. Readiness verifies storage, atomic APIs
-and advertised CDI5.6; it does **not** attest the effective grace configuration.
+and advertised CDI5.6 in this historical checkpoint; the later implementation
+also checks the effective grace/reuse settings and refuses a mismatch.
 No unmodified Node/Python/native CDI5.6 qualification is claimed.
 
 ## Actual evidence
@@ -81,9 +84,9 @@ are unchanged. No image was downloaded or built for these diagnostics.
 Use unique evidence names and rerun only when inputs or an unresolved case change:
 
 ```powershell
-python -B tools/run_refresh_grace_lab.py --name NEW_CORE_RUN
-python -B tools/run_refresh_grace_lab.py --name NEW_NODE_RUN --with-node --installed-node-image sha256:e02ab9bcd78eb1e2f24d8ba7dc0a6424ec98261ba192f205d11f5aed291fed55
-python -B tools/build_node_runtime.py --name NEW_BUILD --session-build compile-04 --qualify-refresh-grace
+python -B tools/run_refresh_grace_lab.py --name NEW_CORE_RUN --session-build policy-01
+python -B tools/run_refresh_grace_lab.py --name NEW_NODE_RUN --session-build policy-01 --with-node --installed-node-image sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c
+python -B tools/build_node_runtime.py --name NEW_BUILD --session-build policy-01 --qualify-refresh-grace
 ```
 
 The build command requires existing audited caches and private lab; clean-host
@@ -91,7 +94,7 @@ bootstrap remains unqualified. The source-mounted runner is for changed app code
 omit `--installed-node-image` for that explicit mode. No new image is needed for
 test-only changes. Keep one current image and at most three validated source ZIPs.
 
-Still required: effective-policy readiness attestation; every supported SDK and
+Still required: policy consistency across check/operation/replica changes; every supported SDK and
 header/cookie/native coordination profile; late/reordered client credential
 installation; transaction-internal revocation failures, restart/failover/load and
 all orderings; bounded offline residual measurement; configured namespaces,

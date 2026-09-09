@@ -1,0 +1,86 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/node?digest=sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "context:node_packages": "local:node_packages",
+          "cpuquota": "200000",
+          "force-network-mode": "none",
+          "frontend.caps": "moby.buildkit.frontend.contexts+forward",
+          "label:org.expertauth.build-run": "78548ddf6b7c4334992112cff9b55484",
+          "label:org.expertauth.project": "expert-auth",
+          "label:org.expertauth.purpose": "node-foundation",
+          "memory": "536870912",
+          "sharedkey:localdir:node_packages": "node-packages:6566d8b53676ccd6"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          },
+          {
+            "name": "node_packages"
+          }
+        ],
+        "root": {
+          "configSource": {
+            "path": "Dockerfile"
+          },
+          "request": {
+            "args": {
+              "context:node_packages": "local:node_packages",
+              "cpuquota": "200000",
+              "force-network-mode": "none",
+              "frontend.caps": "moby.buildkit.frontend.contexts+forward",
+              "label:org.expertauth.build-run": "78548ddf6b7c4334992112cff9b55484",
+              "label:org.expertauth.project": "expert-auth",
+              "label:org.expertauth.purpose": "node-foundation",
+              "memory": "536870912",
+              "sharedkey:localdir:node_packages": "node-packages:6566d8b53676ccd6",
+              "vcs:localdir:context": "examples\\node-react",
+              "vcs:localdir:dockerfile": "examples\\node-react",
+              "vcs:localdir:node_packages": ".cache\\node-packages",
+              "vcs:revision": "0498a025fcc5e2c60087665ddd8344817adffc64"
+            }
+          }
+        },
+        "compatibilityVersion": 30
+      },
+      "environment": {
+        "dockerfileVersion": "1.25.0",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "default/default/kbnokfz1sewmayhj14q5e0mlh",
+  "containerimage.config.digest": "sha256:24c3ee3e332bf096cada7120da64a0cf5e80b211e712c04115195dbbd22e0812",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c",
+    "size": 2570,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  },
+  "containerimage.digest": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c",
+  "image.name": "moby-dangling@sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+}

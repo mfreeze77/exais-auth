@@ -11,7 +11,18 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
-- Current Node image `e02ab9bcd78e` contains the explicit CDI5.6 refresh/verify
+- Current Core `3e15c927a662` exposes authenticated effective session settings;
+  current Node `7964df6fe51e` refuses readiness and auth/online requests when they
+  differ from five seconds/TOKEN_THEFT. Actual mismatched settings, transport
+  failure, eight concurrent refusals and recovery without restart pass. Both
+  installed images pass the reset/grace/browser regressions and the Core passes
+  actual upgrade/rollback. Superseded images and the old JAR pair are retired;
+  final hygiene verifies two containers, six tags and no dangling project images.
+  The initial Node candidate's browser failure and its corrected nine-case
+  diagnostic remain recorded. See `docs/session-policy-readiness.md`. A policy
+  preflight is not atomic across heterogeneous replicas; full foundation,
+  configured tenants, all SDKs/providers/native platforms and review remain open.
+- Previous Node image `e02ab9bcd78e` contained the explicit CDI5.6 refresh/verify
   adapter. A five-second Core grace profile passes12 direct Core cases, including
   a database abort after UPDATE, response loss and stale-family revocation.
   The installed Node adapter passes nine HTTP cases plus wire/cleanup checks;
@@ -21,7 +32,7 @@ Actual code and evidence:
   retired; all29 build/qualification containers are removed. Unmodified SDKs,
   other profiles and full foundation remain unqualified. See
   `docs/session-refresh-grace.md`; all earlier failures remain historical evidence.
-- Core image `03b4458c532f` now contains the atomic Core/plugin JAR pair and passes
+- Previous Core image `03b4458c532f` contained the atomic Core/plugin JAR pair and passed
   16 Core, 34 installed Node/SMTP/TLS/browser and 14 actual upgrade/rollback cases.
   Healthy flows use no JAR/application overlays. All 483 running files match;
   the schema, database process/configuration and 52 original identities are
@@ -206,7 +217,7 @@ The updated archive runner retires its own resources and fails on cleanup errors
 its12 integrity/filesystem tests passed, but its revised full Docker flow has not
 been rerun. `AGENTS.md` requires the same lifecycle for all further work.
 
-Current hygiene verification `verification-20260909T050303Z.json` passes all10
+Current hygiene verification `verification-20260909T105924Z.json` passes all10
 checks: two persistent containers, six current task image tags and no dangling
 project-labeled images. The reset slice added only one pinned17.16MB Mailpit
 image; source/bundle and test changes reused cached dependency images. The oldest

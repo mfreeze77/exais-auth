@@ -1,0 +1,2 @@
+Adapted Core ready; starting the actual Node/SMTP/React child lab.
+{"passed": false, "foundation_passed": false, "created": 3, "retired": 3, "errors": ["Actual Node atomic reset flow failed"], "report": "evidence/operations/atomic-reset/installed-policy-01"}

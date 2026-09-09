@@ -260,15 +260,16 @@
   ],
   "adaptation": {
     "path": "examples/node-react/server.js",
-    "sha256": "5c754163fb64b2aefd9b4a20086f139d09f3f3201649b6ce1bb59038cb377e51",
+    "sha256": "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86",
     "activation": "EXPERTAUTH_SESSION_POLICY=core-cdi56-grace-v1 with EXPERTAUTH_RESET_POLICY=atomic-v1",
     "supported_private_operations": [
       "POST /recipe/session/refresh",
       "POST /recipe/session/verify"
     ],
-    "scope": "Default public tenant; configured namespaces fail closed at the adaptation boundary. Other operations retain the upstream protocol. No claim that upstream Node24.0.3 supports CDI5.6 unchanged."
+    "scope": "Default public tenant; configured namespaces fail closed at the adaptation boundary. Other operations retain the upstream protocol. No claim that upstream Node24.0.3 supports CDI5.6 unchanged.",
+    "effective_policy": "Private authenticated effective tenant configuration readout; exact5/TOKEN_THEFT readiness and per-request preflight. No cached healthy answer. Heterogeneous replicas and check/operation configuration races remain unqualified."
   },
-  "engine_ownership": "Current installed Core03b4458c532f includes the separately audited atomic password/session extension. It remains the only owner of credentials, rotation, signing and session storage. No entitlement check is changed.",
+  "engine_ownership": "Installed Core3e15c927a662 contains the existing atomic password/session extension plus an authenticated effective-policy readout. It alone owns credentials, rotation, signing and session storage. No entitlement check is changed.",
   "dependency_declarations": [
     "examples/node-react/package-lock.json",
     "reuse/oss-core-runtime.cdx.json",
@@ -277,7 +278,8 @@
   "evidence": [
     "evidence/foundation/refresh-grace/run-01/probe-report.json",
     "evidence/foundation/refresh-grace/node-03/sdk-results.json",
-    "evidence/foundation/refresh-grace/node-03/browser-results.json"
+    "evidence/foundation/refresh-grace/node-03/browser-results.json",
+    "evidence/foundation/refresh-grace/policy-source-01/policy-results.json"
   ],
   "primary_references": [
     "https://github.com/supertokens/supertokens-core/pull/1308",
@@ -286,5 +288,12 @@
   "limits": [
     "Full native/OS/transitive source and relink closure remains unapproved.",
     "Required complete profile/version matrix, configured tenancy/linking and independent security review remain open."
-  ]
+  ],
+  "effective_policy_extension": {
+    "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+    "sha256": "f4397a0b7463bf63808c9357dba4cdd8ee6ba2e041c4efd1ee2e13e2b63aa409",
+    "license": "Apache-2.0",
+    "config_source_unchanged": true,
+    "file_specific_reuse": "reuse/password-session-components.json"
+  }
 }

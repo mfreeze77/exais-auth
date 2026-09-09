@@ -1,6 +1,10 @@
 # Installed atomic Core candidate and local rollback
 
-The current local `expertauth-oss-core:12.2.0-probe` image is
+This is the superseded installed-02 checkpoint. Current pins and commands are in
+[session-policy-readiness.md](session-policy-readiness.md). Its old image and JAR
+pair were retired after replacement qualification.
+
+This checkpoint's `expertauth-oss-core:12.2.0-probe` image was
 `sha256:03b4458c532f0d1f212012967f849420761dea14c2c1636ad32c8ed29ee2e97d`.
 It contains the atomic password-reset/session Core and PostgreSQL JAR pair.
 This Core qualification used Node image `9375a5bc093d`; the subsequent

@@ -9,7 +9,20 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest work is `docs/session-refresh-grace.md`. Node image `e02ab9bcd78e`
+Latest work is `docs/session-policy-readiness.md`. Current Core is `3e15c927a662`,
+current Node is `7964df6fe51e`, and the retained binary build is `policy-01`.
+Authenticated effective settings and mismatch/transport/concurrent request
+refusal pass actual installed tests. The prior Node browser failure was preserved,
+the response read timing corrected, and all nine focused browser cases plus the
+full installed reset/grace/policy regressions pass. Old images and JARs are retired;
+all temporary containers are gone. Every original requirement and blocker remains
+binding; mixed-replica check/operation policy races are still unqualified.
+Use the current commands and exact image pins in that document. The next session
+work is enforcing policy consistently at the Core operation boundary and testing
+configuration changes between check and operation, then the remaining revocation
+crash/restart/orderings. This must retain the single engine and licensing boundary.
+
+Previous work is `docs/session-refresh-grace.md`. Node image `e02ab9bcd78e`
 contains an explicit CDI5.6 refresh/verify adapter; the dependency still declares
 5.4. Twelve direct Core policy cases and installed Node/browser cases pass,
 including transaction abort, real response loss and four-tab coordination.
@@ -23,7 +36,8 @@ unchanged images or repeat passing probes just to obtain newer timestamps.
 Earlier deployment work is `docs/installed-atomic-core.md`: both images contain
 their current integration. Core image `03b4458c532f` passes 16 Core, 34 Node and
 14 local upgrade/rollback cases. The old Core image was retired only after those
-checks. Use compile-04 and the installed-image commands there; old compile-03
+checks. Its compile-04 pair is now superseded; use policy-01 and the latest
+installed-image commands above. Old compile-03
 launcher prerequisites and original notice-only deployment commands are historical.
 Full fresh-host bootstrap, configured tenancy/linking, the failed refresh profiles,
 distribution and independent review remain open. The frozen SES-003/004 criteria
@@ -280,7 +294,8 @@ archives and preserves the one recorded Guava metadata-only absence. Historical 
 `60c7677d0a91` contained474 verified files and was retired; see
 `evidence/runtime/oss-core-notices/preserved-notices-01/report.json` and
 `replacement-20260908T232129Z-99cdc5/report.json` in that same evidence directory.
-Current Core-a uses5ec6ccc3fd5d with479 verified files, as recorded above.
+That historical Core-a used5ec6ccc3fd5d with479 verified files and is retired;
+use the current Core and commands at the top of this document.
 
 Use `python tools/launch_oss_probe.py --build-only --evidence-name NEW_NAME` when
 only an image build/content check is needed. It retires context/inspection resources

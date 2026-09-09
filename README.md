@@ -10,14 +10,12 @@ real API tests and license evidence are retained separately from plan integrity 
 
 ## Reproduce the source-built alternative lab
 
-The latest [session policy candidate](docs/session-refresh-grace.md) installs an
-explicit Node CDI5.6 adaptation with real grace/replay, transaction-abort and
-four-tab browser evidence. It keeps the original failed profiles and full
-foundation gates open. Use its current image pins and qualification commands.
-
-The current candidate is documented in [installed Core qualification](docs/installed-atomic-core.md).
-Both Core and Node contain their current atomic integration; local upgrade and
-rollback pass. Use those current commands for an existing lab. The original
+The latest [effective session-policy candidate](docs/session-policy-readiness.md)
+installs an explicit Node CDI5.6 adaptation and authenticated Core settings.
+Real mismatch, transport failure, concurrent refusal and recovery tests pass,
+alongside grace/replay, transaction-abort, four-tab browser and local upgrade/
+rollback evidence. Original failed profiles and full foundation gates remain open.
+Use its current image pins and qualification commands for an existing lab. The original
 bootstrap sequence below is historical and must not be used as an in-place
 replacement of the atomic runtime. Full clean-host bootstrap remains unqualified.
 

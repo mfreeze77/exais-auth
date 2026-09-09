@@ -1,0 +1,73 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 615B done
+#1 DONE 0.0s
+
+#2 [context node_packages] load .dockerignore
+#2 transferring node_packages: 2B done
+#2 DONE 0.0s
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [auth] library/node:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+#5 DONE 0.1s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 100B done
+#6 DONE 0.0s
+
+#7 [auth] library/node:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [auth] library/node:pull token for registry-1.docker.io
+#8 DONE 0.0s
+
+#9 [stage-0 1/8] FROM docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+#9 resolve docker.io/library/node@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436 0.0s done
+#9 DONE 0.0s
+
+#10 [context node_packages] load from client
+#10 transferring node_packages: 38.29kB 0.0s done
+#10 DONE 0.1s
+
+#11 [internal] load build context
+#11 transferring context: 261B done
+#11 DONE 0.0s
+
+#12 [stage-0 4/8] RUN --network=none --mount=type=bind,from=node_packages,target=/npm-cache,rw     npm ci --offline --cache=/npm-cache --ignore-scripts --no-audit --no-fund
+#12 CACHED
+
+#13 [stage-0 6/8] RUN --network=none mkdir -m 0755 public
+#13 CACHED
+
+#14 [stage-0 2/8] WORKDIR /app
+#14 CACHED
+
+#15 [stage-0 3/8] COPY --chmod=0644 package.json package-lock.json ./
+#15 CACHED
+
+#16 [stage-0 5/8] COPY --chmod=0644 server.js email-delivery.js client.jsx build.mjs ./
+#16 CACHED
+
+#17 [stage-0 7/8] COPY --chmod=0644 public/index.html ./public/index.html
+#17 CACHED
+
+#18 [stage-0 8/8] RUN --network=none node build.mjs
+#18 CACHED
+
+#19 exporting to image
+#19 exporting layers done
+#19 exporting manifest sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c 0.0s done
+#19 exporting config sha256:24c3ee3e332bf096cada7120da64a0cf5e80b211e712c04115195dbbd22e0812
+#19 exporting config sha256:24c3ee3e332bf096cada7120da64a0cf5e80b211e712c04115195dbbd22e0812 0.0s done
+#19 naming to moby-dangling@sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c done
+#19 unpacking to moby-dangling@sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c 0.1s done
+#19 DONE 0.2s
+
+#20 resolving provenance for metadata file
+#20 DONE 0.0s

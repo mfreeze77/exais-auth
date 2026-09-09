@@ -1,0 +1,107 @@
+{
+  "schema": "expertauth-node-package-parser-boundaries-v1",
+  "ok": true,
+  "expected_checks": 8,
+  "qualification": "Synthetic parser unit checks only; no npm cache export or installed runtime/package correspondence proof",
+  "foundation_passed": false,
+  "original_package_correspondence_verified": false,
+  "native_platform_tests_passed": false,
+  "license_approval": false,
+  "rows": [
+    {
+      "id": "NPM-PARSER-001-REGULAR-FILES",
+      "status": "passed",
+      "elapsed_ms": 7,
+      "details": {
+        "matched_synthetic_file_hashes": 2
+      }
+    },
+    {
+      "id": "NPM-PARSER-002-SAFE-SYMLINK",
+      "status": "passed",
+      "elapsed_ms": 1,
+      "details": {
+        "safe_internal_symlink_target_verified": true
+      }
+    },
+    {
+      "id": "NPM-PARSER-003-DUPLICATE",
+      "status": "passed",
+      "elapsed_ms": 2,
+      "details": {
+        "expected_rejection_code": "DUPLICATE_TAR_MEMBER",
+        "rejected_for_expected_reason": true
+      }
+    },
+    {
+      "id": "NPM-PARSER-004-TRAVERSAL",
+      "status": "passed",
+      "elapsed_ms": 1,
+      "details": {
+        "expected_rejection_code": "UNSAFE_RELATIVE_PATH",
+        "rejected_for_expected_reason": true
+      }
+    },
+    {
+      "id": "NPM-PARSER-005-HARDLINK",
+      "status": "passed",
+      "elapsed_ms": 1,
+      "details": {
+        "expected_rejection_code": "UNSUPPORTED_TAR_ENTRY_TYPE",
+        "rejected_for_expected_reason": true
+      }
+    },
+    {
+      "id": "NPM-PARSER-006-ESCAPING-SYMLINK",
+      "status": "passed",
+      "elapsed_ms": 1,
+      "details": {
+        "expected_rejection_code": "UNSAFE_RELATIVE_PATH",
+        "rejected_for_expected_reason": true
+      }
+    },
+    {
+      "id": "NPM-PARSER-007-OVERSIZE",
+      "status": "passed",
+      "elapsed_ms": 1,
+      "details": {
+        "expected_rejection_code": "OVERSIZE_TAR_MEMBER",
+        "rejected_for_expected_reason": true
+      }
+    },
+    {
+      "id": "NPM-PARSER-008-MULTIPLE-ROOTS",
+      "status": "passed",
+      "elapsed_ms": 1,
+      "details": {
+        "expected_rejection_code": "TAR_MULTIPLE_ROOTS",
+        "rejected_for_expected_reason": true
+      }
+    }
+  ],
+  "errors": [],
+  "skipped": 0,
+  "cleanup": {
+    "temporary_directory_created": true,
+    "temporary_directory_removed": true,
+    "files_removed": 8,
+    "temporary_directory": "/tmp/expertauth-node-package-boundaries-9XUB8p",
+    "temporary_root": "/tmp"
+  },
+  "sources": {
+    "test": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459",
+    "verifier": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79",
+    "exporter": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+  },
+  "parser": {
+    "name": "tar",
+    "version": "7.5.11",
+    "package_json_sha256": "2ce723525e92b0a71a5a16c34a927c60931c3129b58bc6ce48af1df8873f53db",
+    "parser_interface": "Parser",
+    "module_path": "/usr/local/lib/node_modules/npm/node_modules/tar/dist/commonjs/index.min.js",
+    "module_sha256": "a036eeb91e004ebf57e75d0f748d51b86a2fff1daf10ea46ddd6917a25faaadd"
+  },
+  "passed": 8,
+  "failed": 0,
+  "unexecuted": 0
+}

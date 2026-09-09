@@ -1,0 +1,618 @@
+{
+  "kind": "actual-session-policy-readiness",
+  "started": "2026-09-09T10:58:27.511Z",
+  "finished": "2026-09-09T10:58:30.135Z",
+  "rows": [
+    {
+      "id": "POLICY56-EFFECTIVE-PRIVATE-SETTINGS",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "settings": [
+        {
+          "refreshTokenRotationGracePeriodSeconds": 5,
+          "recentTokenReuseBehaviour": "TOKEN_THEFT"
+        },
+        {
+          "refreshTokenRotationGracePeriodSeconds": 0,
+          "recentTokenReuseBehaviour": "TOKEN_THEFT"
+        },
+        {
+          "refreshTokenRotationGracePeriodSeconds": 5,
+          "recentTokenReuseBehaviour": "UNAUTHORISED"
+        }
+      ],
+      "all_advertise_cdi56": true,
+      "unauthenticated_http": 401
+    },
+    {
+      "id": "POLICY56-HEALTHY-AUTHENTICATION",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "ready_http": 200,
+      "signup_http": 200,
+      "refresh_http": 200,
+      "online_http": 200
+    },
+    {
+      "id": "POLICY56-ZERO-GRACE-REJECTED",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "ready_http": 503,
+      "live_http": 200,
+      "rejected_requests": 8,
+      "business_requests": 0,
+      "offline_jwt_http": 200,
+      "replica": 1,
+      "transport_dropped": false
+    },
+    {
+      "id": "POLICY56-REUSE-BEHAVIOUR-REJECTED",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "ready_http": 503,
+      "live_http": 200,
+      "rejected_requests": 8,
+      "business_requests": 0,
+      "offline_jwt_http": 200,
+      "replica": 2,
+      "transport_dropped": false
+    },
+    {
+      "id": "POLICY56-UNAVAILABLE-REJECTED",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "ready_http": 503,
+      "live_http": 200,
+      "rejected_requests": 8,
+      "business_requests": 0,
+      "offline_jwt_http": 200,
+      "replica": 0,
+      "transport_dropped": true
+    },
+    {
+      "id": "POLICY56-CONCURRENT-MISMATCH-REJECTED",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "concurrent_requests": 8,
+      "http_statuses": [
+        503,
+        503,
+        503,
+        503,
+        503,
+        503,
+        503,
+        503
+      ],
+      "business_requests": 0
+    },
+    {
+      "id": "POLICY56-RECOVERY-WITHOUT-APP-RESTART",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "ready_http": 200,
+      "refresh_http": 200,
+      "online_http": 200,
+      "app_restarted": false,
+      "owned_database_users": 1
+    },
+    {
+      "id": "POLICY56-OWNED-FIXTURE-CLEANUP",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-006"
+      ],
+      "owned_users_removed": 1,
+      "source_database_contacted": false
+    }
+  ],
+  "wire": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 0,
+      "cdi": "5.3",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 0,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/reset",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 0,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/.well-known/jwks.json",
+      "replica": 0,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/.well-known/jwks.json",
+      "replica": 0,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 1,
+      "cdi": "5.3",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 1,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/reset",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 2,
+      "cdi": "5.3",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 2,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/reset",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 2,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 0,
+      "cdi": "5.3",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "transport_error": true
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 0,
+      "cdi": "5.3",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 0,
+      "cdi": null,
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/reset",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200
+    }
+  ],
+  "inputs": {
+    "server.js": "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86",
+    "client.jsx": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7",
+    "package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "fatal": false,
+  "failed": 0,
+  "skipped": 0,
+  "foundation_passed": false,
+  "complete": false,
+  "independent_human_review": false,
+  "limitations": [
+    "Preflight is not atomic with a later Core operation; heterogeneous load-balancer configurations remain unqualified.",
+    "One public tenant; full configured tenant/provider/native profiles remain blocked."
+  ]
+}

@@ -1,0 +1,1469 @@
+{
+  "schema": "expertauth-password-reset-orchestration-v1",
+  "started": "2026-09-09T10:56:18.337875+00:00",
+  "inputs": {
+    "tools/run_password_reset_lab.py": "5dc7416eda5a24d6295b77c21e9fc19782338c497c731942e8b7a35a444bcab2",
+    "tools/run_sdk_session_faults.py": "4252f700d2be562ab3f49abab48ce8818043797b1f6c3f33c54b46cba223d107",
+    "tools/run_recovery_drill.py": "32351e30805c08312835d65464350159e30d30ce23b20c9bd6bb2b45c8de9e5f",
+    "tools/node_runtime_identity.py": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69",
+    "tests/operations/password_reset_cleanup.py": "79bdc7abd3285846f2516c676074a6502c44840d4955fe9a3a66f715f9e8b41b",
+    "tests/operations/password_reset_tls.py": "1dd02872f1c2e275b593c2debb82b1e5aebb2df776e93d591d97efd65f484025",
+    "tests/operations/password_reset_probe.mjs": "e8948a6e9ba77ae5653e8b12c513dec26394f10f38bb4bd3b4795ae5360ac780",
+    "tests/browser/password-reset.mjs": "ac2b9ead1451e59cdc49f8909c6772c3a8cdb905b859303ccd32dd7f9d7127b9",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d",
+    "examples/node-react/server.js": "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86",
+    "examples/node-react/email-delivery.js": "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca",
+    "examples/node-react/test/email-delivery.test.js": "f74a98e8c9a43612e40c0834ec15cc1a02f5033ae179ed85e35535c7dc846b85",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    "examples/node-react/client.jsx": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7",
+    "examples/node-react/Dockerfile": "dffaca66db7745635a13c580594fa255bef41627bd8654ad87c8d518d4282124",
+    "examples/node-react/public/app.js": "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e",
+    "examples/node-react/build.mjs": "7a74bd39806f0dffea750bde24734c1f3af9fde8cad854dd189f6444301ddb29",
+    "tests/operations/password_session_wire.mjs": "53705d29347507f13ff7ba8311a6c0dcef1a10ce88d82b63e5c288b990d7634c",
+    "evidence/build/oss-core/artifacts.json": "02e1f70dccdd6e943ee6500b1d9f859609ba09e7ffb5136bbc469a1667f3f497",
+    "tools/atomic_core_identity.py": "6f9e61584bc85006643722dfeab7eb0e99f31e9cf6f17562175cc77440fc28e2"
+  },
+  "images": {
+    "python": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+    "node": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c",
+    "core": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e",
+    "browser": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+    "mail": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+  },
+  "application_mode": "Installed image; no application source or bundle mounts",
+  "passed": true,
+  "foundation_passed": false,
+  "full_PWD_006_qualified": false,
+  "mode": "full-reference-lab",
+  "image_builds": 0,
+  "image_downloads": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "published_ports": [],
+  "commands": [
+    {
+      "label": "launch-certificates",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-certificates-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\certificates.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user=0",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_reset_tls.py:/script.py:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02:/out",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/script.py",
+        "prepare",
+        "--directory",
+        "/private",
+        "--mail-host",
+        "reset-mail-ac03c5bca9.example.test"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 231,
+        "sha256": "007771090bf0dff4ba325a53c5eb35ba9070e7db9e17c1f4f5af4f7de7540b05"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-mail",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-mail-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\mail.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-mail-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/data:rw,nosuid,noexec,size=64m",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\mail.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets:/run/mailpit:ro",
+        "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 1565,
+        "sha256": "2c3c6056040559788b48b19030f3c4e46c56565e74cbb9bcfb1fab3520307fba"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-tls-proof",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-tls-proof-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\tls-proof.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--user=0",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_reset_tls.py:/script.py:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02:/out",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "/script.py",
+        "verify",
+        "--directory",
+        "/private",
+        "--output",
+        "/out/tls-results.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 141,
+        "sha256": "86dcf93143eb64f14cd5fd278dee2e81a16b154a5130c88ef37f4013a886f13b"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-client-file-ownership",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-client-file-ownership-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\client-file-ownership.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network=none",
+        "--read-only",
+        "--user=0",
+        "--memory=128m",
+        "--cpus=1",
+        "--pids-limit=32",
+        "--cap-drop=ALL",
+        "--cap-add=CHOWN",
+        "--security-opt=no-new-privileges",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets:/private",
+        "--entrypoint",
+        "python",
+        "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+        "-B",
+        "-c",
+        "from pathlib import Path; import os; p=Path(\"/private\"); [(os.chmod(p/n,0o400),os.chown(p/n,1000,1000)) for n in [\"smtp-password\",\"wrong-password\"]]; os.chmod(p/\"ca.crt\",0o444)"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-expiry-core",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-expiry-core-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\expiry-core.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=1g",
+        "--cpus=2",
+        "--pids-limit=256",
+        "--tmpfs",
+        "/tmp:rw,exec,nosuid,size=64m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/webserver-temp:rw,nosuid,noexec,size=32m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/logs:rw,nosuid,noexec,size=16m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/.started:rw,nosuid,noexec,size=1m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,noexec,size=16m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\expiry-config.yaml:/run/expertauth/config.yaml:ro",
+        "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+      ],
+      "exit_code": 143,
+      "stdout": {
+        "bytes": 407,
+        "sha256": "24693469e45b26a683e954b66be48b70243e3125ed1fb4bb6b116bd464bdf9bf"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-unsupported-core",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-unsupported-core-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\unsupported-core.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=1g",
+        "--cpus=2",
+        "--pids-limit=256",
+        "--tmpfs",
+        "/tmp:rw,exec,nosuid,size=64m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/webserver-temp:rw,nosuid,noexec,size=32m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/logs:rw,nosuid,noexec,size=16m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/.started:rw,nosuid,noexec,size=1m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,noexec,size=16m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\expiry-config.yaml:/run/expertauth/config.yaml:ro",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\engine-build\\supertokens-core\\build\\libs\\core-12.2.0.jar,target=/opt/expertauth/lib/core-12.2.0.jar,readonly",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\engine-build\\supertokens-postgresql-plugin\\build\\libs\\postgresql-plugin-9.8.0.jar,target=/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar,readonly",
+        "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+      ],
+      "exit_code": 143,
+      "stdout": {
+        "bytes": 407,
+        "sha256": "24693469e45b26a683e954b66be48b70243e3125ed1fb4bb6b116bd464bdf9bf"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-missing-writer-core",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-missing-writer-core-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\missing-writer-core.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=1g",
+        "--cpus=2",
+        "--pids-limit=256",
+        "--tmpfs",
+        "/tmp:rw,exec,nosuid,size=64m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/webserver-temp:rw,nosuid,noexec,size=32m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/logs:rw,nosuid,noexec,size=16m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/opt/expertauth/.started:rw,nosuid,noexec,size=1m,uid=1000,gid=1000",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,nosuid,noexec,size=16m",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\expiry-config.yaml:/run/expertauth/config.yaml:ro",
+        "--mount",
+        "type=bind,source=C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\engine-build\\supertokens-postgresql-plugin\\build\\libs\\postgresql-plugin-9.8.0.jar,target=/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar,readonly",
+        "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+      ],
+      "exit_code": 143,
+      "stdout": {
+        "bytes": 407,
+        "sha256": "24693469e45b26a683e954b66be48b70243e3125ed1fb4bb6b116bd464bdf9bf"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-good",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-good-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\good.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-good-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\good.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-expiry",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-expiry-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\expiry.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-expiry-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\expiry.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-wrong-auth",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-wrong-auth-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\wrong-auth.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-wrong-auth-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\wrong-auth.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\wrong-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 57,
+        "sha256": "424c23d009014a6556b9cf6bf61bc528b4e812b098b7ce67362e3e09a38ed8f7"
+      }
+    },
+    {
+      "label": "launch-untrusted",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-untrusted-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\untrusted.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-untrusted-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\untrusted.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 59,
+        "sha256": "729f22309f11768ef52952acccda3b0b0eb87040cd633e0c0bb57323fccfc3e1"
+      }
+    },
+    {
+      "label": "launch-outage",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-outage-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\outage.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-outage-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\outage.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 59,
+        "sha256": "729f22309f11768ef52952acccda3b0b0eb87040cd633e0c0bb57323fccfc3e1"
+      }
+    },
+    {
+      "label": "launch-disabled",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-disabled-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\disabled.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-disabled-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\disabled.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-unsupported",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-unsupported-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\unsupported.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-unsupported-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\unsupported.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-missing-writer",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-missing-writer-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\missing-writer.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=128",
+        "--network-alias",
+        "reset-missing-writer-ac03c5bca9.example.test",
+        "--tmpfs",
+        "/tmp:rw,nosuid,noexec,size=16m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\missing-writer.env",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\ca.crt:/run/mailpit/ca.crt:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\smtp-password:/run/mailpit/smtp-password:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\tests\\operations\\password_session_wire.mjs:/probe/password_session_wire.mjs:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02\\wire:/wire",
+        "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+      ],
+      "exit_code": 137,
+      "stdout": {
+        "bytes": 52,
+        "sha256": "b4e93f8a2a566cb20b0d60a2203fdaa0c997c39b63abeb751200e243ede083f5"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "launch-worker",
+      "argv": [
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-reset-worker-ac03c5bca9",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\worker.cid",
+        "--log-driver=local",
+        "--log-opt=max-size=1m",
+        "--log-opt=max-file=1",
+        "--log-opt=compress=false",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=password-reset-lab",
+        "--label",
+        "org.expertauth.run=ac03c5bca9",
+        "--network",
+        "expertauth-oss-proof",
+        "--read-only",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--memory=2g",
+        "--cpus=2",
+        "--pids-limit=256",
+        "--shm-size=256m",
+        "--tmpfs",
+        "/tmp:rw,nosuid,size=256m",
+        "--env-file",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets\\worker.env",
+        "-e",
+        "NODE_EXTRA_CA_CERTS=/private/ca.crt",
+        "-e",
+        "PRIVATE_DIR=/private",
+        "-e",
+        "EVIDENCE_DIR=/out",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth:/repo:ro",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\password-reset\\atomic-installed-policy-02\\secrets:/private",
+        "-v",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\evidence\\operations\\password-reset\\atomic-installed-policy-02:/out",
+        "--entrypoint",
+        "node",
+        "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+        "/repo/tests/operations/password_reset_probe.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 3039,
+        "sha256": "e477dd993a749dbd6d3cb7f94be9d9387d4be1546fba1640e49bbd03671a7cc7"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-missing-writer",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "1913d5417e0b6b0720fcbd4a6afc44a2a5dfad68df5735096e67a61403d18cb2"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "e81939febe151988db00840ca5a5f150b71f8d32a7bbaa110f07101732f720c8"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-unsupported",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "19d28522f860eac29c625a694d90020cf2ceaaa218d2b1d1db682c469903dc66"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "28574d1e34922fbef98b25bdf00d6b7921036299eafb1576f4dadf2d9c839cfd"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-disabled",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "8d743af820ca2c015b3b8f007fb8233e92a312e3c1b3efd5d48e90cd33654028"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "65388b707ea434ab65d9ede2e8ba6c65e8e5efbecd17a676599f00c582110309"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-outage",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "4ac5a0fbbfb5b22340b6b2bc928d2c2683490e40a92264f09e94c55b26861121"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "053ca69c4ef3b94b222be39a90d950db425aee3362c48695c6b69fa53e0c3b8f"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-untrusted",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "62f54548bb6e0abe0263c1c950ae100e9444126465970a6ae2c62e6240b7a1c7"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "98c4370d01507e35780b28c347475b65b0ec421eb28431b2fbb04c2aad9fcdfc"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-wrong-auth",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "ca6133cf1ca4857ff740c5e059951f26e688b4018f45574d79f3466bdd517dc1"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "e14acea7a9d88f741f954eaafdfd49f1bedb748014b3550da4a2dfd4b82ae7b3"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-expiry",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "a15c0ca9a2d3962588b6970f69e7124ff90403153770a5ce90474e855cc73e85"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "01108bb3ce7a12dd287c90baeed3b59571feb8473418ca5e8f08a0816794897f"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-good",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "d28f9a8be538e5e2c9abecc6196cf137a4810b5caa123d6bfbc33a9975f448a2"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "b95c438c3c4491ab25878cae261c85adc41b9e92c3299e7985d485ef0e7be839"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-missing-writer-core",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "fe27b098c24aef02748e4116dae8c0d963bf42e5401302fb87b76e89e0f922bd"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "38cce17f1497a360933186d82b484e0898a0d25f77578ed431614133a3c3edad"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-unsupported-core",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "7ee06de3f877b89f7d66afd6d323b6e248769c708f7be126cd8445ed34801c73"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "bf5d2ffb4da540071e08c272e36b73cf0c130fd6fd76253c7497054d9845b929"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-expiry-core",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "a99621b06167f5b1e28c9dd84861a4a0eeff0c51e534cf4f45e1cdd5b18197e7"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "dd159f088dc332d3db1f758014247b08e20e23b5e8532d4feeace417d9ece67d"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "label": "retire-mail",
+      "argv": [
+        "stop",
+        "--timeout=3",
+        "dc8b388b217fd6171014243e26a82e5c34182acaa22ff51899ef7587f2930041"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 65,
+        "sha256": "60d6167d760ed689dbbea888e8ad1352ee647f38944a21a508abfcc0d5dd02d2"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "created_containers": [
+    {
+      "role": "certificates",
+      "name": "expertauth-reset-certificates-ac03c5bca9",
+      "id": "e51560e597ac2027b7e3575c54c66b32e0e3a2fd5724d34b13636508aea00e93",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "mail",
+      "name": "expertauth-reset-mail-ac03c5bca9",
+      "id": "dc8b388b217fd6171014243e26a82e5c34182acaa22ff51899ef7587f2930041",
+      "image": "sha256:3856f9327f3f228afe8c4ce2dcca3cb2aa00f6ec60b569f36483f7ebb1ff44f7"
+    },
+    {
+      "role": "tls-proof",
+      "name": "expertauth-reset-tls-proof-ac03c5bca9",
+      "id": "161d966185819c64413487ad1c2c81edc9d6e9e7bc29086b9bb3d404bd7f8eda",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "client-file-ownership",
+      "name": "expertauth-reset-client-file-ownership-ac03c5bca9",
+      "id": "dbf06b7c9a0db0f462376d90b8290279cd161ccdb56437d5aeee2ec4a9a54eb2",
+      "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+    },
+    {
+      "role": "expiry-core",
+      "name": "expertauth-reset-expiry-core-ac03c5bca9",
+      "id": "a99621b06167f5b1e28c9dd84861a4a0eeff0c51e534cf4f45e1cdd5b18197e7",
+      "image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+    },
+    {
+      "role": "unsupported-core",
+      "name": "expertauth-reset-unsupported-core-ac03c5bca9",
+      "id": "7ee06de3f877b89f7d66afd6d323b6e248769c708f7be126cd8445ed34801c73",
+      "image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+    },
+    {
+      "role": "missing-writer-core",
+      "name": "expertauth-reset-missing-writer-core-ac03c5bca9",
+      "id": "fe27b098c24aef02748e4116dae8c0d963bf42e5401302fb87b76e89e0f922bd",
+      "image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+    },
+    {
+      "role": "good",
+      "name": "expertauth-reset-good-ac03c5bca9",
+      "id": "d28f9a8be538e5e2c9abecc6196cf137a4810b5caa123d6bfbc33a9975f448a2",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "expiry",
+      "name": "expertauth-reset-expiry-ac03c5bca9",
+      "id": "a15c0ca9a2d3962588b6970f69e7124ff90403153770a5ce90474e855cc73e85",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "wrong-auth",
+      "name": "expertauth-reset-wrong-auth-ac03c5bca9",
+      "id": "ca6133cf1ca4857ff740c5e059951f26e688b4018f45574d79f3466bdd517dc1",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "untrusted",
+      "name": "expertauth-reset-untrusted-ac03c5bca9",
+      "id": "62f54548bb6e0abe0263c1c950ae100e9444126465970a6ae2c62e6240b7a1c7",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "outage",
+      "name": "expertauth-reset-outage-ac03c5bca9",
+      "id": "4ac5a0fbbfb5b22340b6b2bc928d2c2683490e40a92264f09e94c55b26861121",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "disabled",
+      "name": "expertauth-reset-disabled-ac03c5bca9",
+      "id": "8d743af820ca2c015b3b8f007fb8233e92a312e3c1b3efd5d48e90cd33654028",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "unsupported",
+      "name": "expertauth-reset-unsupported-ac03c5bca9",
+      "id": "19d28522f860eac29c625a694d90020cf2ceaaa218d2b1d1db682c469903dc66",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "missing-writer",
+      "name": "expertauth-reset-missing-writer-ac03c5bca9",
+      "id": "1913d5417e0b6b0720fcbd4a6afc44a2a5dfad68df5735096e67a61403d18cb2",
+      "image": "sha256:7964df6fe51e7ff9164326628144a72bab8d1f310b7db66044ddfe65445e2a6c"
+    },
+    {
+      "role": "worker",
+      "name": "expertauth-reset-worker-ac03c5bca9",
+      "id": "41b702a932a9325c0711a2f0f03914fb4c27cc5673e3acb0e5e5943fb7a0b68c",
+      "image": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e"
+    }
+  ],
+  "retired_containers": [
+    {
+      "role": "worker",
+      "id": "41b702a932a9325c0711a2f0f03914fb4c27cc5673e3acb0e5e5943fb7a0b68c"
+    },
+    {
+      "role": "missing-writer",
+      "id": "1913d5417e0b6b0720fcbd4a6afc44a2a5dfad68df5735096e67a61403d18cb2"
+    },
+    {
+      "role": "unsupported",
+      "id": "19d28522f860eac29c625a694d90020cf2ceaaa218d2b1d1db682c469903dc66"
+    },
+    {
+      "role": "disabled",
+      "id": "8d743af820ca2c015b3b8f007fb8233e92a312e3c1b3efd5d48e90cd33654028"
+    },
+    {
+      "role": "outage",
+      "id": "4ac5a0fbbfb5b22340b6b2bc928d2c2683490e40a92264f09e94c55b26861121"
+    },
+    {
+      "role": "untrusted",
+      "id": "62f54548bb6e0abe0263c1c950ae100e9444126465970a6ae2c62e6240b7a1c7"
+    },
+    {
+      "role": "wrong-auth",
+      "id": "ca6133cf1ca4857ff740c5e059951f26e688b4018f45574d79f3466bdd517dc1"
+    },
+    {
+      "role": "expiry",
+      "id": "a15c0ca9a2d3962588b6970f69e7124ff90403153770a5ce90474e855cc73e85"
+    },
+    {
+      "role": "good",
+      "id": "d28f9a8be538e5e2c9abecc6196cf137a4810b5caa123d6bfbc33a9975f448a2"
+    },
+    {
+      "role": "missing-writer-core",
+      "id": "fe27b098c24aef02748e4116dae8c0d963bf42e5401302fb87b76e89e0f922bd"
+    },
+    {
+      "role": "unsupported-core",
+      "id": "7ee06de3f877b89f7d66afd6d323b6e248769c708f7be126cd8445ed34801c73"
+    },
+    {
+      "role": "expiry-core",
+      "id": "a99621b06167f5b1e28c9dd84861a4a0eeff0c51e534cf4f45e1cdd5b18197e7"
+    },
+    {
+      "role": "client-file-ownership",
+      "id": "dbf06b7c9a0db0f462376d90b8290279cd161ccdb56437d5aeee2ec4a9a54eb2"
+    },
+    {
+      "role": "tls-proof",
+      "id": "161d966185819c64413487ad1c2c81edc9d6e9e7bc29086b9bb3d404bd7f8eda"
+    },
+    {
+      "role": "mail",
+      "id": "dc8b388b217fd6171014243e26a82e5c34182acaa22ff51899ef7587f2930041"
+    },
+    {
+      "role": "certificates",
+      "id": "e51560e597ac2027b7e3575c54c66b32e0e3a2fd5724d34b13636508aea00e93"
+    }
+  ],
+  "errors": [],
+  "tmpfs_limits_mib": {
+    "mail_database": 64,
+    "mail_tmp": 16,
+    "core_gradle": 16,
+    "node_tmp": 16,
+    "browser_tmp": 256,
+    "browser_shm": 256
+  },
+  "private_directory": ".runtime/password-reset/atomic-installed-policy-02",
+  "installed_image_tested": true,
+  "core_adaptation": {
+    "policy": "EXPERTAUTH-ATOMIC-RESET-1",
+    "jar_sha256": "68405d4700b9d63abef45bf7c10dcadb7d3cf3f5de7c1a9cdb64395c2b7f1de2",
+    "parent_run": "installed-policy-02",
+    "source_engine_unchanged": false,
+    "transactional_session_plugins": [
+      {
+        "component": "postgresql",
+        "path": ".cache/password-session-policy-01/postgresql-plugin-9.8.0.jar",
+        "bytes": 408242,
+        "sha256": "d7a7ae7cefd18724658e3bc24f3351bcacc69439245433429d10879da487624c",
+        "original_sha256": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705",
+        "changed": [],
+        "added": [
+          "META-INF/services/io.expertauth.core.TransactionalSessionWriter",
+          "io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class"
+        ]
+      }
+    ],
+    "installed_core_image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e"
+  },
+  "node_image_ownership": "project-and-component-labels",
+  "max_main_seconds": 600,
+  "source_before": {
+    "expertauth-reset-core-a-4f769a37fa3c": {
+      "Id": "494911904ac054546aba4d471d9767b2bebe9cbe366829559bc02aade7e1a4d7",
+      "Name": "/expertauth-reset-core-a-4f769a37fa3c",
+      "Image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e",
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\installed-policy-02\\secrets\\core.yaml",
+          "Destination": "/run/expertauth/config.yaml",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "started": "2026-09-09T10:56:12.440054399Z",
+      "running": true,
+      "ports": {}
+    },
+    "expertauth-reset-postgres-4f769a37fa3c": {
+      "Id": "1bac422c8a07ae197556ec31f83c18e0a239722b66588b71006d9d15d0e10569",
+      "Name": "/expertauth-reset-postgres-4f769a37fa3c",
+      "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "Mounts": [],
+      "started": "2026-09-09T10:56:11.087500131Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "deployment_core_files": {
+    "expiry-core": {
+      "/opt/expertauth/lib/core-12.2.0.jar": "68405d4700b9d63abef45bf7c10dcadb7d3cf3f5de7c1a9cdb64395c2b7f1de2",
+      "/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar": "d7a7ae7cefd18724658e3bc24f3351bcacc69439245433429d10879da487624c"
+    },
+    "unsupported-core": {
+      "/opt/expertauth/lib/core-12.2.0.jar": "d16e9d760ace7e9c5cd9b888df1e67bcfdad730b25a5c56a50f52e1b2229c539",
+      "/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705"
+    },
+    "missing-writer-core": {
+      "/opt/expertauth/lib/core-12.2.0.jar": "68405d4700b9d63abef45bf7c10dcadb7d3cf3f5de7c1a9cdb64395c2b7f1de2",
+      "/opt/expertauth/plugin/postgresql-plugin-9.8.0.jar": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705"
+    }
+  },
+  "installed_input_hashes": {
+    "good": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "expiry": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "wrong-auth": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "untrusted": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "outage": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "disabled": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "unsupported": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ],
+    "missing-writer": [
+      "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86  /app/server.js",
+      "da88ca777589ca8d7fc2413b8fd35bd7617451e34b99de5b2277d4a335c39cca  /app/email-delivery.js",
+      "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b  /app/package-lock.json",
+      "96c9660fb53a16c68b4cfd1de627c8a01280ccc9b44d975b24d34ee77bc8506e  /app/public/app.js"
+    ]
+  },
+  "readiness": {
+    "good": {
+      "expected_http": 200,
+      "observed": true
+    },
+    "expiry": {
+      "expected_http": 200,
+      "observed": true
+    },
+    "wrong-auth": {
+      "expected_http": 200,
+      "observed": true
+    },
+    "untrusted": {
+      "expected_http": 200,
+      "observed": true
+    },
+    "outage": {
+      "expected_http": 200,
+      "observed": true
+    },
+    "disabled": {
+      "expected_http": 200,
+      "observed": true
+    },
+    "unsupported": {
+      "expected_http": 503,
+      "observed": true
+    },
+    "missing-writer": {
+      "expected_http": 503,
+      "observed": true
+    }
+  },
+  "source_after": {
+    "expertauth-reset-core-a-4f769a37fa3c": {
+      "Id": "494911904ac054546aba4d471d9767b2bebe9cbe366829559bc02aade7e1a4d7",
+      "Name": "/expertauth-reset-core-a-4f769a37fa3c",
+      "Image": "sha256:3e15c927a6625389e03bceb27d898d9a688bdf9d6431cb00b0668530ae56c97e",
+      "Mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\installed-policy-02\\secrets\\core.yaml",
+          "Destination": "/run/expertauth/config.yaml",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "started": "2026-09-09T10:56:12.440054399Z",
+      "running": true,
+      "ports": {}
+    },
+    "expertauth-reset-postgres-4f769a37fa3c": {
+      "Id": "1bac422c8a07ae197556ec31f83c18e0a239722b66588b71006d9d15d0e10569",
+      "Name": "/expertauth-reset-postgres-4f769a37fa3c",
+      "Image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "Mounts": [],
+      "started": "2026-09-09T10:56:11.087500131Z",
+      "running": true,
+      "ports": {}
+    }
+  },
+  "source_processes_and_mounts_unchanged": true,
+  "source_configuration_unchanged": true,
+  "resources_restored": true,
+  "inputs_unchanged": true,
+  "finished": "2026-09-09T10:57:35.919076+00:00"
+}

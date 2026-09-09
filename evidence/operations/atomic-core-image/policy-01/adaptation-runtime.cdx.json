@@ -1,0 +1,2802 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+      "group": "ch.qos.logback",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "EPL-2.0",
+            "url": "https://www.eclipse.org/legal/epl-v20.html"
+          }
+        },
+        {
+          "license": {
+            "name": "LGPL-2.1-only",
+            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+          }
+        }
+      ],
+      "name": "logback-classic",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+      "type": "library",
+      "version": "1.5.38"
+    },
+    {
+      "bom-ref": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+      "group": "ch.qos.logback",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "EPL-2.0",
+            "url": "https://www.eclipse.org/legal/epl-v20.html"
+          }
+        },
+        {
+          "license": {
+            "name": "LGPL-2.1-only",
+            "url": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+          }
+        }
+      ],
+      "name": "logback-core",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+      "type": "library",
+      "version": "1.5.38"
+    },
+    {
+      "bom-ref": "pkg:maven/com.auth0/java-jwt@4.4.0",
+      "group": "com.auth0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "173aab2a30727e5586e13055fb6c4e27112453f5d8cf1136b3369c674cbe011f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The MIT License (MIT)",
+            "url": "https://raw.githubusercontent.com/auth0/java-jwt/master/LICENSE"
+          }
+        }
+      ],
+      "name": "java-jwt",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.auth0/java-jwt@4.4.0",
+      "type": "library",
+      "version": "4.4.0"
+    },
+    {
+      "bom-ref": "pkg:maven/com.eatthepath/java-otp@0.4.0",
+      "group": "com.eatthepath",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c430c1039189635e4b6b7daee98b0c56288e459a3b8ec851cb7bcb9918107247"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The MIT License (MIT)",
+            "url": "http://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "name": "java-otp",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.eatthepath/java-otp@0.4.0",
+      "type": "library",
+      "version": "0.4.0"
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+      "group": "com.fasterxml.jackson.core",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jackson-annotations",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.22",
+      "type": "library",
+      "version": "2.22"
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.1",
+      "group": "com.fasterxml.jackson.core",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jackson-core",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.22.1",
+      "type": "library",
+      "version": "2.22.1"
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.1",
+      "group": "com.fasterxml.jackson.core",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jackson-databind",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.22.1",
+      "type": "library",
+      "version": "2.22.1"
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor@2.22.1",
+      "group": "com.fasterxml.jackson.dataformat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5c6e49843e46aaeebd3ffc777ad221ac2208f3e36e24c56779ac6fabdfb1d499"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jackson-dataformat-cbor",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor@2.22.1",
+      "type": "library",
+      "version": "2.22.1"
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.22.1",
+      "group": "com.fasterxml.jackson.dataformat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc3a0e540791a9a1cbcd7584767b84572ffda0b72823856558f47dea69ae8ed1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jackson-dataformat-yaml",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml@2.22.1",
+      "type": "library",
+      "version": "2.22.1"
+    },
+    {
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.1",
+      "group": "com.fasterxml.jackson.datatype",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "85da45b7e5e565418963ff8f0dcb184365b0557c15468933f4318dde5c3ce845"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jackson-datatype-jsr310",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.22.1",
+      "type": "library",
+      "version": "2.22.1"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "group": "com.google.code.findbugs",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jsr305",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "type": "library",
+      "version": "3.0.2"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.code.gson/gson@2.13.1",
+      "group": "com.google.code.gson",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "94855942d4992f112946d3de1c334e709237b8126d8130bf07807c018a4a2120"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "gson",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.google.code.gson/gson@2.13.1",
+      "type": "library",
+      "version": "2.13.1"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.errorprone/error_prone_annotations@2.38.0",
+      "group": "com.google.errorprone",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6661d5335090a5fc61dd869d2095bc6c1e2156e3aa47a6e4ababdf64c99a7889"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "error_prone_annotations",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.38.0",
+      "type": "library",
+      "version": "2.38.0"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "group": "com.google.guava",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "failureaccess",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "type": "library",
+      "version": "1.0.2"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.guava/guava@33.0.0-jre",
+      "group": "com.google.guava",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f4d85c3e4d411694337cb873abea09b242b664bb013320be6105327c45991537"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "guava",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/guava@33.0.0-jre",
+      "type": "library",
+      "version": "33.0.0-jre"
+    },
+    {
+      "bom-ref": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "group": "com.google.guava",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "listenablefuture",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "type": "library",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava"
+    },
+    {
+      "bom-ref": "pkg:maven/com.googlecode.libphonenumber/libphonenumber@8.13.25",
+      "group": "com.googlecode.libphonenumber",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "43f54cb4b10f907b1dec3b3bbfbbc3eb902ad26769da20b1edbb944a589f2407"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "libphonenumber",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.googlecode.libphonenumber/libphonenumber@8.13.25",
+      "type": "library",
+      "version": "8.13.25"
+    },
+    {
+      "bom-ref": "pkg:maven/com.lambdaworks/scrypt@1.4.0",
+      "group": "com.lambdaworks",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "scrypt",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.lambdaworks/scrypt@1.4.0",
+      "type": "library",
+      "version": "1.4.0"
+    },
+    {
+      "bom-ref": "pkg:maven/com.squareup.okhttp3/okhttp-jvm@5.3.2",
+      "group": "com.squareup.okhttp3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c771f48075b763f6c322055e21129a94b7de4c1faf3f8f58ace320b0c9517a30"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "okhttp-jvm",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.squareup.okhttp3/okhttp-jvm@5.3.2",
+      "type": "library",
+      "version": "5.3.2"
+    },
+    {
+      "bom-ref": "pkg:maven/com.squareup.okio/okio-jvm@3.16.4",
+      "group": "com.squareup.okio",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2196b993cd34dbbd919e7e01f57a4781b58bee80f86106163e287c20343a96a7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "okio-jvm",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.squareup.okio/okio-jvm@3.16.4",
+      "type": "library",
+      "version": "3.16.4"
+    },
+    {
+      "bom-ref": "pkg:maven/com.webauthn4j/webauthn4j-core@0.28.6.RELEASE",
+      "group": "com.webauthn4j",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d8a8f4b735bb9067fc2afd13f8c9ff723a5bad76341a83a4051a998cccff61ab"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "webauthn4j-core",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.webauthn4j/webauthn4j-core@0.28.6.RELEASE",
+      "type": "library",
+      "version": "0.28.6.RELEASE"
+    },
+    {
+      "bom-ref": "pkg:maven/com.webauthn4j/webauthn4j-util@0.28.6.RELEASE",
+      "group": "com.webauthn4j",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ad70dd0c03f7ff7b8515cdc7da3a03f6c970d7a174fcb9347f1c411776b0e80c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "webauthn4j-util",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.webauthn4j/webauthn4j-util@0.28.6.RELEASE",
+      "type": "library",
+      "version": "0.28.6.RELEASE"
+    },
+    {
+      "bom-ref": "pkg:maven/com.zaxxer/HikariCP@6.3.0",
+      "group": "com.zaxxer",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "07c6344059af30a135144209c7c8bd666b8823124422ec859864d209d4ab7ca1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "HikariCP",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/com.zaxxer/HikariCP@6.3.0",
+      "type": "library",
+      "version": "6.3.0"
+    },
+    {
+      "bom-ref": "pkg:maven/commons-codec/commons-codec@1.18.0",
+      "group": "commons-codec",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "commons-codec",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/commons-codec/commons-codec@1.18.0",
+      "type": "library",
+      "version": "1.18.0"
+    },
+    {
+      "bom-ref": "pkg:maven/de.mkammerer/argon2-jvm-nolibs@2.11",
+      "group": "de.mkammerer",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "GNU Lesser General Public License, Version 3",
+            "url": "https://www.gnu.org/licenses/lgpl-3.0.en.html"
+          }
+        }
+      ],
+      "name": "argon2-jvm-nolibs",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/de.mkammerer/argon2-jvm-nolibs@2.11",
+      "type": "library",
+      "version": "2.11"
+    },
+    {
+      "bom-ref": "pkg:maven/de.mkammerer/argon2-jvm@2.11",
+      "group": "de.mkammerer",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "GNU Lesser General Public License, Version 3",
+            "url": "https://www.gnu.org/licenses/lgpl-3.0.en.html"
+          }
+        }
+      ],
+      "name": "argon2-jvm",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/de.mkammerer/argon2-jvm@2.11",
+      "type": "library",
+      "version": "2.11"
+    },
+    {
+      "bom-ref": "pkg:maven/io.dropwizard.metrics/metrics-core@4.2.39",
+      "group": "io.dropwizard.metrics",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc7b1352cd8077974b70b3e365c4f13aa93f5786ce1dea538be5451ed23600c9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+          }
+        }
+      ],
+      "name": "metrics-core",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.dropwizard.metrics/metrics-core@4.2.39",
+      "type": "library",
+      "version": "4.2.39"
+    },
+    {
+      "bom-ref": "pkg:maven/io.dropwizard.metrics/metrics-json@4.2.39",
+      "group": "io.dropwizard.metrics",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8726b15affd61992a4ecd0ed1dc3936782781e7fa0fdc47be04d338f9341dd46"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+          }
+        }
+      ],
+      "name": "metrics-json",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.dropwizard.metrics/metrics-json@4.2.39",
+      "type": "library",
+      "version": "4.2.39"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry.semconv/opentelemetry-semconv@1.42.0",
+      "group": "io.opentelemetry.semconv",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "eb56685bfb9d26b1c95a171b38015747fc3085dd7f63aca26dfd87352ccbbe40"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-semconv",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry.semconv/opentelemetry-semconv@1.42.0",
+      "type": "library",
+      "version": "1.42.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-api@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "07377d6f3fb2ccfb8b8b713290bf48759f9218d4e72467f3ccee55895926ee4b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-api@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-common@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6e0ab4fa86b2581848328cc25c00188d6b0826f039055aec85352ebcf64b05df"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-common",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-common@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-context@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f96d13d1db4bf090eeb36d0c4e211e048a1ef48a59d833569b33aae4b4760a77"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-context",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-context@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-exporter-common@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f288746055a9118d24a662cd7526cd5eb495ff37e5e4e54798a751b4bbe56e20"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-exporter-common",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-exporter-common@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-exporter-logging@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6d85a64b76977a60a57204304925ef216445adc7154d4103136caf6e11306307"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-exporter-logging",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-exporter-logging@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp-common@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "987fb841ea9c4b13699fc5c1afc842c5e83b38e18222821cdf9e6449c4cd5483"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-exporter-otlp-common",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp-common@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4877e560f0ca03675cfb99ed5457c0d1875e953381e029f198280aca8a1d0f47"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-exporter-otlp",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-exporter-sender-okhttp@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5821c0fda70dd188c11a855ed2d76d410ec4fd91d7315299e11e1318e3cb1d58"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-exporter-sender-okhttp",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-exporter-sender-okhttp@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-sdk-common@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "75ecc937b6ad84efd838f445ee7f810f123c54d8c57ecbbec9196f009fe18cd6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-sdk-common",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-sdk-common@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-sdk-logs@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "85c4f207f2a437321af7864e45f92637b7ca5e9c9611103e2ff322bc9e6c4bd7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-sdk-logs",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-sdk-logs@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-sdk-metrics@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2140ff82be356e0d77a206f5f7f4868d22d49efd4976d00dee2fc52f1d8c670e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-sdk-metrics",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-sdk-metrics@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-sdk-trace@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b3ad84c289d421d8ae0062d782043385b84e0394b859f6329dc02dae2485e7c3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-sdk-trace",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-sdk-trace@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/io.opentelemetry/opentelemetry-sdk@1.63.0",
+      "group": "io.opentelemetry",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "37acf2700ced98f59ac719e0551726d62eb085d659eb9f7c8e61f228c230902e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opentelemetry-sdk",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/io.opentelemetry/opentelemetry-sdk@1.63.0",
+      "type": "library",
+      "version": "1.63.0"
+    },
+    {
+      "bom-ref": "pkg:maven/net.java.dev.jna/jna@5.8.0",
+      "group": "net.java.dev.jna",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "930273cc1c492f25661ea62413a6da3fd7f6e01bf1c4dcc0817fc8696a7b07ac"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "LGPL, version 2.1",
+            "url": "http://www.gnu.org/licenses/licenses.html"
+          }
+        },
+        {
+          "license": {
+            "name": "Apache License v2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "jna",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/net.java.dev.jna/jna@5.8.0",
+      "type": "library",
+      "version": "5.8.0"
+    },
+    {
+      "bom-ref": "pkg:maven/net.shibboleth/shib-networking@9.2.3",
+      "group": "net.shibboleth",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cca1d53b5a5bfab21320ed68ee77c5e0f87af53753d69711a52af87cced94861"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "shib-networking",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/net.shibboleth/shib-networking@9.2.3",
+      "type": "library",
+      "version": "9.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/net.shibboleth/shib-security@9.2.3",
+      "group": "net.shibboleth",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "46c53c48a6e1930f145add7f65ed51ab9273de9e3dc746b82e5d695d25bb0ba8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "shib-security",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/net.shibboleth/shib-security@9.2.3",
+      "type": "library",
+      "version": "9.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/net.shibboleth/shib-support@9.2.3",
+      "group": "net.shibboleth",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c68f5668d23aa30a2a5b672dd03b46882bb0ce1185cf02240c4c99eee9bd94b0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "shib-support",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/net.shibboleth/shib-support@9.2.3",
+      "type": "library",
+      "version": "9.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/net.shibboleth/shib-velocity@9.2.3",
+      "group": "net.shibboleth",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "42f0fc3c53eae0b7d241b6e7c5a4c782100c78fe67d3527c1df67ba513a830c8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "shib-velocity",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/net.shibboleth/shib-velocity@9.2.3",
+      "type": "library",
+      "version": "9.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+      "group": "org.apache.commons",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "commons-lang3",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.20.0",
+      "type": "library",
+      "version": "3.20.0"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.httpcomponents.client5/httpclient5-cache@5.6.4",
+      "group": "org.apache.httpcomponents.client5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c425cb6db4863480982899092d1d283f84c0f32914a59bf2de479e69daa8fa11"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "httpclient5-cache",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.httpcomponents.client5/httpclient5-cache@5.6.4",
+      "type": "library",
+      "version": "5.6.4"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.httpcomponents.client5/httpclient5@5.6.4",
+      "group": "org.apache.httpcomponents.client5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bdef5f8841145cd76c4c605ff301bc840eea0d5292332b7b892a93316c0d8ee1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "httpclient5",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.httpcomponents.client5/httpclient5@5.6.4",
+      "type": "library",
+      "version": "5.6.4"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.httpcomponents.core5/httpcore5-h2@5.4.3",
+      "group": "org.apache.httpcomponents.core5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c7db7026b8e2dea39132b04a6069f6671e2858309b20a146ec5c7dd6ed73a0b6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "httpcore5-h2",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.httpcomponents.core5/httpcore5-h2@5.4.3",
+      "type": "library",
+      "version": "5.4.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.httpcomponents.core5/httpcore5@5.4.3",
+      "group": "org.apache.httpcomponents.core5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "18bfbbabb478dfb67f31aeaf428c387f3c3df654582e1309f708ee1f3086830a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "httpcore5",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.httpcomponents.core5/httpcore5@5.4.3",
+      "type": "library",
+      "version": "5.4.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.santuario/xmlsec@3.0.6",
+      "group": "org.apache.santuario",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "395eccc3496063ac7b1d6af2422a11670ee5ded807f51542818eccd5fbb5e20c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "xmlsec",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.santuario/xmlsec@3.0.6",
+      "type": "library",
+      "version": "3.0.6"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.25",
+      "group": "org.apache.tomcat.embed",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "282b65b9fe43647b1459c0df11101f8599a58de5832075acff485c3705ba4894"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "tomcat-embed-core",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.25",
+      "type": "library",
+      "version": "11.0.25"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.tomcat/tomcat-annotations-api@11.0.25",
+      "group": "org.apache.tomcat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d32cc2aad115b27456ce075b2167b3d549aa9ca75439d67f6a60bcc057d7212d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "tomcat-annotations-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.tomcat/tomcat-annotations-api@11.0.25",
+      "type": "library",
+      "version": "11.0.25"
+    },
+    {
+      "bom-ref": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+      "group": "org.apache.velocity",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "velocity-engine-core",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.apache.velocity/velocity-engine-core@2.4.1",
+      "type": "library",
+      "version": "2.4.1"
+    },
+    {
+      "bom-ref": "pkg:maven/org.aspectj/aspectjrt@1.9.24",
+      "group": "org.aspectj",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "38eeea5f17ad49b708afe11473867a99407f656ae140824ce8d6fc0c19fd4802"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Eclipse Public License - v 2.0",
+            "url": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+          }
+        }
+      ],
+      "name": "aspectjrt",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.aspectj/aspectjrt@1.9.24",
+      "type": "library",
+      "version": "1.9.24"
+    },
+    {
+      "bom-ref": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.84",
+      "group": "org.bouncycastle",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c87f16ed9e5ec61bc94151e9f3646ac44e50cd448121ce84367fa4b7ec7ec1bb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Bouncy Castle Licence",
+            "url": "https://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "name": "bcpkix-jdk18on",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.84",
+      "type": "library",
+      "version": "1.84"
+    },
+    {
+      "bom-ref": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.84",
+      "group": "org.bouncycastle",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "64d6c5a6121fcd927152dd182cbed39afe0fda641a970d9bcc0c9cb1858b2731"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Bouncy Castle Licence",
+            "url": "https://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "name": "bcprov-jdk18on",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.84",
+      "type": "library",
+      "version": "1.84"
+    },
+    {
+      "bom-ref": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.84",
+      "group": "org.bouncycastle",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b374e16963421fb9cfb01cc20d7ad8fd2f8b8188e3eef0ec0a8965e245f7619a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Bouncy Castle Licence",
+            "url": "https://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "name": "bcutil-jdk18on",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.84",
+      "type": "library",
+      "version": "1.84"
+    },
+    {
+      "bom-ref": "pkg:maven/org.checkerframework/checker-qual@3.41.0",
+      "group": "org.checkerframework",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2f9f245bf68e4259d610894f2406dc1f6363dc639302bd566e8272e4f4541172"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The MIT License",
+            "url": "http://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "name": "checker-qual",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.checkerframework/checker-qual@3.41.0",
+      "type": "library",
+      "version": "3.41.0"
+    },
+    {
+      "bom-ref": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+      "group": "org.checkerframework",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "857658c8bdcbff794949a8d9922f88d63ee3751c203c7cd7d21ea97f9e745288"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The MIT License",
+            "url": "https://opensource.org/licenses/MIT"
+          }
+        }
+      ],
+      "name": "checker-qual",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+      "type": "library",
+      "version": "3.55.1"
+    },
+    {
+      "bom-ref": "pkg:maven/org.cryptacular/cryptacular@1.3.0",
+      "group": "org.cryptacular",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5bef5b396aba0607bd972365991f833f7d8f16af506f2ade1f589fe344105123"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache 2",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        },
+        {
+          "license": {
+            "name": "GNU Lesser General Public License",
+            "url": "https://www.gnu.org/licenses/lgpl-3.0.txt"
+          }
+        }
+      ],
+      "name": "cryptacular",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.cryptacular/cryptacular@1.3.0",
+      "type": "library",
+      "version": "1.3.0"
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.21",
+      "group": "org.jetbrains.kotlin",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "kotlin-stdlib",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@2.2.21",
+      "type": "library",
+      "version": "2.2.21"
+    },
+    {
+      "bom-ref": "pkg:maven/org.jetbrains/annotations@13.0",
+      "group": "org.jetbrains",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "annotations",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.jetbrains/annotations@13.0",
+      "type": "library",
+      "version": "13.0"
+    },
+    {
+      "bom-ref": "pkg:maven/org.mindrot/jbcrypt@0.4",
+      "group": "org.mindrot",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e183f6f59404fc1e12073cfea4ace7ea103c900463cd21fb609a7c617ecdf624"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "ISC",
+            "url": "https://opensource.org/licenses/isc-license"
+          }
+        }
+      ],
+      "name": "jbcrypt",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.mindrot/jbcrypt@0.4",
+      "type": "library",
+      "version": "0.4"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-core-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "40ed25f0892dfb833aa2b917bd2be1e10cb7c788efb3276b66b19338b80c29f6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-core-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-core-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-core-impl@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "af8604462837a7931d4688ccca3404db325ef7abff7a70a36206a9c4dd7fe953"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-core-impl",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-core-impl@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-messaging-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "53e9a343afcdefdfaad4987d63598a2284c1bf98b99761c8baea1a69c2f7ebcd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-messaging-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-messaging-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-profile-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3c150e2db1dee689b776c604d601adcc060d0305c6eabffa17f213509f5587f8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-profile-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-profile-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-saml-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cce72578ec8df5dd18cb71c88bba89bd196c640281c199ce875e2aa44154f93f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-saml-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-saml-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-saml-impl@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9f04221e172dc426f90fb3873d0148a0744edbf9e7a37de7ee0e6a34f7b74581"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-saml-impl",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-saml-impl@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-security-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2053f9ae1f37a87cf94117ea61395080eb3ec71c631aa71dd2a6c386dd8ff3af"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-security-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-security-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-security-impl@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "21cc4cc73551f4ded22e8390286b9a4202b48c5054498bcd263f393f30d441a1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-security-impl",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-security-impl@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-soap-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1b503de27e275bbe9014b4d503ce80a8b8dcfcb0c47fff9e48f14b05cb2788ab"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-soap-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-soap-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-soap-impl@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b6a38b04741401de8b697ca773f200edb2421347e1eb0aa220355596d5675bf9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-soap-impl",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-soap-impl@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-storage-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "07402db8880c7da7143c57f1c2ea3cf08e1e80e1470d86409e2db56e1d3fb02a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-storage-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-storage-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-xmlsec-api@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3401e9e309fd170f4b9ea0d8fc68b5b778c2374bf654371378bce21952d6c6b9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-xmlsec-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-xmlsec-api@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.opensaml/opensaml-xmlsec-impl@5.2.3",
+      "group": "org.opensaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc67fc1bd9cb435cdbe7483ef04513c83cc9619a3015c04ad41bb6cc0eb6e68e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "opensaml-xmlsec-impl",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.opensaml/opensaml-xmlsec-impl@5.2.3",
+      "type": "library",
+      "version": "5.2.3"
+    },
+    {
+      "bom-ref": "pkg:maven/org.postgresql/postgresql@42.7.13",
+      "group": "org.postgresql",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "BSD-2-Clause",
+            "url": "https://jdbc.postgresql.org/about/license.html"
+          }
+        }
+      ],
+      "name": "postgresql",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.postgresql/postgresql@42.7.13",
+      "type": "library",
+      "version": "42.7.13"
+    },
+    {
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@1.7.36",
+      "group": "org.slf4j",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT License",
+            "url": "http://www.opensource.org/licenses/mit-license.php"
+          }
+        }
+      ],
+      "name": "slf4j-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/slf4j-api@1.7.36",
+      "type": "library",
+      "version": "1.7.36"
+    },
+    {
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@2.0.17",
+      "group": "org.slf4j",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/license/mit"
+          }
+        }
+      ],
+      "name": "slf4j-api",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.slf4j/slf4j-api@2.0.17",
+      "type": "library",
+      "version": "2.0.17"
+    },
+    {
+      "bom-ref": "pkg:maven/org.xerial/sqlite-jdbc@3.45.1.0",
+      "group": "org.xerial",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f5f5404fa5a60f9e0b15e7bea2ea2d137e255f01babd0bfcb9dafcd2e3bf9cd2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "The Apache Software License, Version 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "sqlite-jdbc",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.xerial/sqlite-jdbc@3.45.1.0",
+      "type": "library",
+      "version": "3.45.1.0"
+    },
+    {
+      "bom-ref": "pkg:maven/org.yaml/snakeyaml@2.5",
+      "group": "org.yaml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e6682acf1ace77508ef13649cbf4f8d09d2cf5457bdb61d25ffb6ac0233d78dd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+          }
+        }
+      ],
+      "name": "snakeyaml",
+      "properties": [
+        {
+          "name": "expertauth:source-evidence",
+          "value": "reuse/runtime-dependencies.json"
+        },
+        {
+          "name": "expertauth:distribution-approval",
+          "value": "pending"
+        }
+      ],
+      "purl": "pkg:maven/org.yaml/snakeyaml@2.5",
+      "type": "library",
+      "version": "2.5"
+    },
+    {
+      "type": "library",
+      "name": "expertauth-core",
+      "version": "12.2.0+atomic-v1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "68405d4700b9d63abef45bf7c10dcadb7d3cf3f5de7c1a9cdb64395c2b7f1de2"
+        }
+      ],
+      "properties": [
+        {
+          "name": "expertauth:original-jar-sha256",
+          "value": "d16e9d760ace7e9c5cd9b888df1e67bcfdad730b25a5c56a50f52e1b2229c539"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "expertauth-postgresql-plugin",
+      "version": "9.8.0+atomic-v1",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d7a7ae7cefd18724658e3bc24f3351bcacc69439245433429d10879da487624c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "expertauth:original-jar-sha256",
+          "value": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "supertokens-plugin-interface",
+      "version": "10.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b26b00e1dd31dd0e651689c8dc482842b9c96c521e2b5e9df1092d41d1765f3c"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "component": {
+      "name": "expertauth-atomic-core-candidate",
+      "type": "application",
+      "version": "partial-12.2.0"
+    },
+    "properties": [
+      {
+        "name": "expertauth:scope",
+        "value": "84 Maven runtime dependencies only; excludes OS, build tooling, SDKs, and omitted telemetry resources"
+      },
+      {
+        "name": "expertauth:adaptation",
+        "value": "Two modified Apache JARs plus unchanged plugin interface; OS/native/relink/full distribution remain unqualified"
+      }
+    ]
+  },
+  "specVersion": "1.6",
+  "version": 1
+}
