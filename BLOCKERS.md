@@ -46,13 +46,16 @@
 - Independent human security/licensing review has not occurred. An AI review does
   not meet TST-006/WP-036 or authorize production.
 - PWD-006/WP-009/WP-010: real reset email/token/React behavior passes in the
-  source-mounted candidate lab. Configured cross-tenant and linked-account
+  source-mounted and new installed-image candidate labs. Configured cross-tenant and linked-account
   behavior remains unqualified. Password commit and session revocation are
   separate transactions with a crash gap; known/unknown SMTP timing differs.
   Durable delivery outbox/retries, policy, bounce handling and password-change
-  notifications remain absent. Updated Node Dockerfile image/fresh deployment
-  has not been built. Actual worker-crash cleanup passes, but fallback timeout
-  and Docker daemon outage paths remain untested. See `docs/password-reset.md`.
+  notifications remain absent. Updated Node image2c4ad0be07b8 passes a complete
+  offline build and installed regressions. Fresh stack/cache bootstrap remains
+  unqualified; the orchestration requires the retained private lab and image.
+  Actual historical worker-crash cleanup passes, but new main-deadline expiry,
+  fallback timeout, Docker daemon outage and image promotion/rollback faults
+  remain untested. See `docs/password-reset.md` and `docs/node-offline-build.md`.
 - Hygiene exception: automatic approval review rejected exact recursive removal
   of the95-file,277,260-byte generated Node compile cache at
   `examples/node-react/undefined` with only "blocked by policy". It remains

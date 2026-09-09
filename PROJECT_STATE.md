@@ -11,6 +11,19 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- The complete Node Dockerfile builds with networking disabled and a single
+  14,580,488-byte archive cache. Current image `2c4ad0be07b8` has all8 application
+  files verified and7,629 original archive members matched across143 packages.
+  Its installed reset lab passes10 transport,11 HTTP/SMTP and9 browser checks;
+  55 delivery unit checks and8 archive-parser boundary checks pass separately.
+  The previous image and its6 untagged legacy parents were retired without
+  parent pruning or force. All16 build/reset containers and a separate compiler
+  container retired; original52 identities and persistent processes preserved.
+  Hygiene `verification-20260909T055142Z.json` passes10 checks:2 containers,
+  6 current tags, no dangling project-labeled images. Nodemailer9.1.1 original
+  tarball correspondence is now established. Read `docs/node-offline-build.md`:
+  native/base-image licensing, fresh bootstrap, lifecycle faults and full
+  authentication acceptance remain open; no requirement status was promoted.
 - Node/React password reset now uses real authenticated TLS SMTP and the engine's
   one-time token/password APIs. Combined run-16 passes10 transport,11 HTTP/SMTP
   and9 Chromium checks, including eight concurrent consumers with one winner.
@@ -20,7 +33,8 @@ Actual code and evidence:
   of all6 temporary containers. Read `docs/password-reset.md` for exact sources,
   prior failures and commands. PWD-006 remains implemented-unverified: configured
   tenant/link cases, atomic password-change/session-revocation, durable outbox,
-  full new image build and independent review remain open. No engine was selected.
+  fresh deployment and independent review remain open. The newer installed-image
+  proof above closes only the earlier image-build gap. No engine was selected.
 - A real encrypted recovery drill now restores the candidate database, signing
   material and configuration into temporary PostgreSQL/Core instances.28 format
   tests and19 operational checks pass; one historical snapshot state is separately

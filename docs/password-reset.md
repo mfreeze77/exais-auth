@@ -48,6 +48,14 @@ retires all 6 temporary containers. Its normal `passed` remains false;
 `cleanup_fault_passed` records only this intentionally injected lifecycle case.
 Fallback timeouts and Docker daemon failures were not injected.
 
+The complete updated image was subsequently built offline and tested in
+`evidence/operations/password-reset/installed-offline-build-02`. It passes the
+same10 transport/11 HTTP/SMTP/9 browser checks with **no application source or
+bundle mounts**, again retiring12 containers and11 identities and preserving
+the original52. This also verifies the55 delivery unit checks inside the image.
+The installed-image cleanup-fault and new main-deadline expiry branches were
+not injected. See [the image build evidence](node-offline-build.md).
+
 ## Reproduce changed work
 
 Use the existing private `expertauth-oss-proof` network and source Core/database.
@@ -71,10 +79,12 @@ python -B tools/verify_checkpoint_hygiene.py
 
 The compiler runs offline inside the existing immutable Node image, checks its
 installed lock and esbuild version, and overwrites only the generated client
-bundle. `reset-client-03` produced the bundle tested in run-16. The application
-was tested with exact read-only source/bundle mounts over the cached dependency
-image. The updated full Dockerfile has **not** been rebuilt or qualified from a
-fresh extraction. Do not claim the existing Node image contains these changes.
+bundle. `reset-client-03` produced the bundle tested in run-16, which used
+read-only source/bundle mounts. `promoted-node-01` reproduced the same589,321-byte
+bundle using current image2c4ad0be07b8. That image contains the updated application
+and passes the installed-image lab. A fresh extraction/stack/cache bootstrap
+has not been qualified. The image builder command and precise prerequisites
+are documented in `docs/node-offline-build.md`.
 Private fixture credentials and raw logs stay under ignored `.runtime/`.
 
 ## Unfinished acceptance and disclosed failures
@@ -104,5 +114,7 @@ run-02. Historical source snapshots bind run-16 and later failed variants;
 the exact earlier run-01/run-02 runner bodies were not retained, although their
 input hashes and available failure evidence remain. They cannot certify source
 behavior. Full native/platform/live-provider and independent human security
-review remain blocked; the file-specific reuse report also retains unresolved
-Nodemailer source correspondence and complete distribution obligations.
+review remain blocked. The historical file-specific reuse report preserves its
+then-unresolved Nodemailer source gap; the newer
+`reuse/nodemailer-9.1.1-source-correspondence.json` closes original-tarball
+correspondence for its selected files. Complete distribution obligations remain open.

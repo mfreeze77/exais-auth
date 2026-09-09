@@ -1,0 +1,69 @@
+{
+  "timestamp_utc": "2026-09-09T05:57:03.132399+00:00",
+  "kind": "read-only-scoped-disk-inventory",
+  "paths": [
+    {
+      "path": ".cache/node-packages",
+      "exists": true,
+      "files": 143,
+      "logical_file_bytes": 14891202
+    },
+    {
+      "path": ".cache/python-wheels",
+      "exists": true,
+      "files": 49,
+      "logical_file_bytes": 20367857
+    },
+    {
+      "path": ".runtime/node-image-build",
+      "exists": true,
+      "files": 0,
+      "logical_file_bytes": 0
+    },
+    {
+      "path": ".runtime/password-reset",
+      "exists": true,
+      "files": 777,
+      "logical_file_bytes": 451232
+    },
+    {
+      "path": "examples/node-react/undefined",
+      "exists": true,
+      "files": 95,
+      "logical_file_bytes": 277260
+    },
+    {
+      "path": "artifacts",
+      "exists": true,
+      "files": 38,
+      "logical_file_bytes": 43806144
+    }
+  ],
+  "host_disk": {
+    "total": 2046749044736,
+    "used": 1746392621056,
+    "free": 300356423680
+  },
+  "docker_system_df_observed": {
+    "images": {
+      "records": 152,
+      "size": "74GB"
+    },
+    "containers": {
+      "records": 59,
+      "size": "2.187GB"
+    },
+    "volumes": {
+      "records": 261,
+      "size": "85.43GB"
+    },
+    "build_cache": {
+      "records": 132,
+      "size": "8.968GB"
+    }
+  },
+  "docker_df_scope": "Entire shared daemon. Includes unrelated projects; no cleanup authorization inferred. Read-only docker system df --format json observation in same session.",
+  "physical_host_bytes_freed": null,
+  "task_hygiene_report": "evidence/operations/hygiene/verification-20260909T055142Z.json",
+  "blocked_cache_deletion": "evidence/operations/hygiene/password-reset-host-cache-blocked.json"
+}

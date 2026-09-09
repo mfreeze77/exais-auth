@@ -1,17 +1,40 @@
 # ExpertAuth source reuse and licensing audit checkpoint
 
+The 2026-09-09 Node follow-up is documented in `docs/node-offline-build.md`.
+Its complete offline image audit matches 7,629 original archive members across 143
+packages and preserves the prior installed dependency tree. The new
+`reuse/nodemailer-9.1.1-source-correspondence.json` closes the historical selected
+Nodemailer files' original-tarball gap. Neither result approves native/OS/full
+distribution licensing or replaces independent review.
+
+| File | Current reuse boundary |
+|---|---|
+| `examples/node-react/Dockerfile` | Existing pinned Node base and locked npm dependencies; offline installation/build, no lifecycle scripts, build-only cache mount |
+| `tools/export_node_packages.mjs` | Locally authored Node standard-library cache recovery with SRI/size/path bounds; no package reimplementation |
+| `tools/verify_node_runtime.mjs` | Local inventory/correspondence driver using npm's maintained tar 7.5.11 parser (BlueOak-1.0.0 notice/hash recorded); no archive extraction |
+| `tests/reuse/node_package_boundaries.mjs` | Local real-parser boundary checks; synthetic archive fixtures are tooling evidence only |
+| `tools/build_node_runtime.py`, `tools/node_runtime_identity.py` | Local build/ownership/promotion/evidence orchestration; no authentication engine code |
+| `tools/audit_nodemailer_correspondence.py` | Local original-tarball/installed-file comparison; preserved MIT-0 notice, no Nodemailer source modification |
+| `tools/retire_legacy_node_images.py` | Local one-time exact-ID retirement; no new runtime dependency |
+
+Each executed report and the implementation ledger binds exact source hashes.
+All 143 package paths, versions, member hashes, license candidates, generated
+metadata and the esbuild ELF member are individually recorded in the candidate
+runtime report. Complete native source/build and base-image closure remain open.
+
 Audit date: 2026-09-08 UTC. This report records immutable candidate sources and
 real package/archive inspection. It does not select an identity engine, qualify
 any SDK, or approve a production distribution. Requirements BAS-002, BAS-004,
 and BAS-005 remain subject to complete dependency, build, and release evidence.
 
-Password-reset file-specific reuse is in `reuse/password-reset-components.json`:
+Historical password-reset file-specific reuse is in `reuse/password-reset-components.json`:
 33 selected maintained JS files, five authored product files, immutable revisions,
 licenses, notices, exact hashes and actual run-16 evidence. Twenty-five selected
 files match original npm member manifests; two website files match the retained
-installed audit. Six Nodemailer9.1.1 files have current hashes, while correspondence
-to original9.1.1 tarball members remains unproven because the broad old inventory
-describes8.0.11. This distinction is not hidden by the qualified dependency override.
+installed audit. At that checkpoint, six Nodemailer9.1.1 files had current hashes
+but lacked original9.1.1 tarball correspondence because the old broad inventory
+described8.0.11. The newer follow-up above closes that exact gap and preserves
+the older report unchanged.
 The test-only Mailpit1.31.1 OCI digest and MIT notice are pinned; full Go/OS
 source-build/transitive distribution closure is not inferred. No Mailpit binary
 or private certificate/key material is included in the source checkpoint.

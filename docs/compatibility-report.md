@@ -9,9 +9,11 @@ See `contracts/README.md`, `api-contracts.json` and their source/licensing repor
 
 The working OSS Node/React and Python examples exercise password/session subsets.
 The new Node/React reset subset uses optional authenticated TLS SMTP and engine
-reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks;
-the source-mounted candidate does not qualify a new image or complete SDK/API
-profile. Nonexistent-tenant rejection is distinct from configured-tenant isolation.
+reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks.
+The subsequent full offline image2c4ad0be07b8 passes those checks with no app
+source/bundle mounts; its installed dependencies match the prior audited tree.
+Neither proof qualifies a complete SDK/API profile or a fresh deployment.
+Nonexistent-tenant rejection is distinct from configured-tenant isolation.
 No original API ID is promoted by this result. See `docs/password-reset.md`.
 
 The current Python image `5bffadb83aa3` passes19 HTTP regression checks after the

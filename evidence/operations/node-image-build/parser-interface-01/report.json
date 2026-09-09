@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--pull=never",
+    "--name",
+    "expertauth-tar-api-e45def372b",
+    "--label",
+    "org.expertauth.project=expert-auth",
+    "--label",
+    "org.expertauth.purpose=node-tar-api",
+    "--read-only",
+    "--network",
+    "none",
+    "--memory=256m",
+    "--cpus=1",
+    "--pids-limit=64",
+    "--cap-drop=ALL",
+    "--security-opt=no-new-privileges",
+    "--entrypoint",
+    "node",
+    "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "-e",
+    "const p='/usr/local/lib/node_modules/npm/node_modules/tar';const t=require(p);const fs=require('node:fs');const crypto=require('node:crypto');console.log(JSON.stringify({version:require(p+'/package.json').version,exports:Object.fromEntries(Object.entries(t).map(([k,v])=>[k,typeof v])),entry:require.resolve(p),entry_sha256:crypto.createHash('sha256').update(fs.readFileSync(require.resolve(p))).digest('hex')}));"
+  ],
+  "exit_code": 0,
+  "container_removed": true,
+  "output_sha256": "722228a34d9ccf5b0f7b917dd2db30f11cb2a887ab85e97d8239fc190df1f18d"
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "expertauth-node-offline-image-build-v1",
+  "started": "2026-09-09T05:27:59.118262+00:00",
+  "run_id": "978c22eedf0b4ac88ca62a2654372478",
+  "input_sha256": {
+    "tools/build_node_runtime.py": "c42aeef75c0da545e5a14b944f8b202daa2e3e511adf4f97530200f037c5ffa7",
+    "tools/build_oss_runtime.py": "54b9ae1d23f95d16bf25f3b89e4c41373980600d3c0b9dd3a7cb43db6cf08382",
+    "tools/export_node_packages.mjs": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tools/run_recovery_drill.py": "ae8640f7edee3d9f9eb0c424a800b42a611d4cd93996a1f8686c6b8b032bc978",
+    "examples/node-react/Dockerfile": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "passed": false,
+  "foundation_passed": false,
+  "full_distribution_approved": false,
+  "image_promoted": false,
+  "build_network": "none",
+  "image_downloads": 0,
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-node-react:0.0.5"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "command-001.log",
+      "sha256": "a8e376f15d067d5cdfa478eea99b19e84be70fd23b5ed8010d25c649060e599a"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "ls",
+        "-aq",
+        "--no-trunc",
+        "--filter",
+        "label=org.expertauth.build-run=978c22eedf0b4ac88ca62a2654372478"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "command-002.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-node-react:0.0.5"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "log": "command-003.log",
+      "sha256": "a8e376f15d067d5cdfa478eea99b19e84be70fd23b5ed8010d25c649060e599a"
+    }
+  ],
+  "errors": [
+    "RuntimeError: Current image ownership differs"
+  ],
+  "temporary_containers_retired": [],
+  "private_scratch_removed": true,
+  "finished": "2026-09-09T05:27:59.905134+00:00"
+}

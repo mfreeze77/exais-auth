@@ -1,0 +1,1 @@
+{"ok":false,"inventory_verified":false,"packages":0,"dependency_files":7634,"tar_correspondence":{"verified":false,"matched_files":0,"missing_files":0,"different_files":0,"extra_installed_files":0,"unsupported_entries":0,"failed_archives":0,"mode_differences":0,"package_count_verified":0},"errors":[{"code":"UNSUPPORTED_NPM_TAR_INTERFACE"}]}

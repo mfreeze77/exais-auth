@@ -46,7 +46,10 @@ The [password reset example](docs/password-reset.md) now completes real React
 recovery through self-hosted authenticated TLS SMTP. Its combined proof passes
 10 transport, 11 HTTP/SMTP and 9 browser checks; a forced worker crash also
 qualifies exact owned-account/container cleanup. Full PWD-006, configured tenant
-isolation, durable delivery and the rebuilt Node image remain unqualified.
+isolation and durable delivery remain unqualified. The complete Node Dockerfile
+now builds offline and its installed image passes those reset checks. The
+[build report](docs/node-offline-build.md) records package correspondence,
+old-image retirement and the remaining fresh-bootstrap/distribution gaps.
 
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image

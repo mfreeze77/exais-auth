@@ -1,0 +1,262 @@
+[
+  {
+    "archive_member": "package/.gitattributes",
+    "bytes": 95,
+    "sha256": "4524e90524bf59af447e6f89b5f3a978b2c66f2c560935d6a2134999d52aa37e"
+  },
+  {
+    "archive_member": "package/.ncurc.js",
+    "bytes": 136,
+    "sha256": "9e7b4d3c7d681842d7066167c2ae68803b8c71be0bd4dc4c06538885c7491f4b"
+  },
+  {
+    "archive_member": "package/.prettierignore",
+    "bytes": 85,
+    "sha256": "5b25daedf6dbaeb878a25ea8fdfb85f36e61e5801f93eac8afb0cdfc049dad5d"
+  },
+  {
+    "archive_member": "package/.prettierrc",
+    "bytes": 249,
+    "sha256": "dfc8f0ac226d1fd9a013116e999c7ea0b10762e0d1f18c527bf1b3ffb5d6ed60"
+  },
+  {
+    "archive_member": "package/.prettierrc.js",
+    "bytes": 171,
+    "sha256": "6e1c0722331d0d0b761ee29fb1eca21d70ce145dc1e9ec66399653d62bdd08b2"
+  },
+  {
+    "archive_member": "package/.release-please-config.json",
+    "bytes": 219,
+    "sha256": "3f15eb2cca419a56ef529bea1bf08429e5d93363bcac8085a6aaa08b9878c511"
+  },
+  {
+    "archive_member": "package/CHANGELOG.md",
+    "bytes": 50900,
+    "sha256": "01a7f2e682d6617c599a5153cc9a33f5c6ca3e4606e6f1dc7726d97432977d40"
+  },
+  {
+    "archive_member": "package/CLAUDE.md",
+    "bytes": 5060,
+    "sha256": "72d6992d4b85db40118674331f6eb6723c0cef0fdb095342de691fffefa17d3f"
+  },
+  {
+    "archive_member": "package/CODE_OF_CONDUCT.md",
+    "bytes": 3354,
+    "sha256": "e75913f2c7fb17dc3471ee52c05de9f116f2950f1a15424af60a489db0f36d0c"
+  },
+  {
+    "archive_member": "package/LICENSE",
+    "bytes": 935,
+    "sha256": "4f814dcacd2da618d62829ea1f6238701cf421f18a6b36c91c5d8212245e2c78"
+  },
+  {
+    "archive_member": "package/README.md",
+    "bytes": 5291,
+    "sha256": "91fadaff68ded259109b42118ba320b5e17b509d7f04e2f2e85ad82ca33321e0"
+  },
+  {
+    "archive_member": "package/SECURITY.md",
+    "bytes": 2741,
+    "sha256": "5d87726e0cbd51a7b475b565c6f9dc00ffbc3c913e844fe381a2be9df8363b4b"
+  },
+  {
+    "archive_member": "package/SECURITY.txt",
+    "bytes": 1044,
+    "sha256": "2a1f66431b09276f3c88d7b3724fba181e94cbd6cd0073b7a69d7e908572e8d5"
+  },
+  {
+    "archive_member": "package/eslint.config.js",
+    "bytes": 2952,
+    "sha256": "ab4f056da69d277ad6092d866ddfddc8827c5fadad0c4dbbf60d6c0590457b10"
+  },
+  {
+    "archive_member": "package/lib/addressparser/index.js",
+    "bytes": 20033,
+    "sha256": "af1b7dd73e7d255466d0f8385e45ef1628443062be23e768e193489c5c6fbf07"
+  },
+  {
+    "archive_member": "package/lib/base64/index.js",
+    "bytes": 3800,
+    "sha256": "e27971b51171583b654209c03828bb01240c29e1f8426ff0bbd05e703d4e44be"
+  },
+  {
+    "archive_member": "package/lib/dkim/index.js",
+    "bytes": 7411,
+    "sha256": "ac5140580a361a2705cc7f433f41d073a8ca5e69e122a7425ff8aa151fd914bd"
+  },
+  {
+    "archive_member": "package/lib/dkim/message-parser.js",
+    "bytes": 4778,
+    "sha256": "40d582fae63838e89c9f18c09cf50756326aec572f78ee5c74e4acc5e0760bae"
+  },
+  {
+    "archive_member": "package/lib/dkim/relaxed-body.js",
+    "bytes": 5743,
+    "sha256": "f2517e994c1ff63c729f0fb3bbf95d72bd590b1ba5992e5ce92dae0f6191c6f0"
+  },
+  {
+    "archive_member": "package/lib/dkim/sign.js",
+    "bytes": 4096,
+    "sha256": "e80d9c41e56dbb2e4251e0fc0f9203ec02795fb6a0d2a32f08a529a1076af614"
+  },
+  {
+    "archive_member": "package/lib/errors.js",
+    "bytes": 1826,
+    "sha256": "a072296997631ff14d15d528f0fdf04c685c7b75aade4cdac043b7e0410fd15b"
+  },
+  {
+    "archive_member": "package/lib/fetch/cookies.js",
+    "bytes": 8042,
+    "sha256": "9e9035daba695f26ab02ac5a0dfad3abb3bc743a473204da69d80da049735cf3"
+  },
+  {
+    "archive_member": "package/lib/fetch/index.js",
+    "bytes": 13618,
+    "sha256": "ec61fe0b4de2c802465d3f41f34efa883e80289742c6bdc25a9e8a9ca0ce7b72"
+  },
+  {
+    "archive_member": "package/lib/json-transport/index.js",
+    "bytes": 2345,
+    "sha256": "b07f16dbd12b405704aee7ceec34aaebb07b60a227761a62ded98f3694faf912"
+  },
+  {
+    "archive_member": "package/lib/mail-composer/index.js",
+    "bytes": 23516,
+    "sha256": "53e3a3d2c2e38f9cd24b8e7f646b4f88318c91d5d02c0d311d4a0c93dc01f502"
+  },
+  {
+    "archive_member": "package/lib/mailer/index.js",
+    "bytes": 16696,
+    "sha256": "6e96b7b4dcd54e31ea534bc5e5fde2dcf3ad27dddc62df7ff7d13c95a3649d1a"
+  },
+  {
+    "archive_member": "package/lib/mailer/mail-message.js",
+    "bytes": 14909,
+    "sha256": "48dee32e88b6adc24cf6cb7fe83b7abded4227f396780f010efa4053b08c0789"
+  },
+  {
+    "archive_member": "package/lib/mime-funcs/index.js",
+    "bytes": 26980,
+    "sha256": "64f06c89208cab5d07c23834c00b977defd5096cb69bc64f4031eaffa3a0f2c1"
+  },
+  {
+    "archive_member": "package/lib/mime-funcs/mime-types.js",
+    "bytes": 90089,
+    "sha256": "0eea3b091ec4467a7ffe2cbb1cd24dd6d15c3e02513ca163065af5d726cb3087"
+  },
+  {
+    "archive_member": "package/lib/mime-node/index.js",
+    "bytes": 58284,
+    "sha256": "2b8ab89d1b498eefe311b59cccf160fbdfa21d8ae24e77f3c2d52280874cb214"
+  },
+  {
+    "archive_member": "package/lib/mime-node/last-newline.js",
+    "bytes": 664,
+    "sha256": "e3c6074815297f6430730970ff01068c1251b55df384552d352290410fa70202"
+  },
+  {
+    "archive_member": "package/lib/mime-node/le-unix.js",
+    "bytes": 862,
+    "sha256": "6be7ba41663b4cfb5d0f0af119a0a2a66a860e333ce1f00162fccf011730d3db"
+  },
+  {
+    "archive_member": "package/lib/mime-node/le-windows.js",
+    "bytes": 1202,
+    "sha256": "b5047eaee790a4130926fc96a6f05d4b2665874206a07a44670e6f9bf186a505"
+  },
+  {
+    "archive_member": "package/lib/nodemailer.js",
+    "bytes": 5829,
+    "sha256": "ac154398b38aee6760700031ab065d6859fbd3cfeb79ac6d045806d62f0fbdae"
+  },
+  {
+    "archive_member": "package/lib/punycode/index.js",
+    "bytes": 15310,
+    "sha256": "4d76ae11d503f071003a56900c653962bf224c19a7370ac4fe3990120ed03599"
+  },
+  {
+    "archive_member": "package/lib/qp/index.js",
+    "bytes": 6519,
+    "sha256": "26b44311d971d426c4d7e29233e6ca6e48993ec3a3974dbf251872afad362b1e"
+  },
+  {
+    "archive_member": "package/lib/sendmail-transport/index.js",
+    "bytes": 7230,
+    "sha256": "4d29125481bf1b85a4233d8234e41944c964c99094c9ff6b35b0ed7df4a2d103"
+  },
+  {
+    "archive_member": "package/lib/ses-transport/index.js",
+    "bytes": 9411,
+    "sha256": "215cadb1425e5785173b825896f963638254d9cddaf54c2e07389d992f6e2a8e"
+  },
+  {
+    "archive_member": "package/lib/shared/index.js",
+    "bytes": 23546,
+    "sha256": "e6abd25ee325e0fdfa017514aa08739e84f705c110d848759babaadfd0ac3d3b"
+  },
+  {
+    "archive_member": "package/lib/shared/objects.js",
+    "bytes": 1810,
+    "sha256": "2e44dde1c778589bc80256b6e950f88c18e0b40a5f1d74bb01a7f15e54d3fc85"
+  },
+  {
+    "archive_member": "package/lib/shared/url.js",
+    "bytes": 6342,
+    "sha256": "766cf6e6ccba25d4fd7172dda6ed0197d85337901c103d58f2a413b35260d6f0"
+  },
+  {
+    "archive_member": "package/lib/smtp-connection/data-stream.js",
+    "bytes": 2905,
+    "sha256": "4c2ca548074ab52c560ae5cc179e865e3acfec81d2c18f748e8af519826312b5"
+  },
+  {
+    "archive_member": "package/lib/smtp-connection/http-proxy-client.js",
+    "bytes": 5833,
+    "sha256": "fe402eaaeac5a833035350826989e34f17b9f0d5b174d6a9a5bda4dedf45cfc6"
+  },
+  {
+    "archive_member": "package/lib/smtp-connection/index.js",
+    "bytes": 71856,
+    "sha256": "e21b42bacde6829f8cd9261eb18f07f8c5c3c99d81f1e104a63356700f2fbda5"
+  },
+  {
+    "archive_member": "package/lib/smtp-pool/index.js",
+    "bytes": 19502,
+    "sha256": "9d0f6d5283c56b5d3f9f818957c8eb91624087a9248d38edb1f9871ad5e0e1e2"
+  },
+  {
+    "archive_member": "package/lib/smtp-pool/pool-resource.js",
+    "bytes": 8488,
+    "sha256": "f88c95011c9d6d1a7f1273889938a29651ad086cc36323a74ab81706796360e1"
+  },
+  {
+    "archive_member": "package/lib/smtp-transport/index.js",
+    "bytes": 14455,
+    "sha256": "776029f846de6bdbfc0229d2fca5a24f6e30c5d45a586f9ba9ffead8cd8d3275"
+  },
+  {
+    "archive_member": "package/lib/stream-transport/index.js",
+    "bytes": 4531,
+    "sha256": "8359c588888edfc354aedd51edff0549e20cb56974669090299fefaf66daa01e"
+  },
+  {
+    "archive_member": "package/lib/well-known/index.js",
+    "bytes": 1242,
+    "sha256": "628e265f769cf5947fac7e0811b02eb43cfdf635131eca1b4b6879da58dd27a0"
+  },
+  {
+    "archive_member": "package/lib/well-known/services.json",
+    "bytes": 15460,
+    "sha256": "a9004032921c8a835a648ca7f84fcfc953b73cee58c1388fb9ebcbb7bd0089fc"
+  },
+  {
+    "archive_member": "package/lib/xoauth2/index.js",
+    "bytes": 16739,
+    "sha256": "b022058e65555ac0c2968faeaad977a0984998570491d0e4e9bb183272826cb9"
+  },
+  {
+    "archive_member": "package/package.json",
+    "bytes": 1647,
+    "sha256": "4ea1ee33f7582183473fe5c89215231534c90b3489da575347993505132dbb95"
+  }
+]

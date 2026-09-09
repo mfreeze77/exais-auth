@@ -1,0 +1,340 @@
+TAP version 13
+# Subtest: SMTP-UNIT-001 absent settings disable the adapter without reading a file
+ok 1 - SMTP-UNIT-001 absent settings disable the adapter without reading a file
+  ---
+  duration_ms: 0.812536
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-002 defaults construct the maintained SMTPService without sending email
+ok 2 - SMTP-UNIT-002 defaults construct the maintained SMTPService without sending email
+  ---
+  duration_ms: 6.167105
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-003 original plain-text template preserves the supplied SDK link and recipient
+ok 3 - SMTP-UNIT-003 original plain-text template preserves the supplied SDK link and recipient
+  ---
+  duration_ms: 0.985966
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects missing host
+ok 4 - SMTP-UNIT-CONFIG rejects missing host
+  ---
+  duration_ms: 0.332561
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects empty host
+ok 5 - SMTP-UNIT-CONFIG rejects empty host
+  ---
+  duration_ms: 0.126753
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects host header injection
+ok 6 - SMTP-UNIT-CONFIG rejects host header injection
+  ---
+  duration_ms: 0.062076
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects host URL
+ok 7 - SMTP-UNIT-CONFIG rejects host URL
+  ---
+  duration_ms: 0.094487
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects host label
+ok 8 - SMTP-UNIT-CONFIG rejects host label
+  ---
+  duration_ms: 0.601362
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects host oversized
+ok 9 - SMTP-UNIT-CONFIG rejects host oversized
+  ---
+  duration_ms: 0.205131
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects invalid IP
+ok 10 - SMTP-UNIT-CONFIG rejects invalid IP
+  ---
+  duration_ms: 0.235362
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects zero port
+ok 11 - SMTP-UNIT-CONFIG rejects zero port
+  ---
+  duration_ms: 0.107322
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects port overflow
+ok 12 - SMTP-UNIT-CONFIG rejects port overflow
+  ---
+  duration_ms: 0.101017
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects nonnumeric port
+ok 13 - SMTP-UNIT-CONFIG rejects nonnumeric port
+  ---
+  duration_ms: 0.052247
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects port whitespace
+ok 14 - SMTP-UNIT-CONFIG rejects port whitespace
+  ---
+  duration_ms: 0.040998
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects missing sender
+ok 15 - SMTP-UNIT-CONFIG rejects missing sender
+  ---
+  duration_ms: 0.037041
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects recipient list sender
+ok 16 - SMTP-UNIT-CONFIG rejects recipient list sender
+  ---
+  duration_ms: 0.039571
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects invalid sender
+ok 17 - SMTP-UNIT-CONFIG rejects invalid sender
+  ---
+  duration_ms: 0.03736
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects sender header injection
+ok 18 - SMTP-UNIT-CONFIG rejects sender header injection
+  ---
+  duration_ms: 0.034819
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects sender oversized
+ok 19 - SMTP-UNIT-CONFIG rejects sender oversized
+  ---
+  duration_ms: 0.03814
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects sender name injection
+ok 20 - SMTP-UNIT-CONFIG rejects sender name injection
+  ---
+  duration_ms: 0.073175
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects sender name newline
+ok 21 - SMTP-UNIT-CONFIG rejects sender name newline
+  ---
+  duration_ms: 0.044307
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects sender name oversized
+ok 22 - SMTP-UNIT-CONFIG rejects sender name oversized
+  ---
+  duration_ms: 0.039647
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects username newline
+ok 23 - SMTP-UNIT-CONFIG rejects username newline
+  ---
+  duration_ms: 0.038636
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects username oversized
+ok 24 - SMTP-UNIT-CONFIG rejects username oversized
+  ---
+  duration_ms: 0.044016
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects missing password file
+ok 25 - SMTP-UNIT-CONFIG rejects missing password file
+  ---
+  duration_ms: 0.054634
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects relative password file
+ok 26 - SMTP-UNIT-CONFIG rejects relative password file
+  ---
+  duration_ms: 0.046389
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects nonexistent password file
+ok 27 - SMTP-UNIT-CONFIG rejects nonexistent password file
+  ---
+  duration_ms: 0.084571
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects directory password file
+ok 28 - SMTP-UNIT-CONFIG rejects directory password file
+  ---
+  duration_ms: 0.072351
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-CONFIG rejects disabled TLS verification
+ok 29 - SMTP-UNIT-CONFIG rejects disabled TLS verification
+  ---
+  duration_ms: 0.038395
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-004 any partial SMTP setting requires the complete configuration
+ok 30 - SMTP-UNIT-004 any partial SMTP setting requires the complete configuration
+  ---
+  duration_ms: 0.182578
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-005 password file accepts exactly one terminal newline and preserves spaces
+ok 31 - SMTP-UNIT-005 password file accepts exactly one terminal newline and preserves spaces
+  ---
+  duration_ms: 0.742274
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-006 malformed password files fail without exposing content or path
+ok 32 - SMTP-UNIT-006 malformed password files fail without exposing content or path
+  ---
+  duration_ms: 0.919492
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 33 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.09308
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 34 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.050057
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 35 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.084294
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 36 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.516705
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 37 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.077096
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 38 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.049382
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-ORIGIN rejects a non-origin public URL
+ok 39 - SMTP-UNIT-ORIGIN rejects a non-origin public URL
+  ---
+  duration_ms: 0.058144
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 40 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.364703
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 41 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.297481
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 42 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.233202
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 43 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.138128
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 44 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.160456
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 45 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.124913
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 46 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.101234
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 47 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.156957
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 48 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.122492
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 49 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.13509
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 50 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.15719
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 51 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.186284
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+ok 52 - SMTP-UNIT-LINK rejects an untrusted reset link without contacting SMTP
+  ---
+  duration_ms: 0.164601
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-007 rejects unrelated email types and malformed recipients
+ok 53 - SMTP-UNIT-007 rejects unrelated email types and malformed recipients
+  ---
+  duration_ms: 0.457064
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-008 negative error injection tests sanitization only, not SMTP delivery
+ok 54 - SMTP-UNIT-008 negative error injection tests sanitization only, not SMTP delivery
+  ---
+  duration_ms: 0.474778
+  type: 'test'
+  ...
+# Subtest: SMTP-UNIT-009 process-level insecure TLS is rejected even with an isolated config object
+ok 55 - SMTP-UNIT-009 process-level insecure TLS is rejected even with an isolated config object
+  ---
+  duration_ms: 0.084345
+  type: 'test'
+  ...
+1..55
+# tests 55
+# suites 0
+# pass 55
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 144.273065

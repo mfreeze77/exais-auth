@@ -16,12 +16,14 @@ promise immediate logout revocation. `/api/session` is SDK hybrid verification;
 `/api/session/online` performs the online check. Password reset now uses optional
 authenticated SMTP with verified implicit TLS; without SMTP both reset endpoints
 are disabled. See [password reset evidence and setup](../../docs/password-reset.md).
-Its source/bundle mount lab passes; the updated full image has not been rebuilt.
+Its full offline image and installed reset lab pass. Exact package/app byte
+correspondence and the remaining fresh-bootstrap gaps are described in
+[the build report](../../docs/node-offline-build.md).
 
 From the repository root after starting the private OSS lab:
 
 ```powershell
-docker build -t expertauth-node-react:0.0.5 examples/node-react
+python -B tools/build_node_runtime.py --name NEW_NODE_IMAGE_BUILD
 docker run -d --name expertauth-node-react --label org.expertauth.purpose=oss-foundation --network expertauth-oss-proof --network-alias node-app.example.test --env-file .runtime/oss-core/runtime.env -e EXPERTAUTH_PUBLIC_ORIGIN=http://node-app.example.test:3000 -e EXPERTAUTH_LOCAL_PROBE=true --read-only --tmpfs /tmp:rw,noexec,nosuid,size=16m --cap-drop ALL --security-opt no-new-privileges expertauth-node-react:0.0.5
 ```
 

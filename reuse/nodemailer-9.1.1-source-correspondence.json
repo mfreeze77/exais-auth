@@ -1,0 +1,160 @@
+{
+  "acquisition": {
+    "failed_initial_attempt_source": {
+      "bytes": 15781,
+      "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/acquisition/tool-source.py",
+      "sha256": "5ece8d9c8af519aee21064295e588f9bc481977065a1e9b58fc2118af24ea19b"
+    },
+    "fetch_evidence": null,
+    "method": "EXPLICIT_EXISTING_ARTIFACT_VERIFIED_AGAINST_LOCK",
+    "supplied_artifact_provenance": {
+      "bytes": 90678,
+      "path": "evidence/operations/node-image-build/cache-export-02/report.json",
+      "sha256": "ec02bbdb6c49a2aeec0732a225270472d3f2b612bd802eafaad9c864eb9a4650"
+    }
+  },
+  "archive_inventory": {
+    "bytes": 8518,
+    "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/archive-members.json",
+    "sha256": "49c14fb972d4b1f19cc190241642c81ef84cc18c714ae4a5b1da9f4fa22abe85"
+  },
+  "artifact": {
+    "archive_file_count": 52,
+    "bytes": 150879,
+    "integrity": "sha512-izw9mVKFix6YSnC9eLgV6g1opl9DUlRio9ZNcq+Wu9Ujn2UwF+8Nl0B8nz22kEC+CTZCvinkxwJ0DeFbb6NwcQ==",
+    "maximum_download_bytes": 1048576,
+    "path": ".cache/node-packages/_cacache/content-v2/sha512/8b/3c/3d9952858b1e984a70bd78b815ea0d68a65f43525462a3d64d72af96bbd5239f653017ef0d97407c9f3db69040be093642be29e4c702740de15b6fa37071",
+    "sha1": "fb991992723657f34dbe1d829139aa66be008e96",
+    "sha256": "e28557a9acd1c1351f2779e85491f721404e5d6cb6ef0566bbc0f2036851a073",
+    "unpacked_file_bytes": 616781,
+    "url": "https://registry.npmjs.org/nodemailer/-/nodemailer-9.1.1.tgz"
+  },
+  "created_at": "2026-09-09T05:30:18.848338+00:00",
+  "files": [
+    {
+      "archive_member": "package/lib/nodemailer.js",
+      "bytes": 5829,
+      "exact_bytes_match": true,
+      "historical_report_hash_matches": true,
+      "installed_path": "examples/node-react/node_modules/nodemailer/lib/nodemailer.js",
+      "original_member_sha256": "ac154398b38aee6760700031ab065d6859fbd3cfeb79ac6d045806d62f0fbdae",
+      "role": "createTransport entry",
+      "sha256": "ac154398b38aee6760700031ab065d6859fbd3cfeb79ac6d045806d62f0fbdae"
+    },
+    {
+      "archive_member": "package/lib/smtp-transport/index.js",
+      "bytes": 14455,
+      "exact_bytes_match": true,
+      "historical_report_hash_matches": true,
+      "installed_path": "examples/node-react/node_modules/nodemailer/lib/smtp-transport/index.js",
+      "original_member_sha256": "776029f846de6bdbfc0229d2fca5a24f6e30c5d45a586f9ba9ffead8cd8d3275",
+      "role": "Direct SMTP transport",
+      "sha256": "776029f846de6bdbfc0229d2fca5a24f6e30c5d45a586f9ba9ffead8cd8d3275"
+    },
+    {
+      "archive_member": "package/lib/smtp-connection/index.js",
+      "bytes": 71856,
+      "exact_bytes_match": true,
+      "historical_report_hash_matches": true,
+      "installed_path": "examples/node-react/node_modules/nodemailer/lib/smtp-connection/index.js",
+      "original_member_sha256": "e21b42bacde6829f8cd9261eb18f07f8c5c3c99d81f1e104a63356700f2fbda5",
+      "role": "TLS, SMTP and authentication protocol",
+      "sha256": "e21b42bacde6829f8cd9261eb18f07f8c5c3c99d81f1e104a63356700f2fbda5"
+    },
+    {
+      "archive_member": "package/lib/mailer/index.js",
+      "bytes": 16696,
+      "exact_bytes_match": true,
+      "historical_report_hash_matches": true,
+      "installed_path": "examples/node-react/node_modules/nodemailer/lib/mailer/index.js",
+      "original_member_sha256": "6e96b7b4dcd54e31ea534bc5e5fde2dcf3ad27dddc62df7ff7d13c95a3649d1a",
+      "role": "Send orchestration",
+      "sha256": "6e96b7b4dcd54e31ea534bc5e5fde2dcf3ad27dddc62df7ff7d13c95a3649d1a"
+    },
+    {
+      "archive_member": "package/lib/mail-composer/index.js",
+      "bytes": 23516,
+      "exact_bytes_match": true,
+      "historical_report_hash_matches": true,
+      "installed_path": "examples/node-react/node_modules/nodemailer/lib/mail-composer/index.js",
+      "original_member_sha256": "53e3a3d2c2e38f9cd24b8e7f646b4f88318c91d5d02c0d311d4a0c93dc01f502",
+      "role": "Message composition",
+      "sha256": "53e3a3d2c2e38f9cd24b8e7f646b4f88318c91d5d02c0d311d4a0c93dc01f502"
+    },
+    {
+      "archive_member": "package/lib/mime-node/index.js",
+      "bytes": 58284,
+      "exact_bytes_match": true,
+      "historical_report_hash_matches": true,
+      "installed_path": "examples/node-react/node_modules/nodemailer/lib/mime-node/index.js",
+      "original_member_sha256": "2b8ab89d1b498eefe311b59cccf160fbdfa21d8ae24e77f3c2d52280874cb214",
+      "role": "MIME serialization",
+      "sha256": "2b8ab89d1b498eefe311b59cccf160fbdfa21d8ae24e77f3c2d52280874cb214"
+    }
+  ],
+  "git_head_source_tree_or_signature_verified": false,
+  "historical_report_unchanged": {
+    "bytes": 51754,
+    "path": "reuse/password-reset-components.json",
+    "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+  },
+  "installed_dependency_changes": [],
+  "license": {
+    "archive_member": "package/LICENSE",
+    "bytes": 935,
+    "declared_spdx": "MIT-0",
+    "installed_bytes_match_original": true,
+    "installed_path": "examples/node-react/node_modules/nodemailer/LICENSE",
+    "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/LICENSE",
+    "sha256": "4f814dcacd2da618d62829ea1f6238701cf421f18a6b36c91c5d8212245e2c78"
+  },
+  "license_approval": false,
+  "limits": [
+    "Only the six selected installed source files and LICENSE/package.json were compared; full installed package correspondence is separate",
+    "Parent must bind rebuilt runtime image bytes to this artifact; no new runtime image qualification here",
+    "Nodemailer 9.1.1 remains an explicit override outside the original SDK declared ^8.0.2 range",
+    "No new vulnerability scan, complete transitive license audit, or legal approval",
+    "Full 265 requirements, 205 API entries, foundation selection, native/provider tests and independent security review remain unqualified"
+  ],
+  "lock": {
+    "bytes": 75156,
+    "path": "examples/node-react/package-lock.json",
+    "sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "package": "nodemailer",
+  "package_metadata": {
+    "archive_member": "package/package.json",
+    "bytes": 1647,
+    "installed_bytes_match_original": true,
+    "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/package.json",
+    "sha256": "4ea1ee33f7582183473fe5c89215231534c90b3489da575347993505132dbb95"
+  },
+  "passed": true,
+  "primary_metadata": {
+    "bytes": 2618,
+    "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/registry-metadata.json",
+    "sha256": "ff270d8abf382f067a4d5f90ca7f7e59a1659e4524f1d017bcfa584ae5a1d35c"
+  },
+  "primary_metadata_provenance": {
+    "bytes": 319,
+    "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/registry-provenance.json",
+    "sha256": "d3c9870360ecf384cab2ee352a0a04186f935b9f64dd9aeefc0d3b00387c6311"
+  },
+  "registry_reported_git_head": "ad4513f2a179e0484f9c95948211c186ba3ce7c9",
+  "resource_lifecycle": {
+    "bytes": 2255,
+    "path": "evidence/reuse/nodemailer-9.1.1-source-correspondence/acquisition/lifecycle.json",
+    "sha256": "62e538fd3d7b264ecf7b59ccfae9ad15307e9e2832e37b9f63551760a2750a81"
+  },
+  "runtime_image_correspondence_qualified": false,
+  "schema": "expertauth.nodemailer-source-correspondence.v1",
+  "scope": "Six files from the historical password reset component report, plus package metadata and MIT-0 notice; all archive members inventoried without executing or installing package code",
+  "source_changes": [],
+  "status": "SIX_INSTALLED_SOURCE_FILES_MATCH_LOCKED_ORIGINAL_NPM_ARTIFACT",
+  "tool": {
+    "bytes": 16840,
+    "path": "tools/audit_nodemailer_correspondence.py",
+    "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+  },
+  "version": "9.1.1"
+}

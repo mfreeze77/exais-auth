@@ -172,6 +172,58 @@
         {
           "path": "examples/python/dependency-resolution.json",
           "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -326,9 +378,57 @@
         {
           "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
           "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": []
     },
     {
@@ -466,6 +566,58 @@
         {
           "path": "examples/python/dependency-resolution.json",
           "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -620,9 +772,57 @@
         {
           "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
           "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": []
     },
     {
@@ -725,6 +925,58 @@
         {
           "path": "examples/python/dependency-resolution.json",
           "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -879,9 +1131,57 @@
         {
           "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
           "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": []
     },
     {
@@ -1433,7 +1733,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -1457,15 +1757,67 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
           "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -1524,9 +1876,57 @@
         {
           "path": "evidence/operations/password-reset/evidence-validation.json",
           "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": [
         "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
         "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
@@ -5308,7 +5708,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -5332,11 +5732,11 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
@@ -5357,6 +5757,58 @@
         {
           "path": "tests/browser/session-coordination.mjs",
           "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -5439,9 +5891,57 @@
         {
           "path": "evidence/foundation/session-policy-review/README.md",
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
+      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": []
     },
     {
@@ -5646,7 +6146,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -5670,11 +6170,11 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
@@ -5695,6 +6195,58 @@
         {
           "path": "tests/browser/session-coordination.mjs",
           "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -5781,9 +6333,57 @@
         {
           "path": "evidence/foundation/session-policy-review/README.md",
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
+      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": [
         "BROWSER-OSS-001",
         "BROWSER-OSS-002",
@@ -11307,7 +11907,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -11331,11 +11931,11 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
@@ -11356,6 +11956,58 @@
         {
           "path": "tests/browser/session-coordination.mjs",
           "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -11438,9 +12090,57 @@
         {
           "path": "evidence/foundation/session-policy-review/README.md",
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
+      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": []
     },
     {
@@ -11645,7 +12345,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -11669,11 +12369,11 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
@@ -11694,6 +12394,58 @@
         {
           "path": "tests/browser/session-coordination.mjs",
           "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -11780,9 +12532,57 @@
         {
           "path": "evidence/foundation/session-policy-review/README.md",
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.",
+      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.",
       "observed_test_ids": [
         "BROWSER-OSS-001",
         "BROWSER-OSS-002",
@@ -12518,6 +13318,58 @@
         {
           "path": "examples/python/dependency-resolution.json",
           "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -12664,9 +13516,57 @@
         {
           "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
           "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Full dependency closure remains open. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open."
+      "qualification_note": "Full dependency closure remains open. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred."
     },
     {
       "id": "WP-003",
@@ -12874,7 +13774,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -12898,15 +13798,67 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
           "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -12965,9 +13917,105 @@
         {
           "path": "evidence/operations/password-reset/evidence-validation.json",
           "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification."
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred."
     },
     {
       "id": "WP-010",
@@ -12992,7 +14040,7 @@
         },
         {
           "path": "examples/node-react/Dockerfile",
-          "sha256": "2af11b5f6bc987607d2ac8ffbc357b437bfcf0400d32f82a38c65a89202fab6d"
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
         },
         {
           "path": "examples/node-react/test/email-delivery.test.js",
@@ -13016,15 +14064,67 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "18e66ed8e3a9116100e45f828582afdbdf21a61057920a6438e40812fbeef0c8"
+          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
         },
         {
           "path": "tools/build_node_client.py",
-          "sha256": "4a55dd855d7edec11ce964f0b3aa3397e8307251da0e662a291ffe34444a1dcf"
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
         },
         {
           "path": "reuse/password-reset-components.json",
           "sha256": "f8ce361ccb026e99d48beeb8e04c7062c93c4bd2c223c57760a3d21fc976ad74"
+        },
+        {
+          "path": "examples/node-react/Dockerfile",
+          "sha256": "1e73bdc723812d7e035f067f394ce439a3d7dbd71033239e5f678a7e52edc40e"
+        },
+        {
+          "path": "examples/node-react/.dockerignore",
+          "sha256": "ac7af5e4923c79ea1377c14206a39aa0d5458a9adaa33ff26bc228388653e4f4"
+        },
+        {
+          "path": "tools/build_node_runtime.py",
+          "sha256": "d2e8b63731d57ab6d76a40b5c3892c13a1b6b3ffb5e2c9ab915c36e2ffe0dbf4"
+        },
+        {
+          "path": "tools/node_runtime_identity.py",
+          "sha256": "05bc2205c0aa279b4db2ad27c803e2774570c388bd3ee1ae714d0de520198d69"
+        },
+        {
+          "path": "tools/build_node_client.py",
+          "sha256": "78a939945719885e4e27302233fe49a50bf6f278ce2fc6e31edd80d3d0f63d98"
+        },
+        {
+          "path": "tools/export_node_packages.mjs",
+          "sha256": "6074727803076ad0bce260d892115c815e562e8d9886be3c10bc258ec9522175"
+        },
+        {
+          "path": "tools/verify_node_runtime.mjs",
+          "sha256": "fc483119bcf898b085084a9ccff4c922fae7669b6591d643a6c1e153c3621d79"
+        },
+        {
+          "path": "tests/reuse/node_package_boundaries.mjs",
+          "sha256": "ae1a427803c0d8aef6d0bd193f33dc16ac7d89b8c489b8ffbc624137cb310459"
+        },
+        {
+          "path": "tools/audit_nodemailer_correspondence.py",
+          "sha256": "a827003b74da79d84e36e67e69aaa6d864c77f77ee0897e252291742a0b7de5d"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "tools/verify_node_build_evidence.py",
+          "sha256": "8170586251ab9685af814f348d3cb2a72d71b3912f6875fd256cb3445d9978d0"
+        },
+        {
+          "path": "tools/retire_legacy_node_images.py",
+          "sha256": "043eb36e65dd6dd71e7ad554f472bc7aaa5d141be808f3674297c5d8db17f305"
+        },
+        {
+          "path": "tools/retire_node_checkpoint_zip.py",
+          "sha256": "0eb879f639dd1535c1470b9a5a5a37033937aa3b0e98c87d14f547a61d0b9e4c"
         }
       ],
       "positive_test_ids": [],
@@ -13083,9 +14183,105 @@
         {
           "path": "evidence/operations/password-reset/evidence-validation.json",
           "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+          "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+          "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+          "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+          "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+        },
+        {
+          "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+          "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+        },
+        {
+          "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+          "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+        },
+        {
+          "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+          "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+        },
+        {
+          "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+          "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+          "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+          "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+          "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+        },
+        {
+          "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+          "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification."
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred."
     },
     {
       "id": "WP-011",
@@ -13639,6 +14835,22 @@
     {
       "path": "evidence/operations/hygiene/checkpoint-retention-before-password-reset.json",
       "sha256": "76c748fbbb707f1d07c9c980c598b8bf0148767c37c981e359699dda3c05d414"
+    },
+    {
+      "path": "evidence/operations/hygiene/legacy-node-intermediates.json",
+      "sha256": "24f5a5731380a0038993d50f5c025ec40e0ee3ff9c79ba40cbd2cc6f4fb23ed3"
+    },
+    {
+      "path": "evidence/operations/hygiene/verification-20260909T055142Z.json",
+      "sha256": "298bb176dfa0d270314f97ce03dbdf9a6b6b8c0bd310ab93fbd474996eea5852"
+    },
+    {
+      "path": "evidence/operations/hygiene/node-build-disk-inventory.json",
+      "sha256": "bcfc8f8d22820a6a8cf8db5c1f549c198fbffb7ff4ad1274683027aedd88108b"
+    },
+    {
+      "path": "evidence/operations/hygiene/checkpoint-retention-before-node-build.json",
+      "sha256": "1483dc22dfde953cd3c54c6c4b7a6d7d4531c4c01e57d1f0d2e61b3a90b0a9a9"
     }
   ],
   "runtime_distribution_artifacts": [
@@ -13777,6 +14989,54 @@
     {
       "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
       "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+      "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+      "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+      "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+      "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+    },
+    {
+      "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+      "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+    },
+    {
+      "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+      "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+    },
+    {
+      "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+      "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+      "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+      "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+      "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+      "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
     }
   ],
   "session_candidate_artifacts": [
@@ -13983,6 +15243,152 @@
     {
       "path": "evidence/operations/password-reset/evidence-validation.json",
       "sha256": "12b68e7067e8a08f6cda1be04bba7d01ae0f937fc6ef11fb8c55f997194ff0bb"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+      "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+      "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+      "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+      "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+    },
+    {
+      "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+      "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+    },
+    {
+      "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+      "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+    },
+    {
+      "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+      "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+      "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+      "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+      "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+      "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+      "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+      "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+      "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+      "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+    },
+    {
+      "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+      "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+    },
+    {
+      "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+      "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+    },
+    {
+      "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+      "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+      "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+      "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+      "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+      "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
+    }
+  ],
+  "node_build_candidate_artifacts": [
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/report.json",
+      "sha256": "ee6d718110bc0dadb0eb234024350b130f0ab74d7fba3c587add92af48b22d91"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json",
+      "sha256": "24057f273d48dd344b05ee81a8b5093243587d0fa969a3d5a24e66b4e53cb797"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json",
+      "sha256": "6f7143a6c7c145c1307e9931c810f47400a92ed513463c02b1d452a3adcd181a"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json",
+      "sha256": "283f320062fceb69d01d359910ab516b909a67dedf0d95b4fd69a85c09dddf06"
+    },
+    {
+      "path": "evidence/operations/node-image-build/offline-build-02/command-016.log",
+      "sha256": "37bb7f95c4656472fcf0aa7eae0e9005d5dd8efb912315e395608282395509b8"
+    },
+    {
+      "path": "evidence/operations/node-image-build/evidence-validation-02.json",
+      "sha256": "5bf52a0d15cf99c77ff1ec151f171b1cd5e1025d21c0bca6d98329154f62a243"
+    },
+    {
+      "path": "evidence/operations/node-client-build/promoted-node-01/report.json",
+      "sha256": "1d9fa50b800df2411c01d48f4bebaaa1756e687e13da75603ee9d581ef6258af"
+    },
+    {
+      "path": "reuse/nodemailer-9.1.1-source-correspondence.json",
+      "sha256": "69cb0db9b7127acbdbc3632c2e4e6823f5188a7888377e5555020866b3e31e0d"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/report.json",
+      "sha256": "0a6caf4840ead23bf6fa72a2b1eed16773715a54ab1a11d2f30dd66b54ed29bb"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/probe-results.json",
+      "sha256": "d6ee96438b05b38386a595991f5871d08291d7d0096e54fb1641091a171f780f"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/tls-results.json",
+      "sha256": "b5bd1d6985c3647d71e184be4cf2c877457a7bf491e79de2e0a7f51043dc5f42"
+    },
+    {
+      "path": "evidence/operations/password-reset/installed-offline-build-02/browser-results.json",
+      "sha256": "8a89b4a4a2ec53d4cde453921beae35a9f27f009aa26f190b9465f89e74250d9"
     }
   ]
 }

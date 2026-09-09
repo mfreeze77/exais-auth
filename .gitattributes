@@ -1,2 +1,4 @@
 # Preserve immutable baseline and evidence bytes on every checkout/platform.
 * -text
+# Raw command evidence keeps exact bytes, including upstream trailing whitespace.
+evidence/**/*.log -whitespace

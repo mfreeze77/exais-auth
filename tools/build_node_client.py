@@ -15,10 +15,10 @@ import re
 import subprocess
 import time
 import uuid
+from node_runtime_identity import TAG as NODE, require_owned_node
 
 
 ROOT = Path(__file__).resolve().parents[1]
-NODE = "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf"
 PURPOSE = "node-client-build"
 SOURCE_FILES = ("examples/node-react/client.jsx", "examples/node-react/build.mjs", "examples/node-react/package-lock.json")
 MAX_BUNDLE = 2 * 1024 * 1024
@@ -103,12 +103,14 @@ def main():
     report = {"schema": "expertauth-offline-node-client-build-v1", "started": datetime.now(timezone.utc).isoformat(),
               "compiled": False, "browser_passed": False, "foundation_passed": False, "full_image_qualified": False,
               "scope": "Compilation of current React source against an existing immutable dependency image only",
-              "image": NODE, "image_builds": 0, "image_downloads": 0, "new_networks": 0, "new_volumes": 0,
+              "image_reference": NODE, "image": None, "image_builds": 0, "image_downloads": 0, "new_networks": 0, "new_volumes": 0,
               "published_ports": [], "network": "none", "container_name": name, "container_id": None,
               "container_labels": labels, "container_retired": False, "inputs_unchanged": False, "preserved_public_unchanged": False,
-              "compiler_tool_sha256": sha(Path(__file__)), "commands": [], "errors": []}
+              "compiler_tool_sha256": sha(Path(__file__)),
+              "ownership_module_before_sha256": sha(ROOT/'tools/node_runtime_identity.py'), "commands": [], "errors": []}
     started = time.monotonic()
     launched = False
+    image_id = None
     inputs = public_before = None
     public = (ROOT / "examples/node-react/public").resolve()
 
@@ -144,7 +146,7 @@ def main():
         return None if code else json.loads(raw)
 
     def assert_owned(state, cid):
-        require(state["id"] == cid and state["name"] == "/" + name and state["image"] == NODE and
+        require(state["id"] == cid and state["name"] == "/" + name and state["image"] == image_id and
                 all((state.get("labels") or {}).get(key) == value for key, value in labels.items()), "Container cleanup ownership differs")
 
     persist()
@@ -156,10 +158,12 @@ def main():
         report["preserved_public_before"] = public_before
         report["index_before_sha256"] = public_before["files"]["index.html"]
         require(not (public / "app.js").exists() or (public / "app.js").is_file(), "Generated bundle is not a regular file")
-        code, raw = command("require-cached-image", ["image", "inspect", "--format", '{"id":{{json .Id}},"volumes":{{json (index .Config "Volumes")}}}', NODE])
+        code, raw = command("require-cached-image", ["image", "inspect", "--format", '{"id":{{json .Id}},"volumes":{{json (index .Config "Volumes")}},"labels":{{json (index .Config "Labels")}}}', NODE])
         require(code == 0, "Required immutable image inspection failed; no pull is permitted")
         image = json.loads(raw)
-        require(image["id"] == NODE and not image["volumes"], "Pinned image identity or anonymous-volume configuration differs")
+        require(re.fullmatch('sha256:[0-9a-f]{64}', image['id']) and not image["volumes"], "Owned image identity or anonymous-volume configuration differs")
+        report['node_image_ownership'] = require_owned_node({'Id':image['id'],'Config':{'Labels':image.get('labels')}})
+        image_id = report['image'] = image['id']
         code, raw = command("containers-before", ["ps", "-aq", "--no-trunc"])
         require(code == 0, "Could not inspect current container inventory")
         report["container_count_before"] = len(raw.splitlines())
@@ -174,7 +178,7 @@ def main():
         argv += ["--mount", f"type=bind,source={ROOT / 'examples/node-react/client.jsx'},target=/app/client.jsx,readonly",
                  "--mount", f"type=bind,source={ROOT / 'examples/node-react/build.mjs'},target=/app/build.mjs,readonly",
                  "--mount", f"type=bind,source={public},target=/app/public",
-                 "--entrypoint", "node", NODE, "--import", preload, "/app/build.mjs"]
+                 "--entrypoint", "node", image_id, "--import", preload, "/app/build.mjs"]
         launched = True
         code, raw = command("compile-client", argv, timeout=60)
         metadata = [line[len(METADATA_PREFIX):] for line in raw.splitlines() if line.startswith(METADATA_PREFIX)]
@@ -218,6 +222,8 @@ def main():
             report["errors"].append(str(error) if isinstance(error, RuntimeError) else "Exact container cleanup could not be confirmed")
         try:
             report["inputs_after"] = source_hashes()
+            report['ownership_module_after_sha256'] = sha(ROOT/'tools/node_runtime_identity.py')
+            require(report['ownership_module_after_sha256'] == report['ownership_module_before_sha256'], 'Image ownership helper changed during compilation')
             report["inputs_unchanged"] = inputs is not None and report["inputs_after"] == inputs
             report["preserved_public_after"] = preserved_public(public)
             report["index_after_sha256"] = report["preserved_public_after"]["files"]["index.html"]

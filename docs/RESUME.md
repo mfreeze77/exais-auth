@@ -15,11 +15,15 @@ The cleanup-fault proof deliberately exits73, then removes one owned identity
 through Core and all6 containers. Original52 identities are preserved. Product
 source hashes match the combined run; its older runner/worker snapshots are
 retained because the later cleanup-fault changes were tested separately.
-Use the documented cached compiler and source-mounted lab commands for changed
-code. Do not repeat unchanged passes or use host npm networking as a fallback.
-The updated full Node Dockerfile still needs a bounded cached build, installed
-file/license checks, regression and exact old-image retirement; retain one
-current image per component. No foundation/dependency gate is waived.
+The complete Node Dockerfile now builds offline and installed image2c4ad0be07b8
+passes those reset checks without application source/bundle mounts. All143
+packages match original archive contents; all8 application files match current
+source. The prior image and its6 legacy parents are retired. Read
+`docs/node-offline-build.md` before changing this build. Its one14.58MB cache is
+retained; fresh cache/stack bootstrap and lifecycle fault branches remain open.
+Use the cached compiler/source-mounted lab for app-only changes and the full
+image builder only when image content changes. Do not repeat unchanged passes
+or retry host npm networking. No foundation/dependency gate is waived.
 
 The only new cached test image in this feature slice is pinned Mailpit1.31.1
 (17,164,101 image-record bytes). Temporary services expose no ports or volumes.
@@ -63,6 +67,13 @@ The next retention record is
 `evidence/operations/hygiene/checkpoint-retention-before-password-reset.json`:
 dc125668bb75's ZIP was verified and retired (12,715,973logical bytes), keeping
 ae8e3f5502d5 and83daae7876f3 plus all sidecars/history before the new checkpoint.
+
+The Node image checkpoint adds
+`evidence/operations/hygiene/checkpoint-retention-before-node-build.json`:
+all three existing ZIPs passed exact hash/CRC/every-member/ancestry checks, then
+only ae8e3f5502d5 was retired. Its sidecars and source history remain; the newer
+83daae7876f3 and8bc7ab687c25 ZIPs were preserved. The one-time retirement scripts
+must not be rerun against already absent targets.
 
 Latest source/packaging checkpoint: read `docs/native-source-correspondence.md`.
 The corrected notice tree has89 archive notice texts and390 files. Core image

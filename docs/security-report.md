@@ -6,6 +6,12 @@ license-enforcement changes were performed.
 
 Material unresolved findings:
 
+- Updated Node image2c4ad0be07b8 passes the installed reset lab without app
+  overlays. The complete offline build checks original archive bytes and source
+  bindings before promotion. This closes the prior image-content evidence gap,
+  not the reset transaction, foundation or complete distribution gates. New
+  deadline-expiry, daemon-outage and promotion/rollback faults are unexecuted.
+  See `docs/node-offline-build.md` for the exact evidence and failed-run history.
 - Password reset succeeds through verified authenticated TLS SMTP and rejects
   replay/concurrent losing consumers. Reset commit and session revocation are
   separate engine calls: a crash between them can retain old sessions. Equal

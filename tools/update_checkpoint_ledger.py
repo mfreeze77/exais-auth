@@ -55,7 +55,7 @@ def main():
     reset_sources = ['examples/node-react/server.js','examples/node-react/email-delivery.js','examples/node-react/client.jsx','examples/node-react/Dockerfile','examples/node-react/test/email-delivery.test.js','tests/browser/password-reset.mjs','tests/operations/password_reset_probe.mjs','tests/operations/password_reset_tls.py','tests/operations/password_reset_cleanup.py','tools/run_password_reset_lab.py','tools/build_node_client.py','reuse/password-reset-components.json']
     reset_reports = ['evidence/operations/password-reset/run-16/report.json','evidence/operations/password-reset/run-16/probe-results.json','evidence/operations/password-reset/run-16/browser-results.json','evidence/operations/password-reset/run-16/tls-results.json','evidence/operations/password-reset/run-16/runner-source.py','evidence/operations/password-reset/run-16/probe-source.mjs','evidence/operations/password-reset/cleanup-fault-01/report.json','evidence/operations/password-reset/cleanup-fault-01/cleanup-followup.json','evidence/runs/password-reset-unit-01/command.json','evidence/runs/password-reset-cleanup-fault-01/command.json','evidence/operations/node-client-build/reset-client-03/report.json']
     reset_reports.append('evidence/operations/password-reset/evidence-validation.json')
-    reset_note = 'Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, full image build, full SDK/API/foundation or human-review qualification.'
+    reset_note = 'Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification.'
     reset_probe = read_json(ROOT/'evidence/operations/password-reset/run-16/probe-results.json')
     attach(['PWD-006'],reset_sources,reset_reports,reset_note,
            tests=[row['id'] for row in reset_probe['rows'] if row['status']=='passed'])
@@ -127,6 +127,32 @@ def main():
         index[identifier]['candidate_evidence'] += data['session_candidate_artifacts']
     for identifier in ('SES-003','SES-004'):
         index[identifier]['observed_test_ids'] += ['SDK54-WIRE-PROTOCOL','SDK54-SERIAL-PROMOTION','SDK54-LOSS-BEFORE-FORWARD','SDK54-LOSS-AFTER-UPSTREAM-BODY','SDK54-LOSS-PARTIAL-BODY','SDK54-COMMITTED-PROMOTION-CRASH','SDK54-UNCOORDINATED-CLIENT-AVAILABILITY','SDK54-BROWSER-FOUR-TAB-REFRESH']
+    node_build_sources = ['examples/node-react/Dockerfile','examples/node-react/.dockerignore',
+        'tools/build_node_runtime.py','tools/node_runtime_identity.py','tools/build_node_client.py',
+        'tools/export_node_packages.mjs','tools/verify_node_runtime.mjs','tests/reuse/node_package_boundaries.mjs',
+        'tools/audit_nodemailer_correspondence.py','reuse/nodemailer-9.1.1-source-correspondence.json',
+        'tools/verify_node_build_evidence.py','tools/retire_legacy_node_images.py','tools/retire_node_checkpoint_zip.py']
+    node_build_reports = ['evidence/operations/node-image-build/offline-build-02/report.json',
+        'evidence/operations/node-image-build/offline-build-02/candidate-runtime/runtime-report.json',
+        'evidence/operations/node-image-build/offline-build-02/previous-runtime/runtime-report.json',
+        'evidence/operations/node-image-build/offline-build-02/parser-boundaries/node-package-boundaries.json',
+        'evidence/operations/node-image-build/offline-build-02/command-016.log',
+        'evidence/operations/node-image-build/evidence-validation-02.json',
+        'evidence/operations/node-client-build/promoted-node-01/report.json',
+        'reuse/nodemailer-9.1.1-source-correspondence.json']
+    installed_reset_reports = ['evidence/operations/password-reset/installed-offline-build-02/' + name
+        for name in ('report.json','probe-results.json','tls-results.json','browser-results.json')]
+    node_build_note = 'Complete Node Dockerfile built offline as image2c4ad0be07b8 using one14,580,488-byte archive cache;143 packages and7,629 original members matched, with113 archive/install mode differences disclosed and the prior installed dependency tree unchanged. All8 app files match;55 delivery unit and8 real-parser boundary checks pass. Installed reset with no app source/bundle mounts passes10 transport/11 HTTP-SMTP/9 Chromium checks, cleans11 identities and12 containers;4 build helpers and a separate compiler helper also retired. Nodemailer9.1.1 selected-file original-tarball correspondence established. Previous image and6 exact unused legacy parents retired without parent/global prune. Fresh cache/stack bootstrap, native/base-image distribution and new deadline/daemon/promotion rollback faults remain unqualified. No foundation/full requirement/API/profile or independent human-review pass inferred.'
+    data['node_build_candidate_artifacts'] = [artifact(ROOT,p) for p in node_build_reports + installed_reset_reports]
+    for identifier in ('BAS-002','BAS-004','BAS-005','SDK-001','SDKP-01','SDK-005','SDKP-05','PWD-006','WP-002','WP-009','WP-010'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in node_build_sources]
+        index[identifier]['candidate_evidence'] += data['node_build_candidate_artifacts']
+        index[identifier]['qualification_note'] += ' ' + node_build_note
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/legacy-node-intermediates.json',
+        'evidence/operations/hygiene/verification-20260909T055142Z.json',
+        'evidence/operations/hygiene/node-build-disk-inventory.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-node-build.json')]
     data['dependency_lock_paths']=['examples/node-react/package-lock.json','examples/python/requirements.lock','tests/browser/package-lock.json','engine-extensions/oss-build/locks/gradle/verification-metadata.xml','engine-extensions/keycloak-headless/gradle.lockfile','engine-extensions/keycloak-headless/gradle/verification-metadata.xml','examples/keycloak-clients/package-lock.json','examples/keycloak-clients/requirements-test.txt','reuse/runtime-source-archives.lock.json']
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
