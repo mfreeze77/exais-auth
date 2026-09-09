@@ -1,5 +1,10 @@
 # Password reset candidate: working, not full PWD-006 acceptance
 
+This page records the default upstream profile. The opt-in, source-mounted
+atomic Core adaptation and its current evidence are in
+[atomic-password-reset.md](atomic-password-reset.md). Its remaining SDK/linking,
+migration and session-issuance race limitations are explicit there.
+
 The Node/React example now sends a real password reset message through an
 operator-configured, authenticated SMTP server using verified implicit TLS.
 The maintained SDK and Core own reset tokens, password validation and password

@@ -29,6 +29,10 @@ class CheckpointSecretTests(unittest.TestCase):
         self.env.rename(self.private/'wrong-auth.env')
         self.assertEqual(local_secrets(self.root),{b'short-pwd',b'wrong-pwd'})
 
+    def test_unsupported_core_profile_scans_actual_smtp_credentials(self):
+        self.env.rename(self.private/'unsupported.env')
+        self.assertEqual(local_secrets(self.root),{b'short-pwd',b'wrong-pwd'})
+
     def test_significant_spaces_and_bom_are_preserved(self):
         (self.private/'smtp-password').write_bytes(b' spaces \r\n')
         (self.private/'wrong-password').write_bytes(b'\xef\xbb\xbfwrong-pwd')

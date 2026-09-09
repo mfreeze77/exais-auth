@@ -1,5 +1,10 @@
 # Node image checkpoint
 
+The retained image below predates the current atomic-reset server changes.
+Its installed-image evidence applies to its recorded source hashes. Current
+atomic behavior is separately tested with explicit source/JAR mounts; see
+[atomic-password-reset.md](atomic-password-reset.md).
+
 The complete updated Dockerfile built offline and its installed application
 passed the password-reset lab. This is a reference-candidate result; no engine,
 complete requirement, API operation or production release is certified.

@@ -1,0 +1,81 @@
+{
+  "kind": "preserved-failure-diagnosis",
+  "original_report_passed": false,
+  "observed_mount_order_changed": true,
+  "exact_mount_values_unchanged": true,
+  "observations": [
+    {
+      "source_stream_sha256": "09768beaacc20f156804b058c7d4bcd12b88ac65fc544cdf971494d35df54238",
+      "state": {
+        "id": "14c06b8682c13cd8caa7ec0e48a2022a12c009196ded93dff6b6fa0204e3ba1a",
+        "name": "/expertauth-reset-core-a-7b710842d141",
+        "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "labels": {
+          "org.expertauth.build-run": "6b8a2933b2c14cca9a5226b9e99e5f06",
+          "org.expertauth.project": "expert-auth",
+          "org.expertauth.purpose": "atomic-reset-lab",
+          "org.expertauth.run": "7b710842d141",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "24.04"
+        },
+        "running": true,
+        "mounts": [
+          {
+            "Destination": "/opt/expertauth/lib/core-12.2.0.jar",
+            "Mode": "",
+            "Propagation": "rprivate",
+            "RW": false,
+            "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\core-reset\\core-12.2.0-atomic-reset.jar",
+            "Type": "bind"
+          },
+          {
+            "Destination": "/run/expertauth/config.yaml",
+            "Mode": "",
+            "Propagation": "rprivate",
+            "RW": false,
+            "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\node-02\\secrets\\core.yaml",
+            "Type": "bind"
+          }
+        ],
+        "ports": {}
+      }
+    },
+    {
+      "source_stream_sha256": "0d8dc210f076d934ee3ee04a05a9d2d8cb8103fe79e1d10e058d25f361fa4d51",
+      "state": {
+        "id": "14c06b8682c13cd8caa7ec0e48a2022a12c009196ded93dff6b6fa0204e3ba1a",
+        "name": "/expertauth-reset-core-a-7b710842d141",
+        "image": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "labels": {
+          "org.expertauth.build-run": "6b8a2933b2c14cca9a5226b9e99e5f06",
+          "org.expertauth.project": "expert-auth",
+          "org.expertauth.purpose": "atomic-reset-lab",
+          "org.expertauth.run": "7b710842d141",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "24.04"
+        },
+        "running": true,
+        "mounts": [
+          {
+            "Destination": "/run/expertauth/config.yaml",
+            "Mode": "",
+            "Propagation": "rprivate",
+            "RW": false,
+            "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\atomic-reset\\node-02\\secrets\\core.yaml",
+            "Type": "bind"
+          },
+          {
+            "Destination": "/opt/expertauth/lib/core-12.2.0.jar",
+            "Mode": "",
+            "Propagation": "rprivate",
+            "RW": false,
+            "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.cache\\core-reset\\core-12.2.0-atomic-reset.jar",
+            "Type": "bind"
+          }
+        ],
+        "ports": {}
+      }
+    }
+  ],
+  "limitation": "Child did not retain complete before/after projections. Do not retroactively mark it passed. Node-03 retains and compares these projections."
+}

@@ -1,0 +1,100 @@
+[
+    {
+        "Id": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "RepoTags": [
+            "expertauth-oss-core:12.2.0-probe"
+        ],
+        "RepoDigests": [
+            "expertauth-oss-core@sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-09T02:04:14.323133844Z",
+        "Config": {
+            "User": "gradle",
+            "ExposedPorts": {
+                "3567/tcp": {}
+            },
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-21.0.7+6",
+                "GRADLE_HOME=/opt/gradle",
+                "GRADLE_VERSION=8.13"
+            ],
+            "Entrypoint": [
+                "/__cacert_entrypoint.sh"
+            ],
+            "Cmd": [
+                "java",
+                "-Xmx512m",
+                "--add-opens=java.base/java.lang=ALL-UNNAMED",
+                "--add-opens=java.base/java.util=ALL-UNNAMED",
+                "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED",
+                "-cp",
+                "/opt/expertauth/lib/*",
+                "io.supertokens.Main",
+                "/opt/expertauth",
+                "configFile=/run/expertauth/config.yaml",
+                "forceNoInMemDB=true"
+            ],
+            "Volumes": {
+                "/home/gradle/.gradle": {}
+            },
+            "WorkingDir": "/opt/expertauth",
+            "Labels": {
+                "org.expertauth.build-run": "6b8a2933b2c14cca9a5226b9e99e5f06",
+                "org.expertauth.project": "expert-auth",
+                "org.expertauth.purpose": "runtime-notice-image",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "24.04"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 465923258,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:3abdd8a5e7a8909e1509f1d36dcc8b85a0f95c68a69e6d86c6e9e3c1059d44b3",
+                "sha256:71692ed877e9671e1ab5e3a9988212f874e277041270326a92881966e16cabf9",
+                "sha256:0a52207ca5e873ac7f32d05a7645a6c3f10343847a4408962e6de51a48ee0d25",
+                "sha256:4ac16bc3307296b7db0a2f81f9b89d7217cdebfb1626fd6331b9026e62174215",
+                "sha256:9df20c7cbc861652608f4e3664d78f878bd72de8b023ba85b115649eb86d38ba",
+                "sha256:102a86837b959c2a4736de5b6fc83fc8d369a0c4a01623fcb502338dccfcf056",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:1efe2c4353ca2944852d9b31815d28f790a81168b227c7b62f22d0469204a86d",
+                "sha256:3af9a636fb75bed358c2154bd4d2d6ae8147814c35e1b0baa954237e82f6a488",
+                "sha256:443b41728e065aa83eca7d32a5180deaf7fb5ec0d1d96e5b8881cc0384f54ae0",
+                "sha256:9530c7dac9869e6890cefd2eeae3f2dc01347a4a2e9f73e8f3ee88c9eb7b56bc",
+                "sha256:e02a486768ca1174b0fa5acad5829ea929788fc7f46239b5c10e503ed1cd9bc2",
+                "sha256:39f67ce9b1467e4cb942612fda59bcea4234de75d4b5c4f0de619c15f59a3c1b",
+                "sha256:f92ad0a3460eb6323998f2247ae432432ca6d526d11be6138041814248571ee1",
+                "sha256:8959fa5ba58ad4538a4694c8b0f1f244ea2bf7faa06e1a382ee4c6c7f528c256",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-09T02:06:10.377058668Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+            "size": 3339,
+            "annotations": {
+                "config.digest": "sha256:e571fc14b8f95a275693dd8416e7107f19e5b123d25443f74f7619ce87164bda"
+            }
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "ytz9ex1j8uiwk5tn3tdanavxx",
+                    "CreatedAt": "2026-09-09T02:06:08.663954252Z"
+                }
+            ]
+        }
+    }
+]

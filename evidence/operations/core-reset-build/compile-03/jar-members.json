@@ -1,0 +1,3933 @@
+[
+  {
+    "path": "META-INF/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "META-INF/MANIFEST.MF",
+    "bytes": 25,
+    "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff",
+    "original_sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff",
+    "changed": false
+  },
+  {
+    "path": "io/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ActiveUsers.class",
+    "bytes": 9212,
+    "sha256": "80a2ee02d2ced5f67d34bbbe0eb55c567c99d7e14687d49315e940379153e13f",
+    "original_sha256": "80a2ee02d2ced5f67d34bbbe0eb55c567c99d7e14687d49315e940379153e13f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/Main.class",
+    "bytes": 20655,
+    "sha256": "c3d182d85103c7b3f7bd7d19f706dc6508ac1c986c65a39c2a60d8479368f9cf",
+    "original_sha256": "c3d182d85103c7b3f7bd7d19f706dc6508ac1c986c65a39c2a60d8479368f9cf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/OperatingSystem$OS.class",
+    "bytes": 1184,
+    "sha256": "8869ad65356ef09fb3eff72587d82e2aac312b8f1e67aa298fd4c142cabf0a17",
+    "original_sha256": "8869ad65356ef09fb3eff72587d82e2aac312b8f1e67aa298fd4c142cabf0a17",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/OperatingSystem.class",
+    "bytes": 1012,
+    "sha256": "1b762a9b263590feefa5a5c17396733a15c8500bd0551782ea28cfce5a9479ee",
+    "original_sha256": "1b762a9b263590feefa5a5c17396733a15c8500bd0551782ea28cfce5a9479ee",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ProcessState$EventAndException.class",
+    "bytes": 1105,
+    "sha256": "71e1f4029ca67e4b00db06e22c4427a7baad29947c3319c1fa2b5ada8fa71fb6",
+    "original_sha256": "71e1f4029ca67e4b00db06e22c4427a7baad29947c3319c1fa2b5ada8fa71fb6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ProcessState$PROCESS_STATE.class",
+    "bytes": 3468,
+    "sha256": "d9b09fc9895584d7a600d9e7c95049e67c98adfe902802c8edabee0349455c27",
+    "original_sha256": "d9b09fc9895584d7a600d9e7c95049e67c98adfe902802c8edabee0349455c27",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ProcessState.class",
+    "bytes": 3072,
+    "sha256": "af9b1e62bae009467ca7625bb400c572239badb35d45c98e370a440a7481c515",
+    "original_sha256": "af9b1e62bae009467ca7625bb400c572239badb35d45c98e370a440a7481c515",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ResourceDistributor$Func.class",
+    "bytes": 524,
+    "sha256": "6c26a08a763c68d181be3c17d35e42208401ec0604b8ed8dbe687f375a819a6e",
+    "original_sha256": "6c26a08a763c68d181be3c17d35e42208401ec0604b8ed8dbe687f375a819a6e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ResourceDistributor$FuncException.class",
+    "bytes": 603,
+    "sha256": "804fd537c94224c735140ba8b6d96207984ee537775caea36058301e0afcd819",
+    "original_sha256": "804fd537c94224c735140ba8b6d96207984ee537775caea36058301e0afcd819",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ResourceDistributor$KeyClass.class",
+    "bytes": 2575,
+    "sha256": "b47aa092a84c4ff2233ff472ff5a5e9ecbde37dd86b0d80e3e903dc59a266099",
+    "original_sha256": "b47aa092a84c4ff2233ff472ff5a5e9ecbde37dd86b0d80e3e903dc59a266099",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ResourceDistributor$SingletonResource.class",
+    "bytes": 458,
+    "sha256": "7f940c5cb5f1d464ac16d3ea7ccda758e8fbd8c2e33829c417707e8bbe84d8cf",
+    "original_sha256": "7f940c5cb5f1d464ac16d3ea7ccda758e8fbd8c2e33829c417707e8bbe84d8cf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/ResourceDistributor.class",
+    "bytes": 8368,
+    "sha256": "f5abda353082172dc474002c6cb4a4ce4d47450f60daa21776539548bac0acef",
+    "original_sha256": "f5abda353082172dc474002c6cb4a4ce4d47450f60daa21776539548bac0acef",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/StorageAndUserIdMapping.class",
+    "bytes": 814,
+    "sha256": "fdc6d2134068c7c53bd683c7989ef02f397759dab2365c544a179bea22733f57",
+    "original_sha256": "fdc6d2134068c7c53bd683c7989ef02f397759dab2365c544a179bea22733f57",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/StorageAndUserIdMappingForBulkImport.class",
+    "bytes": 907,
+    "sha256": "38a60ac8a97bfc2131c8d39819e1a146d0e31cfe7945351003bb118a85c9b386",
+    "original_sha256": "38a60ac8a97bfc2131c8d39819e1a146d0e31cfe7945351003bb118a85c9b386",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/auditlog/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/auditlog/AuditLog.class",
+    "bytes": 2072,
+    "sha256": "1f26ab94f0f877ca03a765407c8ca902791c1cbf1305f6043aae596f6fed7b92",
+    "original_sha256": "1f26ab94f0f877ca03a765407c8ca902791c1cbf1305f6043aae596f6fed7b92",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/ApproximateUserCount$ApproximateCountResult.class",
+    "bytes": 735,
+    "sha256": "6e02f26a7cd2504d7df0fa5773c373afb01689cd39c1254e7d89894a8fa51cd2",
+    "original_sha256": "6e02f26a7cd2504d7df0fa5773c373afb01689cd39c1254e7d89894a8fa51cd2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/ApproximateUserCount$CachedAnchor.class",
+    "bytes": 704,
+    "sha256": "bf7567f20fe97ce3baefe1dd21cc3fe484ccd32fb5700161db221bab92f2df2c",
+    "original_sha256": "bf7567f20fe97ce3baefe1dd21cc3fe484ccd32fb5700161db221bab92f2df2c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/ApproximateUserCount.class",
+    "bytes": 8657,
+    "sha256": "4976df3698aed68ed43a26b66d564a580af6a659c008b05e5c182b583487edf5",
+    "original_sha256": "4976df3698aed68ed43a26b66d564a580af6a659c008b05e5c182b583487edf5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/AuthRecipe$CanCreatePrimaryUserResult.class",
+    "bytes": 622,
+    "sha256": "deddbff2aeae2593faa65eba6b70a231bccdb28a5bdb121744140f68de1e0eba",
+    "original_sha256": "deddbff2aeae2593faa65eba6b70a231bccdb28a5bdb121744140f68de1e0eba",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/AuthRecipe$CanLinkAccountsResult.class",
+    "bytes": 760,
+    "sha256": "ead5d5e64140ed740dc76a91fd757c255a3d723945fa9a58115ad9b8c0ecc354",
+    "original_sha256": "ead5d5e64140ed740dc76a91fd757c255a3d723945fa9a58115ad9b8c0ecc354",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/AuthRecipe$CreatePrimaryUserResult.class",
+    "bytes": 784,
+    "sha256": "580a4b624827752591e8a2250a22358701b8031bb1fd518b646929e6f1e772d3",
+    "original_sha256": "580a4b624827752591e8a2250a22358701b8031bb1fd518b646929e6f1e772d3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/AuthRecipe$LinkAccountsResult.class",
+    "bytes": 763,
+    "sha256": "24f9b1dc6089c64f4c0e0a737de40e6bb840e60bc5ca2d75f0820963bf99d121",
+    "original_sha256": "24f9b1dc6089c64f4c0e0a737de40e6bb840e60bc5ca2d75f0820963bf99d121",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/AuthRecipe$UnlinkResult.class",
+    "bytes": 652,
+    "sha256": "9e02881fa14ba5dedda3c57470d5b4d49ce6b2f568ec976f487546f382d3291b",
+    "original_sha256": "9e02881fa14ba5dedda3c57470d5b4d49ce6b2f568ec976f487546f382d3291b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/AuthRecipe.class",
+    "bytes": 43238,
+    "sha256": "05088c45cda2d8b5607ed76c913b16542a884b1736cc34e50d9f5c8ea66504f4",
+    "original_sha256": "05088c45cda2d8b5607ed76c913b16542a884b1736cc34e50d9f5c8ea66504f4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/UserPaginationContainer.class",
+    "bytes": 806,
+    "sha256": "f1f4e6a7bdb7d491db0a145201e2fc878379b4c1095a274b20e11b252d31a48d",
+    "original_sha256": "f1f4e6a7bdb7d491db0a145201e2fc878379b4c1095a274b20e11b252d31a48d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/UserPaginationToken$InvalidTokenException.class",
+    "bytes": 570,
+    "sha256": "b9389aab879618c04813b1de69443432bb1f6849cadb5ecbb4d057b53a59547a",
+    "original_sha256": "b9389aab879618c04813b1de69443432bb1f6849cadb5ecbb4d057b53a59547a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/UserPaginationToken.class",
+    "bytes": 2263,
+    "sha256": "345af059a31da95be4d510a1f5e5633f6f8b3893aec7cdffb76f4a82da3cf019",
+    "original_sha256": "345af059a31da95be4d510a1f5e5633f6f8b3893aec7cdffb76f4a82da3cf019",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/exception/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/authRecipe/exception/BulkImportRecipeUserIdAlreadyLinkedWithAnotherPrimaryUserIdException.class",
+    "bytes": 1183,
+    "sha256": "0f5e3f1df189eb591581810021970b4d58ee7aa8bef4f01b6f2b4f2855c8da71",
+    "original_sha256": "0f5e3f1df189eb591581810021970b4d58ee7aa8bef4f01b6f2b4f2855c8da71",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImport.class",
+    "bytes": 43727,
+    "sha256": "8274dd3c9dd31d8d6461918bdc8fd70a3cc0531bf1ab4bbf119b1be206edf21f",
+    "original_sha256": "8274dd3c9dd31d8d6461918bdc8fd70a3cc0531bf1ab4bbf119b1be206edf21f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportProxyStoragePools.class",
+    "bytes": 7632,
+    "sha256": "654adc44bf326edd926466cdfcc61c931855840363ffc10dd8b743f252bf7b23",
+    "original_sha256": "654adc44bf326edd926466cdfcc61c931855840363ffc10dd8b743f252bf7b23",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportUserPaginationContainer.class",
+    "bytes": 992,
+    "sha256": "804aa96deaa488b6afc7a9089131ddc79237e624b58995d18346551705b93fa6",
+    "original_sha256": "804aa96deaa488b6afc7a9089131ddc79237e624b58995d18346551705b93fa6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportUserPaginationToken$InvalidTokenException.class",
+    "bytes": 610,
+    "sha256": "3127a5ced83158d51adc6d15d896c1906113799e13ad4a4f75926f978d704f5f",
+    "original_sha256": "3127a5ced83158d51adc6d15d896c1906113799e13ad4a4f75926f978d704f5f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportUserPaginationToken.class",
+    "bytes": 2317,
+    "sha256": "f0c7db2f9b99d2ca798e8d3c47829acc18ba286cf8d0fe573a97c3ccd53e9b19",
+    "original_sha256": "f0c7db2f9b99d2ca798e8d3c47829acc18ba286cf8d0fe573a97c3ccd53e9b19",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportUserUtils$IDMode.class",
+    "bytes": 1286,
+    "sha256": "44b8b02ae4fc91c4f4dd4c99706a63c3ce81a23080e668fdbdbe7d19478a6547",
+    "original_sha256": "44b8b02ae4fc91c4f4dd4c99706a63c3ce81a23080e668fdbdbe7d19478a6547",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportUserUtils.class",
+    "bytes": 29349,
+    "sha256": "d0bf988608beb5ce8134479cf7cf8d855a4b7a9ebae9c02eeef5cdde833836f7",
+    "original_sha256": "d0bf988608beb5ce8134479cf7cf8d855a4b7a9ebae9c02eeef5cdde833836f7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/BulkImportWorkerStorages.class",
+    "bytes": 3875,
+    "sha256": "b927292e8d1b87eee0e1a961edea3a85d2544d9cdc5253ab5b2c1b9fdc6069fe",
+    "original_sha256": "b927292e8d1b87eee0e1a961edea3a85d2544d9cdc5253ab5b2c1b9fdc6069fe",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/bulkimport/exceptions/InvalidBulkImportDataException.class",
+    "bytes": 1067,
+    "sha256": "42d09eda90dd26505dc01f960b173f65741364722b3882950dd6752ca3fe19b0",
+    "original_sha256": "42d09eda90dd26505dc01f960b173f65741364722b3882950dd6752ca3fe19b0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cliOptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cliOptions/CLIOptions.class",
+    "bytes": 5444,
+    "sha256": "612ffbd884160224d6993783d5acf04237646c479ec5c7b973ab24f3569c51e8",
+    "original_sha256": "612ffbd884160224d6993783d5acf04237646c479ec5c7b973ab24f3569c51e8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/Config.class",
+    "bytes": 19693,
+    "sha256": "9c6c9086126d5f5798c7168f427f2b2684e1466a36f96758c1952afc9ee43f23",
+    "original_sha256": "9c6c9086126d5f5798c7168f427f2b2684e1466a36f96758c1952afc9ee43f23",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/CoreConfig$PASSWORD_HASHING_ALG.class",
+    "bytes": 1331,
+    "sha256": "2e7b0bb5bcb0c0b984944634b7ac3dca8039e467d9741af3bc276b0095856567",
+    "original_sha256": "2e7b0bb5bcb0c0b984944634b7ac3dca8039e467d9741af3bc276b0095856567",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/CoreConfig.class",
+    "bytes": 44380,
+    "sha256": "cf13f2d4c3aa5ed49ec54bbe13dbc83da33fad86a29e17932183fa45ea670624",
+    "original_sha256": "cf13f2d4c3aa5ed49ec54bbe13dbc83da33fad86a29e17932183fa45ea670624",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/CoreConfigTestContent.class",
+    "bytes": 2694,
+    "sha256": "3b6d87b27442f288249734cca728426ace06e38c39ee29ce733389974b6fdd07",
+    "original_sha256": "3b6d87b27442f288249734cca728426ace06e38c39ee29ce733389974b6fdd07",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/ConfigDescription.class",
+    "bytes": 451,
+    "sha256": "519d0a76659bd5f1d52834643a37b572db1229f05bd23294e70a09068b44b4af",
+    "original_sha256": "519d0a76659bd5f1d52834643a37b572db1229f05bd23294e70a09068b44b4af",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/ConfigYamlOnly.class",
+    "bytes": 414,
+    "sha256": "8ef77bf2e94d43a96c7f056daf88b7678bcb62675b1ce75af2e56ed177980a02",
+    "original_sha256": "8ef77bf2e94d43a96c7f056daf88b7678bcb62675b1ce75af2e56ed177980a02",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/EnumProperty.class",
+    "bytes": 442,
+    "sha256": "0bc767a3a40ae1b58a5e8d4550bcc531e49ce1ca4732f3ec8f3df457c34f52e3",
+    "original_sha256": "0bc767a3a40ae1b58a5e8d4550bcc531e49ce1ca4732f3ec8f3df457c34f52e3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/EnvName.class",
+    "bytes": 431,
+    "sha256": "7f654204bfdb3794d6499098124f4317b8680f14015e66154bf1929d42f0dfa5",
+    "original_sha256": "7f654204bfdb3794d6499098124f4317b8680f14015e66154bf1929d42f0dfa5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/HideFromDashboard.class",
+    "bytes": 420,
+    "sha256": "f8564da26a520a3a9ab9e56047038dec8a0017cfa437ff15f930ad49678a39ff",
+    "original_sha256": "f8564da26a520a3a9ab9e56047038dec8a0017cfa437ff15f930ad49678a39ff",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/IgnoreForAnnotationCheck.class",
+    "bytes": 434,
+    "sha256": "31745d20b331e8021d4341208be6d1d492e77c2916869cb5cbb2f2553f0ee279",
+    "original_sha256": "31745d20b331e8021d4341208be6d1d492e77c2916869cb5cbb2f2553f0ee279",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/config/annotations/NotConflictingInApp.class",
+    "bytes": 424,
+    "sha256": "58dc26ba0c0aa8f77270fe02aaa2720e63575692632646e9ce1b47e1931966e1",
+    "original_sha256": "58dc26ba0c0aa8f77270fe02aaa2720e63575692632646e9ce1b47e1931966e1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/CronTask.class",
+    "bytes": 9291,
+    "sha256": "3ba94af108de4ac3cffd45fe0ee8dcae1d7d332157bf900e56390486e6ec0680",
+    "original_sha256": "3ba94af108de4ac3cffd45fe0ee8dcae1d7d332157bf900e56390486e6ec0680",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/CronTaskTest.class",
+    "bytes": 2683,
+    "sha256": "aa723cf28528fcec695e8dd79f04e968550d215d87c99c714991320f2935bc71",
+    "original_sha256": "aa723cf28528fcec695e8dd79f04e968550d215d87c99c714991320f2935bc71",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/Cronjobs.class",
+    "bytes": 6250,
+    "sha256": "4b4fbe65bdcde3e80635716c634e7a6e86d8099616fd54e448bd0c52d08c308b",
+    "original_sha256": "4b4fbe65bdcde3e80635716c634e7a6e86d8099616fd54e448bd0c52d08c308b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/backfill/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/backfill/BackfillReservationTables.class",
+    "bytes": 6484,
+    "sha256": "1148fdd654509ea32ac94784accec3e165135a3a8751cf3f8d76b9d18bfdcf39",
+    "original_sha256": "1148fdd654509ea32ac94784accec3e165135a3a8751cf3f8d76b9d18bfdcf39",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/bulkimport/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/bulkimport/ProcessBulkImportUsers.class",
+    "bytes": 11075,
+    "sha256": "125c7301f6e16e2a1c6645de48239788367abc4920c054fa10395bc770ecd525",
+    "original_sha256": "125c7301f6e16e2a1c6645de48239788367abc4920c054fa10395bc770ecd525",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/bulkimport/ProcessBulkUsersImportWorker.class",
+    "bytes": 19533,
+    "sha256": "60b84e38f8965b8978fae8b11af66ccdbc87c1a4343ed1dc7295d163bef7c325",
+    "original_sha256": "60b84e38f8965b8978fae8b11af66ccdbc87c1a4343ed1dc7295d163bef7c325",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/cleanupActivityLogPartitions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/cleanupActivityLogPartitions/CleanupActivityLogPartitions.class",
+    "bytes": 3306,
+    "sha256": "80a8792e5ddec4314ed98ac6ac691a1ef985b21b2e42d207ac4e30fb45203192",
+    "original_sha256": "80a8792e5ddec4314ed98ac6ac691a1ef985b21b2e42d207ac4e30fb45203192",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/cleanupOAuthSessionsAndChallenges/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/cleanupOAuthSessionsAndChallenges/CleanupOAuthSessionsAndChallenges.class",
+    "bytes": 4091,
+    "sha256": "81ab01b2a42d6e1c03b0045482ab0c7f0a5ea217adc75476c3ef840381923e40",
+    "original_sha256": "81ab01b2a42d6e1c03b0045482ab0c7f0a5ea217adc75476c3ef840381923e40",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/cleanupWebauthnExpiredData/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/cleanupWebauthnExpiredData/CleanUpWebauthNExpiredDataCron.class",
+    "bytes": 3891,
+    "sha256": "6e6a2df3da7ec19e351a7398a2ed643e406c23b0b85ebd77552dd7e110fcb3df",
+    "original_sha256": "6e6a2df3da7ec19e351a7398a2ed643e406c23b0b85ebd77552dd7e110fcb3df",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deadlocklogger/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deadlocklogger/DeadlockLogger$1.class",
+    "bytes": 3793,
+    "sha256": "9112dd4106bb286cf9beefc05c810da9a86b183c3cd7bd4c12af75c34fe0965d",
+    "original_sha256": "9112dd4106bb286cf9beefc05c810da9a86b183c3cd7bd4c12af75c34fe0965d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deadlocklogger/DeadlockLogger.class",
+    "bytes": 1224,
+    "sha256": "28c21229ad803dc69510604077bfa7207cffa4c54a288db9e3cde6f51033fe89",
+    "original_sha256": "28c21229ad803dc69510604077bfa7207cffa4c54a288db9e3cde6f51033fe89",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredAccessTokenSigningKeys/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredAccessTokenSigningKeys/DeleteExpiredAccessTokenSigningKeys.class",
+    "bytes": 4232,
+    "sha256": "9e68617cb7d5427ecd48a056d53b9f9af4ec83e21cbab53d6e12cff098182046",
+    "original_sha256": "9e68617cb7d5427ecd48a056d53b9f9af4ec83e21cbab53d6e12cff098182046",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredDashboardSessions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredDashboardSessions/DeleteExpiredDashboardSessions.class",
+    "bytes": 4252,
+    "sha256": "a0cc64acc787ca65d48167c73060dd3fb0925902cb8476a46b6c74b6bfffaa83",
+    "original_sha256": "a0cc64acc787ca65d48167c73060dd3fb0925902cb8476a46b6c74b6bfffaa83",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredEmailVerificationTokens/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredEmailVerificationTokens/DeleteExpiredEmailVerificationTokens.class",
+    "bytes": 4363,
+    "sha256": "a38b75d7a967eacac03141b7bb0edbedcbe610f38a54c0f206c601421dded560",
+    "original_sha256": "a38b75d7a967eacac03141b7bb0edbedcbe610f38a54c0f206c601421dded560",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredPasswordResetTokens/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredPasswordResetTokens/DeleteExpiredPasswordResetTokens.class",
+    "bytes": 3908,
+    "sha256": "1101e96197aa95a233a71ea3a0d17a70687cd370c78cd9b86b2b1f7d2b3bfe25",
+    "original_sha256": "1101e96197aa95a233a71ea3a0d17a70687cd370c78cd9b86b2b1f7d2b3bfe25",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredPasswordlessDevices/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredPasswordlessDevices/DeleteExpiredPasswordlessDevices.class",
+    "bytes": 9241,
+    "sha256": "453d135fbb0363b21265cfde728348722011aadd9ca0de79f333bf04bcefc7da",
+    "original_sha256": "453d135fbb0363b21265cfde728348722011aadd9ca0de79f333bf04bcefc7da",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredSAMLData/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredSAMLData/DeleteExpiredSAMLData.class",
+    "bytes": 3446,
+    "sha256": "72b98c20badc6aa89d7ed0742dd7c1f8563c99ba5a611eac1c50dd090bb6b51b",
+    "original_sha256": "72b98c20badc6aa89d7ed0742dd7c1f8563c99ba5a611eac1c50dd090bb6b51b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredSessions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredSessions/DeleteExpiredSessions.class",
+    "bytes": 3850,
+    "sha256": "48e20672d51d9aca148d8cd88ee4cc04318ef7f516e8ff4835b8fedc20214ac0",
+    "original_sha256": "48e20672d51d9aca148d8cd88ee4cc04318ef7f516e8ff4835b8fedc20214ac0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredTotpTokens/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/deleteExpiredTotpTokens/DeleteExpiredTotpTokens.class",
+    "bytes": 5672,
+    "sha256": "0e59ada675ffd6ea04c0abfeb99e6e2acff33cf53330f3ec43cb1f89d3b5c71e",
+    "original_sha256": "0e59ada675ffd6ea04c0abfeb99e6e2acff33cf53330f3ec43cb1f89d3b5c71e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/syncCoreConfigWithDb/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/syncCoreConfigWithDb/SyncCoreConfigWithDb$AjcClosure1.class",
+    "bytes": 1030,
+    "sha256": "0b8ae9d0d8b987a9d45a5b852c69fd968b0cf89440601219fc2622b695ed9cd2",
+    "original_sha256": "0b8ae9d0d8b987a9d45a5b852c69fd968b0cf89440601219fc2622b695ed9cd2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/syncCoreConfigWithDb/SyncCoreConfigWithDb.class",
+    "bytes": 5501,
+    "sha256": "577c83f4c6bfc7e21413b5766c502588d3990a5f1c1b340eca9cd4f007b4a323",
+    "original_sha256": "577c83f4c6bfc7e21413b5766c502588d3990a5f1c1b340eca9cd4f007b4a323",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/telemetry/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/cronjobs/telemetry/Telemetry.class",
+    "bytes": 10072,
+    "sha256": "f6a784d18e642ed711a0c1616e9224c14f76da22557759317645f3aaafda1743",
+    "original_sha256": "f6a784d18e642ed711a0c1616e9224c14f76da22557759317645f3aaafda1743",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/dashboard/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/dashboard/Dashboard.class",
+    "bytes": 18492,
+    "sha256": "3023b16c58a6e7cd9e3d8e60e3f6a6c42a898ddbe042bba3c8a6c46d6d77322f",
+    "original_sha256": "3023b16c58a6e7cd9e3d8e60e3f6a6c42a898ddbe042bba3c8a6c46d6d77322f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/dashboard/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/dashboard/exceptions/UserSuspendedException.class",
+    "bytes": 366,
+    "sha256": "ef4bd03e71da206471522c95e1eca234e24e5e94cebe60c3186215a4d2051ee5",
+    "original_sha256": "ef4bd03e71da206471522c95e1eca234e24e5e94cebe60c3186215a4d2051ee5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/EmailPassword$ConsumeResetPasswordTokenResult.class",
+    "bytes": 739,
+    "sha256": "0aa8dca602924dbbfe505f5dd94617db12b4b94e30c809c2c2628cd8249cd6a0",
+    "original_sha256": "0aa8dca602924dbbfe505f5dd94617db12b4b94e30c809c2c2628cd8249cd6a0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/EmailPassword$ImportUserResponse.class",
+    "bytes": 787,
+    "sha256": "8e9b4c0c9854c42df190e98a36baee13471cf09078436e771400a5be2174e939",
+    "original_sha256": "8e9b4c0c9854c42df190e98a36baee13471cf09078436e771400a5be2174e939",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/EmailPassword.class",
+    "bytes": 32097,
+    "sha256": "a56a31e8c2aed52857b81f54049beab063b348330fc064fcde3c23bf68954bb9",
+    "original_sha256": "a56a31e8c2aed52857b81f54049beab063b348330fc064fcde3c23bf68954bb9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/EmailPasswordTest.class",
+    "bytes": 2360,
+    "sha256": "5395ceda7fa41cfa67c655535685ad5994bd1460833cf26cad0ad4072284f69e",
+    "original_sha256": "5395ceda7fa41cfa67c655535685ad5994bd1460833cf26cad0ad4072284f69e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/ParsedFirebaseSCryptResponse.class",
+    "bytes": 2150,
+    "sha256": "fe1d0079b35252bcf4462eba1fb4e5a1edea22b438e655f4c9752eab90519e1f",
+    "original_sha256": "fe1d0079b35252bcf4462eba1fb4e5a1edea22b438e655f4c9752eab90519e1f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/PasswordHashing$Func.class",
+    "bytes": 542,
+    "sha256": "b168fa9aa17e1a2d8b4edffa06a942f611defb9395d97d2cd6eda3222b3d92ce",
+    "original_sha256": "b168fa9aa17e1a2d8b4edffa06a942f611defb9395d97d2cd6eda3222b3d92ce",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/PasswordHashing.class",
+    "bytes": 11535,
+    "sha256": "4afbc1f4da3e5c0e10f1ba8a6390d2125914631872d5eae105070a8e914831a2",
+    "original_sha256": "4afbc1f4da3e5c0e10f1ba8a6390d2125914631872d5eae105070a8e914831a2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/PasswordHashingUtils.class",
+    "bytes": 5886,
+    "sha256": "d71d94200c3175d0d4ff8bfa2c1cf1ea2a4fa74bfe4cf6ffc5b222b1083266f4",
+    "original_sha256": "d71d94200c3175d0d4ff8bfa2c1cf1ea2a4fa74bfe4cf6ffc5b222b1083266f4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/exceptions/ResetPasswordInvalidTokenException.class",
+    "bytes": 474,
+    "sha256": "538e70db6304807e87f0852277ac721211e139338eca484c9b4fbc703e3c74b9",
+    "original_sha256": "538e70db6304807e87f0852277ac721211e139338eca484c9b4fbc703e3c74b9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/exceptions/UnsupportedPasswordHashingFormatException.class",
+    "bytes": 622,
+    "sha256": "c7b145e47fb088237d47b075e43bb5535f174d1b842fbad74a163f61aa434457",
+    "original_sha256": "c7b145e47fb088237d47b075e43bb5535f174d1b842fbad74a163f61aa434457",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailpassword/exceptions/WrongCredentialsException.class",
+    "bytes": 447,
+    "sha256": "c1c7b1af53fb40ccf57fc16170c7983b09df6ed41b3291d4464951f20811a3e0",
+    "original_sha256": "c1c7b1af53fb40ccf57fc16170c7983b09df6ed41b3291d4464951f20811a3e0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/EmailVerification.class",
+    "bytes": 12153,
+    "sha256": "56abaf732cb519b49b87f9f7543ebb214fc7e7479f2c96a24f202fa8f6dfb546",
+    "original_sha256": "56abaf732cb519b49b87f9f7543ebb214fc7e7479f2c96a24f202fa8f6dfb546",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/EmailVerificationTest.class",
+    "bytes": 2408,
+    "sha256": "db27b568e60ba6f7b4ab2c563fde98f38411a2c9c0561180b587714333e78781",
+    "original_sha256": "db27b568e60ba6f7b4ab2c563fde98f38411a2c9c0561180b587714333e78781",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/User.class",
+    "bytes": 605,
+    "sha256": "9b140232799329bfd0e2abde9108320f644d9b67cd5ea87512093dfcab9e7a12",
+    "original_sha256": "9b140232799329bfd0e2abde9108320f644d9b67cd5ea87512093dfcab9e7a12",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/exception/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/exception/EmailAlreadyVerifiedException.class",
+    "bytes": 465,
+    "sha256": "836512ccd346160b7e42f77c069524ca80dccac8533181700e2160201edeb2ca",
+    "original_sha256": "836512ccd346160b7e42f77c069524ca80dccac8533181700e2160201edeb2ca",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/emailverification/exception/EmailVerificationInvalidTokenException.class",
+    "bytes": 492,
+    "sha256": "a4f71622e65e0aa6696ce8ba167ef6651ee0d8366e022bea4a4f4ea068a3722f",
+    "original_sha256": "a4f71622e65e0aa6696ce8ba167ef6651ee0d8366e022bea4a4f4ea068a3722f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/AccessTokenPayloadError.class",
+    "bytes": 798,
+    "sha256": "4a9709bd39b7cfd075e1af7f9f3223bada397b059ccff746085e6fd756935d4c",
+    "original_sha256": "4a9709bd39b7cfd075e1af7f9f3223bada397b059ccff746085e6fd756935d4c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/AccessTokenValidityOutOfRangeException.class",
+    "bytes": 581,
+    "sha256": "07ee3a001a3455ddd090fb22bbe85266709ee639864daad721ac5b1a95396a6c",
+    "original_sha256": "07ee3a001a3455ddd090fb22bbe85266709ee639864daad721ac5b1a95396a6c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/QuitProgramException.class",
+    "bytes": 716,
+    "sha256": "3e5c2f89db10e8649c4a3ef974a2ef1778b725f0f0d35aff2341d55d39e9e7c8",
+    "original_sha256": "3e5c2f89db10e8649c4a3ef974a2ef1778b725f0f0d35aff2341d55d39e9e7c8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/RefreshTokenReuseSubtype.class",
+    "bytes": 1236,
+    "sha256": "fbc19936bc233dd855913cf7d2c6dff13b399270cc07ceabc1476e3d68550a2b",
+    "original_sha256": "fbc19936bc233dd855913cf7d2c6dff13b399270cc07ceabc1476e3d68550a2b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/TokenTheftDetectedException.class",
+    "bytes": 1074,
+    "sha256": "5510f7ad6120d67bcc222d768af221d3a3bbd3c4656fe7a16b327e9897a510f2",
+    "original_sha256": "5510f7ad6120d67bcc222d768af221d3a3bbd3c4656fe7a16b327e9897a510f2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/TryRefreshTokenException.class",
+    "bytes": 801,
+    "sha256": "76ba4d27e54b159db4c3d29b38fd8546d3a392ad57d18f0e3de8e4b042bb7063",
+    "original_sha256": "76ba4d27e54b159db4c3d29b38fd8546d3a392ad57d18f0e3de8e4b042bb7063",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/exceptions/UnauthorisedException.class",
+    "bytes": 1083,
+    "sha256": "3099898d96929192a928e4f076557443d6fae470ddf8a022d0edbd7a08afd4d4",
+    "original_sha256": "3099898d96929192a928e4f076557443d6fae470ddf8a022d0edbd7a08afd4d4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/EEFeatureFlagInterface.class",
+    "bytes": 1372,
+    "sha256": "6b03be09ad1b4d339ad96905371702065f045fce633d13048ca72ebc758a3e0f",
+    "original_sha256": "6b03be09ad1b4d339ad96905371702065f045fce633d13048ca72ebc758a3e0f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/EE_FEATURES.class",
+    "bytes": 2120,
+    "sha256": "eb4dcb029ff92f77340e9b491488d3384fee39bb3e4faa95ce39b03ac27b7660",
+    "original_sha256": "eb4dcb029ff92f77340e9b491488d3384fee39bb3e4faa95ce39b03ac27b7660",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/FeatureFlag.class",
+    "bytes": 10030,
+    "sha256": "5bda4b9dc2d6aa78ac5ef0413b345b972259f3c32da688da153e70a50e0457fa",
+    "original_sha256": "5bda4b9dc2d6aa78ac5ef0413b345b972259f3c32da688da153e70a50e0457fa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/FeatureFlagTestContent.class",
+    "bytes": 2551,
+    "sha256": "8fda0c0a9ce6958926bcd6f4b0fa6e0f265e0c2a2508fb1feba18a14de2ed70a",
+    "original_sha256": "8fda0c0a9ce6958926bcd6f4b0fa6e0f265e0c2a2508fb1feba18a14de2ed70a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/exceptions/FeatureNotEnabledException.class",
+    "bytes": 1336,
+    "sha256": "50f0f284c96b0ecc7e28e30da3493829711aaee4c2bb6537ad7cd912a540da14",
+    "original_sha256": "50f0f284c96b0ecc7e28e30da3493829711aaee4c2bb6537ad7cd912a540da14",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/exceptions/InvalidLicenseKeyException.class",
+    "bytes": 631,
+    "sha256": "ed4a18dd0eadfcc9fd97b352791ee901c9e79e1f9a5d6dcac7f1f4eb73c972be",
+    "original_sha256": "ed4a18dd0eadfcc9fd97b352791ee901c9e79e1f9a5d6dcac7f1f4eb73c972be",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/featureflag/exceptions/NoLicenseKeyFoundException.class",
+    "bytes": 382,
+    "sha256": "207d007a75162f7c7b5e25e990d92ce7893b3e0ccbf66a74d27f03f390b39154",
+    "original_sha256": "207d007a75162f7c7b5e25e990d92ce7893b3e0ccbf66a74d27f03f390b39154",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/httpRequest/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/httpRequest/HttpRequest.class",
+    "bytes": 12324,
+    "sha256": "2622bf246a71dbec4a7a122840bc72b9cd36f039e28491dd2f9280bc6d4a2ca4",
+    "original_sha256": "2622bf246a71dbec4a7a122840bc72b9cd36f039e28491dd2f9280bc6d4a2ca4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/httpRequest/HttpRequestBadResponseException.class",
+    "bytes": 566,
+    "sha256": "88b09f099217b661268fd20bec9d963ca4f5982fe166edce8b3bffba8d123a3a",
+    "original_sha256": "88b09f099217b661268fd20bec9d963ca4f5982fe166edce8b3bffba8d123a3a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/httpRequest/HttpRequestMocking$URLGetter.class",
+    "bytes": 642,
+    "sha256": "03260b4d2d3a056df8120e813c847876b83ab3817788dee3eba5d37028c27d93",
+    "original_sha256": "03260b4d2d3a056df8120e813c847876b83ab3817788dee3eba5d37028c27d93",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/httpRequest/HttpRequestMocking.class",
+    "bytes": 2889,
+    "sha256": "18cdb33529df0f7b36320a64b660cdeb1c95fba30f6bb240008db3312bbdf4cb",
+    "original_sha256": "18cdb33529df0f7b36320a64b660cdeb1c95fba30f6bb240008db3312bbdf4cb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/httpRequest/HttpResponseException.class",
+    "bytes": 1106,
+    "sha256": "9eeb78772143edce80c65d374dcc4d6f139dfa37f81f8ce7742121ca2b83dcf0",
+    "original_sha256": "9eeb78772143edce80c65d374dcc4d6f139dfa37f81f8ce7742121ca2b83dcf0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/ConnectionPool.class",
+    "bytes": 3254,
+    "sha256": "dd709e27353e544d6c5d879e7f8f1554ced872e17472b09856f0c80f07a3bf2e",
+    "original_sha256": "dd709e27353e544d6c5d879e7f8f1554ced872e17472b09856f0c80f07a3bf2e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/ConnectionWithLocks.class",
+    "bytes": 10603,
+    "sha256": "9541264fca6ff62f980c93ab304946e13e2ec39fd1b4d4f17737f62127961c2c",
+    "original_sha256": "9541264fca6ff62f980c93ab304946e13e2ec39fd1b4d4f17737f62127961c2c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/Lock.class",
+    "bytes": 1245,
+    "sha256": "b2211663d8d312506c0793b160e22a3fbdbc0b47c877a4073573b009d22edef9",
+    "original_sha256": "b2211663d8d312506c0793b160e22a3fbdbc0b47c877a4073573b009d22edef9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/LockedUserImpl.class",
+    "bytes": 2801,
+    "sha256": "f5a3326ef4cf732aea2117f634539073eb93fd0b24b78c8a0fca813e24746e21",
+    "original_sha256": "f5a3326ef4cf732aea2117f634539073eb93fd0b24b78c8a0fca813e24746e21",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/PreparedStatementValueSetter.class",
+    "bytes": 1181,
+    "sha256": "0ef27c050705ed2093b56b16276b499e1c584dd5b885f0c4cf06aaf78475395e",
+    "original_sha256": "0ef27c050705ed2093b56b16276b499e1c584dd5b885f0c4cf06aaf78475395e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/QueryExecutorTemplate.class",
+    "bytes": 4975,
+    "sha256": "af9d0592036d431d3a97079f80e2274d559031ef7c20113941d0b1bcfd40ff62",
+    "original_sha256": "af9d0592036d431d3a97079f80e2274d559031ef7c20113941d0b1bcfd40ff62",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/ResourceDistributor$SingletonResource.class",
+    "bytes": 491,
+    "sha256": "ffa0f123d4e43049323e01227111e27c9ba92abc42247918ab65306c9202339c",
+    "original_sha256": "ffa0f123d4e43049323e01227111e27c9ba92abc42247918ab65306c9202339c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/ResourceDistributor.class",
+    "bytes": 1671,
+    "sha256": "d3db2a894721b4e081327b4ed83b9f58fbb0343879410005bd92979c9f81181b",
+    "original_sha256": "d3db2a894721b4e081327b4ed83b9f58fbb0343879410005bd92979c9f81181b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/ResultSetValueExtractor.class",
+    "bytes": 497,
+    "sha256": "359b1224c666af45d7ab9b4ce172d982f24ef9075ea7553123488dc61087ff0c",
+    "original_sha256": "359b1224c666af45d7ab9b4ce172d982f24ef9075ea7553123488dc61087ff0c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/Start.class",
+    "bytes": 168239,
+    "sha256": "cff08da7df934df4506ae631d6905a22b325926d9ad31e5041f46a0f3d8b17f4",
+    "original_sha256": "cff08da7df934df4506ae631d6905a22b325926d9ad31e5041f46a0f3d8b17f4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/Utils.class",
+    "bytes": 809,
+    "sha256": "c777cdf6f34cb2e89af90d97904582b3b92cc431de5b0a70f9bea302324906cf",
+    "original_sha256": "c777cdf6f34cb2e89af90d97904582b3b92cc431de5b0a70f9bea302324906cf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/config/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/config/Config.class",
+    "bytes": 2342,
+    "sha256": "9dc29097c6c3c3cd3ccb8b626b40706128cd5c84dfa25b54ecbdea88f8e23427",
+    "original_sha256": "9dc29097c6c3c3cd3ccb8b626b40706128cd5c84dfa25b54ecbdea88f8e23427",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/config/SQLiteConfig.class",
+    "bytes": 7762,
+    "sha256": "efaec4b315b712984efd4cf83ca2906d47dabbb2d81b1f768e337b8ce4612611",
+    "original_sha256": "efaec4b315b712984efd4cf83ca2906d47dabbb2d81b1f768e337b8ce4612611",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/AccountInfoQueries.class",
+    "bytes": 60930,
+    "sha256": "08b67a5a4e220538a95e7ad5293b804ea3def37555c2e0f5f5d6f349e54d0b08",
+    "original_sha256": "08b67a5a4e220538a95e7ad5293b804ea3def37555c2e0f5f5d6f349e54d0b08",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/ActiveUsersQueries.class",
+    "bytes": 9906,
+    "sha256": "2b3e518b49d185f8c4ce611d8a893bb8e431bb09f13da6189685264654beef79",
+    "original_sha256": "2b3e518b49d185f8c4ce611d8a893bb8e431bb09f13da6189685264654beef79",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/ActivityLogQueries.class",
+    "bytes": 5195,
+    "sha256": "5c596f4a97b4e5e0713935e25c92bfc0cc29de07191b8d315e3e33c575ecf27b",
+    "original_sha256": "5c596f4a97b4e5e0713935e25c92bfc0cc29de07191b8d315e3e33c575ecf27b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/DashboardQueries$DashboardInfoMapper.class",
+    "bytes": 1771,
+    "sha256": "451b27c181cd60ac05bcb167cd771e0219e7f175f0286a3c500afff848254268",
+    "original_sha256": "451b27c181cd60ac05bcb167cd771e0219e7f175f0286a3c500afff848254268",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/DashboardQueries$DashboardSessionInfoMapper.class",
+    "bytes": 1802,
+    "sha256": "9806059cc195ee0a935c6002a90fcf4f84179be6a5ca753b3a1123ef0839f796",
+    "original_sha256": "9806059cc195ee0a935c6002a90fcf4f84179be6a5ca753b3a1123ef0839f796",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/DashboardQueries$DashboardSessionInfoResultExtractor.class",
+    "bytes": 2813,
+    "sha256": "aea900a6af620c2a99370a8dec7079132a9e688f8a9fb57b3c4032e9b8ad3d9b",
+    "original_sha256": "aea900a6af620c2a99370a8dec7079132a9e688f8a9fb57b3c4032e9b8ad3d9b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/DashboardQueries$DashboardUserInfoResultExtractor.class",
+    "bytes": 2741,
+    "sha256": "c97cc86aee68172f58b9f1006b87a7030e7b686f4bb27c0f2fe7686e43a057ff",
+    "original_sha256": "c97cc86aee68172f58b9f1006b87a7030e7b686f4bb27c0f2fe7686e43a057ff",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/DashboardQueries.class",
+    "bytes": 13737,
+    "sha256": "62562d7e0b162835930da9632fb85807f5ccc70fb99eee56d305e8aea37293f9",
+    "original_sha256": "62562d7e0b162835930da9632fb85807f5ccc70fb99eee56d305e8aea37293f9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailPasswordQueries$PasswordResetRowMapper.class",
+    "bytes": 2037,
+    "sha256": "46eaea22d60e779974d15f336d5d219b926acb74529b27721ab58ffe37761df3",
+    "original_sha256": "46eaea22d60e779974d15f336d5d219b926acb74529b27721ab58ffe37761df3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailPasswordQueries$UserInfoPartial.class",
+    "bytes": 1733,
+    "sha256": "f157e6066c1c4db36694490f9986c470530bf8e8ec3ac8c0885992cf57a6e8d4",
+    "original_sha256": "f157e6066c1c4db36694490f9986c470530bf8e8ec3ac8c0885992cf57a6e8d4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailPasswordQueries$UserInfoRowMapper.class",
+    "bytes": 1861,
+    "sha256": "44279acf1c314ddfbac77ce985aad16a408847688b07e71f739da1851a04dc2f",
+    "original_sha256": "44279acf1c314ddfbac77ce985aad16a408847688b07e71f739da1851a04dc2f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailPasswordQueries.class",
+    "bytes": 37188,
+    "sha256": "0bc80fd7c4ad0da85e4c0748de879743db9cb1ca9bd30085875bce33ecd6b14c",
+    "original_sha256": "0bc80fd7c4ad0da85e4c0748de879743db9cb1ca9bd30085875bce33ecd6b14c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailVerificationQueries$EmailVerificationTokenInfoRowMapper.class",
+    "bytes": 1935,
+    "sha256": "3fa798ed14a8c53c04077cd8b88dd69af35a9c9c59d34fff116a548bd1cbffdd",
+    "original_sha256": "3fa798ed14a8c53c04077cd8b88dd69af35a9c9c59d34fff116a548bd1cbffdd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailVerificationQueries$UserIdAndEmail.class",
+    "bytes": 747,
+    "sha256": "d5af202123acbb1d97a3bfe2a676f05aadd1af4ea0f9a452e3fec3469be6975a",
+    "original_sha256": "d5af202123acbb1d97a3bfe2a676f05aadd1af4ea0f9a452e3fec3469be6975a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/EmailVerificationQueries.class",
+    "bytes": 27886,
+    "sha256": "f2122ff756b48e7476ba32d44fe7834e76a478b11cdaf9e7f2544652810038a5",
+    "original_sha256": "f2122ff756b48e7476ba32d44fe7834e76a478b11cdaf9e7f2544652810038a5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/GeneralQueries$AccountLinkingInfo.class",
+    "bytes": 716,
+    "sha256": "b94083f8dbe4ca2c907b2f53b0ac9e20d57f9eda617c5be472f545a7a111e12b",
+    "original_sha256": "b94083f8dbe4ca2c907b2f53b0ac9e20d57f9eda617c5be472f545a7a111e12b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/GeneralQueries$AllAuthRecipeUsersResultHolder.class",
+    "bytes": 1284,
+    "sha256": "33b50c129ecdb7b3a92b43033ae2eac71d51101b3f1446a19358ad25580fd22e",
+    "original_sha256": "33b50c129ecdb7b3a92b43033ae2eac71d51101b3f1446a19358ad25580fd22e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/GeneralQueries$KeyValueInfoRowMapper.class",
+    "bytes": 1652,
+    "sha256": "5f1532e46e95c390e759f7f425b8190feefd53345a75258ad6ab09c307fa64a6",
+    "original_sha256": "5f1532e46e95c390e759f7f425b8190feefd53345a75258ad6ab09c307fa64a6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/GeneralQueries.class",
+    "bytes": 98186,
+    "sha256": "8a6e94f0debb1488b1ba5f856a4495f239c4bd2338bc990eb2846d799733c1e9",
+    "original_sha256": "8a6e94f0debb1488b1ba5f856a4495f239c4bd2338bc990eb2846d799733c1e9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/JWTSigningQueries$JWTSigningKeyInfoRowMapper.class",
+    "bytes": 2175,
+    "sha256": "245fdf1caf2b154aac252b897aa7c745166b4096e92eb7450330692f1d9861f5",
+    "original_sha256": "245fdf1caf2b154aac252b897aa7c745166b4096e92eb7450330692f1d9861f5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/JWTSigningQueries.class",
+    "bytes": 6198,
+    "sha256": "7183e9d192d02fb18e6f37e70ac2b316ee53209d2f1aa516507154a09c7c5123",
+    "original_sha256": "7183e9d192d02fb18e6f37e70ac2b316ee53209d2f1aa516507154a09c7c5123",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/MigrationBackfillQueries.class",
+    "bytes": 4120,
+    "sha256": "efb45859f19b44fe575b02b1405072ac2b8518af3608a6219573732cf53aef42",
+    "original_sha256": "efb45859f19b44fe575b02b1405072ac2b8518af3608a6219573732cf53aef42",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/MultitenancyQueries.class",
+    "bytes": 15978,
+    "sha256": "96ee6021a7fe1e64dc3026e7e027b08e689ddca0668bd3f3b9fba4ed2f481cc2",
+    "original_sha256": "96ee6021a7fe1e64dc3026e7e027b08e689ddca0668bd3f3b9fba4ed2f481cc2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/OAuthQueries.class",
+    "bytes": 29871,
+    "sha256": "03c9dc9d9f4edabf3076c98ebd43bc961bfedbf27abc4b6e1b6f0b95b18c103b",
+    "original_sha256": "03c9dc9d9f4edabf3076c98ebd43bc961bfedbf27abc4b6e1b6f0b95b18c103b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/PasswordlessQueries$PasswordlessCodeRowMapper.class",
+    "bytes": 1986,
+    "sha256": "1674d668fe4aaf16e9ca84fa46481f48eb20548d5b9b4028e3d6dae89d297d0d",
+    "original_sha256": "1674d668fe4aaf16e9ca84fa46481f48eb20548d5b9b4028e3d6dae89d297d0d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/PasswordlessQueries$PasswordlessDeviceRowMapper.class",
+    "bytes": 1970,
+    "sha256": "103edd50088dce6fd49cb1013b5ad6676d0f2e814ebd92e7e490544dae7abcfa",
+    "original_sha256": "103edd50088dce6fd49cb1013b5ad6676d0f2e814ebd92e7e490544dae7abcfa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/PasswordlessQueries$UserInfoPartial.class",
+    "bytes": 2191,
+    "sha256": "a3023e0eb22117bc3e981ad5a048758e5cd1bade26796a8c6ff4fc1d60ad27e7",
+    "original_sha256": "a3023e0eb22117bc3e981ad5a048758e5cd1bade26796a8c6ff4fc1d60ad27e7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/PasswordlessQueries$UserInfoRowMapper.class",
+    "bytes": 1852,
+    "sha256": "5166f432536091abeddcf1a1b25fbdcf2ccd217f84f1efbcfd0bdf79d1269570",
+    "original_sha256": "5166f432536091abeddcf1a1b25fbdcf2ccd217f84f1efbcfd0bdf79d1269570",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/PasswordlessQueries$UserInfoWithTenantId.class",
+    "bytes": 881,
+    "sha256": "6cca130ac98a6cfe2856001afb759d1016b1815ac12f6fd63a57df73f406ebc9",
+    "original_sha256": "6cca130ac98a6cfe2856001afb759d1016b1815ac12f6fd63a57df73f406ebc9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/PasswordlessQueries.class",
+    "bytes": 57772,
+    "sha256": "a16ece1acb53dcff6a10b52d7a4dde7bd678f8446f9c8462123dbaaea8a49ae9",
+    "original_sha256": "a16ece1acb53dcff6a10b52d7a4dde7bd678f8446f9c8462123dbaaea8a49ae9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/SAMLQueries.class",
+    "bytes": 21725,
+    "sha256": "34abc7ac0594c452c83611e9af97afa28dc6c100e0bae86d3d061b8b6130ab02",
+    "original_sha256": "34abc7ac0594c452c83611e9af97afa28dc6c100e0bae86d3d061b8b6130ab02",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/SessionQueries$AccessTokenSigningKeyRowMapper.class",
+    "bytes": 1688,
+    "sha256": "ecdc18a17aa0929541968c49c3b2116057b4926b7f0acbfd6416ca5017e1d8e3",
+    "original_sha256": "ecdc18a17aa0929541968c49c3b2116057b4926b7f0acbfd6416ca5017e1d8e3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/SessionQueries$SessionInfoRowMapper.class",
+    "bytes": 2690,
+    "sha256": "08024b3bddc580b0cdf9c6093c146029d2555fcb5194496379b8c724ea7c5c5c",
+    "original_sha256": "08024b3bddc580b0cdf9c6093c146029d2555fcb5194496379b8c724ea7c5c5c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/SessionQueries.class",
+    "bytes": 25858,
+    "sha256": "9ead607bede16bc556c695f21f67e46c8629932e0633f7a175072d65b4fb1773",
+    "original_sha256": "9ead607bede16bc556c695f21f67e46c8629932e0633f7a175072d65b4fb1773",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/TOTPQueries$TOTPDeviceRowMapper.class",
+    "bytes": 1932,
+    "sha256": "aacbbcad8c0706cdeb4eaf071facb88325092958afe291442a98a5c236e3994e",
+    "original_sha256": "aacbbcad8c0706cdeb4eaf071facb88325092958afe291442a98a5c236e3994e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/TOTPQueries$TOTPUsedCodeRowMapper.class",
+    "bytes": 1929,
+    "sha256": "7e9297467864d59b8854573cd7e533cd3f3555964b73720908f3c6e636c50d58",
+    "original_sha256": "7e9297467864d59b8854573cd7e533cd3f3555964b73720908f3c6e636c50d58",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/TOTPQueries.class",
+    "bytes": 18441,
+    "sha256": "18356578929f1af9fff1ef6407c577a4b4db39329c6d8ffb3542a04b13c0d413",
+    "original_sha256": "18356578929f1af9fff1ef6407c577a4b4db39329c6d8ffb3542a04b13c0d413",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/ThirdPartyQueries$UserInfoPartial.class",
+    "bytes": 2068,
+    "sha256": "a646fb38ff7ba0dbea796a98b61398d2f9c87e6c5999c3a77adb3c70b685114f",
+    "original_sha256": "a646fb38ff7ba0dbea796a98b61398d2f9c87e6c5999c3a77adb3c70b685114f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/ThirdPartyQueries$UserInfoRowMapper.class",
+    "bytes": 2140,
+    "sha256": "b1226b08aff19bac4464c239271b0525f81cd0434e2fdf0fdb7b258187187426",
+    "original_sha256": "b1226b08aff19bac4464c239271b0525f81cd0434e2fdf0fdb7b258187187426",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/ThirdPartyQueries.class",
+    "bytes": 35627,
+    "sha256": "34e391f00770dc19a10a9d7f49aa9d0bc047af6238e496605c25e5c9b30c9816",
+    "original_sha256": "34e391f00770dc19a10a9d7f49aa9d0bc047af6238e496605c25e5c9b30c9816",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/UserIdMappingQueries$UserIdMappingRowMapper.class",
+    "bytes": 1776,
+    "sha256": "7fb069309e2eca93ec439c4d3eb603aeca22d7aa64bd0c00ff24e869e55e9660",
+    "original_sha256": "7fb069309e2eca93ec439c4d3eb603aeca22d7aa64bd0c00ff24e869e55e9660",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/UserIdMappingQueries.class",
+    "bytes": 16115,
+    "sha256": "dd68dbb641a3e995ee3dab6b10e2881317e8da7a349542a9f776ea8d1272ff13",
+    "original_sha256": "dd68dbb641a3e995ee3dab6b10e2881317e8da7a349542a9f776ea8d1272ff13",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/UserLockingQueries.class",
+    "bytes": 9148,
+    "sha256": "9f784013ca78e2d788e15ef0d27c7d4d7732a5953b1ecf49c6774601ab56055c",
+    "original_sha256": "9f784013ca78e2d788e15ef0d27c7d4d7732a5953b1ecf49c6774601ab56055c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/UserMetadataQueries.class",
+    "bytes": 10232,
+    "sha256": "fa3823b6779ac074c7f3282baf805f647eab08833a20fba42bceb85d2e996c3b",
+    "original_sha256": "fa3823b6779ac074c7f3282baf805f647eab08833a20fba42bceb85d2e996c3b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/UserRolesQueries.class",
+    "bytes": 19561,
+    "sha256": "b5e2ea08c2e010a36cf7b50f5b9430d2b04ea7263683bf43a7686c7615161838",
+    "original_sha256": "b5e2ea08c2e010a36cf7b50f5b9430d2b04ea7263683bf43a7686c7615161838",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/WebAuthNQueries$AccountRecoveryTokenInfoRowMapper.class",
+    "bytes": 1931,
+    "sha256": "f941b6bb8f1768b1c7aeb2353ecb312e7247edb5efacd055f22d539516eff990",
+    "original_sha256": "f941b6bb8f1768b1c7aeb2353ecb312e7247edb5efacd055f22d539516eff990",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/WebAuthNQueries$WebAuthNOptionsRowMapper.class",
+    "bytes": 2445,
+    "sha256": "af8b5cfe2fb714c2da0f63d26019fef9764f737960ff70cfe700791150296673",
+    "original_sha256": "af8b5cfe2fb714c2da0f63d26019fef9764f737960ff70cfe700791150296673",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/WebAuthNQueries$WebAuthnStoredCredentialRowMapper.class",
+    "bytes": 2253,
+    "sha256": "d93bb874a3659f22ff6f2263cf97895346a2b14c142e6f0bf1dbbe3aa19447c6",
+    "original_sha256": "d93bb874a3659f22ff6f2263cf97895346a2b14c142e6f0bf1dbbe3aa19447c6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/WebAuthNQueries.class",
+    "bytes": 47274,
+    "sha256": "ed3de494934edec575e1c7d44e690f5fbdd42fbd449b24fc50895a9bd6d8197c",
+    "original_sha256": "ed3de494934edec575e1c7d44e690f5fbdd42fbd449b24fc50895a9bd6d8197c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/MfaSqlHelper.class",
+    "bytes": 7247,
+    "sha256": "33917e4493d4fcaade2fac6e089abe1b6427183483dcb94d2a7eaffbf8beb5a1",
+    "original_sha256": "33917e4493d4fcaade2fac6e089abe1b6427183483dcb94d2a7eaffbf8beb5a1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/TenantConfigSQLHelper$TenantConfigRowMapper.class",
+    "bytes": 3904,
+    "sha256": "cbc640f508de71be200602390b89cbd5ab2308c2858c4385bfff4ad99e39b4c7",
+    "original_sha256": "cbc640f508de71be200602390b89cbd5ab2308c2858c4385bfff4ad99e39b4c7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/TenantConfigSQLHelper.class",
+    "bytes": 8376,
+    "sha256": "c52a1963f8dd427fd4e8fc8d6d87dec2a7510805edbf8009310090c8a580f6cd",
+    "original_sha256": "c52a1963f8dd427fd4e8fc8d6d87dec2a7510805edbf8009310090c8a580f6cd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/ThirdPartyProviderClientSQLHelper$TenantThirdPartyProviderClientRowMapper.class",
+    "bytes": 3576,
+    "sha256": "784b180d9d2d2229a2f1804ccb7f5b24384e120c914c8f27ba309210306e71f7",
+    "original_sha256": "784b180d9d2d2229a2f1804ccb7f5b24384e120c914c8f27ba309210306e71f7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/ThirdPartyProviderClientSQLHelper.class",
+    "bytes": 8292,
+    "sha256": "cf0c6af773dc1b6bf6afc2e59eb899f7b8b8b6f41da70be943e6d9459bd80d90",
+    "original_sha256": "cf0c6af773dc1b6bf6afc2e59eb899f7b8b8b6f41da70be943e6d9459bd80d90",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/ThirdPartyProviderSQLHelper$TenantThirdPartyProviderRowMapper.class",
+    "bytes": 4529,
+    "sha256": "718853485d6c8f692587af1962425f14fc472e112d39d43359be7ec71cca6573",
+    "original_sha256": "718853485d6c8f692587af1962425f14fc472e112d39d43359be7ec71cca6573",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/multitenancy/ThirdPartyProviderSQLHelper.class",
+    "bytes": 9926,
+    "sha256": "0e33efbfae5efdf39f6824637fb12f0c6e82f42589c6a8b91cb563ee752e7276",
+    "original_sha256": "0e33efbfae5efdf39f6824637fb12f0c6e82f42589c6a8b91cb563ee752e7276",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/utils/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/inmemorydb/queries/utils/JsonUtils.class",
+    "bytes": 1141,
+    "sha256": "fa124c11858569866f2e27ee71fadf3eab5f9c3db4959d41ab9d95119d6f700c",
+    "original_sha256": "fa124c11858569866f2e27ee71fadf3eab5f9c3db4959d41ab9d95119d6f700c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/jwt/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/jwt/JWTSigningFunctions.class",
+    "bytes": 7131,
+    "sha256": "5283f0efa90e84308849d4b0def61ee8fd66ac9d8b36744c749689d808707896",
+    "original_sha256": "5283f0efa90e84308849d4b0def61ee8fd66ac9d8b36744c749689d808707896",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/jwt/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/jwt/exceptions/UnsupportedJWTSigningAlgorithmException.class",
+    "bytes": 469,
+    "sha256": "f1bafe7ec17feeefc529da63580636cc1d8e78550eb1a587263a1aa478b7dd66",
+    "original_sha256": "f1bafe7ec17feeefc529da63580636cc1d8e78550eb1a587263a1aa478b7dd66",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/mfa/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/mfa/Mfa.class",
+    "bytes": 1689,
+    "sha256": "c87958c87a5bc48df444a91810be8215de7600af2a2874552a5b14ac667b1ceb",
+    "original_sha256": "c87958c87a5bc48df444a91810be8215de7600af2a2874552a5b14ac667b1ceb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/migration/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/migration/MigrationModeTransition.class",
+    "bytes": 5998,
+    "sha256": "fabbc80bb0df6a2423747521a143a2b11ab31dffb044c0e88534d56f0e9ce8d5",
+    "original_sha256": "fabbc80bb0df6a2423747521a143a2b11ab31dffb044c0e88534d56f0e9ce8d5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/Multitenancy.class",
+    "bytes": 27205,
+    "sha256": "f090b3085887e33f3dc243f5038114bd2e1bac2469c76098706a0d633f0cf829",
+    "original_sha256": "f090b3085887e33f3dc243f5038114bd2e1bac2469c76098706a0d633f0cf829",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/MultitenancyHelper$AjcClosure1.class",
+    "bytes": 980,
+    "sha256": "843883222527f97cf4b89681a871d40a6771d49fbff4445b03bd9743c04f94e1",
+    "original_sha256": "843883222527f97cf4b89681a871d40a6771d49fbff4445b03bd9743c04f94e1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/MultitenancyHelper.class",
+    "bytes": 28397,
+    "sha256": "543e258c8c475daf57450c14b37c7fe88e91edb7db080734b23d3f16c43ad42a",
+    "original_sha256": "543e258c8c475daf57450c14b37c7fe88e91edb7db080734b23d3f16c43ad42a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/exception/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/exception/BadPermissionException.class",
+    "bytes": 497,
+    "sha256": "e423ec6d31093aa5edc7cc442dea9c5f838fc80bc43ebb1afc11442e56914d93",
+    "original_sha256": "e423ec6d31093aa5edc7cc442dea9c5f838fc80bc43ebb1afc11442e56914d93",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/exception/CannotDeleteNullAppIdException.class",
+    "bytes": 394,
+    "sha256": "3ffbdfeaa65fcdf926d46343f9dcbcdaf29d12082c5096223c592f8f2fff2031",
+    "original_sha256": "3ffbdfeaa65fcdf926d46343f9dcbcdaf29d12082c5096223c592f8f2fff2031",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/exception/CannotDeleteNullConnectionUriDomainException.class",
+    "bytes": 436,
+    "sha256": "f397afb31f1403a52bf3f179e3d7a34d05a6fd3ded4bd5865a71af8405386a17",
+    "original_sha256": "f397afb31f1403a52bf3f179e3d7a34d05a6fd3ded4bd5865a71af8405386a17",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/exception/CannotDeleteNullTenantException.class",
+    "bytes": 397,
+    "sha256": "8653436509d27f03c3dfa5daf3fde0b4e19d208e1f8ee38b721e81f94ecab318",
+    "original_sha256": "8653436509d27f03c3dfa5daf3fde0b4e19d208e1f8ee38b721e81f94ecab318",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/multitenancy/exception/CannotModifyBaseConfigException.class",
+    "bytes": 397,
+    "sha256": "1ab3d1abccc6f063a8d080774e205582169e99252b390aa2e2a759b9623afc42",
+    "original_sha256": "1ab3d1abccc6f063a8d080774e205582169e99252b390aa2e2a759b9623afc42",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/HttpRequestForOAuthProvider$Response.class",
+    "bytes": 1163,
+    "sha256": "33a82367fdf50b4a562f669894992d8c3c5be3fe56be2a16a75bc0c6adc877e3",
+    "original_sha256": "33a82367fdf50b4a562f669894992d8c3c5be3fe56be2a16a75bc0c6adc877e3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/HttpRequestForOAuthProvider.class",
+    "bytes": 10153,
+    "sha256": "83bbf2e664ea22558c08faec903fa06dff6e833bef0121127fc2d0603273d285",
+    "original_sha256": "83bbf2e664ea22558c08faec903fa06dff6e833bef0121127fc2d0603273d285",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/OAuth.class",
+    "bytes": 29057,
+    "sha256": "0d927c43038aebc4c87146e49641a4d87ebb16c71af7738bb38622be79f85141",
+    "original_sha256": "0d927c43038aebc4c87146e49641a4d87ebb16c71af7738bb38622be79f85141",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/OAuthToken$TokenType.class",
+    "bytes": 1442,
+    "sha256": "b18a93546907e838f0ad6211d4e0b18dfb81f967151e55260ee36f20da43f22f",
+    "original_sha256": "b18a93546907e838f0ad6211d4e0b18dfb81f967151e55260ee36f20da43f22f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/OAuthToken.class",
+    "bytes": 8122,
+    "sha256": "3a3d429b8c54a4f3d8480834858952dfc694ca8e00b4ee9825892dc49aafed91",
+    "original_sha256": "3a3d429b8c54a4f3d8480834858952dfc694ca8e00b4ee9825892dc49aafed91",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/Transformations.class",
+    "bytes": 11508,
+    "sha256": "5ff3da8c335f17bdea6e7f92ec23599c13dff26aa0ece9050bf61e684e821b0c",
+    "original_sha256": "5ff3da8c335f17bdea6e7f92ec23599c13dff26aa0ece9050bf61e684e821b0c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/oauth/exceptions/OAuthAPIException.class",
+    "bytes": 712,
+    "sha256": "a1897a9cd88796df254a9342838359472acddbcd1db628f99abf48f1ef38630b",
+    "original_sha256": "a1897a9cd88796df254a9342838359472acddbcd1db628f99abf48f1ef38630b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/output/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/output/CustomLayout.class",
+    "bytes": 4791,
+    "sha256": "b7e8f7ef69cd8091b71a6c0a9b50338f8d2b6aaa086ed04d4b23d2c2c1964467",
+    "original_sha256": "b7e8f7ef69cd8091b71a6c0a9b50338f8d2b6aaa086ed04d4b23d2c2c1964467",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/output/LayoutWrappingEncoder.class",
+    "bytes": 1790,
+    "sha256": "fa22a2000ac11f5b896151c055d3b455239be0f5cfe77a86de1f4bc778930261",
+    "original_sha256": "fa22a2000ac11f5b896151c055d3b455239be0f5cfe77a86de1f4bc778930261",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/output/Logging.class",
+    "bytes": 12515,
+    "sha256": "5e55637d6bbcc39300f3adab05ea126884d309ec92068c772e1f1b68a37e3ac1",
+    "original_sha256": "5e55637d6bbcc39300f3adab05ea126884d309ec92068c772e1f1b68a37e3ac1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/Passwordless$ConsumeCodeResponse.class",
+    "bytes": 1246,
+    "sha256": "04a39e69bb9f62e815db0db9b403453d7d1fcbbbd04d6783d217c2cf0822a89b",
+    "original_sha256": "04a39e69bb9f62e815db0db9b403453d7d1fcbbbd04d6783d217c2cf0822a89b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/Passwordless$CreateCodeInfo.class",
+    "bytes": 4279,
+    "sha256": "84eeacc02702c3bb149beefb34537275b17d738d79d682bcfbbc7ef924624f42",
+    "original_sha256": "84eeacc02702c3bb149beefb34537275b17d738d79d682bcfbbc7ef924624f42",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/Passwordless$CreateCodeResponse.class",
+    "bytes": 962,
+    "sha256": "f1e6d290a57fa05c917522f9589765bba7ac353476ec85e2f77f226e7117bb0e",
+    "original_sha256": "f1e6d290a57fa05c917522f9589765bba7ac353476ec85e2f77f226e7117bb0e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/Passwordless$DeviceWithCodes.class",
+    "bytes": 887,
+    "sha256": "40eb75a7e1737ce63eb60a509c5d321592435fd8231c0ce08fbae6779e2d97f9",
+    "original_sha256": "40eb75a7e1737ce63eb60a509c5d321592435fd8231c0ce08fbae6779e2d97f9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/Passwordless$FieldUpdate.class",
+    "bytes": 611,
+    "sha256": "a9e719fc06973d9950d9bbce965da858dbc32350d50ad8341dff0373cbe76903",
+    "original_sha256": "a9e719fc06973d9950d9bbce965da858dbc32350d50ad8341dff0373cbe76903",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/Passwordless.class",
+    "bytes": 40719,
+    "sha256": "a87e0942178b0dad0aee614ea4659fd62ad9ef93c977a9806ca7e2048fdea3b8",
+    "original_sha256": "a87e0942178b0dad0aee614ea4659fd62ad9ef93c977a9806ca7e2048fdea3b8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/PasswordlessDeviceId.class",
+    "bytes": 2471,
+    "sha256": "9e39e295f45be034bffdc796b87dee75199d8a08e96d3e4afc6dd6cf66c710a2",
+    "original_sha256": "9e39e295f45be034bffdc796b87dee75199d8a08e96d3e4afc6dd6cf66c710a2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/PasswordlessDeviceIdHash.class",
+    "bytes": 1075,
+    "sha256": "18aff58c2331d39278fc02176bed0dcf6e07e6ff8044aef5d4d627dc1c387e36",
+    "original_sha256": "18aff58c2331d39278fc02176bed0dcf6e07e6ff8044aef5d4d627dc1c387e36",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/PasswordlessLinkCode.class",
+    "bytes": 1832,
+    "sha256": "d742b6e2e42dc101ab332c120b630e2599f21b012ec2ec96e7ef2c45488a3c6e",
+    "original_sha256": "d742b6e2e42dc101ab332c120b630e2599f21b012ec2ec96e7ef2c45488a3c6e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/PasswordlessLinkCodeHash.class",
+    "bytes": 829,
+    "sha256": "f15c737e3b0261b2e085ea362843fb76ee4a7459d69b5a8de33e1d5e7b01ad0b",
+    "original_sha256": "f15c737e3b0261b2e085ea362843fb76ee4a7459d69b5a8de33e1d5e7b01ad0b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/PasswordlessLinkCodeSalt.class",
+    "bytes": 1397,
+    "sha256": "05199c0f528c781b360f9d5a32a3a0152294c1a69ac077f3edab78574bf3e072",
+    "original_sha256": "05199c0f528c781b360f9d5a32a3a0152294c1a69ac077f3edab78574bf3e072",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/Base64EncodingException.class",
+    "bytes": 597,
+    "sha256": "833f7f45286ed26b788d8ea9eecedfddef8e16c0d591960cd7b91b17e2ae651e",
+    "original_sha256": "833f7f45286ed26b788d8ea9eecedfddef8e16c0d591960cd7b91b17e2ae651e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/DeviceIdHashMismatchException.class",
+    "bytes": 457,
+    "sha256": "b2a18b6e8457382088e024eb1450416e5ab3872d5818e5ae53a23a732a89c3e1",
+    "original_sha256": "b2a18b6e8457382088e024eb1450416e5ab3872d5818e5ae53a23a732a89c3e1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/ExpiredUserInputCodeException.class",
+    "bytes": 656,
+    "sha256": "825d9bf669aed7da57ea9b41766377ba6f9c3822aeb4056e7427d4615e9aa3f6",
+    "original_sha256": "825d9bf669aed7da57ea9b41766377ba6f9c3822aeb4056e7427d4615e9aa3f6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/IncorrectUserInputCodeException.class",
+    "bytes": 662,
+    "sha256": "0c3dd39fe0c64a59e9e26600ba78bbbb91616f313c1b7b988d6eab94928f9d94",
+    "original_sha256": "0c3dd39fe0c64a59e9e26600ba78bbbb91616f313c1b7b988d6eab94928f9d94",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/RestartFlowException.class",
+    "bytes": 430,
+    "sha256": "57c16d993c574f81302c6864a678b5671b6ddaac08a3f9422cb1de0369f30c01",
+    "original_sha256": "57c16d993c574f81302c6864a678b5671b6ddaac08a3f9422cb1de0369f30c01",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/passwordless/exceptions/UserWithoutContactInfoException.class",
+    "bytes": 463,
+    "sha256": "243e489aad4a4b66f77795dd493d16908dd483f3c643222d208b5ab69e0351a7",
+    "original_sha256": "243e489aad4a4b66f77795dd493d16908dd483f3c643222d208b5ab69e0351a7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/SAML.class",
+    "bytes": 34888,
+    "sha256": "24b8c4176b8edf0d205b783059613cf2f82a2a4348d557b6a9eca61fdc9d6890",
+    "original_sha256": "24b8c4176b8edf0d205b783059613cf2f82a2a4348d557b6a9eca61fdc9d6890",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/SAMLBootstrap.class",
+    "bytes": 1056,
+    "sha256": "17e4b79892dc7b9ed009f5a472fe880e0667240b5187cdff2a5e50657decdafa",
+    "original_sha256": "17e4b79892dc7b9ed009f5a472fe880e0667240b5187cdff2a5e50657decdafa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/SAMLCertificate.class",
+    "bytes": 16833,
+    "sha256": "28293edd5d983f5207f77b275e3b0a1ca07b9525ca792e15ea1627d1d5cb7e3c",
+    "original_sha256": "28293edd5d983f5207f77b275e3b0a1ca07b9525ca792e15ea1627d1d5cb7e3c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/IDPInitiatedLoginDisallowedException.class",
+    "bytes": 398,
+    "sha256": "e945d4abccbbd4a870f24aa7829290da2c7245a59fbb40f564ff08f5914c8b3b",
+    "original_sha256": "e945d4abccbbd4a870f24aa7829290da2c7245a59fbb40f564ff08f5914c8b3b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/InvalidClientException.class",
+    "bytes": 356,
+    "sha256": "b99efe6be34137208efd935aa1dab35d8bb59fbe8fd67200cf1163a34cb64310",
+    "original_sha256": "b99efe6be34137208efd935aa1dab35d8bb59fbe8fd67200cf1163a34cb64310",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/InvalidCodeException.class",
+    "bytes": 350,
+    "sha256": "ee412ef13c388b71b8b7576a3a7217d64dcfef3c9de1c7764a1bb03d57e6ef04",
+    "original_sha256": "ee412ef13c388b71b8b7576a3a7217d64dcfef3c9de1c7764a1bb03d57e6ef04",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/InvalidRelayStateException.class",
+    "bytes": 368,
+    "sha256": "2a2c281a6dfba1b6f6af785cd19b68bc67c3a8cc252da31f67ee4dbc12058a2d",
+    "original_sha256": "2a2c281a6dfba1b6f6af785cd19b68bc67c3a8cc252da31f67ee4dbc12058a2d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/MalformedSAMLMetadataXMLException.class",
+    "bytes": 389,
+    "sha256": "4e97ca75ad018a0859c6547ece07723140690eb17a1db10120e6eedd1ed25494",
+    "original_sha256": "4e97ca75ad018a0859c6547ece07723140690eb17a1db10120e6eedd1ed25494",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/SAMLRequestSigningException.class",
+    "bytes": 562,
+    "sha256": "da1d4f33c434932f51db359241eb4321cb0dda6c0fc6a07ee50ea1345434bc20",
+    "original_sha256": "da1d4f33c434932f51db359241eb4321cb0dda6c0fc6a07ee50ea1345434bc20",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/saml/exceptions/SAMLResponseVerificationFailedException.class",
+    "bytes": 407,
+    "sha256": "1de7838d3c4f0fbdd493a51683089ab13ba2260e7379a11829dd38a6fc99704c",
+    "original_sha256": "1de7838d3c4f0fbdd493a51683089ab13ba2260e7379a11829dd38a6fc99704c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/Session.class",
+    "bytes": 51214,
+    "sha256": "4bb08c11def09bdee355b1bfd7707f672c8eee7035b67662960fe2e357ef9c5e",
+    "original_sha256": "4bb08c11def09bdee355b1bfd7707f672c8eee7035b67662960fe2e357ef9c5e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/accessToken/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/accessToken/AccessToken$AccessTokenInfo.class",
+    "bytes": 9678,
+    "sha256": "645533c7b161e98380a73f89dbbbadd1dec88736e48c3c2d067bc5844034dfce",
+    "original_sha256": "645533c7b161e98380a73f89dbbbadd1dec88736e48c3c2d067bc5844034dfce",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/accessToken/AccessToken$VERSION.class",
+    "bytes": 1408,
+    "sha256": "39144e16a3c46eabd2245643e08f67b79d32162a88131b5181d88038e9d2da25",
+    "original_sha256": "39144e16a3c46eabd2245643e08f67b79d32162a88131b5181d88038e9d2da25",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/accessToken/AccessToken.class",
+    "bytes": 16186,
+    "sha256": "47976085ff3741d8c99c6a2b863f90d183758311a8a33998bd6a367a63185778",
+    "original_sha256": "47976085ff3741d8c99c6a2b863f90d183758311a8a33998bd6a367a63185778",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/info/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/info/SessionInfo.class",
+    "bytes": 977,
+    "sha256": "63ef7ddf867535491193a22b21c0fbe6ec198fbf6c68d1041c724935a77f39eb",
+    "original_sha256": "63ef7ddf867535491193a22b21c0fbe6ec198fbf6c68d1041c724935a77f39eb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/info/SessionInformationHolder.class",
+    "bytes": 2216,
+    "sha256": "aaab0283f9bc9bbe5b2f75d80b59b75126a2370bbf0ac74794023df41f800c2b",
+    "original_sha256": "aaab0283f9bc9bbe5b2f75d80b59b75126a2370bbf0ac74794023df41f800c2b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/info/TokenInfo.class",
+    "bytes": 569,
+    "sha256": "45fe305daaa774194655e5324a7999f4b57b72b7aac5270f6088d7f4671b1d83",
+    "original_sha256": "45fe305daaa774194655e5324a7999f4b57b72b7aac5270f6088d7f4671b1d83",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/jwt/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/jwt/JWT$JWTException.class",
+    "bytes": 605,
+    "sha256": "3bcdf2565abf229e81fcc42e337761b9669241db6bbfad15bc397bd2e329e4c4",
+    "original_sha256": "3bcdf2565abf229e81fcc42e337761b9669241db6bbfad15bc397bd2e329e4c4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/jwt/JWT$JWTInfo.class",
+    "bytes": 871,
+    "sha256": "4aacabd7b1f388bc395c54e9a393aacb8d6a21396ae80a7f196e437a540f471b",
+    "original_sha256": "4aacabd7b1f388bc395c54e9a393aacb8d6a21396ae80a7f196e437a540f471b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/jwt/JWT$JWTPreParseInfo.class",
+    "bytes": 1441,
+    "sha256": "2bf5d2196e649dc9e41703c84c8b575ab20949239849e51a3509bdf23148fcb4",
+    "original_sha256": "2bf5d2196e649dc9e41703c84c8b575ab20949239849e51a3509bdf23148fcb4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/jwt/JWT.class",
+    "bytes": 6418,
+    "sha256": "eda5b963d5d44d5c411c2cc8fce7bf1391ad00e4121b181f3ef8071dba9235de",
+    "original_sha256": "eda5b963d5d44d5c411c2cc8fce7bf1391ad00e4121b181f3ef8071dba9235de",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/RefreshToken$InvalidRefreshTokenFormatException.class",
+    "bytes": 996,
+    "sha256": "138f61adcbec27aeae17b98b6ac4de4f43925287e261cacf626af17a987a980c",
+    "original_sha256": "138f61adcbec27aeae17b98b6ac4de4f43925287e261cacf626af17a987a980c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/RefreshToken$RefreshTokenInfo.class",
+    "bytes": 1627,
+    "sha256": "ce3bed21816bbeb44ab431257a3a2bbfdbf227d0e203340d87fd9056233e6233",
+    "original_sha256": "ce3bed21816bbeb44ab431257a3a2bbfdbf227d0e203340d87fd9056233e6233",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/RefreshToken$RefreshTokenPayload.class",
+    "bytes": 1506,
+    "sha256": "74f6fb1995209dbcf191cde38da06b227196b3a7580d581eff8ee9d47b39950c",
+    "original_sha256": "74f6fb1995209dbcf191cde38da06b227196b3a7580d581eff8ee9d47b39950c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/RefreshToken$TYPE.class",
+    "bytes": 1941,
+    "sha256": "a8d47a6b58ca0458c7be2221a1e7657290eeb9d66f0096f7cc6f25163261b5a8",
+    "original_sha256": "a8d47a6b58ca0458c7be2221a1e7657290eeb9d66f0096f7cc6f25163261b5a8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/RefreshToken.class",
+    "bytes": 7739,
+    "sha256": "1578c02bcea3f2996b092b0e791185ab18e60a5c45647c1e4d9d30ebe59193bf",
+    "original_sha256": "1578c02bcea3f2996b092b0e791185ab18e60a5c45647c1e4d9d30ebe59193bf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/session/refreshToken/RefreshTokenKey.class",
+    "bytes": 9986,
+    "sha256": "281497a2ba5f59cc1a004152e2401b4fd2dfbc8598e804f1e2b73bade4a9dacd",
+    "original_sha256": "281497a2ba5f59cc1a004152e2401b4fd2dfbc8598e804f1e2b73bade4a9dacd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/signingkeys/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/signingkeys/AccessTokenSigningKey.class",
+    "bytes": 17729,
+    "sha256": "dfea7ad462e535b0f0856bb4106ce29768cdcbc1417a7aa381ced680258df9b0",
+    "original_sha256": "dfea7ad462e535b0f0856bb4106ce29768cdcbc1417a7aa381ced680258df9b0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/signingkeys/JWTSigningKey$SupportedAlgorithms.class",
+    "bytes": 1732,
+    "sha256": "aa8289cb6a304926fcc76bd11228d54baeab3bee46712619af8987ae5a5938bf",
+    "original_sha256": "aa8289cb6a304926fcc76bd11228d54baeab3bee46712619af8987ae5a5938bf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/signingkeys/JWTSigningKey.class",
+    "bytes": 13035,
+    "sha256": "f9cb7b14b4ec521687f50c23aafb87e1044cfcbaf2af447e982245486702d6e7",
+    "original_sha256": "f9cb7b14b4ec521687f50c23aafb87e1044cfcbaf2af447e982245486702d6e7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/signingkeys/SigningKeys$KeyInfo.class",
+    "bytes": 1640,
+    "sha256": "5cad42ef6d33ffd9bc7ce8189734412bb97404ce93b790ed9c84d398b3b80181",
+    "original_sha256": "5cad42ef6d33ffd9bc7ce8189734412bb97404ce93b790ed9c84d398b3b80181",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/signingkeys/SigningKeys.class",
+    "bytes": 17477,
+    "sha256": "58399476d645700770b8ab2e6013c723a4cc3629ebe8f87d03c1cdec7224d42a",
+    "original_sha256": "58399476d645700770b8ab2e6013c723a4cc3629ebe8f87d03c1cdec7224d42a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storageLayer/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storageLayer/StorageLayer$AjcClosure1.class",
+    "bytes": 1125,
+    "sha256": "ed98634da586d64b5557cf511d8712239d5e810e3e18485923afea9ad2323651",
+    "original_sha256": "ed98634da586d64b5557cf511d8712239d5e810e3e18485923afea9ad2323651",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storageLayer/StorageLayer.class",
+    "bytes": 47608,
+    "sha256": "0642e61558baaaaa71368c94c9d686d7149eb3c8834bac90fe6aaaad084eb476",
+    "original_sha256": "0642e61558baaaaa71368c94c9d686d7149eb3c8834bac90fe6aaaad084eb476",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/telemetry/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/telemetry/MethodSpanner.class",
+    "bytes": 8753,
+    "sha256": "8d66f3e663fa6cb8cd5affda3ab63c2b3d68cdecee9ea2c297d31b9b14aae80e",
+    "original_sha256": "8d66f3e663fa6cb8cd5affda3ab63c2b3d68cdecee9ea2c297d31b9b14aae80e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/telemetry/TelemetryAppender.class",
+    "bytes": 3082,
+    "sha256": "53038107b2f61e114abdd157f3b497b9746779023398a36407766713cc2f1692",
+    "original_sha256": "53038107b2f61e114abdd157f3b497b9746779023398a36407766713cc2f1692",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/telemetry/TelemetryProvider.class",
+    "bytes": 14705,
+    "sha256": "29e66443ba858fb9eb0724db041f145ca8aebc1b9b2ce4707ab201b9b9ac6a4b",
+    "original_sha256": "29e66443ba858fb9eb0724db041f145ca8aebc1b9b2ce4707ab201b9b9ac6a4b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/thirdparty/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/thirdparty/InvalidProviderConfigException.class",
+    "bytes": 497,
+    "sha256": "53daa782fd42f4fada0e577d68d7ff8e7abbb7d3371d299a69361d67ea47ecad",
+    "original_sha256": "53daa782fd42f4fada0e577d68d7ff8e7abbb7d3371d299a69361d67ea47ecad",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/thirdparty/ThirdParty$SignInUpResponse.class",
+    "bytes": 755,
+    "sha256": "e5e38cc586ea4a3ab477cfa5b1956f15f99057bf3e11ff694cf8f4d151a537f4",
+    "original_sha256": "e5e38cc586ea4a3ab477cfa5b1956f15f99057bf3e11ff694cf8f4d151a537f4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/thirdparty/ThirdParty.class",
+    "bytes": 26286,
+    "sha256": "e54fe1fd142f9b047ebf5d6237142da0aefb578af3096c24bd2492a7b3a70f68",
+    "original_sha256": "e54fe1fd142f9b047ebf5d6237142da0aefb578af3096c24bd2492a7b3a70f68",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/totp/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/totp/Totp.class",
+    "bytes": 24522,
+    "sha256": "69ca1f8faa7ab100443ae54d41d8782f2664db774b587d6c5790200c4b8df1f9",
+    "original_sha256": "69ca1f8faa7ab100443ae54d41d8782f2664db774b587d6c5790200c4b8df1f9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/totp/exceptions/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/totp/exceptions/InvalidTotpException.class",
+    "bytes": 573,
+    "sha256": "91e5b326da2e61e23be974670c03dc10401272e213a91f7ba70ca4a1ba084ce8",
+    "original_sha256": "91e5b326da2e61e23be974670c03dc10401272e213a91f7ba70ca4a1ba084ce8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/totp/exceptions/LimitReachedException.class",
+    "bytes": 1062,
+    "sha256": "424efa438059f4804b5e2a5e378fa5caed78e2575da07eb5a49bfda864257a80",
+    "original_sha256": "424efa438059f4804b5e2a5e378fa5caed78e2575da07eb5a49bfda864257a80",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/useridmapping/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/useridmapping/UserIdMapping$UserIdBulkMappingResult.class",
+    "bytes": 1579,
+    "sha256": "fff0cda54722b5f66cce66cb2d4a295b33ccfdc6d82cfc50a40cacd65eb39768",
+    "original_sha256": "fff0cda54722b5f66cce66cb2d4a295b33ccfdc6d82cfc50a40cacd65eb39768",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/useridmapping/UserIdMapping.class",
+    "bytes": 28839,
+    "sha256": "35062fb48dfb3c8b8c6e5ef829221b4dbfb42223c3f0b089e4403baa8bd33c08",
+    "original_sha256": "35062fb48dfb3c8b8c6e5ef829221b4dbfb42223c3f0b089e4403baa8bd33c08",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/useridmapping/UserIdType.class",
+    "bytes": 1131,
+    "sha256": "9f763b8b83770390aab83b852c40ba179bb3ee79fc304cb5f345e73bdaba4ccb",
+    "original_sha256": "9f763b8b83770390aab83b852c40ba179bb3ee79fc304cb5f345e73bdaba4ccb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/usermetadata/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/usermetadata/UserMetadata.class",
+    "bytes": 11539,
+    "sha256": "bf8debc9c0cbce75406574fbd1cdfcb2130623b03671ec2d83e79ce5d1cd8e4e",
+    "original_sha256": "bf8debc9c0cbce75406574fbd1cdfcb2130623b03671ec2d83e79ce5d1cd8e4e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/userroles/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/userroles/UserRoles.class",
+    "bytes": 18656,
+    "sha256": "275129d857fa35be1933ac31dc661a864f16ef8cc48a2d3bdab78d7af1c6aab3",
+    "original_sha256": "275129d857fa35be1933ac31dc661a864f16ef8cc48a2d3bdab78d7af1c6aab3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/ConfigMapper.class",
+    "bytes": 6611,
+    "sha256": "16f3bb9035f3b18df541673df51842ec622a8690ed6a1ef425c1899150d60678",
+    "original_sha256": "16f3bb9035f3b18df541673df51842ec622a8690ed6a1ef425c1899150d60678",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/JsonValidatorUtils$ValueType.class",
+    "bytes": 1543,
+    "sha256": "a87c712804aecdd481f46463066bda029b3702cdb8c07afc6064780e8d164c3b",
+    "original_sha256": "a87c712804aecdd481f46463066bda029b3702cdb8c07afc6064780e8d164c3b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/JsonValidatorUtils.class",
+    "bytes": 7043,
+    "sha256": "a5fedda6ffa875d964f3c85b75d98bef4ac2471de82175cf428e6bd3206e94e2",
+    "original_sha256": "a5fedda6ffa875d964f3c85b75d98bef4ac2471de82175cf428e6bd3206e94e2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/MetadataUtils.class",
+    "bytes": 2031,
+    "sha256": "2b350de26295274ab17490d5f85be4664993b3dc71bb1f09f15dd195818c9547",
+    "original_sha256": "2b350de26295274ab17490d5f85be4664993b3dc71bb1f09f15dd195818c9547",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/RateLimiter.class",
+    "bytes": 2258,
+    "sha256": "669e7e7d199698a0c2cd482364766f54405e6c457f7ca4d8cf240703cca32959",
+    "original_sha256": "669e7e7d199698a0c2cd482364766f54405e6c457f7ca4d8cf240703cca32959",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/SemVer.class",
+    "bytes": 4051,
+    "sha256": "6bd9e6f917880422937655de67e1dced5e4b1add4b14584aae36318aa5a57a61",
+    "original_sha256": "6bd9e6f917880422937655de67e1dced5e4b1add4b14584aae36318aa5a57a61",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/Utils$PubPriKey.class",
+    "bytes": 1469,
+    "sha256": "e03d8365de74e109ae71135cfe5180b73d55433660b40b5522356fe73ecbeab3",
+    "original_sha256": "e03d8365de74e109ae71135cfe5180b73d55433660b40b5522356fe73ecbeab3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/utils/Utils.class",
+    "bytes": 20916,
+    "sha256": "c4fb020e77c26e54a776607f4e2632fb4b9d41f7cbec5bda24530dd0ea2566dd",
+    "original_sha256": "c4fb020e77c26e54a776607f4e2632fb4b9d41f7cbec5bda24530dd0ea2566dd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/version/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/version/Version.class",
+    "bytes": 3532,
+    "sha256": "a4e410bc2d066765d69f676116d5984c4c6811ae523ba16fbc126473cfc0623b",
+    "original_sha256": "a4e410bc2d066765d69f676116d5984c4c6811ae523ba16fbc126473cfc0623b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/version/VersionFile.class",
+    "bytes": 1574,
+    "sha256": "ca25cc8d652a0462cd02a514232790d0ae437b650006787376e822a2d7674325",
+    "original_sha256": "ca25cc8d652a0462cd02a514232790d0ae437b650006787376e822a2d7674325",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/WebAuthN$1.class",
+    "bytes": 905,
+    "sha256": "7cbd58996abe8ccb5e0337d7df152fbbe175ea700dc6cb47566e1517ef562fe2",
+    "original_sha256": "7cbd58996abe8ccb5e0337d7df152fbbe175ea700dc6cb47566e1517ef562fe2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/WebAuthN$2.class",
+    "bytes": 1374,
+    "sha256": "1dbe75a4934d48cd121a24cc47c3f036fa2e47137fda900ff534fa9d33b2a8f3",
+    "original_sha256": "1dbe75a4934d48cd121a24cc47c3f036fa2e47137fda900ff534fa9d33b2a8f3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/WebAuthN$3.class",
+    "bytes": 1285,
+    "sha256": "45097fb4104e0d852f0c74491bb933cb090cc470f7eaf41e56db223b631ab0d2",
+    "original_sha256": "45097fb4104e0d852f0c74491bb933cb090cc470f7eaf41e56db223b631ab0d2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/WebAuthN.class",
+    "bytes": 38084,
+    "sha256": "fd31bcbc017688f939deaf066d26bdfbbebf6091d003bf477972357f306853fe",
+    "original_sha256": "fd31bcbc017688f939deaf066d26bdfbbebf6091d003bf477972357f306853fe",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/data/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/data/WebAuthNSignInUpResult.class",
+    "bytes": 946,
+    "sha256": "4bd3bd4fd00f03d23e95c48f0aa9eb23f487545f0675837255f401f92bc0399d",
+    "original_sha256": "4bd3bd4fd00f03d23e95c48f0aa9eb23f487545f0675837255f401f92bc0399d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/data/WebauthNCredentialRecord.class",
+    "bytes": 2657,
+    "sha256": "e0f77a4e514a96fc32a674c50d58a06ffbc7250f7566749fc67fdeb2e0476f68",
+    "original_sha256": "e0f77a4e514a96fc32a674c50d58a06ffbc7250f7566749fc67fdeb2e0476f68",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/data/WebauthNCredentialResponse.class",
+    "bytes": 543,
+    "sha256": "15dbc4acfd519c3b377e64d894520dd01b86b88a46c68ac58ffccc66f0b0c218",
+    "original_sha256": "15dbc4acfd519c3b377e64d894520dd01b86b88a46c68ac58ffccc66f0b0c218",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/exception/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/exception/InvalidTokenException.class",
+    "bytes": 359,
+    "sha256": "65e19d604d3ff3b63c1aec5214548ad131428b608a77619614ef64ddcd529ce6",
+    "original_sha256": "65e19d604d3ff3b63c1aec5214548ad131428b608a77619614ef64ddcd529ce6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/exception/InvalidWebauthNOptionsException.class",
+    "bytes": 516,
+    "sha256": "df13a80ca14620aa608e371ae31b1f9d7a286a725f1b6f2ce02687ce0e06c062",
+    "original_sha256": "df13a80ca14620aa608e371ae31b1f9d7a286a725f1b6f2ce02687ce0e06c062",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/exception/WebAuthNEmailNotFoundException.class",
+    "bytes": 386,
+    "sha256": "f3ae974676082bd00fd4ae4fed3c6fbb9ee1e92033bdbcd06490a06089bb03be",
+    "original_sha256": "f3ae974676082bd00fd4ae4fed3c6fbb9ee1e92033bdbcd06490a06089bb03be",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/exception/WebauthNInvalidFormatException.class",
+    "bytes": 513,
+    "sha256": "a8e8d4f6f93212994e9678b43931d1ba4f49885b0a627ebaa3c5c14359ffc6ee",
+    "original_sha256": "a8e8d4f6f93212994e9678b43931d1ba4f49885b0a627ebaa3c5c14359ffc6ee",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/exception/WebauthNVerificationFailedException.class",
+    "bytes": 528,
+    "sha256": "54f14e43a0ec8b943dd1e9c62140f14ccf5707fc165ce5d77e3cab2b51c50967",
+    "original_sha256": "54f14e43a0ec8b943dd1e9c62140f14ccf5707fc165ce5d77e3cab2b51c50967",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/utils/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/utils/WebauthMapper.class",
+    "bytes": 12226,
+    "sha256": "ccb47a98a2dbecab7d91bcf42a4a5ed36cd5544e4c2962277a7228caa5ec9af1",
+    "original_sha256": "ccb47a98a2dbecab7d91bcf42a4a5ed36cd5544e4c2962277a7228caa5ec9af1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/validator/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/validator/CredentialsValidator.class",
+    "bytes": 2533,
+    "sha256": "381f4056d944efaaa9680e2fa7e272fd5f54081d3f8e0e1e96910b7d53831aa9",
+    "original_sha256": "381f4056d944efaaa9680e2fa7e272fd5f54081d3f8e0e1e96910b7d53831aa9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webauthn/validator/OptionsValidator.class",
+    "bytes": 5672,
+    "sha256": "88dcac9a5ec5d60fc4d400e8a1b09c0450d2a5f3ceb732ea87953497319626f0",
+    "original_sha256": "88dcac9a5ec5d60fc4d400e8a1b09c0450d2a5f3ceb732ea87953497319626f0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/InputParser.class",
+    "bytes": 9012,
+    "sha256": "b3f8781fc13cea8c79a6bfe14c938c6ce22c34d8a97ce6cfa2971bb822b136f1",
+    "original_sha256": "b3f8781fc13cea8c79a6bfe14c938c6ce22c34d8a97ce6cfa2971bb822b136f1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/PathRouter.class",
+    "bytes": 4509,
+    "sha256": "e9224b3d4f7405e7cab3484cf4b7b9cd12aea60b2a2b3982d62e08003d8183ad",
+    "original_sha256": "e9224b3d4f7405e7cab3484cf4b7b9cd12aea60b2a2b3982d62e08003d8183ad",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/RecipeRouter.class",
+    "bytes": 2937,
+    "sha256": "00556e0041c527eb0190c47378726263674acb3f9d5789372edd77428c44734b",
+    "original_sha256": "00556e0041c527eb0190c47378726263674acb3f9d5789372edd77428c44734b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/RequestStats.class",
+    "bytes": 4598,
+    "sha256": "4eba90bef03114877a7ecf5707384e2e2a9c7788d9ac66ed0ddcf73ea647e3f5",
+    "original_sha256": "4eba90bef03114877a7ecf5707384e2e2a9c7788d9ac66ed0ddcf73ea647e3f5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/Utils.class",
+    "bytes": 3962,
+    "sha256": "d6d8948eb7e4dbb221d4086d42c3a2fd145d8ac0c1e72568217333dea0ef41fa",
+    "original_sha256": "d6d8948eb7e4dbb221d4086d42c3a2fd145d8ac0c1e72568217333dea0ef41fa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/WebServerLogging.class",
+    "bytes": 2316,
+    "sha256": "479c826574b921ea3304db0abea71cff66922717bcaa0f7938b5fa1c1fcd3800",
+    "original_sha256": "479c826574b921ea3304db0abea71cff66922717bcaa0f7938b5fa1c1fcd3800",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/Webserver$TomcatReference.class",
+    "bytes": 847,
+    "sha256": "12a5ad30deba51eafa2750c3ffb335efc0e92457b25713abee3ba5a4ab02ee0d",
+    "original_sha256": "efaa07601413c2cff148486fef239240c33505b99f039dd82dc5f3ff52356ca6",
+    "changed": true
+  },
+  {
+    "path": "io/supertokens/webserver/Webserver.class",
+    "bytes": 22366,
+    "sha256": "03500f58748cc0e765a6256057445b0e2cbf9bb4d06c3c621b062932afeb86eb",
+    "original_sha256": "f87915a4b963ed85382e6380f4b3a76056e3cf6d8349407cce1084de449f9914",
+    "changed": true
+  },
+  {
+    "path": "io/supertokens/webserver/WebserverAPI$1.class",
+    "bytes": 1159,
+    "sha256": "b2fd70576bf8b1ed367adee3842c337c53f360da213fe93bba6a46716cf47df3",
+    "original_sha256": "b2fd70576bf8b1ed367adee3842c337c53f360da213fe93bba6a46716cf47df3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/WebserverAPI$APIKeyUnauthorisedException.class",
+    "bytes": 624,
+    "sha256": "9e094473917f782ecdc24def8580fb9dad8d40be4041aedad632d089ded0b1a3",
+    "original_sha256": "9e094473917f782ecdc24def8580fb9dad8d40be4041aedad632d089ded0b1a3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/WebserverAPI$AjcClosure1.class",
+    "bytes": 920,
+    "sha256": "97b16002c8bcfe13fe040762d5c1c78f7e432535e90add918e85a404dcdd9f00",
+    "original_sha256": "97b16002c8bcfe13fe040762d5c1c78f7e432535e90add918e85a404dcdd9f00",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/WebserverAPI$BadRequestException.class",
+    "bytes": 656,
+    "sha256": "e663db5a6947a90b1dc0328abdafd19ad2c6cdd0ceed72f0fc44c66b56e96176",
+    "original_sha256": "e663db5a6947a90b1dc0328abdafd19ad2c6cdd0ceed72f0fc44c66b56e96176",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/WebserverAPI.class",
+    "bytes": 32894,
+    "sha256": "44861db1c3bf4e1c4cc1b8e2895ff913e410fc150bfdb7ff39adf826ef5a77b1",
+    "original_sha256": "44861db1c3bf4e1c4cc1b8e2895ff913e410fc150bfdb7ff39adf826ef5a77b1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/accountlinking/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/accountlinking/CanCreatePrimaryUserAPI.class",
+    "bytes": 6343,
+    "sha256": "7486d6097018201c4923c314b4cd2c538c66ac571f0423561658732a52122664",
+    "original_sha256": "7486d6097018201c4923c314b4cd2c538c66ac571f0423561658732a52122664",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/accountlinking/CanLinkAccountsAPI.class",
+    "bytes": 7899,
+    "sha256": "eb39040b7d86928073fc9c2acbcfb291d1f0736e25feab0e39fbe60c8a4e93b8",
+    "original_sha256": "eb39040b7d86928073fc9c2acbcfb291d1f0736e25feab0e39fbe60c8a4e93b8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/accountlinking/CreatePrimaryUserAPI.class",
+    "bytes": 7229,
+    "sha256": "45d31f4e12eb731a634157527cf95ff773bf54ab43d2c02c64de0cda438276cb",
+    "original_sha256": "45d31f4e12eb731a634157527cf95ff773bf54ab43d2c02c64de0cda438276cb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/accountlinking/LinkAccountsAPI.class",
+    "bytes": 8954,
+    "sha256": "687f41332a3c94b019b46d5dbf0898e597181f9a6ccf48729da4a9131d1fa2b7",
+    "original_sha256": "687f41332a3c94b019b46d5dbf0898e597181f9a6ccf48729da4a9131d1fa2b7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/accountlinking/UnlinkAccountAPI.class",
+    "bytes": 4745,
+    "sha256": "bd18182b3c1125671abdff42e4b45363500beb89467ef875a6af59b7c4df54dc",
+    "original_sha256": "bd18182b3c1125671abdff42e4b45363500beb89467ef875a6af59b7c4df54dc",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/bulkimport/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/bulkimport/BulkImportAPI.class",
+    "bytes": 11297,
+    "sha256": "5283e767d1bb8fed2ccc492e0e9fbeed3e201eabd9a3eb309d1e334267bf6165",
+    "original_sha256": "5283e767d1bb8fed2ccc492e0e9fbeed3e201eabd9a3eb309d1e334267bf6165",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/bulkimport/CountBulkImportUsersAPI.class",
+    "bytes": 4163,
+    "sha256": "64240dd7d9a3974280b5cf14439c5b82b2cf48725753bc1d8797803a6fe73512",
+    "original_sha256": "64240dd7d9a3974280b5cf14439c5b82b2cf48725753bc1d8797803a6fe73512",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/bulkimport/DeleteBulkImportUserAPI.class",
+    "bytes": 4944,
+    "sha256": "115d6e5b5579da78882a4b1e322338c9c114554b2b9b2315c0e114e81e6c948e",
+    "original_sha256": "115d6e5b5579da78882a4b1e322338c9c114554b2b9b2315c0e114e81e6c948e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/bulkimport/ImportUserAPI.class",
+    "bytes": 8276,
+    "sha256": "8534f01de8934d5c40044dc3e00da62ede3c03a32da662ed5a66b6d752b033c6",
+    "original_sha256": "8534f01de8934d5c40044dc3e00da62ede3c03a32da662ed5a66b6d752b033c6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/ActiveUsersCountAPI.class",
+    "bytes": 3007,
+    "sha256": "69ff3f062379c7476c8daf55fe337690873d439c19c30fc838f042380c0f4c52",
+    "original_sha256": "69ff3f062379c7476c8daf55fe337690873d439c19c30fc838f042380c0f4c52",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/ApiVersionAPI.class",
+    "bytes": 4952,
+    "sha256": "d228e1057caea18edaefa796d96ab2a35fd94e84ad375515e9219c848a364006",
+    "original_sha256": "d228e1057caea18edaefa796d96ab2a35fd94e84ad375515e9219c848a364006",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/ConfigAPI.class",
+    "bytes": 3970,
+    "sha256": "cf78bfdde3e0c0bad8108cfcd50b0d1cfd4ae377a4e01d0bf1fee4fc858ed7a2",
+    "original_sha256": "cf78bfdde3e0c0bad8108cfcd50b0d1cfd4ae377a4e01d0bf1fee4fc858ed7a2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/DeleteUserAPI.class",
+    "bytes": 3760,
+    "sha256": "0f4db14d1d597b4cbb1a536b4c7a819f3d7d774e53e8354332338c643eb7d631",
+    "original_sha256": "0f4db14d1d597b4cbb1a536b4c7a819f3d7d774e53e8354332338c643eb7d631",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/EEFeatureFlagAPI.class",
+    "bytes": 4054,
+    "sha256": "0fd3fec31c9187435934479f8e3a197590bba08db8522b43e893cff88f19352d",
+    "original_sha256": "0fd3fec31c9187435934479f8e3a197590bba08db8522b43e893cff88f19352d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/GetUserByIdAPI.class",
+    "bytes": 4574,
+    "sha256": "9613459c37506934a408d7bd18d7961e4fa0304ecce23ebffdd6cab620b97b5e",
+    "original_sha256": "9613459c37506934a408d7bd18d7961e4fa0304ecce23ebffdd6cab620b97b5e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/HelloAPI.class",
+    "bytes": 3913,
+    "sha256": "81ef7588bef2c2a6775bd0975ce36c696f5eb91cdc188953890c55de02bd1187",
+    "original_sha256": "81ef7588bef2c2a6775bd0975ce36c696f5eb91cdc188953890c55de02bd1187",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/JWKSPublicAPI.class",
+    "bytes": 3847,
+    "sha256": "97ce12341baba24c0a3f23a1217c06456f48cd1e54133b6fdf4f2aa64b07a3c9",
+    "original_sha256": "97ce12341baba24c0a3f23a1217c06456f48cd1e54133b6fdf4f2aa64b07a3c9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/LicenseKeyAPI.class",
+    "bytes": 4551,
+    "sha256": "23238fc1d7c0476468a94a8412d42e7d5dfdb56c896b6fcf39ac2674a922a6c2",
+    "original_sha256": "23238fc1d7c0476468a94a8412d42e7d5dfdb56c896b6fcf39ac2674a922a6c2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/ListUsersByAccountInfoAPI.class",
+    "bytes": 5244,
+    "sha256": "a108ad2514cc4ef2cac0e05a8541dcbcd5879369bc1cd8540d96cb8bdc42ac40",
+    "original_sha256": "a108ad2514cc4ef2cac0e05a8541dcbcd5879369bc1cd8540d96cb8bdc42ac40",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/NotFoundOrHelloAPI.class",
+    "bytes": 5806,
+    "sha256": "efbb3c947068794dbe945e68b95b72f3615cea431816db8438ac29519873d238",
+    "original_sha256": "efbb3c947068794dbe945e68b95b72f3615cea431816db8438ac29519873d238",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/RequestStatsAPI.class",
+    "bytes": 2390,
+    "sha256": "3bd09fe3036e0ea6555374f261716c1f27ee72da4976d5bbb3b06fa9e72a164f",
+    "original_sha256": "3bd09fe3036e0ea6555374f261716c1f27ee72da4976d5bbb3b06fa9e72a164f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/SearchTagsAPI.class",
+    "bytes": 2405,
+    "sha256": "2d5f841cfe9c6b3c03c833488cfc1a9de78c0bb2b10ef8c2f6227db19620d700",
+    "original_sha256": "2d5f841cfe9c6b3c03c833488cfc1a9de78c0bb2b10ef8c2f6227db19620d700",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/TelemetryAPI.class",
+    "bytes": 2785,
+    "sha256": "ddec7ddfa9e1fd4247c899f82b2fe54fc01b774c5569a356bb17a252eb104584",
+    "original_sha256": "ddec7ddfa9e1fd4247c899f82b2fe54fc01b774c5569a356bb17a252eb104584",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/UsersAPI.class",
+    "bytes": 11042,
+    "sha256": "aea468717424d9b8aa3d8444a3ebffe6178236191dbadcfc240132f4fcaff64b",
+    "original_sha256": "aea468717424d9b8aa3d8444a3ebffe6178236191dbadcfc240132f4fcaff64b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/core/UsersCountAPI.class",
+    "bytes": 7923,
+    "sha256": "9b5ab50fe58db9b5c0de35f5871d2d653599e8efd659bd1e5dc6fea65562671d",
+    "original_sha256": "9b5ab50fe58db9b5c0de35f5871d2d653599e8efd659bd1e5dc6fea65562671d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/DashboardSignInAPI.class",
+    "bytes": 3813,
+    "sha256": "a5cabc7dc21ecbfc4fe8565b45170ca6e1428536e027e23ab95e24f7ce84b806",
+    "original_sha256": "a5cabc7dc21ecbfc4fe8565b45170ca6e1428536e027e23ab95e24f7ce84b806",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/DashboardUserAPI.class",
+    "bytes": 8115,
+    "sha256": "50edb61ff952206903b06f7a47a519110862066382682ae8515c13b9abaa9d62",
+    "original_sha256": "50edb61ff952206903b06f7a47a519110862066382682ae8515c13b9abaa9d62",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/GetDashboardSessionsForUserAPI.class",
+    "bytes": 3531,
+    "sha256": "70d36cdd8e02618ddeb3ca6c7406ef5cb57454f8179d7d79eda8aa84813b652c",
+    "original_sha256": "70d36cdd8e02618ddeb3ca6c7406ef5cb57454f8179d7d79eda8aa84813b652c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/GetDashboardUsersAPI.class",
+    "bytes": 3048,
+    "sha256": "5574a474010de264e78af7521c87804165d01b54c63e53f5e6cbd9d4101edcc0",
+    "original_sha256": "5574a474010de264e78af7521c87804165d01b54c63e53f5e6cbd9d4101edcc0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/GetTenantCoreConfigForDashboardAPI.class",
+    "bytes": 5216,
+    "sha256": "8e11a6af95f6e01cf02fc8b50bab88a0b06a5246447bedbaa1968df780ca6a21",
+    "original_sha256": "8e11a6af95f6e01cf02fc8b50bab88a0b06a5246447bedbaa1968df780ca6a21",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/RevokeSessionAPI.class",
+    "bytes": 3010,
+    "sha256": "df89483579c8e06c0a577268a49cc1390b0fd60b59dcf76be2d9c3642df93510",
+    "original_sha256": "df89483579c8e06c0a577268a49cc1390b0fd60b59dcf76be2d9c3642df93510",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/dashboard/VerifyDashboardUserSessionAPI.class",
+    "bytes": 4412,
+    "sha256": "9ed0c3dbf8deb94beceb4b6609990e85d08feda02b89dd59004f27fed05765c7",
+    "original_sha256": "9ed0c3dbf8deb94beceb4b6609990e85d08feda02b89dd59004f27fed05765c7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/ConsumeResetPasswordAPI.class",
+    "bytes": 5536,
+    "sha256": "3e2c92fe944b14a8ce3df58ffafaacb14d87952375595ead60d38608ca95d204",
+    "original_sha256": "3e2c92fe944b14a8ce3df58ffafaacb14d87952375595ead60d38608ca95d204",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/GeneratePasswordResetTokenAPI.class",
+    "bytes": 5718,
+    "sha256": "1b9d4440fff45c92f8492385454510d0dad866492d56fb4fc36473f59444279e",
+    "original_sha256": "1b9d4440fff45c92f8492385454510d0dad866492d56fb4fc36473f59444279e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/ImportUserWithPasswordHashAPI.class",
+    "bytes": 7209,
+    "sha256": "133836756872e431fe6c29f794bf9ea3750387c4790e23cabe921c7b88e7b09c",
+    "original_sha256": "133836756872e431fe6c29f794bf9ea3750387c4790e23cabe921c7b88e7b09c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/ResetPasswordAPI.class",
+    "bytes": 6119,
+    "sha256": "769a8645f11c4b9f5606fe853847eb74a0152662061d66ffe663dd0082dd522e",
+    "original_sha256": "769a8645f11c4b9f5606fe853847eb74a0152662061d66ffe663dd0082dd522e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/SignInAPI.class",
+    "bytes": 6835,
+    "sha256": "cec8d4dd8d00a1c28eb8a0b1eb4a067490a138cdb19ea606a1d16418e2e55461",
+    "original_sha256": "cec8d4dd8d00a1c28eb8a0b1eb4a067490a138cdb19ea606a1d16418e2e55461",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/SignUpAPI.class",
+    "bytes": 6389,
+    "sha256": "9ade0d2d4c84003b54e36f88a8aa733b734e882c5994dceb09b30d19cd5c268d",
+    "original_sha256": "9ade0d2d4c84003b54e36f88a8aa733b734e882c5994dceb09b30d19cd5c268d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/UserAPI.class",
+    "bytes": 9293,
+    "sha256": "92185354d4bb358ca3df44e3aee79ba295e791cbcaefb3e828482ec56fbb2513",
+    "original_sha256": "92185354d4bb358ca3df44e3aee79ba295e791cbcaefb3e828482ec56fbb2513",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailpassword/Utils.class",
+    "bytes": 1643,
+    "sha256": "8ce81908325329858ca5ea02a9b135c7f2a5bbfd1e9530936509b5df928accea",
+    "original_sha256": "8ce81908325329858ca5ea02a9b135c7f2a5bbfd1e9530936509b5df928accea",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailverification/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailverification/GenerateEmailVerificationTokenAPI.class",
+    "bytes": 4512,
+    "sha256": "8f9d53afe5a55ad9ff3fbdfbd9e6349f623623667324c0338518abf2b7b5e0ce",
+    "original_sha256": "8f9d53afe5a55ad9ff3fbdfbd9e6349f623623667324c0338518abf2b7b5e0ce",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailverification/RevokeAllTokensForUserAPI.class",
+    "bytes": 3122,
+    "sha256": "37a161b508fa7bac72e6cd65109a550024a2dba0c1c5454d8150b33787af3067",
+    "original_sha256": "37a161b508fa7bac72e6cd65109a550024a2dba0c1c5454d8150b33787af3067",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailverification/UnverifyEmailAPI.class",
+    "bytes": 4053,
+    "sha256": "7e0bfa2ee363b76fe69a92ef7d3a4cfaf2c32d31185e6bf9cfa4b43731f6a275",
+    "original_sha256": "7e0bfa2ee363b76fe69a92ef7d3a4cfaf2c32d31185e6bf9cfa4b43731f6a275",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/emailverification/VerifyEmailAPI.class",
+    "bytes": 6807,
+    "sha256": "152c537e0dd3071983462215e72505815beecd88231a62046a3cebe973c5161f",
+    "original_sha256": "152c537e0dd3071983462215e72505815beecd88231a62046a3cebe973c5161f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/jwt/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/jwt/JWKSAPI.class",
+    "bytes": 3456,
+    "sha256": "f5c5e5d4a0d89447d4933dc03c6a689546a0a9e2ae496b49ac796e0ae7956ae1",
+    "original_sha256": "f5c5e5d4a0d89447d4933dc03c6a689546a0a9e2ae496b49ac796e0ae7956ae1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/jwt/JWTSigningAPI.class",
+    "bytes": 4955,
+    "sha256": "d909e29dead5f21fa619f645ddf9bb98203b634f3f5b2d77f87261317e7e6c35",
+    "original_sha256": "d909e29dead5f21fa619f645ddf9bb98203b634f3f5b2d77f87261317e7e6c35",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/migration/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/migration/MigrationBackfillProgressAPI.class",
+    "bytes": 5707,
+    "sha256": "b68aa833aa6d7194ef1d1b543e25cd5205c608256e88a5d0c198c390f06949e9",
+    "original_sha256": "b68aa833aa6d7194ef1d1b543e25cd5205c608256e88a5d0c198c390f06949e9",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/migration/MigrationModeAPI.class",
+    "bytes": 4275,
+    "sha256": "3072743553e0e562b5b58d1096803d42f861784243684689522aa78834ca82cb",
+    "original_sha256": "3072743553e0e562b5b58d1096803d42f861784243684689522aa78834ca82cb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/AssociateUserToTenantAPI.class",
+    "bytes": 6018,
+    "sha256": "71328c844ad6189b812f7d5af2c2798550b462d3d2c954da51c792bf4546a837",
+    "original_sha256": "71328c844ad6189b812f7d5af2c2798550b462d3d2c954da51c792bf4546a837",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/BaseCreateOrUpdate.class",
+    "bytes": 25102,
+    "sha256": "f8460c1a427754cc5934e89defda169488e934188a92e96a7b0039196ae95e09",
+    "original_sha256": "f8460c1a427754cc5934e89defda169488e934188a92e96a7b0039196ae95e09",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/CreateOrUpdateAppAPI.class",
+    "bytes": 2809,
+    "sha256": "24985572004c0676689aba3085c728b393c9870203c80d626f4c28714f924fda",
+    "original_sha256": "24985572004c0676689aba3085c728b393c9870203c80d626f4c28714f924fda",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/CreateOrUpdateAppV2API.class",
+    "bytes": 2734,
+    "sha256": "0eed41d218afb7237956f6b402838083d0e84c9efefa5fcb4090e4eaa09915cd",
+    "original_sha256": "0eed41d218afb7237956f6b402838083d0e84c9efefa5fcb4090e4eaa09915cd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/CreateOrUpdateConnectionUriDomainAPI.class",
+    "bytes": 2858,
+    "sha256": "e9a0f64cfe0019b970eeaa51ce95bb1beaf0ff00e9cb2dc323a1f35c8373c468",
+    "original_sha256": "e9a0f64cfe0019b970eeaa51ce95bb1beaf0ff00e9cb2dc323a1f35c8373c468",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/CreateOrUpdateConnectionUriDomainV2API.class",
+    "bytes": 2783,
+    "sha256": "c856a4ad46798b86db0c6c20d316f8ed4016a309a8addf881af764e375620f36",
+    "original_sha256": "c856a4ad46798b86db0c6c20d316f8ed4016a309a8addf881af764e375620f36",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/CreateOrUpdateTenantOrGetTenantAPI.class",
+    "bytes": 4835,
+    "sha256": "758f7e4370ce700997e666dd60f7b12d77e7c87cbe1b036ac2a0eab4dd93022a",
+    "original_sha256": "758f7e4370ce700997e666dd60f7b12d77e7c87cbe1b036ac2a0eab4dd93022a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/CreateOrUpdateTenantOrGetTenantV2API.class",
+    "bytes": 4408,
+    "sha256": "00f48721751aa77ec865c29ac23ef47d5b49159dd75ffdb19d6af243fe2ae0d8",
+    "original_sha256": "00f48721751aa77ec865c29ac23ef47d5b49159dd75ffdb19d6af243fe2ae0d8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/DisassociateUserFromTenant.class",
+    "bytes": 4902,
+    "sha256": "7437939e17ce17c670188601f3b466b44f68ba129b798bc721208040cd9e57ed",
+    "original_sha256": "7437939e17ce17c670188601f3b466b44f68ba129b798bc721208040cd9e57ed",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/ListAppsAPI.class",
+    "bytes": 6176,
+    "sha256": "6d16d1ca7298417e0d6c259d7e7dbbe3fb8391b60cc61b7ef371d876c71f15ac",
+    "original_sha256": "6d16d1ca7298417e0d6c259d7e7dbbe3fb8391b60cc61b7ef371d876c71f15ac",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/ListAppsV2API.class",
+    "bytes": 5653,
+    "sha256": "1dc19ade65af641fca725d55ece546b6cf2c9d10001656359eef2352fc126793",
+    "original_sha256": "1dc19ade65af641fca725d55ece546b6cf2c9d10001656359eef2352fc126793",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/ListConnectionUriDomainsAPI.class",
+    "bytes": 6986,
+    "sha256": "31cd948620b614c0457f7daef4364bfb940686d7fe84b9edcef1eac43353c3ce",
+    "original_sha256": "31cd948620b614c0457f7daef4364bfb940686d7fe84b9edcef1eac43353c3ce",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/ListConnectionUriDomainsV2API.class",
+    "bytes": 6425,
+    "sha256": "35abd9ea503dd42dbc75b58b7802edc8043956b40da454ccfcd08f721065931e",
+    "original_sha256": "35abd9ea503dd42dbc75b58b7802edc8043956b40da454ccfcd08f721065931e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/ListTenantsAPI.class",
+    "bytes": 4640,
+    "sha256": "5c77ff92416a7eeeea4b6ac8555a641302333b344401fe8b9ea07f2934b8e198",
+    "original_sha256": "5c77ff92416a7eeeea4b6ac8555a641302333b344401fe8b9ea07f2934b8e198",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/ListTenantsV2API.class",
+    "bytes": 4149,
+    "sha256": "a9f8a4a5874244c0b44443363f442ffb8f5713a149a8853d1e3a24826f1cf377",
+    "original_sha256": "a9f8a4a5874244c0b44443363f442ffb8f5713a149a8853d1e3a24826f1cf377",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/RemoveAppAPI.class",
+    "bytes": 3880,
+    "sha256": "f763b3908f490d8c42e76b25e558793123aa79f9754b2ed3c01a9a930b7cde2e",
+    "original_sha256": "f763b3908f490d8c42e76b25e558793123aa79f9754b2ed3c01a9a930b7cde2e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/RemoveConnectionUriDomainAPI.class",
+    "bytes": 3857,
+    "sha256": "7d74542ff4c2a1d7a611bb146e2027b4326a7c7acf8d2b1f5d0fcd6ff4e962af",
+    "original_sha256": "7d74542ff4c2a1d7a611bb146e2027b4326a7c7acf8d2b1f5d0fcd6ff4e962af",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/RemoveTenantAPI.class",
+    "bytes": 3859,
+    "sha256": "46e63ba707c7577632a5dd479cba69fcd031b23eb9be0fbe3a64ab35da176aca",
+    "original_sha256": "46e63ba707c7577632a5dd479cba69fcd031b23eb9be0fbe3a64ab35da176aca",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/thirdparty/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/thirdparty/CreateOrUpdateThirdPartyConfigAPI.class",
+    "bytes": 11184,
+    "sha256": "850e7ad16bba1ace5ec4ac17e9e2a6f0c898ff6cacd015cdb0209c94a16c4680",
+    "original_sha256": "850e7ad16bba1ace5ec4ac17e9e2a6f0c898ff6cacd015cdb0209c94a16c4680",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/multitenancy/thirdparty/RemoveThirdPartyConfigAPI.class",
+    "bytes": 6972,
+    "sha256": "8663c76c1ae29b80f65ff5e9908b0e40d3c17ab0def878257d9d52f059df811a",
+    "original_sha256": "8663c76c1ae29b80f65ff5e9908b0e40d3c17ab0def878257d9d52f059df811a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/CreateUpdateOrGetOAuthClientAPI.class",
+    "bytes": 11617,
+    "sha256": "37a46d962f9bbdd5bdeec9ab41548a2b88f5ad76624089df100b3ab2d5e29aef",
+    "original_sha256": "37a46d962f9bbdd5bdeec9ab41548a2b88f5ad76624089df100b3ab2d5e29aef",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthAcceptAuthConsentRequestAPI.class",
+    "bytes": 4742,
+    "sha256": "2e2428ba412d78b42c60d2335ac77747f51ffbca51308e4741af18e72d9943f6",
+    "original_sha256": "2e2428ba412d78b42c60d2335ac77747f51ffbca51308e4741af18e72d9943f6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthAcceptAuthLoginRequestAPI.class",
+    "bytes": 3569,
+    "sha256": "b4e8f36feb30da2e2b22467bdf51ed4d678aefb795cf20e152dd1932bf7511ec",
+    "original_sha256": "b4e8f36feb30da2e2b22467bdf51ed4d678aefb795cf20e152dd1932bf7511ec",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthAcceptAuthLogoutRequestAPI.class",
+    "bytes": 3412,
+    "sha256": "82cc9d81a9f36a27016da589a8a8952123f3d067425fb59db841825a9573b6e7",
+    "original_sha256": "82cc9d81a9f36a27016da589a8a8952123f3d067425fb59db841825a9573b6e7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthAuthAPI.class",
+    "bytes": 11841,
+    "sha256": "567054f7d9296e8896685a369cb48d1c471009ac24ba95c598b48c77e4328078",
+    "original_sha256": "567054f7d9296e8896685a369cb48d1c471009ac24ba95c598b48c77e4328078",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthClientListAPI.class",
+    "bytes": 8008,
+    "sha256": "11d74cf2811cd59ab20df3f9173ecd0a48d896877808f71e60c179e862b23d2d",
+    "original_sha256": "11d74cf2811cd59ab20df3f9173ecd0a48d896877808f71e60c179e862b23d2d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthGetAuthConsentRequestAPI.class",
+    "bytes": 3408,
+    "sha256": "22957ea912b243fd46d2db1f8001faa76660d527146d28c1b19420f3dba52a12",
+    "original_sha256": "22957ea912b243fd46d2db1f8001faa76660d527146d28c1b19420f3dba52a12",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthGetAuthLoginRequestAPI.class",
+    "bytes": 5064,
+    "sha256": "6a52d9af19d90593fc0eab2c5cb3ea15acb8772e745b1ac936b40fe2b64f7cb7",
+    "original_sha256": "6a52d9af19d90593fc0eab2c5cb3ea15acb8772e745b1ac936b40fe2b64f7cb7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthLogoutAPI.class",
+    "bytes": 7698,
+    "sha256": "fcb278c69b0eec46894ce45151a6b45365ea9e5c7fdf7776061e74bce6b34e52",
+    "original_sha256": "fcb278c69b0eec46894ce45151a6b45365ea9e5c7fdf7776061e74bce6b34e52",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthProxyHelper.class",
+    "bytes": 9518,
+    "sha256": "3dccd3ea82cf4c6617b6157eea9520b9d47cf666bb8df4833c8f27e0aabb5ffa",
+    "original_sha256": "3dccd3ea82cf4c6617b6157eea9520b9d47cf666bb8df4833c8f27e0aabb5ffa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthRejectAuthConsentRequestAPI.class",
+    "bytes": 3579,
+    "sha256": "bf3c4721c836c649abfc8d95c6a55d0a4ae9e1eeb06d5e7403eccb9881c082e3",
+    "original_sha256": "bf3c4721c836c649abfc8d95c6a55d0a4ae9e1eeb06d5e7403eccb9881c082e3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthRejectAuthLoginRequestAPI.class",
+    "bytes": 3569,
+    "sha256": "d23c7682d5acdf6cf15ecd9f1941430c214473267be1ebfa8ced611f660f21e4",
+    "original_sha256": "d23c7682d5acdf6cf15ecd9f1941430c214473267be1ebfa8ced611f660f21e4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthRejectAuthLogoutRequestAPI.class",
+    "bytes": 2994,
+    "sha256": "ed5868b5a15b0f5cb5f49f7996e0d08c6f64b518681ca36e18643e6b4a5424da",
+    "original_sha256": "ed5868b5a15b0f5cb5f49f7996e0d08c6f64b518681ca36e18643e6b4a5424da",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthTokenAPI.class",
+    "bytes": 26433,
+    "sha256": "033e703f653a565dfd97ec28721c607af0dbacac6d12bec42e05071bf41d3561",
+    "original_sha256": "033e703f653a565dfd97ec28721c607af0dbacac6d12bec42e05071bf41d3561",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/OAuthTokenIntrospectAPI.class",
+    "bytes": 6292,
+    "sha256": "395771b0c8d9702b768c37e25f646cc01560752667829eb3b7d75098c9f3a47e",
+    "original_sha256": "395771b0c8d9702b768c37e25f646cc01560752667829eb3b7d75098c9f3a47e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/RemoveOAuthClientAPI.class",
+    "bytes": 4827,
+    "sha256": "98bb33774103d3a17b040f806b37853e610ddc30780c4f36d569b785ffbf2c31",
+    "original_sha256": "98bb33774103d3a17b040f806b37853e610ddc30780c4f36d569b785ffbf2c31",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/RevokeOAuthSessionAPI.class",
+    "bytes": 3121,
+    "sha256": "f49d6986c73efdfc4a24765c5a106f85cd978f2e1f0c6e6fa344093acc7a952f",
+    "original_sha256": "f49d6986c73efdfc4a24765c5a106f85cd978f2e1f0c6e6fa344093acc7a952f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/RevokeOAuthTokenAPI.class",
+    "bytes": 7388,
+    "sha256": "fb3280131045bb6718d02dcd45566f58e959fe2403d59f35e43d8103b04e84a4",
+    "original_sha256": "fb3280131045bb6718d02dcd45566f58e959fe2403d59f35e43d8103b04e84a4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/oauth/RevokeOAuthTokensAPI.class",
+    "bytes": 4530,
+    "sha256": "dddec576da254af63e7d3551d5b59cf979346fc4137536dee3ca0915de4462c8",
+    "original_sha256": "dddec576da254af63e7d3551d5b59cf979346fc4137536dee3ca0915de4462c8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/CheckCodeAPI.class",
+    "bytes": 6889,
+    "sha256": "1052234dcd4c3b693af22552164bf596b820ecb66e0a0240035adc6460b624d6",
+    "original_sha256": "1052234dcd4c3b693af22552164bf596b820ecb66e0a0240035adc6460b624d6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/ConsumeCodeAPI.class",
+    "bytes": 9471,
+    "sha256": "9420f783511c241aa993d317d96dca0c0a6fdf5b244d9b4d75d25222e8b0b13d",
+    "original_sha256": "9420f783511c241aa993d317d96dca0c0a6fdf5b244d9b4d75d25222e8b0b13d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/CreateCodeAPI.class",
+    "bytes": 6806,
+    "sha256": "92b4b0052d62f802ca267350f6ac65ccaf17ab015de05cc28750661f3b905434",
+    "original_sha256": "92b4b0052d62f802ca267350f6ac65ccaf17ab015de05cc28750661f3b905434",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/DeleteCodeAPI.class",
+    "bytes": 3634,
+    "sha256": "156a9eccdba50ec110e2b0ad67328fd636eab735991d63c1bab772bd85f7e4e7",
+    "original_sha256": "156a9eccdba50ec110e2b0ad67328fd636eab735991d63c1bab772bd85f7e4e7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/DeleteCodesAPI.class",
+    "bytes": 3702,
+    "sha256": "ed15c43441a9166d3d5e27907e8e79ab243464ebe5f33a3ac3a1abcab52354dc",
+    "original_sha256": "ed15c43441a9166d3d5e27907e8e79ab243464ebe5f33a3ac3a1abcab52354dc",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/GetCodesAPI.class",
+    "bytes": 8276,
+    "sha256": "84f5fa5ebe15b536ace3795324f391e1e582b102eaf394ecc65e9ab9d14b57da",
+    "original_sha256": "84f5fa5ebe15b536ace3795324f391e1e582b102eaf394ecc65e9ab9d14b57da",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/UserAPI.class",
+    "bytes": 10402,
+    "sha256": "d4ec1332cb4ed6778813f820e8562346c96ef3d9ae654058fe8221b5b1288ce4",
+    "original_sha256": "d4ec1332cb4ed6778813f820e8562346c96ef3d9ae654058fe8221b5b1288ce4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/passwordless/Utils.class",
+    "bytes": 1637,
+    "sha256": "99241957615cf920ebdd87a21dd8f8a951ce950fe95127fbca8cf571f5146310",
+    "original_sha256": "99241957615cf920ebdd87a21dd8f8a951ce950fe95127fbca8cf571f5146310",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/CreateOrUpdateSamlClientAPI.class",
+    "bytes": 5466,
+    "sha256": "761f4242046ed53f6ee2913e3ad5525f277a2b33796c04d0d686ba4a76cbb663",
+    "original_sha256": "761f4242046ed53f6ee2913e3ad5525f277a2b33796c04d0d686ba4a76cbb663",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/CreateSamlLoginRedirectAPI.class",
+    "bytes": 3352,
+    "sha256": "0548300154fecb6ad1581ef437fbcf7b3b0651c68306f5b2fc07410bddcc63bb",
+    "original_sha256": "0548300154fecb6ad1581ef437fbcf7b3b0651c68306f5b2fc07410bddcc63bb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/GetUserInfoAPI.class",
+    "bytes": 3109,
+    "sha256": "ce53ae0a43b1040276416a8a4bfc702dc6b7fe2031e79b147f945ab74cb46e45",
+    "original_sha256": "ce53ae0a43b1040276416a8a4bfc702dc6b7fe2031e79b147f945ab74cb46e45",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/HandleSamlCallbackAPI.class",
+    "bytes": 4005,
+    "sha256": "d602ffdbf167ff15b85a4436422f1910b5240bfb9e15f64edff4ce9497a7385b",
+    "original_sha256": "d602ffdbf167ff15b85a4436422f1910b5240bfb9e15f64edff4ce9497a7385b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/LegacyAuthorizeAPI.class",
+    "bytes": 3752,
+    "sha256": "4e854cf967b0f1452d5b07e2f085e29b85f7f97bb08e9c213a5ed1448627b086",
+    "original_sha256": "4e854cf967b0f1452d5b07e2f085e29b85f7f97bb08e9c213a5ed1448627b086",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/LegacyCallbackAPI.class",
+    "bytes": 3648,
+    "sha256": "e6f37a2102712cd682cb79cbd3c961f8a79da7e93ab9894f6887747d1b5db0c8",
+    "original_sha256": "e6f37a2102712cd682cb79cbd3c961f8a79da7e93ab9894f6887747d1b5db0c8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/LegacyTokenAPI.class",
+    "bytes": 4066,
+    "sha256": "a0b8b2bef58e896eff7e2a7852b2ace10ae6ce57ae7816ac9b49109779e5011d",
+    "original_sha256": "a0b8b2bef58e896eff7e2a7852b2ace10ae6ce57ae7816ac9b49109779e5011d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/LegacyUserinfoAPI.class",
+    "bytes": 3808,
+    "sha256": "0e6e447252626369aaccc7e8a244d7591bfcc53858625ab227d69aa84097e81f",
+    "original_sha256": "0e6e447252626369aaccc7e8a244d7591bfcc53858625ab227d69aa84097e81f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/ListSamlClientsAPI.class",
+    "bytes": 3077,
+    "sha256": "1d14e488da5c470ca8b54aab7bf25e490c568f7c70fd5cf5038541e9c33cb8a7",
+    "original_sha256": "1d14e488da5c470ca8b54aab7bf25e490c568f7c70fd5cf5038541e9c33cb8a7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/RemoveSamlClientAPI.class",
+    "bytes": 2837,
+    "sha256": "05e6b5f97b410f43a454636ff4c10e217827ef51d5331cb83d43cb0b6500eeec",
+    "original_sha256": "05e6b5f97b410f43a454636ff4c10e217827ef51d5331cb83d43cb0b6500eeec",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/saml/SPMetadataAPI.class",
+    "bytes": 2086,
+    "sha256": "c18bdb0f56b7d30c33107934ac9296de5b11cfb17407cc505d30e1597b277bac",
+    "original_sha256": "c18bdb0f56b7d30c33107934ac9296de5b11cfb17407cc505d30e1597b277bac",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/HandshakeAPI.class",
+    "bytes": 4090,
+    "sha256": "e4d361d935fa3eea6a06f03f96a3e89bd355310ac3a9252e9faeba1c9bb9dc73",
+    "original_sha256": "e4d361d935fa3eea6a06f03f96a3e89bd355310ac3a9252e9faeba1c9bb9dc73",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/JWTDataAPI.class",
+    "bytes": 7045,
+    "sha256": "2b00e8f9b4f83af1167e073cb14a83f4b8a5d41c32c632688c18fcdf7ce0960a",
+    "original_sha256": "2b00e8f9b4f83af1167e073cb14a83f4b8a5d41c32c632688c18fcdf7ce0960a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/RefreshSessionAPI.class",
+    "bytes": 10047,
+    "sha256": "1947e3199867264557fa29ae698357f6845e5f571c8fb215475c6d51886df3b0",
+    "original_sha256": "1947e3199867264557fa29ae698357f6845e5f571c8fb215475c6d51886df3b0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/SessionAPI.class",
+    "bytes": 11400,
+    "sha256": "e4c87caebd23012b27969b2d72a318a99a0d5f4325c6a88333248eef73fc0acb",
+    "original_sha256": "e4c87caebd23012b27969b2d72a318a99a0d5f4325c6a88333248eef73fc0acb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/SessionDataAPI.class",
+    "bytes": 7025,
+    "sha256": "28482f8c228e9c4e171b3cf7b75ef50bdc460a69a643b3c3706f875889da2a6f",
+    "original_sha256": "28482f8c228e9c4e171b3cf7b75ef50bdc460a69a643b3c3706f875889da2a6f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/SessionRegenerateAPI.class",
+    "bytes": 5940,
+    "sha256": "bcf31e34b302b6894e88bee3cf76a6de246dc9e57ec412aa6b9cd5d33b1a3e36",
+    "original_sha256": "bcf31e34b302b6894e88bee3cf76a6de246dc9e57ec412aa6b9cd5d33b1a3e36",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/SessionRemoveAPI.class",
+    "bytes": 10326,
+    "sha256": "6d3026f2c4dcc21f3f98d433b07c5db172c27ad9b80ff5e85c970176f27c3aa6",
+    "original_sha256": "6d3026f2c4dcc21f3f98d433b07c5db172c27ad9b80ff5e85c970176f27c3aa6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/SessionUserAPI.class",
+    "bytes": 5456,
+    "sha256": "ae74374194e35e14f747e817d6b47424e9c9d8db2deb489426148f436bca490d",
+    "original_sha256": "ae74374194e35e14f747e817d6b47424e9c9d8db2deb489426148f436bca490d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/session/VerifySessionAPI.class",
+    "bytes": 8090,
+    "sha256": "409a23bb3d2046e5aaade7ec8041446f6bfcf8cfaa6bc698f798cc8485ae3aad",
+    "original_sha256": "409a23bb3d2046e5aaade7ec8041446f6bfcf8cfaa6bc698f798cc8485ae3aad",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/thirdparty/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/thirdparty/GetUsersByEmailAPI.class",
+    "bytes": 5307,
+    "sha256": "c6e3c1254df13ef650f51fdaf6b492ae38f467c960c070cdaa5babe19a7437e6",
+    "original_sha256": "c6e3c1254df13ef650f51fdaf6b492ae38f467c960c070cdaa5babe19a7437e6",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/thirdparty/SignInUpAPI.class",
+    "bytes": 8862,
+    "sha256": "b416f15524efceb246ba5dea7e2fa99c7a65b842bece9a164c98c7a65d215c0a",
+    "original_sha256": "b416f15524efceb246ba5dea7e2fa99c7a65b842bece9a164c98c7a65d215c0a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/thirdparty/UserAPI.class",
+    "bytes": 6603,
+    "sha256": "809e70af7b583bf9ab28768c7045559bb9735aaee186b1cd23249b03ec25f7cd",
+    "original_sha256": "809e70af7b583bf9ab28768c7045559bb9735aaee186b1cd23249b03ec25f7cd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/thirdparty/Utils.class",
+    "bytes": 1627,
+    "sha256": "74c2433c8c5bb2605e03e02af21a3be7f49ca16c4fd733543309c6577e02337a",
+    "original_sha256": "74c2433c8c5bb2605e03e02af21a3be7f49ca16c4fd733543309c6577e02337a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/BulkGetTotpDeviceStatusAPI.class",
+    "bytes": 5937,
+    "sha256": "a852e96bba3794344aba0fff722dbf94d3d661cd36d689b84551905b7d43d557",
+    "original_sha256": "a852e96bba3794344aba0fff722dbf94d3d661cd36d689b84551905b7d43d557",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/CreateOrUpdateTotpDeviceAPI.class",
+    "bytes": 6333,
+    "sha256": "a32878a08444a176994b28f11cc3cd78465ab57d29b522b610bf59971ea28fa7",
+    "original_sha256": "a32878a08444a176994b28f11cc3cd78465ab57d29b522b610bf59971ea28fa7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/GetTotpDevicesAPI.class",
+    "bytes": 4902,
+    "sha256": "f395c628111f79f408571858f8dd581254ff690fd6d91ca7876f44e8c59759eb",
+    "original_sha256": "f395c628111f79f408571858f8dd581254ff690fd6d91ca7876f44e8c59759eb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/ImportTotpDeviceAPI.class",
+    "bytes": 5258,
+    "sha256": "5b4d8bdaa6dc664f3f12243864a78c77d5032644c353bed081593650f4972b79",
+    "original_sha256": "5b4d8bdaa6dc664f3f12243864a78c77d5032644c353bed081593650f4972b79",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/RemoveTotpDeviceAPI.class",
+    "bytes": 4556,
+    "sha256": "91fd3bd004865d2d068ee77b7c840906f9e728573fd3709875589867bce126ed",
+    "original_sha256": "91fd3bd004865d2d068ee77b7c840906f9e728573fd3709875589867bce126ed",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/VerifyTotpAPI.class",
+    "bytes": 4841,
+    "sha256": "7a0d395c0e842d0648ecfe475ae77f08c7f5480758cd465e44add1022b6f8bb7",
+    "original_sha256": "7a0d395c0e842d0648ecfe475ae77f08c7f5480758cd465e44add1022b6f8bb7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/totp/VerifyTotpDeviceAPI.class",
+    "bytes": 5327,
+    "sha256": "813572f8bbf945f1ba717cc94a33541966ce8164d261761f180b558c7e423972",
+    "original_sha256": "813572f8bbf945f1ba717cc94a33541966ce8164d261761f180b558c7e423972",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/useridmapping/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/useridmapping/RemoveUserIdMappingAPI.class",
+    "bytes": 4599,
+    "sha256": "b7b2fd571b848bad8136616e39a95dbf806df373d8dc6b779565c383665a650d",
+    "original_sha256": "b7b2fd571b848bad8136616e39a95dbf806df373d8dc6b779565c383665a650d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/useridmapping/UpdateExternalUserIdInfoAPI.class",
+    "bytes": 4711,
+    "sha256": "85933a80f5a7f77e948413f9ce79946bc87198252fb40d08cb9e53fe9e6a7469",
+    "original_sha256": "85933a80f5a7f77e948413f9ce79946bc87198252fb40d08cb9e53fe9e6a7469",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/useridmapping/UserIdMappingAPI.class",
+    "bytes": 6934,
+    "sha256": "9f796f94522352943d369c0a571c733b9589f9193b8fa0f432dfeec21fcde975",
+    "original_sha256": "9f796f94522352943d369c0a571c733b9589f9193b8fa0f432dfeec21fcde975",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/usermetadata/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/usermetadata/BulkGetUserMetadataAPI.class",
+    "bytes": 5850,
+    "sha256": "3bab03d61e61c18e9b2523840787827f70c990960c7e94a99db1bb414e457fa1",
+    "original_sha256": "3bab03d61e61c18e9b2523840787827f70c990960c7e94a99db1bb414e457fa1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/usermetadata/RemoveUserMetadataAPI.class",
+    "bytes": 3799,
+    "sha256": "abefdfa4654bca0c5a2d024e3a2eb63e573d82bde4e7b47793aa8bde26bb11d7",
+    "original_sha256": "abefdfa4654bca0c5a2d024e3a2eb63e573d82bde4e7b47793aa8bde26bb11d7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/usermetadata/UserMetadataAPI.class",
+    "bytes": 4941,
+    "sha256": "fdd9b1ee4ae5ee4d13e7471c6678337320aeccca3f00e7ce71c64fcc552bd330",
+    "original_sha256": "fdd9b1ee4ae5ee4d13e7471c6678337320aeccca3f00e7ce71c64fcc552bd330",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/AddUserRoleAPI.class",
+    "bytes": 3919,
+    "sha256": "840ce2e351844206726115fa9b9d63a31c200bbe364485b24544b7797e4d9647",
+    "original_sha256": "840ce2e351844206726115fa9b9d63a31c200bbe364485b24544b7797e4d9647",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/CreateRoleAPI.class",
+    "bytes": 4314,
+    "sha256": "b709b9dcee6e93b8689ac199062854ab3f7d7559c1d1b2b4f764099d10a1d1a1",
+    "original_sha256": "b709b9dcee6e93b8689ac199062854ab3f7d7559c1d1b2b4f764099d10a1d1a1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/GetPermissionsForRoleAPI.class",
+    "bytes": 4055,
+    "sha256": "6b32cbb752c68c32bfd4a44767000ca9534e3aa0065757efee32fd3e1698768e",
+    "original_sha256": "6b32cbb752c68c32bfd4a44767000ca9534e3aa0065757efee32fd3e1698768e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/GetRolesAPI.class",
+    "bytes": 3293,
+    "sha256": "bd0ad441113952ccd0b8337e7e1b6071c888b82c9dd8c3fd20fa0f59d802c96d",
+    "original_sha256": "bd0ad441113952ccd0b8337e7e1b6071c888b82c9dd8c3fd20fa0f59d802c96d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/GetRolesForPermissionAPI.class",
+    "bytes": 3886,
+    "sha256": "90d626ef1ab172514ad262c6720b7295db73fd53fe48f7b5facb827049fdfb86",
+    "original_sha256": "90d626ef1ab172514ad262c6720b7295db73fd53fe48f7b5facb827049fdfb86",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/GetRolesForUserAPI.class",
+    "bytes": 3502,
+    "sha256": "69bcbed764ef0dc809dccf29c20b042b10a1ca44005258646acee2e34cf2da01",
+    "original_sha256": "69bcbed764ef0dc809dccf29c20b042b10a1ca44005258646acee2e34cf2da01",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/GetUsersForRoleAPI.class",
+    "bytes": 3938,
+    "sha256": "890c81371697c9122bf3fa7a0845d4f23ae7a7204994c6c87e27cc4893e1d656",
+    "original_sha256": "890c81371697c9122bf3fa7a0845d4f23ae7a7204994c6c87e27cc4893e1d656",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/RemovePermissionsForRoleAPI.class",
+    "bytes": 4355,
+    "sha256": "f829a0f063413e20ec19cc6a9be9e3137c2cb6388128811cb464962ac6fdb128",
+    "original_sha256": "f829a0f063413e20ec19cc6a9be9e3137c2cb6388128811cb464962ac6fdb128",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/RemoveRoleAPI.class",
+    "bytes": 3404,
+    "sha256": "729d0e0bad8850349bfdc9607563b758e39fa307e2c7a1dd0aa81a3ca8a5335a",
+    "original_sha256": "729d0e0bad8850349bfdc9607563b758e39fa307e2c7a1dd0aa81a3ca8a5335a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/userroles/RemoveUserRoleAPI.class",
+    "bytes": 3726,
+    "sha256": "0582f1d5e1967abd9f8649b17b50e8debbf81b258368d8cefc011887cba7596a",
+    "original_sha256": "0582f1d5e1967abd9f8649b17b50e8debbf81b258368d8cefc011887cba7596a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/ConsumeRecoverAccountTokenAPI.class",
+    "bytes": 4404,
+    "sha256": "4c965a009781a454dae91917cda443a9545b3e6644909d8c0c7c55e794978a38",
+    "original_sha256": "4c965a009781a454dae91917cda443a9545b3e6644909d8c0c7c55e794978a38",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/CredentialsRegisterAPI.class",
+    "bytes": 4846,
+    "sha256": "e3e516e0721cf4bce39aeb5f85bf74c12362b7382eb55b7e7cc4a7a84b14a9e5",
+    "original_sha256": "e3e516e0721cf4bce39aeb5f85bf74c12362b7382eb55b7e7cc4a7a84b14a9e5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/GenerateRecoverAccountTokenAPI.class",
+    "bytes": 3460,
+    "sha256": "2b1049e6836f3ed47ae199a04da95ec5acd842fb8a61a263aec33cf163a57ba4",
+    "original_sha256": "2b1049e6836f3ed47ae199a04da95ec5acd842fb8a61a263aec33cf163a57ba4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/GetCredentialAPI.class",
+    "bytes": 3596,
+    "sha256": "008d104500ad2a126b9a1d8fb61e8bee5e4ed3d9f7e5126b2482fc5385ac3e45",
+    "original_sha256": "008d104500ad2a126b9a1d8fb61e8bee5e4ed3d9f7e5126b2482fc5385ac3e45",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/GetGeneratedOptionsAPI.class",
+    "bytes": 3534,
+    "sha256": "ceece1c7a29070e308b2ced6f530ae4d7b5ec475f69041cdf54db4bd7c915cbe",
+    "original_sha256": "ceece1c7a29070e308b2ced6f530ae4d7b5ec475f69041cdf54db4bd7c915cbe",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/GetUserFromRecoverAccountTokenAPI.class",
+    "bytes": 4829,
+    "sha256": "733e55b3eadcf2dc09362cd9e97bbd041bdb829d8c5cde0a45ce7089b664378e",
+    "original_sha256": "733e55b3eadcf2dc09362cd9e97bbd041bdb829d8c5cde0a45ce7089b664378e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/ListCredentialsAPI.class",
+    "bytes": 2942,
+    "sha256": "9f95d1185179188abf88f81f4605dc5a81e066243b893c50030dd41f5d15370d",
+    "original_sha256": "9f95d1185179188abf88f81f4605dc5a81e066243b893c50030dd41f5d15370d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/OptionsRegisterAPI.class",
+    "bytes": 5339,
+    "sha256": "58935ce3bf9c4cbdbc6d52a69ea7f6820d7aaec7368caefbbf01b7b4b84db15f",
+    "original_sha256": "58935ce3bf9c4cbdbc6d52a69ea7f6820d7aaec7368caefbbf01b7b4b84db15f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/RemoveCredentialAPI.class",
+    "bytes": 2906,
+    "sha256": "21edd4c4bbd78af4810b3a5fc09a0dd99f926709d61d8c7960438dae3b6961bf",
+    "original_sha256": "21edd4c4bbd78af4810b3a5fc09a0dd99f926709d61d8c7960438dae3b6961bf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/RemoveOptionsAPI.class",
+    "bytes": 2811,
+    "sha256": "f4f22a4874e34c1eaee9bc4a5f7e43724e6e1e593d3d6acb64c40f32558b2119",
+    "original_sha256": "f4f22a4874e34c1eaee9bc4a5f7e43724e6e1e593d3d6acb64c40f32558b2119",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/SignInAPI.class",
+    "bytes": 6869,
+    "sha256": "e928c87b59af0f42be84c261c561421062b14a10a0df79767cbbe809ea4aa3d7",
+    "original_sha256": "e928c87b59af0f42be84c261c561421062b14a10a0df79767cbbe809ea4aa3d7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/SignInOptionsAPI.class",
+    "bytes": 4145,
+    "sha256": "d5c7f1a2758007d3c541535756ef49748d94afbfba0836e096d1a6e90e676fab",
+    "original_sha256": "d5c7f1a2758007d3c541535756ef49748d94afbfba0836e096d1a6e90e676fab",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/SignUpWithCredentialRegisterAPI.class",
+    "bytes": 5889,
+    "sha256": "8aff8620c1c92d885bad684e6715b18b1ddbb1e877728193e76f0a124b162ed1",
+    "original_sha256": "8aff8620c1c92d885bad684e6715b18b1ddbb1e877728193e76f0a124b162ed1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/webserver/api/webauthn/UpdateUserEmailAPI.class",
+    "bytes": 3454,
+    "sha256": "11c45d55d9279a081341d413517de372626a31512eae30e9c29b2f3167316e9d",
+    "original_sha256": "11c45d55d9279a081341d413517de372626a31512eae30e9c29b2f3167316e9d",
+    "changed": false
+  },
+  {
+    "path": "io/expertauth/core/AtomicPasswordReset$Rejected.class",
+    "bytes": 420,
+    "sha256": "a91c77d8f016ea05552d70a1eac6474a8e8b2141bca2c883a935f602d075d943",
+    "added": true
+  },
+  {
+    "path": "io/expertauth/core/AtomicPasswordReset.class",
+    "bytes": 13278,
+    "sha256": "f24dce09f59cf05e300ca498cac25d2683e4a68d790a5498793f18a86ff0bc6a",
+    "added": true
+  },
+  {
+    "path": "io/expertauth/core/AtomicPasswordResetAPI.class",
+    "bytes": 4191,
+    "sha256": "2e8741fa761e3810dd1bf1ebaab59ae1388ed91e6ed85314d6bfa7583a45bcda",
+    "added": true
+  }
+]

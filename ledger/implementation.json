@@ -44,11 +44,11 @@
         },
         {
           "path": "tools/package_checkpoint.py",
-          "sha256": "176c0bb33fff61fad6da87828b4e12953bfadbb13f48cbeded0082dec7340c4b"
+          "sha256": "a3c0392ce81139b992777ba6eaaa7b9098dc18b1835a83277ec57719fbe8fc9b"
         },
         {
           "path": "tests/evidence/test_checkpoint_secrets.py",
-          "sha256": "a6148ae5edff3a31a5741376c87e376f04c2cb8d63e9b25c8dc2e427defee8aa"
+          "sha256": "9b818a20a31d098cebedf735cd13f0a814e72181cf1b11c454bfb3b622153c72"
         }
       ],
       "positive_test_ids": [],
@@ -1899,7 +1899,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -2009,7 +2009,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -2033,7 +2033,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -2045,7 +2045,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -2126,6 +2126,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -2308,9 +2352,53 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved.",
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
       "observed_test_ids": [
         "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
         "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
@@ -2324,7 +2412,17 @@
         "RESET-SMTP-OUTAGE-GENERIC-RETRY",
         "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
         "RESET-BROWSER-REAL-REACT-FLOW",
-        "RESET-OWNED-FIXTURE-CLEANUP"
+        "RESET-OWNED-FIXTURE-CLEANUP",
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED"
       ]
     },
     {
@@ -3362,7 +3460,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -3408,7 +3506,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -3630,7 +3728,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -3651,6 +3749,50 @@
         {
           "path": "tests/browser/session-coordination.mjs",
           "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -3689,16 +3831,83 @@
         {
           "path": "evidence/foundation/session-policy-review/README.md",
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
         "NODE-SESSION-002",
         "NODE-OFFLINE-001",
         "NODE-OFFLINE-002",
-        "NODE-COOKIE-001"
+        "NODE-COOKIE-001",
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -3712,11 +3921,55 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
           "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -3735,16 +3988,83 @@
         {
           "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
           "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
         "NODE-SESSION-002",
         "NODE-OFFLINE-001",
         "NODE-OFFLINE-002",
-        "NODE-COOKIE-001"
+        "NODE-COOKIE-001",
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -3758,7 +4078,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -3852,7 +4172,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -5433,7 +5753,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -5495,7 +5815,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/python/app.py",
@@ -6072,7 +6392,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/package-lock.json",
@@ -6080,7 +6400,7 @@
         },
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -6104,7 +6424,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -6116,7 +6436,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -6213,6 +6533,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -6419,10 +6783,78 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved.",
-      "observed_test_ids": []
+      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
+      "observed_test_ids": [
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "SDK-002",
@@ -6614,7 +7046,7 @@
         },
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -6638,7 +7070,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -6650,7 +7082,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -6747,6 +7179,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -6957,14 +7433,81 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved.",
+      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
       "observed_test_ids": [
         "BROWSER-OSS-001",
         "BROWSER-OSS-002",
         "BROWSER-OSS-003",
-        "BROWSER-OSS-004"
+        "BROWSER-OSS-004",
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -7620,11 +8163,11 @@
         },
         {
           "path": "tools/package_checkpoint.py",
-          "sha256": "176c0bb33fff61fad6da87828b4e12953bfadbb13f48cbeded0082dec7340c4b"
+          "sha256": "a3c0392ce81139b992777ba6eaaa7b9098dc18b1835a83277ec57719fbe8fc9b"
         },
         {
           "path": "tests/evidence/test_checkpoint_secrets.py",
-          "sha256": "a6148ae5edff3a31a5741376c87e376f04c2cb8d63e9b25c8dc2e427defee8aa"
+          "sha256": "9b818a20a31d098cebedf735cd13f0a814e72181cf1b11c454bfb3b622153c72"
         }
       ],
       "positive_test_ids": [],
@@ -12463,7 +13006,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/package-lock.json",
@@ -12471,7 +13014,7 @@
         },
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -12495,7 +13038,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -12507,7 +13050,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -12604,6 +13147,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -12810,10 +13397,78 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved.",
-      "observed_test_ids": []
+      "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
+      "observed_test_ids": [
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "SDKP-02",
@@ -13005,7 +13660,7 @@
         },
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -13029,7 +13684,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -13041,7 +13696,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -13138,6 +13793,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -13348,14 +14047,81 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved.",
+      "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification. Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
       "observed_test_ids": [
         "BROWSER-OSS-001",
         "BROWSER-OSS-002",
         "BROWSER-OSS-003",
-        "BROWSER-OSS-004"
+        "BROWSER-OSS-004",
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -14626,7 +15392,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -14650,7 +15416,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -14662,7 +15428,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -14743,6 +15509,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -15049,9 +15859,122 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved."
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
+      "observed_test_ids": [
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "WP-010",
@@ -15064,7 +15987,7 @@
       "implementation": [
         {
           "path": "examples/node-react/server.js",
-          "sha256": "efbd59ed7338b1fda0e56820f944d4ff9ed24a8d97f219b186dcaefe54b5ba96"
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
         },
         {
           "path": "examples/node-react/email-delivery.js",
@@ -15088,7 +16011,7 @@
         },
         {
           "path": "tests/operations/password_reset_probe.mjs",
-          "sha256": "6c59035d00859461adaecfae4cf66b6eaad22431e7a044206c7fad8d4c7ae21d"
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
         },
         {
           "path": "tests/operations/password_reset_tls.py",
@@ -15100,7 +16023,7 @@
         },
         {
           "path": "tools/run_password_reset_lab.py",
-          "sha256": "7b3a10c3c5f14f4da05639b8e5efaf7e36ba44ca5de9a36c148cc3b4c833169f"
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
         },
         {
           "path": "tools/build_node_client.py",
@@ -15181,6 +16104,50 @@
         {
           "path": "tools/retire_bootstrap_checkpoint_zip.py",
           "sha256": "c4837780277431cbf6193b2623f9b0f6e7324d8e65f9a78ec0d22163e79c16e9"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+          "sha256": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c"
+        },
+        {
+          "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+          "sha256": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64"
+        },
+        {
+          "path": "engine-extensions/core-reset/reuse.json",
+          "sha256": "d9c3c132dc19910b913a3edfb21b3f9612562c7d91041af9516e27e1ddc3860c"
+        },
+        {
+          "path": "tools/build_core_reset.py",
+          "sha256": "8d6f69e1d1fc965a8f3e4e5f95bd300c0f0e0730a24a62e320bfed6284d47d24"
+        },
+        {
+          "path": "tools/run_atomic_reset_lab.py",
+          "sha256": "8c8ad83144a4c602b1e8f1b5d9e58dadd3b4df6999c15dc86d68945df375a34c"
+        },
+        {
+          "path": "tests/operations/AtomicResetProbe.java",
+          "sha256": "a348a6b5f42ccbd9a003c64fa2c69193bd8ae9e5e5efbdcaebf2815a1671bc71"
+        },
+        {
+          "path": "examples/node-react/server.js",
+          "sha256": "dcf9d71924e085e3ae41d4235c6ec14a1ef1f5751884af2dfbf8f94f43eb9ce6"
+        },
+        {
+          "path": "tools/run_password_reset_lab.py",
+          "sha256": "f2d3541741f8127716dc15e60dfb1a5990ddec9e37c2aa969e2e98a2446063e2"
+        },
+        {
+          "path": "tests/operations/password_reset_probe.mjs",
+          "sha256": "91e3b5f9de0ddfbd785c011efad5fd55634c2e9cd924d57a97e88d30165f7c8b"
+        },
+        {
+          "path": "tools/verify_atomic_reset_evidence.py",
+          "sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59"
+        },
+        {
+          "path": "docs/atomic-password-reset.md",
+          "sha256": "5776d4e1ebe07feb8a4e36dacc6d15e7b36c4affaeb1f980722d392eee0d800b"
         }
       ],
       "positive_test_ids": [],
@@ -15487,9 +16454,122 @@
         {
           "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
           "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/report.json",
+          "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+        },
+        {
+          "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+          "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/report.json",
+          "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+          "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/node-03/report.json",
+          "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+        },
+        {
+          "path": "evidence/operations/atomic-reset/evidence-validation.json",
+          "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+          "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+          "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+          "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+          "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+        },
+        {
+          "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+          "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved."
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.",
+      "observed_test_ids": [
+        "ATOMIC-RESET-PRIVATE-API-AUTHORIZATION",
+        "ATOMIC-RESET-INPUT-AND-CONTEXT-REJECTION",
+        "ATOMIC-RESET-COMMIT-REVOKES-EXISTING-SESSIONS",
+        "ATOMIC-RESET-REPLAY-AND-SIBLING-DENIAL",
+        "ATOMIC-RESET-EIGHT-CONSUMERS-TWO-REPLICAS",
+        "ATOMIC-RESET-TRANSACTION-ABORT-AND-RETRY",
+        "ATOMIC-RESET-EXTERNAL-ID-SESSION-REVOCATION",
+        "ATOMIC-RESET-CONFIGURED-EXPIRY",
+        "RESET-ATOMIC-LEGACY-TOKEN-MIGRATION",
+        "RESET-ATOMIC-OLDER-CORE-FAILS-CLOSED",
+        "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
+        "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
+        "RESET-HTTP-003-EIGHT-CONCURRENT-CONSUMERS",
+        "RESET-HTTP-004-SIBLING-TOKEN-INVALIDATION",
+        "RESET-HTTP-005-NONEXISTENT-TENANT-FAIL-CLOSED",
+        "RESET-HTTP-006-UNKNOWN-EMAIL-GENERIC-NO-DELIVERY",
+        "RESET-HTTP-007-CONFIGURED-EXPIRY",
+        "RESET-SMTP-WRONG-AUTH-GENERIC-RETRY",
+        "RESET-SMTP-UNTRUSTED-GENERIC-RETRY",
+        "RESET-SMTP-OUTAGE-GENERIC-RETRY",
+        "RESET-HTTP-008-DISABLED-WITHOUT-SMTP",
+        "RESET-BROWSER-REAL-REACT-FLOW",
+        "RESET-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "WP-011",
@@ -16071,6 +17151,18 @@
     {
       "path": "evidence/operations/hygiene/checkpoint-retention-before-node-bootstrap.json",
       "sha256": "59226e7ae78040bed5f35122879e9dab3714b47d94c102753d72fd9cc2813be8"
+    },
+    {
+      "path": "evidence/operations/hygiene/verification-20260909T074428Z.json",
+      "sha256": "33e88a58d732af09be5d11db4fdfdd8a6900d76459f0fd73be3478f38a98bf7b"
+    },
+    {
+      "path": "evidence/operations/hygiene/checkpoint-retention-before-atomic-reset.json",
+      "sha256": "0e60d47f229720c51f8ba9c89f38fc95cda17fe8b1b87718eeb0fd1e3d760cc8"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/checkpoint-checks.json",
+      "sha256": "edb26d8020b32d81ef465b7a41ad5c96f8e29b57263b78ff67f72e4ef0e67983"
     }
   ],
   "runtime_distribution_artifacts": [
@@ -16787,6 +17879,94 @@
     {
       "path": "evidence/operations/password-reset/installed-deterministic-source-mode-02/browser-results.json",
       "sha256": "d5947c46c6b48350731c3fe4e44ff1e0d1f87ac02ff048e04a5cd8e9081baefa"
+    },
+    {
+      "path": "evidence/operations/core-reset-build/compile-03/report.json",
+      "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+    },
+    {
+      "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+      "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/run-02/report.json",
+      "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+      "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/node-03/report.json",
+      "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/evidence-validation.json",
+      "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+      "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+      "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+      "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+      "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+      "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
+    },
+    {
+      "path": "evidence/operations/core-reset-build/compile-03/report.json",
+      "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+    },
+    {
+      "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+      "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/run-02/report.json",
+      "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+      "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/node-03/report.json",
+      "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/evidence-validation.json",
+      "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+      "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+      "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+      "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+      "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+      "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
     }
   ],
   "node_build_candidate_artifacts": [
@@ -16939,6 +18119,52 @@
     {
       "path": "evidence/operations/node-bootstrap/fresh-registry-03/offline-commands.json",
       "sha256": "777d5e25b611ee1fc7df77aa8281c6d4e0468e2ea2c2da6ac333cdfe34245abb"
+    }
+  ],
+  "atomic_reset_candidate_artifacts": [
+    {
+      "path": "evidence/operations/core-reset-build/compile-03/report.json",
+      "sha256": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b"
+    },
+    {
+      "path": "evidence/operations/core-reset-build/compile-03/jar-members.json",
+      "sha256": "571993ea5b3594b94142614a90b5ba218b4ec581015cabfcacdb3e529afabeaa"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/run-02/report.json",
+      "sha256": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/run-02/probe-report.json",
+      "sha256": "008bfab72c56c1e9f237558d7d831b216429b5f69b03eb5b24da80b1d03c9b2b"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/node-03/report.json",
+      "sha256": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb"
+    },
+    {
+      "path": "evidence/operations/atomic-reset/evidence-validation.json",
+      "sha256": "ce57bfab108802152286d7f5681532e94e2132556f0159c3c9589f9fbffad9ed"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/report.json",
+      "sha256": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/probe-results.json",
+      "sha256": "acea7755554233fe4c73ec9689e70769f026ece7ac8c4c182f48fe9eb1473bba"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/browser-results.json",
+      "sha256": "cfacc92022fcbadb52e10dd08dcfe6a24b2bc5c037e8088fbf48284a71a44546"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/tls-results.json",
+      "sha256": "c08dda1202d8a2db842b60481270c68cd52d677a4fde797406af9096ac333093"
+    },
+    {
+      "path": "evidence/operations/password-reset/atomic-node-03/reset-success.png",
+      "sha256": "eb35e3a581f4b5b0120f08dff3dedd221508fcd0ba5b8775bcae4b13813fa8d8"
     }
   ]
 }

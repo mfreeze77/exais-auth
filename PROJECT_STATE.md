@@ -11,6 +11,24 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- An opt-in atomic password-reset Core adaptation now passes eight actual Core
+  cases, including two-replica concurrency, transaction abort/retry and external
+  identity mappings. The Node/React profile passes13 HTTP,10 SMTP/TLS and9 browser
+  cases, including real legacy-token rejection/reissue and older-Core readiness
+  failure with no fallback. All17 containers in the final Node lab were removed;
+  the persistent database was never contacted. No new image was built. One
+  1,254,808-byte candidate JAR is retained. Read `docs/atomic-password-reset.md`.
+  The existing Node image contains the earlier server; current atomic behavior
+  is proved through explicit source/JAR mounts, not an installed-image claim.
+  Full namespace/link/migration profiles, sign-in/session-issuance concurrency
+  and independent security review remain open. No requirement status is promoted.
+  Latest hygiene `verification-20260909T074428Z.json` passes10 checks: two retained
+  containers, six image tags and no dangling project images. Disk free space was
+  299,140,341,760 bytes. The three-ZIP ceiling remains enforced; only generated
+  ZIP8bc7ab687c25 was retired after exact hash/member/ancestry checks, preserving
+  its sidecars and the two newer rollback ZIPs. Full acceptance still fails557
+  checks; all original265 requirements/205 APIs/8 SDK/14 plugin/10 integration
+  profiles,11 milestones and36 packages remain accounted for.
 - Fresh npm archive acquisition now passes 11 actual registry/concurrency/cache
   and disconnected install/compile checks. One temporary container retired; no
   image, volume, network or extra host cache was retained. The single archive

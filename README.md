@@ -54,6 +54,13 @@ old-image retirement and the remaining fresh-stack/distribution gaps.
 fresh registry and disconnected install/compile tests using one bounded cache;
 its temporary container is removed after verification.
 
+The opt-in [atomic reset adaptation](docs/atomic-password-reset.md) now commits
+token consumption, password change and existing-session deletion in one Core
+transaction. Eight real Core cases and32 Node/SMTP/React cases pass, including
+database abort/retry and legacy-token reissue. It uses explicit source/JAR mounts
+and creates no new Docker image. Full foundation, migration and security-review
+acceptance remain open; the sign-in/session-creation race is explicitly unresolved.
+
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image
 inspection without starting services. Native and full distribution licensing remain

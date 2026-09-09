@@ -1,0 +1,435 @@
+{
+  "kind": "atomic-reset-evidence-correspondence",
+  "passed": true,
+  "authentication_complete": false,
+  "independent_human_review": false,
+  "checks": [
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 bounded outcome",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 resources restored",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 snapshot tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 current input tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 snapshot engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 current input engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 snapshot engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/core-reset-build/compile-03 current input engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 bounded outcome",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 resources restored",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 current input tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot engine-extensions/core-reset/reuse.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 current input engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 snapshot engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/run-02 current input engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 bounded outcome",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 resources restored",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input tools/run_atomic_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot engine-extensions/core-reset/reuse.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input engine-extensions/core-reset/reuse.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 snapshot engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/atomic-reset/node-03 current input engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 bounded outcome",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 resources restored",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tools/run_password_reset_lab.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tests/operations/password_reset_cleanup.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tests/operations/password_reset_cleanup.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tests/operations/password_reset_tls.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tests/operations/password_reset_tls.py",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tests/operations/password_reset_probe.mjs",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tests/browser/password-reset.mjs",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tests/browser/password-reset.mjs",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/email-delivery.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/test/email-delivery.test.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/test/email-delivery.test.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/Dockerfile",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/public/app.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/public/app.js",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 snapshot examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "check": "evidence/operations/password-reset/atomic-node-03 current input examples/node-react/build.mjs",
+      "passed": true
+    },
+    {
+      "check": "one exact candidate JAR",
+      "passed": true
+    },
+    {
+      "check": "all actual probes use the same adapted binary",
+      "passed": true
+    },
+    {
+      "check": "parent binds exact child report",
+      "passed": true
+    },
+    {
+      "check": "candidate CRC and member set",
+      "passed": true
+    },
+    {
+      "check": "candidate every member hash",
+      "passed": true
+    },
+    {
+      "check": "upstream preservation and adaptation footprint",
+      "passed": true
+    },
+    {
+      "check": "Core report byte binding",
+      "passed": true
+    },
+    {
+      "check": "eight executed Core cases",
+      "passed": true
+    },
+    {
+      "check": "thirteen HTTP cases plus browser wrapper and fixture cleanup",
+      "passed": true
+    },
+    {
+      "check": "nine actual browser cases",
+      "passed": true
+    },
+    {
+      "check": "ten actual TLS checks",
+      "passed": true
+    },
+    {
+      "check": "persistent database uncontacted and lab source preserved",
+      "passed": true
+    },
+    {
+      "check": "Core every exact container retired",
+      "passed": true
+    },
+    {
+      "check": "Node parent every exact container retired",
+      "passed": true
+    },
+    {
+      "check": "Node child every exact container retired",
+      "passed": true
+    },
+    {
+      "check": "requirement mapping preserves actual scope",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/webserver/Webserver.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/webserver/WebserverAPI.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/webserver/api/emailpassword/GeneratePasswordResetTokenAPI.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/webserver/api/emailpassword/ResetPasswordAPI.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/emailpassword/EmailPassword.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/emailpassword/PasswordHashing.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/utils/Utils.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/pluginInterface/emailpassword/sqlStorage/EmailPasswordSQLStorage.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/pluginInterface/authRecipe/sqlStorage/AuthRecipeSQLStorage.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/pluginInterface/session/sqlStorage/SessionSQLStorage.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/pluginInterface/useridmapping/UserLockingStorage.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/pluginInterface/useridmapping/sqlStorage/UserIdMappingSQLStorage.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "file-specific source/license src/main/java/io/supertokens/storage/postgresql/queries/EmailPasswordQueries.java",
+      "passed": true
+    }
+  ],
+  "tool_sha256": "57e309205c04ab1c1b7c647e0e262a58fc2f3a6ac9fab19ea17b0ae555d6ae59",
+  "inputs": {
+    "evidence/operations/core-reset-build/compile-03/report.json": "ea6198c3ee653d7a8550f53cb433f375dab537ce97563c262be64c74bff4a24b",
+    "evidence/operations/atomic-reset/run-02/report.json": "1f36c9702ec3f9facc8a7942a2771047650edb127d1505f9b91d57f6ea62d11f",
+    "evidence/operations/atomic-reset/node-03/report.json": "0e44ef83c279118d6141f9d39f17df50684635a01b76837efad206162b650cfb",
+    "evidence/operations/password-reset/atomic-node-03/report.json": "89a1f7f10a9bca6a8e20e3788dbe9e33dc9045bcf306968782f1bf0531ceb4b3"
+  }
+}

@@ -46,9 +46,14 @@
 - Independent human security/licensing review has not occurred. An AI review does
   not meet TST-006/WP-036 or authorize production.
 - PWD-006/WP-009/WP-010: real reset email/token/React behavior passes in the
-  source-mounted and new installed-image candidate labs. Configured cross-tenant and linked-account
-  behavior remains unqualified. Password commit and session revocation are
-  separate transactions with a crash gap; known/unknown SMTP timing differs.
+  source-mounted and earlier installed-image candidate labs. The new opt-in
+  atomic Core profile passes a real transaction-abort/retry proof and32 actual
+  Node/SMTP/React checks. Its current code is source/JAR-mounted, not installed
+  into retained images. Configured cross-tenant and linked-account behavior,
+  legacy-writer coexistence and full migration remain unqualified. Sign-in that
+  validates the old password before reset but creates a session afterward is
+  unresolved. The default upstream profile still has separate transactions and
+  a crash gap; known/unknown SMTP timing differs. See `docs/atomic-password-reset.md`.
   Durable delivery outbox/retries, policy, bounce handling and password-change
   notifications remain absent. Updated Node image4c03d7306e1e passes a complete
   offline build and installed regressions. Fresh archive acquisition and a disconnected offline install/compile now pass;

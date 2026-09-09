@@ -37,7 +37,7 @@ def local_secrets(root):
     """
     secrets=set()
     runtime=root/'.runtime'
-    smtp_envs={'good.env','expiry.env','wrong-auth.env','untrusted.env','outage.env'}
+    smtp_envs={'good.env','expiry.env','wrong-auth.env','untrusted.env','outage.env','unsupported.env'}
     for path in runtime.rglob('*.env'):
         for line in path.read_text().splitlines():
             if '=' not in line:

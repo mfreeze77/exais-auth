@@ -175,6 +175,30 @@ def main():
         'evidence/operations/hygiene/node-bootstrap-disk-inventory.json',
         'evidence/operations/hygiene/checkpoint-retention-before-node-bootstrap.json')]
     data['dependency_lock_paths']=['examples/node-react/package-lock.json','examples/python/requirements.lock','tests/browser/package-lock.json','engine-extensions/oss-build/locks/gradle/verification-metadata.xml','engine-extensions/keycloak-headless/gradle.lockfile','engine-extensions/keycloak-headless/gradle/verification-metadata.xml','examples/keycloak-clients/package-lock.json','examples/keycloak-clients/requirements-test.txt','reuse/runtime-source-archives.lock.json']
+    atomic_sources = ['engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java',
+        'engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java',
+        'engine-extensions/core-reset/reuse.json', 'tools/build_core_reset.py', 'tools/run_atomic_reset_lab.py',
+        'tests/operations/AtomicResetProbe.java', 'examples/node-react/server.js', 'tools/run_password_reset_lab.py',
+        'tests/operations/password_reset_probe.mjs', 'tools/verify_atomic_reset_evidence.py', 'docs/atomic-password-reset.md']
+    atomic_reports = ['evidence/operations/core-reset-build/compile-03/report.json',
+        'evidence/operations/core-reset-build/compile-03/jar-members.json',
+        'evidence/operations/atomic-reset/run-02/report.json', 'evidence/operations/atomic-reset/run-02/probe-report.json',
+        'evidence/operations/atomic-reset/node-03/report.json', 'evidence/operations/atomic-reset/evidence-validation.json']
+    atomic_reports += ['evidence/operations/password-reset/atomic-node-03/' + name for name in
+        ('report.json','probe-results.json','browser-results.json','tls-results.json','reset-success.png')]
+    atomic_note = 'Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified.'
+    data['atomic_reset_candidate_artifacts'] = [artifact(ROOT,p) for p in atomic_reports]
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/verification-20260909T074428Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-atomic-reset.json',
+        'evidence/operations/atomic-reset/checkpoint-checks.json')]
+    for identifier in ('PWD-006','SES-005','SES-006','SDK-001','SDKP-01','SDK-005','SDKP-05','WP-009','WP-010'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in atomic_sources]
+        index[identifier]['candidate_evidence'] += data['atomic_reset_candidate_artifacts']
+        index[identifier]['qualification_note'] += ' ' + atomic_note
+        index[identifier]['observed_test_ids'] = list(dict.fromkeys(index[identifier].get('observed_test_ids',[]) +
+            [r['id'] for r in read_json(ROOT/'evidence/operations/atomic-reset/run-02/probe-report.json')['rows']] +
+            [r['id'] for r in read_json(ROOT/'evidence/operations/password-reset/atomic-node-03/probe-results.json')['rows']]))
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

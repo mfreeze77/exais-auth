@@ -9,7 +9,21 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest feature work is `docs/password-reset.md`: run-16 passes10 actual transport,
+Latest feature work is `docs/atomic-password-reset.md`: an explicit Core-owned
+transaction now covers token consumption, password change and existing-session
+deletion. Eight actual Core checks and32 Node/SMTP/React checks pass. Read its
+exact binary/source/evidence and outstanding race/migration boundaries before
+changing it. No image was built; use the single retained JAR and source-mounted
+lab for unchanged code. Installed Core/Node images do not contain these changes.
+The failed node-02 mount-order check remains preserved; node-03 saves and compares
+the complete stable before/after projections and retires all17 containers.
+The next implementation work must resolve the old-password-validation versus
+new-session-issuance race and full engine/distribution gates without adding a
+second identity/session store or bypassing an entitlement. Do not repeat passing
+labs for new timestamps. Rebuild/install a changed binary only with bounded
+replacement and its own actual installed-image qualification.
+
+Earlier feature work is `docs/password-reset.md`: run-16 passes10 actual transport,
 11 HTTP/SMTP and9 Chromium checks, with all12 containers and11 fixtures removed.
 The cleanup-fault proof deliberately exits73, then removes one owned identity
 through Core and all6 containers. Original52 identities are preserved. Product
