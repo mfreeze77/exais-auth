@@ -42,3 +42,17 @@ The one-off parent evidence verifier initially assumed command streams carried
 a path field. They are actually numbered `command-NNN.stdout/stderr` under each
 private run directory. Correcting that reader yielded56 exact byte/hash matches;
 no live test, report or acceptance check was changed to produce this result.
+
+Packaging source commit05efaf5 stopped before creating a ZIP: the original scanner
+treated the mounted password-file path as a password. Diagnosis found only that
+one reference value matching25 files. The corrected scanner recognizes only the
+launcher's exact private SMTP mount contract, then reads both credential files
+and scans their contents, including short values and significant whitespace/BOM.
+Missing/malformed files fail closed; unknown references retain the conservative
+original direct-value scan. Fourteen focused tests pass in
+`evidence/runs/checkpoint-secret-file-tests-03`; symlink/reparse guards are present
+but those branches were not runtime-tested. The preceding12-test source and test
+snapshots are retained here because review subsequently aligned the run-name
+regex with the launcher. This remains a bounded known-local-secret check, not a
+complete secret scanner. The packager also refuses creation when three ZIPs
+already exist, without deleting any archive itself.

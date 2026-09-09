@@ -54,6 +54,11 @@ history. Their checksum/manifest/validation sidecars remain; the two newest
 validated rollback ZIPs were kept before making this checkpoint. Read
 `evidence/operations/hygiene/checkpoint-retention-before-recovery.json` before
 looking for an older ZIP. This never applies to supplied acceptance archives.
+The packager now enforces the three-ZIP ceiling before writing an archive.
+Its local-secret check resolves only the known private SMTP mount contract and
+scans the actual two credential files. Fourteen focused checks pass; unknown
+references remain conservatively scanned. Do not exempt arbitrary *_FILE values
+or relax missing-file failures. See the reset checkpoint's scanner correction.
 The next retention record is
 `evidence/operations/hygiene/checkpoint-retention-before-password-reset.json`:
 dc125668bb75's ZIP was verified and retired (12,715,973logical bytes), keeping

@@ -41,6 +41,14 @@
         {
           "path": "tools/capture_contracts.py",
           "sha256": "ab2cd78baa5ae031e78b1a2522dfac2c4649bb3e7e6ff1ebf0d9b67e35e40906"
+        },
+        {
+          "path": "tools/package_checkpoint.py",
+          "sha256": "176c0bb33fff61fad6da87828b4e12953bfadbb13f48cbeded0082dec7340c4b"
+        },
+        {
+          "path": "tests/evidence/test_checkpoint_secrets.py",
+          "sha256": "a6148ae5edff3a31a5741376c87e376f04c2cb8d63e9b25c8dc2e427defee8aa"
         }
       ],
       "positive_test_ids": [],
@@ -55,9 +63,13 @@
         {
           "path": "evidence/contracts/capture-report.json",
           "sha256": "79ff2ecc0873de603d6fdfdce0b45ccaf91d751f779b1eae581e68f74bd0bf54"
+        },
+        {
+          "path": "evidence/runs/checkpoint-secret-file-tests-03/command.json",
+          "sha256": "e4611a9fcf3c0eddd37904acd246ce67e6920e3ed534dadf3be55fa8804a7f7b"
         }
       ],
-      "qualification_note": "Integrity/accounting only. All original IDs retained; no behavior completion inferred.",
+      "qualification_note": "Integrity/accounting only. All original IDs retained; no behavior completion inferred. Packager scans actual credential bytes for the exact private SMTP mount and enforces a three-ZIP ceiling. Fourteen focused secret-file cases pass; link/reparse branches and full generic secret scanning remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -6429,6 +6441,14 @@
         {
           "path": "tools/capture_contracts.py",
           "sha256": "ab2cd78baa5ae031e78b1a2522dfac2c4649bb3e7e6ff1ebf0d9b67e35e40906"
+        },
+        {
+          "path": "tools/package_checkpoint.py",
+          "sha256": "176c0bb33fff61fad6da87828b4e12953bfadbb13f48cbeded0082dec7340c4b"
+        },
+        {
+          "path": "tests/evidence/test_checkpoint_secrets.py",
+          "sha256": "a6148ae5edff3a31a5741376c87e376f04c2cb8d63e9b25c8dc2e427defee8aa"
         }
       ],
       "positive_test_ids": [],
@@ -6443,9 +6463,13 @@
         {
           "path": "evidence/contracts/capture-report.json",
           "sha256": "79ff2ecc0873de603d6fdfdce0b45ccaf91d751f779b1eae581e68f74bd0bf54"
+        },
+        {
+          "path": "evidence/runs/checkpoint-secret-file-tests-03/command.json",
+          "sha256": "e4611a9fcf3c0eddd37904acd246ce67e6920e3ed534dadf3be55fa8804a7f7b"
         }
       ],
-      "qualification_note": "Integrity/accounting only. All original IDs retained; no behavior completion inferred.",
+      "qualification_note": "Integrity/accounting only. All original IDs retained; no behavior completion inferred. Packager scans actual credential bytes for the exact private SMTP mount and enforces a three-ZIP ceiling. Fourteen focused secret-file cases pass; link/reparse branches and full generic secret scanning remain unqualified.",
       "observed_test_ids": []
     },
     {

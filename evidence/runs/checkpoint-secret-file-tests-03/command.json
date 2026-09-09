@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/evidence",
+    "-p",
+    "test_checkpoint_secrets.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788930685.9355795,
+  "elapsed_seconds": 0.258,
+  "input_sha256": {
+    "tools/package_checkpoint.py": "176c0bb33fff61fad6da87828b4e12953bfadbb13f48cbeded0082dec7340c4b",
+    "tests/evidence/test_checkpoint_secrets.py": "a6148ae5edff3a31a5741376c87e376f04c2cb8d63e9b25c8dc2e427defee8aa"
+  },
+  "inputs_changed": false,
+  "output_sha256": "bc400757eb42e4f4e1ab5c602eae3f5a3e73f9adc7ea7bbe8967b559066c6d02",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

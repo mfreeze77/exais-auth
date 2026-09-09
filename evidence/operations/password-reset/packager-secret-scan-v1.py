@@ -46,7 +46,7 @@ def local_secrets(root):
             relative=path.relative_to(runtime)
             known_mount=(key=='EXPERTAUTH_SMTP_PASSWORD_FILE' and value=='/run/mailpit/smtp-password'
                          and len(relative.parts)==4 and relative.parts[0]=='password-reset'
-                         and re.fullmatch(r'[A-Za-z0-9_-]{1,64}',relative.parts[1]) is not None
+                         and re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9._-]*',relative.parts[1]) is not None
                          and relative.parts[2]=='secrets' and path.name in smtp_envs)
             if known_mount:
                 for entry in (runtime,runtime/'password-reset',path.parent.parent,path.parent,path):
@@ -86,7 +86,6 @@ def main():
     commit=run(['git','rev-parse','HEAD']).decode().strip()
     target=ROOT/'artifacts'
     target.mkdir(exist_ok=True)
-    assert len(list(target.glob('*.zip'))) < 3, 'Three-ZIP cap reached; verify and retire only an authorized old generated checkpoint before packaging'
     destination=target/f'{args.name}-{commit[:12]}.zip'
     assert not destination.exists(), 'Preserve existing artifacts; use a new snapshot name'
     files={}
