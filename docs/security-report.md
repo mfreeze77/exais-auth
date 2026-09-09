@@ -14,15 +14,21 @@ Material unresolved findings:
   for three pinned transitive packages remain unresolved. No all-dependencies-
   maintained, full distribution or independent-review claim follows. See
   `docs/node-package-bootstrap.md`.
-- Updated Node image4c03d7306e1e passes the installed reset lab without app
-  overlays. The complete offline build checks original archive bytes and source
-  bindings before promotion. This closes the prior image-content evidence gap,
-  not the reset transaction, foundation or complete distribution gates. New
+- Updated Node image `9375a5bc093d` passes 34 installed atomic-profile behavior
+  checks without app overlays. A real new-Core/old-plugin mismatch fails readiness
+  and sign-in without issuing tokens/cookies or adding a session; healthy-writer
+  retry succeeds. Original archive bytes and source bindings were checked before
+  promotion, and the old image was removed. Core still uses two explicit JAR
+  mounts. Foundation and complete distribution remain unqualified. New
   deadline-expiry, daemon-outage and promotion/rollback faults are unexecuted.
-  See `docs/node-offline-build.md` for the exact evidence and failed-run history.
+  See `docs/atomic-node-installation.md` for exact evidence and failed-run history.
 - Password reset succeeds through verified authenticated TLS SMTP and rejects
-  replay/concurrent losing consumers. Reset commit and session revocation are
-  separate engine calls: a crash between them can retain old sessions. Equal
+  replay/concurrent losing consumers. The default upstream profile still uses
+  separate reset and revocation calls with a crash gap. The explicit atomic
+  adaptation joins reset and revocation in one engine transaction and rechecks
+  password/session creation under the same user lock. Actual race ordering and
+  database-abort/retry tests pass for that profile; other SDKs and legacy writers
+  remain unqualified. Equal
   known/unknown-email response bodies do not eliminate transport timing leakage.
   Configured cross-tenant/link cases and durable outbox/retries remain open.
   The real exit73 worker-cleanup proof removes its one owned account; fallback

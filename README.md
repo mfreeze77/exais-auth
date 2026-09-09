@@ -62,6 +62,9 @@ and creates no new Docker image. Full foundation, migration and security-review
 acceptance remain open. The later [password-session adaptation](docs/password-session-transactions.md)
 closes the demonstrated race for the explicit Node password profile:16 Core
 cases and33 HTTP/SMTP/browser cases pass, with actual wire and cleanup evidence.
+The latest [installed Node profile](docs/atomic-node-installation.md) passes
+34 behavior checks, including missing-storage-writer denial and recovery. Its
+new image replaces the prior Node image; Core still uses the exact JAR mounts.
 
 The current Core image includes the verified notice package described in
 `docs/runtime-image-notices.md`. Use the launcher's `--build-only` option for image

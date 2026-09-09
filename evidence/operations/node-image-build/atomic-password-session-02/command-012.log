@@ -1,0 +1,74 @@
+[
+    {
+        "Id": "sha256:9375a5bc093d7210da4daa7a06c55e39c1401df56b0dec2b78d5f4816470442f",
+        "RepoTags": [],
+        "RepoDigests": [],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-09T08:44:01.877868925Z",
+        "Config": {
+            "User": "node",
+            "ExposedPorts": {
+                "3000/tcp": {}
+            },
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NODE_VERSION=22.23.2",
+                "YARN_VERSION=1.22.22",
+                "NODE_ENV=production"
+            ],
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Cmd": [
+                "node",
+                "server.js"
+            ],
+            "WorkingDir": "/app",
+            "Labels": {
+                "org.expertauth.build-run": "caf9d8181cd74b8298d9d617a8a6c9d6",
+                "org.expertauth.project": "expert-auth",
+                "org.expertauth.purpose": "node-foundation"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 95758592,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:66462cc862fe2053b9863fefa3866e07bb5dfb06f6b3ce3177cc096e4021aabe",
+                "sha256:971f4222c89e76e28d9b107cb29729a5abb9fd7adea0d4a1c419ce9b73204feb",
+                "sha256:d84f419161f986391e64d28f3e40dd54381ea37495b0a25daef6353bd8df4d92",
+                "sha256:a45e8410aa35d5194fcdeb7f7969789ac3cc9431d5b69be8602492a2097909d7",
+                "sha256:a8a755e4d6c4443f2aa3d52c6581a3253c71013f240d1a02edd519c317a66c4b",
+                "sha256:871cf1e5a799be0a8dca5da16f8f0fcd7aa0a6687a2b1175900426afc84f1d50",
+                "sha256:9eb1bdf30cf4fd4d9c136116fb8264cdf58e544ee7d5a3598e394b4dd733ef14",
+                "sha256:9480e9ae32b25df7676109f98305d3bd7c05b08f26fc3e761fb2f34417b54122",
+                "sha256:0f5e4914b93662c125a72c201471bc486a1a79d781ee7041fe591e7bf5aec984",
+                "sha256:5fc071672556680ba8b601b443a5b41412c0758e1eabd07f68d6a0002f626b51",
+                "sha256:9934746d709eaa46d1e39d767eb3b7242a39400d2abc030dbb6e3f329b0a0bb1",
+                "sha256:598e5130457211b2026a8c6ec0910bd8c02450a816843bb3794e964b52a2adbb"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-09T08:46:10.467433189Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:9375a5bc093d7210da4daa7a06c55e39c1401df56b0dec2b78d5f4816470442f",
+            "size": 2570,
+            "annotations": {
+                "config.digest": "sha256:f4e5801f8527de0f1f45e8e549fb7d9f3c203d754fbb9a43329863a9aee4488e"
+            }
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "3q7cxfpm22evknmkko7v7vgml",
+                    "CreatedAt": "2026-09-09T08:46:10.590729466Z"
+                }
+            ]
+        }
+    }
+]

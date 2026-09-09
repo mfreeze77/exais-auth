@@ -53,8 +53,15 @@ def main():
         need(value, name)
 
     try:
-        build, reset = read(build_directory / 'report.json'), read(reset_directory / 'report.json')
+        build = read(build_directory / 'report.json')
+        atomic = bool(build.get('password_session_build'))
+        if atomic:
+            reset_directory = ROOT/'evidence/operations/password-reset'/('atomic-installed-'+args.build_name)
+            private_directory = ROOT/'.runtime/password-reset'/('atomic-installed-'+args.build_name)
+        reset = read(reset_directory / 'report.json')
         result['reports'] = {p.relative_to(ROOT).as_posix(): sha(p) for p in [build_directory / 'report.json', reset_directory / 'report.json']}
+        check('build binds exact reset child', build['reset_report']['path']==(reset_directory/'report.json').relative_to(ROOT).as_posix() and
+              build['reset_report']['sha256']==sha(reset_directory/'report.json'))
         for name, expected in build['input_sha256'].items():
             check('current build input ' + name, sha(ROOT / name) == expected)
             binding = build['source_bindings'][name]
@@ -97,10 +104,50 @@ def main():
         for filename in ('probe-results.json', 'browser-results.json'):
             report = read(reset_directory / filename)
             check('actual recorded cases ' + filename, bool(report['rows']) and all(row['status'] == 'passed' for row in report['rows']), rows=len(report['rows']))
-        cleanup = read(reset_directory / 'probe-results.json')['rows'][-1]
-        check('exact original fixture set restored', cleanup['original_identity_set_restored'] and cleanup['source_identity_count'] == 52 and cleanup['owned_fixture_count'] == 11)
+        probe = read(reset_directory / 'probe-results.json')
+        cleanup = probe['rows'][-1]
+        check('exact original fixture set restored', cleanup['original_identity_set_restored'] and cleanup['source_identity_count'] == (0 if atomic else 52) and cleanup['owned_fixture_count'] == (22 if atomic else 11))
         check('normal installed-image run', reset['passed'] and reset['installed_image_tested'] and not reset['foundation_passed'] and not reset['full_PWD_006_qualified'])
-        check('owned temporary container accounting', len(reset['created_containers']) == len(reset['retired_containers']) == 12 and len(build['temporary_containers_retired']) == 4)
+        check('owned temporary container accounting', len(reset['created_containers']) == len(reset['retired_containers']) == (16 if atomic else 12) and len(build['temporary_containers_retired']) == 4 and
+              {row['id'] for row in reset['created_containers']}=={row['id'] for row in reset['retired_containers']})
+        if atomic:
+            parent_directory=ROOT/'evidence/operations/atomic-reset'/('installed-'+args.build_name)
+            parent=read(parent_directory/'report.json')
+            result['reports'][(parent_directory/'report.json').relative_to(ROOT).as_posix()]=sha(parent_directory/'report.json')
+            check('exact atomic parent-child chain',build['atomic_parent_report']['path']==(parent_directory/'report.json').relative_to(ROOT).as_posix() and
+                  build['atomic_parent_report']['sha256']==sha(parent_directory/'report.json') and parent['node_child']['sha256']==sha(reset_directory/'report.json'))
+            check('installed immutable Node image throughout',parent['installed_node_image']==reset['images']['node']==build['candidate_image_id'])
+            check('atomic parent resources and original database preserved',parent['passed'] and not parent['source_database_contacted'] and parent['source_unchanged'] and
+                  parent['resources_unchanged'] and parent['inputs_unchanged'] and len(parent['created_containers'])==3 and
+                  {row['id'] for row in parent['created_containers']}=={row['id'] for row in parent['retired_containers']})
+            for name,expected in parent['inputs'].items():
+                check('current and captured atomic parent source '+name,sha(ROOT/name)==sha(parent_directory/'source-snapshots'/name)==expected)
+            for index,row in enumerate(parent['commands'],1):
+                for stream in ('stdout','stderr'):
+                    path=ROOT/'.runtime/atomic-reset'/('installed-'+args.build_name)/f'command-{index:03d}.{stream}'
+                    check(f'private atomic parent command {index} {stream}',sha(path)==row[stream]['sha256'] and path.stat().st_size==row[stream]['bytes'])
+            session_build=read(ROOT/'evidence/operations/password-session-build'/build['password_session_build']/'report.json')
+            artifacts={row['component']:row for row in session_build['candidates']}
+            check('same qualified two-JAR candidate',parent['core_artifacts']==session_build['candidates'] and
+                  all(sha(ROOT/row['path'])==row['sha256'] for row in artifacts.values()))
+            original={Path(row['path']).name:row['sha256'] for row in read(ROOT/'evidence/build/oss-core/artifacts.json')}
+            core_file='/opt/expertauth/lib/core-12.2.0.jar'
+            plugin_file='/opt/expertauth/plugin/'+Path(artifacts['postgresql']['path']).name
+            combinations={'expiry-core':{core_file:artifacts['core']['sha256'],plugin_file:artifacts['postgresql']['sha256']},
+                          'unsupported-core':{core_file:original['core-12.2.0.jar'],plugin_file:original[Path(plugin_file).name]},
+                          'missing-writer-core':{core_file:artifacts['core']['sha256'],plugin_file:original[Path(plugin_file).name]}}
+            check('actual full, old and missing-writer deployment binaries',reset['deployment_core_files']==combinations)
+            check('all atomic HTTP cases executed',probe['passed'] and probe['skipped']==0 and len(probe['rows'])==18 and all(row['status']=='passed' for row in probe['rows']))
+            rejected=next(row for row in probe['rows'] if row['id']=='PASSWORD-SESSION-MISSING-WRITER-FAILS-CLOSED')
+            check('missing writer actually rejects and recovers',rejected['status']=='passed' and
+                  [rejected[key] for key in ('live_http','ready_http','signin_http','core_http')]==[200,503,500,503] and
+                  all(rejected[key] for key in
+                      ('no_auth_tokens_or_cookies','no_legacy_session_call','prior_session_preserved','no_failed_insert','healthy_writer_retry')))
+            for role,code,status,count in [('good',200,'OK',38),('missing-writer',503,'PASSWORD_SESSION_REJECTED',1)]:
+                wire=[json.loads(line) for line in (reset_directory/'wire'/(role+'.jsonl')).read_text().splitlines()]
+                check('actual bounded wire observations '+role,len(wire)==count and all(set(row)=={'path','http','status','policy'} and
+                      row['path']=='/expertauth/password/session' and row['http']==code and row['status']==status and
+                      row['policy']==('EXPERTAUTH-PASSWORD-SESSION-1' if role=='good' else 'OTHER') for row in wire))
         check('build success with source/resource preservation', build['passed'] and build['image_promoted'] and build['private_scratch_removed'] and all(
               build[key] for key in ('resources_after_unchanged', 'source_after_unchanged', 'private_configuration_after_unchanged', 'inputs_after_unchanged', 'cache_after_unchanged')))
         check('foundation and licensing remain unqualified', not build['foundation_passed'] and not build['full_distribution_approved'] and not candidate['license_approval'] and not candidate['native_compiled_source_correspondence_verified'])

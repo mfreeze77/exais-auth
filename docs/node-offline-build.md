@@ -1,16 +1,16 @@
 # Node image checkpoint
 
-The retained image below predates the current atomic-reset server changes.
-Its installed-image evidence applies to its recorded source hashes. Current
-atomic behavior is separately tested with explicit source/JAR mounts; see
-[atomic-password-reset.md](atomic-password-reset.md).
+The current installed atomic Node profile is documented in
+[atomic-node-installation.md](atomic-node-installation.md). It replaces the
+historical image described below; earlier evidence applies to its recorded
+source hashes. The Core adaptation still requires its explicit JAR mounts.
 
 The complete updated Dockerfile built offline and its installed application
 passed the password-reset lab. This is a reference-candidate result; no engine,
 complete requirement, API operation or production release is certified.
 
-Current local tag: `expertauth-node-react:0.0.5`.
-Image: `sha256:4c03d7306e1e7f64732f58f5c12b56f7f44ca30eb09f4813409eb3d12f3cbb24`.
+Historical local tag: `expertauth-node-react:0.0.5`.
+Retired image: `sha256:4c03d7306e1e7f64732f58f5c12b56f7f44ca30eb09f4813409eb3d12f3cbb24`.
 Docker reports 95,756,628 bytes for this image record. This is not a measurement
 of physical Windows space reclaimed.
 

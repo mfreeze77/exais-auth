@@ -10,8 +10,13 @@ See `contracts/README.md`, `api-contracts.json` and their source/licensing repor
 The working OSS Node/React and Python examples exercise password/session subsets.
 The new Node/React reset subset uses optional authenticated TLS SMTP and engine
 reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks.
-The current full offline image4c03d7306e1e passes those checks with no app
-source/bundle mounts; its installed dependencies match the prior audited tree.
+The current installed Node image `9375a5bc093d` passes 34 behavior checks for
+the opt-in atomic profile, with no app source/bundle mounts. Core uses the exact
+two-JAR adaptation. A new Core paired with its old PostgreSQL plugin correctly
+rejects readiness and session creation without issuing credentials or adding a
+session. The healthy writer can retry. Its dependencies match the prior audited
+tree; the earlier Node image `4c03d7306e1e` was retired. See
+`docs/atomic-node-installation.md` for the exact scope and preserved failed run.
 The package bootstrap now passes actual registry acquisition and disconnected
 installation/compilation with the same dependency bytes. This Linux x64/glibc
 proof does not qualify any excluded native platform or change the full profiles.

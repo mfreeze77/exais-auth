@@ -48,8 +48,9 @@
 - PWD-006/WP-009/WP-010: real reset email/token/React behavior passes in the
   source-mounted and earlier installed-image candidate labs. The new opt-in
   atomic Core profile passes a real transaction-abort/retry proof and32 actual
-  Node/SMTP/React checks. Its current code is source/JAR-mounted, not installed
-  into retained images. Configured cross-tenant and linked-account behavior,
+  Node/SMTP/React checks. The later installed Node profile passes 34 behavior
+  checks, including actual missing-PostgreSQL-writer denial and recovery. Core
+  still needs installation and qualification of its JAR pair. Configured cross-tenant and linked-account behavior,
   legacy-writer coexistence and full migration remain unqualified. The new
   explicit password-session API closes the demonstrated validation/insertion
   race in the Node profile with actual two-replica ordering and database-abort

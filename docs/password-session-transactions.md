@@ -1,5 +1,10 @@
 # Password validation and session creation
 
+The later [installed Node qualification](atomic-node-installation.md) passes
+34 behavior checks, including the missing-writer deployment fault. Node now
+contains this integration in its image; Core still uses the two JAR mounts.
+The original source-mounted results and limitations below remain historical.
+
 The opt-in `atomic-v1` Node profile now prevents its password sign-in/signup
 flows from creating a usable session based on a password invalidated by the
 atomic reset operation. Core validates the password with its existing hasher,

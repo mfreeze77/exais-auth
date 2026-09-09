@@ -229,6 +229,32 @@ def main():
         'evidence/operations/hygiene/reset-only-candidate-retirement.json',
         'evidence/operations/hygiene/verification-20260909T083106Z.json',
         'evidence/operations/atomic-reset/password-session-checkpoint-checks.json')]
+    installed_atomic_sources = ['tools/build_node_runtime.py','tools/run_atomic_reset_lab.py','tools/run_password_reset_lab.py',
+        'tools/verify_node_build_evidence.py','tests/operations/password_reset_probe.mjs','tests/operations/password_session_wire.mjs',
+        'examples/node-react/server.js','examples/node-react/Dockerfile','docs/atomic-node-installation.md']
+    installed_atomic_reports = ['evidence/operations/node-image-build/atomic-password-session-02/'+p for p in
+        ('report.json','candidate-runtime/runtime-report.json','previous-runtime/runtime-report.json','parser-boundaries/node-package-boundaries.json')]
+    installed_atomic_reports += ['evidence/operations/node-image-build/evidence-validation-atomic-password-session-02.json',
+        'evidence/operations/atomic-reset/installed-atomic-password-session-02/report.json']
+    installed_atomic_reports += ['evidence/operations/password-reset/atomic-installed-atomic-password-session-02/'+p for p in
+        ('report.json','probe-results.json','tls-results.json','browser-results.json','wire/good.jsonl','wire/missing-writer.jsonl','reset-success.png')]
+    data['installed_atomic_node_candidate_artifacts']=[artifact(ROOT,p) for p in installed_atomic_reports]
+    installed_atomic_note = 'Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified.'
+    for identifier in ('BAS-002','BAS-004','BAS-005','PWD-006','SES-001','SDK-001','SDKP-01','SDK-005','SDKP-05','OPS-004','OPS-011','WP-002','WP-009','WP-010'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in installed_atomic_sources]
+        index[identifier]['candidate_evidence'] += data['installed_atomic_node_candidate_artifacts']
+        index[identifier]['qualification_note'] += ' '+installed_atomic_note
+        index[identifier]['observed_test_ids']=list(dict.fromkeys(index[identifier].get('observed_test_ids',[])+
+            [r['id'] for r in read_json(ROOT/'evidence/operations/password-reset/atomic-installed-atomic-password-session-02/probe-results.json')['rows']]))
+    for identifier in ('BAS-001','TST-001'):
+        index[identifier]['implementation'] += [artifact(ROOT,p) for p in ['tools/package_checkpoint.py','tests/evidence/test_checkpoint_secrets.py']]
+        index[identifier]['candidate_evidence'] += [artifact(ROOT,'evidence/runs/checkpoint-secret-file-tests-05/command.json')]
+        index[identifier]['qualification_note'] += ' Current missing-writer SMTP mount is included in the exact credential scan;16 focused scanner tests pass. Generic secret discovery and independent review remain unqualified.'
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'tools/retire_checkpoint.py',
+        'tools/verify_extracted_node.py',
+        'evidence/operations/hygiene/verification-20260909T084810Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-atomic-node-install.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

@@ -11,6 +11,13 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- The installed Node atomic profile now passes 34 actual HTTP/SMTP/TLS/browser
+  behavior checks. A new Core paired with an old PostgreSQL plugin stays not-ready
+  and issues no authentication tokens or sessions; the healthy writer can retry.
+  Image `9375a5bc093d` replaces `4c03d7306e1e`, which was retired. Each build run
+  retired all 23 helper/lab containers; current hygiene is two retained containers,
+  six tags and no dangling task images. Core is still JAR-mounted. Read
+  `docs/atomic-node-installation.md` for exact bytes, failed-run history and scope.
 - The opt-in Node password profile now revalidates the credential and creates
   its session in one Core-owned transaction. Both reset/sign-in orderings,
   database-aborted insertion/retry, eight concurrent creations and external-ID
