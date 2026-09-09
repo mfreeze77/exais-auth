@@ -1,0 +1,1 @@
+{"report": "evidence/operations/python-readiness/offline-build-buildkit-02", "image": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd", "passed": true, "regression": {"passed": 19, "failed": 0, "skipped": 0, "synthetic_users_removed": 2}, "retired_image": null, "errors": []}

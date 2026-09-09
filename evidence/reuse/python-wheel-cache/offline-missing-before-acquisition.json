@@ -1,0 +1,19 @@
+{
+  "schema": "expertauth-locked-python-wheels-v1",
+  "started": "2026-09-09T02:44:15.357312+00:00",
+  "offline": true,
+  "passed": false,
+  "results": [],
+  "errors": [
+    "ValueError: Locked wheel absent in offline cache: supertokens_python-0.31.3-py3-none-any.whl"
+  ],
+  "input_sha256": {
+    "tools/fetch_python_wheels.py": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/dependency-resolution.json": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+  },
+  "maximum_cache_bytes": 134217728,
+  "maximum_wheel_bytes": 33554432,
+  "full_distribution_approved": false,
+  "finished": "2026-09-09T02:44:15.359381+00:00"
+}

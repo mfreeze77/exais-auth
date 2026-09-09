@@ -1,0 +1,1 @@
+{"report": "evidence/operations/python-offline-build/buildkit-01", "passed": false, "image": "sha256:094724f838d3e5faaa5d149cbb966f35b71e1903abedb94ed3988e45d066a242", "image_promoted": false, "errors": ["ValueError: Command failed: command-17.log"]}

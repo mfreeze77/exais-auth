@@ -1,7 +1,8 @@
 """Test an extracted source ZIP against the installed image using verified cache hardlinks.
 
-No image build or service start. Source/dependency caches are read-only inputs;
-the isolated extraction and generated notice context are retired afterward.
+No image build. The optional Python mode starts and retires a temporary HTTP app.
+Source/dependency caches are read-only inputs; the isolated extraction and
+generated notice context are retired afterward.
 The adjacent artifact report is outside the ZIP to avoid self-reference.
 """
 from __future__ import annotations
@@ -47,7 +48,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archive', type=Path)
     parser.add_argument('--sha256', required=True)
+    parser.add_argument('--python-image', help='Also run the extracted19-case HTTP probe against this owned immutable Python image')
     args = parser.parse_args()
+    if args.python_image:
+        need(args.python_image.startswith('sha256:') and len(args.python_image) == 71 and
+             all(c in '0123456789abcdef' for c in args.python_image[7:]), 'Immutable Python image ID required')
     archive = args.archive.resolve()
     need(archive.parent == (ROOT / 'artifacts').resolve(), 'Only local checkpoint artifacts are accepted')
     need(sha(archive.read_bytes()) == args.sha256, 'Source ZIP identity mismatch')
@@ -134,6 +139,41 @@ def main():
             else:
                 raise ValueError('Extracted image report missing')
             need(result.returncode == 0, 'Extracted verifier command failed')
+            if args.python_image:
+                # A private local hardlink supplies the already-authorized lab
+                # key only after archive verification. It is never in the ZIP
+                # or retained report and is removed with this extraction.
+                private_source = (ROOT / '.runtime/oss-core/runtime.env').resolve()
+                need(private_source.is_relative_to((ROOT / '.runtime').resolve()) and
+                     private_source.is_file(), 'Private local lab environment missing')
+                private_digest = sha(private_source.read_bytes())
+                private_target = extracted / '.runtime/oss-core/runtime.env'
+                private_target.parent.mkdir(parents=True, exist_ok=True)
+                os.link(private_source, private_target)
+                python_command = [sys.executable, '-B', 'tools/refresh_python_image.py',
+                                  '--test-image', args.python_image, '--name', 'fresh-source-checkpoint']
+                python_result = subprocess.run(python_command, cwd=extracted, capture_output=True)
+                report['python_command'] = {'argv': python_command, 'exit_code': python_result.returncode,
+                                            'stdout': python_result.stdout.decode('utf-8', errors='replace'),
+                                            'stderr': python_result.stderr.decode('utf-8', errors='replace')}
+                python_evidence = extracted / 'evidence/operations/python-readiness/fresh-source-checkpoint'
+                need((python_evidence / 'report.json').is_file(), 'Extracted Python report missing')
+                python_report = json.loads((python_evidence / 'report.json').read_bytes())
+                report['python_verification'] = python_report
+                report['services_started'] = any(row['name'].startswith('expertauth-python-image-app-')
+                                                 for row in python_report.get('created_containers', []))
+                report['python_artifacts'] = []
+                for artifact in python_report.get('artifacts', []):
+                    raw = (python_evidence / artifact['path']).read_bytes()
+                    need(sha(raw) == artifact['sha256'], 'Extracted Python artifact identity differs')
+                    report['python_artifacts'].append({**artifact, 'text': raw.decode('utf-8', errors='replace')})
+                need(python_result.returncode == 0 and python_report['new_image'] == args.python_image and
+                     python_report['candidate_test_only'] and python_report['image_promoted'] is False and
+                     python_report['temporary_containers_retired'] and python_report['private_scratch_removed'] and
+                     python_report['regression'] == {'passed': 19, 'failed': 0, 'skipped': 0, 'synthetic_users_removed': 2},
+                     'Extracted Python HTTP qualification incomplete')
+                need(sha(private_source.read_bytes()) == private_digest, 'Canonical private environment changed')
+                report['private_environment_unchanged'] = True
             need(all(sha(source.read_bytes()) == digest for source, digest in copied_sources), 'Canonical cache changed')
             report['canonical_cache_hashes_unchanged'] = True
             # The temporary root contains hardlinks, never directory junctions.

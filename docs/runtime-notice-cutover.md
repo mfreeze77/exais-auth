@@ -90,6 +90,11 @@ and removes its temporary extraction. The adjacent `.runtime-validation.json`
 retains the result and exact command logs outside the ZIP to avoid self-reference.
 This is fresh-source installed-image verification; it does not constitute a
 fresh build, full stack restore, native compilation or acceptance completion.
+Optionally add `--python-image sha256:EXACT_PYTHON_IMAGE_ID` to exercise the
+extracted19-case HTTP probe against that owned image. This mode starts and retires
+a temporary app/client and deletes its two synthetic users. A private local
+environment hardlink is created only inside the temporary extraction after ZIP
+verification; no credentials enter the ZIP or retained report.
 
 The package remains bound to the full265 requirements/205 APIs and M0–M10.
 Foundation failures, native/provider tests, licensing/source obligations and

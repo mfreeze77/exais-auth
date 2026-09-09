@@ -132,6 +132,34 @@
         {
           "path": "tests/reuse/test_runtime_distribution.py",
           "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
+        },
+        {
+          "path": "tools/build_python_runtime.py",
+          "sha256": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd"
+        },
+        {
+          "path": "tools/fetch_python_wheels.py",
+          "sha256": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7"
+        },
+        {
+          "path": "tools/verify_python_distribution.py",
+          "sha256": "8b99f680883641afbd8313d7867193cd2d2755d876d547a871811cd0fc52cae0"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
+        },
+        {
+          "path": "examples/python/Dockerfile",
+          "sha256": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036"
+        },
+        {
+          "path": "examples/python/requirements.lock",
+          "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "examples/python/dependency-resolution.json",
+          "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
         }
       ],
       "positive_test_ids": [],
@@ -250,9 +278,45 @@
         {
           "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
           "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+          "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+          "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+          "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+          "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+          "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+          "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+        },
+        {
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+          "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+        },
+        {
+          "path": "evidence/runs/python-offline-build-02/command.json",
+          "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+        },
+        {
+          "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+          "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
       "observed_test_ids": []
     },
     {
@@ -362,6 +426,34 @@
         {
           "path": "tests/reuse/test_runtime_distribution.py",
           "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
+        },
+        {
+          "path": "tools/build_python_runtime.py",
+          "sha256": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd"
+        },
+        {
+          "path": "tools/fetch_python_wheels.py",
+          "sha256": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7"
+        },
+        {
+          "path": "tools/verify_python_distribution.py",
+          "sha256": "8b99f680883641afbd8313d7867193cd2d2755d876d547a871811cd0fc52cae0"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
+        },
+        {
+          "path": "examples/python/Dockerfile",
+          "sha256": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036"
+        },
+        {
+          "path": "examples/python/requirements.lock",
+          "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "examples/python/dependency-resolution.json",
+          "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
         }
       ],
       "positive_test_ids": [],
@@ -480,9 +572,45 @@
         {
           "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
           "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+          "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+          "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+          "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+          "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+          "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+          "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+        },
+        {
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+          "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+        },
+        {
+          "path": "evidence/runs/python-offline-build-02/command.json",
+          "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+        },
+        {
+          "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+          "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
       "observed_test_ids": []
     },
     {
@@ -557,6 +685,34 @@
         {
           "path": "tests/reuse/test_runtime_distribution.py",
           "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
+        },
+        {
+          "path": "tools/build_python_runtime.py",
+          "sha256": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd"
+        },
+        {
+          "path": "tools/fetch_python_wheels.py",
+          "sha256": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7"
+        },
+        {
+          "path": "tools/verify_python_distribution.py",
+          "sha256": "8b99f680883641afbd8313d7867193cd2d2755d876d547a871811cd0fc52cae0"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
+        },
+        {
+          "path": "examples/python/Dockerfile",
+          "sha256": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036"
+        },
+        {
+          "path": "examples/python/requirements.lock",
+          "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "examples/python/dependency-resolution.json",
+          "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
         }
       ],
       "positive_test_ids": [],
@@ -675,9 +831,45 @@
         {
           "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
           "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+          "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+          "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+          "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+          "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+          "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+          "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+        },
+        {
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+          "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+        },
+        {
+          "path": "evidence/runs/python-offline-build-02/command.json",
+          "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+        },
+        {
+          "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+          "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
       "observed_test_ids": []
     },
     {
@@ -1128,8 +1320,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2278,8 +2470,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2324,8 +2516,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2562,8 +2754,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
@@ -2628,8 +2820,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2674,8 +2866,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2768,8 +2960,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4349,8 +4541,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4411,8 +4603,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4592,7 +4784,7 @@
         },
         {
           "path": "tools/refresh_python_image.py",
-          "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
         },
         {
           "path": "tools/run_sdk_session_faults.py",
@@ -4641,8 +4833,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -4790,7 +4982,7 @@
         },
         {
           "path": "tools/refresh_python_image.py",
-          "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
         },
         {
           "path": "tools/run_sdk_session_faults.py",
@@ -4839,8 +5031,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -4976,6 +5168,34 @@
         {
           "path": "tests/clients/python_probe.py",
           "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+        },
+        {
+          "path": "tools/build_python_runtime.py",
+          "sha256": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd"
+        },
+        {
+          "path": "tools/fetch_python_wheels.py",
+          "sha256": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7"
+        },
+        {
+          "path": "tools/verify_python_distribution.py",
+          "sha256": "8b99f680883641afbd8313d7867193cd2d2755d876d547a871811cd0fc52cae0"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
+        },
+        {
+          "path": "examples/python/Dockerfile",
+          "sha256": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036"
+        },
+        {
+          "path": "examples/python/requirements.lock",
+          "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "examples/python/dependency-resolution.json",
+          "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
         }
       ],
       "positive_test_ids": [],
@@ -4988,8 +5208,8 @@
       ],
       "candidate_evidence": [
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/operations/python-readiness/run-03/report.json",
@@ -5008,8 +5228,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -5026,9 +5246,45 @@
         {
           "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
           "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+          "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+          "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+          "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+          "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+          "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+          "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+        },
+        {
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+          "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+        },
+        {
+          "path": "evidence/runs/python-offline-build-02/command.json",
+          "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+        },
+        {
+          "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+          "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
         }
       ],
-      "qualification_note": "Representative FastAPI integration:19 live HTTP checks against the current image, not complete Python profile. Cookie-client correction disclosed; no Python browser proof. Its two synthetic users were removed after the test.",
+      "qualification_note": "Representative FastAPI integration:19 live HTTP checks against the current image, not complete Python profile. Cookie-client correction disclosed; no Python browser proof. Its two synthetic users were removed after the test. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
       "observed_test_ids": []
     },
     {
@@ -10707,6 +10963,34 @@
         {
           "path": "tests/clients/python_probe.py",
           "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+        },
+        {
+          "path": "tools/build_python_runtime.py",
+          "sha256": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd"
+        },
+        {
+          "path": "tools/fetch_python_wheels.py",
+          "sha256": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7"
+        },
+        {
+          "path": "tools/verify_python_distribution.py",
+          "sha256": "8b99f680883641afbd8313d7867193cd2d2755d876d547a871811cd0fc52cae0"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
+        },
+        {
+          "path": "examples/python/Dockerfile",
+          "sha256": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036"
+        },
+        {
+          "path": "examples/python/requirements.lock",
+          "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "examples/python/dependency-resolution.json",
+          "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
         }
       ],
       "positive_test_ids": [],
@@ -10719,8 +11003,8 @@
       ],
       "candidate_evidence": [
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/operations/python-readiness/run-03/report.json",
@@ -10739,8 +11023,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+          "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -10757,9 +11041,45 @@
         {
           "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
           "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+          "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+          "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+          "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+          "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+          "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+          "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+        },
+        {
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+          "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+        },
+        {
+          "path": "evidence/runs/python-offline-build-02/command.json",
+          "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+        },
+        {
+          "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+          "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
         }
       ],
-      "qualification_note": "Representative FastAPI integration:19 live HTTP checks against the current image, not complete Python profile. Cookie-client correction disclosed; no Python browser proof. Its two synthetic users were removed after the test.",
+      "qualification_note": "Representative FastAPI integration:19 live HTTP checks against the current image, not complete Python profile. Cookie-client correction disclosed; no Python browser proof. Its two synthetic users were removed after the test. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.",
       "observed_test_ids": []
     },
     {
@@ -11574,6 +11894,34 @@
         {
           "path": "tests/reuse/test_runtime_distribution.py",
           "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
+        },
+        {
+          "path": "tools/build_python_runtime.py",
+          "sha256": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd"
+        },
+        {
+          "path": "tools/fetch_python_wheels.py",
+          "sha256": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7"
+        },
+        {
+          "path": "tools/verify_python_distribution.py",
+          "sha256": "8b99f680883641afbd8313d7867193cd2d2755d876d547a871811cd0fc52cae0"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
+        },
+        {
+          "path": "examples/python/Dockerfile",
+          "sha256": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036"
+        },
+        {
+          "path": "examples/python/requirements.lock",
+          "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "examples/python/dependency-resolution.json",
+          "sha256": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
         }
       ],
       "positive_test_ids": [],
@@ -11684,8 +12032,45 @@
         {
           "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
           "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+          "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+          "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+          "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+        },
+        {
+          "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+          "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+          "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+        },
+        {
+          "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+          "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+        },
+        {
+          "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+          "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+        },
+        {
+          "path": "evidence/runs/python-offline-build-02/command.json",
+          "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+        },
+        {
+          "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+          "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
         }
-      ]
+      ],
+      "qualification_note": "Full dependency closure remains open. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open."
     },
     {
       "id": "WP-003",
@@ -12482,6 +12867,42 @@
     {
       "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
       "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+      "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+      "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+      "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+      "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+    },
+    {
+      "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+      "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+    },
+    {
+      "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+      "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+    },
+    {
+      "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+      "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+    },
+    {
+      "path": "evidence/runs/python-offline-build-02/command.json",
+      "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+    },
+    {
+      "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+      "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
     }
   ],
   "session_candidate_artifacts": [
@@ -12524,8 +12945,8 @@
       "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
     },
     {
-      "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
-      "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
+      "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
+      "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
     },
     {
       "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -12551,7 +12972,7 @@
     },
     {
       "path": "tools/refresh_python_image.py",
-      "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+      "sha256": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e"
     },
     {
       "path": "tests/clients/python_probe.py",
@@ -12574,6 +12995,44 @@
     {
       "path": "evidence/operations/python-readiness/image-05/report.json",
       "sha256": "9e33c9cc7148e907d1939f8f34a50bb90f0642de83529da1b7148e43e1d79ee5"
+    }
+  ],
+  "python_build_candidate_artifacts": [
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-01/report.json",
+      "sha256": "97f1677e77e77d5f50a5e1a6e4a2032a68e9e510dbe11640fe41c5ff9a948dd1"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-01/VERIFIER_CORRECTION.md",
+      "sha256": "e8b74fe7074da5d72b0c75e1f14a882f00bf5ddfcd4345a5478f14a581058a97"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-02/report.json",
+      "sha256": "47bccd08834b277cef52c3648028804c71422800f32da75317f4d954b9e01c97"
+    },
+    {
+      "path": "evidence/operations/python-offline-build/buildkit-02/distribution/distribution.json",
+      "sha256": "876a30cee132ee3b1ceceb0cd4a69e7e0c38b3227073965784c3db36c8bd7f6a"
+    },
+    {
+      "path": "evidence/reuse/python-wheel-cache/buildkit-01/acquisition.json",
+      "sha256": "5f5a7b4d6343d8f470d55f33d4d2b306a602db02c4207d98dc9e9a58c8251c20"
+    },
+    {
+      "path": "evidence/reuse/python-wheel-cache/buildkit-02/acquisition.json",
+      "sha256": "887b97df94d92c0fb2cf94d79d6e08df93b102c3bd7c9427ec56b03b053b694d"
+    },
+    {
+      "path": "evidence/operations/python-readiness/offline-build-buildkit-02/report.json",
+      "sha256": "f094785c42893efe1b43ab88aed48d2c7b6d0f9e697bd905bfb77b89211d3de2"
+    },
+    {
+      "path": "evidence/runs/python-offline-build-02/command.json",
+      "sha256": "30a58de6ddf0dfa79d4934c090793e97c86449b3b87ab16e0ec26e0fd218203c"
+    },
+    {
+      "path": "evidence/runs/python-wheel-offline-missing-01/command.json",
+      "sha256": "1954997e80e5564fa7e8688e094ad753bcb24efcda74e305a79da7eacf4d3c5f"
     }
   ]
 }

@@ -49,14 +49,13 @@
   recovers with existing-session continuity. This does not qualify traffic removal,
   other dependency failure classes, load, database HA, crash recovery or backup
   restore. The pre-outage dumps are preserved and hashed, not restore-tested.
-- Local Python offline rebuild: legacy Docker cache metadata restoration fails
-  in image-05 with `failed to read diff archive: InvalidArgument`. The current
-  image remains intact and passes19 HTTP checks through `--test-existing`.
-  Exact failure and cleanup are preserved; do not repeat that build unchanged.
-  A separately qualified full rebuild/builder path is still needed.
-  BuildKit now successfully builds the Core notice image using the existing
-  Docker-driver builder. Python's full Dockerfile has not yet been qualified
-  through that path; its unchanged existing image passed post-cutover regression.
+- Python deployment: the legacy cache error is preserved and that build path is
+  retired. The full offline BuildKit Dockerfile now passes with49 pinned wheels,
+  3,349 unchanged installed wheel files,63 notices,418 SDK source files and19 HTTP
+  checks; current image5bffadb83aa3 replaced7a4bb6dcfd63. Full fresh-stack/bootstrap,
+  native dependency source/build closure, OS distribution obligations and the new
+  helper's timeout/rollback fault injection remain unqualified. See
+  `evidence/operations/python-offline-build` and the Python README.
 - All remaining business features, migrations, UI/plugin closure, recovery/load/HA,
   and sovereign full-feature qualification remain required and unfinished.
 

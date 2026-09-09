@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/fetch_python_wheels.py",
+    "--offline",
+    "--output",
+    "evidence/reuse/python-wheel-cache/offline-missing-before-acquisition.json"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788921855.2258728,
+  "elapsed_seconds": 0.144,
+  "input_sha256": {
+    "tools/fetch_python_wheels.py": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/dependency-resolution.json": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+  },
+  "inputs_changed": false,
+  "output_sha256": "e4cafddf4ac225c29dcd9d0aae5834c02d2afa68b9cf9234819b467b697b272b",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

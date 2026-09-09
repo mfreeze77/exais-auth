@@ -11,6 +11,14 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- Python's full Dockerfile now builds offline through the existing BuildKit
+  builder from49 hash-pinned wheels, retaining one20,367,857-byte cache. New image
+  `5bffadb83aa3` passes3,349 wheel-file comparisons,63 notice checks,418 immutable
+  SDK source comparisons, pip check and19 real HTTP checks. It replaced7a4bb6dcfd63
+  after tests/cleanup; Core/PostgreSQL identity/start/mounts stayed unchanged.
+  One empty-directory checker defect and its rejected candidate are preserved.
+  Full Python/native/OS, fresh-stack and new lifecycle fault qualification remain
+  open. See `evidence/operations/python-offline-build` and the Python README.
 - Native source review now identifies all59 embedded native release members and
   adds pinned source/build/notice evidence for scrypt, Argon2, JNA and SQLite.
   The corrected notice assembler preserves JNA's two full short-named licenses

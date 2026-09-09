@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/build_python_runtime.py",
+    "--fetch-wheels",
+    "--name",
+    "buildkit-01"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788921988.8568358,
+  "elapsed_seconds": 25.215,
+  "input_sha256": {
+    "tools/build_python_runtime.py": "034ef4fb819f4a44252ec89be778ce73cb0b74f267aafc8388f38d9bdc6063fd",
+    "tools/fetch_python_wheels.py": "b25a005b06f52adce89c876d16fa42c969d46f9bb1cd5f6ac602e7bb507b84d7",
+    "tools/verify_python_distribution.py": "92f4c0b90afb53ea3f59b8194378142c0deab6d6b75699b01825f9f5d7c1e035",
+    "tools/refresh_python_image.py": "b3a461caf63085c9e071985e1548624c05ccd282d38dc0ad7062421c83a3ba4e",
+    "examples/python/Dockerfile": "6a07c5e66e1adede8ebd633fc5818af7e994097fd6b6520f19ebec4bc85fe036",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/dependency-resolution.json": "6fa3cfbaed9a2bcff52d837180ffe3b9de9a908408b3eac4f3d0295d0fd57894"
+  },
+  "inputs_changed": false,
+  "output_sha256": "de0a69a575f6e3e1fd974c0f751039b3f24cf4c3b0ec1de9fdaf11eafe814b55",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

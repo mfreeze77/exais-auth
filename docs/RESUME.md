@@ -22,10 +22,13 @@ actual wrong-hash fetch evidence retains failure and confirms container removal.
 No native binary/source archives or images are needed to repeat the offline
 package checks; avoid repeating successful work without changed inputs.
 
-Latest Python operational proof: `evidence/operations/python-readiness/run-03`,
-with current image `7a4bb6dcfd63` qualified by image-06's19 live HTTP checks
-and the subsequent `notice-core-regression-01` against the current Core image.
-Image-02 is the original successful image build; image-06 uses the corrected probe.
+Latest Python image is `5bffadb83aa3`, qualified by the full offline BuildKit
+build and49-distribution audit in `evidence/operations/python-offline-build/buildkit-02`
+and19 live HTTP checks in `python-readiness/offline-build-buildkit-02`.
+The49 hash-pinned wheels occupy one20,367,857-byte cache; the second run downloaded
+nothing and reused cached filesystem steps. Read the Python README for exact
+build/qualification commands. Prior image7a4bb6dcfd63 was retired after success.
+The historical operational proof remains `evidence/operations/python-readiness/run-03`.
 Readiness now detects an actual database outage, returns503 while liveness stays200,
 and recovers with existing-session continuity. Six outage checks include cleanup;
 full OPS-004/OPS-011, traffic removal, backup restore and HA remain open.
@@ -59,9 +62,11 @@ python tools/run_python_probe_cleanup_fault.py --name NEW_UNIQUE_FAULT_NAME
 python tools/check_python_image_lifecycle.py --name NEW_UNIQUE_DRIFT_NAME
 ```
 
-The latter fixture has identical filesystem layers and does not qualify the
-legacy full-Dockerfile rebuild. Do not add its21 lifecycle assertions to the
-authentication acceptance count or repeat unchanged passing runs for timestamps.
+The latter fixture is historical and requires the retired7a image; do not execute
+it against the current helper or rebuild the retired image for it. Its21 assertions
+do not qualify the new BuildKit helper's timeout/rollback branches. New fault
+injection remains unexecuted. Do not add lifecycle assertions to authentication
+acceptance or repeat unchanged passing runs for timestamps.
 
 Latest bounded session proof: `evidence/foundation/sdk-session-faults/run-05`.
 It observes Node24.0.3 CDI5.4 on the wire:10 SDK and3 browser checks passed,
@@ -145,10 +150,11 @@ own12 integrity/filesystem checks. Four API wire-path resolutions are preserved 
 Runtime notice packaging and locked acquisition are now connected. Preserve the43MB
 source cache; normal acquisition verifies it without downloading unchanged files.
 `python tools/fetch_runtime_notice_sources.py --offline` verifies83 available source
-archives and preserves the one recorded Guava metadata-only absence. Image
-`60c7677d0a91` contains474 verified files and is running in Core-a; see
+archives and preserves the one recorded Guava metadata-only absence. Historical image
+`60c7677d0a91` contained474 verified files and was retired; see
 `evidence/runtime/oss-core-notices/preserved-notices-01/report.json` and
 `replacement-20260908T232129Z-99cdc5/report.json` in that same evidence directory.
+Current Core-a uses5ec6ccc3fd5d with479 verified files, as recorded above.
 
 Use `python tools/launch_oss_probe.py --build-only --evidence-name NEW_NAME` when
 only an image build/content check is needed. It retires context/inspection resources

@@ -1,0 +1,86 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/python?digest=sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "context:python_wheels": "local:python_wheels",
+          "cpuquota": "200000",
+          "force-network-mode": "none",
+          "frontend.caps": "moby.buildkit.frontend.contexts+forward",
+          "label:org.expertauth.build-run": "524db88cac59419c9d449c63e7ed5c4c",
+          "label:org.expertauth.project": "expert-auth",
+          "label:org.expertauth.purpose": "python-foundation",
+          "memory": "536870912",
+          "sharedkey:localdir:python_wheels": "python-wheels:6566d8b53676ccd6"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          },
+          {
+            "name": "python_wheels"
+          }
+        ],
+        "root": {
+          "configSource": {
+            "path": "Dockerfile"
+          },
+          "request": {
+            "args": {
+              "context:python_wheels": "local:python_wheels",
+              "cpuquota": "200000",
+              "force-network-mode": "none",
+              "frontend.caps": "moby.buildkit.frontend.contexts+forward",
+              "label:org.expertauth.build-run": "524db88cac59419c9d449c63e7ed5c4c",
+              "label:org.expertauth.project": "expert-auth",
+              "label:org.expertauth.purpose": "python-foundation",
+              "memory": "536870912",
+              "sharedkey:localdir:python_wheels": "python-wheels:6566d8b53676ccd6",
+              "vcs:localdir:context": "examples\\python",
+              "vcs:localdir:dockerfile": "examples\\python",
+              "vcs:localdir:python_wheels": ".cache\\python-wheels",
+              "vcs:revision": "dc125668bb7508bac11b408fa6c5041769c9d954"
+            }
+          }
+        },
+        "compatibilityVersion": 30
+      },
+      "environment": {
+        "dockerfileVersion": "1.25.0",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "default/default/bfwomuftbvy0r5q4tm72wjvhi",
+  "containerimage.config.digest": "sha256:692a7592479e3374d1cc942c07c38043cfc3e3b7e11d65a50afcd82b7cb97f1a",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+    "size": 1813,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  },
+  "containerimage.digest": "sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd",
+  "image.name": "moby-dangling@sha256:5bffadb83aa3127f8339e6dcd3e8bc6a04dcbcabf3b66b7dcddfab81369e78fd"
+}

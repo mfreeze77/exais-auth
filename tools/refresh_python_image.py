@@ -1,4 +1,4 @@
-"""Build changed Python app with cached dependency layers; test and retire old image.
+"""Qualify an existing Python application image with real HTTP behavior.
 
 No network downloads, database interruption, public ports, volume/network creation,
 production replacement or global image pruning. All temporary containers retire.
@@ -25,7 +25,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--name', required=True)
     parser.add_argument('--test-existing', action='store_true', help='Test the current image without building when only the harness changed')
+    parser.add_argument('--test-image', help='Test an owned candidate by immutable image ID without changing any tag or retiring any image')
     args = parser.parse_args()
+    require(not (args.test_existing and args.test_image), 'Choose one existing-image test mode')
+    if args.test_image:
+        require(args.test_image.startswith('sha256:') and len(args.test_image) == 71 and
+                all(c in '0123456789abcdef' for c in args.test_image[7:]), 'Immutable candidate image ID required')
     require(args.name.isascii() and args.name and all(c.isalnum() or c in '-_' for c in args.name), 'Invalid run name')
     output = ROOT / 'evidence/operations/python-readiness' / args.name
     require(not output.exists(), 'Preserve previous image evidence')
@@ -43,37 +48,37 @@ def main():
     labels = ['--label', 'org.expertauth.project=expert-auth', '--label', 'org.expertauth.purpose=python-image-proof']
     runtime = (ROOT / '.runtime/python-image-refresh').resolve()
     runtime.mkdir(exist_ok=True)
-    private = tempfile.TemporaryDirectory(prefix='run-', dir=runtime)
-    cid_paths = {role: Path(private.name) / (role + '.cid') for role in names}
-    promoted = False
+    private = Path(tempfile.mkdtemp(prefix='run-', dir=runtime)).resolve()
+    require(private.parent == runtime, 'Private scratch boundary differs')
+    cid_paths = {role: private / (role + '.cid') for role in names}
+    qualified = False
     regression_passed = False
     image = None
     try:
-        # Reuse the retained image's cache even when legacy intermediate image
-        # metadata was retired. Force removal of intermediates on failed builds.
-        report['build_skipped'] = args.test_existing
-        if not args.test_existing:
-            report['cache_from'] = old['Id']
-            built = command('build', '--pull=false', '--network=none', '--force-rm', '--cache-from', old['Id'],
-                            '--label', 'org.expertauth.project=expert-auth', '--label', 'org.expertauth.purpose=python-foundation',
-                            '-t', TAG, str(ROOT / 'examples/python'), timeout=180, check=False)
-            (output / 'build-output.log').write_bytes((built.stdout + built.stderr).encode())
-            report['build_exit_code'] = built.returncode
-            require(built.returncode == 0, 'Docker build failed; exact output preserved in build-output.log')
-        new = inspect('image', TAG)
+        report['build_skipped'] = args.test_existing or bool(args.test_image)
+        report['candidate_test_only'] = bool(args.test_image)
+        if not report['build_skipped']:
+            require(False, 'Legacy build path is retired; use tools/build_python_runtime.py for the offline BuildKit build')
+        new = inspect('image', args.test_image or TAG)
         image = new['Id']
+        require(new['Config'].get('Labels', {}).get('org.expertauth.project') == 'expert-auth', 'Unowned Python image')
         report['new_image'] = image
-        # Only final COPY app.py layer changes; SDK/interpreter/dependency layers stay exact.
-        require(new['RootFS']['Layers'][:-1] == old['RootFS']['Layers'][:-1], 'Dependency/base filesystem layers changed')
-        report['dependency_layers_unchanged'] = True
+        # Rebuilt candidates are separately checked against all locked wheel bytes
+        # before this behavior-only runner is invoked. It never promotes them.
+        report['dependency_layers_unchanged'] = new['RootFS']['Layers'][:-1] == old['RootFS']['Layers'][:-1]
+        require(args.test_image or report['dependency_layers_unchanged'], 'Dependency/base filesystem layers changed')
         report['rootfs_layers'] = new['RootFS']['Layers']
         values = dict(line.split('=', 1) for line in (ROOT / '.runtime/oss-core/runtime.env').read_text().splitlines() if '=' in line)
-        env = Path(private.name) / 'probe.env'
+        env = private / 'probe.env'
         env.write_text('EXPERTAUTH_CORE_API_KEY=' + values['EXPERTAUTH_CORE_API_KEY'] + '\n')
-        common = ['--pull=never', '--network', NETWORK, *labels, '--read-only', '--tmpfs', '/tmp:rw,nosuid,size=64m', '--env-file', str(env)]
-        origin = 'http://python-image.example.test:8300'
+        common = ['--pull=never', '--network', NETWORK, *labels, '--read-only', '--memory=512m', '--cpus=2',
+                  '--pids-limit=128', '--cap-drop=ALL', '--security-opt=no-new-privileges',
+                  '--tmpfs', '/tmp:rw,nosuid,size=64m', '--env-file', str(env)]
+        hostname = names['app'] + '.example.test'
+        origin = 'http://' + hostname + ':8300'
+        report['test_origin'] = origin
         ids['app'] = command('run', '-d', '--rm', '--name', names['app'], '--cidfile', str(cid_paths['app']),
-                             '--network-alias', 'python-image.example.test', *common, '-e', 'PYTHON_API_DOMAIN=' + origin,
+                             '--network-alias', hostname, *common, '-e', 'PYTHON_API_DOMAIN=' + origin,
                              '-e', 'WEBSITE_DOMAIN=' + origin, image).stdout.strip()
         actual = command('exec', names['app'], 'sha256sum', '/app/app.py', '/app/requirements.lock').stdout.splitlines()
         report['installed_sha256'] = {line.split()[1]: line.split()[0] for line in actual}
@@ -102,10 +107,13 @@ def main():
         report['errors'].append(type(error).__name__ + ': ' + str(error))
     finally:
         for role, path in cid_paths.items():
-            if path.exists():
-                cid = path.read_text().strip()
-                if len(cid) == 64 and all(char in '0123456789abcdef' for char in cid):
+            try:
+                if path.exists():
+                    cid = path.read_text().strip()
+                    require(len(cid) == 64 and all(char in '0123456789abcdef' for char in cid), 'Malformed private CID')
                     ids[role] = cid
+            except Exception as error:
+                report['errors'].append('CID recovery failed: ' + type(error).__name__)
         report['created_containers'] = [{'name': names[role], 'id': cid} for role, cid in ids.items()]
         for role in ('probe', 'app'):
             try:
@@ -114,53 +122,50 @@ def main():
                     continue
                 state = json.loads(state.stdout)[0]
                 labels_now = state['Config'].get('Labels', {})
-                require(state['Id'] == ids.get(role) and labels_now.get('org.expertauth.project') == 'expert-auth' and
+                require(state['Id'] == ids.get(role) and state['Name'] == '/' + names[role] and state['Image'] == image and
+                        labels_now.get('org.expertauth.project') == 'expert-auth' and
                         labels_now.get('org.expertauth.purpose') == 'python-image-proof', 'Container cleanup ownership differs')
                 if state['State']['Running']:
                     command('stop', '-t', '5', names[role], check=False)
                 command('rm', names[role], check=False)
             except Exception as error:
                 report['errors'].append('Container retirement failed: ' + type(error).__name__)
-        # Source stability and resource retirement precede promotion and removal
-        # of the prior image. A failed qualification must keep its rollback image.
-        retired_inventory = inventory()
-        report['temporary_containers_retired'] = all(cid not in retired_inventory['containers'] for cid in ids.values())
+        report['temporary_containers_retired'] = False
+        report['inputs_unchanged'] = False
+        report['private_scratch_removed'] = False
+        report['image_promoted'] = False  # This runner never changes image tags.
         try:
+            after = inventory()
+            report['temporary_containers_retired'] = all(cid not in after['containers'] for cid in ids.values())
+            # Also check generated names when a launch failed before its CID was recovered.
+            for name in names.values():
+                remaining = command('ps', '-aq', '--filter', 'name=^/' + name + '$')
+                require(not remaining.stdout.strip(), 'Temporary container still present')
+            report['resource_delta'] = {kind: {'added': sorted(set(after[kind]) - set(before[kind])),
+                                             'removed': sorted(set(before[kind]) - set(after[kind]))} for kind in before}
             report['inputs_unchanged'] = inputs == {path: sha(ROOT / path) for path in INPUTS}
+            require(report['inputs_unchanged'], 'Qualification inputs changed')
+            require(report['temporary_containers_retired'], 'Temporary containers remain')
+            require(inspect('image', TAG)['Id'] == old['Id'], 'Current image tag changed during qualification')
+            require(private.parent == runtime, 'Private scratch cleanup escaped exact directory')
+            for path in [private / 'probe.env', *cid_paths.values()]:
+                path.unlink(missing_ok=True)
+            require(not any(private.iterdir()), 'Unknown private scratch file; preserve directory')
+            private.rmdir()
+            report['private_scratch_removed'] = True
+            qualified = regression_passed and not report['errors']
+        except Exception as error:
+            report['errors'].append('Final qualification/cleanup failed: ' + type(error).__name__ + ': ' + str(error))
+            report['private_recovery_directory'] = private.relative_to(ROOT).as_posix()
+        try:
+            report['artifacts'] = [{'path': path.relative_to(output).as_posix(), 'sha256': sha(path)}
+                                   for path in sorted(output.rglob('*')) if path.is_file()]
         except OSError as error:
-            report['inputs_unchanged'] = False
-            report['errors'].append('Qualification input unreadable: ' + type(error).__name__)
-        if not report['inputs_unchanged']:
-            report['errors'].append('Qualification inputs changed; preserving the prior image')
-        if not report['temporary_containers_retired']:
-            report['errors'].append('Temporary containers remain; preserving the prior image')
-        promoted = regression_passed and not report['errors'] and report['inputs_unchanged'] and report['temporary_containers_retired']
-        report['promotion_checks_completed_before_image_retirement'] = True
-        if not promoted and image:
-            command('image', 'tag', old['Id'], TAG)
-        obsolete = old['Id'] if promoted else image
-        if obsolete and obsolete != (image if promoted else old['Id']):
-            try:
-                used = command('ps', '-aq', '--filter', 'ancestor=' + obsolete).stdout.strip()
-                tags = inspect('image', obsolete).get('RepoTags') or []
-                require(not used and not tags, 'Obsolete image is still referenced; preserve it')
-                command('image', 'rm', obsolete)
-                report['retired_image'] = obsolete
-            except Exception as error:
-                report['errors'].append('Image retirement incomplete: ' + type(error).__name__)
-        require(Path(private.name).resolve().parent == runtime, 'Private scratch cleanup escaped exact directory')
-        private.cleanup()
-        after = inventory()
-        report['resource_delta'] = {kind: {'added': sorted(set(after[kind]) - set(before[kind])),
-                                         'removed': sorted(set(before[kind]) - set(after[kind]))} for kind in before}
-        report['temporary_containers_retired'] = all(cid not in after['containers'] for cid in ids.values())
-        report['artifacts'] = [{'path': path.relative_to(output).as_posix(), 'sha256': sha(path)}
-                               for path in sorted(output.rglob('*')) if path.is_file()]
+            report['errors'].append('Artifact hashing failed: ' + type(error).__name__)
         report['finished'] = datetime.now(timezone.utc).isoformat()
-        report['image_promoted'] = promoted
         with (output / 'report.json').open('xb') as stream:
             stream.write((json.dumps(report, indent=2) + '\n').encode())
-    passed = promoted and not report['errors'] and report['temporary_containers_retired'] and report['inputs_unchanged']
+    passed = qualified and not report['errors'] and report['temporary_containers_retired'] and report['inputs_unchanged']
     print(json.dumps({'report': output.relative_to(ROOT).as_posix(), 'image': image, 'passed': passed,
                       'regression': report.get('regression'), 'retired_image': report.get('retired_image'), 'errors': report['errors']}))
     return 0 if passed else 1
