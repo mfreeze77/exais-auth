@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/replace_oss_notice_image.py",
+    "--image-report",
+    "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788920019.6661317,
+  "elapsed_seconds": 7.096,
+  "input_sha256": {
+    "tools/replace_oss_notice_image.py": "07b26e12d800500b4b8048fb0681a585e14583419af3f708c29892d6b6a33250",
+    "tools/wait_oss_storage.py": "93a28253276e20a0f49f57170831a28628fa0a14782b61f6a9ef352f56917b2a",
+    "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json": "e758fafd8b4472c08c62a9b20b7012c8f9797322dd9676739c96184006b0f0c8"
+  },
+  "inputs_changed": false,
+  "output_sha256": "7248a2835b70e23e9fc388d72678e0cbf6737cd87dc231a2162a6c3b9a14c7fc",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

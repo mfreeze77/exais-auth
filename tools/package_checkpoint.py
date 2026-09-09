@@ -24,7 +24,7 @@ def sha(raw):
 def safe(name):
     path=PurePosixPath(name)
     assert not path.is_absolute() and '..' not in path.parts and '\\' not in name
-    assert not any(part in {'.git','.runtime','.cache','node_modules','artifacts'} for part in path.parts)
+    assert not any(part in {'.git','.runtime','.cache','.docker','node_modules','artifacts'} for part in path.parts)
     assert path.name=='.env.example' or not (path.name=='.env' or path.name.startswith('.env.'))
 
 def main():

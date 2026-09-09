@@ -1,0 +1,156 @@
+{
+  "schema": "expertauth-jna-make-sunver-grant-review-v1",
+  "scope": "Bounded upstream provenance and grant research only; WP-002",
+  "status": "BLOCKED_EXACT_GRANT_UNRESOLVED",
+  "script": {
+    "path": "evidence/reuse/native-correspondence/jna/acquired/native/libffi/make_sunver.pl",
+    "bytes": 9021,
+    "sha256": "ca40d3458893e03a90807be87d720a59e921ee6bf678c6696779d635004a261f",
+    "git_blob_sha1": "8a90b1fea0d366f7a9ec0857d5304a67ee34f389",
+    "repo": "java-native-access/jna",
+    "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+    "source_path": "native/libffi/make_sunver.pl",
+    "lines": 333
+  },
+  "original_evidence_integrity_verified": true,
+  "enclosing_notice_files": [
+    {
+      "path": "evidence/reuse/native-correspondence/jna/acquired/native/libffi/LICENSE-BUILDTOOLS",
+      "bytes": 18698,
+      "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94",
+      "git_blob_sha1": "d1d626e00859030061ed7b071e84f8f893d84d93"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/upstream/jna__native__libffi__LICENSE",
+      "bytes": 1132,
+      "sha256": "25d56871423a870487edee68000ef66b1a7ec44a7ab84838ceeb3ce07f734b74",
+      "git_blob_sha1": "4f0b76251485dc663c506ba4c51c21c0ca8ef98e"
+    },
+    {
+      "path": "evidence/reuse/runtime-distribution-review/upstream/jna__LICENSE",
+      "bytes": 788,
+      "sha256": "521bb271ac56e0e29a1b1b688b94af17d00d378fc8e63478d8c8b2a7c4a229d0",
+      "git_blob_sha1": "c5a025f0c3e6dfa8748477a3200ad61696f65e12"
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "jna-import",
+      "url": "https://github.com/java-native-access/jna/commit/ffb7e0e7ed963d88eec3ed93fe9a47efccecd557",
+      "finding": "JNA import says libffi v3.3 plus 64 commits and links 5c63b463b87d3c06102a4a7f05f395929d9ea79b; make_sunver.pl added in the diff.",
+      "immutable": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "libffi-add",
+      "url": "https://github.com/libffi/libffi/commit/ca112537df7b9cdbccad7541aa3cb43b2a2dac9a.patch",
+      "finding": "2019-10-26 Anthony Green import adds 333-line script with target blob prefix 8a90b1fea. Changes source location from ../contrib/make_sunver.pl. Adds script name to tooling-scope paragraph but not the following GPL-v2 assignment sentence.",
+      "immutable": true,
+      "observed_git_blob_prefix": "8a90b1fea",
+      "local_blob_prefix_matches": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "gcc-matching-edit",
+      "url": "https://github.com/gcc-mirror/gcc/commit/d809887a669e7c2c709d1ca37d2f0e44ecfdb341.patch",
+      "finding": "2013-02-27 Rainer Orth change enforces C locale; resulting contrib/make_sunver.pl blob prefix 8a90b1fea0d36 matches the local pinned file. SVN r196309.",
+      "immutable": true,
+      "observed_git_blob_prefix": "8a90b1fea0d36",
+      "local_blob_prefix_matches": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "gcc-original-add",
+      "url": "https://github.com/gcc-mirror/gcc/commit/1e0859a29e0b7ca2f70e156aafdac7b4db30663b",
+      "finding": "2010-07-02 Rainer Orth adds contrib/make_sunver.pl without a file license header. SVN r161701. This establishes an earlier source-history witness, not every author's grant.",
+      "immutable": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "gcc-readme",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/d809887a669e7c2c709d1ca37d2f0e44ecfdb341/README",
+      "finding": "General GCC permission points to COPYING* files and notes differing terms for manuals and some runtime libraries. It does not assign this script a specific SPDX expression.",
+      "immutable": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "gcc-copying2",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/d809887a669e7c2c709d1ca37d2f0e44ecfdb341/COPYING",
+      "finding": "GPL version 2 text is present at the same GCC revision.",
+      "immutable": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "gcc-copying3",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/d809887a669e7c2c709d1ca37d2f0e44ecfdb341/COPYING3",
+      "finding": "GPL version 3 text is present at the same GCC revision. License-text availability alone does not supply the missing file-specific application evidence.",
+      "immutable": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    },
+    {
+      "id": "ffmpeg-import",
+      "url": "https://github.com/FFmpeg/FFmpeg/commit/c1aac39eaccd32dc3b74ccfcce701d3d888fbc6b",
+      "finding": "2015 import explicitly says script comes from GCC; FFmpeg copy adds FSF 2010-2013/GPL-3.0-or-later header. This is primary evidence for FFmpeg's downstream treatment, not proof the original rightsholders authorized the exact JNA bytes under those terms.",
+      "immutable": true,
+      "inspection_method": "web primary-source view",
+      "raw_response_bytes_retained": false,
+      "upstream_sha256_verified": false
+    }
+  ],
+  "conclusion": {
+    "provenance": "Strong GCC-to-libffi-to-JNA evidence, with matching 13/9-hex blob prefixes; upstream full-blob byte identity not independently re-acquired in this research lane.",
+    "candidate_terms": "GPL-3.0-or-later is suggested by downstream FFmpeg's explicit classification and GCC provenance; it remains unqualified for the exact JNA file.",
+    "established_grant": null,
+    "root_MIT_blanket_assignment_supported": false,
+    "automatic_GPL2_from_LICENSE_BUILDTOOLS_supported": false,
+    "license_approved": false,
+    "existing_exclusion_changed": false
+  },
+  "blocker": "No unambiguous originating/enclosing grant was established that selects terms for this exact script and all relevant contributions. Do not infer a grant from public repository access, neighboring notices, or a downstream-added header.",
+  "resume_inputs": [
+    {
+      "repo": "gcc-mirror/gcc",
+      "commit": "d809887a669e7c2c709d1ca37d2f0e44ecfdb341",
+      "path": "contrib/make_sunver.pl",
+      "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/d809887a669e7c2c709d1ca37d2f0e44ecfdb341/contrib/make_sunver.pl",
+      "expected_candidate_git_blob_sha1": "8a90b1fea0d366f7a9ec0857d5304a67ee34f389",
+      "expected_candidate_bytes": 9021,
+      "purpose": "Acquire exact source or full Git blob metadata and verify candidate identity; not license approval."
+    },
+    {
+      "repo": "libffi/libffi",
+      "commit": "ca112537df7b9cdbccad7541aa3cb43b2a2dac9a",
+      "path": "make_sunver.pl",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/ca112537df7b9cdbccad7541aa3cb43b2a2dac9a/make_sunver.pl",
+      "expected_candidate_git_blob_sha1": "8a90b1fea0d366f7a9ec0857d5304a67ee34f389",
+      "expected_candidate_bytes": 9021,
+      "purpose": "Verify exact import identity, retaining immutable provenance and SHA-256."
+    },
+    {
+      "purpose": "Find an originating GCC/FSF license declaration or maintainer clarification explicitly applicable to this script/revision; no message to upstream has been sent."
+    }
+  ],
+  "access_limit": "Web API/Gitiles metadata endpoints were unavailable. Failed endpoints were not retried; no host-network retry, Docker, binary or archive acquisition occurred.",
+  "resources_created": {
+    "containers": [],
+    "images": [],
+    "networks": [],
+    "volumes": []
+  },
+  "runtime_code_changes": [],
+  "native_tests_passed": 0
+}

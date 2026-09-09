@@ -83,7 +83,7 @@
         },
         {
           "path": "tools/build_oss_runtime.py",
-          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+          "sha256": "54b9ae1d23f95d16bf25f3b89e4c41373980600d3c0b9dd3a7cb43db6cf08382"
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
@@ -95,7 +95,7 @@
         },
         {
           "path": "tools/replace_oss_notice_image.py",
-          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+          "sha256": "0587100423733a111d50278701988d1950c2231532140c3710bf1b558a78bb93"
         },
         {
           "path": "deploy/oss-core.Dockerfile",
@@ -214,9 +214,45 @@
         {
           "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
           "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-01/report.json",
+          "sha256": "6f22f1e497e35a12860830f28f263617ac163b5dcabf7b7a143a08b022d65528"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-02/report.json",
+          "sha256": "3fba490baf8188c7be151ec0d3db01c7d1f9dca765b436d245b1a4badaf50798"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json",
+          "sha256": "e758fafd8b4472c08c62a9b20b7012c8f9797322dd9676739c96184006b0f0c8"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260909T021339Z-af0c4b/report.json",
+          "sha256": "9912e24d72ab4abacd98ad6edaa2f2769b49e991677e34ec3d88ac961b66ec5b"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-cutover-01/command.json",
+          "sha256": "d37e61e115c6028df840ff9b01a35715563fd118ba647723caa9ce167e2a3eac"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-same-image-guard-02/command.json",
+          "sha256": "e35938efc058ce0f547d4c507f54530b4e0b901841efbf5cb8aac3c73cc7e52e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/report.json",
+          "sha256": "dc45e3410551a06c00b53608315570a89e5a49c2fb1dabc88e388624dfffc068"
+        },
+        {
+          "path": "evidence/operations/hygiene/verification-20260909T021650Z.json",
+          "sha256": "2f1e7c7dacae173a3378df86c6f3c503e450fd11ea5a23f92d00af413932f822"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
+          "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
         }
       ],
-      "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -277,7 +313,7 @@
         },
         {
           "path": "tools/build_oss_runtime.py",
-          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+          "sha256": "54b9ae1d23f95d16bf25f3b89e4c41373980600d3c0b9dd3a7cb43db6cf08382"
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
@@ -289,7 +325,7 @@
         },
         {
           "path": "tools/replace_oss_notice_image.py",
-          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+          "sha256": "0587100423733a111d50278701988d1950c2231532140c3710bf1b558a78bb93"
         },
         {
           "path": "deploy/oss-core.Dockerfile",
@@ -408,9 +444,45 @@
         {
           "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
           "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-01/report.json",
+          "sha256": "6f22f1e497e35a12860830f28f263617ac163b5dcabf7b7a143a08b022d65528"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-02/report.json",
+          "sha256": "3fba490baf8188c7be151ec0d3db01c7d1f9dca765b436d245b1a4badaf50798"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json",
+          "sha256": "e758fafd8b4472c08c62a9b20b7012c8f9797322dd9676739c96184006b0f0c8"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260909T021339Z-af0c4b/report.json",
+          "sha256": "9912e24d72ab4abacd98ad6edaa2f2769b49e991677e34ec3d88ac961b66ec5b"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-cutover-01/command.json",
+          "sha256": "d37e61e115c6028df840ff9b01a35715563fd118ba647723caa9ce167e2a3eac"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-same-image-guard-02/command.json",
+          "sha256": "e35938efc058ce0f547d4c507f54530b4e0b901841efbf5cb8aac3c73cc7e52e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/report.json",
+          "sha256": "dc45e3410551a06c00b53608315570a89e5a49c2fb1dabc88e388624dfffc068"
+        },
+        {
+          "path": "evidence/operations/hygiene/verification-20260909T021650Z.json",
+          "sha256": "2f1e7c7dacae173a3378df86c6f3c503e450fd11ea5a23f92d00af413932f822"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
+          "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
         }
       ],
-      "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -436,7 +508,7 @@
         },
         {
           "path": "tools/build_oss_runtime.py",
-          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+          "sha256": "54b9ae1d23f95d16bf25f3b89e4c41373980600d3c0b9dd3a7cb43db6cf08382"
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
@@ -448,7 +520,7 @@
         },
         {
           "path": "tools/replace_oss_notice_image.py",
-          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+          "sha256": "0587100423733a111d50278701988d1950c2231532140c3710bf1b558a78bb93"
         },
         {
           "path": "deploy/oss-core.Dockerfile",
@@ -567,9 +639,45 @@
         {
           "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
           "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-01/report.json",
+          "sha256": "6f22f1e497e35a12860830f28f263617ac163b5dcabf7b7a143a08b022d65528"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-02/report.json",
+          "sha256": "3fba490baf8188c7be151ec0d3db01c7d1f9dca765b436d245b1a4badaf50798"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json",
+          "sha256": "e758fafd8b4472c08c62a9b20b7012c8f9797322dd9676739c96184006b0f0c8"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260909T021339Z-af0c4b/report.json",
+          "sha256": "9912e24d72ab4abacd98ad6edaa2f2769b49e991677e34ec3d88ac961b66ec5b"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-cutover-01/command.json",
+          "sha256": "d37e61e115c6028df840ff9b01a35715563fd118ba647723caa9ce167e2a3eac"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-same-image-guard-02/command.json",
+          "sha256": "e35938efc058ce0f547d4c507f54530b4e0b901841efbf5cb8aac3c73cc7e52e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/report.json",
+          "sha256": "dc45e3410551a06c00b53608315570a89e5a49c2fb1dabc88e388624dfffc068"
+        },
+        {
+          "path": "evidence/operations/hygiene/verification-20260909T021650Z.json",
+          "sha256": "2f1e7c7dacae173a3378df86c6f3c503e450fd11ea5a23f92d00af413932f822"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
+          "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
         }
       ],
-      "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -1020,8 +1128,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2170,8 +2278,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2216,8 +2324,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2454,8 +2562,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
@@ -2520,8 +2628,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2566,8 +2674,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -2660,8 +2768,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4241,8 +4349,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4303,8 +4411,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4533,8 +4641,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -4731,8 +4839,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -4880,8 +4988,8 @@
       ],
       "candidate_evidence": [
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/operations/python-readiness/run-03/report.json",
@@ -4900,8 +5008,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -10611,8 +10719,8 @@
       ],
       "candidate_evidence": [
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/operations/python-readiness/run-03/report.json",
@@ -10631,8 +10739,8 @@
           "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
         },
         {
-          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+          "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
         },
         {
           "path": "evidence/runs/python-readiness-repro-03/command.json",
@@ -11417,7 +11525,7 @@
       "implementation": [
         {
           "path": "tools/build_oss_runtime.py",
-          "sha256": "8facb60fd2a90183a9e518004fab4c7916d1df937cf25dc88e312ef4694862ef"
+          "sha256": "54b9ae1d23f95d16bf25f3b89e4c41373980600d3c0b9dd3a7cb43db6cf08382"
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
@@ -11429,7 +11537,7 @@
         },
         {
           "path": "tools/replace_oss_notice_image.py",
-          "sha256": "050c1f76afd59ab2f084f6692f7d0995dea776cded5b3f9d7a61275b5cc79392"
+          "sha256": "0587100423733a111d50278701988d1950c2231532140c3710bf1b558a78bb93"
         },
         {
           "path": "deploy/oss-core.Dockerfile",
@@ -11540,6 +11648,42 @@
         {
           "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
           "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-01/report.json",
+          "sha256": "6f22f1e497e35a12860830f28f263617ac163b5dcabf7b7a143a08b022d65528"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-02/report.json",
+          "sha256": "3fba490baf8188c7be151ec0d3db01c7d1f9dca765b436d245b1a4badaf50798"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json",
+          "sha256": "e758fafd8b4472c08c62a9b20b7012c8f9797322dd9676739c96184006b0f0c8"
+        },
+        {
+          "path": "evidence/runtime/oss-core-notices/replacement-20260909T021339Z-af0c4b/report.json",
+          "sha256": "9912e24d72ab4abacd98ad6edaa2f2769b49e991677e34ec3d88ac961b66ec5b"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-cutover-01/command.json",
+          "sha256": "d37e61e115c6028df840ff9b01a35715563fd118ba647723caa9ce167e2a3eac"
+        },
+        {
+          "path": "evidence/runs/runtime-notice-same-image-guard-02/command.json",
+          "sha256": "e35938efc058ce0f547d4c507f54530b4e0b901841efbf5cb8aac3c73cc7e52e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/notice-core-regression-01/report.json",
+          "sha256": "dc45e3410551a06c00b53608315570a89e5a49c2fb1dabc88e388624dfffc068"
+        },
+        {
+          "path": "evidence/operations/hygiene/verification-20260909T021650Z.json",
+          "sha256": "2f1e7c7dacae173a3378df86c6f3c503e450fd11ea5a23f92d00af413932f822"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
+          "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
         }
       ]
     },
@@ -12302,6 +12446,42 @@
     {
       "path": "evidence/runs/native-source-request-prefix-fix-02/command.json",
       "sha256": "e8b369418beb16a7f2554bca61501fae3ef164e54224a92fddf0e22071b4a59d"
+    },
+    {
+      "path": "evidence/runtime/oss-core-notices/buildkit-notices-01/report.json",
+      "sha256": "6f22f1e497e35a12860830f28f263617ac163b5dcabf7b7a143a08b022d65528"
+    },
+    {
+      "path": "evidence/runtime/oss-core-notices/buildkit-notices-02/report.json",
+      "sha256": "3fba490baf8188c7be151ec0d3db01c7d1f9dca765b436d245b1a4badaf50798"
+    },
+    {
+      "path": "evidence/runtime/oss-core-notices/buildkit-notices-03/report.json",
+      "sha256": "e758fafd8b4472c08c62a9b20b7012c8f9797322dd9676739c96184006b0f0c8"
+    },
+    {
+      "path": "evidence/runtime/oss-core-notices/replacement-20260909T021339Z-af0c4b/report.json",
+      "sha256": "9912e24d72ab4abacd98ad6edaa2f2769b49e991677e34ec3d88ac961b66ec5b"
+    },
+    {
+      "path": "evidence/runs/runtime-notice-cutover-01/command.json",
+      "sha256": "d37e61e115c6028df840ff9b01a35715563fd118ba647723caa9ce167e2a3eac"
+    },
+    {
+      "path": "evidence/runs/runtime-notice-same-image-guard-02/command.json",
+      "sha256": "e35938efc058ce0f547d4c507f54530b4e0b901841efbf5cb8aac3c73cc7e52e"
+    },
+    {
+      "path": "evidence/operations/python-readiness/notice-core-regression-01/report.json",
+      "sha256": "dc45e3410551a06c00b53608315570a89e5a49c2fb1dabc88e388624dfffc068"
+    },
+    {
+      "path": "evidence/operations/hygiene/verification-20260909T021650Z.json",
+      "sha256": "2f1e7c7dacae173a3378df86c6f3c503e450fd11ea5a23f92d00af413932f822"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/jna/grant-review/findings.json",
+      "sha256": "7b70617be69065497aaea7973f6644bdaaaab2f3bab3e462a316cc0606778aff"
     }
   ],
   "session_candidate_artifacts": [
@@ -12344,8 +12524,8 @@
       "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
     },
     {
-      "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
-      "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+      "path": "evidence/operations/python-readiness/notice-core-regression-01/regression/probe-report.json",
+      "sha256": "33ea521365c5967fa13bf149a9ad59d1c90546fd82574789e7aaa52141d67b23"
     },
     {
       "path": "evidence/runs/python-readiness-repro-03/command.json",

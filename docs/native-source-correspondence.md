@@ -27,9 +27,11 @@ The notice packager now includes two previously missed full JNA license texts
 actual generated tree has89 archive notice texts and390 files in total, including
 existing supplemental material/POMs/manifests. The five new files are verified
 against source bytes; previously preserved third-party notices remain unchanged.
-The currently running Core image has its historical notice manifest. Installing
-the corrected package requires a newly qualified image and scoped replacement.
-No image was built or service replaced by this source/packaging checkpoint.
+The follow-up in `docs/runtime-notice-cutover.md` installed this package in Core
+image5ec6ccc3fd5d. All479 running files match, including87 unchanged JARs;
+PostgreSQL's container/start time/mounts are unchanged. The source-capture phase
+itself created no images or replaced services. Native build and distribution
+qualification remain open despite the installed attribution correction.
 
 Ten tests pass: eight actual cached-archive/package checks and two source-request
 tests, including15 real CLI rejections before any acquisition. They are tooling

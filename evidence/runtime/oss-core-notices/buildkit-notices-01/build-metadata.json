@@ -1,0 +1,76 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/gradle?digest=sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2\u0026platform=linux%2Famd64",
+        "digest": {
+          "sha256": "67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "dockerfile.v0",
+        "args": {
+          "cpuquota": "100000",
+          "force-network-mode": "none",
+          "label:org.expertauth.build-run": "eff981efbf2641fb871c33b65075028d",
+          "label:org.expertauth.project": "expert-auth",
+          "label:org.expertauth.purpose": "runtime-notice-image",
+          "memory": "536870912"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ],
+        "root": {
+          "configSource": {
+            "path": "Dockerfile"
+          },
+          "request": {
+            "args": {
+              "cpuquota": "100000",
+              "force-network-mode": "none",
+              "label:org.expertauth.build-run": "eff981efbf2641fb871c33b65075028d",
+              "label:org.expertauth.project": "expert-auth",
+              "label:org.expertauth.purpose": "runtime-notice-image",
+              "memory": "536870912",
+              "vcs:localdir:context": ".cache\\runtime-image-23u3364k",
+              "vcs:localdir:dockerfile": ".cache\\runtime-image-23u3364k",
+              "vcs:revision": "a8efedf156c06c4ebc722fbe9af42bdee32b2aba"
+            }
+          }
+        },
+        "compatibilityVersion": 30
+      },
+      "environment": {
+        "dockerfileVersion": "1.25.0",
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "default/default/yw8c36t8r3nhiboy3vqy21hjo",
+  "containerimage.config.digest": "sha256:8afd619a072e1e40d908c15a29d0d713b2222d45fbe41db3886c979f47d0bba3",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:c585e65a1e2f527c504e15a079c1ae003b1377da25d9476a844d8b40cfba5df1",
+    "size": 3339,
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  },
+  "containerimage.digest": "sha256:c585e65a1e2f527c504e15a079c1ae003b1377da25d9476a844d8b40cfba5df1",
+  "image.name": "moby-dangling@sha256:c585e65a1e2f527c504e15a079c1ae003b1377da25d9476a844d8b40cfba5df1"
+}

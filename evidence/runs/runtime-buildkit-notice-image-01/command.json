@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/build_oss_runtime.py",
+    "--evidence-name",
+    "buildkit-notices-01"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788919445.262452,
+  "elapsed_seconds": 13.123,
+  "input_sha256": {
+    "tools/build_oss_runtime.py": "4bc5b57f18639ebf4408eb9bfcf3a2fc23f587772dc9aa11902b4f680c0f6798",
+    "tools/assemble_runtime_licenses.py": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff",
+    "deploy/oss-core.Dockerfile": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6",
+    "reuse/native-header-notices.lock.json": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd"
+  },
+  "inputs_changed": false,
+  "output_sha256": "7535928c69f1b3f64e2e69370ec57e6706a01217aefa6eac61db8852fc3f80e7",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

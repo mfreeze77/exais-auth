@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\mfrie\Ai_Projects\exai auth\expert-auth\tools\build_oss_runtime.py", line 268, in <module>
+    build_runtime_image(evidence_name=arguments.evidence_name)
+  File "C:\Users\mfrie\Ai_Projects\exai auth\expert-auth\tools\build_oss_runtime.py", line 255, in build_runtime_image
+    require(report['status'] == 'IMAGE_CONTENTS_VERIFIED' and report.get('scratch_removed') and
+  File "C:\Users\mfrie\Ai_Projects\exai auth\expert-auth\tools\fetch_runtime_notice_sources.py", line 29, in require
+    raise ValueError(message)
+ValueError: Runtime image qualification failed; see evidence/runtime/oss-core-notices/buildkit-notices-01

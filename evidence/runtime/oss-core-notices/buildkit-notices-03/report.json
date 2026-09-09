@@ -1,0 +1,2429 @@
+{
+  "timestamp_utc": "20260909T021008Z",
+  "status": "IMAGE_CONTENTS_VERIFIED",
+  "authentication_complete": false,
+  "full_distribution_approved": false,
+  "services_started": false,
+  "commands": [
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-oss-core:12.2.0-probe"
+      ],
+      "exit_code": 0,
+      "log": "command-01.log",
+      "sha256": "2ea16e4a02311a8730f697a9b69cf4c3b9c52d48e1a57db1c4a3e100e85365f0",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+      ],
+      "exit_code": 0,
+      "log": "command-02.log",
+      "sha256": "2ea16e4a02311a8730f697a9b69cf4c3b9c52d48e1a57db1c4a3e100e85365f0",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "C:\\Program Files\\Docker\\cli-plugins\\docker-buildx.exe",
+        "version"
+      ],
+      "exit_code": 0,
+      "log": "command-03.log",
+      "sha256": "37b78b70f34d7015fcaf189bdcf2b040b9b497db1f0f6266f97054f1856f5bcd",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "C:\\Program Files\\Docker\\cli-plugins\\docker-buildx.exe",
+        "inspect",
+        "default"
+      ],
+      "exit_code": 0,
+      "log": "command-04.log",
+      "sha256": "71acb744a6cb1bc8843549fa2620fba91ac8fa80698cfb041f419044d026807b",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "ls",
+        "-aq",
+        "--no-trunc"
+      ],
+      "exit_code": 0,
+      "log": "command-05.log",
+      "sha256": "a28d89e014a596d0b39c412fa3a60e40386b79229b3f8f5818846e69c7c951a0",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2"
+      ],
+      "exit_code": 0,
+      "log": "command-06.log",
+      "sha256": "8ff8599564cc7ff73e3733d4db1b067707e0303e2e4e37e555f14866de3a938a",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf"
+      ],
+      "exit_code": 0,
+      "log": "command-07.log",
+      "sha256": "2ea16e4a02311a8730f697a9b69cf4c3b9c52d48e1a57db1c4a3e100e85365f0",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-oss-core:12.2.0-probe"
+      ],
+      "exit_code": 0,
+      "log": "command-08.log",
+      "sha256": "2ea16e4a02311a8730f697a9b69cf4c3b9c52d48e1a57db1c4a3e100e85365f0",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull=never",
+        "--name",
+        "expertauth-runtime-notices-8350a42c9bee",
+        "--cidfile",
+        "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\runtime-image-build\\8350a42c9bee4e83a43f300c816ccb42\\container.id",
+        "--label",
+        "org.expertauth.project=expert-auth",
+        "--label",
+        "org.expertauth.purpose=runtime-notice-inspection",
+        "--label",
+        "org.expertauth.build-run=8350a42c9bee4e83a43f300c816ccb42",
+        "--network",
+        "none",
+        "--read-only",
+        "--memory=256m",
+        "--cpus=1",
+        "--pids-limit=64",
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--tmpfs",
+        "/home/gradle/.gradle:rw,noexec,nosuid,size=16m",
+        "--entrypoint",
+        "/bin/sh",
+        "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+        "-c",
+        "cd /opt/expertauth && find lib plugin licenses version.yaml -type f -exec sha256sum {} +"
+      ],
+      "exit_code": 0,
+      "log": "command-09.log",
+      "sha256": "c8794d9ff7333824d447890b15d3049eac772cbc477754b9478aa5c78701bcbc",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "container",
+        "inspect",
+        "8f53387eb119a7ead34ec6659c42f435b6cedbc9f9e103478c3c3542a7843e92"
+      ],
+      "exit_code": 1,
+      "log": "command-10.log",
+      "sha256": "86ffe03dc6aca91ceba6dd93ebbea59f49752eecb9c68fd1ae7f7d90cb2da298",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "ps",
+        "-aq",
+        "--no-trunc",
+        "--filter",
+        "id=8f53387eb119a7ead34ec6659c42f435b6cedbc9f9e103478c3c3542a7843e92"
+      ],
+      "exit_code": 0,
+      "log": "command-11.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-oss-core:12.2.0-probe"
+      ],
+      "exit_code": 0,
+      "log": "command-12.log",
+      "sha256": "2ea16e4a02311a8730f697a9b69cf4c3b9c52d48e1a57db1c4a3e100e85365f0",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "ls",
+        "-aq",
+        "--no-trunc",
+        "--filter",
+        "label=org.expertauth.build-run=8350a42c9bee4e83a43f300c816ccb42"
+      ],
+      "exit_code": 0,
+      "log": "command-13.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timed_out": false
+    },
+    {
+      "argv": [
+        "docker",
+        "image",
+        "inspect",
+        "expertauth-oss-core:12.2.0-probe"
+      ],
+      "exit_code": 0,
+      "log": "command-14.log",
+      "sha256": "2ea16e4a02311a8730f697a9b69cf4c3b9c52d48e1a57db1c4a3e100e85365f0",
+      "timed_out": false
+    }
+  ],
+  "source_sha256": {
+    "tools/build_oss_runtime.py": "54b9ae1d23f95d16bf25f3b89e4c41373980600d3c0b9dd3a7cb43db6cf08382",
+    "tools/assemble_runtime_licenses.py": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff",
+    "tools/fetch_runtime_notice_sources.py": "266b6d2a661287b8c43adea0bef6f6c95964aa4bebbfd4b96bf2ab4c5918461a",
+    "reuse/runtime-source-archives.lock.json": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353",
+    "deploy/oss-core.Dockerfile": "8fc97d22cf391449794c9234891f8d9d9cab350b79db2947ce6d4c308b40e1f6",
+    "evidence/build/oss-core/artifacts.json": "02e1f70dccdd6e943ee6500b1d9f859609ba09e7ffb5136bbc469a1667f3f497"
+  },
+  "run_id": "8350a42c9bee4e83a43f300c816ccb42",
+  "image_tag": "expertauth-oss-core:12.2.0-probe",
+  "image_tag_promoted": false,
+  "build_executed": false,
+  "inspection_container_removed": true,
+  "scratch_removed": true,
+  "previous_image_id": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+  "buildx_command": [
+    "C:\\Program Files\\Docker\\cli-plugins\\docker-buildx.exe"
+  ],
+  "buildx_executable_sha256": "fa9a73a1c0743e0668b9c0bfa4be69f804e3a68e3dab187ebc515e00cb998c30",
+  "image_ids_before": [
+    "sha256:00bf188a48889ccc63db3c37fe3ea823047b32e458fff3c17f85f315b0910281",
+    "sha256:02029155352251d6284c435c30b3546ae145cc69147d137852140d0218b1c734",
+    "sha256:04c71ddd0092936218ceee4b556912312e52958e4357ae23be82601071aea548",
+    "sha256:0557ac14e0d45d02ed563067b82856ca5e7aa3437fa28d98d4350ea9c3d9494a",
+    "sha256:05ed2a6608f805818ee18b1b23836c573d545889803cec6526901f24d7b9dc84",
+    "sha256:0645999cc0a0b4c4a758b462c483fa77744d2df8e16ec1eee7c0e3c8f4d380f8",
+    "sha256:0896a80b7fdb51cb1e67bc031c60662472419eb74e015540c9d8a215cf50eda1",
+    "sha256:09ddc2887ffb3283c3bb52ccdd78dff3bc01635c305a694db29e58fa44812006",
+    "sha256:0bea0133b20e0a1409173186bfaa3b210e951a807d14e688fb041d7086c465b3",
+    "sha256:0c1d39aa81ce5deaa8c3ef6d37ae138c6374bebd9b916cb9b830c410cb1d5be3",
+    "sha256:0daef39faf0989639e1260200b0221a73ff6be63eb0b6a5a405dc1d564847f06",
+    "sha256:0ee87ff20c408105deac99080e559e86ff238449df46f297110fe0563bb0b089",
+    "sha256:11bd4d0265bca129a9bedea2952e0a8d2c95ef1a7801c61e3dfd5d7073e414b8",
+    "sha256:127052aea93336efc71674f6d3693269ea55714cc030f1c423f2f2954889f637",
+    "sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dce",
+    "sha256:14cea493d9a34af32f524e538b8346cf79f3321eff8e708c1e2960462bd8936e",
+    "sha256:14d80d083e5b53145f416bbbd36238336c9de4016c43fd950eb2eb845670583b",
+    "sha256:154f05fd33dc552b2d3cbece4296482949d172d82d4e87a369c8415532573369",
+    "sha256:164618910d090bf81646e7d11516c472ba641e6a09739254db7b0f0e2e4b0b84",
+    "sha256:1694ff069f0c9dafb283c36765175606866769f5d72f2ed56b6a0f1be922fc37",
+    "sha256:17171f359a1e3c35dabd60d712a8c846557b6015c108e0e992a30e443487db3c",
+    "sha256:1856ff83cead70c38d2bb7e7ced556a470667799a14861ae2acc383d42ef6212",
+    "sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73",
+    "sha256:19b30d97b51b291c77dbc953a88f3fe7005b870345606f9ad3dffebc49ca2fe8",
+    "sha256:1a54b3ed12c228bc52c0a8d0e899b53b675754ba584cc316487f33a67c2ad699",
+    "sha256:1bdc51bfe7ceae1bf35878a2ef7ad41e7bd531777a372a2b400c5ff55b650362",
+    "sha256:1c2c046bc09ed40fad370b599a0b1ae7987f55b01e247cf27a7c27cd97e5bbc7",
+    "sha256:1fb170793ffdec5b1c10d72334667cfe002858b5541a7edb3cb2a9efd454483c",
+    "sha256:2016a97d1e5832abf55bc29bb75cbc2e62a74ca465e991c43c0ac79126cbeee4",
+    "sha256:204c7f0f330f04b08079e882da46c701d22ae0a62a2b61b11f385525a8bad498",
+    "sha256:212a568428a52f28ee2edabd91fc6cbe62d6973e57713bd3ede96cae0bbaf127",
+    "sha256:215998dfe3b789c0f79a82ddb6b705d8dba656d3295835c0e151ad33ed1195b6",
+    "sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "sha256:24086414367a4281d5db6b784dde8975e0c812f7985048a5e58f8562adc20c0a",
+    "sha256:24f7917b02166592ee3e5293d3396a26671434090fc8f5a04446f9082b790982",
+    "sha256:25976e9d34a0fab1f278cae931f34c8303d97bf0c0d7f85b6b4dcf641d7702a4",
+    "sha256:269d1eb3db7f48aa62627421095f0793f096ce4e79c7b4000d9425e733c65658",
+    "sha256:26c4f89e502de7e20518e6f86d985354f503846fcc7084e9a944a8e1fa139793",
+    "sha256:26f8bccf1169f76ec3794ad01fd50f902f0c9ad8634b1130bf163418686e92c9",
+    "sha256:2929b9faf3db003dc4b35e0071ab72a0f813e96869d55955acca6a4ff5f7d4f2",
+    "sha256:29607f10dcaf90e5ef5b51829bb40a250ebcd2fe2f84833f074b157c7d326df0",
+    "sha256:2bb8fce1b373ca27235bb511ada5214cbb94f96429ea9d6fe52578207593cf04",
+    "sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0",
+    "sha256:2d7d29b504e7166f6d0c7655a18ebf5def5b37b029f8c4f8667e434ba774844f",
+    "sha256:2e1af8c563bdf9266cbc478ee18e88be357c327b664f38768275bef0cf908ae2",
+    "sha256:2f00f46fc7bbde4c3e100b56eb70807c4accd9ca34148fc6ba6c14081780060d",
+    "sha256:2fe4edcf3356acab4aafac278223768a5b22eab12325cb5b32df493b420aed3f",
+    "sha256:313612ca223c04171541ce2fefb0d9a6ec82ca6fea3351dcbf88472900eaab9f",
+    "sha256:31b887ec98211c4e611cc78dcf753b3dce7684007cde2c63ac67e79cab1e486a",
+    "sha256:32517b23b7cf35c2d66ebcbf0d25ef9c7b8b2767c461fe67eeadb45e43912071",
+    "sha256:3266bc9e8bee1acc8a77386eefaf574987d2729b8c5ec35b0dbd6ddbc40b0ce2",
+    "sha256:32d921043428f795c1e447947d14c6d04213f17636e22eb55048e9e46a77defd",
+    "sha256:3369903f13da379a0cbe4fe3d37ad9d0b58638d4fd1c0e51656f4c7c1dce89c1",
+    "sha256:34c729127386abec1c610b2aa024e39b4498dc2b4a72a0798ae21fbdc1b0493b",
+    "sha256:34d2ca77e6fda4faa17481959b319726bd234f45a1fbf25e519f92b9f1d4c61c",
+    "sha256:369d8f0bb1fbf84c28b90d9af62dea8ef1b90d261fbc321f211dbba96883613c",
+    "sha256:36be5b39c853276a600ea7de8fc2731e682c019c9d4fbf211cd1fc44735a5e3c",
+    "sha256:3af13d160bdc639b9167d40b117a4b50228922b8c899f6554dc332f1bf02b20f",
+    "sha256:3b44767883ac77bddae0160cc27b6b039345e23fa3504f4159efaa32264ab57f",
+    "sha256:3c04fe30d995e7faea025271620d725fd1d57339ebc08aa51250b57c06814667",
+    "sha256:3c331660cdf5a75b892f1ec4fc77f5125e9cb96f2751835690039f39f86597ae",
+    "sha256:3d0f7584ed7d04e27fa050d6683a74746608faf21f202be78460d679cc56461f",
+    "sha256:3f79a592a5957019a26ff18424f48885f94563f70098dbade575d0981dc30ed3",
+    "sha256:41032d691cfd6ed599ee0695926c00dc7df6b37a4e2da884acd5132496a36c11",
+    "sha256:415562f006b8f11e664a84c9363b3296c3a05cc8c91ff3561186924c6690dda8",
+    "sha256:419d72603f5346ee22ffc4606bdb7beb52fcb63077766fab678e6622ba247366",
+    "sha256:463eaf6072688fe96ac64fa623fe73e1dbe25d8ad6c34404a669ad3ce1f104b6",
+    "sha256:468c51c923e6ea9f64910f3663ee632b4324ffb2f6b2956943111beb300e22b1",
+    "sha256:46e0f28022a442659d9b54d174324787aa64074666d0d1dc9d2cb1c500e4eddc",
+    "sha256:473cb2130e31c48bbb7ba973893726ab46983e172450e4268393443ab31c81b4",
+    "sha256:48b0309ca019d89d40f670aa1bc06e426dc0931948452e8491e3d65087abc07d",
+    "sha256:49a952afa1ecc34ca7b77553a2e5b8f66cc5296a3cb67451093e88221c4f02fa",
+    "sha256:49aa7a9123a6fddd6c7a5b933aeab68427cfbfb46b92c8896f0aac8307e07978",
+    "sha256:4a1ff40f9ec697c2c812e7ad9100b6cacfd6e791d713ef9e0aee70bda5f928cb",
+    "sha256:4ab17cf17b3f4436ac43a7c1e0917dc74f4d11b0a784658e1862668dcebf4a45",
+    "sha256:4bc9d609e62aa5fa9b6068044c2ea75d2b056d4abdb754ab9de9bf35c1dde374",
+    "sha256:4bcd25ed1ee53fe8c709cb54de37cc8b5a9ec1dc248e1bd115f7354d166228e1",
+    "sha256:4c0c621a208b4bc88834af0dd2047ed4f71d8e2683b07ff6cfab3fb16816ccfe",
+    "sha256:4c1de31fc1e906989c646a42e4d96ed98f74d75e6a383bae826f9479c558cb4e",
+    "sha256:4ed62a6f7fe75bb732d998215b54b90b0db033e27e64a5d6bfcd6927b0f87cf7",
+    "sha256:4eec72b6550025d0af7df084146b3b872e468ed97f6b7460b39eb934058b6905",
+    "sha256:4f8751c411b6f299376e00443d30f50daf7a98f9d5d73a121b06b5200ae6a899",
+    "sha256:519591d6871b7bc437060736b9f7456b8731f1499a57e22e6c285135ae657bf7",
+    "sha256:53bb2937241e7ceea1ae336384ea3e8647a69f9c4473cc2f46ecfdb4d7ba494e",
+    "sha256:55868ba8ed9e274c067f6c2653934fa9de6ea78a9931b35679f3dba26040ecce",
+    "sha256:593bacda3e4d5f632f94dfe2ef73dec666ffbb07fdf0bdeb3129567634c99a80",
+    "sha256:59fc776960f666df171c22eae3f592d540ad4cd0e6d62512d658ff2af13a8d4b",
+    "sha256:5b1f7d016ce161de5291067e72455c85ebf6451873b5c7471ef15720a0f8b50f",
+    "sha256:5b6ef1aef84e3168da2110504ad7740306d071dee714d48e1acc46063b4e20ae",
+    "sha256:5c8931cda015626e14e57c41d7cd1a466d47ff76203e7119401421634c373f7b",
+    "sha256:5cab74e7f8a5e7c5f1c8a9e6268b1f352f053c36c656f493308340bcecbc636c",
+    "sha256:5d4c143943a5c033c6ff1845f0c60538b80640fdbeecfe561b1d2d3541c622e4",
+    "sha256:5d88c3c7dbeeae127aaf1951feef0d77b99d973fb80258b91ade62a73384b23a",
+    "sha256:5e895c9c641bcc3a31e46f10503670eefe5b38909d4398cf719f5db657155fa4",
+    "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+    "sha256:5f5c8640aae01df9654968d946d8f1a56c497f1dd5c5cda4cf95ab7c14d58648",
+    "sha256:5f9a271f84457f05da79e62f8be6b322c3fb238f07e6288ac5cb62e8e668d121",
+    "sha256:5fa347837fe611d2ee52b0033b96cc4e80395c22f7350683d2432d02fe522299",
+    "sha256:601b4e7ddcacbcc28f63a7cc79cdddb5e3942c3d8b13f03c2a950233ec272448",
+    "sha256:60577793484ed5947c4c119ab1c5664325450bdc97d0f37ea78cd6079debe2a1",
+    "sha256:60c27e7d4d6c7dc0aef6f36c9a8a86e7b4b8689c1d81bcef0762462b069a6afe",
+    "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+    "sha256:60f2dd5137a54b6e3acda4167594f4e81882fe82a156686e3b269d4b1c3cadbd",
+    "sha256:617f579406165e59e88bf9cf624ccee871169ebbcd77b8482b9087b85d7e0e8e",
+    "sha256:65c2bc9df49103b580b9c9118f181f8e7f35dad7242f89a12f2dbfc883040d58",
+    "sha256:66abb9876574295404bf87383efea14d016d9cb067d6c4f42975866789ede6e1",
+    "sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2",
+    "sha256:67bd686fc519f9251e39f92cf17e0f2410232d4ac3d44e394b3cbb91ea0e0a66",
+    "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+    "sha256:68209f4258825a72dec2b3f5437c92297e10267361a4efb9cc78aecefc89f7e4",
+    "sha256:682c58dde4fa0fb65f5ca8b850da4bf84aaa5cfe6e79e972d4023002dc1e6610",
+    "sha256:697c1a938a55cd07cd1c7793f89f0a0f56a93aba8ac1a676748ae91a57945d7a",
+    "sha256:698f514bba46f6221b1f6594769465544c20d3ee1a9356a124649b3027ee8bb7",
+    "sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+    "sha256:711d630f966b9a9835c9e080e6a9cd3a526db76fcc84b70b22c2db5c9dc6b977",
+    "sha256:73b598708be0e276ecf95ebb7e8a37fc1cfa68f4a20c0f2bafab958e8ea8f4ba",
+    "sha256:743061151b0b7972ac2a8ec39c7b78590dc905a0269947db40ae706651c66455",
+    "sha256:74d1ec8e1bb904a858c7f70adff102700a03abf6fa5789f95a882a22437db344",
+    "sha256:752ea8a2f758c34002a0461bd9f1cee4f9a3c36d48494586f60ffce1fc708e0e",
+    "sha256:7619db47382ed06efd6f4f763758bf3444bb18564b622bfc7b553582d81adbef",
+    "sha256:76468de3b3352320f620a13c5c0c7a61c98b749c6d4c29ef44f631e11123c71c",
+    "sha256:766913e4d90af441f657bf9ab4f722228197bf0a7c99a53cdcf6f3f20f570021",
+    "sha256:7958605b474b3d264a969cb3a123d6aa00ad1e1fe9da8a69984dabb704d93317",
+    "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+    "sha256:7b4b1c1866bd60012f331ffd9a001622728674a8fb5ebd3fd9590b8dce820b7c",
+    "sha256:7be2a96cdbafce3651d1c2f066aa57d9823db45591fb1eaf30e32d043a17d3bb",
+    "sha256:7c36c77a27a9598e326352bda63d6ba5adaa3131e74445dfed0a641b309c8b18",
+    "sha256:7c848cc37ab72701dc6c4f685ac90f9a04996916b644f47be9edc6060372383a",
+    "sha256:7c88dfff46d2a3f880d0015fdddb4d629891df3c10413d17a5430616acf9ef07",
+    "sha256:7c9a5bed71ce95e3e105c978bfafefc7f7ac1b4842a3ebbc4a8631f7daadec8a",
+    "sha256:7d5d5191b7d65c61e83d6b25135c2592334cc46611663cc9c0107331eb777e8d",
+    "sha256:7dd35b695acc1c26080b3906d29cc3362ec1416a494eed9bbaf4752bc70745b5",
+    "sha256:7ff88b1ef2e55d5cee69136b7e22e8569a712a064b2e852b85eda520fe8057cc",
+    "sha256:81411b1ec943e27b7af4286bf4967969fb4c2601ffd1c6ee6d09b16a8dc3164a",
+    "sha256:81bf557407e36eacf5bf23ee67bc03cb1957d6a91c3552b3755e848120b48dbb",
+    "sha256:81dc45d05a7444ead8c92a389621fafabc8e40f8fd1a19d7e5df14e61e98bc1a",
+    "sha256:822c0fad88bbee3d05c3a9e38d2911ad73d3a7d58a4ac78ca62c05e6564ad3b6",
+    "sha256:837919e77a33d9a2ea99f311a3d2ea73cdce813b885e176dabd2df45fbb8f1af",
+    "sha256:86276d87b6ca8d54ace59633cb236773bb408044c07a5d533fbd64571160ee45",
+    "sha256:867e4c1540927c1bc1a5d77741ff1fbe5dc2111eb9129c094caf4c673b56fcce",
+    "sha256:872cb5ebe37770b0c1656b6f85a114accf7fbfcb316505b4fc4dce3f1aff3421",
+    "sha256:883bc7bdc37d0b566b1940946f03a4c86de0fb9eb4f7ce725fcc2d4bb8bd44ca",
+    "sha256:894269cdfac1ea1412a4ec552f73f15f4550febb21b47fdf4a2cfeea3148373a",
+    "sha256:8a83923f2731acd3ed87a2386cd69cfdb1c69f78a3fda149f15d796a72fc562f",
+    "sha256:8a8d55343d6fc456cb183453e3094ff140b984157b36b48f817dd581654f2aec",
+    "sha256:8cbee1481529d6b514907588f4a3e507c2cba7c040967d7c2e5ee25aef347092",
+    "sha256:8d2110b64ea3e1302b6b1877c2ef9158425fd788b5c81c535e9786b79fec6732",
+    "sha256:8db24311204897da1605e3775269a9487c318505a5bb91a20c8b8521e127c24c",
+    "sha256:8efad3e9f7ccb3b0251b296249e304cff910b7f0de0c013b7fa024bb64e10d3f",
+    "sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5",
+    "sha256:90732706c7404e7af0fe3fc01340695fdcf128411769219d62fab8520d52baac",
+    "sha256:927bf1609b4bdbec4b815955c8b9dadf143cf24759acd2b0f7bba83d920a268a",
+    "sha256:93ad3077183ed1f607cd64c5e0e2a9af79ffc31c1a7ba574c9c824dde7270afb",
+    "sha256:941dd88d68808ced6931950757c5644142a9ab4ca0d2181a04f287c5b571ac19",
+    "sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6",
+    "sha256:9a29f987c2693c86e0c43ad31d987ba3567d9b9c853528032bc377ead56479bb",
+    "sha256:9a55c7c0b81fe3f2463e50322edbdcd4dfe96f46e2282452937e59289975837b",
+    "sha256:9bef0ef1e268f60627da9ba7d7605e8831d5b56ad07487d24d1aa386336d1944",
+    "sha256:9c1cca14de866e53f014a3e99323a0752a9850bae016bf5b44679d611cb195b4",
+    "sha256:9c283d1fff2bda332ec066160f06b24c448ff6f310a30e442675d2e36e724c2d",
+    "sha256:9c900dea9e8fb7e16277c179b555cc72d29a352dbc33cff48ad5a0412fd5bfc7",
+    "sha256:9cd7f155b110eb1c178148b0a3a1a354d0848140361170eaa35d7a6cf4f7bf1a",
+    "sha256:9eb0c891b2481c1a382e78202d31c48844c2fb63e0845aac086bb2d23a5661b7",
+    "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "sha256:a15864dd90109005823f04a97efbfe0f602e091ef4197cc1ae8ed690dd0e9db9",
+    "sha256:a1e6963c9a4e39883bdbe7df2a1beb2f859f959fb471de3a2878d31bd90c50a9",
+    "sha256:a1ea29fa28355559ef137d71fc570e508a214ec84ff8083e39bc5428980b015e",
+    "sha256:a2cebd8b7a31a3d527a780f3f9988086a2f3322b685b4ee533f33d0b66ac8a70",
+    "sha256:a3d8aaa63ed8681a604f1dea0aa03f100d5895b6a58ace528858a7b332415373",
+    "sha256:a4198ba8ed4aa88e89bbb0c3ab27f439d4d29eb1f8b4e54c1dff7b53a1ac4daf",
+    "sha256:a4ef25b28099f2610ea5076513228697737be12f1b41f088f453765054945bce",
+    "sha256:a5ac65846fbe81056d60f8addd8a79dc27f40c386fd280b29f08943830662e6b",
+    "sha256:a5b8a30db2db7b572e1a391b3a84f4785e37c055f8be2b38966ef6529dc2d063",
+    "sha256:a5ccd5f6c98a410244a36b39a7cbae111174c5516b2cb76e6d3b16329957263a",
+    "sha256:a6a10906d67530b0cf8e54183c51d556edb5fa1cbb5673ff31ca471b41874aeb",
+    "sha256:a87c80c61acf28050fdf0ea560f9c9e557e02b9978feb299369aded909ea1ffd",
+    "sha256:aa3336eb26b6eea7f43599c4614cd9b2a778fc93b0e72c2ed0c34d69b8f8bc49",
+    "sha256:aa52ff36401f0e391e34730279f4544d907cec53d41ce2594df92ca0e6e0c1b6",
+    "sha256:aae679f449d3a812c5ba9e6eef36809d370639fd6b5cf712ace91189f8a88035",
+    "sha256:ac20a90db03e87f7a35b364c1d15dbaaa9c7419992dd860b68d53c2e702d867d",
+    "sha256:ac5ea6df00de858c207758dd27c257161c4af524d0de1329fbfd57b66b2c920c",
+    "sha256:acc851355a21340c3594506b610bd6faab9b5051856df46f0bd4973b12df75fa",
+    "sha256:aebffd553eaf86ee87752c9f696e816cc0a8d63e4fd27f006fa2e84bdc90941e",
+    "sha256:aed275db67dacdc0a911d71961567e460649222dc993b9e96eeb033e64273935",
+    "sha256:aef4e6aee903ef62f39f25f95d0219ed1468c15efc1a4a5bbbea744742f571c7",
+    "sha256:af32e97399febea808609119bb21544d0265c58a02836576e32a2d082c262c17",
+    "sha256:b1589e7f0c3d52c1c06661a03bd215913dfbaff5fe17da18f2a8d507ecd91a0c",
+    "sha256:b2f49e2f14c0ebc4544539ff0bf62f998d03541eaf5b435dbdc5be71745695b5",
+    "sha256:b3896bc517b76c353ebfd12cad3f11e835539f0cfe6405ccbf2bc3a61e7fa0a5",
+    "sha256:b3e1953fbac6a0216e7abccdf0b3b63c0d972ceb434af247e69b366ff6fe3d8f",
+    "sha256:b46e3ca81c63b3bf924ffb75b7cbb51afda7837e86c1b862db08567349c594e7",
+    "sha256:b4e4ebc5d9dbabf28c79e2279f4fbbd548a7a4ec8fd00dfad0358c94398c07a1",
+    "sha256:b535b0f3c1cb8b5b43c8225172c8dac3cda55d07864360db7700e782d197c2a1",
+    "sha256:b5d01d9f4cea3f9948b0a7066f05c302c315cfdcfdae44e7fae85c373792d26e",
+    "sha256:b5d05e50ff7f5234fdb0268be88618ed3ee65f4f62f334bca3d61f059c2b4bc3",
+    "sha256:b6bc50314f3598fe92e1140905648e0b8078b39703e70ffcb7d2870c19170916",
+    "sha256:b73e12cabad91f918470c6aedccb11a80c699cdae995227fe9ad71ff6a28d368",
+    "sha256:b972174ec6b652b9eb4212b2170d5f2ddb661ab109e9cfd768fdcf6ca427aa95",
+    "sha256:ba65510731e53280f991a865ecd72c8972986120d4c644a75cc5b78120779671",
+    "sha256:bc3e7beedb7e4c780ea30e157308c74ccf3a758aa7cfe322b2a7e929afc32c95",
+    "sha256:bc62979fc90c7afcb13fd46e20575ba8d57e315ad9e82b8666828c40a59ed969",
+    "sha256:be1190afcb28352bfddc4ddeb71470835d16462af68d310f9f4bca710961a41e",
+    "sha256:be5c3a418960cb0a1c27622d0abbfeabd36c20e800170bcb86a7f4ab80649cd5",
+    "sha256:bfbd910023d945d9360f19e2f2cde2a60b294c067647b9b6ab337e068015d742",
+    "sha256:c02d00b0f40c39dde9fb2ad27c73ca32e9352fee903acdbabf645617bf31d258",
+    "sha256:c09c283caebe2b774d3ce69789e3d7e496cc900da624d36d5ba82a942db8f355",
+    "sha256:c2f303c2425ac91a08f95ca53c3efde66ededc1e93d7c407f330212d6da33d80",
+    "sha256:c40748e7be861dbe67f4a14721bcd34a62813a6242ad6631fcd38f8793465eb3",
+    "sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32",
+    "sha256:c65b357d0af306eeea3f44395a6f941178eb77e6b0e6e36a04ef0c8eda186128",
+    "sha256:c7a737f15ba3e67253b0db2f0283f98a9cfcfe63dd55c5cee94d1c97f236d06d",
+    "sha256:c85bfebc522c75e6d877420b836caf0117c66bd51b7301d2e0d3eef032055dba",
+    "sha256:c99eed79b3b16ecf96093c301c7d3545af333c22c967c555fa44c76b3079f548",
+    "sha256:c9a002b6e1356295b2c403255cd6b71b165cbb6820d0d1ed285d17bb18b5c9be",
+    "sha256:cbff9d1a9041b316010f2da6b701b6c0d597718cb90928c85eb597334a0d23d4",
+    "sha256:ccb73a1a005d80c33cfb757325331fbe269512843ddd4dcacef5e63d111f45b7",
+    "sha256:cd0e8aa1efeec5e3c6ef57e93f3b0c7b3d2a2fc82c6a31a769c674356776b0af",
+    "sha256:cf78e76683b9ca8c5733cbbdce6c9262b45b6767934dd0a95e671f9a0fc20685",
+    "sha256:d0199e2a90bf7a206a485b115323a75bc946f30b463d704c5435a454aca084dd",
+    "sha256:d0b97c740aae83c228e5e0bf1272314113ef14e84eab561de2aa1107fb76f966",
+    "sha256:d1531622c4035a3c96a090ec43e259ef74b938f0ba8a945490a6f2d38fe4c6f8",
+    "sha256:d170336d490c4c6c700db1eae94a79041afa11a4049132764159319f61f1ec62",
+    "sha256:d3a9d8ac27bb7e05e333ef25b634d2625adaa85336ab729954b9e94859bf6fa7",
+    "sha256:d522157b5c139bd277f65ea448a9c5ac9acab07c9d1c8f0aef248cc598d02447",
+    "sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436",
+    "sha256:d77fa9726c02bc79accb1f662a8b4e19f84912d4c6d1c14235c2034a6a309ca9",
+    "sha256:d7d3b07d96453b8e788d2342ba40c59b7d4a3d2b80b342bf96e82ed11d0f451f",
+    "sha256:d849dfe2daaaf4582a7ad5178622700c28cd37f5fac0b3365accdde2013f1e66",
+    "sha256:d90acd2df9f6fd17027802c37515a05a4985169ef94f9874e0e2a118ce683690",
+    "sha256:d9b4541e214bcd85196d6e92e2753ac6d0ea699f0af5741f8c6cccbfcf00ef4b",
+    "sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+    "sha256:da4db5553f9f3451588a481d967765552dbc48d67646f992b334a055e78185fb",
+    "sha256:dacd0a2bff35d000890f9b283b0f98e94e55aab0de98d11e55becc6e781fde17",
+    "sha256:daded5ede086913132ff6929c122fc2a49fded872038579a611e0d718427d932",
+    "sha256:dafd5547f246db665ba6fa7a8186d27e153496240606659c38830749da1ebb40",
+    "sha256:dbb525f6470e7f4e2c2c4f55d28f8132e7ae8a0f537161e6eccd18dc56ed1ef8",
+    "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e",
+    "sha256:df111ec62b140c43b69c84bffeacf44a409751396fc1dbc85769ba823635e20a",
+    "sha256:df4797ea516bdf481fa064bdf3d25f72c47e618cd1cd9e070ef118df6b395a86",
+    "sha256:e11b714f9153a07f7706c96cc6fad2f5603318c6217e8093c9dba6a2941c6c5d",
+    "sha256:e4229bccb7a753c2b3a9dcb5bfda79ba46780f754ec3f15192a3692779b8e0e2",
+    "sha256:e7723ff73d963f5cc6d9c4643ea3d989527a402a319239054e9472a7fb9219a2",
+    "sha256:e87bd94f69a1b9dc7a9cd5ddd99b5fd7aa2149686239d618f58cb20955704c05",
+    "sha256:e98ad1812ffc931bb73d469737b6992cff7e1a0965cee45a306f71a157d21428",
+    "sha256:e9fbd3573a7d3a9a57a8c7ca031d1222e05ab43622a5580d7389b31335a14fc6",
+    "sha256:ea32b344cd6cb449c2035eda05eded3c7c51d92dc13b33f3b88fade58880aaf1",
+    "sha256:eb2494f2dc2d10e1061ba2b4ea3eacdec112b6bde888460c1aa4daa13a6b25de",
+    "sha256:eea3027f238275812536382f10d4b24d1d325c7789f63e1b232ecb068c452c3f",
+    "sha256:eff2da56e49657dc4b4cd6ca846d0f9528f8a656a19db41b3ce9365d548a63e8",
+    "sha256:f071b26c04855fb66e743252d3967721193fb352e8aedb2870ff125f30c1bba0",
+    "sha256:f07ee23f903b2f7da05c3b756274d15f95ecbb265a106a54422668016addfa5b",
+    "sha256:f096d7c7dc2b23e8b78dc2a74e73dd97f22b417309355a6cfa3faa5e5802d877",
+    "sha256:f0d83e708dc40ad8606259c888f9617bfdc64b598bca1054c29d78d4a7110dab",
+    "sha256:f0fa924d9cc82bfb5524b8291aadff49f776e571e8d67c25766ce95bfc80b42d",
+    "sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+    "sha256:f1f4530826aa22322fdabfcc3930a127be8a5d9c458607f4c452e68edb059737",
+    "sha256:f2a35f300f6462a1abdd7f1890eb4241925467388f1fa98bbe6b965b1e4416a5",
+    "sha256:f3a9b07e4fee8c3c193faa451be23db0874aeacda8c232a31a61584d69d0365b",
+    "sha256:f440858c08c58b8d85184c627ed3b7c821b0202dbb18a57d4731a516db8a1dbd",
+    "sha256:f70347777315a4f8687909e2eae839c17cbf5264d899e248f9614fd58e012821",
+    "sha256:f7f7fa369238d15d9b250ccf8c08acb42421f6687b42cb4d439a4cf073b4efed",
+    "sha256:f86edfc5c37191d0a6f0aad8bcf5ef0862f61e8d24e90eeafe41ddb2631f88dd",
+    "sha256:f8d34ce9231f4ec8ad2636dc912b8f1811a22fb12f1d8ef99b0ad2161258841a",
+    "sha256:f959a533abd78d838d30ffd1ad4a9318f1acf8d5d54cfa3a5a15264af43ed6fa",
+    "sha256:fa94fb47cebff6532330795a1f1ad6ed731c4a9acf763293286cb5cea39b863d",
+    "sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293",
+    "sha256:fba3331270151a594ec7c1ee4ac02f505410f207ebab65d423933d7b59e6dfd3",
+    "sha256:fc767b214079bf85c655fc73f86ef9042d270ca24eb7995425a11855f701c29c",
+    "sha256:fdf5151d7c2eb474eb3eee551cd6115448cbb033be9cc2615c461c74d414feb8",
+    "sha256:ff02b58f971e7d7d156a1267e283fcbbeee91773b6aa36c49dac28ecfe28eadf",
+    "sha256:ff4257d0d64efbe99ed1ddfaf07765cc3c36dc7518bf8324d41961327f441c54"
+  ],
+  "scratch_directory": ".cache/runtime-image-0qzf97ux",
+  "cached_base_image_id": "sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2",
+  "context_bytes": 59854247,
+  "image_id": "sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf",
+  "image_size_bytes": 465923258,
+  "installed_file_count": 479,
+  "runtime_jar_count": 87,
+  "runtime_dependency_count": 84,
+  "binary_notice_text_count": 48,
+  "source_notice_text_count": 41,
+  "installed_files": [
+    {
+      "path": "lib/annotations-13.0.jar",
+      "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+    },
+    {
+      "path": "lib/argon2-jvm-2.11.jar",
+      "sha256": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1"
+    },
+    {
+      "path": "lib/argon2-jvm-nolibs-2.11.jar",
+      "sha256": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804"
+    },
+    {
+      "path": "lib/aspectjrt-1.9.24.jar",
+      "sha256": "38eeea5f17ad49b708afe11473867a99407f656ae140824ce8d6fc0c19fd4802"
+    },
+    {
+      "path": "lib/bcpkix-jdk18on-1.84.jar",
+      "sha256": "c87f16ed9e5ec61bc94151e9f3646ac44e50cd448121ce84367fa4b7ec7ec1bb"
+    },
+    {
+      "path": "lib/bcprov-jdk18on-1.84.jar",
+      "sha256": "64d6c5a6121fcd927152dd182cbed39afe0fda641a970d9bcc0c9cb1858b2731"
+    },
+    {
+      "path": "lib/bcutil-jdk18on-1.84.jar",
+      "sha256": "b374e16963421fb9cfb01cc20d7ad8fd2f8b8188e3eef0ec0a8965e245f7619a"
+    },
+    {
+      "path": "lib/checker-qual-3.41.0.jar",
+      "sha256": "2f9f245bf68e4259d610894f2406dc1f6363dc639302bd566e8272e4f4541172"
+    },
+    {
+      "path": "lib/commons-codec-1.18.0.jar",
+      "sha256": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4"
+    },
+    {
+      "path": "lib/commons-lang3-3.20.0.jar",
+      "sha256": "69e5c9fa35da7a51a5fd2099dfe56a2d8d32cf233e2f6d770e796146440263f4"
+    },
+    {
+      "path": "lib/core-12.2.0.jar",
+      "sha256": "d16e9d760ace7e9c5cd9b888df1e67bcfdad730b25a5c56a50f52e1b2229c539"
+    },
+    {
+      "path": "lib/cryptacular-1.3.0.jar",
+      "sha256": "5bef5b396aba0607bd972365991f833f7d8f16af506f2ade1f589fe344105123"
+    },
+    {
+      "path": "lib/error_prone_annotations-2.38.0.jar",
+      "sha256": "6661d5335090a5fc61dd869d2095bc6c1e2156e3aa47a6e4ababdf64c99a7889"
+    },
+    {
+      "path": "lib/failureaccess-1.0.2.jar",
+      "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064"
+    },
+    {
+      "path": "lib/gson-2.13.1.jar",
+      "sha256": "94855942d4992f112946d3de1c334e709237b8126d8130bf07807c018a4a2120"
+    },
+    {
+      "path": "lib/guava-33.0.0-jre.jar",
+      "sha256": "f4d85c3e4d411694337cb873abea09b242b664bb013320be6105327c45991537"
+    },
+    {
+      "path": "lib/httpclient5-5.6.4.jar",
+      "sha256": "bdef5f8841145cd76c4c605ff301bc840eea0d5292332b7b892a93316c0d8ee1"
+    },
+    {
+      "path": "lib/httpclient5-cache-5.6.4.jar",
+      "sha256": "c425cb6db4863480982899092d1d283f84c0f32914a59bf2de479e69daa8fa11"
+    },
+    {
+      "path": "lib/httpcore5-5.4.3.jar",
+      "sha256": "18bfbbabb478dfb67f31aeaf428c387f3c3df654582e1309f708ee1f3086830a"
+    },
+    {
+      "path": "lib/httpcore5-h2-5.4.3.jar",
+      "sha256": "c7db7026b8e2dea39132b04a6069f6671e2858309b20a146ec5c7dd6ed73a0b6"
+    },
+    {
+      "path": "lib/jackson-annotations-2.22.jar",
+      "sha256": "21ddb598807d3a51a876704eb979d9296e1c6a6f47ab1826ff88c6d6a127a2d0"
+    },
+    {
+      "path": "lib/jackson-core-2.22.1.jar",
+      "sha256": "941ff029bcdb93e83d209ce516c1a7fb8bbac07d0a2fa122f5bf194b2cd7b4f4"
+    },
+    {
+      "path": "lib/jackson-databind-2.22.1.jar",
+      "sha256": "7dcd7e53bec1f56c7ad278bd1ca0840bebcc595d61ce44d6a8439abb75b965b2"
+    },
+    {
+      "path": "lib/jackson-dataformat-cbor-2.22.1.jar",
+      "sha256": "5c6e49843e46aaeebd3ffc777ad221ac2208f3e36e24c56779ac6fabdfb1d499"
+    },
+    {
+      "path": "lib/jackson-dataformat-yaml-2.22.1.jar",
+      "sha256": "cc3a0e540791a9a1cbcd7584767b84572ffda0b72823856558f47dea69ae8ed1"
+    },
+    {
+      "path": "lib/jackson-datatype-jsr310-2.22.1.jar",
+      "sha256": "85da45b7e5e565418963ff8f0dcb184365b0557c15468933f4318dde5c3ce845"
+    },
+    {
+      "path": "lib/java-jwt-4.4.0.jar",
+      "sha256": "173aab2a30727e5586e13055fb6c4e27112453f5d8cf1136b3369c674cbe011f"
+    },
+    {
+      "path": "lib/java-otp-0.4.0.jar",
+      "sha256": "c430c1039189635e4b6b7daee98b0c56288e459a3b8ec851cb7bcb9918107247"
+    },
+    {
+      "path": "lib/jbcrypt-0.4.jar",
+      "sha256": "e183f6f59404fc1e12073cfea4ace7ea103c900463cd21fb609a7c617ecdf624"
+    },
+    {
+      "path": "lib/jna-5.8.0.jar",
+      "sha256": "930273cc1c492f25661ea62413a6da3fd7f6e01bf1c4dcc0817fc8696a7b07ac"
+    },
+    {
+      "path": "lib/jsr305-3.0.2.jar",
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    },
+    {
+      "path": "lib/kotlin-stdlib-2.2.21.jar",
+      "sha256": "6558a3d233da56a20934b32159f9db5f86ed5816ef098f78a2c223dc6abb79dd"
+    },
+    {
+      "path": "lib/libphonenumber-8.13.25.jar",
+      "sha256": "43f54cb4b10f907b1dec3b3bbfbbc3eb902ad26769da20b1edbb944a589f2407"
+    },
+    {
+      "path": "lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar",
+      "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99"
+    },
+    {
+      "path": "lib/logback-classic-1.5.38.jar",
+      "sha256": "afb439c61fa287c9e1925523b13baab03617e724406a389d48b61c2c3e46b700"
+    },
+    {
+      "path": "lib/logback-core-1.5.38.jar",
+      "sha256": "a855a0fc97b1d06f4efb1c3bba5ebd0eb508d8b58e68e89e4bbc23a85135c883"
+    },
+    {
+      "path": "lib/metrics-core-4.2.39.jar",
+      "sha256": "cc7b1352cd8077974b70b3e365c4f13aa93f5786ce1dea538be5451ed23600c9"
+    },
+    {
+      "path": "lib/metrics-json-4.2.39.jar",
+      "sha256": "8726b15affd61992a4ecd0ed1dc3936782781e7fa0fdc47be04d338f9341dd46"
+    },
+    {
+      "path": "lib/okhttp-jvm-5.3.2.jar",
+      "sha256": "c771f48075b763f6c322055e21129a94b7de4c1faf3f8f58ace320b0c9517a30"
+    },
+    {
+      "path": "lib/okio-jvm-3.16.4.jar",
+      "sha256": "2196b993cd34dbbd919e7e01f57a4781b58bee80f86106163e287c20343a96a7"
+    },
+    {
+      "path": "lib/opensaml-core-api-5.2.3.jar",
+      "sha256": "40ed25f0892dfb833aa2b917bd2be1e10cb7c788efb3276b66b19338b80c29f6"
+    },
+    {
+      "path": "lib/opensaml-core-impl-5.2.3.jar",
+      "sha256": "af8604462837a7931d4688ccca3404db325ef7abff7a70a36206a9c4dd7fe953"
+    },
+    {
+      "path": "lib/opensaml-messaging-api-5.2.3.jar",
+      "sha256": "53e9a343afcdefdfaad4987d63598a2284c1bf98b99761c8baea1a69c2f7ebcd"
+    },
+    {
+      "path": "lib/opensaml-profile-api-5.2.3.jar",
+      "sha256": "3c150e2db1dee689b776c604d601adcc060d0305c6eabffa17f213509f5587f8"
+    },
+    {
+      "path": "lib/opensaml-saml-api-5.2.3.jar",
+      "sha256": "cce72578ec8df5dd18cb71c88bba89bd196c640281c199ce875e2aa44154f93f"
+    },
+    {
+      "path": "lib/opensaml-saml-impl-5.2.3.jar",
+      "sha256": "9f04221e172dc426f90fb3873d0148a0744edbf9e7a37de7ee0e6a34f7b74581"
+    },
+    {
+      "path": "lib/opensaml-security-api-5.2.3.jar",
+      "sha256": "2053f9ae1f37a87cf94117ea61395080eb3ec71c631aa71dd2a6c386dd8ff3af"
+    },
+    {
+      "path": "lib/opensaml-security-impl-5.2.3.jar",
+      "sha256": "21cc4cc73551f4ded22e8390286b9a4202b48c5054498bcd263f393f30d441a1"
+    },
+    {
+      "path": "lib/opensaml-soap-api-5.2.3.jar",
+      "sha256": "1b503de27e275bbe9014b4d503ce80a8b8dcfcb0c47fff9e48f14b05cb2788ab"
+    },
+    {
+      "path": "lib/opensaml-soap-impl-5.2.3.jar",
+      "sha256": "b6a38b04741401de8b697ca773f200edb2421347e1eb0aa220355596d5675bf9"
+    },
+    {
+      "path": "lib/opensaml-storage-api-5.2.3.jar",
+      "sha256": "07402db8880c7da7143c57f1c2ea3cf08e1e80e1470d86409e2db56e1d3fb02a"
+    },
+    {
+      "path": "lib/opensaml-xmlsec-api-5.2.3.jar",
+      "sha256": "3401e9e309fd170f4b9ea0d8fc68b5b778c2374bf654371378bce21952d6c6b9"
+    },
+    {
+      "path": "lib/opensaml-xmlsec-impl-5.2.3.jar",
+      "sha256": "cc67fc1bd9cb435cdbe7483ef04513c83cc9619a3015c04ad41bb6cc0eb6e68e"
+    },
+    {
+      "path": "lib/opentelemetry-api-1.63.0.jar",
+      "sha256": "07377d6f3fb2ccfb8b8b713290bf48759f9218d4e72467f3ccee55895926ee4b"
+    },
+    {
+      "path": "lib/opentelemetry-common-1.63.0.jar",
+      "sha256": "6e0ab4fa86b2581848328cc25c00188d6b0826f039055aec85352ebcf64b05df"
+    },
+    {
+      "path": "lib/opentelemetry-context-1.63.0.jar",
+      "sha256": "f96d13d1db4bf090eeb36d0c4e211e048a1ef48a59d833569b33aae4b4760a77"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-common-1.63.0.jar",
+      "sha256": "f288746055a9118d24a662cd7526cd5eb495ff37e5e4e54798a751b4bbe56e20"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-logging-1.63.0.jar",
+      "sha256": "6d85a64b76977a60a57204304925ef216445adc7154d4103136caf6e11306307"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-otlp-1.63.0.jar",
+      "sha256": "4877e560f0ca03675cfb99ed5457c0d1875e953381e029f198280aca8a1d0f47"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-otlp-common-1.63.0.jar",
+      "sha256": "987fb841ea9c4b13699fc5c1afc842c5e83b38e18222821cdf9e6449c4cd5483"
+    },
+    {
+      "path": "lib/opentelemetry-exporter-sender-okhttp-1.63.0.jar",
+      "sha256": "5821c0fda70dd188c11a855ed2d76d410ec4fd91d7315299e11e1318e3cb1d58"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-1.63.0.jar",
+      "sha256": "37acf2700ced98f59ac719e0551726d62eb085d659eb9f7c8e61f228c230902e"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-common-1.63.0.jar",
+      "sha256": "75ecc937b6ad84efd838f445ee7f810f123c54d8c57ecbbec9196f009fe18cd6"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-logs-1.63.0.jar",
+      "sha256": "85c4f207f2a437321af7864e45f92637b7ca5e9c9611103e2ff322bc9e6c4bd7"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-metrics-1.63.0.jar",
+      "sha256": "2140ff82be356e0d77a206f5f7f4868d22d49efd4976d00dee2fc52f1d8c670e"
+    },
+    {
+      "path": "lib/opentelemetry-sdk-trace-1.63.0.jar",
+      "sha256": "b3ad84c289d421d8ae0062d782043385b84e0394b859f6329dc02dae2485e7c3"
+    },
+    {
+      "path": "lib/opentelemetry-semconv-1.42.0.jar",
+      "sha256": "eb56685bfb9d26b1c95a171b38015747fc3085dd7f63aca26dfd87352ccbbe40"
+    },
+    {
+      "path": "lib/plugin-interface-10.0.0.jar",
+      "sha256": "b26b00e1dd31dd0e651689c8dc482842b9c96c521e2b5e9df1092d41d1765f3c"
+    },
+    {
+      "path": "lib/scrypt-1.4.0.jar",
+      "sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4"
+    },
+    {
+      "path": "lib/shib-networking-9.2.3.jar",
+      "sha256": "cca1d53b5a5bfab21320ed68ee77c5e0f87af53753d69711a52af87cced94861"
+    },
+    {
+      "path": "lib/shib-security-9.2.3.jar",
+      "sha256": "46c53c48a6e1930f145add7f65ed51ab9273de9e3dc746b82e5d695d25bb0ba8"
+    },
+    {
+      "path": "lib/shib-support-9.2.3.jar",
+      "sha256": "c68f5668d23aa30a2a5b672dd03b46882bb0ce1185cf02240c4c99eee9bd94b0"
+    },
+    {
+      "path": "lib/shib-velocity-9.2.3.jar",
+      "sha256": "42f0fc3c53eae0b7d241b6e7c5a4c782100c78fe67d3527c1df67ba513a830c8"
+    },
+    {
+      "path": "lib/slf4j-api-2.0.17.jar",
+      "sha256": "7b751d952061954d5abfed7181c1f645d336091b679891591d63329c622eb832"
+    },
+    {
+      "path": "lib/snakeyaml-2.5.jar",
+      "sha256": "e6682acf1ace77508ef13649cbf4f8d09d2cf5457bdb61d25ffb6ac0233d78dd"
+    },
+    {
+      "path": "lib/sqlite-jdbc-3.45.1.0.jar",
+      "sha256": "f5f5404fa5a60f9e0b15e7bea2ea2d137e255f01babd0bfcb9dafcd2e3bf9cd2"
+    },
+    {
+      "path": "lib/tomcat-annotations-api-11.0.25.jar",
+      "sha256": "d32cc2aad115b27456ce075b2167b3d549aa9ca75439d67f6a60bcc057d7212d"
+    },
+    {
+      "path": "lib/tomcat-embed-core-11.0.25.jar",
+      "sha256": "282b65b9fe43647b1459c0df11101f8599a58de5832075acff485c3705ba4894"
+    },
+    {
+      "path": "lib/velocity-engine-core-2.4.1.jar",
+      "sha256": "1c19157d1171d560088e485be97c93a7a2f7e9f56e517f0a30273c5c39df6231"
+    },
+    {
+      "path": "lib/webauthn4j-core-0.28.6.RELEASE.jar",
+      "sha256": "d8a8f4b735bb9067fc2afd13f8c9ff723a5bad76341a83a4051a998cccff61ab"
+    },
+    {
+      "path": "lib/webauthn4j-util-0.28.6.RELEASE.jar",
+      "sha256": "ad70dd0c03f7ff7b8515cdc7da3a03f6c970d7a174fcb9347f1c411776b0e80c"
+    },
+    {
+      "path": "lib/xmlsec-3.0.6.jar",
+      "sha256": "395eccc3496063ac7b1d6af2422a11670ee5ded807f51542818eccd5fbb5e20c"
+    },
+    {
+      "path": "licenses/THIRD_PARTY_NOTICES.md",
+      "sha256": "2f8c1ec0b9f25574f034aec15b59c0770123208e2b30c5dfcdffdbbdd0646f6d"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-classic/1.5.38/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "d313fce42eac112de15e8dd12ad5250407676175a79291157adb4f108948db32"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-classic/1.5.38/maven-pom.xml",
+      "sha256": "63313f843b669c60255e66f2c52a9c1d3af3787009d9f389159e35a691b63857"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-classic/1.5.38/parent-maven-pom.xml",
+      "sha256": "2bce3a61a6449adb9a0722e1c0c1e391533880ba02916d3df83208999aea6c66"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-classic/1.5.38/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "10bc159fd66a1645406e39ed8cd83c5aa6d8fa5c1559b16b300bf42bc86755fd"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-core/1.5.38/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "941368225a9938c10e5187ef5f2f5db62ee68fb939fa7b5734ceda25e6e1d2bf"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-core/1.5.38/maven-pom.xml",
+      "sha256": "dba1707f025202fe344052163c3419a0f03d056777ac5c346175e5523c937d60"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-core/1.5.38/parent-maven-pom.xml",
+      "sha256": "2bce3a61a6449adb9a0722e1c0c1e391533880ba02916d3df83208999aea6c66"
+    },
+    {
+      "path": "licenses/ch.qos.logback/logback-core/1.5.38/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "10bc159fd66a1645406e39ed8cd83c5aa6d8fa5c1559b16b300bf42bc86755fd"
+    },
+    {
+      "path": "licenses/com.auth0/java-jwt/4.4.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "ce29284eebaf5d337a158d90ea36644f02d63dcd25cf4474182343805a48c1f6"
+    },
+    {
+      "path": "licenses/com.auth0/java-jwt/4.4.0/maven-pom.xml",
+      "sha256": "332ffdf5e6b574460f1d389e2bfca4e6bd9e0b07f80878ff968c8ccfc439bcf7"
+    },
+    {
+      "path": "licenses/com.auth0/java-jwt/4.4.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "f6a0d65b2032d53025172f8d38dbb40cd1bf755bce0f106b6fe4b78b219dc7fc"
+    },
+    {
+      "path": "licenses/com.eatthepath/java-otp/0.4.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "b34b8453c26ec89aa84d883ebbed2ed203fb7433c8f392197b831247803fd881"
+    },
+    {
+      "path": "licenses/com.eatthepath/java-otp/0.4.0/maven-pom.xml",
+      "sha256": "fb3e6e2fe31e0d62efff188dee01a0c177b332e82cd7947fbf7e438f922079bf"
+    },
+    {
+      "path": "licenses/com.eatthepath/java-otp/0.4.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "70216a0b473ed6dc77600231ac62612c389ce3c05cb091161548fd5eb4f24e20"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1f49fe8af2dd7fc3d5567f36e8ead584bc372e1e4e97baa8967f7491bc8ac08f"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/binary/META-INF/NOTICE",
+      "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/maven-pom.xml",
+      "sha256": "38c3ba52a0eade3e3eacc5b13499d56e1038ccbad8ec4bb79426dc21432b46d0"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "c11e5c8df7a9afd249f3a629de832a87387e6a6c4eb3487023771bb7c2e6ce2e"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-annotations/2.22/source/META-INF/NOTICE",
+      "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-core/2.22.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "ba39d021470c81c06c696e73be5187550c7f58e94a2fef18fdf51535b79dec9f"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-core/2.22.1/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-core/2.22.1/binary/META-INF/NOTICE",
+      "sha256": "e6aef1c0f4cf5b0f802c16b31fce309b3c3737450b93c40d6291bf6540aae3d1"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-core/2.22.1/maven-pom.xml",
+      "sha256": "34551c6c8d72a4a2215fd05fdcf2f4e693eff99e6e54632bd57cf2674478e293"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-core/2.22.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "7bbc51a8beeee1014986316f73a09c1bd9b092d486385874b5557eb20c0b05bc"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-core/2.22.1/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1ab6bcafd728e42e1406062b6154f40f87657999c470aecfb622b4397a8b6796"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/binary/META-INF/NOTICE",
+      "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/maven-pom.xml",
+      "sha256": "0bc8f98c7bd7232bc90324fc63c2f56f7ae92dee2bf0dc303669f4e2de8c1f69"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "b38f7ff888b2930c281535c00faf2b7d32a85fa72a568c0b6bb6a7a935de06d6"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.core/jackson-databind/2.22.1/source/META-INF/NOTICE",
+      "sha256": "612b14bc77c944ce229cbba0d14919162cfea8ed802cbf06a8e865e032d03201"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "f9a19dd37cd95effd3bf02474f263c2435992893beb3851bd6a701e0570d7cdd"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/binary/META-INF/LICENSE",
+      "sha256": "3b7ec3d73de1ac4eee9af17fd70239e8c226209713b7bc761821e5384acf0a9d"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/binary/META-INF/NOTICE",
+      "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/maven-pom.xml",
+      "sha256": "1824886105e1edc0026461d8e01de67bf406c9f43c857dbccf525b71a4c39c2b"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "c5e8b220c64599c4dffd5e28a98ba4498dfa5440283a61065481e19c5e9f6966"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/source/META-INF/LICENSE",
+      "sha256": "3b7ec3d73de1ac4eee9af17fd70239e8c226209713b7bc761821e5384acf0a9d"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.22.1/source/META-INF/NOTICE",
+      "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "43b3f18c176d522654ea2ec856d5c6454e895368356219cb7ae24e6410b66c3f"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/binary/META-INF/LICENSE",
+      "sha256": "9e255394eb9f8cfdcdf599dd150d9ca3e922ab4d31cb5e83519479a91e1d3072"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/binary/META-INF/NOTICE",
+      "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/maven-pom.xml",
+      "sha256": "48345abc9f63837e73ef0af83193b268e05d1c0e63e2934fdcbd78e26e8932ff"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/parent-maven-pom.xml",
+      "sha256": "8168041b51313716c4fdaaa046376b0efee78b1c42ce73a2a5d1c4af8a1ba0b6"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "563103a46650c916d2d1f07e2be9108ec92eb6be65019bc14c3c070c31fc4f59"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/source/META-INF/LICENSE",
+      "sha256": "9e255394eb9f8cfdcdf599dd150d9ca3e922ab4d31cb5e83519479a91e1d3072"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.22.1/source/META-INF/NOTICE",
+      "sha256": "5828ffe74ea0ee4bf896654026f05fed1ead1d22acd577cc1eec9be0bc0de1ed"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "c6f393e068b5c89be3e65402875e68c6db40fe42f78b5d7acc118027a28d5a69"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/binary/META-INF/LICENSE",
+      "sha256": "66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/binary/META-INF/NOTICE",
+      "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/maven-pom.xml",
+      "sha256": "fe19b490bef5c81fd9b9bff8c0f8088747d6f58680ceff4bb228840a33428ca9"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/parent-maven-pom.xml",
+      "sha256": "a241a21d568fc3aa4ec2c46ec99e3a622b3665d8d8e9d8170992ad1c6931e96f"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "59230eb5fc59bdc2f4e5be46f8d02574d783c78389497b8070ce0613e91f0eca"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/source/META-INF/LICENSE",
+      "sha256": "66ea9c8987b1674aababbcc24f61c83ab4fb7baf3af1d701caf0a3aaea97fa92"
+    },
+    {
+      "path": "licenses/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.22.1/source/META-INF/NOTICE",
+      "sha256": "7347397a0665f6898b32894a1869a514251abef7da7620902b0e57c5026cf1ed"
+    },
+    {
+      "path": "licenses/com.google.code.findbugs/jsr305/3.0.2/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "9329f6c6942e128348908339b59dbf209642c148dda83f1cf55fc8516a023092"
+    },
+    {
+      "path": "licenses/com.google.code.findbugs/jsr305/3.0.2/maven-pom.xml",
+      "sha256": "19889dbdf1b254b2601a5ee645b8147a974644882297684c798afe5d63d78dfe"
+    },
+    {
+      "path": "licenses/com.google.code.findbugs/jsr305/3.0.2/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "d754cd58bbf0ef474fd9a907d8be8e15d73ef7820997378deb3b481448faa96a"
+    },
+    {
+      "path": "licenses/com.google.code.gson/gson/2.13.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "a497c50b738c97fb62c1a5c64db4e187bf12d8023ff05e5d05fc19acf286bac5"
+    },
+    {
+      "path": "licenses/com.google.code.gson/gson/2.13.1/maven-pom.xml",
+      "sha256": "c0f65722d75c0e58cd1835b3046046f606b5da699904161f8db6b78feb9b401a"
+    },
+    {
+      "path": "licenses/com.google.code.gson/gson/2.13.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "7421a37d7fb2b795f4e89e6f66b498cfb1ab0e155b878f4514842d49d3dd8498"
+    },
+    {
+      "path": "licenses/com.google.errorprone/error_prone_annotations/2.38.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "cfc2480b7cd19050662eb0402e03ded82e950630226159dff872de077f4013a6"
+    },
+    {
+      "path": "licenses/com.google.errorprone/error_prone_annotations/2.38.0/maven-pom.xml",
+      "sha256": "3007bef8aff3ae8ea12d81c3feacb4f15979b2cf5c3e38fc9189a98dea141167"
+    },
+    {
+      "path": "licenses/com.google.errorprone/error_prone_annotations/2.38.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/com.google.guava/failureaccess/1.0.2/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "8e6824ca865cad41c5437d565e75bc33709fa0f402bad6c77f8d0688aed2905c"
+    },
+    {
+      "path": "licenses/com.google.guava/failureaccess/1.0.2/maven-pom.xml",
+      "sha256": "19ebc6f4bdb4edbb3d07b6ee994f846b54ef295582a9b5634719ffa9f31d03b2"
+    },
+    {
+      "path": "licenses/com.google.guava/failureaccess/1.0.2/parent-maven-pom.xml",
+      "sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04"
+    },
+    {
+      "path": "licenses/com.google.guava/failureaccess/1.0.2/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "52d37326e23d5bbc4ed842861b765956d3ac965136c9872147f19226902a670f"
+    },
+    {
+      "path": "licenses/com.google.guava/guava/33.0.0-jre/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "afe0c84c026df7cd37ab412e4037ea5e0b1be5282ac123d3ef256bc5b8d8746d"
+    },
+    {
+      "path": "licenses/com.google.guava/guava/33.0.0-jre/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.google.guava/guava/33.0.0-jre/maven-pom.xml",
+      "sha256": "fd70b14c441986c22e6d22ced2576787756be4918b145a8abd223e3a80b6e32d"
+    },
+    {
+      "path": "licenses/com.google.guava/guava/33.0.0-jre/parent-maven-pom.xml",
+      "sha256": "040cc88c680b413d70ba9fc8371b36093021b10996aa3598621de767d418229a"
+    },
+    {
+      "path": "licenses/com.google.guava/guava/33.0.0-jre/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "74c7241effb7d9e7ce80288bcb8d3488de418942395b6d667e40b21930b428a4"
+    },
+    {
+      "path": "licenses/com.google.guava/guava/33.0.0-jre/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "261de46adefa0b980173ca8de48e924c2068d0f41390d01ff017958f8a2e3c7f"
+    },
+    {
+      "path": "licenses/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/maven-pom.xml",
+      "sha256": "18d4b1db26153d4e55079ce1f76bb1fe05cdb862ef9954a88cbcc4ff38b8679b"
+    },
+    {
+      "path": "licenses/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/parent-maven-pom.xml",
+      "sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04"
+    },
+    {
+      "path": "licenses/com.googlecode.libphonenumber/libphonenumber/8.13.25/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "f17abe0c2ea6aef683d77bf32a0d7522b70af06573d61377b7c8793b37fc270a"
+    },
+    {
+      "path": "licenses/com.googlecode.libphonenumber/libphonenumber/8.13.25/maven-pom.xml",
+      "sha256": "32f8a6b83464e91ecb945123d309a8c77957905d37bf1d7c26c9d08dcf7b9da3"
+    },
+    {
+      "path": "licenses/com.googlecode.libphonenumber/libphonenumber/8.13.25/parent-maven-pom.xml",
+      "sha256": "ae90ce933fc36003fe0d00d38a514aface48f703cf6d99055cef4f7eb2738afb"
+    },
+    {
+      "path": "licenses/com.googlecode.libphonenumber/libphonenumber/8.13.25/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "74c7241effb7d9e7ce80288bcb8d3488de418942395b6d667e40b21930b428a4"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1cd6d6612632200fc786ebd276cee58d66c80eacdab32daa694725fb73aa9593"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/maven-pom.xml",
+      "sha256": "6b24f9e7bb62550241e286287f527a7dc463669a0b7cf5acde599e99842de721"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "cdf4541a5ba39ed35100a8a92ac4cbc26163ca950afeeabcbfbaf4bda22d7cdf"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/crypto_scrypt.h.NOTICE",
+      "sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/scrypt__LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/scrypt__src__main__c__crypto_scrypt-nosse.c.notice.txt",
+      "sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/scrypt__src__main__c__crypto_scrypt-sse.c.notice.txt",
+      "sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/scrypt__src__main__c__sha256.c.notice.txt",
+      "sha256": "a341ec72b05646a3ffa490381b0ba622b7088ae37c5f4e9d86a3062d15cbb908"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/sha256.h.NOTICE",
+      "sha256": "9d58252d00b39208738bfcc510ef5b24b3f6e7b54b42c307c6185c71a473cf25"
+    },
+    {
+      "path": "licenses/com.lambdaworks/scrypt/1.4.0/supplemental/sysendian.h.NOTICE",
+      "sha256": "1d5a2048f30137293e7b5629f647b25f984f30931cb925afb661bc2996597618"
+    },
+    {
+      "path": "licenses/com.squareup.okhttp3/okhttp-jvm/5.3.2/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "e64cb842b0f9e63efe9dcb5b91eaed78d56bbf2d6e1c64bb37b141a895ffee29"
+    },
+    {
+      "path": "licenses/com.squareup.okhttp3/okhttp-jvm/5.3.2/maven-pom.xml",
+      "sha256": "aee87197bbfb2d7424b6241d300eb0cbffb1844c9cab0129cae5390408b33fa4"
+    },
+    {
+      "path": "licenses/com.squareup.okhttp3/okhttp-jvm/5.3.2/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/com.squareup.okio/okio-jvm/3.16.4/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "6d0a2ffac1dc4f3c755dbad93fa525002770a315b4d00704f7e6fb31a033e2a2"
+    },
+    {
+      "path": "licenses/com.squareup.okio/okio-jvm/3.16.4/maven-pom.xml",
+      "sha256": "66778f4d0597bce63f91ec000c575cc029b3201f7dd092cb808875155b3e86a1"
+    },
+    {
+      "path": "licenses/com.squareup.okio/okio-jvm/3.16.4/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/com.webauthn4j/webauthn4j-core/0.28.6.RELEASE/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/com.webauthn4j/webauthn4j-core/0.28.6.RELEASE/maven-pom.xml",
+      "sha256": "44803db732b1f9381f44d0e6f5af12b917be4a1787c7acba4f5cd63191102746"
+    },
+    {
+      "path": "licenses/com.webauthn4j/webauthn4j-core/0.28.6.RELEASE/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/com.webauthn4j/webauthn4j-util/0.28.6.RELEASE/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/com.webauthn4j/webauthn4j-util/0.28.6.RELEASE/maven-pom.xml",
+      "sha256": "71dd67915b0509dbf5b3af3c1d3a4ac507bc45cf4f81a52eccfac69851ec5346"
+    },
+    {
+      "path": "licenses/com.webauthn4j/webauthn4j-util/0.28.6.RELEASE/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/com.zaxxer/HikariCP/6.3.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "ccc85a1294a7383fc5ee9dff62c3d638fe54952a2b68bad71150cf47c420265c"
+    },
+    {
+      "path": "licenses/com.zaxxer/HikariCP/6.3.0/maven-pom.xml",
+      "sha256": "17cf9939d25333469fd7f62893a7f7eed9ea0c89b9516b0499f40eeb1cc04df4"
+    },
+    {
+      "path": "licenses/com.zaxxer/HikariCP/6.3.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "74c7241effb7d9e7ce80288bcb8d3488de418942395b6d667e40b21930b428a4"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "cdd14dd0c7e1ba167a65c355ac568c04d7fbce8044064064124504d54b36112d"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/binary/META-INF/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/binary/META-INF/NOTICE.txt",
+      "sha256": "b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/maven-pom.xml",
+      "sha256": "74b916da4b0384c619e6dd4c18defe8aa4387f795205253cfb4bbb2f458cddce"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/parent-maven-pom.xml",
+      "sha256": "628df30148acd3c491cfcb6b73c7ae4b5989e5526ab13a2f428dea5d4ad10d7a"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "3bcb035552f541ae8d909a63cf3c4efcf037188c6a288f7b24dfd5fea63b08cb"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/source/META-INF/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/commons-codec/commons-codec/1.18.0/source/META-INF/NOTICE.txt",
+      "sha256": "b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb"
+    },
+    {
+      "path": "licenses/de.mkammerer/argon2-jvm-nolibs/2.11/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "4089448e67a8df426956171c6a41378e2d0323d6fbe50c4e20083c68d9a59320"
+    },
+    {
+      "path": "licenses/de.mkammerer/argon2-jvm-nolibs/2.11/maven-pom.xml",
+      "sha256": "ae8427514de37f4317b559483efd4c63eac26315072c8aab9c058c0c0d719d7d"
+    },
+    {
+      "path": "licenses/de.mkammerer/argon2-jvm-nolibs/2.11/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/de.mkammerer/argon2-jvm/2.11/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "232126976b4109befc9cba3add981509aa182c445f14c5e0136e572cb488a017"
+    },
+    {
+      "path": "licenses/de.mkammerer/argon2-jvm/2.11/maven-pom.xml",
+      "sha256": "36ed6655d93fffc51cac23cc6d9a176db30ce8dd70f76670e10331aba846abc2"
+    },
+    {
+      "path": "licenses/de.mkammerer/argon2-jvm/2.11/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-core/4.2.39/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "0a26adbd3971938b6233dd69e1e9e6cedf355047e538cf065eb31d26840fc14f"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-core/4.2.39/maven-pom.xml",
+      "sha256": "ff0ff65fd91f9de9798cf7d2a4340d7d206e27d428697b9f30d9298a0c2d24f6"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-core/4.2.39/parent-maven-pom.xml",
+      "sha256": "c4d1f48b5aa9247cbd0209b74a4476679b6537141af78ab7ccec9ae1a88a5f26"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-core/4.2.39/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "eaa76da5bfba1b55f352e7bf373a3cf041afc04581ef3f7691f4b9a1376bb7cf"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-json/4.2.39/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "2dca8e68f186d7d8abffdde0420c981e4bccea073323e0b50d85c47e70d0470a"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-json/4.2.39/maven-pom.xml",
+      "sha256": "9b00bd5572780f1ee8cd424b1a940dc02211b110bbb10ebb8904fa6ae80e37db"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-json/4.2.39/parent-maven-pom.xml",
+      "sha256": "c4d1f48b5aa9247cbd0209b74a4476679b6537141af78ab7ccec9ae1a88a5f26"
+    },
+    {
+      "path": "licenses/io.dropwizard.metrics/metrics-json/4.2.39/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "eaa76da5bfba1b55f352e7bf373a3cf041afc04581ef3f7691f4b9a1376bb7cf"
+    },
+    {
+      "path": "licenses/io.opentelemetry.semconv/opentelemetry-semconv/1.42.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "947c94fb4fced42189c7e144627c7860f3be2d2c9aba0b18700c600c5de99d70"
+    },
+    {
+      "path": "licenses/io.opentelemetry.semconv/opentelemetry-semconv/1.42.0/maven-pom.xml",
+      "sha256": "e428bc2611ed807291b93bd97f5610230fb765122249300f7920e9624dd614ff"
+    },
+    {
+      "path": "licenses/io.opentelemetry.semconv/opentelemetry-semconv/1.42.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "947c94fb4fced42189c7e144627c7860f3be2d2c9aba0b18700c600c5de99d70"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-api/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "336741081d7fa74b0cf1f0f4ed1eaaae73035b7a7e5d265f4f21fd809299fad1"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-api/1.63.0/maven-pom.xml",
+      "sha256": "87f14685f16a58f583ce9d9b7470da70bfaa9a497936ccb6947655c043946e6a"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-api/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "daac4c2bff4a2bc98f3595d3877fc1234de4d1e6554bef518027e5f2db1867d6"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-common/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "d34a245a85a33e54d9eeeb0a6fc5ed830524565dd94b5ce5393d5a096a224876"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-common/1.63.0/maven-pom.xml",
+      "sha256": "1e577af3d8625e926781ad50711fc4f4a2ce044a5bdfd0329c92c84ca0e965bd"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-common/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "c6048e20a1add263829e83739450d98fdf4ed02478b4433436f0fc5d786da010"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-context/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "dd885e34bcd7ec7654f23e03f5f87229de99ec3314d96a5a96f891a60885b50e"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-context/1.63.0/maven-pom.xml",
+      "sha256": "498c571a78c27ba4bd784d75f1397f331addbee1ed4770fd0c611c8f87176ae4"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-context/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "fc79c06d95e105336f4ae908ca75fdd44b832c65053db35345208ce8b8c0ff79"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-common/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1d04914bca7096570030f055f94cb74afb878e1ef54f73cebcff329b43ce752e"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-common/1.63.0/maven-pom.xml",
+      "sha256": "8284977e9491a0a7bbd092ea0723d4d5aeea86943d9549da6eac88bed073ce70"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-common/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "95b9db0c91ad7767a5504e201f07c1981f59fcb9cf40e55efab32357fb1b1f44"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-logging/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "bd39b3dc2d445ff318de2a3ef91754e1fb34112efc6f4331962e4dc6caf47251"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-logging/1.63.0/maven-pom.xml",
+      "sha256": "a4e580ebc93ae77c9cfe5653a8ce2404ff5883c40c81ee143794eca50f56dc5c"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-logging/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "2d291e9a177f951a4ff9509b1881ff71bb94290df64590153a1f743e4528cef7"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-otlp-common/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "9cb1be56ced086fcd43432c41ef12ac72ba2fe8774dac04eb3912d80866843f3"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-otlp-common/1.63.0/maven-pom.xml",
+      "sha256": "89cb99b7a14a65390d0f1d7d9f7f058294b3da987c31a24b874821f08e515b6d"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-otlp-common/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "3084b86677ccf0afe2cea255f3c133e87eb3f564ff2a2bc187cd27b1ab857b01"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-otlp/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "d80ecb333bda6011122e94481e9e01f64d8dbd885c1aa249939762c33ee4677d"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-otlp/1.63.0/maven-pom.xml",
+      "sha256": "fd5a229bd30fe828ebd0279941b4e5ebcce708d49278a2431407a845f808253c"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-otlp/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "305fb83a60bc2bd4e8b304459e09c1c82d4cf3f1641ce13ed38167e07922065d"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-sender-okhttp/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "75c80965432ee7c9d557eaa4deac831bf32f00ce1eaa13ddf05a357ad913ec66"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-sender-okhttp/1.63.0/maven-pom.xml",
+      "sha256": "c303921ee72d5a3df9a9a979d474077b28eaa0caad690d9a0ab1fa1d853aa02e"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-exporter-sender-okhttp/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "36f4c118f583ad8264c7f5e83d5c47d51bea5ba7fd18be46abc192ae54507c1b"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-common/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "a72449a346b511286f8ff7a0dda943c2bb62b41dc901c56a8964bdfcf4aec834"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-common/1.63.0/maven-pom.xml",
+      "sha256": "69e27cfaab06f07523ee5f361e3a098c8bbc3279026cb7d4b24c1e388008a5c4"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-common/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "15a39eb6ddc5da940c1a1093d31231721b4681eadf1f507ca37dfcebe63d60bf"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-logs/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1097309c18168094af185f55efb9a28514fff82b30fa533faa7226213584065b"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-logs/1.63.0/maven-pom.xml",
+      "sha256": "ca6d52d26ebc07b1b51cb40c9b50158902232b575b1f7aca0172c0820cfdecc5"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-logs/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "3e2fdc62dd7dba74dec586300417b3f5821ec462f5a865407aa49d93a5276628"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-metrics/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "54fd27ecf574376a154d618fb339f576e024c57a989666fead22bdc1a0039c4f"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-metrics/1.63.0/maven-pom.xml",
+      "sha256": "6c5c44a387855191b0bfad74530b8ba2c0882a9153d35f0fca2555f9cc8e3cee"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-metrics/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "77bd504b1709746f478e14065211ff8ece0c775732c5b4b5a3b9a723a7057d11"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-trace/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "d3dd5d86a596e300a3f6b8f9041a25a3931358becfb7a2e18cee5599744dc803"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-trace/1.63.0/maven-pom.xml",
+      "sha256": "35cef4b90cfa2893753438dddab1e332a9e54603660c1c1c35f3de810a10b396"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk-trace/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "480c3da590ef8396469822227153a23632d53551eca0cfcb071b59e9eeb119d9"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk/1.63.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "619449c1e668c1b95e3184f4afd892c0c0b8e4dc0949808c643f5b8cc4b7aa2b"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk/1.63.0/maven-pom.xml",
+      "sha256": "20ea26d3cfefec10c47541bb57bfcb5e3df664c145ce9169bf8f033a00126b5b"
+    },
+    {
+      "path": "licenses/io.opentelemetry/opentelemetry-sdk/1.63.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "70db313c959a51b5cf0568fc815ebca625a7426bd84dbe3196691051d686cf9e"
+    },
+    {
+      "path": "licenses/manifest.json",
+      "sha256": "489f598c471082633aec20362cf63fab1098a866a105dbd2e6f3d2fb06296f81"
+    },
+    {
+      "path": "licenses/net.java.dev.jna/jna/5.8.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "02ca3689eb79c1f5094f27db4b3aecbf89843a53aa544d78ef063f8ce5d082a4"
+    },
+    {
+      "path": "licenses/net.java.dev.jna/jna/5.8.0/binary/META-INF/AL2.0",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "licenses/net.java.dev.jna/jna/5.8.0/binary/META-INF/LGPL2.1",
+      "sha256": "eea173a556abac0370461e57e12aab266894ea6be3874c2be05fd87871f75449"
+    },
+    {
+      "path": "licenses/net.java.dev.jna/jna/5.8.0/binary/META-INF/LICENSE",
+      "sha256": "521bb271ac56e0e29a1b1b688b94af17d00d378fc8e63478d8c8b2a7c4a229d0"
+    },
+    {
+      "path": "licenses/net.java.dev.jna/jna/5.8.0/maven-pom.xml",
+      "sha256": "5e53d8e637f93b83014e2302fb7e63fd7b83ab000a7f794aa340020ffb880d4a"
+    },
+    {
+      "path": "licenses/net.java.dev.jna/jna/5.8.0/supplemental/jna__native__libffi__LICENSE",
+      "sha256": "25d56871423a870487edee68000ef66b1a7ec44a7ab84838ceeb3ce07f734b74"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-networking/9.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "6610b8a57d78dd632c1e3237888770b4e1c7bbaa3679d912c0064bc9ba6853db"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-networking/9.2.3/maven-pom.xml",
+      "sha256": "d1a775273674b2d1e2e562d1e4e5804a2017cb86bd39f1fb3d5b950dc55013a3"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-networking/9.2.3/parent-maven-pom.xml",
+      "sha256": "a7bb8b718df3ad2e521c6be129663fe28f198fffdc309fe0fbd9072ee70f5c7d"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-networking/9.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-security/9.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "e200cb52a97688e1eb3956f68abc2e1e3d95473d92df4c28f91037b5ec3780d3"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-security/9.2.3/maven-pom.xml",
+      "sha256": "ad0681ca47eb5d9d59772d166d8a26d47a2e626719f1c2b7ccc24a0e2f4a5aa0"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-security/9.2.3/parent-maven-pom.xml",
+      "sha256": "a7bb8b718df3ad2e521c6be129663fe28f198fffdc309fe0fbd9072ee70f5c7d"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-security/9.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-support/9.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "e626646bd78291ed5473204f97fd70e6ab98ef327fae1927d0c8e83f1bc11a83"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-support/9.2.3/maven-pom.xml",
+      "sha256": "9126895bab845b222ea793cf32927623c226e9373f01a1502d2518924a0ed9f5"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-support/9.2.3/parent-maven-pom.xml",
+      "sha256": "a7bb8b718df3ad2e521c6be129663fe28f198fffdc309fe0fbd9072ee70f5c7d"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-support/9.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-velocity/9.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "72d9dd7e29bed49b57cf5771d7cc08b7a024d8ec9680c4a0b83fc9ad26fca374"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-velocity/9.2.3/maven-pom.xml",
+      "sha256": "7108efe567f6709cb4c185815cdbe43d0182467cbd565f6e941160dd6a81db21"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-velocity/9.2.3/parent-maven-pom.xml",
+      "sha256": "a7bb8b718df3ad2e521c6be129663fe28f198fffdc309fe0fbd9072ee70f5c7d"
+    },
+    {
+      "path": "licenses/net.shibboleth/shib-velocity/9.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1877ed9f9cd86cb95f7f1c4dfe3b66da6f2150f2652d2410de405c703d38477e"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/binary/META-INF/LICENSE.txt",
+      "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/binary/META-INF/NOTICE.txt",
+      "sha256": "64bc8696af3f6c770521412b85d3a733fa44b2ef5b0f4bd739e0c4d02eca492a"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/maven-pom.xml",
+      "sha256": "7ca83b2709c1e7a9e03b576cd41422190379489a80866e542f8c8b955411a2aa"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/parent-maven-pom.xml",
+      "sha256": "94f6c027b15f6402995dd1b2c7ea35bfe1ebc88b6832b3134368b41998721953"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "42ccb4e25b086c9cc853f7dba8d578b0b44e65b0c11badd063c6dc808541d0e5"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/source/META-INF/LICENSE.txt",
+      "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+    },
+    {
+      "path": "licenses/org.apache.commons/commons-lang3/3.20.0/source/META-INF/NOTICE.txt",
+      "sha256": "64bc8696af3f6c770521412b85d3a733fa44b2ef5b0f4bd739e0c4d02eca492a"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "1407f305deb55c184abf3381dc6afaf9ad87139a7a6c1089dfa5d4127690ac01"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/binary/META-INF/NOTICE",
+      "sha256": "d076ef669ce7dc001dd7e95f26fe05ded1e825eb2e52997de4fd2f3fd3129be2"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/maven-pom.xml",
+      "sha256": "ad512ad9cb63fca39ca7c797e47c02c357bb8787ea8c89d2a99d1b5fea2f309d"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/parent-maven-pom.xml",
+      "sha256": "05305597e8208fdfcc826918db9dad36a42c7b1ddcb366008c2f0975ed2d7192"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "25e2c4d4749e3cd55d392743492e15ea42d0afa70cba6b697955c265b6adcec0"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5-cache/5.6.4/source/META-INF/NOTICE",
+      "sha256": "d076ef669ce7dc001dd7e95f26fe05ded1e825eb2e52997de4fd2f3fd3129be2"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "5e1b77548a5f848d38e5f20032e7c0bc345449a8f4f376778532f3ce935fd5c3"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/binary/META-INF/NOTICE",
+      "sha256": "4ad1973880c25e0c41fdf45fb47fbb3cb935b322982cca535d4dbf8062cc5a47"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/maven-pom.xml",
+      "sha256": "dbc08440438d5e8a600041a9b61e249f0c7d9d86b998e72a9a03900b4c64aa44"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/parent-maven-pom.xml",
+      "sha256": "05305597e8208fdfcc826918db9dad36a42c7b1ddcb366008c2f0975ed2d7192"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "0db3924de2e199944743582d72b30d3b9366d1c9e9dc2bfa6f43457e88a290cd"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.client5/httpclient5/5.6.4/source/META-INF/NOTICE",
+      "sha256": "4ad1973880c25e0c41fdf45fb47fbb3cb935b322982cca535d4dbf8062cc5a47"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "821aaaf744718e92328b64ac635513766889e7e6397b92f727cca76157f185fb"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/binary/META-INF/NOTICE",
+      "sha256": "9c9b2e926919e38adf222b3191267806a742ce1adcd1e13dc91d11014b85bd57"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/maven-pom.xml",
+      "sha256": "05a81bab0c695ff79a381e4a1df0a6f582ba556b2d8d60be84c4dc8a9c9f5027"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/parent-maven-pom.xml",
+      "sha256": "2aa0c3f69b379d49b696cc5978fbe15773ecc90a7b39106d7810e554d054778b"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "a6e14cc2a167dff66bc795caebf7ac2723fc1a3fea4b162c5bda84b878596eb6"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5-h2/5.4.3/source/META-INF/NOTICE",
+      "sha256": "9c9b2e926919e38adf222b3191267806a742ce1adcd1e13dc91d11014b85bd57"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "b6f26e9a02dd9cda69bfbfe46307660b595dd33d1572d0da07e5d328bbebb5ec"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/binary/META-INF/NOTICE",
+      "sha256": "94a71d64ef74b0ca85db2d5e538118a4265ff8eed2f978eda58d2cfa5d88a310"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/maven-pom.xml",
+      "sha256": "a483ef99599cc5fe2c6105a91e2aa7ac46c1c357b559beb76c7045326dcbd3d1"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/parent-maven-pom.xml",
+      "sha256": "2aa0c3f69b379d49b696cc5978fbe15773ecc90a7b39106d7810e554d054778b"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "9c3db390cac2afab5c34e02726a1c82382f00bc2ce0e017388f12c0da15f7782"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.httpcomponents.core5/httpcore5/5.4.3/source/META-INF/NOTICE",
+      "sha256": "94a71d64ef74b0ca85db2d5e538118a4265ff8eed2f978eda58d2cfa5d88a310"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "918dfc1dc02e4919173a3675f1b9546b5ed17e5ee06724f00ccbd33ae9a334be"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/binary/META-INF/NOTICE",
+      "sha256": "a8bda3d26dee65a7d781915538ec4462f11937bc72a14973e28af37c50653f4e"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/maven-pom.xml",
+      "sha256": "53b879224c62a45505bb2dc2f4c93e30943a0bcdfb0ce1a18f43d38db3b358c0"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "7421a37d7fb2b795f4e89e6f66b498cfb1ab0e155b878f4514842d49d3dd8498"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.santuario/xmlsec/3.0.6/source/META-INF/NOTICE",
+      "sha256": "a8bda3d26dee65a7d781915538ec4462f11937bc72a14973e28af37c50653f4e"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "b309fc6d4660994449f2469815803d8bc28cbba2372dc1efeaecc01a6da47870"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/binary/META-INF/LICENSE",
+      "sha256": "8c39166d578175fb936229613e48de47d9e494b8c7c2fda6da717a1be29c8724"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/binary/META-INF/NOTICE",
+      "sha256": "234d3234bb332895157270092fa2a11e80aa0b3d70d59e13de0eed4c2adb1790"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/maven-pom.xml",
+      "sha256": "1dcba0b0070ad6a999dc07c82f2b692f449c29d47a05d77813ab5a72283ddf52"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "5b66eed7c36a05544c679ef4398ecbbd2b3a9bb60f7696bbc122bc0e42ece8da"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/source/META-INF/LICENSE",
+      "sha256": "8c39166d578175fb936229613e48de47d9e494b8c7c2fda6da717a1be29c8724"
+    },
+    {
+      "path": "licenses/org.apache.tomcat.embed/tomcat-embed-core/11.0.25/source/META-INF/NOTICE",
+      "sha256": "234d3234bb332895157270092fa2a11e80aa0b3d70d59e13de0eed4c2adb1790"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "23ba34eb88880c483c6e510e803e7318557e62be7d8893ba6d61b1fa5ea312dc"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/binary/META-INF/NOTICE",
+      "sha256": "0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/maven-pom.xml",
+      "sha256": "fc7962cd116701a5a781f3a0c73533b86b0b7eabff8049411c51f243a2a68358"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "af3e69271a7d12bb5619bb216c7ee8f16c003cedad39f34f42694d086c68f950"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.tomcat/tomcat-annotations-api/11.0.25/source/META-INF/NOTICE",
+      "sha256": "0317acaa42a5e48bec061cf009cb5c8b4b8ff845f3c6ba548f67c5c22c29fc96"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "bf227320f98f8e44f760c06b57994983eef8dea7c2fb3faf2d1ccde64c0cfac4"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/binary/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/binary/META-INF/NOTICE",
+      "sha256": "6629f89c1aa74f11f7eddd9aee475038d4018f2661c76cd0f8b78c529a5cb1e2"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/maven-pom.xml",
+      "sha256": "ac7cd94f0d9fb39bcba3b28287c4c40005dc0f53a986fb587e4f67a4ccb3e5b6"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/parent-maven-pom.xml",
+      "sha256": "8efb661b7e1b44b7a056f23650ab2b43b8fcdb09bbe2ec3d3d02185d5658fd4a"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "7421a37d7fb2b795f4e89e6f66b498cfb1ab0e155b878f4514842d49d3dd8498"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/source/META-INF/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/org.apache.velocity/velocity-engine-core/2.4.1/source/META-INF/NOTICE",
+      "sha256": "6629f89c1aa74f11f7eddd9aee475038d4018f2661c76cd0f8b78c529a5cb1e2"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "a6149179818785e47a713f5ea51376c2701945fbf5fcb7ef5655ee74c96a7dbb"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/binary/LICENSE-AspectJ.adoc",
+      "sha256": "4e2c7d9f5cc62bfe8ca3461be6fd659f744f508af1207bf5d633fd5f4270bb98"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/binary/licenses/LICENSE-EPL-2.0.txt",
+      "sha256": "0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/maven-pom.xml",
+      "sha256": "984f8e2f7975a3f1eba67b7d752aab1faa2e5a702f7f52fa465a78e1503e358e"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "c75b49db39bc4e7fe059eaad9832464ab6ecdb2a122fdac0d73e33c75ee66bd8"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/source/LICENSE-AspectJ.adoc",
+      "sha256": "4e2c7d9f5cc62bfe8ca3461be6fd659f744f508af1207bf5d633fd5f4270bb98"
+    },
+    {
+      "path": "licenses/org.aspectj/aspectjrt/1.9.24/source/licenses/LICENSE-EPL-2.0.txt",
+      "sha256": "0becf16567beb77fa252b7664631dd177c8f9a1889e48995b45379c7130e5303"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcpkix-jdk18on/1.84/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "41af922caee8d0e068cfc5d807d7688b9b8358b179fe7b463e2229cf3eb16978"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcpkix-jdk18on/1.84/maven-pom.xml",
+      "sha256": "c1281ed5eaf8f3e405557e7a5205cb6f3cdf753f84de9b1a815c75ebdeb9992a"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcpkix-jdk18on/1.84/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcprov-jdk18on/1.84/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "669c649a1612035f000019047d8462fd54a0a9fb497c48a02487b0a9b0f1e7f0"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcprov-jdk18on/1.84/maven-pom.xml",
+      "sha256": "ce7abb4a91ba5d2a73fdf17a3df4762e3605a0392cc7983ef2f1ae16cd384cc3"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcprov-jdk18on/1.84/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcprov-jdk18on/1.84/source/org/bouncycastle/LICENSE.java",
+      "sha256": "4329601171ae4473f51e71c2e7f7ad873085ef3487828845cf760e39d6948715"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcutil-jdk18on/1.84/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "4f33664f53638c44e70c3de58d8dbd01b84feade1a60d306285a4e6e56fdae6e"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcutil-jdk18on/1.84/maven-pom.xml",
+      "sha256": "0b0cb81a65ee1737d51286350a9e56489336b8f9908198febd0494243eea2978"
+    },
+    {
+      "path": "licenses/org.bouncycastle/bcutil-jdk18on/1.84/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.41.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "5b4189c5e26cff470788a457c3eadfe9e65e2fed4672212c755e8d3e6d167d1c"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.41.0/binary/META-INF/LICENSE.txt",
+      "sha256": "e90eaa08dea089df10f2bf7f9dba63a5f6237c01562c4741e2e86773e78582d5"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.41.0/maven-pom.xml",
+      "sha256": "5c73b0770540842cf06a01d264bbb89ae5e248669dc9da80e861e8233dd4675b"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.41.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "a84583341a4f82dfa618dafd42890bbbc177252d3eba31a520b27f9812c59079"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.41.0/source/META-INF/LICENSE.txt",
+      "sha256": "e90eaa08dea089df10f2bf7f9dba63a5f6237c01562c4741e2e86773e78582d5"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.55.1/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "c95c641301e7503c82fc29b24d10101efddb9e4d053bb195a4eefa107b6651bf"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.55.1/binary/META-INF/LICENSE.txt",
+      "sha256": "e90eaa08dea089df10f2bf7f9dba63a5f6237c01562c4741e2e86773e78582d5"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.55.1/maven-pom.xml",
+      "sha256": "627d92aa92fd4d6bb8c2b56bcbb38543417f49d38b5a62fbdb4aeff551e7b760"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.55.1/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "c0a3fdda36d75e9e2f51804ee0562d5abf17d6daffbfa1cdebb5a24ae7f3dd42"
+    },
+    {
+      "path": "licenses/org.checkerframework/checker-qual/3.55.1/source/META-INF/LICENSE.txt",
+      "sha256": "e90eaa08dea089df10f2bf7f9dba63a5f6237c01562c4741e2e86773e78582d5"
+    },
+    {
+      "path": "licenses/org.cryptacular/cryptacular/1.3.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "766ea126a2fcad417c0ce1bbaf67cd31921310e779e3deefeab8bf37f51d5b65"
+    },
+    {
+      "path": "licenses/org.cryptacular/cryptacular/1.3.0/maven-pom.xml",
+      "sha256": "38d79e90b1958f4fe6f2f728f63918030f2842164abbcf84623da0f47af96705"
+    },
+    {
+      "path": "licenses/org.cryptacular/cryptacular/1.3.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "7421a37d7fb2b795f4e89e6f66b498cfb1ab0e155b878f4514842d49d3dd8498"
+    },
+    {
+      "path": "licenses/org.jetbrains.kotlin/kotlin-stdlib/2.2.21/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "81354a98f490bd2812299f24b9f44a48dc3c23412d58078d719d72796eb8a2db"
+    },
+    {
+      "path": "licenses/org.jetbrains.kotlin/kotlin-stdlib/2.2.21/maven-pom.xml",
+      "sha256": "cf31f923196c63aedecd0a57c24269bd3702a4e47c0bf0bd64b5ada5de522272"
+    },
+    {
+      "path": "licenses/org.jetbrains.kotlin/kotlin-stdlib/2.2.21/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+    },
+    {
+      "path": "licenses/org.jetbrains/annotations/13.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "6f899c5ec48c91958fe672e3f4bc951d48e70e9cf97de88f356b6805bd57c03e"
+    },
+    {
+      "path": "licenses/org.jetbrains/annotations/13.0/maven-pom.xml",
+      "sha256": "965aeb2bedff369819bdde1bf7a0b3b89b8247dd69c88b86375d76163bb8c397"
+    },
+    {
+      "path": "licenses/org.jetbrains/annotations/13.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "6f899c5ec48c91958fe672e3f4bc951d48e70e9cf97de88f356b6805bd57c03e"
+    },
+    {
+      "path": "licenses/org.mindrot/jbcrypt/0.4/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "76413554c38496049767e01d863c587916ea347629f1d89043556160152b9353"
+    },
+    {
+      "path": "licenses/org.mindrot/jbcrypt/0.4/maven-pom.xml",
+      "sha256": "9eb64850d66d5648dc600a8983fc79332b0871ec90ed77d65e96db30eb813db1"
+    },
+    {
+      "path": "licenses/org.mindrot/jbcrypt/0.4/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "d81f56df6a7a356493cfbf936bb185eb4add6ce7af5f3c1f428445f6d42e8c85"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "8c5a05e9e79fb318f1483d5d3fb61cb227b5ba55cb6c19356fa5eb74b2fd87fb"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-api/5.2.3/maven-pom.xml",
+      "sha256": "24e256691d6c179574ae8f063dc10a6ac936d33a51d0217c5051dcabeb26969c"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-impl/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "6f4e804431f39e93fdf96646c35dce685a68d6a90064cb73d18cee0ef4f02877"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-impl/5.2.3/maven-pom.xml",
+      "sha256": "4f22cef927f6456420a53133a586d13f1b1dc0fb52348cbe5cb15a9c814b25d5"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-impl/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-core-impl/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-messaging-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "b32af7f7243d0e16c9e2bb249dc273990d6681bf07aa9d3002b99fb50d875e12"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-messaging-api/5.2.3/maven-pom.xml",
+      "sha256": "557a500fc5648001bd861f421dcaa601088d910d60062279d36ee0b8eee55752"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-messaging-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-messaging-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-profile-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "e24877f82369d77189e657de8134963af4f7ef33295862b923e8ccbff74251d3"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-profile-api/5.2.3/maven-pom.xml",
+      "sha256": "1785f52f1838ff585069b79af0e02a2be5dd8a349101d141527e0b48c7d2e8c1"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-profile-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-profile-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "8de1887470463f84c06e5305aa5e061fcfb16bf72e21dd47cea936e01fd8a259"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-api/5.2.3/maven-pom.xml",
+      "sha256": "437af9f4c4459194a75f6ecfb40a89895526182378f54e71ed915da80900aa09"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-impl/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "8741c3670b83d7819e058540efde4e448962111e676744f45c5f29c00f562ebd"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-impl/5.2.3/maven-pom.xml",
+      "sha256": "4528c572db7c77781c3a7604c0bb9e8f55b7dee7077246963d15f2144f198b9f"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-impl/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-saml-impl/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "6b8cde8aab118c60e93d319422a7b2b0a02a00261eaef515cf2c73612ba443ce"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-api/5.2.3/maven-pom.xml",
+      "sha256": "13f8117496aa2aa2dda2ba8658ee43e1abf621145f5897c15a400ef32063ca17"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-impl/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "96d06bdba9b85317729efc36e83cb4c4df592f53ad28b88acbe6b5c4d4d57b56"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-impl/5.2.3/maven-pom.xml",
+      "sha256": "b7690006df462b40faa52486e8fd65674b1a1da214c8ab1624d0a5690d26e54a"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-impl/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-security-impl/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "ef517ddb1dfd0dde400081bd925ecc1facdcc56973c41499eca7b5692815294f"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-api/5.2.3/maven-pom.xml",
+      "sha256": "d06bc5d8c449b247121d85e88f09546311bd1bb0b56d52a12713fa4743deb14a"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-impl/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "aa23df84c8275d5434c16e13593fefc33a59014eabea305fa3edbe8757c20624"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-impl/5.2.3/maven-pom.xml",
+      "sha256": "0087aa3c8ddec3dc0a9a20d6689a0a138ce94410f731edcf7b76d46c8cd00bed"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-impl/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-soap-impl/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-storage-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "0af133845319a4b9b226cfbc87147930553565685052f57636289a9032958d73"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-storage-api/5.2.3/maven-pom.xml",
+      "sha256": "7ab511a7ed53b82b0764d2ed12275af11c612a3977555cc6568e55b0c8f42caf"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-storage-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-storage-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-api/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "22645bcbd50c31b8ec8723df6d66a6961cc4486560dfed483c9e8321d88a05d7"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-api/5.2.3/maven-pom.xml",
+      "sha256": "0a2bb11e734115e126879f5333a367c861047e83c79402e102237b61cabf60e3"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-api/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-api/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-impl/5.2.3/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "776aa4641c5bc8b833b7ddd3f42f4bdf7c494ecd6bcdd705b51d53a2eeba7cb6"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-impl/5.2.3/maven-pom.xml",
+      "sha256": "698874b4f84d2808266d852c79e5ea9c198dc7b4c53779023987171d5de564d8"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-impl/5.2.3/parent-maven-pom.xml",
+      "sha256": "b6ec1d8c9a3ace0eff162c11b11a6e13beb3e058810b2ed7b4817d7f93d9b3ee"
+    },
+    {
+      "path": "licenses/org.opensaml/opensaml-xmlsec-impl/5.2.3/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "dbb0c0c950e200e84c8960428531f01560877d1261d34ee576554cfe2d4ca205"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/binary/META-INF/LICENSE",
+      "sha256": "08bb580d3cb8f9a4a05f008466a294fdb019e0e177d03a035d46f1eb94077de5"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/binary/META-INF/licenses/com.ongres.scram/scram-client-3.2/META-INF/LICENSE",
+      "sha256": "7c89807167a03a92d2fbfc936aff4f87d8ce31434637381c89e38282c8c99198"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/binary/META-INF/licenses/com.ongres.scram/scram-common-3.2/META-INF/LICENSE",
+      "sha256": "7c89807167a03a92d2fbfc936aff4f87d8ce31434637381c89e38282c8c99198"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/binary/META-INF/licenses/com.ongres.stringprep/saslprep-2.2/META-INF/LICENSE",
+      "sha256": "5c49fc155ebccd206277e0d1f424aadbf365f0a9ccfb54d400d728a375d523f9"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/binary/META-INF/licenses/com.ongres.stringprep/stringprep-2.2/META-INF/LICENSE",
+      "sha256": "5c49fc155ebccd206277e0d1f424aadbf365f0a9ccfb54d400d728a375d523f9"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/maven-pom.xml",
+      "sha256": "3957417ecaee342521b61310fdc21bd37fcb8bba3f7547ece9b78fd03cd53f26"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "dd49a780b7cafa368fa76669c827a820ef5ff0cb0e4a2dd6a8f02b7ded2707bc"
+    },
+    {
+      "path": "licenses/org.postgresql/postgresql/42.7.13/source/META-INF/LICENSE",
+      "sha256": "5be1f67a4d62692cc2fc8b81a71088943fc4c1462bd76fd2f04bc0e965ca6d53"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/1.7.36/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "5728474db28d90a0616b589860aedc0f96f4efb8d06e8c9084fc1d110161ffa0"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/1.7.36/maven-pom.xml",
+      "sha256": "fb046a9c229437928bb11c2d27c8b5d773eb8a25e60cbd253d985210dedc2684"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/1.7.36/parent-maven-pom.xml",
+      "sha256": "bb388d37fbcdd3cde64c3cede21838693218dc451f04040c5df360a78ed7e812"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/1.7.36/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "10bc159fd66a1645406e39ed8cd83c5aa6d8fa5c1559b16b300bf42bc86755fd"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/2.0.17/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "c686c7508bee23a8dfa8fc97bc3308123020f1e761dab0377a908fbe407dafc8"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/2.0.17/binary/META-INF/LICENSE.txt",
+      "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/2.0.17/maven-pom.xml",
+      "sha256": "150c40287f7cecdc21b9380caac98e928c4f33c023db6b348df1c5ac977026bf"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/2.0.17/parent-maven-pom.xml",
+      "sha256": "95cd71e852dfdb29126e58b7b939d57ec2b2e6024391852e0b545dee082bbf3b"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/2.0.17/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/org.slf4j/slf4j-api/2.0.17/source/META-INF/LICENSE.txt",
+      "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "a908ca037cb379581a38473ff869fe2b94ad6db0bf6a2dc9d94b2a3c92623d56"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/binary/META-INF/maven/org.xerial/sqlite-jdbc/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/binary/META-INF/maven/org.xerial/sqlite-jdbc/LICENSE.zentus",
+      "sha256": "89167dab92289c7e5e2b65b044f0856b703d05e5d5e35c3548e73d9c7d2f5048"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/maven-pom.xml",
+      "sha256": "d92258eca14a1a95ca864be37ee411a801a5864a924b6ff6327563be1b053569"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "74c7241effb7d9e7ce80288bcb8d3488de418942395b6d667e40b21930b428a4"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/source/META-INF/maven/org.xerial/sqlite-jdbc/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "path": "licenses/org.xerial/sqlite-jdbc/3.45.1.0/source/META-INF/maven/org.xerial/sqlite-jdbc/LICENSE.zentus",
+      "sha256": "89167dab92289c7e5e2b65b044f0856b703d05e5d5e35c3548e73d9c7d2f5048"
+    },
+    {
+      "path": "licenses/org.yaml/snakeyaml/2.5/binary/ARCHIVE-MANIFEST.MF",
+      "sha256": "4d17a929a855b75a54c4745e625d7861c127082576d7e3fc82abd50555bed68f"
+    },
+    {
+      "path": "licenses/org.yaml/snakeyaml/2.5/maven-pom.xml",
+      "sha256": "ba01ae7a744cb52fe8ecf3b023cbc32e0ccc8c6beef9f26de77a47808239447d"
+    },
+    {
+      "path": "licenses/org.yaml/snakeyaml/2.5/source/ARCHIVE-MANIFEST.MF",
+      "sha256": "31f06c9999bfd523e192864178cfe4a9873d336884cf59a0d698e520895caeaa"
+    },
+    {
+      "path": "licenses/oss-core-runtime.cdx.json",
+      "sha256": "3b26a7793618d48167e726f10ce93d795fd1d4bc299e6d48b8f7aac2b12e926a"
+    },
+    {
+      "path": "licenses/own-source/supertokens-core/LICENSE.md",
+      "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005"
+    },
+    {
+      "path": "licenses/own-source/supertokens-plugin-interface/LICENSE.md",
+      "sha256": "0c41d8440a1b31045cbb170c14fdb814a897151b4560f94ee4e421d850f6728c"
+    },
+    {
+      "path": "licenses/own-source/supertokens-postgresql-plugin/LICENSE.md",
+      "sha256": "0c41d8440a1b31045cbb170c14fdb814a897151b4560f94ee4e421d850f6728c"
+    },
+    {
+      "path": "licenses/runtime-image-notices.md",
+      "sha256": "407b39c840dc4ef3d2e7cc407c2230678b091ad13a71cc3aca01fb34a795d34e"
+    },
+    {
+      "path": "licenses/runtime-source-archives.lock.json",
+      "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+    },
+    {
+      "path": "plugin/HikariCP-6.3.0.jar",
+      "sha256": "07c6344059af30a135144209c7c8bd666b8823124422ec859864d209d4ab7ca1"
+    },
+    {
+      "path": "plugin/checker-qual-3.55.1.jar",
+      "sha256": "857658c8bdcbff794949a8d9922f88d63ee3751c203c7cd7d21ea97f9e745288"
+    },
+    {
+      "path": "plugin/postgresql-42.7.13.jar",
+      "sha256": "6e0e4cc2d8cae902084f8a2b18728b073a6fd9d1f87c9d8bff8f298c18185b93"
+    },
+    {
+      "path": "plugin/postgresql-plugin-9.8.0.jar",
+      "sha256": "c118181b8cfbcf874f031f23abc291a6655049d8aa9fe2275ae03596129f9705"
+    },
+    {
+      "path": "plugin/slf4j-api-1.7.36.jar",
+      "sha256": "d3ef575e3e4979678dc01bf1dcce51021493b4d11fb7f1be8ad982877c16a1c0"
+    },
+    {
+      "path": "version.yaml",
+      "sha256": "9945cb574a56392a89ca3f8db6db7d1077f1fe5036c55ddcfa6855e10f9a0996"
+    }
+  ],
+  "inspection_container_id": "8f53387eb119a7ead34ec6659c42f435b6cedbc9f9e103478c3c3542a7843e92",
+  "private_scratch_removed_before_promotion": true,
+  "failed_candidate_images_removed": [],
+  "previous_image_tag_preserved": true
+}

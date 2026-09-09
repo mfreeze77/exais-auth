@@ -1,0 +1,63 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 852B done
+#1 DONE 0.1s
+
+#2 [auth] library/gradle:pull token for registry-1.docker.io
+#2 DONE 0.0s
+
+#3 [auth] library/gradle:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2
+#4 DONE 0.1s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.1s
+
+#6 [auth] library/gradle:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#7 [auth] library/gradle:pull token for registry-1.docker.io
+#7 DONE 0.0s
+
+#8 [1/7] FROM docker.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2
+#8 resolve docker.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2 0.0s done
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 59.95MB 2.7s done
+#9 DONE 2.8s
+
+#10 [4/7] COPY --chown=gradle:gradle plugin /opt/expertauth/plugin
+#10 CACHED
+
+#11 [5/7] COPY --chown=gradle:gradle version.yaml /opt/expertauth/version.yaml
+#11 CACHED
+
+#12 [6/7] COPY --chown=gradle:gradle licenses /opt/expertauth/licenses
+#12 CACHED
+
+#13 [2/7] RUN mkdir -p /opt/expertauth/logs /opt/expertauth/.started /run/expertauth && chown -R gradle:gradle /opt/expertauth
+#13 CACHED
+
+#14 [3/7] COPY --chown=gradle:gradle lib /opt/expertauth/lib
+#14 CACHED
+
+#15 [7/7] WORKDIR /opt/expertauth
+#15 CACHED
+
+#16 exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf 0.0s done
+#16 exporting config sha256:e571fc14b8f95a275693dd8416e7107f19e5b123d25443f74f7619ce87164bda
+#16 exporting config sha256:e571fc14b8f95a275693dd8416e7107f19e5b123d25443f74f7619ce87164bda 0.0s done
+#16 naming to moby-dangling@sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf done
+#16 unpacking to moby-dangling@sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf
+#16 unpacking to moby-dangling@sha256:5ec6ccc3fd5dc7eff16afa48b3bf6abdd4d378077f2428cae3abf8a8bc2e30bf 0.5s done
+#16 DONE 0.6s
+
+#17 resolving provenance for metadata file
+#17 DONE 0.0s

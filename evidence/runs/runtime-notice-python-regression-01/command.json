@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "tools/refresh_python_image.py",
+    "--test-existing",
+    "--name",
+    "notice-core-regression-01"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788920069.6459649,
+  "elapsed_seconds": 7.654,
+  "input_sha256": {
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16",
+    "tools/refresh_python_image.py": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+  },
+  "inputs_changed": false,
+  "output_sha256": "11b1cc6236c66c48bcbe5e243f5be57d243bf88c38ac57bc15a3dd0b0fd1f2ae",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

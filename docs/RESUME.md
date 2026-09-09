@@ -10,8 +10,10 @@ silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplic
 refresh state in adapters, or directly modify upstream-owned tables.
 
 Latest source/packaging checkpoint: read `docs/native-source-correspondence.md`.
-The corrected notice tree has89 archive notice texts and390 files; installation
-in a newly qualified image is pending. All59 native release members are identified,
+The corrected notice tree has89 archive notice texts and390 files. Core image
+`5ec6ccc3fd5d` now contains all479 verified installed files (87JARs unchanged).
+Read `docs/runtime-notice-cutover.md` for exact BuildKit and cutover evidence.
+All59 native release members are identified,
 but no native rebuild/platform acceptance follows. Resolve the explicit JNA/SQLite
 source grants, Argon2 native revision/toolchains and source/relink delivery gaps.
 Do not package the ignored unresolved JNA helper. Current capture code rejects
@@ -21,7 +23,8 @@ No native binary/source archives or images are needed to repeat the offline
 package checks; avoid repeating successful work without changed inputs.
 
 Latest Python operational proof: `evidence/operations/python-readiness/run-03`,
-with current image `7a4bb6dcfd63` qualified by image-06's19 live HTTP checks.
+with current image `7a4bb6dcfd63` qualified by image-06's19 live HTTP checks
+and the subsequent `notice-core-regression-01` against the current Core image.
 Image-02 is the original successful image build; image-06 uses the corrected probe.
 Readiness now detects an actual database outage, returns503 while liveness stays200,
 and recovers with existing-session continuity. Six outage checks include cleanup;

@@ -16,8 +16,12 @@ Actual code and evidence:
   The corrected notice assembler preserves JNA's two full short-named licenses
   and three scrypt header notices:89 archive notice texts,390 generated files.
   Ten package/source-request tests pass, plus an actual fetched-hash rejection
-  with container cleanup. These prove tooling/attribution behavior only; the
-  running image has its historical notice manifest. Native builds/platforms,
+  with container cleanup. The corrected package is installed in Core image
+  `5ec6ccc3fd5d`: all479 files match, including87 unchanged executable JARs.
+  PostgreSQL kept its exact container/start time/mounts;19 Python HTTP checks
+  passed after replacement and removed both test users. The previous Core
+  container/image and all temporary inspection/readiness clients were removed.
+  These remain narrow tooling/attribution and regression results. Native builds/platforms,
   unresolved grants and independent distribution review remain unqualified.
   See `docs/native-source-correspondence.md` for exact boundaries and reports.
 - Immutable contract extraction: 205 IDs / 207 path variants; 29 contract-tool tests.
@@ -32,7 +36,8 @@ Actual code and evidence:
   a legitimate concurrent refresh session. No license enforcement was altered.
 - Python/FastAPI: 19 real HTTP tests passed for default-app/public-tenant password
   and online sessions, cookie/header/CSRF/logout. Full Python profile remains open.
-  These19 checks were rerun against image `7a4bb6dcfd63` after fixing readiness.
+  These19 checks were rerun against image `7a4bb6dcfd63` after fixing readiness
+  and again against Core image `5ec6ccc3fd5d` after its notice replacement.
   A real PostgreSQL outage leaves Core's protocol advertisement and the historical
   readiness implementation at200; the corrected app returns503 in3.011 seconds,
   keeps liveness200 and recovers after the same database restarts. Existing-session

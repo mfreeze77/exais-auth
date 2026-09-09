@@ -1,0 +1,17 @@
+{
+  "status": "BLOCKED_AUTOMATIC_APPROVAL_REVIEW",
+  "action_executed": false,
+  "reason_returned": "blocked by policy",
+  "retained_file": {
+    "path": ".runtime/build_oss_runtime-before.py",
+    "bytes": 8895,
+    "matches_preserved_commit": "a8efedf156c06c4ebc722fbe9af42bdee32b2aba",
+    "preserved_source_path": "tools/build_oss_runtime.py"
+  },
+  "retained_empty_directories": [
+    ".runtime/runtime-image-build",
+    ".runtime/retired-core-logs/20260909T021754Z-18b64c"
+  ],
+  "scope": "Rejected combined scratch-removal and Git-staging command never started. No alternative deletion attempted. Small ignored scratch remains; this does not change the verified temporary-container and old-image retirement results.",
+  "authentication_complete": false
+}

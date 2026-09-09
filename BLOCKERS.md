@@ -31,11 +31,14 @@
   supplemental scrypt/libffi notices are preserved with release-byte mappings.
   New native correspondence work identifies all59 release members and corrects
   the source notice assembler (two JNA license texts plus three scrypt headers).
-  Those additions are not installed in the running image. JNA's make_sunver.pl
+  Those additions are installed and479 running files verified in image5ec6ccc3fd5d.
+  JNA's make_sunver.pl
   grant, SQLite JNI/extension terms, native toolchains/build correspondence and
   source/relink delivery remain open. The unresolved JNA source is local-only,
   excluded from the source ZIP; its exact metadata is retained. Read
   `docs/native-source-correspondence.md` before further native acquisition/builds.
+  Its bounded grant follow-up found GCC/libffi provenance but no unambiguous
+  originating license selection; preserve the exclusion and avoid speculative loops.
 - External qualification: no authorized live social/CAPTCHA/SMS/cloud provider account
   credentials supplied; native iOS/macOS hardware/toolchain unavailable in this Windows
   environment; physical passkey device/native-platform tests unexecuted. Keep each
@@ -51,6 +54,9 @@
   image remains intact and passes19 HTTP checks through `--test-existing`.
   Exact failure and cleanup are preserved; do not repeat that build unchanged.
   A separately qualified full rebuild/builder path is still needed.
+  BuildKit now successfully builds the Core notice image using the existing
+  Docker-driver builder. Python's full Dockerfile has not yet been qualified
+  through that path; its unchanged existing image passed post-cutover regression.
 - All remaining business features, migrations, UI/plugin closure, recovery/load/HA,
   and sovereign full-feature qualification remain required and unfinished.
 
