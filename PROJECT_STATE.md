@@ -11,7 +11,18 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
-- Current Core `3e15c927a662` exposes authenticated effective session settings;
+- Current Core `db1d29ba6244` and Node `2a02e08d5fcb` enforce the five-second
+  profile at dedicated Core refresh/verify routes. A healthy preflight followed
+  by a mismatched replica is refused without credentials or fallback; the actual
+  older replica returns 404 for these routes. Mixed concurrent operations converge
+  on one successor. Ten direct Core rows and eleven installed Node policy rows
+  pass, including cleanup, alongside reset/grace/browser and upgrade/rollback
+  regressions. All prior failures remain preserved. Old images/JARs are retired;
+  hygiene again verifies two containers, six tags and no dangling project images.
+  See `docs/guarded-session-operations.md`. Other auth-operation/configuration
+  races, all required SDK/provider/native profiles, licensing and independent
+  review remain open; this is still no foundation selection or complete row.
+- Previous Core `3e15c927a662` exposed authenticated effective session settings;
   current Node `7964df6fe51e` refuses readiness and auth/online requests when they
   differ from five seconds/TOKEN_THEFT. Actual mismatched settings, transport
   failure, eight concurrent refusals and recovery without restart pass. Both
@@ -217,7 +228,7 @@ The updated archive runner retires its own resources and fails on cleanup errors
 its12 integrity/filesystem tests passed, but its revised full Docker flow has not
 been rerun. `AGENTS.md` requires the same lifecycle for all further work.
 
-Current hygiene verification `verification-20260909T105924Z.json` passes all10
+Current hygiene verification `verification-20260909T113300Z.json` passes all10
 checks: two persistent containers, six current task image tags and no dangling
 project-labeled images. The reset slice added only one pinned17.16MB Mailpit
 image; source/bundle and test changes reused cached dependency images. The oldest

@@ -411,14 +411,14 @@ def main():
     data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
         'evidence/operations/hygiene/verification-20260909T105924Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-session-policy.json')]
-    policy_note=('Current Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core '
+    policy_note=('Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core '
         'configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. '
         'Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. '
         'Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth '
         'business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains '
         'explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured '
         'real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback '
-        'phase cases pass. Current installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab '
+        'phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab '
         'browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate '
         'was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, '
         'nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an '
@@ -435,6 +435,64 @@ def main():
         row.setdefault('candidate_evidence',[]).extend(data['effective_session_policy_artifacts'])
         row['qualification_note']=row.get('qualification_note','')+' '+policy_note
         row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+policy_ids))
+    guarded_sources=['engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java',
+        'engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java','tools/patch_session_policy.py',
+        'tools/build_password_session.py','tools/build_atomic_core_runtime.py','tools/run_refresh_grace_lab.py',
+        'tools/build_node_runtime.py','tools/retire_password_session_candidate.py','tools/verify_guarded_session_evidence.py',
+        'examples/node-react/server.js','tests/foundation/GuardedSessionProbe.java','tests/foundation/RefreshGraceProbe.java',
+        'tests/foundation/sdk_refresh_grace.mjs','tests/foundation/session_policy_readiness.mjs',
+        'reuse/password-session-components.json','reuse/session-grace-components.json','docs/guarded-session-operations.md']
+    guarded_sources+=['evidence/operations/password-session-build/guarded-01/'+p for p in
+        ('Session.java','Webserver.java','GuardedRefreshSessionAPI.java','GuardedVerifySessionAPI.java')]
+    guarded_reports=['evidence/operations/password-session-build/guarded-01/'+p for p in ('report.json','core-members.json','postgresql-members.json')]
+    guarded_reports+=['evidence/operations/atomic-core-image/guarded-01/'+p for p in ('report.json','qualification.json','adaptation-runtime.cdx.json','notice-manifest.json')]
+    guarded_reports+=['evidence/operations/atomic-core-replacement/guarded-01/'+p for p in ('report.json','seed.json','upgraded.json','rollback.json','final.json','cleanup.json')]
+    guarded_reports+=['evidence/operations/atomic-reset/image-core-guarded-01/'+p for p in ('report.json','probe-report.json','password-session-report.json')]
+    guarded_reports+=['evidence/operations/atomic-reset/image-node-guarded-01/report.json','evidence/operations/atomic-reset/installed-guarded-01/report.json',
+        'evidence/operations/node-image-build/guarded-01/report.json','evidence/operations/node-image-build/evidence-validation-guarded-01.json',
+        'evidence/operations/hygiene/password-session-retirement-guarded-01.json','evidence/foundation/refresh-grace/guarded-evidence-validation-01.json']
+    for run in ('atomic-image-node-guarded-01','atomic-installed-guarded-01'):
+        guarded_reports+=['evidence/operations/password-reset/'+run+'/'+p for p in ('report.json','probe-results.json','tls-results.json','browser-results.json')]
+    for run,files in [('image-guarded-guarded-01',('report.json','guarded-report.json')),
+                      ('image-core-guarded-01',('report.json','probe-report.json')),
+                      ('guarded-source-01',('report.json','policy-results.json')),
+                      ('installed-guarded-01',('report.json','sdk-results.json','browser-results.json','signed-out.png')),
+                      ('policy-guarded-01',('report.json','policy-results.json'))]:
+        guarded_reports+=['evidence/foundation/refresh-grace/'+run+'/'+p for p in files]
+    data['guarded_session_operation_artifacts']=[artifact(ROOT,p) for p in guarded_reports]
+    data['guarded_session_transform_failed_history']=[artifact(ROOT,'evidence/operations/session-policy-transform/anchors-01/'+p) for p in ('report.json','patch_session_policy.py')]
+    guarded_note=('Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit '
+        'OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh '
+        'transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session '
+        'store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; '
+        'Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed '
+        'by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 '
+        'for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. '
+        'Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through '
+        'real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session '
+        'recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy '
+        'checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node '
+        'regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset '
+        'behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout '
+        'denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old '
+        'Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. '
+        '303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor '
+        'failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, '
+        'rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink '
+        'distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain '
+        'binding; no foundation or full requirement/profile claim is promoted.')
+    guarded_ids=[r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/image-guarded-guarded-01/guarded-report.json')['rows']]
+    guarded_ids += [r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json')['rows']]
+    for identifier in ('BAS-002','BAS-004','BAS-005','SES-003','SES-004','SES-005','SES-006','SES-007','SES-017',
+                       'SDK-001','SDKP-01','SDK-005','SDKP-05','PWD-006','OPS-004','OPS-007','OPS-011',
+                       'WP-002','WP-004','WP-009','WP-010','WP-033'):
+        row=index[identifier];row['implementation'] += [artifact(ROOT,p) for p in guarded_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['guarded_session_operation_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+guarded_note
+        row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+guarded_ids))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/verification-20260909T113300Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-guarded-sessions.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

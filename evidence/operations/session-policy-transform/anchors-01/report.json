@@ -1,0 +1,13 @@
+{
+  "kind": "pinned-source-transformation-preflight",
+  "passed": false,
+  "authentication_tested": false,
+  "docker_resources_created": 0,
+  "source_sha256": "311dabff6cd15306d582313bc868baa7d57fade819fb4feeb869d33c6828c810",
+  "result": {
+    "Session.java": "transformed",
+    "RefreshSessionAPI.java": "transformed",
+    "VerifySessionAPI.java": "ValueError: Pinned session-policy source anchor differs"
+  },
+  "cause": "Unanchored catch substring also matched a nested, more-indented catch in VerifySessionAPI."
+}

@@ -10,9 +10,9 @@ real API tests and license evidence are retained separately from plan integrity 
 
 ## Reproduce the source-built alternative lab
 
-The latest [effective session-policy candidate](docs/session-policy-readiness.md)
-installs an explicit Node CDI5.6 adaptation and authenticated Core settings.
-Real mismatch, transport failure, concurrent refusal and recovery tests pass,
+The latest [guarded session candidate](docs/guarded-session-operations.md)
+installs dedicated Core refresh/verify operations and an explicit Node adaptation.
+Real mismatches after healthy preflight, older-replica refusal and concurrency pass,
 alongside grace/replay, transaction-abort, four-tab browser and local upgrade/
 rollback evidence. Original failed profiles and full foundation gates remain open.
 Use its current image pins and qualification commands for an existing lab. The original

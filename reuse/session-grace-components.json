@@ -22,7 +22,7 @@
         "sha256": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
       "requirements": [
         "SES-003",
@@ -50,7 +50,7 @@
         "sha256": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
       "requirements": [
         "SES-003",
@@ -78,7 +78,7 @@
         "sha256": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
       "requirements": [
         "SES-003",
@@ -106,7 +106,7 @@
         "sha256": "e98db9d2d73445adfd01dffd80945b683d32d36a7a8fb920dbb55332f7aa6c96"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
       "requirements": [
         "SES-003",
@@ -134,7 +134,7 @@
         "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "examples/node-react/server.js",
       "requirements": [
         "SES-003",
@@ -162,7 +162,7 @@
         "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "examples/node-react/server.js",
       "requirements": [
         "SES-003",
@@ -190,7 +190,7 @@
         "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "examples/node-react/server.js",
       "requirements": [
         "SES-003",
@@ -218,7 +218,7 @@
         "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "examples/node-react/server.js",
       "requirements": [
         "SES-003",
@@ -246,7 +246,7 @@
         "sha256": "0983cc797e149d05eb78b328c2214e6faa4e8bd6bb711b151053647677324170"
       },
       "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
-      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "modifications": "Guarded profile adds explicit expected-policy arguments and configuration validation to the separately mapped Apache Session.java derivative. Original token algorithms and SDK sources are retained. Original API classes are unchanged; new guarded API derivatives retain Apache attribution. See reuse/password-session-components.json.",
       "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
       "requirements": [
         "SES-003",
@@ -260,16 +260,20 @@
   ],
   "adaptation": {
     "path": "examples/node-react/server.js",
-    "sha256": "fc71a54a1072347e43feebe4a05c0c77f9b03c82510c27661db6fd8700180e86",
+    "sha256": "78c0b03cee44ee4725cf8ec60485974bd6a63fb411ddf4987f7f4e5c758f7137",
     "activation": "EXPERTAUTH_SESSION_POLICY=core-cdi56-grace-v1 with EXPERTAUTH_RESET_POLICY=atomic-v1",
     "supported_private_operations": [
-      "POST /recipe/session/refresh",
-      "POST /recipe/session/verify"
+      "POST /expertauth/session/refresh",
+      "POST /expertauth/session/verify"
     ],
     "scope": "Default public tenant; configured namespaces fail closed at the adaptation boundary. Other operations retain the upstream protocol. No claim that upstream Node24.0.3 supports CDI5.6 unchanged.",
-    "effective_policy": "Private authenticated effective tenant configuration readout; exact5/TOKEN_THEFT readiness and per-request preflight. No cached healthy answer. Heterogeneous replicas and check/operation configuration races remain unqualified."
+    "effective_policy": "Core validates the explicit expected policy inside dedicated session operations. Node preflight also verifies settings and guarded-operation support. Other auth operations and live configuration reload orderings remain unqualified.",
+    "source_sdk_operations": [
+      "POST /recipe/session/refresh",
+      "POST /recipe/session/verify"
+    ]
   },
-  "engine_ownership": "Installed Core3e15c927a662 contains the existing atomic password/session extension plus an authenticated effective-policy readout. It alone owns credentials, rotation, signing and session storage. No entitlement check is changed.",
+  "engine_ownership": "Installed Coredb1d29ba6244 owns credentials, token parsing, policy validation, rotation, signing and session storage. Dedicated guarded APIs delegate to existing Core methods with an explicit expected-policy parameter. Original API classes, SDK source and entitlement checks are retained.",
   "dependency_declarations": [
     "examples/node-react/package-lock.json",
     "reuse/oss-core-runtime.cdx.json",
@@ -279,7 +283,10 @@
     "evidence/foundation/refresh-grace/run-01/probe-report.json",
     "evidence/foundation/refresh-grace/node-03/sdk-results.json",
     "evidence/foundation/refresh-grace/node-03/browser-results.json",
-    "evidence/foundation/refresh-grace/policy-source-01/policy-results.json"
+    "evidence/foundation/refresh-grace/policy-source-01/policy-results.json",
+    "evidence/foundation/refresh-grace/image-guarded-guarded-01/guarded-report.json",
+    "evidence/foundation/refresh-grace/installed-guarded-01/sdk-results.json",
+    "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json"
   ],
   "primary_references": [
     "https://github.com/supertokens/supertokens-core/pull/1308",
@@ -291,7 +298,7 @@
   ],
   "effective_policy_extension": {
     "path": "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
-    "sha256": "f4397a0b7463bf63808c9357dba4cdd8ee6ba2e041c4efd1ee2e13e2b63aa409",
+    "sha256": "5e1fc6c057316916068c6bcabab8ca7caabfc677a8d6ccf94d943b5f4dd5480a",
     "license": "Apache-2.0",
     "config_source_unchanged": true,
     "file_specific_reuse": "reuse/password-session-components.json"

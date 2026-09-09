@@ -27,12 +27,15 @@
   installed Node/browser cases through an explicit two-operation adaptation.
   Real transaction abort, retry/replay revocation and four-tab coordination pass.
   This does not qualify unchanged Node5.4/Python/native clients, arbitrary
-  concurrent credential installation, heterogeneous-replica policy races, revocation
+  concurrent credential installation, other-auth-operation policy races, revocation
   crash boundaries, all orderings or the full foundation. The original source
   lab still uses zero grace. Authenticated effective-policy readiness and request
-  refusal now pass actual mismatch/concurrency/recovery tests. The preflight is
-  not atomic with later operations or configuration changes across replicas.
-  See `docs/session-policy-readiness.md` and `docs/session-refresh-grace.md`.
+  refusal pass actual mismatch/concurrency/recovery tests. Dedicated guarded Core
+  refresh/verify routes now refuse actual mismatched replicas after a healthy
+  preflight and fail closed on an older replica. Their exact transaction policy
+  object is checked inside Core. Other auth operations, live configuration reload
+  orderings and full rolling deployments remain unqualified. See
+  `docs/guarded-session-operations.md` and the preserved earlier policy reports.
 - Dependency distribution: LGPL/EPL/native source/relink notices, container OS review,
   every SDK/plugin transitive closure and version matrix remain incomplete.
   The runtime now carries a verified notice package and83 locked source siblings

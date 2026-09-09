@@ -3,6 +3,11 @@
 Status: PARTIAL. This package qualifies a default-public-tenant candidate. It does
 not select a foundation or close any complete baseline requirement or profile.
 
+This records the prior policy-01/policy-02 checkpoint. Current guarded routes,
+image pins and resume commands are in
+[guarded-session-operations.md](guarded-session-operations.md). The images and JAR
+pair below were superseded and retired after their replacements passed.
+
 The private authenticated `GET /public/expertauth/password/session` now returns
 the Core's effective `refreshTokenRotationGracePeriodSeconds` and
 `recentTokenReuseBehaviour` under `sessionPolicy`. These values come from the

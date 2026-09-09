@@ -1,0 +1,13 @@
+Testing actual Node effective-policy readiness.
+{"check": "POLICY56-EFFECTIVE-PRIVATE-SETTINGS", "outcome": "passed"}
+{"check": "POLICY56-HEALTHY-AUTHENTICATION", "outcome": "passed"}
+{"check": "POLICY56-ZERO-GRACE-REJECTED", "outcome": "passed"}
+{"check": "POLICY56-REUSE-BEHAVIOUR-REJECTED", "outcome": "passed"}
+{"check": "POLICY56-UNAVAILABLE-REJECTED", "outcome": "passed"}
+{"check": "POLICY56-CONCURRENT-MISMATCH-REJECTED", "outcome": "passed"}
+{"check": "POLICY56-RECOVERY-WITHOUT-APP-RESTART", "outcome": "passed"}
+{"check": "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT", "outcome": "passed"}
+{"check": "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT", "outcome": "passed"}
+{"check": "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS", "outcome": "passed"}
+{"check": "POLICY56-OWNED-FIXTURE-CLEANUP", "outcome": "passed"}
+{"passed": true, "report": "evidence/foundation/refresh-grace/policy-guarded-01", "created": 6, "retired": 6, "errors": []}

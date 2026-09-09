@@ -9,18 +9,29 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest work is `docs/session-policy-readiness.md`. Current Core is `3e15c927a662`,
-current Node is `7964df6fe51e`, and the retained binary build is `policy-01`.
+Latest work is `docs/guarded-session-operations.md`. Current Core is `db1d29ba6244`,
+current Node is `2a02e08d5fcb`, and the current binary build is `guarded-01`.
+The dedicated Core refresh/verify routes enforce the explicit policy using the
+actual token tenant and the transaction's configuration object. Actual mismatched
+operations after healthy preflight and an older replica fail closed; mixed
+requests converge. Core/Node regressions, real browser tests and local rollback
+pass. Old images/JARs and all temporary containers are retired. The next foundation
+work must address the documented namespace/linking and licensing blockers without
+assuming an engine selection or bypassing entitlements. Runtime native/source/
+relink closure is dependency-ready; remaining SDK, live-provider/native-platform,
+configuration/revocation ordering and independent-review gates remain binding.
+
+Previous work is `docs/session-policy-readiness.md`. Core was `3e15c927a662`,
+Node was `7964df6fe51e`, and its binary build was `policy-01`.
 Authenticated effective settings and mismatch/transport/concurrent request
 refusal pass actual installed tests. The prior Node browser failure was preserved,
 the response read timing corrected, and all nine focused browser cases plus the
 full installed reset/grace/policy regressions pass. Old images and JARs are retired;
 all temporary containers are gone. Every original requirement and blocker remains
 binding; mixed-replica check/operation policy races are still unqualified.
-Use the current commands and exact image pins in that document. The next session
-work is enforcing policy consistently at the Core operation boundary and testing
-configuration changes between check and operation, then the remaining revocation
-crash/restart/orderings. This must retain the single engine and licensing boundary.
+The guarded-operation work above addresses refresh/verify routing races; the
+remaining auth-operation and live configuration-reload orderings are unqualified.
+Use the latest commands above; policy-01 images and JARs are now retired.
 
 Previous work is `docs/session-refresh-grace.md`. Node image `e02ab9bcd78e`
 contains an explicit CDI5.6 refresh/verify adapter; the dependency still declares

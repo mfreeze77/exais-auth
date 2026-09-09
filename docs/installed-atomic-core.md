@@ -1,7 +1,7 @@
 # Installed atomic Core candidate and local rollback
 
 This is the superseded installed-02 checkpoint. Current pins and commands are in
-[session-policy-readiness.md](session-policy-readiness.md). Its old image and JAR
+[guarded-session-operations.md](guarded-session-operations.md). Its old image and JAR
 pair were retired after replacement qualification.
 
 This checkpoint's `expertauth-oss-core:12.2.0-probe` image was

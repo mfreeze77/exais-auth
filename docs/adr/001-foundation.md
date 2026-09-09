@@ -63,3 +63,14 @@ heterogeneous replicas or a configuration change before the operation. All other
 foundation, configured namespace/link/factor, SDK/native/provider, licensing and
 independent-review gates remain binding. `selected_engine` stays null. Current
 pins, source and exact evidence are in `docs/session-policy-readiness.md`.
+
+Subsequent 2026-09-09 addition: guarded private Core refresh/verify routes now
+carry an explicit policy argument into the existing Core operations. Real
+healthy-preflight/mismatched-operation cases fail closed, including concurrency;
+an actual pre-guard replica returns 404 for the new routes. The original API
+classes and behavior remain unchanged. Installed Node routes these operations
+without fallback; reset, grace, browser and local upgrade/rollback regressions
+pass. This does not close the required namespace/linking, runtime distribution,
+other auth/configuration ordering, SDK/native/provider or independent-review
+gates. Engine selection remains pending. Current evidence and pins are in
+`docs/guarded-session-operations.md`.

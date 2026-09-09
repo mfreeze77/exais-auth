@@ -1,7 +1,7 @@
 # Explicit CDI5.6 session candidate
 
 Current images and effective-policy readiness are in
-[session-policy-readiness.md](session-policy-readiness.md).
+[guarded-session-operations.md](guarded-session-operations.md).
 The following original checkpoint used Node `e02ab9bcd78e` and Core `03b4458c532f`;
 both have been superseded and retired after qualification.
 This is a tested default-public-tenant candidate, not foundation or full SDK approval.

@@ -24,7 +24,7 @@ def main():
     installed = read(image_path)
     need(installed['passed'] and installed['installed_qualification_passed'] and
          installed['candidate_image_id'] == current_core_image(), 'Installed current candidate required')
-    for kind in ('core_test', 'node_test', 'refresh_grace_test', 'replacement'):
+    for kind in ('core_test', 'node_test', 'refresh_grace_test', 'replacement', *(['guarded_session_test'] if 'guarded_session_test' in installed else [])):
         ref = installed[kind]; path = ROOT / ref['path']
         need(sha(path) == ref['sha256'] and read(path)['passed'], 'Installed qualification changed')
     replacement = read(ROOT / installed['replacement']['path'])

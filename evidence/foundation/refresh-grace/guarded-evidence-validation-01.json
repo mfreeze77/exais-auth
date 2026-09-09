@@ -1,0 +1,3548 @@
+{
+  "kind": "guarded-session-source-binary-evidence-correspondence",
+  "started": "2026-09-09T11:36:37.074194+00:00",
+  "passed": true,
+  "complete": false,
+  "authentication_tests_executed": false,
+  "independent_review": false,
+  "tool_sha256": "7b69eadb3129b26a311c8b7bc0e9f108fbef22ce16e78dc073bdce4b98b48392",
+  "checks": [
+    {
+      "check": "current compiled source tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "current compiled source tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "current compiled source tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "current compiled source tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "current compiled source tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "current compiled source evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "current compiled source engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "bounded compiler preserved prior pair and removed helper",
+      "passed": true
+    },
+    {
+      "check": "full compiled core CRC/member identity",
+      "passed": true
+    },
+    {
+      "check": "original API class unchanged RefreshSessionAPI",
+      "passed": true
+    },
+    {
+      "check": "original API class unchanged VerifySessionAPI",
+      "passed": true
+    },
+    {
+      "check": "full compiled postgresql CRC/member identity",
+      "passed": true
+    },
+    {
+      "check": "plugin unchanged from preceding implementation",
+      "passed": true
+    },
+    {
+      "check": "exact Apache derivative GuardedRefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "exact Apache derivative GuardedVerifySessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "current installed Core and bounded build cleanup",
+      "passed": true
+    },
+    {
+      "check": "superseded Core image retired",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/operations/atomic-reset/image-core-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/operations/atomic-reset/image-node-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/foundation/refresh-grace/image-core-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/foundation/refresh-grace/image-guarded-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/operations/atomic-core-replacement/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "actual replacement/rollback preserves database",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-001.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-001.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-002.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-002.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-003.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-003.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-004.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-004.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-005.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-005.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-006.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-006.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-007.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-007.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-008.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-008.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-009.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-009.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-010.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-010.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-011.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-011.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-012.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-012.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-013.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-013.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-014.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-014.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-015.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-015.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-016.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-016.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-017.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-017.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-018.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-018.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-019.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-019.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-020.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-020.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-021.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-021.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-022.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-022.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-023.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-023.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-024.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-024.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-025.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-025.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-026.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-026.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-027.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-027.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-028.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-028.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-029.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-029.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-030.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-030.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-031.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-031.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-032.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-032.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-033.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-033.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-034.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-034.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-035.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-035.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-036.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-036.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-037.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-037.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-038.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-038.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-039.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-039.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-040.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-040.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-041.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-041.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-042.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-042.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-043.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-043.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-044.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-044.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-045.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-045.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-046.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-046.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-047.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-047.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-048.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-048.stderr",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-049.stdout",
+      "passed": true
+    },
+    {
+      "check": "private replacement .runtime/atomic-core-replacement/guarded-01/command-049.stderr",
+      "passed": true
+    },
+    {
+      "check": "superseded binary pair retired after qualification",
+      "passed": true
+    },
+    {
+      "check": "current Node qualified before promotion",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/operations/atomic-reset/installed-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/operations/password-reset/atomic-installed-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/foundation/refresh-grace/installed-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "bound evidence/foundation/refresh-grace/policy-guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 passed without broad claims",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 resources/source preserved",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 all exact helpers retired",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 exact current Core",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 installed without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 installed without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 installed without JAR overlays core-c",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 installed without JAR overlays core-d",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 current product engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer tests/foundation/GuardedSessionProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 recorded producer evidence/operations/password-session-build/policy-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 50 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 50 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 51 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 51 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 52 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 52 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 53 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 53 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 54 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 54 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 55 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 55 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 56 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 56 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 57 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 57 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 58 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 58 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 59 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 actual command 59 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-guarded-guarded-01 exact successful guarded-report.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 passed without broad claims",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 resources/source preserved",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 all exact helpers retired",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 exact current Core",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 installed without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 installed without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 current product engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "image-core-guarded-01 exact successful probe-report.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 passed without broad claims",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 resources/source preserved",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 all exact helpers retired",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 exact current Core",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 installed without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 installed without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 installed without JAR overlays core-c",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 current product examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 recorded producer tests/foundation/session_policy_readiness.mjs",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 50 stdout",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 actual command 50 stderr",
+      "passed": true
+    },
+    {
+      "check": "guarded-source-01 exact successful policy-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 passed without broad claims",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 resources/source preserved",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 all exact helpers retired",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 exact current Core",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 installed without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 installed without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 recorded producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 current product examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 exact successful sdk-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 exact successful browser-results.json",
+      "passed": true
+    },
+    {
+      "check": "installed-guarded-01 exact Node without overlays",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 passed without broad claims",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 resources/source preserved",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 all exact helpers retired",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 exact current Core",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 installed without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 installed without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 installed without JAR overlays core-c",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer evidence/operations/password-session-build/guarded-01/report.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/password_session_candidates.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/build_password_session.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/build_core_reset.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/core_compiler_inputs.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/patch_session_policy.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer evidence/build/oss-core/artifacts.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 current product examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 recorded producer tests/foundation/session_policy_readiness.mjs",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 47 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 47 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 48 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 48 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 49 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 49 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 50 stdout",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 actual command 50 stderr",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 exact successful policy-results.json",
+      "passed": true
+    },
+    {
+      "check": "policy-guarded-01 exact Node without overlays",
+      "passed": true
+    },
+    {
+      "check": "nine direct behavior checks plus cleanup",
+      "passed": true
+    },
+    {
+      "check": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "passed": true
+    },
+    {
+      "check": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "passed": true
+    },
+    {
+      "check": "actual old replica cannot perform guarded operations",
+      "passed": true
+    },
+    {
+      "check": "16 mixed Core requests converge",
+      "passed": true
+    },
+    {
+      "check": "installed guarded Node profile complete",
+      "passed": true
+    },
+    {
+      "check": "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT",
+      "passed": true
+    },
+    {
+      "check": "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT",
+      "passed": true
+    },
+    {
+      "check": "mixed Node requests converge",
+      "passed": true
+    },
+    {
+      "check": "unchanged browser coordination and logout",
+      "passed": true
+    },
+    {
+      "check": "SDK behavior/wire/cleanup all pass",
+      "passed": true
+    },
+    {
+      "check": "guarded CDI5.6 wire on both replicas without fallback",
+      "passed": true
+    },
+    {
+      "check": "actual committed guarded responses lost/truncated",
+      "passed": true
+    },
+    {
+      "check": "actual installed app server.js",
+      "passed": true
+    },
+    {
+      "check": "actual installed app client.jsx",
+      "passed": true
+    },
+    {
+      "check": "actual installed app package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "current file-specific adaptation binding",
+      "passed": true
+    }
+  ],
+  "source_reports": {
+    "evidence/operations/password-session-build/guarded-01/report.json": "10d239055661c37369ad519c899e336a41c7730b1f49dfd4531ca9088f7fe304",
+    "evidence/operations/atomic-core-image/guarded-01/report.json": "f83b11ee2e892106990f4d4a805ee0c88d38858f02caee292034d5587d61b607",
+    "evidence/operations/atomic-reset/image-core-guarded-01/report.json": "dba6feafd3d7b4ad605c9701d8d8837aa0abfd3ba20e2e02819daa13f5f02d86",
+    "evidence/operations/atomic-reset/image-node-guarded-01/report.json": "9d819773af2aa6152c422be663beeb129acda75be1ce4b8e786bb908a8bb55fd",
+    "evidence/foundation/refresh-grace/image-core-guarded-01/report.json": "078b96aee0ce8fc630565468af71be295029561ca39123cb1d19bbf93e21a857",
+    "evidence/foundation/refresh-grace/image-guarded-guarded-01/report.json": "1cd4501cbfb68c9d0e7d17ae1536d688d9ad0c66e6ee599ebb87f9224739d1b9",
+    "evidence/operations/atomic-core-replacement/guarded-01/report.json": "64e66d842c9d246747e550c2a9af01dc15cd004774f353721cdc087068f9a6aa",
+    "evidence/operations/hygiene/password-session-retirement-guarded-01.json": "0f5ba4a29826504ee43b67618edd44a4935a2892225d6b163dfcad4f8cfd8833",
+    "evidence/operations/node-image-build/guarded-01/report.json": "ab7157f02162e279ba88f27b1c255d728b6e805224b3fbf6835f71d586d32c64",
+    "evidence/operations/atomic-reset/installed-guarded-01/report.json": "20d9195a0f88ae68de63d7334a1714a122a812d99173ae8317094ad4dd86debf",
+    "evidence/operations/password-reset/atomic-installed-guarded-01/report.json": "d5dd33135a3976f33a4eed43bb55f87b37a0a6191fc90d63a5d91d7864442e88",
+    "evidence/foundation/refresh-grace/installed-guarded-01/report.json": "ab173afff1af97f8cb15085c36bd1fd3ecb25cb2eb17eade3854b9517d0cbb89",
+    "evidence/foundation/refresh-grace/policy-guarded-01/report.json": "bb9d0a393e0a48c88b84d1018f058c73ae86c0ae83c814c7948927d07382b707",
+    "evidence/foundation/refresh-grace/image-guarded-guarded-01/guarded-report.json": "ad07c78e45f91a82222e32a5c1c0d8ea1aebeee86ef67aa09ccf8ecb66d0e4cf",
+    "evidence/foundation/refresh-grace/image-core-guarded-01/probe-report.json": "fddf024ec90c3e80f5b69c7c2c2cb21aa127cff2efe13a442706844111a81044",
+    "evidence/foundation/refresh-grace/guarded-source-01/report.json": "261219e7482a3d6701e28c52c25a5869d0889ae96a29abe35a0c74ee738d78f9",
+    "evidence/foundation/refresh-grace/guarded-source-01/policy-results.json": "de7ddd2a035f09d983548132af2b395c0b3001b04f877599a5e47e4544708be3",
+    "evidence/foundation/refresh-grace/installed-guarded-01/sdk-results.json": "fcf9390d271df1280b5922a96bc3aac0b752dcaf83ce8cd09c80c4e9a09e465a",
+    "evidence/foundation/refresh-grace/installed-guarded-01/browser-results.json": "d2a76817da2b3e4d86caa8be88dbfd23b5a217609922961df604d6f15b741341",
+    "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23",
+    "reuse/session-grace-components.json": "7120f88d2105693a7fcc6cf2acd6cd32ac504c53b73dd2b3e8eb45f3dcde9dda"
+  },
+  "errors": [],
+  "finished": "2026-09-09T11:36:39.375726+00:00"
+}

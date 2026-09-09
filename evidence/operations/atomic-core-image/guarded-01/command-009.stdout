@@ -1,0 +1,2 @@
+Testing twelve declared CDI5.6 policy cases on disposable installed Core replicas.
+{"passed": true, "report": "evidence/foundation/refresh-grace/image-core-guarded-01", "created": 5, "retired": 5, "errors": []}
