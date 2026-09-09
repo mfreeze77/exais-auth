@@ -1,0 +1,22 @@
+{
+  "mode": "claims-only",
+  "counts": {
+    "requirements": 265,
+    "apis": 205,
+    "sdks": 8,
+    "plugins": 14,
+    "integrations": 10,
+    "milestones": 11,
+    "work_packages": 36
+  },
+  "requirement_status_counts": {
+    "implemented-unverified": 23,
+    "blocked": 10,
+    "planned": 225,
+    "failed": 7
+  },
+  "passed": true,
+  "complete": false,
+  "errors": [],
+  "limitation": "Artifact validation cannot establish reviewer identity or detect fabricated tests. Independent review remains mandatory."
+}

@@ -493,6 +493,38 @@ def main():
     data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
         'evidence/operations/hygiene/verification-20260909T113300Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-guarded-sessions.json')]
+    native_sources=['tools/build_native_argon2.py','tools/capture_native_sources.py','tools/run_native_source_capture.py',
+        'tools/run_refresh_grace_lab.py','tests/foundation/NativePasswordProbe.java','tools/verify_extracted_native.py',
+        'reuse/native-argon2-components.json','docs/native-argon2-build.md']
+    native_reports=['evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json',
+        'evidence/reuse/native-correspondence/argon2/native-source-request.json',
+        'evidence/reuse/native-correspondence/argon2/native-source/acquisition.json',
+        'evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json',
+        'evidence/foundation/refresh-grace/native-argon2-01/report.json',
+        'evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json']
+    data['native_argon2_candidate_artifacts']=[artifact(ROOT,p) for p in native_reports]
+    data['native_argon2_failed_history']=[artifact(ROOT,'evidence/reuse/native-correspondence/argon2/native-build/'+run+'/'+p)
+        for run in ('linux-01','linux-02') for p in ('report.json','build_native_argon2.py')]
+    native_note=('PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 '
+        'builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core '
+        'source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. '
+        'Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is '
+        'explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. '
+        'Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix '
+        'remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.')
+    native_ids=[r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json')['rows']]
+    # These planned full rows gain a narrow candidate; retain their required scope/status.
+    for identifier in ('PWD-005','MIG-002'):
+        index[identifier].update(implementation=[],candidate_evidence=[],qualification_note='',observed_test_ids=[])
+    for identifier in ('BAS-002','BAS-004','BAS-005','PWD-001','PWD-005','PWD-006','MIG-002','WP-002'):
+        row=index[identifier];row['implementation'] += [artifact(ROOT,p) for p in native_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['native_argon2_candidate_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+native_note
+        row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+native_ids))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/verification-20260909T121421Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-native-argon2.json',
+        'evidence/reuse/native-correspondence/argon2/checkpoint-checks-01/report.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

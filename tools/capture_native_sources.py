@@ -95,6 +95,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--metadata', action='store_true')
+    mode.add_argument('--argon2-native-metadata', action='store_true')
     mode.add_argument('--license-texts', action='store_true')
     mode.add_argument('--request', type=Path)
     parser.add_argument('--output', type=Path, required=True)
@@ -130,7 +131,22 @@ def main():
         return raw
 
     try:
-        if args.metadata:
+        if args.argon2_native_metadata:
+            base = 'https://api.github.com/repos/P-H-C/phc-winner-argon2/git/'
+            ref = json.loads(acquire('ref.json', base + 'ref/tags/20190702'))['object']
+            for depth in range(3):
+                if ref['type'] == 'commit':
+                    break
+                require(ref['type'] == 'tag' and re.fullmatch('[0-9a-f]{40}', ref['sha']), 'Unexpected native tag object')
+                ref = json.loads(acquire(f'tag-{depth}.json', base + 'tags/' + ref['sha']))['object']
+            require(ref['type'] == 'commit' and re.fullmatch('[0-9a-f]{40}', ref['sha']), 'Unresolved native commit')
+            commit = json.loads(acquire('commit.json', base + 'commits/' + ref['sha']))
+            require(commit['sha'] == ref['sha'], 'Native commit mismatch')
+            tree = json.loads(acquire('tree.json', base + 'trees/' + commit['tree']['sha'] + '?recursive=1'))
+            require(tree.get('truncated') is False and tree['sha'] == commit['tree']['sha'], 'Incomplete native tree')
+            report['native_commit'] = commit['sha']
+            report['native_tree'] = tree['sha']
+        elif args.metadata:
             ref = json.loads(acquire('argon2/ref.json', 'https://api.github.com/repos/phxql/argon2-jvm/git/ref/tags/v2.11'))['object']
             for depth in range(3):
                 if ref['type'] == 'commit':

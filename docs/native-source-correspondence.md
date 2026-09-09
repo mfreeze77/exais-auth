@@ -5,6 +5,12 @@ no foundation, native platform, complete requirement or distribution approval
 passes from this work. The265 requirements,205 API entries and original profiles
 remain binding.
 
+Later [Argon2 work](native-argon2-build.md) resolves PHC20190702 and acquires68
+pinned source/build/test/notice files. Two Linux x86-64 builds match; original C
+tests and actual cross-library Core password/import/reset/concurrency cases pass.
+The native dependency is mounted; installed packaging and other platform/source/
+distribution gates remain open. The table below is the preceding checkpoint.
+
 | Component | Locally verified evidence | Still needed |
 | --- | --- | --- |
 | scrypt1.4.0 |32 source/build/test files and3 native release members;6 explicit BSD C/header notices | Native build/copy wiring, compiler/JDK/system inputs, static runtime correspondence and platform tests |

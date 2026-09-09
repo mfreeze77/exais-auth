@@ -1,0 +1,43 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T11:54:36.833132+00:00",
+  "tool_sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85",
+  "records": [
+    {
+      "path": "ref.json",
+      "url": "https://api.github.com/repos/P-H-C/phc-winner-argon2/git/ref/tags/20190702",
+      "final_url": "https://api.github.com/repos/P-H-C/phc-winner-argon2/git/ref/tags/20190702",
+      "http_status": 200,
+      "bytes": 359,
+      "sha256": "bdb556e6daf4f14faa8fd5181c405767fbb2a9bee63cf021df7e845c141ba0c6",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "commit.json",
+      "url": "https://api.github.com/repos/P-H-C/phc-winner-argon2/git/commits/62358ba2123abd17fccf2a108a301d4b52c01a7c",
+      "final_url": "https://api.github.com/repos/P-H-C/phc-winner-argon2/git/commits/62358ba2123abd17fccf2a108a301d4b52c01a7c",
+      "http_status": 200,
+      "bytes": 2347,
+      "sha256": "17bfe819c96914759bbb340c371197e8740ae771dc56b75d30b2d3afa49f7a4d",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "tree.json",
+      "url": "https://api.github.com/repos/P-H-C/phc-winner-argon2/git/trees/04128837520d3328497a6710c9c2696d09289c50?recursive=1",
+      "final_url": "https://api.github.com/repos/P-H-C/phc-winner-argon2/git/trees/04128837520d3328497a6710c9c2696d09289c50?recursive=1",
+      "http_status": 200,
+      "bytes": 22480,
+      "sha256": "a0eba1be8e954877ae787f6e70f2e2a979195b33b0daaaeab49002ef9fbb5426",
+      "expected_git_blob_sha1": null
+    }
+  ],
+  "errors": [],
+  "total_bytes": 25186,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "native_commit": "62358ba2123abd17fccf2a108a301d4b52c01a7c",
+  "native_tree": "04128837520d3328497a6710c9c2696d09289c50",
+  "finished": "2026-09-09T11:54:37.590573+00:00",
+  "passed": true
+}

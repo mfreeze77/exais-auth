@@ -1,0 +1,23 @@
+{
+  "kind": "native-checkpoint-correspondence-checks",
+  "authentication_tests": false,
+  "complete": false,
+  "checks": {
+    "native_source_git_and_sha256": true,
+    "executed_builder_unchanged": true,
+    "candidate_bytes_unchanged": true,
+    "native_build_passed": true,
+    "lab_source_and_binary_inputs_unchanged": true,
+    "lab_passed_and_cleaned": true,
+    "behavior_report_hash": true,
+    "all_eleven_rows_passed": true,
+    "fifteen_owned_users_removed": true,
+    "persistent_resources_unchanged": true,
+    "ledger_updater_idempotent": true,
+    "ledger_integrity": true,
+    "claim_boundaries": true
+  },
+  "passed": true,
+  "native_build_report_sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c",
+  "lab_report_sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+}

@@ -11,6 +11,13 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- A149,528-byte Argon2 library builds twice identically from68 pinned PHC files.
+  Original C tests and ten actual Core password/import/reset/concurrency cases
+  plus cleanup pass. All15 users and five lab containers retire; no image build,
+  download or persistent change. Imported hashes stay unchanged: automatic rehash
+  remains missing. Two build environment failures are preserved. See
+  `docs/native-argon2-build.md`; installed packaging, other platforms and full
+  source/distribution gates remain open.
 - Current Core `db1d29ba6244` and Node `2a02e08d5fcb` enforce the five-second
   profile at dedicated Core refresh/verify routes. A healthy preflight followed
   by a mismatched replica is refused without credentials or fallback; the actual

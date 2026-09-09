@@ -1,0 +1,84 @@
+{
+  "kind": "native-checkpoint-tool-and-integrity-checks",
+  "complete": false,
+  "authentication_tests": false,
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/reuse",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "177293233bbdef0284f643c4c5f513e41dad7498d81e677ee75ecc477b39fa77"
+    },
+    {
+      "argv": [
+        "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "tools/update_checkpoint_ledger.py"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout_sha256": "e4608bf167d5c372c8c3aca501cc74e517a2ad69479b7410607568803f8a9d1f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "tools/ledger.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout_sha256": "ef61b78a766ba4bd7daedd772d09c162eb9793d6086c019c42db3065ea304b7e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "tools/capture_contracts.py",
+        "--validate"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout_sha256": "a899a47cd829a88ab5c806f8931ab39143e293143f41ad5e9f2944230a7a8536",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "tools/validate_release.py",
+        "--claims-only"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout_sha256": "ac80cd7e612de36a6e018d70bdc98c259f7762ade2327c0bb1b1acd93d429467",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "C:\\Users\\mfrie\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-B",
+        "tools/validate_release.py"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "stdout_sha256": "c2e8d856c5abae345410aa5ba8e9f43f0bc763d3620c0f246626bbb6aaf564d3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "passed": true
+}

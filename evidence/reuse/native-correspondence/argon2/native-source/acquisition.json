@@ -1,0 +1,630 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T11:55:27.347196+00:00",
+  "tool_sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85",
+  "records": [
+    {
+      "path": ".gitattributes",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/.gitattributes",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/.gitattributes",
+      "http_status": 200,
+      "bytes": 226,
+      "sha256": "aa1d6606cd9dcdd9ebe96462ebadfd36bf0d40ac008f9a9973473e537e617606",
+      "expected_git_blob_sha1": "177bed95dd767d08f034c402812106bdc589eb95"
+    },
+    {
+      "path": ".gitignore",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/.gitignore",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/.gitignore",
+      "http_status": 200,
+      "bytes": 211,
+      "sha256": "438029e55fd0740730cde30641f68dfa6a31cd71d78d203b339a42934434de88",
+      "expected_git_blob_sha1": "2bb14168e80f48eb7c8d2eb291689d87ce39628d"
+    },
+    {
+      "path": ".travis.yml",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/.travis.yml",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/.travis.yml",
+      "http_status": 200,
+      "bytes": 386,
+      "sha256": "8b58a0c4b0588073540140f65f89b3d2f4f0307810bc7c648d98e57aaa030558",
+      "expected_git_blob_sha1": "265fc48c0c1100bc877be83a3017bd61f37056d6"
+    },
+    {
+      "path": "Argon2.sln",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/Argon2.sln",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/Argon2.sln",
+      "http_status": 200,
+      "bytes": 11768,
+      "sha256": "1bc1d1c01fa14a6faa90d5ea921fec86ae80146d9d99c647bd591687803d7435",
+      "expected_git_blob_sha1": "b16cda08078b167a8244c275d26ab4e9aa4a092e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/CHANGELOG.md",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/CHANGELOG.md",
+      "http_status": 200,
+      "bytes": 765,
+      "sha256": "1b513eb6524f0a3ac5e182bf2713618ddd8f2616ebe6e090d647c49b3e7eb2ec",
+      "expected_git_blob_sha1": "0578fde276a5c397e4e472d698f66b9dc160e4d0"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/LICENSE",
+      "http_status": 200,
+      "bytes": 17879,
+      "sha256": "220f8736a89ff51c92ef3d497f413b48e6cf1df3d6278bc909c6308c78e1718e",
+      "expected_git_blob_sha1": "fa611f7ac85c03ce552e0e8e65562f9b130ca2ba"
+    },
+    {
+      "path": "Makefile",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/Makefile",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/Makefile",
+      "http_status": 200,
+      "bytes": 6658,
+      "sha256": "05637aa38f7648cda0cc8a46f7081bb38630d3d06d7f27965485011b7dfb7478",
+      "expected_git_blob_sha1": "837e7f7f3d76525798caab126a17b3346ec40a6b"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/README.md",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/README.md",
+      "http_status": 200,
+      "bytes": 13157,
+      "sha256": "4aa2df3435c6c684889eaeee5ab703c5f066ea8df329da6b9a553c3740d695ba",
+      "expected_git_blob_sha1": "9f2d17c37ba9dd797ae77082dee47fafeb90b3ff"
+    },
+    {
+      "path": "appveyor.yml",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/appveyor.yml",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/appveyor.yml",
+      "http_status": 200,
+      "bytes": 539,
+      "sha256": "864b0f5fea9b51615fbc6954e1ce11408bdc9936c6ad2c0f925e4d008ac23f71",
+      "expected_git_blob_sha1": "fb1f048ef1cd177d8a53720febae83be12ec1110"
+    },
+    {
+      "path": "export.sh",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/export.sh",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/export.sh",
+      "http_status": 200,
+      "bytes": 158,
+      "sha256": "c482744c90c0f0372fc87239a50fd7d22ecf036c7f95aa47de29c530f65c07ed",
+      "expected_git_blob_sha1": "9757b1090d67488f1320e3e240d730d5e494ccc6"
+    },
+    {
+      "path": "include/argon2.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/include/argon2.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/include/argon2.h",
+      "http_status": 200,
+      "bytes": 16767,
+      "sha256": "df20cb726a2fe6bccc736b81ea0d86219766a0d17f1794c19e048a34830ca1cc",
+      "expected_git_blob_sha1": "fc8682c2db42cca91cd21c97b77bb34b1b989a6d"
+    },
+    {
+      "path": "kats/argon2d",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d",
+      "http_status": 200,
+      "bytes": 430887,
+      "sha256": "73619cfe0f35e52fdd1ca2595ffaa359879467407f98b61f4969c2861cc329ce",
+      "expected_git_blob_sha1": "760cd31540f3bacc1a771246a795f759b1a5fe0f"
+    },
+    {
+      "path": "kats/argon2d.shasum",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d.shasum",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d.shasum",
+      "http_status": 200,
+      "bytes": 74,
+      "sha256": "8575444528055281ac1b7ca6d95dabea69138fe7411dd299aa8bc0536a2a5fb8",
+      "expected_git_blob_sha1": "b1b045d1bda0cae14c60c1de5749cd735ac58483"
+    },
+    {
+      "path": "kats/argon2d_v16",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d_v16",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d_v16",
+      "http_status": 200,
+      "bytes": 430887,
+      "sha256": "4ec4569a016c3accc6a25a34252b03a6135939b3c452389917a3f3b65878165b",
+      "expected_git_blob_sha1": "d35bd4269e496eff489f4bfb9fd850ddde9a6ed9"
+    },
+    {
+      "path": "kats/argon2d_v16.shasum",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d_v16.shasum",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2d_v16.shasum",
+      "http_status": 200,
+      "bytes": 78,
+      "sha256": "25975f6cdfe21559c87f16f212e4348398b1f1344a179a6cecade37abf092ae3",
+      "expected_git_blob_sha1": "6df69c8de7c487c94146e96d056c7cacfb81de6b"
+    },
+    {
+      "path": "kats/argon2i",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i",
+      "http_status": 200,
+      "bytes": 430887,
+      "sha256": "40a3aeafb092d10cf457a8ee0139c114c911ecf97bd5accf5a99c7ddd6917061",
+      "expected_git_blob_sha1": "2438db048cdc09caacac147d75795d95834b70c9"
+    },
+    {
+      "path": "kats/argon2i.shasum",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i.shasum",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i.shasum",
+      "http_status": 200,
+      "bytes": 74,
+      "sha256": "23cdf44c0d46299283aad7e8e421cb092aa6cbf0414da1c62fabca39560e8e97",
+      "expected_git_blob_sha1": "eda8d2e3b10bad80529d5f7420aca9e691c5c565"
+    },
+    {
+      "path": "kats/argon2i_v16",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i_v16",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i_v16",
+      "http_status": 200,
+      "bytes": 430887,
+      "sha256": "334f03e627afb67b946a530b90d2e11fb2e6abb44df992c0fb3198c7bacf5930",
+      "expected_git_blob_sha1": "173ec023dbafe30c2f2546e531cb62f732d237c7"
+    },
+    {
+      "path": "kats/argon2i_v16.shasum",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i_v16.shasum",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2i_v16.shasum",
+      "http_status": 200,
+      "bytes": 78,
+      "sha256": "be47099260c638847ad8097d4fd0748b6d041e2ede323522de97de0985b9a06c",
+      "expected_git_blob_sha1": "d36ecf6bc25ce21c124c3e33af87cb29e0aa47ac"
+    },
+    {
+      "path": "kats/argon2id",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id",
+      "http_status": 200,
+      "bytes": 430888,
+      "sha256": "ba05643e504fc5778dda99e2d9f42ebe7d22ebb3923cc719fd591b1b14a8d28d",
+      "expected_git_blob_sha1": "e5cdc6bb4e43dad2efb5af778e2f6436da869882"
+    },
+    {
+      "path": "kats/argon2id.shasum",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id.shasum",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id.shasum",
+      "http_status": 200,
+      "bytes": 75,
+      "sha256": "93f538293b8a907ffacef01d2a1ece1c307614d4a7f8531db624284f86f437de",
+      "expected_git_blob_sha1": "54755af41342d9b10daa8ed1fb49d4dd6438ff83"
+    },
+    {
+      "path": "kats/argon2id_v16",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id_v16",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id_v16",
+      "http_status": 200,
+      "bytes": 430888,
+      "sha256": "680774be1d3ad2e74bbc56ee715dd6eb97a58279bf22edc57d00e840ca1ae469",
+      "expected_git_blob_sha1": "05ea2b315c577da1111f24d090833fa0c5643875"
+    },
+    {
+      "path": "kats/argon2id_v16.shasum",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id_v16.shasum",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/argon2id_v16.shasum",
+      "http_status": 200,
+      "bytes": 79,
+      "sha256": "d5413357b85e3042c930f6c5797950351f5ca284e1db1e9b974523af13b67e15",
+      "expected_git_blob_sha1": "33f1f40107a660587f5bc33a81633a4914c6bd17"
+    },
+    {
+      "path": "kats/check-sums.ps1",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/check-sums.ps1",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/check-sums.ps1",
+      "http_status": 200,
+      "bytes": 1238,
+      "sha256": "ec8dcebfbc0b8a49b8874b215a7017fbb3fa926727e9ef971d646c1634702413",
+      "expected_git_blob_sha1": "36307bd7f0099646adc8ef7c77013c6d0ee0287c"
+    },
+    {
+      "path": "kats/check-sums.sh",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/check-sums.sh",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/check-sums.sh",
+      "http_status": 200,
+      "bytes": 243,
+      "sha256": "d2e3a16867b015ff91ceff5cd36bc3891f2e4439a2fcf9235353973d393bb8f9",
+      "expected_git_blob_sha1": "b297a162e949d11dbc268faa38cc2fd410f199bc"
+    },
+    {
+      "path": "kats/test.ps1",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/test.ps1",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/test.ps1",
+      "http_status": 200,
+      "bytes": 1273,
+      "sha256": "74280ae789f6ee3551b5eee70a03263bb4cdff276de6cda72cb8b55c8d415672",
+      "expected_git_blob_sha1": "d5db5b6ba128f8fb561b53f6c9071311826bb2b1"
+    },
+    {
+      "path": "kats/test.sh",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/test.sh",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/kats/test.sh",
+      "http_status": 200,
+      "bytes": 696,
+      "sha256": "fbbdc0f37f9dfec148a6d300fa56cfadcbb468bd9d5f31a613fbda96a9c6a1c9",
+      "expected_git_blob_sha1": "b320975467943b5e613d60ee1636a40aa8ab4bd2"
+    },
+    {
+      "path": "libargon2.pc.in",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/libargon2.pc.in",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/libargon2.pc.in",
+      "http_status": 200,
+      "bytes": 697,
+      "sha256": "e59054e527283780fa399692be9b3dff61cb4cd3d34e5cd8ff95b5d1183a3153",
+      "expected_git_blob_sha1": "718532497184aa89f755ed1c148485db69a7dd42"
+    },
+    {
+      "path": "man/argon2.1",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/man/argon2.1",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/man/argon2.1",
+      "http_status": 200,
+      "bytes": 1471,
+      "sha256": "8ec1e8e442fe713338f37affb6f645750a81da649463c199198390e970e120fb",
+      "expected_git_blob_sha1": "77c0f0777f0d8653f5189e08f6dfac02c2494db3"
+    },
+    {
+      "path": "src/argon2.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/argon2.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/argon2.c",
+      "http_status": 200,
+      "bytes": 14471,
+      "sha256": "72a93deebc5fd76bec0c6d300a2d92b500fb354b26babbddbc6d8b88681e663d",
+      "expected_git_blob_sha1": "795b429e71bc607bee40d75520778cb0971084b6"
+    },
+    {
+      "path": "src/bench.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/bench.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/bench.c",
+      "http_status": 200,
+      "bytes": 3339,
+      "sha256": "c4a4e90ceca31b921be4c863c2457c38325ee67fd9e063cd61ce90f66a78e3f1",
+      "expected_git_blob_sha1": "20a22869df611ab0c49334f4565a066896ba8a6c"
+    },
+    {
+      "path": "src/blake2/blake2-impl.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blake2-impl.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blake2-impl.h",
+      "http_status": 200,
+      "bytes": 4088,
+      "sha256": "8ac91f1f57d94235f8de0069b7809be1deb365c3b37adb8e30423cd364aff09a",
+      "expected_git_blob_sha1": "241f0beb3b26a1babd1779c48967a0f4d0d018a9"
+    },
+    {
+      "path": "src/blake2/blake2.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blake2.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blake2.h",
+      "http_status": 200,
+      "bytes": 2865,
+      "sha256": "3c2de197dd23179f78c57deac7b73a6049778bf651c5db57e508b2cfce5e7559",
+      "expected_git_blob_sha1": "57276a776438e3026eb1d20ed7535b847b6d132d"
+    },
+    {
+      "path": "src/blake2/blake2b.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blake2b.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blake2b.c",
+      "http_status": 200,
+      "bytes": 12510,
+      "sha256": "52519ccbc1e48f489ff444091f630d05dadcc8f1ee61c5b7361e3a9618299c9a",
+      "expected_git_blob_sha1": "ca05df598d1f11f36cd6e215d327db8ef65f9071"
+    },
+    {
+      "path": "src/blake2/blamka-round-opt.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blamka-round-opt.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blamka-round-opt.h",
+      "http_status": 200,
+      "bytes": 21361,
+      "sha256": "ba5a9c1fef492cc6ce8d5b5217d6e7cd7983de10f16762f84e284d0ed9972e3b",
+      "expected_git_blob_sha1": "2c8942e3164947631677d966d55e2804863765c0"
+    },
+    {
+      "path": "src/blake2/blamka-round-ref.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blamka-round-ref.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/blake2/blamka-round-ref.h",
+      "http_status": 200,
+      "bytes": 2730,
+      "sha256": "bcfdcf785218cf897f05b144e80b659e611188fee3887d533bdcb7a6aa4c336b",
+      "expected_git_blob_sha1": "b8f2cf47130724f0484e96c1181f83a9d20409ad"
+    },
+    {
+      "path": "src/core.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/core.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/core.c",
+      "http_status": 200,
+      "bytes": 19800,
+      "sha256": "0f53eb2370f8971f04fcf043b8083bf81d1530c48b2ead71c0b6c4e22a01aeec",
+      "expected_git_blob_sha1": "65f0537694380996a5caf37c07ba2a5332bb1f01"
+    },
+    {
+      "path": "src/core.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/core.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/core.h",
+      "http_status": 200,
+      "bytes": 8453,
+      "sha256": "c9665623cb3d306f63b6a3effd87bcfab971c28253c77e111445e42c1523235e",
+      "expected_git_blob_sha1": "78000ba9edf4147eb0004126bf5be5bc03e0bf08"
+    },
+    {
+      "path": "src/encoding.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/encoding.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/encoding.c",
+      "http_status": 200,
+      "bytes": 16267,
+      "sha256": "e20124ec0f780f88527e79cf00825e839624ed1f469c7e231596bf070f8c7b14",
+      "expected_git_blob_sha1": "12cfda4d05263a395b05e4b57eb7e3d6db87cf14"
+    },
+    {
+      "path": "src/encoding.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/encoding.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/encoding.h",
+      "http_status": 200,
+      "bytes": 2089,
+      "sha256": "42f283d12ec445cfb423ac2f1f5a5d1a7f152ce2b9363f6ec3e1d5b61cd4ee6d",
+      "expected_git_blob_sha1": "7e83ec92857afbe5716159a87a81e95d657e7221"
+    },
+    {
+      "path": "src/genkat.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/genkat.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/genkat.c",
+      "http_status": 200,
+      "bytes": 5795,
+      "sha256": "1a92cbf87ba1390f562ffb2e945a1132130c6ea682beaaa817177618166bd3ab",
+      "expected_git_blob_sha1": "8db9036f75d026862a9f661fba4488b9fc612213"
+    },
+    {
+      "path": "src/genkat.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/genkat.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/genkat.h",
+      "http_status": 200,
+      "bytes": 1677,
+      "sha256": "d3a2861d057d5cf19cbb11911d61724b2803fd997f2600bb17c9399f52a8fdf6",
+      "expected_git_blob_sha1": "057263015abac0271d0397711de2b1a6796a82dd"
+    },
+    {
+      "path": "src/opt.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/opt.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/opt.c",
+      "http_status": 200,
+      "bytes": 10179,
+      "sha256": "cbebf3245500fd19461cbd475ba6d44b3145538866bdf74091114af471faef74",
+      "expected_git_blob_sha1": "f6c20528e4e955513f036128175ff13e5c2fe85b"
+    },
+    {
+      "path": "src/ref.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/ref.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/ref.c",
+      "http_status": 200,
+      "bytes": 7283,
+      "sha256": "4ec47b080c22f4ee416b9dbcfae70ee6007fcfba427f870d7b84395846fa1bc7",
+      "expected_git_blob_sha1": "ad1cf461f9617382307934ef8d46c54d7e9d023c"
+    },
+    {
+      "path": "src/run.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/run.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/run.c",
+      "http_status": 200,
+      "bytes": 10565,
+      "sha256": "7d8101cb5a16b3ba7794b2c7472ba6936ca6e259dd13658ca16a385517bc5e65",
+      "expected_git_blob_sha1": "b21b9d7fa35580da3146c96302ac9c6b951d01ee"
+    },
+    {
+      "path": "src/test.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/test.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/test.c",
+      "http_status": 200,
+      "bytes": 13750,
+      "sha256": "6a8eb32be02dcb8dc9651fd74e5bc2e0e3ce69cf11f7dc6cea78638aaffbeb05",
+      "expected_git_blob_sha1": "3180cbd135dcb6428bb5f6a81c7ba73ee4cc3bfb"
+    },
+    {
+      "path": "src/thread.c",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/thread.c",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/thread.c",
+      "http_status": 200,
+      "bytes": 1556,
+      "sha256": "1402085e2f54b021ea31b0d301f4b689a8b300832e2d11901502e62835185e3e",
+      "expected_git_blob_sha1": "e099a00d217ddc8efae4f589f120acc01b249afe"
+    },
+    {
+      "path": "src/thread.h",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/thread.h",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/src/thread.h",
+      "http_status": 200,
+      "bytes": 2376,
+      "sha256": "9eab7f9ff356862a00a3075478dd0059344953ed79daab8b29185be2010efe78",
+      "expected_git_blob_sha1": "49d88367b4f686ad183b9a4ec3b0a87049f3db58"
+    },
+    {
+      "path": "vs2015/Argon2Opt/Argon2Opt.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Opt/Argon2Opt.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Opt/Argon2Opt.vcxproj",
+      "http_status": 200,
+      "bytes": 11855,
+      "sha256": "1dd7d0b70a97831f5891dc47eb37b79a8ec40e2913ba100c46800c6661ff2983",
+      "expected_git_blob_sha1": "357b4bd2bfd7a88945cacfb79d52995f09ee3c4c"
+    },
+    {
+      "path": "vs2015/Argon2Opt/Argon2Opt.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Opt/Argon2Opt.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Opt/Argon2Opt.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2500,
+      "sha256": "c12dd1d7280d7084a414f18ac40d4c5b681ce3afa15feba099cd99b0a6698d38",
+      "expected_git_blob_sha1": "536602bde76a11fad716ab2c6992ad5574abae63"
+    },
+    {
+      "path": "vs2015/Argon2OptBench/Argon2OptBench.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptBench/Argon2OptBench.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptBench/Argon2OptBench.vcxproj",
+      "http_status": 200,
+      "bytes": 11862,
+      "sha256": "d9c0afa1f3dc85354d1423d9da8678053e489600f450c7db2cd4458c8ffc4329",
+      "expected_git_blob_sha1": "e5ba5b3a8fa57758c5dee60c986a3be9f0b8e595"
+    },
+    {
+      "path": "vs2015/Argon2OptBench/Argon2OptBench.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptBench/Argon2OptBench.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptBench/Argon2OptBench.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2502,
+      "sha256": "4329957094daf2df2ed6058c02a4521b12e1e3254713ead5b920057a575ce0b1",
+      "expected_git_blob_sha1": "0cc0d957b540a7f4081f1f2e51ddda7a041835dc"
+    },
+    {
+      "path": "vs2015/Argon2OptDll/Argon2OptDll.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptDll/Argon2OptDll.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptDll/Argon2OptDll.vcxproj",
+      "http_status": 200,
+      "bytes": 11832,
+      "sha256": "9fb8f5c59cff4151a0a312b06b6db95c77888c9c0ce9921cbe36e6827dc8f33b",
+      "expected_git_blob_sha1": "71eb33d06540339eb672306861a25582f0336fc7"
+    },
+    {
+      "path": "vs2015/Argon2OptDll/Argon2OptDll.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptDll/Argon2OptDll.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptDll/Argon2OptDll.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2406,
+      "sha256": "4a8d94e9a701b2104df0b8100b1f011d88116286e7ae2d8dc5f4ede53e6bbba7",
+      "expected_git_blob_sha1": "c7a7788177e062bcca86a0919522e68a174ae9d6"
+    },
+    {
+      "path": "vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj",
+      "http_status": 200,
+      "bytes": 12439,
+      "sha256": "938a531cc421079883f301b1647798b166f5396ae1bd976bafd542933bedbd60",
+      "expected_git_blob_sha1": "44c97d15752839c86445e59b55810cfb54db2553"
+    },
+    {
+      "path": "vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptGenKAT/Argon2OptGenKAT.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2601,
+      "sha256": "b4f57615c17f63ce9614426d1c879dfbd98de4322fac8864ac7160a70a308757",
+      "expected_git_blob_sha1": "ff85955759a6092817e7fbde8f8dbc014c93e48c"
+    },
+    {
+      "path": "vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj",
+      "http_status": 200,
+      "bytes": 11983,
+      "sha256": "c2992e31c0f83a3b774e37cc9bb6050591edd9b4896b4630d0e159e6abb0b405",
+      "expected_git_blob_sha1": "43cab0a1e4745fa5de403d626741b6360e93f337"
+    },
+    {
+      "path": "vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2OptTestCI/Argon2OptTestCI.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2501,
+      "sha256": "ada8e97db0fdb258f3ba37d8f2e18e15327cfc2afe25208ba6f461fe4af8889f",
+      "expected_git_blob_sha1": "bcd4dabc4a95bf9000862f7f3b5571204886b58c"
+    },
+    {
+      "path": "vs2015/Argon2Ref/Argon2Ref.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Ref/Argon2Ref.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Ref/Argon2Ref.vcxproj",
+      "http_status": 200,
+      "bytes": 12451,
+      "sha256": "84fb855f04844c8ccc55c00f4f6b664cdb1fefa66a70a2bf8740e71d6113bf2c",
+      "expected_git_blob_sha1": "a25cd2322057a44cca3a356bc36abd7002e20e77"
+    },
+    {
+      "path": "vs2015/Argon2Ref/Argon2Ref.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Ref/Argon2Ref.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2Ref/Argon2Ref.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2500,
+      "sha256": "60415a0892980c7cb6f54d7e99cf20d7e88450a48defcc5b3f2f10ba85c900cc",
+      "expected_git_blob_sha1": "379cf2e4987b53c469253f9670036c43a2e6d5b4"
+    },
+    {
+      "path": "vs2015/Argon2RefBench/Argon2RefBench.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefBench/Argon2RefBench.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefBench/Argon2RefBench.vcxproj",
+      "http_status": 200,
+      "bytes": 11862,
+      "sha256": "4c7f0aaabc7a3b45e7419d34d65060ff020c528d302a3c241e008cdb8f4e425a",
+      "expected_git_blob_sha1": "0106eb71d4f2b0186d57b1ec2a6abba2a8391292"
+    },
+    {
+      "path": "vs2015/Argon2RefBench/Argon2RefBench.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefBench/Argon2RefBench.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefBench/Argon2RefBench.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2502,
+      "sha256": "957aecd61226043bfe753ac09e23add10bd2b28efd560431d3ba070bcbbf5d34",
+      "expected_git_blob_sha1": "222279aa5c5bbd4b9fbc0dcdd7b7468821d94a6d"
+    },
+    {
+      "path": "vs2015/Argon2RefDll/Argon2RefDll.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefDll/Argon2RefDll.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefDll/Argon2RefDll.vcxproj",
+      "http_status": 200,
+      "bytes": 11832,
+      "sha256": "f98236d7c32e2d29815ad62b8ec7a169c0ef436b6247f8ca9749722bdf7b9d12",
+      "expected_git_blob_sha1": "623aaaccce52f01d3e72c4c671807f5b5c01226f"
+    },
+    {
+      "path": "vs2015/Argon2RefDll/Argon2RefDll.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefDll/Argon2RefDll.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefDll/Argon2RefDll.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2406,
+      "sha256": "c07baf000df4f79d9c6a90acb153faf7e8d92c106335427cd1fc044ddca6cb44",
+      "expected_git_blob_sha1": "ad43f914b52969173251e292d68ef162718f9268"
+    },
+    {
+      "path": "vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj",
+      "http_status": 200,
+      "bytes": 11953,
+      "sha256": "981a20e798af5beace547e437cec09df3070451954dfae0c72ff2b6a9aabcd85",
+      "expected_git_blob_sha1": "f5914395820a934fd5a29e9eadfafbd8263733b1"
+    },
+    {
+      "path": "vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefGenKAT/Argon2RefGenKAT.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2601,
+      "sha256": "9724684d540096fd4f34a606fe665238ab5d841e905648b80a6ca52eee7815f5",
+      "expected_git_blob_sha1": "8490c8a9a553522ad03c96b6d7c9d507151853e7"
+    },
+    {
+      "path": "vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj",
+      "http_status": 200,
+      "bytes": 11862,
+      "sha256": "38d671e8e38059f6b34229751f2833de2432303f0e31ad0ab3d981dc76c69471",
+      "expected_git_blob_sha1": "9e9fa0809eb0753932b3f4ce693fb59ab9a0513b"
+    },
+    {
+      "path": "vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj.filters",
+      "url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj.filters",
+      "final_url": "https://raw.githubusercontent.com/P-H-C/phc-winner-argon2/62358ba2123abd17fccf2a108a301d4b52c01a7c/vs2015/Argon2RefTestCI/Argon2RefTestCI.vcxproj.filters",
+      "http_status": 200,
+      "bytes": 2501,
+      "sha256": "d911d61c7f5b0946165a0841a58219977999664dfd257e234ef8df21eac8aabd",
+      "expected_git_blob_sha1": "32bca82c5e88a65a6a0b7e085c3865e79f4eddf5"
+    }
+  ],
+  "errors": [],
+  "total_bytes": 2966019,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "request": {
+    "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+    "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+  },
+  "finished": "2026-09-09T11:55:45.133857+00:00",
+  "passed": true
+}

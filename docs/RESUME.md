@@ -9,6 +9,13 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
+Latest native work is `docs/native-argon2-build.md`:68 pinned PHC files, two
+identical Linux x86-64 builds, original C tests and actual Core cross-library
+password/import/reset/concurrency cases. All temporary resources retired; Core
+and Node images are unchanged. Continue with supported nolibs installation and
+native/OS/source/relink closure. Automatic rehash is still absent: actual login
+preserves imported hashes. Other foundation and qualification gates remain open.
+
 Latest work is `docs/guarded-session-operations.md`. Current Core is `db1d29ba6244`,
 current Node is `2a02e08d5fcb`, and the current binary build is `guarded-01`.
 The dedicated Core refresh/verify routes enforce the explicit policy using the

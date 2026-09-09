@@ -1,0 +1,9 @@
+binutils	2.40-2
+cpp-12	12.2.0-14+deb12u1
+gcc	4:12.2.0-3
+gcc-12	12.2.0-14+deb12u1
+libc6	2.36-9+deb12u14
+libc6-dev	2.36-9+deb12u14
+libgcc-12-dev	12.2.0-14+deb12u1
+linux-libc-dev	6.1.180-1
+make	4.3-4.1

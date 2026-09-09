@@ -16,10 +16,11 @@ from capture_native_sources import validate_source_request
 class NativeSourceCaptureTests(unittest.TestCase):
     def test_all_actual_source_requests_meet_strict_identity_policy(self):
         counts = {}
-        for component in ['scrypt', 'jna', 'sqlite', 'argon2']:
-            request = json.loads((BASE / component / 'acquisition-request.json').read_bytes())
+        for component in ['scrypt', 'jna', 'sqlite', 'argon2', 'argon2-native']:
+            path = BASE / component / 'acquisition-request.json' if component != 'argon2-native' else BASE / 'argon2/native-source-request.json'
+            request = json.loads(path.read_bytes())
             counts[component] = len(validate_source_request(request))
-        self.assertEqual(counts, {'scrypt': 13, 'jna': 47, 'sqlite': 26, 'argon2': 31})
+        self.assertEqual(counts, {'scrypt': 13, 'jna': 47, 'sqlite': 26, 'argon2': 31, 'argon2-native': 68})
 
     def test_malformed_requests_fail_in_real_cli_before_acquisition(self):
         template = json.loads((BASE / 'scrypt/acquisition-request.json').read_bytes())['files'][0]

@@ -4,3 +4,6 @@
 evidence/**/*.log -whitespace
 # Audited upstream snapshots preserve original bytes, including upstream whitespace.
 evidence/foundation/refresh-grace/*/source-snapshots/audited-upstream/** -whitespace
+# Exact native source and upstream test transcripts preserve original bytes.
+evidence/reuse/native-correspondence/argon2/native-source/** -whitespace
+evidence/reuse/native-correspondence/argon2/native-build/*/*.txt -whitespace

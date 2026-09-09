@@ -143,11 +143,11 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
         },
         {
           "path": "tools/run_native_source_capture.py",
-          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
         },
         {
           "path": "tools/qualify_native_argon2.py",
@@ -163,7 +163,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
+          "sha256": "10d40d605f41d8d173629333831d9d013898c4ed5c94a3490784b5842ad4319d"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -363,7 +363,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -423,7 +423,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -483,7 +483,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -544,6 +544,38 @@
         {
           "path": "evidence/operations/password-session-build/guarded-01/GuardedVerifySessionAPI.java",
           "sha256": "c209dddf1a9df71902109d37e62ff4b877c017830da903d10504fc216f99d27d"
+        },
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
         }
       ],
       "positive_test_ids": [],
@@ -1394,9 +1426,33 @@
         {
           "path": "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json",
           "sha256": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted. PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
       "observed_test_ids": [
         "PASSWORD-SESSION-MISSING-WRITER-FAILS-CLOSED",
         "PASSWORD-SESSION-EIGHT-DISTINCT-REQUEST-SCOPES",
@@ -1492,7 +1548,18 @@
         "GUARD56-OWNED-FIXTURE-CLEANUP",
         "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT",
         "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT",
-        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS"
+        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS",
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -1577,11 +1644,11 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
         },
         {
           "path": "tools/run_native_source_capture.py",
-          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
         },
         {
           "path": "tools/qualify_native_argon2.py",
@@ -1597,7 +1664,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
+          "sha256": "10d40d605f41d8d173629333831d9d013898c4ed5c94a3490784b5842ad4319d"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -1797,7 +1864,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -1857,7 +1924,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -1917,7 +1984,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -1978,6 +2045,38 @@
         {
           "path": "evidence/operations/password-session-build/guarded-01/GuardedVerifySessionAPI.java",
           "sha256": "c209dddf1a9df71902109d37e62ff4b877c017830da903d10504fc216f99d27d"
+        },
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
         }
       ],
       "positive_test_ids": [],
@@ -2828,9 +2927,33 @@
         {
           "path": "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json",
           "sha256": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted. PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
       "observed_test_ids": [
         "PASSWORD-SESSION-MISSING-WRITER-FAILS-CLOSED",
         "PASSWORD-SESSION-EIGHT-DISTINCT-REQUEST-SCOPES",
@@ -2926,7 +3049,18 @@
         "GUARD56-OWNED-FIXTURE-CLEANUP",
         "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT",
         "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT",
-        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS"
+        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS",
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -2976,11 +3110,11 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
         },
         {
           "path": "tools/run_native_source_capture.py",
-          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
         },
         {
           "path": "tools/qualify_native_argon2.py",
@@ -2996,7 +3130,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
+          "sha256": "10d40d605f41d8d173629333831d9d013898c4ed5c94a3490784b5842ad4319d"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -3196,7 +3330,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -3256,7 +3390,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -3316,7 +3450,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -3377,6 +3511,38 @@
         {
           "path": "evidence/operations/password-session-build/guarded-01/GuardedVerifySessionAPI.java",
           "sha256": "c209dddf1a9df71902109d37e62ff4b877c017830da903d10504fc216f99d27d"
+        },
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
         }
       ],
       "positive_test_ids": [],
@@ -4227,9 +4393,33 @@
         {
           "path": "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json",
           "sha256": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
         }
       ],
-      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted.",
+      "qualification_note": "Corrected notice package installed in Core5ec6ccc3fd5d:479 files match, including87 unchanged JARs and89 archive notice texts. Same-container PostgreSQL state/mounts preserved;19Python HTTP regressions pass with2own-user cleanups. BuildKit failure candidate and oldCore container/image retired; current-image repeat replacement rejected. Native release bytes identified, not reproducibly built; full selected-engine/native/OS distribution, source/relink and human review remain unqualified. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted. PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
       "observed_test_ids": [
         "PASSWORD-SESSION-MISSING-WRITER-FAILS-CLOSED",
         "PASSWORD-SESSION-EIGHT-DISTINCT-REQUEST-SCOPES",
@@ -4325,7 +4515,18 @@
         "GUARD56-OWNED-FIXTURE-CLEANUP",
         "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT",
         "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT",
-        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS"
+        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS",
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -4760,6 +4961,38 @@
         {
           "path": "examples/python/app.py",
           "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+        },
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
         }
       ],
       "positive_test_ids": [],
@@ -4778,16 +5011,51 @@
         {
           "path": "evidence/operations/python-readiness/offline-build-buildkit-02/regression/probe-report.json",
           "sha256": "4434a27bd8130405222fa3b86e85da627a9fe12d78f6c3ad6a790e0b68c18bcd"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified. PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
         "NODE-SESSION-002",
         "NODE-OFFLINE-001",
         "NODE-OFFLINE-002",
-        "NODE-COOKIE-001"
+        "NODE-COOKIE-001",
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -4846,13 +5114,86 @@
         "record_sha256": "b8bed8486a58f8335a6ca7b638add99e340ae70e9fcc3e8c10164b68679223e5"
       },
       "status": "planned",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [],
+      "candidate_evidence": [
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
+        }
+      ],
+      "qualification_note": " PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
+      "observed_test_ids": [
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "PWD-006",
@@ -5181,7 +5522,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -5241,7 +5582,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -5301,7 +5642,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -5362,6 +5703,38 @@
         {
           "path": "evidence/operations/password-session-build/guarded-01/GuardedVerifySessionAPI.java",
           "sha256": "c209dddf1a9df71902109d37e62ff4b877c017830da903d10504fc216f99d27d"
+        },
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
         }
       ],
       "positive_test_ids": [],
@@ -6224,9 +6597,33 @@
         {
           "path": "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json",
           "sha256": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
         }
       ],
-      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified. Current explicit atomic-v1 Node sign-in/signup profile uses supported request-scoped SDK API/network overrides and Core password-session API, CDI5.4. Original hasher and token minting are reused; credential/hash/identity-mapping recheck and session insertion share one user-locked transaction through a PostgreSQL storage writer, without nested connection borrow or adapter-owned state.16 actual Core cases pass (8 reset and8 password-session), including both lock orderings, backend termination at insertion with no leaked session/retry, eight concurrent creations and external IDs. Node passes14 HTTP/SMTP,10 TLS and9 Chromium behavior cases; eight distinct concurrent users preserve subjects. Test-only unmodified-fetch observation records36 successful new private session calls and zero legacy calls; all17 final-lab containers retire, original database uncontacted, no images/volumes/networks retained. Compile03 adds explicit source modification notices and reproduces tested compile02 Core/plugin bytes exactly.128 correspondence checks are integrity only. Prior wrong-table test and lost-proxy-receiver failures remain preserved. This resolves the demonstrated validation/insertion race for this profile only; earlier atomic-only evidence and limitations remain historical. Other SDKs/legacy writers, configured namespace/link/MFA/step-up, missing-writer deployment faults, lost committed responses, load/pool saturation, migration/rolling deployment, complete transitive/native/OS distribution and independent human review remain unqualified. No foundation or full requirement/API/profile pass is inferred. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted.",
+      "qualification_note": "Reference-candidate reset through real authenticated TLS SMTP:10 transport,11 HTTP/SMTP and9 Chromium checks;55 configuration/content unit checks separately. Eight concurrent consumers yield exactly1winner; replay/expiry/sibling invalidation and post-reset online/refresh denial pass. All12containers/11fixtures cleaned and original52identities restored. Separate intentional exit73 proves one real fallback deletion and6container retirements. Exact run16 runner/probe snapshots retained; later cleanup-fault changes qualified separately. No configured cross-tenant/link, atomic password-commit/session-revocation, timing-enumeration resistance, durable outbox/retry, fresh deployment, full SDK/API/foundation or human-review qualification. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current opt-in atomic-v1 profile uses explicit Core JAR and Node source mounts; retained images contain earlier code. Core transaction commits context-bound token consumption/password update/existing-session deletion together. Eight real Core cases include two-replica eight-consumer race, actual PostgreSQL backend abort at session deletion with complete rollback and same-token retry, external-ID revocation and expiry. Node child passes13 HTTP/SMTP,10 TLS and9 Chromium cases including legacy-token rejection/reissue and older-Core API mismatch/readiness503 without fallback; fixture cleanup passes and all17 containers retire. Persistent database never contacted, no new images/volumes/networks retained.105 correspondence checks are integrity only. Node-02 product cases passed but preservation check failed on varying mount order; its report stays failed, node-03 compares all sorted mount values and records both projections. Sign-in validation followed by post-reset session issuance, mixed legacy writers, linked/configured namespace contexts, optional SDK email-verification/link/new-password-method side effects, lost commit responses, installed/fresh deployment, complete baseline API/SDK/profile behavior and independent human security review remain unqualified. Historical image/reset artifacts are bound to their original source; no current-source pass is inferred from them. No baseline requirement is verified. Current explicit atomic-v1 Node sign-in/signup profile uses supported request-scoped SDK API/network overrides and Core password-session API, CDI5.4. Original hasher and token minting are reused; credential/hash/identity-mapping recheck and session insertion share one user-locked transaction through a PostgreSQL storage writer, without nested connection borrow or adapter-owned state.16 actual Core cases pass (8 reset and8 password-session), including both lock orderings, backend termination at insertion with no leaked session/retry, eight concurrent creations and external IDs. Node passes14 HTTP/SMTP,10 TLS and9 Chromium behavior cases; eight distinct concurrent users preserve subjects. Test-only unmodified-fetch observation records36 successful new private session calls and zero legacy calls; all17 final-lab containers retire, original database uncontacted, no images/volumes/networks retained. Compile03 adds explicit source modification notices and reproduces tested compile02 Core/plugin bytes exactly.128 correspondence checks are integrity only. Prior wrong-table test and lost-proxy-receiver failures remain preserved. This resolves the demonstrated validation/insertion race for this profile only; earlier atomic-only evidence and limitations remain historical. Other SDKs/legacy writers, configured namespace/link/MFA/step-up, missing-writer deployment faults, lost committed responses, load/pool saturation, migration/rolling deployment, complete transitive/native/OS distribution and independent human review remain unqualified. No foundation or full requirement/API/profile pass is inferred. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted. PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
       "observed_test_ids": [
         "RESET-HTTP-001-DELIVERY-CONSUME-REPLAY-SESSIONS",
         "RESET-HTTP-002-INVALID-AND-WEAK-PASSWORD",
@@ -6322,7 +6719,18 @@
         "GUARD56-OWNED-FIXTURE-CLEANUP",
         "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT",
         "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT",
-        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS"
+        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS",
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -7904,7 +8312,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -7964,7 +8372,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -8024,7 +8432,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -8643,7 +9051,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -8703,7 +9111,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -8763,7 +9171,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -9530,7 +9938,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -9590,7 +9998,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -9650,7 +10058,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -10663,7 +11071,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -10723,7 +11131,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -10783,7 +11191,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -11624,7 +12032,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -11684,7 +12092,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -11744,7 +12152,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -12487,7 +12895,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -12547,7 +12955,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -12607,7 +13015,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -14430,13 +14838,86 @@
         "record_sha256": "ced99b58909e1f458a90363a4382ff7e4a075f19638b7376b02146edbc386a1d"
       },
       "status": "planned",
-      "implementation": [],
+      "implementation": [
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [],
+      "candidate_evidence": [
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
+        }
+      ],
+      "qualification_note": " PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
+      "observed_test_ids": [
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
+      ]
     },
     {
       "id": "MIG-003",
@@ -15185,7 +15666,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -15245,7 +15726,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -15305,7 +15786,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -16261,7 +16742,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -16321,7 +16802,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -16381,7 +16862,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -17260,7 +17741,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -17320,7 +17801,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -17380,7 +17861,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -18533,7 +19014,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -18593,7 +19074,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -18653,7 +19134,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -20223,7 +20704,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -20283,7 +20764,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -20343,7 +20824,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -27259,7 +27740,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -27319,7 +27800,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -27379,7 +27860,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -28949,7 +29430,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -29009,7 +29490,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -29069,7 +29550,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -30800,11 +31281,11 @@
         },
         {
           "path": "tools/capture_native_sources.py",
-          "sha256": "d103bf853c01d09972a8cbff1bd550e2d29d865b3b4d91904a7fefb2a6572f42"
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
         },
         {
           "path": "tools/run_native_source_capture.py",
-          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
         },
         {
           "path": "tools/qualify_native_argon2.py",
@@ -30820,7 +31301,7 @@
         },
         {
           "path": "tests/reuse/test_native_source_capture.py",
-          "sha256": "a267223988030fe4a91f31bd7e5d7a0444a5662632fad496ff8df36d706aeef3"
+          "sha256": "10d40d605f41d8d173629333831d9d013898c4ed5c94a3490784b5842ad4319d"
         },
         {
           "path": "tests/reuse/test_runtime_distribution.py",
@@ -31020,7 +31501,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -31080,7 +31561,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -31140,7 +31621,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -31201,6 +31682,38 @@
         {
           "path": "evidence/operations/password-session-build/guarded-01/GuardedVerifySessionAPI.java",
           "sha256": "c209dddf1a9df71902109d37e62ff4b877c017830da903d10504fc216f99d27d"
+        },
+        {
+          "path": "tools/build_native_argon2.py",
+          "sha256": "d4dcbbe7dde1ba745a00ac3f57f71826a5a100f53035ff641ce663c02270feaa"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "6b30df5c7a17aa69025123b51390d2bcd7f895b444ab7d8d122910499a1c6f85"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "76646917e249d10278806c110e19792c378c265115f0405094fd07b7fc9106ab"
+        },
+        {
+          "path": "tools/run_refresh_grace_lab.py",
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
+        },
+        {
+          "path": "tests/foundation/NativePasswordProbe.java",
+          "sha256": "0b05d32ecff16420f1dd984c9157697dcb9905e74eeed4ff6b6c364ab303ba66"
+        },
+        {
+          "path": "tools/verify_extracted_native.py",
+          "sha256": "a1115f167d36063fca4dc42c019c197994d550e747a979556331d1a7223bf6cc"
+        },
+        {
+          "path": "reuse/native-argon2-components.json",
+          "sha256": "497d23662308047c304f3acad5fbc41fe2c260be63ec8a700efdc07567fcb904"
+        },
+        {
+          "path": "docs/native-argon2-build.md",
+          "sha256": "b326f11602004749a8292fe4715657e8fe7319fef52a911b366ecb1e0b68462e"
         }
       ],
       "positive_test_ids": [],
@@ -32043,9 +32556,33 @@
         {
           "path": "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json",
           "sha256": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+          "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+          "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+          "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+          "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+          "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+        },
+        {
+          "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+          "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
         }
       ],
-      "qualification_note": "Full dependency closure remains open. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted.",
+      "qualification_note": "Full dependency closure remains open. Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open. Current offline image4c03d7306e1e uses deterministic0644 application files and0755 public directory;143 packages,7629 original members and the complete dependency tree match the earlier audit. All8 application files match source/generated bytes;55 unit,8 actual-parser and30 installed reset/transport/browser checks pass. All16 build/reset containers and11 owned identities retired, original52 identities and persistent processes/configuration preserved; previous image2c4ad0be07b8 removed after promotion with no parent/global prune. Fresh registry bootstrap passes11 actual online concurrency/integrity/resume and disconnected offline cache/install/compile checks; one temporary container retired, no extra host cache/image/volume/network retained. Single cache14,891,202 bytes includes14,580,488 archive bytes. Failed noexec, file/directory-mode and cleanup-race observations are preserved; evidence validators qualify source/log integrity only. Full first-image/stack bootstrap, cache-crash/stale-lock/partial-file recovery, actual HTTP timeout/redirect/oversize/truncation, native/OS distribution, deprecated dependency replacement and new lifecycle faults remain unqualified. No foundation/full requirement/API/profile or independent human review pass inferred. Earlier build/report history remains preserved. Current installed Node image9375a5bc093d contains atomic reset/password-session integration and passes15 HTTP/SMTP,10 TLS and9 browser behavior cases without application mounts. Core remains mounted as the exact compile03 JAR pair. Actual new-Core/old-PostgreSQL-plugin mismatch stays live200/not-ready503, rejects sign-in500/Core503 without tokens/cookies or session insertion, preserves the prior session and permits healthy-writer retry.38 real successful private session calls and1 rejected call are observed without token/credential bodies or legacy insertion.22 owned fixtures removed; no source database contact. Four build helpers and19 runtime containers retired per run; no image downloads, new volumes/networks/ports. Installed143 packages/7629 original members/dependency tree unchanged,8 app files match current bytes,55 delivery unit and8 parser checks pass. Corrected observer allowlist resolves the preserved first-run test defect; all7 application/dependency build layers reused on corrected run. Successful image replaces and retires4c03d7306e1e.267 source/log/binary correspondence checks are integrity only. Docker registry metadata resolution is not an air-gapped build proof. Installed Core/fresh-stack, other SDK/namespace/link/MFA, load/migration/rolling upgrade, complete distribution and independent human review remain unqualified. No full baseline row or foundation gate is certified. Current Core image03b4458c532f contains the compile04 atomic Core/plugin pair; healthy Core and Node flows have no application/JAR overlays. Direct pinned JDK compilation with87 audited original cache JARs reproduces compile03 bytes. All483 installed files match;85 original JARs unchanged and4 adaptation license/source-map/SBOM files added.16 actual Core,34 installed Node/SMTP/TLS/browser and14 local upgrade/rollback cases pass. Legacy sessions/refresh/password sign-in survive upgrade, rollback and re-upgrade; a new atomic-session write remains usable after rollback. The sole synthetic identity is removed and the exact original52 identity set, PostgreSQL process/volume and private configuration are preserved. Schema dumps match after excluding only generated psql restriction nonces. The private193742-byte pre-upgrade dump is hashed, not restore-tested. Controller switches one active Core at a time with interruption; only after qualification does it promote and retire oldCore5ec6ccc3fd5d and its container.34 temporary helpers and59986010-byte context retire; no downloads/new persistent volumes/networks/ports. First-run26 helpers and failed candidate also retire; its default Docker image-list omission is preserved and fixed using --all, not by ignoring unexpected resources.481 correspondence checks are integrity only. This supersedes earlier Core-mount/installation gaps only. Full fresh-host startup, rolling/HA and injected cutover failures, all SDK versions, imported factors/tenants/linking, general reconciliation, distribution and independent review remain unqualified. No full baseline requirement/API/profile, foundation or migration gate is certified. Historical checkpoint0498a025fcc5 installed Nodee02ab9bcd78e explicitly adapted only private refresh/verify calls toCDI5.6 through the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No foundation, full baseline requirement/API/profile or original SDK-version claim is promoted. Historical checkpoint40c8589b0921 Core3e15c927a662 returns authenticated effective tenant grace/reuse settings using the original Core configuration. Only its existing ExpertAuth capability class changed relative to compile-04; the plugin is byte-identical. Installed Node7964df6fe51e requires exactly5 seconds/TOKEN_THEFT for readiness and per-request auth/online preflight. Actual zero-grace, alternate-reuse and transport-loss cases return503 while liveness stays200, without tokens or auth business requests. Eight concurrent refusals and same-session recovery without app restart pass; offline JWT remains explicitly signature/claim-only. Seven policy checks plus one owned-user cleanup pass, with three differently configured real Cores all advertisingCDI5.6. Core16 transaction,12 refresh-policy,34 Node regression and14 actual upgrade/rollback phase cases pass. That installed Node also passes34 reset regressions,9 SDK HTTP cases plus wire/cleanup, real4-tab browser coordination/logout, and the policy-refusal child. Historical failures remain retained. The first Node candidate was not promoted after a browser response/navigation timing failure; early response parsing preserves every assertion, nine focused browser cases and the full installed regression now pass. That original unclassified mechanism remains an inference, not a fabricated exception. Superseded Core/Node images and old two-JAR cache retire only after successful replacement; all temporary helpers retire. Eight filesystem candidate guards are tooling checks, and correspondence checks are not auth tests or independent review. Retained source Core configuration remains zero grace. Heterogeneous load-balancer configuration and check/operation policy races, all configured tenants/SDKs/native/providers, remaining security/migration/operational orderings and foundation/distribution/independent review remain unqualified. Current Coredb1d29ba6244 and Node2a02e08d5fcb use private guarded refresh/verify routes with explicit OSS-CDI56-GRACE5-V1 policy validation in Core. The token tenant and the exact CoreConfig used by the refresh transaction are checked; recursive retries retain the constraint. No ThreadLocal context, adapter identity/session store or alternate crypto/rotation algorithm exists. Original API classes and signatures retain their behavior; Apache private derivatives retain original authorization and licensing checks. Actual healthy preflight followed by mismatched Core settings fails closed without session-column changes; an actual pre-guard replica returns404 for both private routes. Sixteen mixed Core requests yield8rotations/8refusals and one authoritative successor. Nine direct behavior cases plus cleanup pass. Installed Node proves the same preflight/operation mismatch through real routing: Core503 becomes a fixed SDK service500, no credentials or original-route fallback, and same-session recovery succeeds. Four mixed Node requests yield2rotations/2refusals and one online-valid successor. Existing7policy checks plus3guarded checks and cleanup pass; all6policy containers retire. Core also passes16atomic cases,34Node regressions,12refresh-policy cases and14actual upgrade/rollback phases. Node passes55delivery unit,8parser,34reset behavior cases,9SDK HTTP cases plus wire/cleanup, and4-tab/32-request browser recovery with1refresh and4logout denials. Actual guarded response loss/truncation recovers; all3private Core paths are404 on the public app. Old Core/Node images and superseded JARs retire after qualification; all35Node build/qualification containers retire. 303Node-build and878guarded correspondence checks are integrity only. The initial source-transform catch-anchor failure is preserved and resolved without runtime activity. Other auth-operation/configuration races, live reload, rolling deployment, required namespace/linking/factors, all SDK/native/provider versions, full native/source/relink distribution closure and independent human review remain unqualified. Original failures and all acceptance IDs remain binding; no foundation or full requirement/profile claim is promoted. PHC62358ba2123abd17fccf2a108a301d4b52c01a7c:68 pinned native source/build/test/notice files; two Linux x86-64 builds match. Original make test produces12 KAT comparisons of6 vectors and37 API pass lines. Actual Core source/bundled-library password/import/reset/concurrency qualification passes10 behavior rows plus15-user cleanup. Both source and runtime tests use the existing cached images; all helpers retire. Native dependency mount is explicit; no installed native-image, other-platform, historical-binary, final-engine or distribution approval. Imported hashes remain unchanged after successful login: configured rehash and the full migration/hash matrix remain absent/unqualified. All namespace/link/disabled-account and independent-review gates remain binding.",
       "observed_test_ids": [
         "PASSWORD-SESSION-MISSING-WRITER-FAILS-CLOSED",
         "PASSWORD-SESSION-EIGHT-DISTINCT-REQUEST-SCOPES",
@@ -32141,7 +32678,18 @@
         "GUARD56-OWNED-FIXTURE-CLEANUP",
         "POLICY56-GUARDED-ZERO-REPLICA-AFTER-PREFLIGHT",
         "POLICY56-GUARDED-REUSE-REPLICA-AFTER-PREFLIGHT",
-        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS"
+        "POLICY56-GUARDED-CONCURRENT-MIXED-REPLICAS",
+        "NATIVE-PRIVATE-IMPORT",
+        "NATIVE-SOURCE-HASH-BUNDLED-VERIFY",
+        "NATIVE-BUNDLED-HASH-SOURCE-VERIFY",
+        "NATIVE-PHC-ARGON2I-V16",
+        "NATIVE-PHC-ARGON2I-V19",
+        "NATIVE-PHC-ARGON2ID-V19",
+        "NATIVE-BCRYPT-IMPORT-COMPATIBILITY",
+        "NATIVE-MALFORMED-IMPORT",
+        "NATIVE-ATOMIC-RESET-CROSS-LIBRARY",
+        "NATIVE-EIGHT-CONCURRENT-OWNERS",
+        "NATIVE-OWNED-FIXTURE-CLEANUP"
       ]
     },
     {
@@ -32217,7 +32765,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -32277,7 +32825,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -32337,7 +32885,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -33308,7 +33856,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -33368,7 +33916,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -33428,7 +33976,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -35583,7 +36131,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -35643,7 +36191,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -35703,7 +36251,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -38182,7 +38730,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/RefreshGraceProbe.java",
@@ -38242,7 +38790,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tests/foundation/session_policy_readiness.mjs",
@@ -38302,7 +38850,7 @@
         },
         {
           "path": "tools/run_refresh_grace_lab.py",
-          "sha256": "d5a5fb86ce56efe8910b2498fe210b6e874b8928c30d9a752a579dec7fcdd3e0"
+          "sha256": "7e2ed4120f9893761fbb8d6907f127e2e6df2d5dab35d9d47991ad4b67faef46"
         },
         {
           "path": "tools/build_node_runtime.py",
@@ -39676,6 +40224,18 @@
     {
       "path": "evidence/operations/hygiene/checkpoint-retention-before-guarded-sessions.json",
       "sha256": "893ee156c0ac8a171963048c179296776f15873f7653e9511207b15db05e0206"
+    },
+    {
+      "path": "evidence/operations/hygiene/verification-20260909T121421Z.json",
+      "sha256": "dd095bf101112961a1811eec7bfe7527d2feceb601fa01caab0210f350cdcd26"
+    },
+    {
+      "path": "evidence/operations/hygiene/checkpoint-retention-before-native-argon2.json",
+      "sha256": "6a8358094edf0307e481f9c8118595390e375e35ee6b9fdb4c450704e4ccaba2"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/checkpoint-checks-01/report.json",
+      "sha256": "68aab5e8a5a0efc6d17a6a8e784a8196782bfb879aef4ad1075e435cd37a8cd5"
     }
   ],
   "runtime_distribution_artifacts": [
@@ -40510,6 +41070,30 @@
     {
       "path": "evidence/foundation/refresh-grace/policy-guarded-01/policy-results.json",
       "sha256": "e3148d520aa9a336a660b5314659f63fe75f7f391a30ad47de63a071439e7f23"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+      "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+      "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+      "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+      "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+    },
+    {
+      "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+      "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+    },
+    {
+      "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+      "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
     }
   ],
   "session_candidate_artifacts": [
@@ -43746,6 +44330,50 @@
     {
       "path": "evidence/operations/session-policy-transform/anchors-01/patch_session_policy.py",
       "sha256": "311dabff6cd15306d582313bc868baa7d57fade819fb4feeb869d33c6828c810"
+    }
+  ],
+  "native_argon2_candidate_artifacts": [
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-metadata-01/acquisition.json",
+      "sha256": "a346afdf00e7617c2cd634f824670509e990f37aaf83bfdbd59af49ced47b6da"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-source-request.json",
+      "sha256": "21b01b63bfd184077fe6ac60c1879d224343c0c0be0d86ec0dbbd68569e005e7"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-source/acquisition.json",
+      "sha256": "d3c3f77cabb5c20ab7df154988e5a6e45ceeba2d1e8dcf613f4d3d9504927f68"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-03/report.json",
+      "sha256": "19c854edcec6e6d65cb01188e3d274fe1d6ce8c37a3b78289c1dbb430aa10d8c"
+    },
+    {
+      "path": "evidence/foundation/refresh-grace/native-argon2-01/report.json",
+      "sha256": "88b1737d72119ce7dac1755f19f76836563dcdcb9ec9d43f9bddc18ca6724a08"
+    },
+    {
+      "path": "evidence/foundation/refresh-grace/native-argon2-01/native-password-report.json",
+      "sha256": "711b5fa1e0b39f180a62700e4f9b01fcce08d3b29d7257c18876410563a5ed59"
+    }
+  ],
+  "native_argon2_failed_history": [
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-01/report.json",
+      "sha256": "3511331bdd839b5f46fa119b4343480dfb3d98cb03782e8b679d5e80b3934444"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-01/build_native_argon2.py",
+      "sha256": "dfb615356624e90404a61ab91fb6bb20d8ab0383d59910b5c1cdeee96a7e23d0"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-02/report.json",
+      "sha256": "f6a6f0efe48a3df2ac4c753ec56016088735458ed6a14ac17e19683d82e48923"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/native-build/linux-02/build_native_argon2.py",
+      "sha256": "3500c25d768d8b5977a1dd27b2926646b91917ba8458ff3a7278bcbdf231f797"
     }
   ]
 }

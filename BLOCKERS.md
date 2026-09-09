@@ -1,5 +1,11 @@
 # Open acceptance blockers
 
+- Argon2 source, deterministic Linux x86-64 builds and actual Core cross-library
+  password/import/reset/concurrency cases now pass. The dependency is mounted,
+  not installed in the retained image. Nolibs packaging, loader failure behavior,
+  remaining native/OS/source/relink obligations, other platforms and independent
+  review remain open. PWD-005 rehash is missing: successful login preserves
+  imported legacy hashes. See `docs/native-argon2-build.md`.
 - Original `expert-auth-full-parity-plan-v1.0.zip` absent from workspace and named
   Downloads/Documents search. Expected SHA256
   `58f013dc0ae6fe9981206d4594e78d8efd0cde2f1a00f15bbdfbaec12ee918ed`.

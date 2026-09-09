@@ -1,0 +1,2 @@
+Building without optimizations
+gcc -m64 -ffile-prefix-map=/tmp/build-a=/usr/src/argon2 -ffile-prefix-map=/tmp/build-b=/usr/src/argon2 -std=c89 -O3 -Wall -g -Iinclude -Isrc -pthread -shared -fPIC -fvisibility=hidden -DA2_VISCTL=1  -Wl,-soname,libargon2.so.1 src/argon2.c src/core.c src/blake2/blake2b.c src/thread.c src/encoding.c src/ref.c -o libargon2.so.1

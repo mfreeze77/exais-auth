@@ -23,6 +23,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--metadata', action='store_true')
+    mode.add_argument('--argon2-native-metadata', action='store_true')
     mode.add_argument('--license-texts', action='store_true')
     mode.add_argument('--request', type=Path)
     parser.add_argument('--output', type=Path, required=True)
@@ -47,6 +48,7 @@ def main():
     command = ['docker', 'run', '--pull=never', '--rm', '--name', name, '--cidfile', str(cidfile),
                '--read-only', '--memory=256m', '--pids-limit=64', '--cpus=1', '--cap-drop=ALL',
                '--security-opt=no-new-privileges', '--tmpfs', '/tmp:rw,nosuid,noexec,size=16m',
+               '--log-driver=local', '--log-opt=max-size=1m', '--log-opt=max-file=1', '--log-opt=compress=false',
                '--mount', f'type=bind,source={ROOT / "tools/capture_native_sources.py"},target=/repo/tools/capture_native_sources.py,readonly',
                '--mount', f'type=bind,source={output},target={target}']
     if request:
@@ -54,7 +56,7 @@ def main():
     for key, value in LABELS.items():
         command.extend(['--label', key + '=' + value])
     command.extend([IMAGE, 'python', '-B', '/repo/tools/capture_native_sources.py'])
-    command.extend(['--metadata'] if args.metadata else ['--license-texts'] if args.license_texts else
+    command.extend(['--metadata'] if args.metadata else ['--argon2-native-metadata'] if args.argon2_native_metadata else ['--license-texts'] if args.license_texts else
                    ['--request', '/repo/' + request.relative_to(ROOT).as_posix()])
     command.extend(['--output', target])
     report = {'schema': 'expertauth-native-source-container-v1', 'started': datetime.now(timezone.utc).isoformat(),
