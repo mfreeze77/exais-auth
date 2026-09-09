@@ -1,0 +1,215 @@
+{
+  "kind": "bouncycastle-bounded-acquisition",
+  "passed": true,
+  "complete": false,
+  "started": "2026-09-09T13:29:26.776485+00:00",
+  "http": [
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.jar.sha256",
+      "bytes": 65,
+      "sha256": "8a06e534eeaba4c0a022d0fea78c6ff5c13dc7fad7939e797fbe5f5056173ab2",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.jar",
+      "bytes": 10280518,
+      "sha256": "986b0fb92ec10e0c66b43e036ce0077e6150cfaecd1db9fb92b56672e157afe5",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2-sources.jar.sha256",
+      "bytes": 65,
+      "sha256": "22a7b189f874dbb0393e8c3ac2c5b3fe7321848ffea202d4583ea88f96de0069",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2-sources.jar",
+      "bytes": 5948221,
+      "sha256": "b37ac84b1d5435ab7b8d166c16ab9f75e09f68f8ec50479bae433939b241b03f",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom.sha256",
+      "bytes": 65,
+      "sha256": "5ce0255315d2156e809c11ed185ceb5907f795fd4ff5d755d76b9a8408a9345e",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom",
+      "bytes": 1164,
+      "sha256": "774ffb514ef342d7e7543805944fec32e4da2c4292ba5d7d8560f05a65a7c2dd",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha256",
+      "bytes": 65,
+      "sha256": "11aa34c3aa91f99dd69b61e19e7c67717e9c0c63a244eff21dfdba08c6ba001c",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar",
+      "bytes": 718812,
+      "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85-sources.jar.sha256",
+      "bytes": 65,
+      "sha256": "5246ad9ee90ac669fea33e9f5e12666120e01000fb6d0504f1fb496992a00a2b",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85-sources.jar",
+      "bytes": 534652,
+      "sha256": "b470a692878f92abf00b9c3af9147a45453250a80930df8f23f1d092c55e2d5e",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha256",
+      "bytes": 65,
+      "sha256": "890a19696e528a4c2af8ad4156e45a56884e0395c5a9694d4d04d85ccdfa2fec",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom",
+      "bytes": 1344,
+      "sha256": "9f1c79a12a7c03d78860e05750dcc44e855e20205c7af7cffbf29a69448d85ea",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha256",
+      "bytes": 65,
+      "sha256": "5378726c5f572b3431cf83ed89ea1752e419c0c705392424e3ef6108a483824a",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar",
+      "bytes": 1315409,
+      "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85-sources.jar.sha256",
+      "bytes": 65,
+      "sha256": "effbc321dd09dd1efff94888099db231902b894a1d696179c407737afb410b2e",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85-sources.jar",
+      "bytes": 928504,
+      "sha256": "e5331f467331aba29bda6ddfb0df0da6d568928e29c2b0f20ea2fe123d802d20",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha256",
+      "bytes": 65,
+      "sha256": "1be3a12b9a6830113c49c688757412606520c18034c82da0fa8bea888d2bae3a",
+      "status": 200
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom",
+      "bytes": 1522,
+      "sha256": "9b052b0cb85cb7d8bb0956afcc74f31c814f1c67e03498e1ca74f8fe8611d957",
+      "status": 200
+    }
+  ],
+  "artifacts": [
+    {
+      "coordinate": "org.bouncycastle:bcprov-jdk18on:1.85.2",
+      "artifact": "bcprov-jdk18on",
+      "version": "1.85.2",
+      "binary": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.jar",
+        "sha256": "986b0fb92ec10e0c66b43e036ce0077e6150cfaecd1db9fb92b56672e157afe5",
+        "bytes": 10280518,
+        "filename": "bcprov-jdk18on-1.85.2.jar",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.jar.sha256",
+        "members": 7571,
+        "native_members": 0
+      },
+      "source": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2-sources.jar",
+        "sha256": "b37ac84b1d5435ab7b8d166c16ab9f75e09f68f8ec50479bae433939b241b03f",
+        "bytes": 5948221,
+        "filename": "bcprov-jdk18on-1.85.2-sources.jar",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2-sources.jar.sha256",
+        "members": 3413,
+        "native_members": 0,
+        "scrypt_source": {
+          "path": "org/bouncycastle/crypto/generators/SCrypt.java",
+          "sha256": "dc57ea99c91d3e275cc755bbe429be7e89bc415ee21437f020e1488bd57868ab",
+          "bytes": 7216
+        }
+      },
+      "pom": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom",
+        "sha256": "774ffb514ef342d7e7543805944fec32e4da2c4292ba5d7d8560f05a65a7c2dd",
+        "bytes": 1164,
+        "filename": "bcprov-jdk18on-1.85.2.pom",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk18on/1.85.2/bcprov-jdk18on-1.85.2.pom.sha256"
+      }
+    },
+    {
+      "coordinate": "org.bouncycastle:bcutil-jdk18on:1.85",
+      "artifact": "bcutil-jdk18on",
+      "version": "1.85",
+      "binary": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar",
+        "sha256": "590f55ed5d68529239898a4a5c4f730b6e37f45d1cfa3fbe51f8485abe32c42d",
+        "bytes": 718812,
+        "filename": "bcutil-jdk18on-1.85.jar",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.jar.sha256",
+        "members": 678,
+        "native_members": 0
+      },
+      "source": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85-sources.jar",
+        "sha256": "b470a692878f92abf00b9c3af9147a45453250a80930df8f23f1d092c55e2d5e",
+        "bytes": 534652,
+        "filename": "bcutil-jdk18on-1.85-sources.jar",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85-sources.jar.sha256",
+        "members": 621,
+        "native_members": 0
+      },
+      "pom": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom",
+        "sha256": "9f1c79a12a7c03d78860e05750dcc44e855e20205c7af7cffbf29a69448d85ea",
+        "bytes": 1344,
+        "filename": "bcutil-jdk18on-1.85.pom",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcutil-jdk18on/1.85/bcutil-jdk18on-1.85.pom.sha256"
+      }
+    },
+    {
+      "coordinate": "org.bouncycastle:bcpkix-jdk18on:1.85",
+      "artifact": "bcpkix-jdk18on",
+      "version": "1.85",
+      "binary": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar",
+        "sha256": "c9f82b2d4e99c4bbdfccf684e52cc06ea06a0b567bfd0d08f9c5a3f417055996",
+        "bytes": 1315409,
+        "filename": "bcpkix-jdk18on-1.85.jar",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.jar.sha256",
+        "members": 1100,
+        "native_members": 0
+      },
+      "source": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85-sources.jar",
+        "sha256": "e5331f467331aba29bda6ddfb0df0da6d568928e29c2b0f20ea2fe123d802d20",
+        "bytes": 928504,
+        "filename": "bcpkix-jdk18on-1.85-sources.jar",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85-sources.jar.sha256",
+        "members": 887,
+        "native_members": 0
+      },
+      "pom": {
+        "url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom",
+        "sha256": "9b052b0cb85cb7d8bb0956afcc74f31c814f1c67e03498e1ca74f8fe8611d957",
+        "bytes": 1522,
+        "filename": "bcpkix-jdk18on-1.85.pom",
+        "checksum_url": "https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk18on/1.85/bcpkix-jdk18on-1.85.pom.sha256"
+      }
+    }
+  ],
+  "errors": [],
+  "finished": "2026-09-09T13:29:30.633294+00:00"
+}

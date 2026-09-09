@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/fetch.py", line 19, in <module>
+    ROOT=Path(__file__).resolve().parents[1]
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.12/pathlib.py", line 282, in __getitem__
+    raise IndexError(idx)
+IndexError: 1

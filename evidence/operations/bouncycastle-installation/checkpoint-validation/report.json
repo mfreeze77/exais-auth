@@ -1,0 +1,61 @@
+{
+  "kind": "checkpoint-integrity-not-authentication",
+  "passed": true,
+  "complete": false,
+  "checks": [
+    {
+      "args": [
+        "tools/ledger.py",
+        "check"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "error_count": 0,
+      "requirement_status_counts": {
+        "implemented-unverified": 23,
+        "blocked": 10,
+        "planned": 225,
+        "failed": 7
+      }
+    },
+    {
+      "args": [
+        "tools/capture_contracts.py",
+        "--validate"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "error_count": 0,
+      "requirement_status_counts": null
+    },
+    {
+      "args": [
+        "tools/validate_release.py",
+        "--claims-only"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "error_count": 0,
+      "requirement_status_counts": {
+        "implemented-unverified": 23,
+        "blocked": 10,
+        "planned": 225,
+        "failed": 7
+      }
+    },
+    {
+      "args": [
+        "tools/validate_release.py"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "error_count": 557,
+      "requirement_status_counts": {
+        "implemented-unverified": 23,
+        "blocked": 10,
+        "planned": 225,
+        "failed": 7
+      }
+    }
+  ]
+}

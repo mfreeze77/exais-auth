@@ -584,6 +584,64 @@ def main():
     data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
         'evidence/operations/hygiene/verification-20260909T125944Z.json',
         'evidence/operations/hygiene/checkpoint-retention-before-installed-native.json')]
+    firebase_sources = ['tools/patch_firebase_scrypt.py','tools/build_password_session.py',
+        'tools/acquire_bouncycastle.py','tools/install_bouncycastle.py','tools/build_atomic_core_runtime.py',
+        'tools/run_atomic_reset_lab.py','tools/run_refresh_grace_lab.py','tools/replace_atomic_core.py',
+        'tests/foundation/firebase-fixtures.mjs','tests/foundation/FirebaseScryptProbe.java',
+        'tools/verify_firebase_checkpoint.py','docs/firebase-scrypt-runtime.md']
+    firebase_reports = ['evidence/operations/password-session-build/firebase-bc-02/report.json',
+        'evidence/reuse/bouncycastle/runtime-1852-02/acquisition.json',
+        'evidence/reuse/bouncycastle/runtime-1852-02/container.json',
+        'evidence/operations/atomic-core-image/firebase-01/report.json',
+        'evidence/operations/atomic-core-image/firebase-01/notice-manifest.json',
+        'evidence/operations/atomic-core-image/firebase-01/adaptation-runtime.cdx.json',
+        'evidence/operations/atomic-core-replacement/firebase-01/report.json',
+        'evidence/operations/bouncycastle-installation/native-reference-preflight.stdout',
+        'evidence/operations/bouncycastle-installation/pause-correspondence.json']
+    for run in ('firebase-bc-source-02','image-firebase-firebase-01','firebase-legacy-json-01'):
+        firebase_reports += ['evidence/operations/atomic-reset/'+run+'/'+p for p in ('report.json','firebase-scrypt-report.json')]
+    firebase_reports += ['evidence/operations/atomic-reset/image-core-firebase-01/'+p for p in
+        ('report.json','probe-report.json','password-session-report.json')]
+    firebase_reports += ['evidence/operations/atomic-reset/image-node-firebase-01/report.json',
+        'evidence/operations/native-argon2-startup/image-firebase-01/report.json']
+    for run, probe in [('image-native-firebase-01','native-password-report.json'),
+                       ('image-guarded-firebase-01','guarded-report.json'),('image-core-firebase-01','probe-report.json')]:
+        firebase_reports += ['evidence/foundation/refresh-grace/'+run+'/'+p for p in ('report.json',probe)]
+    firebase_reports += ['evidence/operations/password-reset/atomic-image-node-firebase-01/'+p for p in
+        ('report.json','probe-results.json','browser-results.json','tls-results.json')]
+    data['firebase_scrypt_candidate_artifacts'] = [artifact(ROOT,p) for p in firebase_reports]
+    firebase_note = ('Current Core b4a5f18fb782 / firebase-bc-02 uses BC provider1.85.2/util+PKIX1.85, '
+        'UTF-8 Firebase passwords/default JSON reader, bounded shift checks and JDK digest comparison. '
+        'Twelve actual installed Firebase rows pass; separate current historical-peer proof makes115requests '
+        'and cleans17users/sixhelpers. Old-peer Unicode collision and shift alias are observed security failures. '
+        'Legacy raw-UTF8 BCRYPT credential migration is explicitly BLOCKED and authentication_acceptance_pass=false; '
+        'this observation is not one of the twelve passing candidate rows. An explicit migration/reset policy '
+        'is required. Full cost/import parameter validation and automatic rehash remain missing. Installed '
+        'native/Core/Node/browser/session regressions and14local upgrade/rollback phases pass;559files/85JARs/86SBOM '
+        'components match. OldCore/scryptJAR/supersededcandidatepair and allhelpers retire.174offline correspondence '
+        'checks bind current source and the earlier installation snapshots; a native-source-location verifier '
+        'mistake is preserved and corrected, not an authentication pass. Current builder has a separate read-only '
+        'actual-JAR-reference preflight. No finalengine/license/security/humanreview/fullrequirement/profile pass. '
+        'Paused at user request; see docs/firebase-scrypt-runtime.md for exact resume and limits.')
+    firebase_ids = [r['id'] for r in read_json(ROOT/'evidence/operations/atomic-reset/firebase-legacy-json-01/firebase-scrypt-report.json')['rows']]
+    for identifier in ('BAS-002','BAS-004','BAS-005','PWD-001','PWD-005','PWD-006','MIG-002',
+                       'SES-003','SES-004','SES-005','SES-006','SES-017','SDK-001','SDKP-01','SDK-005','SDKP-05',
+                       'OPS-004','OPS-007','OPS-011','WP-002','WP-004','WP-009','WP-010','WP-033'):
+        row=index[identifier]
+        row['implementation'] += [artifact(ROOT,p) for p in firebase_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['firebase_scrypt_candidate_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+firebase_note
+        if identifier in ('PWD-001','PWD-005','PWD-006','MIG-002','WP-002'):
+            row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+firebase_ids))
+    data['firebase_scrypt_failed_history']=[artifact(ROOT,p) for p in (
+        'evidence/operations/atomic-reset/firebase-bc-source-01/report.json',
+        'evidence/operations/atomic-reset/firebase-bc-source-01/diagnosis-and-retirement.json',
+        'evidence/operations/bouncycastle-installation/pause-correspondence-initial.json',
+        'evidence/operations/bouncycastle-installation/CORRESPONDENCE_CORRECTION.md')]
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/password-session-retirement-firebase-01.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-firebase-pause.json',
+        'evidence/operations/hygiene/verification-20260909T134957Z.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

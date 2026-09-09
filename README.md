@@ -8,10 +8,11 @@ The immutable acceptance baseline lives under `baseline/`; editable traceability
 `ledger/implementation.json`. Engine selection is pending in ADR-001. Source, builds,
 real API tests and license evidence are retained separately from plan integrity tests.
 
-The [installed source-built Argon2 profile](docs/installed-native-argon2.md) passes
-original native tests, real Core password/import/reset/concurrency cases, startup
-failure checks and local upgrade/rollback. Current Core is `e8c460664ac5`; Node is
-`2a02e08d5fcb`. Native distribution, rehash and full foundation gates remain open.
+The latest [Firebase verification checkpoint](docs/firebase-scrypt-runtime.md) is
+**paused at the user's request**. Current Core is `b4a5f18fb782` with BC 1.85.2,
+UTF-8 Firebase verification and the source-built Argon2 profile; Node remains
+`2a02e08d5fcb`. Local regressions and upgrade/rollback pass. Legacy Unicode
+credential migration is explicitly blocked. No complete requirement is verified.
 
 ## Reproduce the source-built alternative lab
 

@@ -1,0 +1,690 @@
+[
+  {
+    "path": "META-INF/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "META-INF/MANIFEST.MF",
+    "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff",
+    "original_sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff",
+    "changed": false
+  },
+  {
+    "path": "io/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/AuditEnforcementAspect.class",
+    "sha256": "e7bb822fdf469ffa8106fd6148a5faf5eb68250f9a2e4e1967e102aab4a8ebdb",
+    "original_sha256": "e7bb822fdf469ffa8106fd6148a5faf5eb68250f9a2e4e1967e102aab4a8ebdb",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/BulkImportConnectionPool.class",
+    "sha256": "9855f75a1fb3b518686f216700a5c064c95d743ecc302f27cf2958f914a717aa",
+    "original_sha256": "9855f75a1fb3b518686f216700a5c064c95d743ecc302f27cf2958f914a717aa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/BulkImportProxyConnection.class",
+    "sha256": "9d903b5341bfa24e831af53783e306b2bc444e3fe098dff4975dfdaba687cf47",
+    "original_sha256": "9d903b5341bfa24e831af53783e306b2bc444e3fe098dff4975dfdaba687cf47",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/BulkImportProxyStorage.class",
+    "sha256": "f4fdc4907ca6bb215d99a9071e0ff5fb971748fd7ad1302452f31c3831075b6a",
+    "original_sha256": "f4fdc4907ca6bb215d99a9071e0ff5fb971748fd7ad1302452f31c3831075b6a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ConnectionPool$PostConnectCallback.class",
+    "sha256": "2ea3648c20402b8225672b2e4544b48ec155d6c4946615869df300b421f4d158",
+    "original_sha256": "2ea3648c20402b8225672b2e4544b48ec155d6c4946615869df300b421f4d158",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ConnectionPool.class",
+    "sha256": "0c56d3b9fe1c2e786f4c85a735b675e5267c095814267c3617e680d18b29136a",
+    "original_sha256": "0c56d3b9fe1c2e786f4c85a735b675e5267c095814267c3617e680d18b29136a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ConnectionPoolTestContent.class",
+    "sha256": "ee667323880c05f09e4b1fe73bd87d607ca25b11ab8d625afae82ad02b49d34b",
+    "original_sha256": "ee667323880c05f09e4b1fe73bd87d607ca25b11ab8d625afae82ad02b49d34b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/HikariLoggingAppender.class",
+    "sha256": "d3b4886cae5188a98b17ba33387eee271d695396527f4bf5aa3d0b14e9efe5fe",
+    "original_sha256": "d3b4886cae5188a98b17ba33387eee271d695396527f4bf5aa3d0b14e9efe5fe",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/LockFailure.class",
+    "sha256": "60c82f9b367eeca97da95cbabd9e14adecd4b2541598d1ca19512c4386f13558",
+    "original_sha256": "60c82f9b367eeca97da95cbabd9e14adecd4b2541598d1ca19512c4386f13558",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/LockedUserImpl.class",
+    "sha256": "ab28cf659fb352c3d3c2832eaf740d659b0c2139c292e59d20500fe34ae413db",
+    "original_sha256": "ab28cf659fb352c3d3c2832eaf740d659b0c2139c292e59d20500fe34ae413db",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/PreparedStatementValueSetter.class",
+    "sha256": "e39f6a5df732c222afeb465131db5ac5433c9fc3c8d311c126d7513af6f2e746",
+    "original_sha256": "e39f6a5df732c222afeb465131db5ac5433c9fc3c8d311c126d7513af6f2e746",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ProcessState$EventAndException.class",
+    "sha256": "dc28d589f238394717c4d025ac4c8e3b687273926d12680ed2b785cc9c4e13e0",
+    "original_sha256": "dc28d589f238394717c4d025ac4c8e3b687273926d12680ed2b785cc9c4e13e0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ProcessState$PROCESS_STATE.class",
+    "sha256": "c06dfe2007205af88345966657978267e2a4ff69ab721d9a32e92933bd27b286",
+    "original_sha256": "c06dfe2007205af88345966657978267e2a4ff69ab721d9a32e92933bd27b286",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ProcessState.class",
+    "sha256": "15839b7d2db18a88a688aa2102c7e527cfbd598ec9a327f13f603f6bda7ef6df",
+    "original_sha256": "15839b7d2db18a88a688aa2102c7e527cfbd598ec9a327f13f603f6bda7ef6df",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/QueryExecutorTemplate.class",
+    "sha256": "45c4b8d30dbe01d81bd876f54ae596d4e2d894445dfb9508c72fd8c28ee95bf3",
+    "original_sha256": "45c4b8d30dbe01d81bd876f54ae596d4e2d894445dfb9508c72fd8c28ee95bf3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ResourceDistributor$SingletonResource.class",
+    "sha256": "ef3a4238e5e44bf876e67e5c8147a579cd50884eed24f26c93bdb433d69a3ae0",
+    "original_sha256": "ef3a4238e5e44bf876e67e5c8147a579cd50884eed24f26c93bdb433d69a3ae0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ResourceDistributor.class",
+    "sha256": "4c5782ddb6a3b0ebcb97a9c00d54f0dac17e74e2a96292a5544d57b76a05e28e",
+    "original_sha256": "4c5782ddb6a3b0ebcb97a9c00d54f0dac17e74e2a96292a5544d57b76a05e28e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ResultSetValueExtractor.class",
+    "sha256": "65fca9665546913e4470146b92ca649acaa75bb14e04b1d8ace9ee6df9a92f77",
+    "original_sha256": "65fca9665546913e4470146b92ca649acaa75bb14e04b1d8ace9ee6df9a92f77",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/SchemaVerifier$ExpectedTable.class",
+    "sha256": "b45005744b76934c5c1d9c5ca482ab238e9b76b6217ca7db303fb5797bb75667",
+    "original_sha256": "b45005744b76934c5c1d9c5ca482ab238e9b76b6217ca7db303fb5797bb75667",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/SchemaVerifier.class",
+    "sha256": "25dcc3ad630436eaf538f30570baae5bf1dd39a201164717657e758cb4c0c766",
+    "original_sha256": "25dcc3ad630436eaf538f30570baae5bf1dd39a201164717657e758cb4c0c766",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/Start.class",
+    "sha256": "22c2f51d7fcf46566a1459877838d8eb6c3758e4d7c85a8113cd993c585e4f6b",
+    "original_sha256": "22c2f51d7fcf46566a1459877838d8eb6c3758e4d7c85a8113cd993c585e4f6b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/AtomicAutoCommitWrite.class",
+    "sha256": "22d8038a5ad84f2f70edcf7364d4c3e6d332d2ce1b11b8550cadbc7987d021c8",
+    "original_sha256": "22d8038a5ad84f2f70edcf7364d4c3e6d332d2ce1b11b8550cadbc7987d021c8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/ConnectionPoolProperty.class",
+    "sha256": "dc9b41c99aa718e9b0582e79f921d16c6dd628dfb16c5a7b20abbc38003b2040",
+    "original_sha256": "dc9b41c99aa718e9b0582e79f921d16c6dd628dfb16c5a7b20abbc38003b2040",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/DashboardInfo.class",
+    "sha256": "0d765165da21ef60020f32e6e022e2d32511f313646d02f24155ce8856793066",
+    "original_sha256": "0d765165da21ef60020f32e6e022e2d32511f313646d02f24155ce8856793066",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/EnvName.class",
+    "sha256": "698dd6d76129d9f691fc26f3a6769dffce9f70010237d8d61adcd90ba3ae3ab8",
+    "original_sha256": "698dd6d76129d9f691fc26f3a6769dffce9f70010237d8d61adcd90ba3ae3ab8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/IgnoreForAnnotationCheck.class",
+    "sha256": "573518668dbb90710fcf893aec53613d905b6259c2d97261e00a085f3859168b",
+    "original_sha256": "573518668dbb90710fcf893aec53613d905b6259c2d97261e00a085f3859168b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/NotConflictingWithinUserPool.class",
+    "sha256": "8959f49112eb0f61b58a2b8b88d38c0583d8caafd31d123f37f1f0344ea7fb50",
+    "original_sha256": "8959f49112eb0f61b58a2b8b88d38c0583d8caafd31d123f37f1f0344ea7fb50",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/UnauditedAutoCommitWrite.class",
+    "sha256": "06a9f6f5d9022ffe939290dc63389562670e0fe003d006716faeea04946f696a",
+    "original_sha256": "06a9f6f5d9022ffe939290dc63389562670e0fe003d006716faeea04946f696a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/annotations/UserPoolProperty.class",
+    "sha256": "694edbf5797a404bbd5f976e43aa6e07d8697e18337e86b18b9301caf62c897f",
+    "original_sha256": "694edbf5797a404bbd5f976e43aa6e07d8697e18337e86b18b9301caf62c897f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/config/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/config/Config.class",
+    "sha256": "56a5e275bd437a9fd1611185499ef5be81f677b27911970eb2801eba9f600a8d",
+    "original_sha256": "56a5e275bd437a9fd1611185499ef5be81f677b27911970eb2801eba9f600a8d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/config/PostgreSQLConfig.class",
+    "sha256": "b601ef32bb21dba6e15b64d3f3f12ded2196a3b6cec55e05df0b3e788af06a96",
+    "original_sha256": "b601ef32bb21dba6e15b64d3f3f12ded2196a3b6cec55e05df0b3e788af06a96",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/output/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/output/CustomLayout.class",
+    "sha256": "f2df09cf2cbd28b03257c23b71aeaf0613a462b2f173d4ededc963103ea7dd86",
+    "original_sha256": "f2df09cf2cbd28b03257c23b71aeaf0613a462b2f173d4ededc963103ea7dd86",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/output/LayoutWrappingEncoder.class",
+    "sha256": "fb574daa049d6f0d46e8ca4784b9cff1c28acfeaeb22bd90915a865996c57d22",
+    "original_sha256": "fb574daa049d6f0d46e8ca4784b9cff1c28acfeaeb22bd90915a865996c57d22",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/output/Logging.class",
+    "sha256": "ee8a872c6115f541202f0c2787955cd3b54760bd33fd8f274b332e041325828e",
+    "original_sha256": "ee8a872c6115f541202f0c2787955cd3b54760bd33fd8f274b332e041325828e",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/AccountInfoQueries.class",
+    "sha256": "c32a9045a8193acd4723278b920067675f612b279f0651236039e85837b89c5c",
+    "original_sha256": "c32a9045a8193acd4723278b920067675f612b279f0651236039e85837b89c5c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/ActiveUsersQueries.class",
+    "sha256": "0f03914da8cdee2797884f3291af8578be9073c4e3e6929e7b9c6c0a66fe8bf0",
+    "original_sha256": "0f03914da8cdee2797884f3291af8578be9073c4e3e6929e7b9c6c0a66fe8bf0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/ActivityLogQueries.class",
+    "sha256": "c94b85cecb8f0f57d002499669aa70d354155783affeb07b18dfd4c5140e30cf",
+    "original_sha256": "c94b85cecb8f0f57d002499669aa70d354155783affeb07b18dfd4c5140e30cf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/BulkImportQueries$BulkImportUserRowMapper.class",
+    "sha256": "584950bfa8fc8f3252555d7e721287381dbab46ea4fc61efb0ef11003584dbc0",
+    "original_sha256": "584950bfa8fc8f3252555d7e721287381dbab46ea4fc61efb0ef11003584dbc0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/BulkImportQueries.class",
+    "sha256": "16d206750b94904652e392ac75e60b593b4fa2d2a2cb3bdeccbe4a3461249f40",
+    "original_sha256": "16d206750b94904652e392ac75e60b593b4fa2d2a2cb3bdeccbe4a3461249f40",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/DashboardQueries$DashboardInfoMapper.class",
+    "sha256": "2a2e4e3ad0cbd9aee3188844852c3e6bf009dc70d1cb2d1fccb7c436e9486e38",
+    "original_sha256": "2a2e4e3ad0cbd9aee3188844852c3e6bf009dc70d1cb2d1fccb7c436e9486e38",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/DashboardQueries$DashboardSessionInfoMapper.class",
+    "sha256": "812a4feb12d0955dff64eb2962c838f608b154bc431e773b3db77863bd993d16",
+    "original_sha256": "812a4feb12d0955dff64eb2962c838f608b154bc431e773b3db77863bd993d16",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/DashboardQueries$DashboardSessionInfoResultExtractor.class",
+    "sha256": "884f61b1e9b26ff55d490d8bc828ac2abe5463818bdf10fb0d2abd6e70db1f61",
+    "original_sha256": "884f61b1e9b26ff55d490d8bc828ac2abe5463818bdf10fb0d2abd6e70db1f61",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/DashboardQueries$DashboardUserInfoResultExtractor.class",
+    "sha256": "48ed3e173d4938433beafab22241ed180b6cdecb1aaec3fe7579ec8fd6917d3d",
+    "original_sha256": "48ed3e173d4938433beafab22241ed180b6cdecb1aaec3fe7579ec8fd6917d3d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/DashboardQueries.class",
+    "sha256": "3149364def2070f7bdcf45e10ba30e551a9cc581b767b0aa64bec2764501ac90",
+    "original_sha256": "3149364def2070f7bdcf45e10ba30e551a9cc581b767b0aa64bec2764501ac90",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailPasswordQueries$PasswordResetRowMapper.class",
+    "sha256": "2bf22be75d8e5df9f33da1b794b98366291a560db3b7668b3e9783dd223e16a3",
+    "original_sha256": "2bf22be75d8e5df9f33da1b794b98366291a560db3b7668b3e9783dd223e16a3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailPasswordQueries$UserInfoPartial.class",
+    "sha256": "d24ed62a1235110b0da7f51d04f3f793bbd2beb178d1f8a51fbeecb3f1abc8e5",
+    "original_sha256": "d24ed62a1235110b0da7f51d04f3f793bbd2beb178d1f8a51fbeecb3f1abc8e5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailPasswordQueries$UserInfoRowMapper.class",
+    "sha256": "7800ccbc9d28e6c6391ad486aeca9328d477385026c7ab1eb733c69aff450c65",
+    "original_sha256": "7800ccbc9d28e6c6391ad486aeca9328d477385026c7ab1eb733c69aff450c65",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailPasswordQueries.class",
+    "sha256": "fab8177e909b328788b792e5d32d770d2eeaed0eb4c735573c9733fe67546fd7",
+    "original_sha256": "fab8177e909b328788b792e5d32d770d2eeaed0eb4c735573c9733fe67546fd7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailVerificationQueries$EmailVerificationTokenInfoRowMapper.class",
+    "sha256": "2584cd1799b7c684c27d8626073ec79a22a26d04fab6757efbbd463ac922d1f5",
+    "original_sha256": "2584cd1799b7c684c27d8626073ec79a22a26d04fab6757efbbd463ac922d1f5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailVerificationQueries$UserIdAndEmail.class",
+    "sha256": "654be8f1d0745bb1916aae7409059c537e525efc127c980a03d31486b777ecda",
+    "original_sha256": "654be8f1d0745bb1916aae7409059c537e525efc127c980a03d31486b777ecda",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/EmailVerificationQueries.class",
+    "sha256": "bcfed9fcfbdf5ae3e4e951bca850a7d4e1ac3c203ebe0600f10eefce5ae83bad",
+    "original_sha256": "bcfed9fcfbdf5ae3e4e951bca850a7d4e1ac3c203ebe0600f10eefce5ae83bad",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/GeneralQueries$AccountLinkingInfo.class",
+    "sha256": "ccf15bf1ea62a076015c99914cda479a6d4233d519eae84684df117dbf7259f4",
+    "original_sha256": "ccf15bf1ea62a076015c99914cda479a6d4233d519eae84684df117dbf7259f4",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/GeneralQueries$AllAuthRecipeUsersResultHolder.class",
+    "sha256": "2dd144cb9e2743e47ff0bf436d33957a76c9ba4e9c63f457a30f59eb209afb9c",
+    "original_sha256": "2dd144cb9e2743e47ff0bf436d33957a76c9ba4e9c63f457a30f59eb209afb9c",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/GeneralQueries$ConnectionCallable.class",
+    "sha256": "acc8c5ca1d607683f16e3748ee6d652c7f66d98903b43a0255b8ccf3c0da6544",
+    "original_sha256": "acc8c5ca1d607683f16e3748ee6d652c7f66d98903b43a0255b8ccf3c0da6544",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/GeneralQueries$KeyValueInfoRowMapper.class",
+    "sha256": "2fb7eaa9cd659babce3636c0da42246e95ad4c716b69550f14304eac572a525d",
+    "original_sha256": "2fb7eaa9cd659babce3636c0da42246e95ad4c716b69550f14304eac572a525d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/GeneralQueries.class",
+    "sha256": "2a88d077c66232894081b341c8f4a787de07b9a49766afc5c1aa27354a6da714",
+    "original_sha256": "2a88d077c66232894081b341c8f4a787de07b9a49766afc5c1aa27354a6da714",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/JWTSigningQueries$JWTSigningKeyInfoRowMapper.class",
+    "sha256": "5ff40e540203014909baa807dcad17a415c92be337275c493b99a7d4895a9e85",
+    "original_sha256": "5ff40e540203014909baa807dcad17a415c92be337275c493b99a7d4895a9e85",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/JWTSigningQueries.class",
+    "sha256": "eaa231d0a64a5d5b3fe5504e415f40c02ebee6c86ea892a3603a85c3dd7a3f33",
+    "original_sha256": "eaa231d0a64a5d5b3fe5504e415f40c02ebee6c86ea892a3603a85c3dd7a3f33",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/MigrationBackfillQueries$UserToBackfill.class",
+    "sha256": "043fbfd9cc8d95bd06882e4e5a136f715c2eebeba7d0314fdff324479de7beaa",
+    "original_sha256": "043fbfd9cc8d95bd06882e4e5a136f715c2eebeba7d0314fdff324479de7beaa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/MigrationBackfillQueries.class",
+    "sha256": "98d2ee585b6f9f55dc2354662a07c56496c2ee3b7d4fa42fa41cdd36b77200be",
+    "original_sha256": "98d2ee585b6f9f55dc2354662a07c56496c2ee3b7d4fa42fa41cdd36b77200be",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/MultitenancyQueries.class",
+    "sha256": "794bce363d9904ac519745b79337a8a860ea1eec194ef6bf18c168be5ea12768",
+    "original_sha256": "794bce363d9904ac519745b79337a8a860ea1eec194ef6bf18c168be5ea12768",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/OAuthQueries.class",
+    "sha256": "8dd9ac2376a9f82d09be68fb52addbae77062bf535a9d2eab2f3c6d8d529a968",
+    "original_sha256": "8dd9ac2376a9f82d09be68fb52addbae77062bf535a9d2eab2f3c6d8d529a968",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/PasswordlessQueries$PasswordlessCodeRowMapper.class",
+    "sha256": "4e46122f7783783ff6340f856e2fd89950b10d632abe3b9cc0fd79e3bb153cbf",
+    "original_sha256": "4e46122f7783783ff6340f856e2fd89950b10d632abe3b9cc0fd79e3bb153cbf",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/PasswordlessQueries$PasswordlessDeviceRowMapper.class",
+    "sha256": "06e554cc298d2fa40d6b522d1733ecd750dfacf4151e2dcc3b16c571d0d90a4d",
+    "original_sha256": "06e554cc298d2fa40d6b522d1733ecd750dfacf4151e2dcc3b16c571d0d90a4d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/PasswordlessQueries$UserInfoPartial.class",
+    "sha256": "a21bb6a6e39cb047f0209c646aa68410205500776d332de2360567996f2d5477",
+    "original_sha256": "a21bb6a6e39cb047f0209c646aa68410205500776d332de2360567996f2d5477",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/PasswordlessQueries$UserInfoRowMapper.class",
+    "sha256": "195b96aec3d85b40540e8c51c8190d1e57ae21700bd1e6df92d5120767e487d2",
+    "original_sha256": "195b96aec3d85b40540e8c51c8190d1e57ae21700bd1e6df92d5120767e487d2",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/PasswordlessQueries$UserInfoWithTenantId.class",
+    "sha256": "fad9aae895fd8ee5b0bb7ef19192843f3649bf43b7923e17f78ccc245bfdac30",
+    "original_sha256": "fad9aae895fd8ee5b0bb7ef19192843f3649bf43b7923e17f78ccc245bfdac30",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/PasswordlessQueries.class",
+    "sha256": "75cf9f6200907779bf099e485ee346b293da8551928ff2647b51ffeb761442b7",
+    "original_sha256": "75cf9f6200907779bf099e485ee346b293da8551928ff2647b51ffeb761442b7",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/SAMLQueries.class",
+    "sha256": "8cb2ff40c290d5d5d710df57842f38d4cbe6e03bf6d0017f63a32a1c5e4888e1",
+    "original_sha256": "8cb2ff40c290d5d5d710df57842f38d4cbe6e03bf6d0017f63a32a1c5e4888e1",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/SessionQueries$AccessTokenSigningKeyRowMapper.class",
+    "sha256": "cd7dcdd4298022c3676f0fdf779ad0d326481b7e842996d06ebf01c15ca7f95f",
+    "original_sha256": "cd7dcdd4298022c3676f0fdf779ad0d326481b7e842996d06ebf01c15ca7f95f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/SessionQueries$SessionInfoRowMapper.class",
+    "sha256": "48190e8b22457f5af20ccf96fcf72102975dc104845048cee1a35a3cf1013e79",
+    "original_sha256": "48190e8b22457f5af20ccf96fcf72102975dc104845048cee1a35a3cf1013e79",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/SessionQueries.class",
+    "sha256": "e3bd22d3d822cd6ecbd766159f5ba0346ec085b68ade98b10013181f0c7b81d0",
+    "original_sha256": "e3bd22d3d822cd6ecbd766159f5ba0346ec085b68ade98b10013181f0c7b81d0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/TOTPQueries$TOTPDeviceRowMapper.class",
+    "sha256": "9ae511b4c615cc9f9ebb447808d8111aef772ba522b3f0de4c6963cc4d32b6dd",
+    "original_sha256": "9ae511b4c615cc9f9ebb447808d8111aef772ba522b3f0de4c6963cc4d32b6dd",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/TOTPQueries$TOTPUsedCodeRowMapper.class",
+    "sha256": "977182486408fa510a9861663759a8697e409ba167c1d69751343abf224a6461",
+    "original_sha256": "977182486408fa510a9861663759a8697e409ba167c1d69751343abf224a6461",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/TOTPQueries.class",
+    "sha256": "f3537179928028d4566b800392052204c8284c8b4306135180e3e304b2e28d97",
+    "original_sha256": "f3537179928028d4566b800392052204c8284c8b4306135180e3e304b2e28d97",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/ThirdPartyQueries$UserInfoPartial.class",
+    "sha256": "c01560e4c27884d6cc40c132dc0c3e642e0e49658ad19bf640fd5d237afa0482",
+    "original_sha256": "c01560e4c27884d6cc40c132dc0c3e642e0e49658ad19bf640fd5d237afa0482",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/ThirdPartyQueries$UserInfoRowMapper.class",
+    "sha256": "4ba2c0e48611738c071c2ec7992635e28013aa1f6222cf043a7f10c6d13a9f92",
+    "original_sha256": "4ba2c0e48611738c071c2ec7992635e28013aa1f6222cf043a7f10c6d13a9f92",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/ThirdPartyQueries.class",
+    "sha256": "7d061c104f97f8716ae7a7b3dcd99f09e2308ef269190e785ab2cee6d38cfdf3",
+    "original_sha256": "7d061c104f97f8716ae7a7b3dcd99f09e2308ef269190e785ab2cee6d38cfdf3",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/UserIdMappingQueries$UserIdMappingRowMapper.class",
+    "sha256": "f34a79a19132a478bbac8ee3b1b6e5ba44a23ce35bd1ae6447348ab7654a3731",
+    "original_sha256": "f34a79a19132a478bbac8ee3b1b6e5ba44a23ce35bd1ae6447348ab7654a3731",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/UserIdMappingQueries.class",
+    "sha256": "93a70e6ef8be253ba05e28145f5ea025bad87729c0542d4982947d12626baa48",
+    "original_sha256": "93a70e6ef8be253ba05e28145f5ea025bad87729c0542d4982947d12626baa48",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/UserLockingQueries.class",
+    "sha256": "88858099e26fd72430bc6af5960659ce2433ae6227fa739ab7c29db66bad8bff",
+    "original_sha256": "88858099e26fd72430bc6af5960659ce2433ae6227fa739ab7c29db66bad8bff",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/UserMetadataQueries.class",
+    "sha256": "5887df1306d6862abcc7bd7b2f5635aeec732c842858ff86d79b43fab9268b63",
+    "original_sha256": "5887df1306d6862abcc7bd7b2f5635aeec732c842858ff86d79b43fab9268b63",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/UserRolesQueries.class",
+    "sha256": "c888f01f296b2f9c1552ab7ca6f4160c163ae1efec4d2d817087e3bf49f77d8d",
+    "original_sha256": "c888f01f296b2f9c1552ab7ca6f4160c163ae1efec4d2d817087e3bf49f77d8d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/Utils.class",
+    "sha256": "023cf709f2ed71061ef86e5ff30bf05b5e6f70cc8b282aed3c51318006141622",
+    "original_sha256": "023cf709f2ed71061ef86e5ff30bf05b5e6f70cc8b282aed3c51318006141622",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/WebAuthNQueries$AccountRecoveryTokenInfoRowMapper.class",
+    "sha256": "bd038883a37ff3c266063c6368b1f2d3bd163d729645e686e938cbaf66cad8d0",
+    "original_sha256": "bd038883a37ff3c266063c6368b1f2d3bd163d729645e686e938cbaf66cad8d0",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/WebAuthNQueries$WebAuthNOptionsRowMapper.class",
+    "sha256": "130d57b8957888faeda72f2941b467d32dfe3c3c509e5d63fb614da0bf70a50a",
+    "original_sha256": "130d57b8957888faeda72f2941b467d32dfe3c3c509e5d63fb614da0bf70a50a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/WebAuthNQueries$WebAuthnStoredCredentialRowMapper.class",
+    "sha256": "5b5f64d5577dbe982df983cfa6b3aa7030b14e63b566aacf5e05bd4765a88cd5",
+    "original_sha256": "5b5f64d5577dbe982df983cfa6b3aa7030b14e63b566aacf5e05bd4765a88cd5",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/WebAuthNQueries.class",
+    "sha256": "392b24147fb7d3078aee127b7201db26a367a77ac30c03b32575616deb281930",
+    "original_sha256": "392b24147fb7d3078aee127b7201db26a367a77ac30c03b32575616deb281930",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/MfaSqlHelper.class",
+    "sha256": "6b316fe092665f26b9c76cffb7da18c9cbf9e1d80e861f74cdbf947fec421b5b",
+    "original_sha256": "6b316fe092665f26b9c76cffb7da18c9cbf9e1d80e861f74cdbf947fec421b5b",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/TenantConfigSQLHelper$TenantConfigRowMapper.class",
+    "sha256": "e97e381f454f9ea9f6fe531d6e1ad4bebd892fa070347c9ea557978dfdaba87a",
+    "original_sha256": "e97e381f454f9ea9f6fe531d6e1ad4bebd892fa070347c9ea557978dfdaba87a",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/TenantConfigSQLHelper.class",
+    "sha256": "d31bc1e704635e59a6aa5d3a75c37a986631c07a6b4638eba7175fb927891e12",
+    "original_sha256": "d31bc1e704635e59a6aa5d3a75c37a986631c07a6b4638eba7175fb927891e12",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/ThirdPartyProviderClientSQLHelper$TenantThirdPartyProviderClientRowMapper.class",
+    "sha256": "cbe2fc5a8e51e5783a311433b6edfac35b7d5c8ae9aea3c65984b2ce2990d896",
+    "original_sha256": "cbe2fc5a8e51e5783a311433b6edfac35b7d5c8ae9aea3c65984b2ce2990d896",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/ThirdPartyProviderClientSQLHelper.class",
+    "sha256": "8074ea2a1d695399f44de8f2e3eddd4ec4f5c5b404b230fdb42de8c0203a27fa",
+    "original_sha256": "8074ea2a1d695399f44de8f2e3eddd4ec4f5c5b404b230fdb42de8c0203a27fa",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/ThirdPartyProviderSQLHelper$TenantThirdPartyProviderRowMapper.class",
+    "sha256": "a538ce2feb18b17cc35c487d550239e640ae828c81ba5f14f52785c705faffae",
+    "original_sha256": "a538ce2feb18b17cc35c487d550239e640ae828c81ba5f14f52785c705faffae",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/multitenancy/ThirdPartyProviderSQLHelper.class",
+    "sha256": "d0f127e4e46e548d1c545698fbad02c0122de4310341595ca4dbae913650b62f",
+    "original_sha256": "d0f127e4e46e548d1c545698fbad02c0122de4310341595ca4dbae913650b62f",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/utils/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/queries/utils/JsonUtils.class",
+    "sha256": "125b20b217fe6e05e896ea6cae78f669b5022e6c2bf670fa273a87a6e382e47d",
+    "original_sha256": "125b20b217fe6e05e896ea6cae78f669b5022e6c2bf670fa273a87a6e382e47d",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/utils/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/utils/ConfigMapper.class",
+    "sha256": "56c2327a49533dfdd5b77b11833b8dccb47bfb7807de88f5b86aac7c8ebfa8c8",
+    "original_sha256": "56c2327a49533dfdd5b77b11833b8dccb47bfb7807de88f5b86aac7c8ebfa8c8",
+    "changed": false
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/utils/Utils.class",
+    "sha256": "1d594d97f86c8216ab39f754f0068cf92ed534683debc676420a8a51d4cb710a",
+    "original_sha256": "1d594d97f86c8216ab39f754f0068cf92ed534683debc676420a8a51d4cb710a",
+    "changed": false
+  },
+  {
+    "path": "META-INF/services/",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changed": false
+  },
+  {
+    "path": "META-INF/services/io.supertokens.pluginInterface.Storage",
+    "sha256": "80681e5c69f96de0188aca65d8c6a14aab2a4efcad666213c5ba3aeb4fc796ec",
+    "original_sha256": "80681e5c69f96de0188aca65d8c6a14aab2a4efcad666213c5ba3aeb4fc796ec",
+    "changed": false
+  },
+  {
+    "path": "META-INF/services/io.expertauth.core.TransactionalSessionWriter",
+    "sha256": "216f7a2e5a91f83b7131f12e6bdbcbd73be0b7acb7567cba52e35ed42ca53e02",
+    "added": true
+  },
+  {
+    "path": "io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class",
+    "sha256": "ac58500943d505e702943e0437ff51ea34cf56a3914f0938f58d6c426e30b336",
+    "added": true
+  }
+]

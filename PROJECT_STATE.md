@@ -1,6 +1,6 @@
 # ExpertAuth execution checkpoint
 
-Status: **PARTIAL, active implementation. No engine selected; M0/M1 not closed.**
+Status: **PARTIAL; paused at the user's request. No engine selected; M0/M1 not closed.**
 All 265 required rows and 205 API IDs remain required. No baseline requirement is
 verified as a complete acceptance row. Tests below prove narrower cases only.
 
@@ -11,7 +11,19 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
-- Installed native Core `e8c460664ac5` replaces `db1d29ba6244` after seven
+- Current Core `b4a5f18fb782` / binary pair `firebase-bc-02` installs BC provider
+  1.85.2 and utility/PKIX 1.85, replaces archived scrypt, and fixes UTF-8 verification.
+  Twelve actual Firebase rows, installed Core/Node/native/session regressions and
+  local upgrade/rollback pass. The historical-peer follow-up makes 115 requests,
+  retires 17 users and six helpers, and proves a **blocked legacy Unicode password
+  migration**. This finding is not included in candidate pass counts. All 559
+  installed files match; no original acceptance row is promoted. Node is unchanged.
+  Read `docs/firebase-scrypt-runtime.md` for exact pins, file-specific reuse,
+  compatibility/security findings, source-version boundaries and resume commands.
+  Superseded Core image and guarded-01 JAR pair are retired; no new feature package
+  is in progress. Pause handoff and archive checks are integrity, not acceptance.
+
+- Previous installed native Core `e8c460664ac5` replaces `db1d29ba6244` after seven
   startup cases, source/bundled and source/source password/import/reset/
   concurrency tests, 16 Core atomic cases, 34 Node/SMTP/TLS/React checks,
   12 grace cases, eight guarded cases plus cleanup, and 14 actual local

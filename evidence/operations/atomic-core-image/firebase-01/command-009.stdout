@@ -1,0 +1,2 @@
+Testing guarded operations against actual healthy, mismatched and optional legacy Cores.
+{"passed": true, "report": "evidence/foundation/refresh-grace/image-guarded-firebase-01", "created": 6, "retired": 6, "errors": []}

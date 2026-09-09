@@ -1,0 +1,631 @@
+{
+  "kind": "actual-guarded-session-operations",
+  "started": "2026-09-09T13:35:17.277919775Z",
+  "passed": true,
+  "foundation_passed": false,
+  "sdk_qualified": false,
+  "independent_human_review": false,
+  "complete": false,
+  "legacy_replica_included": false,
+  "rows": [
+    {
+      "unauthenticated_http": 401,
+      "id": "GUARD56-PRIVATE-CAPABILITY",
+      "status": "passed"
+    },
+    {
+      "refresh_http": 200,
+      "verify_http": 200,
+      "grace_retry_http": 200,
+      "id": "GUARD56-SERIAL-ROTATION",
+      "status": "passed"
+    },
+    {
+      "healthy_preflight_http": 200,
+      "refresh_http": 503,
+      "verify_http": 503,
+      "session_columns_unchanged": true,
+      "retry_http": 200,
+      "id": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "status": "passed"
+    },
+    {
+      "healthy_preflight_http": 200,
+      "refresh_http": 503,
+      "verify_http": 503,
+      "session_columns_unchanged": true,
+      "retry_http": 200,
+      "id": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "status": "passed"
+    },
+    {
+      "denied_requests": 4,
+      "session_columns_unchanged": true,
+      "id": "GUARD56-VERSION-DOWNGRADE-REFUSED",
+      "status": "passed"
+    },
+    {
+      "original_and_guarded_errors_equal": true,
+      "id": "GUARD56-ORIGINAL-INVALID-TOKEN-ERRORS",
+      "status": "passed"
+    },
+    {
+      "requests": 16,
+      "successful_refreshes": 8,
+      "mismatched_refusals": 8,
+      "authoritative_successors": 1,
+      "id": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "status": "passed"
+    },
+    {
+      "guarded_http": 503,
+      "original_refresh_http": 200,
+      "original_verify_http": 200,
+      "id": "GUARD56-ORIGINAL-ROUTES-UNCHANGED",
+      "status": "passed"
+    },
+    {
+      "owned_users_removed": 1,
+      "id": "GUARD56-OWNED-FIXTURE-CLEANUP",
+      "status": "passed"
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 61,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 64,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 59,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 121,
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PRIVATE-CAPABILITY",
+      "replica": "a",
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PRIVATE-CAPABILITY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PRIVATE-CAPABILITY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 401,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PRIVATE-CAPABILITY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 401,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-SERIAL-ROTATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-SERIAL-ROTATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-SERIAL-ROTATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-SERIAL-ROTATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "replica": "a",
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-ZERO-GRACE-OPERATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "replica": "a",
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "replica": "c",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "replica": "c",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-PREFLIGHT-OTHER-REUSE-OPERATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-VERSION-DOWNGRADE-REFUSED",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-VERSION-DOWNGRADE-REFUSED",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.3",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-VERSION-DOWNGRADE-REFUSED",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.3",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-VERSION-DOWNGRADE-REFUSED",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.4",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-VERSION-DOWNGRADE-REFUSED",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.4",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-INVALID-TOKEN-ERRORS",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-INVALID-TOKEN-ERRORS",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-INVALID-TOKEN-ERRORS",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TRY_REFRESH_TOKEN",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-INVALID-TOKEN-ERRORS",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TRY_REFRESH_TOKEN",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "c",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "c",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "c",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "c",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-CONCURRENT-MIXED-POLICY",
+      "replica": "a",
+      "method": "POST",
+      "path": "/expertauth/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-ROUTES-UNCHANGED",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-ROUTES-UNCHANGED",
+      "replica": "b",
+      "method": "POST",
+      "path": "/expertauth/session/refresh",
+      "cdi": "5.6",
+      "http": 503,
+      "status": "SESSION_POLICY_MISMATCH",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-ROUTES-UNCHANGED",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GUARD56-ORIGINAL-ROUTES-UNCHANGED",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 39,
+      "credential_bodies_recorded": false
+    }
+  ],
+  "finished": "2026-09-09T13:35:18.421945985Z"
+}

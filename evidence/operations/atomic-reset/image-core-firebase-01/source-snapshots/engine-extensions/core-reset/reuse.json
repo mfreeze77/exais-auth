@@ -1,0 +1,164 @@
+{
+  "kind": "file-specific-core-reset-reuse",
+  "runtime_qualified": false,
+  "full_distribution_approved": false,
+  "mapped_requirements": [
+    "PWD-006",
+    "SES-005",
+    "SES-006",
+    "LNK-008"
+  ],
+  "new_source_license": "Apache-2.0",
+  "new_sources": [
+    "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java",
+    "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java"
+  ],
+  "upstream_files": [
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/Webserver.java",
+      "sha256": "2b178ed47dc6df25a41e37633bb26856a069669966569df93e0e831e54ddcd39",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": true,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/WebserverAPI.java",
+      "sha256": "f49a235ae9ff2b31c62f0b9748c78228af75232002ec73dbb6548baf0d447fbf",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/emailpassword/GeneratePasswordResetTokenAPI.java",
+      "sha256": "36b750eefeded2d2d8c49db1cd73ade8e874d8ff516293569e81cae2c2a3679a",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/emailpassword/ResetPasswordAPI.java",
+      "sha256": "f859591ce240ac45158b55de147686234d973b60f8980f503b4d3736863ae82e",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/emailpassword/EmailPassword.java",
+      "sha256": "c5cc71287c7efc476e2c5b339fa34a03b9ce477046e33ae266a39d9b008b7042",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/emailpassword/PasswordHashing.java",
+      "sha256": "61c89a546c963a7f465e5aec5f4d27ebe1ce0d7f40b9d4087db201cce16f2688",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-core",
+      "commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/utils/Utils.java",
+      "sha256": "e382bb650cd71f0624ca6d81e3ac8e59e77bb8273a6765e6eb7e987598ab71bc",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-plugin-interface",
+      "commit": "2550750188069110753decd06265a59fadefb427",
+      "source_path": "src/main/java/io/supertokens/pluginInterface/emailpassword/sqlStorage/EmailPasswordSQLStorage.java",
+      "sha256": "150b699e51b5f57dbe9ed6f0721f2a181faddbe0ad83cf90bb882645af8a1fe4",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-plugin-interface/2550750188069110753decd06265a59fadefb427/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-plugin-interface",
+      "commit": "2550750188069110753decd06265a59fadefb427",
+      "source_path": "src/main/java/io/supertokens/pluginInterface/authRecipe/sqlStorage/AuthRecipeSQLStorage.java",
+      "sha256": "5582e535aed5fe9e3ffaf319cfb1811d9847399053535bd780aaf182e1f9741f",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-plugin-interface/2550750188069110753decd06265a59fadefb427/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-plugin-interface",
+      "commit": "2550750188069110753decd06265a59fadefb427",
+      "source_path": "src/main/java/io/supertokens/pluginInterface/session/sqlStorage/SessionSQLStorage.java",
+      "sha256": "17b8de3039f9b0656b4971087dee1bd63b35d8cd3f33481fe30549a22f7d5628",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-plugin-interface/2550750188069110753decd06265a59fadefb427/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-plugin-interface",
+      "commit": "2550750188069110753decd06265a59fadefb427",
+      "source_path": "src/main/java/io/supertokens/pluginInterface/useridmapping/UserLockingStorage.java",
+      "sha256": "a5125cb84f6a499db1f0bb8a9fd13c79024ec3be836c7ddece31d2f8724eb52e",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-plugin-interface/2550750188069110753decd06265a59fadefb427/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-plugin-interface",
+      "commit": "2550750188069110753decd06265a59fadefb427",
+      "source_path": "src/main/java/io/supertokens/pluginInterface/useridmapping/sqlStorage/UserIdMappingSQLStorage.java",
+      "sha256": "ede132916b4022600f8534cf96c495062e5e68d2cd0368a80a64a56723efe38a",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-plugin-interface/2550750188069110753decd06265a59fadefb427/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-postgresql-plugin",
+      "commit": "0b68fd14ca10baee2d0e3c31466984fccfb36c8a",
+      "source_path": "src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "sha256": "99bfee5d5130599b501fabf180bb522421cdad5274b0896c7f8eb318f1fb2d28",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-postgresql-plugin/0b68fd14ca10baee2d0e3c31466984fccfb36c8a/LICENSE.md"
+    },
+    {
+      "repository": "https://github.com/supertokens/supertokens-postgresql-plugin",
+      "commit": "0b68fd14ca10baee2d0e3c31466984fccfb36c8a",
+      "source_path": "src/main/java/io/supertokens/storage/postgresql/queries/EmailPasswordQueries.java",
+      "sha256": "20ada71063a75631e9a91795b79a156a1c4cee53201e36d33c60a64e9de0538a",
+      "license": "Apache-2.0",
+      "use": "Existing compiled dependency/API and inspected transaction semantics; only Webserver receives two explicit route registrations",
+      "modified": false,
+      "notice": "reuse/licenses/supertokens__supertokens-postgresql-plugin/0b68fd14ca10baee2d0e3c31466984fccfb36c8a/LICENSE.md"
+    }
+  ],
+  "boundary": "One adapted Core binary and its existing PostgreSQL transaction, identity, token, password-hashing and session stores. No independent auth database, entitlement override, EE code or copied restricted implementation. Not a clean-room claim.",
+  "limitations": [
+    "Configured tenant/link and external-ID behavior must be exercised against an authorized capable foundation.",
+    "Sessions already persisted at reset commit are deleted transactionally; sign-in validated before reset but issued afterwards is a separate unresolved race.",
+    "Independent licensing/security review and full native/OS distribution closure remain open."
+  ]
+}

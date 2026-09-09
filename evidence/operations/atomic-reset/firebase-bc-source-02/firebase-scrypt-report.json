@@ -1,0 +1,1101 @@
+{
+  "kind": "actual-firebase-scrypt-core-qualification",
+  "started": "2026-09-09T13:24:46.828809606Z",
+  "complete": false,
+  "foundation_passed": false,
+  "full_migration_qualified": false,
+  "independent_human_review": false,
+  "peer_profile": "original-lambdaworks-ascii",
+  "credential_bodies_recorded": false,
+  "passed": true,
+  "rows": [
+    {
+      "id": "FIREBASE-PRIVATE-IMPORT",
+      "status": "passed"
+    },
+    {
+      "vectors": 3,
+      "full_parameter_space": false,
+      "id": "FIREBASE-NODE-BC-PRIMITIVES",
+      "status": "passed"
+    },
+    {
+      "unicode": false,
+      "old_peer_rejects_correct_unicode": false,
+      "automatic_rehash": false,
+      "hash_exposed": false,
+      "id": "FIREBASE-UPSTREAM-ASCII-IMPORT",
+      "status": "passed"
+    },
+    {
+      "unicode": true,
+      "old_peer_rejects_correct_unicode": true,
+      "automatic_rehash": false,
+      "hash_exposed": false,
+      "id": "FIREBASE-UTF8-IMPORT",
+      "status": "passed"
+    },
+    {
+      "candidate_refuses_distinct_unicode_password": true,
+      "historical_peer_false_acceptance": true,
+      "historical_behavior_is_security_failure": true,
+      "id": "FIREBASE-UNICODE-COLLISION-REFUSED",
+      "status": "passed"
+    },
+    {
+      "id": "FIREBASE-MALFORMED-IMPORT",
+      "status": "passed"
+    },
+    {
+      "candidate_rejects_shift_alias_and_zero_block": true,
+      "historical_peer_accepts_shift_alias": true,
+      "full_import_parameter_validation": false,
+      "id": "FIREBASE-INVALID-PARAMETER-DENIAL",
+      "status": "passed"
+    },
+    {
+      "id": "FIREBASE-WRONG-HASH",
+      "status": "passed"
+    },
+    {
+      "actual_atomic_password_recheck": true,
+      "wrong_password_no_session": true,
+      "id": "FIREBASE-ATOMIC-PASSWORD-SESSION",
+      "status": "passed"
+    },
+    {
+      "reset_writers": 2,
+      "existing_sessions_denied": true,
+      "configured_bcrypt_after_reset": true,
+      "id": "FIREBASE-RESET-IMPORTED-ACCOUNT",
+      "status": "passed"
+    },
+    {
+      "concurrent_owners": 8,
+      "correct_distinct_subjects": true,
+      "pool_size_per_core": 1,
+      "id": "FIREBASE-EIGHT-CONCURRENT-OWNERS",
+      "status": "passed"
+    },
+    {
+      "removed_users": 16,
+      "id": "FIREBASE-OWNED-FIXTURE-CLEANUP",
+      "status": "passed"
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 60,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "b",
+      "http": 404,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "elapsed_ms": 42,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 11,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 401,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 28,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 88,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 73,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 49,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 178,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 99,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 7,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 49,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 45,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 49,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 99,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 92,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 7,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 78,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 48,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 118,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 400,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 7,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 11,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 49,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 95,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 95,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 23,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 503,
+      "status": "PASSWORD_SESSION_REJECTED",
+      "elapsed_ms": 50,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 56,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 8,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 126,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 94,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 106,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 91,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 93,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 15,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "a",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 102,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset/token",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 133,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 92,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 96,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 117,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "b",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 111,
+      "body_encoding": "ascii-json-unicode-escapes",
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": "b",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/reset",
+      "replica": "b",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 7,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 12,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 12,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 13,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/user/passwordhash/import",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 15,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 17,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 13,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 19,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 21,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 24,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 28,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 31,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 34,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 24,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 47,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 43,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 48,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 47,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 46,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 46,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signin",
+      "replica": "a",
+      "http": 200,
+      "status": "WRONG_CREDENTIALS_ERROR",
+      "elapsed_ms": 47,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 59,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 37,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 38,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 39,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 6,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 88,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 89,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 5,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 85,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/expertauth/password/session",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 88,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 3,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 4,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 22,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 16,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 11,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 12,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 14,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 13,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 12,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 10,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 11,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 11,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 12,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 11,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/user/remove",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 9,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 2,
+      "credential_bodies_recorded": false
+    }
+  ],
+  "finished": "2026-09-09T13:24:50.870932912Z"
+}

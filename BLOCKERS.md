@@ -1,6 +1,12 @@
 # Open acceptance blockers
 
-- Argon2 now uses source-built nolibs packaging in Core `e8c460664ac5`. Original
+- **Legacy Unicode migration is BLOCKED** in the current Core `b4a5f18fb782`
+  Firebase/UTF-8 profile. Actual old-parser BCRYPT credentials fail unchanged on
+  the new parser; the historical decoded string succeeds. An explicit migration/
+  reset policy is required before broad deployment. The 12 passing candidate rows
+  do not pass this migration. Full Firebase cost/resource validation, automatic
+  rehash and independent review remain open. See `docs/firebase-scrypt-runtime.md`.
+- Argon2 now uses source-built nolibs packaging in Core `b4a5f18fb782`. Original
   C tests, startup failure checks, source/bundled and source/source password,
   import/reset/concurrency cases and local upgrade/rollback pass. Remaining
   native/OS/source/relink, maintained-version, other-platform and independent
@@ -45,8 +51,9 @@
 - Dependency distribution: LGPL/EPL/native source/relink notices, container OS review,
   every SDK/plugin transitive closure and version matrix remain incomplete.
   The runtime now carries a verified notice package and83 locked source siblings
-  are locally available; this does not close those obligations. Four native bundles
-  (scrypt, Argon2, JNA, SQLite) have incomplete build/source provenance. Five
+  are locally available; this does not close those obligations. The historical native bundle review covered scrypt, Argon2, JNA and SQLite.
+  Current Core removes archived scrypt and builds Argon2 from source; JNA/SQLite
+  correspondence and full source/relink obligations remain incomplete. Five
   supplemental scrypt/libffi notices are preserved with release-byte mappings.
   New native correspondence work identifies all59 release members and corrects
   the source notice assembler (two JNA license texts plus three scrypt headers).

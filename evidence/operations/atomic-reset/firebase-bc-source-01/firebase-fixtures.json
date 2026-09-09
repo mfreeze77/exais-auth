@@ -1,0 +1,123 @@
+{
+  "kind": "public-node-openssl-firebase-fixtures",
+  "signer": "gRhC3eDeQOdyEn4bMd9c6kxguWVmcIVq/SKa0JDPFeM6TcEevkaW56sIWfx88OHbJKnCXdWscZx0l2WbCJ1wbg==",
+  "fixtures": [
+    {
+      "id": "upstream-ascii",
+      "password": "testPass123",
+      "encoded": "$f_scrypt$qZM035es5AXYqavsKD6/rhtxg7t5PhcyRgv5blc3doYbChX8keMfQLq1ra96O2Pf2TP/eZrR5xtPCYN6mX3ESA==$/cj0jC1br5o4+w==$m=14$r=8$s=Bw==",
+      "memCost": 14,
+      "rounds": 8
+    },
+    {
+      "id": "utf8",
+      "password": "päss🔑日本語",
+      "encoded": "$f_scrypt$2MQsgsApj+VNo2ehEZ0SWmldaIuYp8tYRlnoRT/ENBpO6mF0ZQaemLX9bRJgSso3Q2etsqb8hFuDDwUDR6ZK3g==$YW5vdGhlci1zYWx0$m=14$r=8$s=Bw==",
+      "memCost": 14,
+      "rounds": 8
+    },
+    {
+      "id": "question-mark",
+      "password": "?",
+      "encoded": "$f_scrypt$oDVDJRsmOwDE4H2kxN7E3QdMkG34u2i9ZZdpNalTVE0LrHdVBLL2ZNpKjJEyj3EPnlfU5MKRsFIYsns9IHjmyg==$cXVlc3Rpb24tc2FsdA==$m=14$r=8$s=Bw==",
+      "memCost": 14,
+      "rounds": 8
+    },
+    {
+      "id": "cost-two",
+      "password": "shift-alias",
+      "encoded": "$f_scrypt$FucyR/VJwBslVYGFo1w3ntnB9e9i65gSJ/IF3XwV0ivN7DucPgrakMbYXYOM08+SFNpU5xgYwjzz6fLVjwg9bA==$c2hpZnQtc2FsdA==$m=1$r=8$s=Bw==",
+      "memCost": 1,
+      "rounds": 8
+    },
+    {
+      "id": "owner-0",
+      "password": "Owner-0-é",
+      "encoded": "$f_scrypt$yPvret/LxAxTe9q6wdT2a9+EdrLDjdaorzG/jtnrh/NJWIzyfa9bpB5nj2h5tL8JfAcwLRqMWNl6w3L7F4ylmA==$aRcaWkifLKiaU3Tdc5pJow==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-1",
+      "password": "Owner-1-é",
+      "encoded": "$f_scrypt$Y9DcpySWyc7RiUVdJ5KfU2v1LDTmWDrFar7R6wREIMS6lmrXWkpuZZsVya2z7OjcChXWRlhZSIJxhjQoKCCCAA==$8LyV2tPtxHldFYpOXEFMAw==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-2",
+      "password": "Owner-2-é",
+      "encoded": "$f_scrypt$/EjBN83OQ/Z179CwaHqcMfSPBojjWzuhBUxYo/5+qKDVELa2qF3bG0ZbGeTYCB/NRV/Gd3Gstmt1+LyH3k9QlA==$blGC1k8TIITgC75Kw/FCew==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-3",
+      "password": "Owner-3-é",
+      "encoded": "$f_scrypt$xlCMVBss2mpbxAxh26UyEdXNi/c14aPK+CClWlF88F4dq44w67/6oB3m0fk4H28jLvAK9H9WDoEZu5id1HUjZQ==$3gitCUmqXDXW8xsiktrm8Q==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-4",
+      "password": "Owner-4-é",
+      "encoded": "$f_scrypt$qKHfOX6qKY2JMCVX+KKFslzoJMZUj3D3FbuquaQz4ozpkgzwIzT7cL3kR9JqnjvGse74qIBJrFGJy83ygD44xA==$T162yBsw/UP1mQpJfYl10w==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-5",
+      "password": "Owner-5-é",
+      "encoded": "$f_scrypt$UMORdyLIjXu/knqHe7EGe1N2r7PtVlS7y1YuxhsuGqhqM1pqJQt2NdGbhKBDquL9l9P4elgSv4F0Ko9nExFMlg==$/09RY3X9P409pMqVDd4bNQ==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-6",
+      "password": "Owner-6-é",
+      "encoded": "$f_scrypt$evoI/xIpmU64N9rguPXg0XO3xkjC8FEeESP+cIABGPG9sFsxHOe6esvsc8pkZE+x0TDVjKs65OR+8DFGC0n7+Q==$kjK80Qas06BsTyWpskbcaw==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    },
+    {
+      "id": "owner-7",
+      "password": "Owner-7-é",
+      "encoded": "$f_scrypt$ggI2tSaPWqPGmudqvxPFmOinoFhNxjLmZPbkJscsoOiUc0INNL+2RUctdGUYasW0t+CBLFePnmCadyVHs43/Dg==$w9m4q+u0oSDC7Q9EdCdXDQ==$m=10$r=8$s=Bw==",
+      "memCost": 10,
+      "rounds": 8
+    }
+  ],
+  "primitives": [
+    {
+      "password": "",
+      "salt": "",
+      "N": 16,
+      "r": 1,
+      "p": 1,
+      "length": 64,
+      "hex": "77d6576238657b203b19ca42c18a0497f16b4844e3074ae8dfdffa3fede21442fcd0069ded0948f8326a753a0fc81f17e8d3e0fb2e0d3628cf35e20c38d18906"
+    },
+    {
+      "password": "password",
+      "salt": "NaCl",
+      "N": 1024,
+      "r": 8,
+      "p": 16,
+      "length": 64,
+      "hex": "fdbabe1c9d3472007856e7190d01e9fe7c6ad7cbc8237830e77376634b3731622eaf30d92e22a3886ff109279d9830dac727afb94a83ee6d8360cbdfa2cc0640"
+    },
+    {
+      "password": "pleaseletmein",
+      "salt": "SodiumChloride",
+      "N": 16384,
+      "r": 8,
+      "p": 1,
+      "length": 64,
+      "hex": "7023bdcb3afd7348461c06cd81fd38ebfda8fbba904f8e3ea9b543f6545da1f2d5432955613f0fcf62d49705242a9af9e61e85dc0d651e40dfcf017b45575887"
+    }
+  ],
+  "node": "v22.23.2",
+  "openssl": "3.5.7",
+  "original_ascii_fixture_matches": true,
+  "full_firebase_migration_qualified": false
+}

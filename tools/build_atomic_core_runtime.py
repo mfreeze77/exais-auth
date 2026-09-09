@@ -30,6 +30,18 @@ def need(ok,message):
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
+
+def native_reference_build(compiled,current_name):
+    def files(rows):
+        return {('/opt/expertauth/lib/' if r['component']=='core' else '/opt/expertauth/plugin/')+Path(r['path']).name:r['sha256'] for r in rows}
+    expected=files(compiled['candidates'])
+    raw=subprocess.check_output(['docker','exec','expertauth-oss-core-a','sha256sum',*expected],timeout=30).decode()
+    actual={line.split()[1]:line.split()[0] for line in raw.splitlines()}
+    if actual==expected:return current_name,actual
+    previous=compiled.get('previous_build',{})
+    need(previous.get('mode')=='new-candidate' and actual==files(previous['candidates']),'Current Core matches neither candidate nor its explicit predecessor')
+    return Path(previous['path']).parent.name,actual
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--name',required=True)
@@ -38,6 +50,7 @@ def main():
     parser.add_argument('--qualify-guarded-sessions',action='store_true')
     parser.add_argument('--legacy-session-build',help='Include the current pre-guard Core as an actual unsupported-route replica before replacement')
     parser.add_argument('--native-argon2-build',help='Install and qualify the exact source-built native library through the nolibs wrapper')
+    parser.add_argument('--verify-native-reference-only',action='store_true',help='Read the retained Core JAR hashes and resolve its actual native reference build; no build or mutation')
     args=parser.parse_args()
     need(not args.legacy_session_build or args.qualify_guarded_sessions,'Legacy route proof requires guarded-session qualification')
     need(re.fullmatch('[A-Za-z0-9_-]{1,35}',args.name) and re.fullmatch('[A-Za-z0-9_-]{1,54}',args.session_build),'Invalid build names')
@@ -48,6 +61,12 @@ def main():
     node=inspect('image',NODE);require_owned_node(node)
     old=inspect('image',TAG)
     need(old['Config'].get('Labels',{}).get('org.expertauth.project')=='expert-auth' and inspect('container','expertauth-oss-core-a')['Image']==old['Id'],'Protected runtime/tag differs')
+    native_reference_name=None
+    if args.native_argon2_build or args.verify_native_reference_only:
+        native_reference_name,reference_hashes=native_reference_build(compiled,args.session_build)
+    if args.verify_native_reference_only:
+        print(json.dumps({'passed':True,'kind':'current-native-reference-preflight','authentication_execution':False,'image':old['Id'],
+                          'selected_build':native_reference_name,'actual_jar_hashes':reference_hashes,'tool_sha256':sha(Path(__file__))}));return 0
     output=ROOT/'evidence/operations/atomic-core-image'/args.name
     private=(ROOT/'.runtime/atomic-core-image'/args.name).resolve()
     context=(ROOT/'.cache'/('runtime-image-atomic-'+uuid.uuid4().hex)).resolve()
@@ -61,6 +80,11 @@ def main():
     if args.qualify_guarded_sessions:
         sources+=['tools/run_refresh_grace_lab.py','tests/foundation/RefreshGraceProbe.java','tests/foundation/GuardedSessionProbe.java','contracts/session-policy-oss-cdi56-grace-v1.json']
     native=None
+    firebase=compiled.get('firebase_scrypt_profile')=='bouncycastle-utf8-v1'
+    if firebase:
+        from install_bouncycastle import SOURCES as BC_SOURCES,inputs as bc_inputs
+        bc_inputs()
+        sources += [*BC_SOURCES,'tests/foundation/FirebaseScryptProbe.java','tests/foundation/firebase-fixtures.mjs']
     if args.native_argon2_build:
         from install_native_argon2 import SOURCES as NATIVE_SOURCES,native_build
         native_path,native,_=native_build(args.native_argon2_build)
@@ -106,7 +130,7 @@ def main():
                     'binary_build_report_sha256':sha(build_path),'candidate_artifacts':compiled['candidates'],
                     'reuse_report':json.loads((ROOT/'reuse/password-session-components.json').read_text()),
                     'generated_source_sha256':{p.name:sha(p) for p in sorted(build_path.parent.glob('*.java'))},
-                    'boundaries':'Original token minting, password hashing and licensing checks retained; no adapter session store or control-plane SQL'}
+                    'boundaries':'Original token minting and licensing checks retained; explicit Core hashing profile recorded in compiled build; no adapter session store or control-plane SQL'}
         bom=json.loads((ROOT/'reuse/oss-core-runtime.cdx.json').read_text())
         bom['metadata']['component']['name']='expertauth-atomic-core-candidate'
         bom['metadata']['properties'].append({'name':'expertauth:adaptation','value':'Two modified Apache JARs plus unchanged plugin interface; OS/native/relink/full distribution remain unqualified'})
@@ -125,11 +149,15 @@ def main():
             adaptation['native_argon2']=report['native_argon2']
             report['source_inputs'].update({r['path']:r['sha256'] for r in native['inputs']})
             report['native_startup_files']={p:h for p,h in expected.items() if p.startswith('native/')}
+        if firebase:
+            from install_bouncycastle import install as install_bc
+            report['bouncycastle']=install_bc(context,expected,notices,bom,compiled)
+            adaptation['bouncycastle']=report['bouncycastle']
         extra={'expertauth/atomic/NOTICE.txt':b'ExpertAuth contributors, 2026. Apache-2.0 adaptations of SuperTokens Core and PostgreSQL plugin, copyright VRAI Labs. Modified files retain upstream attribution. See source-map.json and the preserved original license/notices. No full distribution or independent review approval is implied.\n',
                'expertauth/atomic/LICENSE.txt':(ROOT/SOURCES[-1]).read_bytes(),
                'expertauth/atomic/source-map.json':(json.dumps(adaptation,indent=2)+'\n').encode(),
                'expertauth/atomic/runtime.cdx.json':(json.dumps(bom,indent=2)+'\n').encode()}
-        need(b'Apache License' in extra['expertauth/atomic/LICENSE.txt'] and len(bom['components'])==87,'Adaptation notice/SBOM membership differs')
+        need(b'Apache License' in extra['expertauth/atomic/LICENSE.txt'] and len(bom['components'])==(86 if firebase else 87),'Adaptation notice/SBOM membership differs')
         for name,body in extra.items():
             path=context/'licenses'/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(body)
             digest=hashlib.sha256(body).hexdigest();expected['licenses/'+name]=digest
@@ -178,10 +206,16 @@ def main():
             child([sys.executable,'-B','tools/qualify_native_startup.py','--name',startup_name,'--image',candidate,'--native-build',args.native_argon2_build],
                   'native_startup_test','evidence/operations/native-argon2-startup/'+startup_name+'/report.json')
             native_name='image-native-'+args.name
+            native_reference_args=['--native-reference-session-build',native_reference_name]
             native_result=child([sys.executable,'-B','tools/run_refresh_grace_lab.py','--name',native_name,'--session-build',args.session_build,
-                '--installed-core-image',candidate,'--native-argon2-build',args.native_argon2_build,'--native-argon2-installed','--native-reference-core-image',old['Id']],
+                '--installed-core-image',candidate,'--native-argon2-build',args.native_argon2_build,'--native-argon2-installed','--native-reference-core-image',old['Id'],*native_reference_args],
                 'native_password_test','evidence/foundation/refresh-grace/'+native_name+'/report.json')
             need(native_result['images']['core']==candidate and native_result['native_dependency_overlay'] is False,'Native installed qualification differs')
+        if firebase:
+            firebase_name='image-firebase-'+args.name
+            result=child([sys.executable,'-B','tools/run_atomic_reset_lab.py','--name',firebase_name,'--session-build',args.session_build,
+                '--installed-core-image',candidate,'--firebase-scrypt'],'firebase_test','evidence/operations/atomic-reset/'+firebase_name+'/report.json')
+            need(result['installed_core_image']==candidate and result['firebase_reference_profile']=='bouncycastle-utf8-v1','Installed Firebase proof differs')
         if args.qualify_guarded_sessions:
             guarded_name='image-guarded-'+args.name
             argv=[sys.executable,'-B','tools/run_refresh_grace_lab.py','--name',guarded_name,'--session-build',args.session_build,
