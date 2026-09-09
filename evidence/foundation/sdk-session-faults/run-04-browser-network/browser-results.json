@@ -1,0 +1,419 @@
+{
+  "schema": "expertauth-browser-session-characterization-v1",
+  "started": "2026-09-09T00:09:05.791Z",
+  "finished": "2026-09-09T00:10:08.823Z",
+  "foundation_passed": false,
+  "skipped": 0,
+  "rows": [
+    {
+      "id": "SDK54-BROWSER",
+      "outcome": "failed",
+      "stage": "concurrent-fetch",
+      "error": "Concurrent interceptor request failed"
+    },
+    {
+      "id": "SDK54-BROWSER-SYNTHETIC-CLEANUP",
+      "outcome": "passed"
+    }
+  ],
+  "refresh_requests": 2,
+  "errors": [],
+  "statuses": [
+    "TypeError",
+    200,
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    "TypeError",
+    200,
+    200,
+    "TypeError",
+    200,
+    200,
+    "TypeError",
+    200,
+    "TypeError",
+    200,
+    200,
+    "TypeError",
+    "TypeError",
+    200,
+    200,
+    200,
+    "TypeError",
+    "TypeError",
+    200,
+    "TypeError"
+  ],
+  "network": [
+    {
+      "event": "response",
+      "path": "/auth/session/refresh",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/emailpassword/email/exists",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/signup",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/session/refresh",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    },
+    {
+      "event": "failed",
+      "path": "/api/session/online",
+      "method": "GET",
+      "error": "net::ERR_INSUFFICIENT_RESOURCES"
+    }
+  ],
+  "probe_sha256": "d855417470432f37aac9e1d034c45d21a3c6ec8de434536a5c607dc08cf90dac",
+  "limitation": "One Chromium/Linux cookie profile in a shared browser context. No Safari, native, multi-device or complete SDK qualification."
+}

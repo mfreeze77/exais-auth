@@ -9,6 +9,25 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
+Latest bounded session proof: `evidence/foundation/sdk-session-faults/run-05`.
+It observes Node24.0.3 CDI5.4 on the wire:10 SDK and3 browser checks passed,
+including two cleanup rows; raw-header concurrency availability remains failed.
+Three transport-loss recoveries, committed-promotion Core crash persistence and
+one four-tab/32-request browser expiry cycle passed. The full command exits1 for
+the retained failure. No image rebuild is needed to repeat it:
+
+```powershell
+python tools/run_sdk_session_faults.py --name NEW_UNIQUE_NAME
+python tools/verify_checkpoint_hygiene.py
+```
+
+Prerequisites and the browser-only diagnostic mode are documented beside the
+results. The runner reuses cached images, creates no network/volume, keeps
+credentials private, and retires all temporary containers. Do not repeat the
+known raw-header failure unchanged as a remedy. Next session work must address
+the remaining frozen policy/SDK failure boundaries, not merely add a grace period
+or count this narrow Chromium proof as native/other-profile qualification.
+
 Current blockers to the next foundation decision are recorded with actual evidence:
 
 - `evidence/foundation/keycloak-identity/HANDOFF.md`: reproduced provider ownership

@@ -1,0 +1,101 @@
+{
+  "schema": "expertauth-sdk-session-lab-v1",
+  "started": "2026-09-08T23:59:07.080902+00:00",
+  "foundation_passed": false,
+  "input_sha256": {
+    "tools/run_sdk_session_faults.py": "17ec8f471eb1e4a08d6e8f3ec4fe3d482fad44489ffa8c12536b1f5733212c3a",
+    "tests/foundation/sdk_session_faults.mjs": "51b0cb2cf6abf93f037747296b54f8884e259b6c6d8d38be274372630ddd6b64",
+    "contracts/session-policy-oss-node-cdi54-v1.json": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7",
+    "tests/browser/session-coordination.mjs": "51accbc3d89570a54bdec15240b6ec2798dc93ec392ae4a95daeb2ce3f6e6284",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d",
+    "examples/node-react/server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb",
+    "examples/node-react/client.jsx": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    ".cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java": "cc12e99ef8c1935b01a797c68a236404941eb6b0bc69421c41717b2b5accfa12",
+    ".cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java": "7cd1d87aa1944c47b1bfdcbb4167f088c34e325fdee683f044893fedb3075589"
+  },
+  "network": "expertauth-oss-proof",
+  "images": {
+    "core": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+    "node": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "browser": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e"
+  },
+  "config_sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718",
+  "created_containers": [
+    {
+      "name": "expertauth-session-core-9ec2c3f0",
+      "id": "f0556d87c6a242384159500f667c17b88eb1a8778f8b53956d7f5cc71c1c76bf"
+    },
+    {
+      "name": "expertauth-session-browser-9ec2c3f0",
+      "id": "4bd9bb3e1858f97fe01c91ff2acb02ee707db1e141c94b7cf7ea66f3e3548c30"
+    },
+    {
+      "name": "expertauth-session-sdk-9ec2c3f0",
+      "id": "ce1c0df13f46f646f2b002a89f0ec716c2004662858a5190e5bcb2489798b1b7"
+    }
+  ],
+  "controls": [
+    {
+      "action": "kill_and_restart_owned_b",
+      "id": "f0556d87c6a242384159500f667c17b88eb1a8778f8b53956d7f5cc71c1c76bf",
+      "killed_exit_code": 137,
+      "restart_requested": true
+    },
+    {
+      "action": "browser_coordination",
+      "exit_code": 1
+    }
+  ],
+  "errors": [],
+  "published_ports": [],
+  "image_builds": 0,
+  "image_downloads": 0,
+  "worker_exit_code": 1,
+  "checks": {
+    "passed": 10,
+    "failed": 1,
+    "fatal": false
+  },
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "owned_containers_retired": true,
+  "preserved_services_unchanged": true,
+  "inputs_unchanged": true,
+  "config_unchanged": true,
+  "finished": "2026-09-08T23:59:56.254240+00:00",
+  "artifacts": [
+    {
+      "path": "browser-output.log",
+      "sha256": "547c3bd163862375717d839e1be42808b82310aabb70f4099f88a9fb74eeb019"
+    },
+    {
+      "path": "browser-results.json",
+      "sha256": "9a13910f2df5132f7219778b4bfa5f331a3bf812a1f9b2b186f6eb977d3b00ae"
+    },
+    {
+      "path": "sdk-results.json",
+      "sha256": "b628f26a26a9de57f4867385e331b5a0e7284d0ffa603bd49e69135936689307"
+    },
+    {
+      "path": "worker-output.log",
+      "sha256": "f6d63e126ad163ce9d0e95e71df28219394081a876c167e2a4cfc4afadb32eeb"
+    }
+  ]
+}

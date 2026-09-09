@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "tools/verify_checkpoint_hygiene.py"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788913004.6047444,
+  "elapsed_seconds": 0.244,
+  "input_sha256": {
+    "tools/verify_checkpoint_hygiene.py": "7aa6c3980f864004f62f378c055b4266039176b2d90b038db44219ce86df46db"
+  },
+  "inputs_changed": false,
+  "output_sha256": "1d4c5f5334105a200e1479e5ce79cde68f197fc7a15bde4b31b7a2801b245133",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

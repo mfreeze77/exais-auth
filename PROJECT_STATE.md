@@ -40,6 +40,16 @@ Actual code and evidence:
   FDI/CDI/SDK coverage and preauthentication replica failover remain unqualified.
 - Fresh isolated OSS build consumed strict checksum/lock verification and reproduced
   all87 JAR hashes. Source fetch reconstructed1300 permitted files with zero EE paths.
+- The unchanged Node24.0.3 SDK actually negotiated CDI5.4 across two Core replicas.
+  Latest session proof (`evidence/foundation/sdk-session-faults/run-05`) has10 SDK
+  checks and3 Chromium checks passing, including two cleanup checks, with1 explicit
+  raw-header concurrency availability failure. Three transport-loss cases recover;
+  committed promotion survives SIGKILL/restart of only the temporary Core B. Both
+  refresh-success and refresh-denial orderings occur in12 logout races, with no
+  post-logout refresh resurrection. Four real browser tabs send32 successful
+  requests after actual expiry through one refresh, then all deny after logout.
+  This does not qualify transaction-internal precommit failures, database HA,
+  SDK-crash-before-theft-revocation or full original platform/profile scope.
 - Four original Unicode path ambiguities (FDI-026, CDI-099, CDI-104, CDI-116) now
   have independently authored Apache-source and runtime resolutions:9 actual checks
   passed. The original capture is unchanged. CDI-104's legacy identifier discrepancy
@@ -76,6 +86,13 @@ branch. Its initial preflight refused an inherited Gradle volume; the corrected 
 recognizes that mount and uses16MiB tmpfs for the unused Gradle cache. Two old caches
 were retained after a nonempty check; their combined file content is385,398 bytes.
 Only Core-a/PostgreSQL remain as containers, with6 retained task image tags.
+
+The new SDK/session runner added no images, networks or volumes. All three
+temporary containers and22 synthetic users were removed; Core-a/PostgreSQL IDs,
+start times and config were unchanged. Chromium needed more than the probe's
+original128MiB `/tmp`:the successful run measured about167.5MiB of temporary use.
+Its bounded512MiB tmpfs is memory-backed and disappears with the container. All
+earlier browser failures and exact harness snapshots remain preserved.
 
 Full notices for other uncovered dependencies, native source/build/relink obligations,
 container OS review and independent distribution approval remain open. Four native

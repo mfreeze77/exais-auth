@@ -1,0 +1,22 @@
+{
+  "schema": "expertauth-browser-session-characterization-v1",
+  "started": "2026-09-08T23:59:19.741Z",
+  "finished": "2026-09-08T23:59:50.695Z",
+  "foundation_passed": false,
+  "skipped": 0,
+  "rows": [
+    {
+      "id": "SDK54-BROWSER",
+      "outcome": "failed",
+      "error": "Unexpected TimeoutError"
+    },
+    {
+      "id": "SDK54-BROWSER-SYNTHETIC-CLEANUP",
+      "outcome": "failed"
+    }
+  ],
+  "refresh_requests": 1,
+  "errors": [],
+  "probe_sha256": "51accbc3d89570a54bdec15240b6ec2798dc93ec392ae4a95daeb2ce3f6e6284",
+  "limitation": "One Chromium/Linux cookie profile in a shared browser context. No Safari, native, multi-device or complete SDK qualification."
+}

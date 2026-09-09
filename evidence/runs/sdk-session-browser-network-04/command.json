@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "tools/run_sdk_session_faults.py",
+    "--name",
+    "run-04-browser-network",
+    "--browser-only"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788912540.9746022,
+  "elapsed_seconds": 73.181,
+  "input_sha256": {
+    "tools/run_sdk_session_faults.py": "b86c397959ff900166424188a97c0525281793ca5d861d93c844cf0c74528488",
+    "tests/foundation/sdk_session_faults.mjs": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d",
+    "tests/browser/session-coordination.mjs": "d855417470432f37aac9e1d034c45d21a3c6ec8de434536a5c607dc08cf90dac"
+  },
+  "inputs_changed": false,
+  "output_sha256": "0d872e89469db06569659d11b3b67a93f4be7116f81e2a6bf61e3ea5abe1bde6",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

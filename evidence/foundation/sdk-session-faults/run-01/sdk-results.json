@@ -1,0 +1,1741 @@
+{
+  "schema": "expertauth-sdk-session-characterization-v1",
+  "started": "2026-09-08T23:59:07.771Z",
+  "finished": "2026-09-08T23:59:51.268Z",
+  "foundation_passed": false,
+  "fatal": false,
+  "node": "v22.23.2",
+  "sdk_version": "24.0.3",
+  "cdi": "5.4",
+  "inputs": {
+    "server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb",
+    "client.jsx": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a",
+    "package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    "node_modules/supertokens-node/lib/build/version.js": "d328baf350008530a4723d95beb54d1b455429de55cc0a02c2b9955647801283",
+    "node_modules/supertokens-node/lib/build/querier.js": "d3516f6c7ef1dc8c8b49797b467901a6d6a3d4b9c038ce5559143a4c0e636c9a",
+    "node_modules/supertokens-node/lib/build/recipe/session/utils.js": "66a6ef1cc674bafc7e641e2e8cb80c9314b8a9f510a4e4724f0c40fb57df9436",
+    "node_modules/supertokens-node/lib/build/recipe/session/recipe.js": "d8273c0ae3afe87f8a989f8e2998300eb8b4b1e4ed4e9cadd479ea248ae31a62"
+  },
+  "probe_sha256": "51b0cb2cf6abf93f037747296b54f8884e259b6c6d8d38be274372630ddd6b64",
+  "rows": [
+    {
+      "id": "SDK54-WIRE-PROTOCOL",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SDK-001"
+      ],
+      "observed_session_cdi": [
+        "5.4"
+      ],
+      "replicas_used": 2
+    },
+    {
+      "id": "SDK54-SERIAL-PROMOTION",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "candidate_mint": 200,
+      "promotion": 200,
+      "continuation": 200
+    },
+    {
+      "id": "SDK54-LOSS-BEFORE-FORWARD",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "fault_stage": "before-forward",
+      "injections": 1,
+      "lost_http": 500,
+      "retry_http": 200,
+      "stale_parent_http": 401,
+      "family_after_theft_http": 401,
+      "limit": "Before Core receives request; not an in-transaction failure."
+    },
+    {
+      "id": "SDK54-LOSS-AFTER-UPSTREAM-BODY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "fault_stage": "after-upstream-body",
+      "injections": 1,
+      "lost_http": 500,
+      "retry_http": 200,
+      "stale_parent_http": 401,
+      "family_after_theft_http": 401,
+      "limit": "Proxy drops after a complete real Core response; no engine-internal commit hook."
+    },
+    {
+      "id": "SDK54-LOSS-PARTIAL-BODY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "fault_stage": "partial-body",
+      "injections": 1,
+      "lost_http": 500,
+      "retry_http": 200,
+      "stale_parent_http": 401,
+      "family_after_theft_http": 401,
+      "limit": "Proxy drops after a complete real Core response; no engine-internal commit hook."
+    },
+    {
+      "id": "SDK54-COMMITTED-PROMOTION-CRASH",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "lost_promotion_http": 500,
+      "parent_before_crash": "TOKEN_THEFT_DETECTED",
+      "parent_after_crash": "TOKEN_THEFT_DETECTED",
+      "child_after_crash_http": 200,
+      "crash": "SIGKILL then start same disposable Core B; shared PostgreSQL remains running"
+    },
+    {
+      "id": "SDK54-THEFT-SESSION-ISOLATION",
+      "outcome": "passed",
+      "requirements": [
+        "SES-004",
+        "SES-005"
+      ],
+      "theft_http": 401,
+      "compromised_session_http": 401,
+      "unrelated_session_http": 200
+    },
+    {
+      "id": "SDK54-LOGOUT-REFRESH-CONCURRENCY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-005"
+      ],
+      "rounds": [
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 200,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 401,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        },
+        {
+          "refresh_http": 200,
+          "logout_http": 200,
+          "final_refresh_http": 401
+        }
+      ]
+    },
+    {
+      "id": "SDK54-UNCOORDINATED-CLIENT-AVAILABILITY",
+      "outcome": "failed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "initial_http": [
+        200,
+        200
+      ],
+      "loser_http": 401,
+      "selected_child_http": 401,
+      "detail": "Uncoordinated callers that use both candidate branches lose the session through the default SDK theft handler. Raw header concurrency is not qualified."
+    },
+    {
+      "id": "SDK54-UNCOORDINATED-RACE-THEFT",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "initial_http": [
+        200,
+        200
+      ],
+      "loser_http": 401,
+      "selected_child_http": 401
+    },
+    {
+      "id": "SDK54-SYNTHETIC-USER-CLEANUP",
+      "outcome": "passed",
+      "created": 21,
+      "removed": 21
+    }
+  ],
+  "wire": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 0,
+      "cdi": "5.3",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 1,
+      "cdi": null,
+      "http": 200,
+      "status": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/.well-known/jwks.json",
+      "replica": 1,
+      "cdi": null,
+      "http": 200,
+      "status": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "fault": "before-forward"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "fault": "after-upstream-body"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "fault": "partial-body"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "fault": "after-upstream-body"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "UNAUTHORISED"
+    }
+  ],
+  "faults": [
+    {
+      "path": "/recipe/session/refresh",
+      "stage": "before-forward",
+      "replica": 0,
+      "upstream_received": false
+    },
+    {
+      "path": "/recipe/session/refresh",
+      "stage": "after-upstream-body",
+      "replica": 1,
+      "upstream_received": true,
+      "upstream_http": 200,
+      "upstream_status": "OK",
+      "upstream_body_bytes": 2021,
+      "downstream_body_bytes": 0
+    },
+    {
+      "path": "/recipe/session/refresh",
+      "stage": "partial-body",
+      "replica": 0,
+      "upstream_received": true,
+      "upstream_http": 200,
+      "upstream_status": "OK",
+      "upstream_body_bytes": 2021,
+      "downstream_body_bytes": 8
+    },
+    {
+      "path": "/recipe/session/verify",
+      "stage": "after-upstream-body",
+      "replica": 1,
+      "upstream_received": true,
+      "upstream_http": 200,
+      "upstream_status": "OK",
+      "upstream_body_bytes": 1391,
+      "downstream_body_bytes": 0
+    }
+  ],
+  "passed": 10,
+  "failed": 1,
+  "skipped": 0,
+  "limitations": [
+    "One Node application, two Core replicas and one existing database; not application HA.",
+    "No transaction-internal pre-commit failure or PostgreSQL crash/failover injection.",
+    "Cookie/native/other SDK support requires separate evidence. No final engine selection or requirement verification."
+  ]
+}

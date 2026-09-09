@@ -1,0 +1,16 @@
+{"check":"SDK54-WIRE-PROTOCOL","outcome":"passed"}
+{"check":"SDK54-SERIAL-PROMOTION","outcome":"passed"}
+{"check":"SDK54-LOSS-BEFORE-FORWARD","outcome":"passed"}
+{"check":"SDK54-LOSS-AFTER-UPSTREAM-BODY","outcome":"passed"}
+{"check":"SDK54-LOSS-PARTIAL-BODY","outcome":"passed"}
+{"control":"kill_and_restart_owned_b"}
+{"check":"SDK54-COMMITTED-PROMOTION-CRASH","outcome":"passed"}
+{"check":"SDK54-THEFT-SESSION-ISOLATION","outcome":"passed"}
+{"check":"SDK54-LOGOUT-REFRESH-CONCURRENCY","outcome":"passed"}
+{"check":"SDK54-UNCOORDINATED-RACE-THEFT","outcome":"passed"}
+{"control":"browser_coordination"}
+{"waiting_for_real_access_expiry_ms":60621,"tabs":4}
+{"checks":[{"id":"SDK54-BROWSER-FOUR-TAB-REFRESH","outcome":"passed"},{"id":"SDK54-BROWSER-CROSS-TAB-LOGOUT","outcome":"passed"},{"id":"SDK54-BROWSER-SYNTHETIC-CLEANUP","outcome":"passed"}]}
+
+{"execution_finished":true,"passed":10,"failed":1,"foundation_passed":false}
+{"evidence": "evidence/foundation/sdk-session-faults/run-05", "checks": {"passed": 10, "failed": 1, "fatal": false}, "errors": [], "owned_containers_retired": true, "foundation_passed": false}

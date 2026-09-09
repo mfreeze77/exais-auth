@@ -46,6 +46,12 @@ exercise the audited-source candidate; they are not evidence that Keycloak alrea
 implements their FDI/CDI contracts. Deployment, migrations, native SDKs and all remaining
 business workflows will be delivered through the selected foundation after the gate.
 
+The latest session proof runs the unchanged Node/React application through two
+Core replicas:10 SDK and3 browser checks passed, while uncoordinated raw-header
+availability remains failed. Real lost-response, abrupt-restart and four-tab
+refresh/logout behavior is recorded in `evidence/foundation/sdk-session-faults`.
+The runner reuses cached images and removes all its temporary resources.
+
 ## Validate integrity and completion separately
 
 ```powershell

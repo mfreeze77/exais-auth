@@ -1,0 +1,108 @@
+{
+  "schema": "expertauth-sdk-session-lab-v1",
+  "started": "2026-09-09T00:11:54.570971+00:00",
+  "foundation_passed": false,
+  "input_sha256": {
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tests/foundation/sdk_session_faults.mjs": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d",
+    "contracts/session-policy-oss-node-cdi54-v1.json": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7",
+    "tests/browser/session-coordination.mjs": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6",
+    "tests/browser/package-lock.json": "1afde00b2793a7d17b645918c82f3ba6b8d230f6a9218b1fc57e97f7fc87949d",
+    "examples/node-react/server.js": "2294c6e158efc362125456e4143f451a1206ccc309be376e056434648944defb",
+    "examples/node-react/client.jsx": "b17879e675353f0298b5aae8ee17245adb7372aea4ce5f36b1e0cf5af5b2c67a",
+    "examples/node-react/package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b",
+    ".cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java": "cc12e99ef8c1935b01a797c68a236404941eb6b0bc69421c41717b2b5accfa12",
+    ".cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java": "7cd1d87aa1944c47b1bfdcbb4167f088c34e325fdee683f044893fedb3075589"
+  },
+  "network": "expertauth-oss-proof",
+  "mode": "full-characterization",
+  "images": {
+    "core": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+    "node": "sha256:a0cf7009def4f1fb626e67c2e43103dbc6d654fc2697aab28a4390868d869eaf",
+    "browser": "sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e"
+  },
+  "config_sha256": "505d94a29d6ae94df56e2014cba23e572ce4da1b23b71db89699326b7dc4f718",
+  "created_containers": [
+    {
+      "name": "expertauth-session-core-6939e56e",
+      "id": "f98310747e1a2d7362a407619e4a4f0287bbcbfaea044f7dc5d927a58f413b7d"
+    },
+    {
+      "name": "expertauth-session-browser-6939e56e",
+      "id": "c806c092f81502f827839e8f56b7184cd8160793fd921112ced24326b5048a06"
+    },
+    {
+      "name": "expertauth-session-sdk-6939e56e",
+      "id": "b48c9602fe918d70c56b3b392a6ec0aa217ad3b179d8be306d23c858820ab77c"
+    }
+  ],
+  "controls": [
+    {
+      "action": "kill_and_restart_owned_b",
+      "id": "f98310747e1a2d7362a407619e4a4f0287bbcbfaea044f7dc5d927a58f413b7d",
+      "killed_exit_code": 137,
+      "restart_requested": true
+    },
+    {
+      "action": "browser_coordination",
+      "exit_code": 0
+    }
+  ],
+  "errors": [],
+  "published_ports": [],
+  "image_builds": 0,
+  "image_downloads": 0,
+  "tmpfs_limits_mib": {
+    "browser_tmp": 512,
+    "sdk_tmp": 128,
+    "core_gradle_cache": 16,
+    "browser_shm": 256
+  },
+  "worker_exit_code": 1,
+  "checks": {
+    "passed": 10,
+    "failed": 1,
+    "fatal": false
+  },
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "owned_containers_retired": true,
+  "preserved_services_unchanged": true,
+  "inputs_unchanged": true,
+  "config_unchanged": true,
+  "finished": "2026-09-09T00:13:13.727396+00:00",
+  "artifacts": [
+    {
+      "path": "browser-output.log",
+      "sha256": "a436e9607e20a7b3bd3e4f8006764b0c0886410e5c9935f1951566e3bce36372"
+    },
+    {
+      "path": "browser-results.json",
+      "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+    },
+    {
+      "path": "sdk-results.json",
+      "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+    },
+    {
+      "path": "worker-output.log",
+      "sha256": "0fd5888870dec43a7196ecd7923ba0e7340096fac1e418901574bc6390c29026"
+    }
+  ]
+}

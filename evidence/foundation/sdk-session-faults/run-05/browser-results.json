@@ -1,0 +1,519 @@
+{
+  "schema": "expertauth-browser-session-characterization-v1",
+  "started": "2026-09-09T00:12:04.932Z",
+  "finished": "2026-09-09T00:13:08.154Z",
+  "foundation_passed": false,
+  "skipped": 0,
+  "rows": [
+    {
+      "id": "SDK54-BROWSER-FOUR-TAB-REFRESH",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-007",
+        "SES-017",
+        "SDK-005"
+      ],
+      "tabs": 4,
+      "concurrent_requests": 32,
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "refresh_requests": 1,
+      "waited_for_expiry_ms": 60621,
+      "elapsed_requests_ms": 1148
+    },
+    {
+      "id": "SDK54-BROWSER-CROSS-TAB-LOGOUT",
+      "outcome": "passed",
+      "requirements": [
+        "SES-005",
+        "SDK-005"
+      ],
+      "statuses": [
+        401,
+        401,
+        401,
+        401
+      ]
+    },
+    {
+      "id": "SDK54-BROWSER-SYNTHETIC-CLEANUP",
+      "outcome": "passed"
+    }
+  ],
+  "refresh_requests": 2,
+  "errors": [],
+  "statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "network": [
+    {
+      "event": "response",
+      "path": "/auth/session/refresh",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/emailpassword/email/exists",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/signup",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/session/refresh",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/signout",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/",
+      "status": 200
+    }
+  ],
+  "temporaryMemory": [
+    {
+      "stage": "before-browser",
+      "capacity_bytes": 536870912,
+      "free_bytes": 536870912
+    },
+    {
+      "stage": "before-concurrency",
+      "capacity_bytes": 536870912,
+      "free_bytes": 495439872
+    },
+    {
+      "stage": "after-concurrency",
+      "capacity_bytes": 536870912,
+      "free_bytes": 361222144
+    },
+    {
+      "stage": "before-cleanup",
+      "capacity_bytes": 536870912,
+      "free_bytes": 440532992
+    }
+  ],
+  "probe_sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6",
+  "limitation": "One Chromium/Linux cookie profile in a shared browser context. No Safari, native, multi-device or complete SDK qualification."
+}

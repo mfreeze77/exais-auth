@@ -1,0 +1,23 @@
+{
+  "schema": "expertauth-browser-session-characterization-v1",
+  "started": "2026-09-09T00:06:19.470Z",
+  "finished": "2026-09-09T00:07:22.403Z",
+  "foundation_passed": false,
+  "skipped": 0,
+  "rows": [
+    {
+      "id": "SDK54-BROWSER",
+      "outcome": "failed",
+      "stage": "concurrent-fetch",
+      "error": "page.evaluate: TypeError: Failed to fetch\n    at http://session-sdk.example.test:3000/app.js:14:2449\n    at e.<anonymous> (http://session-sdk.example.test:3000/app.js:11:29173)\n    at l (http://session-sdk.example.test:3000/app.js:11:21531)\n    at Object.next (http://session-sdk.example.test:3000/app.js:11:20835)\n    at s (http://session-sdk.example.test:3000/app.js:11:20395)"
+    },
+    {
+      "id": "SDK54-BROWSER-SYNTHETIC-CLEANUP",
+      "outcome": "passed"
+    }
+  ],
+  "refresh_requests": 2,
+  "errors": [],
+  "probe_sha256": "6acbc9c422773ffbfabfd6bc52888d3c8126d4c8c042d2e5cc340a07ccd3b772",
+  "limitation": "One Chromium/Linux cookie profile in a shared browser context. No Safari, native, multi-device or complete SDK qualification."
+}

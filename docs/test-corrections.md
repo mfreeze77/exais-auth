@@ -73,3 +73,25 @@ unrelated mounts still fail. New Core containers use bounded tmpfs for the unuse
 cache. Two nonempty old volumes were retained and measured at385,398 bytes combined.
 The successful run verified identical87 JARs and storage readiness before/after;
 it did not test rollback failure behavior, migrations or complete authentication.
+
+## Session browser probe resource diagnosis
+
+The first new multi-tab probe timed out before signup; unlike the existing browser
+test it filled fields immediately after selecting the signup tab. Waiting for the
+actual SIGN UP form fixed that harness ordering. Run01 and its exact input
+snapshots remain failed historical evidence.
+
+Runs02–04 reached real expiry but failed browser fetch. The bounded diagnostic
+recorded all32 outcomes:12 successes and20 `net::ERR_INSUFFICIENT_RESOURCES`,
+after a successful refresh. The browser's128MiB memory-backed `/tmp` was too small
+for this burst:run05 used the same images and32-request workload with a bounded
+512MiB tmpfs and passed, measuring175,648,768 bytes in use after concurrency.
+No browser security feature was disabled, authentication assertion relaxed, or
+request count reduced. Run05 includes all three browser checks passing and22
+synthetic-user removals. Temporary resources were removed with zero Docker delta.
+
+The raw-header concurrency failure is a separate observed client-policy issue
+and remains failed. The runner returns1 for it. New test results do not rewrite
+the original CDI5.3 capture, CDI5.6 zero-grace or Keycloak strict-profile failures.
+The policy review explains why one engine/profile's expectations cannot be
+silently applied to another; it does not waive any baseline acceptance.

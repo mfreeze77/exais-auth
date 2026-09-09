@@ -2046,6 +2046,22 @@
         {
           "path": "tests/foundation/oss_core_probe.py",
           "sha256": "bf41cac60d205be861705601c0167ba9fca85b6276151e7f91722f5ba24a8476"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -2054,7 +2070,7 @@
       "environment": {},
       "review": {},
       "blockers": [
-        "Both candidate strict rotation profiles fail required legitimate concurrency/response-loss behavior. Keycloak cluster7 passes/3 failures; no accepted rotation profile."
+        "Keycloak strict-profile7 passes/3 failures and separate Core CDI5.6 zero-grace availability failure remain. Maintained Node CDI5.4 has narrow transport/restart/browser passes but fails uncoordinated raw-header availability; complete versioned policy and foundation remain unqualified."
       ],
       "candidate_evidence": [
         {
@@ -2064,10 +2080,39 @@
         {
           "path": "evidence/foundation/oss-core/results.json",
           "sha256": "87a032aa1b2b735d291581a6933d308a3057a18dd880c70373a9e00e52b62d9b"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Both candidate strict rotation profiles fail required legitimate concurrency/response-loss behavior. Keycloak cluster7 passes/3 failures; no accepted rotation profile.",
-      "observed_test_ids": []
+      "qualification_note": "Keycloak strict-profile7 passes/3 failures and separate Core CDI5.6 zero-grace availability failure remain. Maintained Node CDI5.4 has narrow transport/restart/browser passes but fails uncoordinated raw-header availability; complete versioned policy and foundation remain unqualified.",
+      "observed_test_ids": [
+        "SDK54-WIRE-PROTOCOL",
+        "SDK54-SERIAL-PROMOTION",
+        "SDK54-LOSS-BEFORE-FORWARD",
+        "SDK54-LOSS-AFTER-UPSTREAM-BODY",
+        "SDK54-LOSS-PARTIAL-BODY",
+        "SDK54-COMMITTED-PROMOTION-CRASH",
+        "SDK54-UNCOORDINATED-CLIENT-AVAILABILITY",
+        "SDK54-BROWSER-FOUR-TAB-REFRESH"
+      ]
     },
     {
       "id": "SES-004",
@@ -2089,6 +2134,22 @@
         {
           "path": "tests/foundation/oss_core_probe.py",
           "sha256": "bf41cac60d205be861705601c0167ba9fca85b6276151e7f91722f5ba24a8476"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -2097,7 +2158,7 @@
       "environment": {},
       "review": {},
       "blockers": [
-        "Both candidate strict rotation profiles fail required legitimate concurrency/response-loss behavior. Keycloak cluster7 passes/3 failures; no accepted rotation profile."
+        "Keycloak strict-profile7 passes/3 failures and separate Core CDI5.6 zero-grace availability failure remain. Maintained Node CDI5.4 has narrow transport/restart/browser passes but fails uncoordinated raw-header availability; complete versioned policy and foundation remain unqualified."
       ],
       "candidate_evidence": [
         {
@@ -2107,10 +2168,39 @@
         {
           "path": "evidence/foundation/oss-core/results.json",
           "sha256": "87a032aa1b2b735d291581a6933d308a3057a18dd880c70373a9e00e52b62d9b"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Both candidate strict rotation profiles fail required legitimate concurrency/response-loss behavior. Keycloak cluster7 passes/3 failures; no accepted rotation profile.",
-      "observed_test_ids": []
+      "qualification_note": "Keycloak strict-profile7 passes/3 failures and separate Core CDI5.6 zero-grace availability failure remain. Maintained Node CDI5.4 has narrow transport/restart/browser passes but fails uncoordinated raw-header availability; complete versioned policy and foundation remain unqualified.",
+      "observed_test_ids": [
+        "SDK54-WIRE-PROTOCOL",
+        "SDK54-SERIAL-PROMOTION",
+        "SDK54-LOSS-BEFORE-FORWARD",
+        "SDK54-LOSS-AFTER-UPSTREAM-BODY",
+        "SDK54-LOSS-PARTIAL-BODY",
+        "SDK54-COMMITTED-PROMOTION-CRASH",
+        "SDK54-UNCOORDINATED-CLIENT-AVAILABILITY",
+        "SDK54-BROWSER-FOUR-TAB-REFRESH"
+      ]
     },
     {
       "id": "SES-005",
@@ -2128,6 +2218,22 @@
         {
           "path": "examples/python/app.py",
           "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -2146,6 +2252,26 @@
         {
           "path": "evidence/clients/python/probe-report.json",
           "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
       "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
@@ -4291,6 +4417,22 @@
         {
           "path": "examples/node-react/package-lock.json",
           "sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -4305,6 +4447,26 @@
         {
           "path": "evidence/runs/node-live-03/command.json",
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
       "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open.",
@@ -4393,6 +4555,22 @@
         {
           "path": "tests/browser/oss-password.mjs",
           "sha256": "1b4386c52571a055ca7b3c93bfa945b6216902b100683bba9839b725fb093e30"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -4411,6 +4589,26 @@
         {
           "path": "evidence/browser/oss-password-05/results.json",
           "sha256": "856ea89f7be5ebaf8081b35aa9653238d1910ca869c04783f95c4df5ae54fbbd"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
       "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.",
@@ -5188,6 +5386,22 @@
         {
           "path": "tests/browser/oss-password.mjs",
           "sha256": "1b4386c52571a055ca7b3c93bfa945b6216902b100683bba9839b725fb093e30"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -5206,6 +5420,26 @@
         {
           "path": "evidence/browser/oss-password-05/results.json",
           "sha256": "856ea89f7be5ebaf8081b35aa9653238d1910ca869c04783f95c4df5ae54fbbd"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
       "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.",
@@ -9874,6 +10108,22 @@
         {
           "path": "examples/node-react/package-lock.json",
           "sha256": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -9888,6 +10138,26 @@
         {
           "path": "evidence/runs/node-live-03/command.json",
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
       "qualification_note": "Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open.",
@@ -9976,6 +10246,22 @@
         {
           "path": "tests/browser/oss-password.mjs",
           "sha256": "1b4386c52571a055ca7b3c93bfa945b6216902b100683bba9839b725fb093e30"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -9994,6 +10280,26 @@
         {
           "path": "evidence/browser/oss-password-05/results.json",
           "sha256": "856ea89f7be5ebaf8081b35aa9653238d1910ca869c04783f95c4df5ae54fbbd"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
       "qualification_note": "Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.",
@@ -10759,6 +11065,22 @@
         {
           "path": "tools/run_keycloak_cluster.py",
           "sha256": "ea6c06cbf9f498daaafce778d1caad09d08622ba78088b89a5223de38533dadb"
+        },
+        {
+          "path": "contracts/session-policy-oss-node-cdi54-v1.json",
+          "sha256": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/foundation/sdk_session_faults.mjs",
+          "sha256": "fc9e85e89ee9e461e0d493d92c318c4371a7572c662ea40394b061fed753aa0d"
+        },
+        {
+          "path": "tests/browser/session-coordination.mjs",
+          "sha256": "7becddfc219df31e8bdeb579dedb0bebd285870e61b790a9ee59700821b18cb6"
         }
       ],
       "positive_test_ids": [],
@@ -10793,6 +11115,26 @@
         {
           "path": "evidence/foundation/keycloak-sessions/probe-report.json",
           "sha256": "5942c716388f3a068d060477377df84e309476fb99ca33ad85296d9c5a9e1cdd"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+          "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+          "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+        },
+        {
+          "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+          "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+        },
+        {
+          "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+          "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+        },
+        {
+          "path": "evidence/foundation/session-policy-review/README.md",
+          "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ]
     },
@@ -11336,6 +11678,26 @@
     {
       "path": "evidence/foundation/keycloak-sessions/probe-report.json",
       "sha256": "5942c716388f3a068d060477377df84e309476fb99ca33ad85296d9c5a9e1cdd"
+    },
+    {
+      "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+      "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+    },
+    {
+      "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+      "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+    },
+    {
+      "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+      "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+    },
+    {
+      "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+      "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+    },
+    {
+      "path": "evidence/foundation/session-policy-review/README.md",
+      "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
     }
   ],
   "delivery_checkpoint_artifacts": [
@@ -11376,6 +11738,28 @@
     {
       "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
       "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+    }
+  ],
+  "session_candidate_artifacts": [
+    {
+      "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
+      "sha256": "60a68945967dfcba9cc5bd47eace984be60b8289f7818a0c0bb4264c7d3e01f1"
+    },
+    {
+      "path": "evidence/foundation/sdk-session-faults/run-05/sdk-results.json",
+      "sha256": "3474f4e9855fb73f2fb9c14662a5b77079daf171c03473730f9468b6eddea5f5"
+    },
+    {
+      "path": "evidence/foundation/sdk-session-faults/run-05/browser-results.json",
+      "sha256": "95befb77dc7ce86c18d0a3110439bebe75cb5e8649aaf5e919fe5fb4f3957ef6"
+    },
+    {
+      "path": "evidence/runs/sdk-session-memory-proof-05/command.json",
+      "sha256": "29dece6a66f4d369714de2e92019a38e6d8cf328d2d550331f703f902739a064"
+    },
+    {
+      "path": "evidence/foundation/session-policy-review/README.md",
+      "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
     }
   ]
 }

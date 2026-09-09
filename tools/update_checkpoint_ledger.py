@@ -32,7 +32,7 @@ def main():
     attach(['SDK-001','SDKP-01'],['examples/node-react/server.js','examples/node-react/package-lock.json'],['evidence/runs/node-live-03/command.json'], 'Representative Node password/session integration only. Exact upstream SDK with qualified Nodemailer override; complete SDK feature matrix remains open.')
     attach(['SDK-002','SDKP-02'],['examples/python/app.py','examples/python/requirements.lock'],['evidence/clients/python/probe-report.json'], 'Representative FastAPI integration:19 live HTTP checks, not complete Python profile. Cookie-client correction disclosed; no Python browser proof.')
     attach(['SDK-005','SDKP-05','TST-007'],['examples/node-react/client.jsx','tests/browser/oss-password.mjs'],['evidence/runs/browser-oss-05/command.json','evidence/browser/oss-password-05/results.json'], 'Chromium signup/signin/logout and320px layout passed after actual component/layout fixes. Not full accessibility, native or React feature qualification.',tests=['BROWSER-OSS-001','BROWSER-OSS-002','BROWSER-OSS-003','BROWSER-OSS-004'])
-    attach(['SES-003','SES-004'],['tools/run_keycloak_cluster.py','tests/foundation/keycloak_sessions.py','tests/foundation/oss_core_probe.py'],['evidence/foundation/keycloak-sessions/probe-report.json','evidence/foundation/oss-core/results.json'], 'Both candidate strict rotation profiles fail required legitimate concurrency/response-loss behavior. Keycloak cluster7 passes/3 failures; no accepted rotation profile.',state='failed')
+    attach(['SES-003','SES-004'],['tools/run_keycloak_cluster.py','tests/foundation/keycloak_sessions.py','tests/foundation/oss_core_probe.py'],['evidence/foundation/keycloak-sessions/probe-report.json','evidence/foundation/oss-core/results.json'], 'Keycloak strict-profile7 passes/3 failures and separate Core CDI5.6 zero-grace availability failure remain. Maintained Node CDI5.4 has narrow transport/restart/browser passes but fails uncoordinated raw-header availability; complete versioned policy and foundation remain unqualified.',state='failed')
     for identifier in ('SDK-007','SDKP-07'):
         index[identifier]['status']='blocked'
         index[identifier]['blockers']=['Native iOS/macOS execution environment unavailable; native build/device tests unexecuted, not passed. Full implementation also remains open.']
@@ -62,6 +62,14 @@ def main():
     index['WP-002']['candidate_evidence'] = data['runtime_distribution_artifacts']
     index['WP-004']['implementation']=[artifact(ROOT,path) for path in ['engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java','engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java','examples/keycloak-clients/server.mjs','examples/keycloak-clients/python_client.py','tools/run_keycloak_cluster.py']]
     index['WP-004']['candidate_evidence']=data['foundation_candidate_artifacts']
+    session_sources = ['contracts/session-policy-oss-node-cdi54-v1.json','tools/run_sdk_session_faults.py','tests/foundation/sdk_session_faults.mjs','tests/browser/session-coordination.mjs']
+    session_reports = ['evidence/foundation/sdk-session-faults/run-05/report.json','evidence/foundation/sdk-session-faults/run-05/sdk-results.json','evidence/foundation/sdk-session-faults/run-05/browser-results.json','evidence/runs/sdk-session-memory-proof-05/command.json','evidence/foundation/session-policy-review/README.md']
+    data['session_candidate_artifacts'] = [artifact(ROOT,path) for path in session_reports]
+    for identifier in ('SES-003','SES-004','SES-005','SDK-001','SDKP-01','SDK-005','SDKP-05','TST-007','WP-004'):
+        index[identifier]['implementation'] += [artifact(ROOT,path) for path in session_sources]
+        index[identifier]['candidate_evidence'] += data['session_candidate_artifacts']
+    for identifier in ('SES-003','SES-004'):
+        index[identifier]['observed_test_ids'] += ['SDK54-WIRE-PROTOCOL','SDK54-SERIAL-PROMOTION','SDK54-LOSS-BEFORE-FORWARD','SDK54-LOSS-AFTER-UPSTREAM-BODY','SDK54-LOSS-PARTIAL-BODY','SDK54-COMMITTED-PROMOTION-CRASH','SDK54-UNCOORDINATED-CLIENT-AVAILABILITY','SDK54-BROWSER-FOUR-TAB-REFRESH']
     data['dependency_lock_paths']=['examples/node-react/package-lock.json','examples/python/requirements.lock','tests/browser/package-lock.json','engine-extensions/oss-build/locks/gradle/verification-metadata.xml','engine-extensions/keycloak-headless/gradle.lockfile','engine-extensions/keycloak-headless/gradle/verification-metadata.xml','examples/keycloak-clients/package-lock.json','examples/keycloak-clients/requirements-test.txt','reuse/runtime-source-archives.lock.json']
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)

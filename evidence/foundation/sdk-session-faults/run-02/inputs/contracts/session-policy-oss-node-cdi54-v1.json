@@ -1,0 +1,36 @@
+{
+  "schema": "expertauth-candidate-session-policy-v1",
+  "id": "OSS-NODE-CDI54-LEGACY-V1",
+  "acceptance_status": "unqualified-candidate",
+  "changes_immutable_baseline": false,
+  "core_source_commit": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+  "sdk": { "name": "supertokens-node", "version": "24.0.3", "observed_wire_version_required": "5.4" },
+  "baseline_capture_cdi": "5.3",
+  "baseline_ids": ["SES-003", "SES-004", "SES-005", "SES-007", "SES-017", "SDK-001", "SDK-005"],
+  "authority": "One source-built Core with PostgreSQL shared by two replicas; no adapter refresh store.",
+  "states": [
+    "Current refresh verifier lives in Core/PostgreSQL.",
+    "Refreshing the current credential mints candidate child tokens in the same session without retiring the current verifier.",
+    "A child's stateful access verification or child refresh atomically promotes its verifier. Other candidates cannot extend independent refresh chains after that promotion.",
+    "Before promotion, loss of the candidate response permits retry of the current credential without a time-based grace period.",
+    "After promotion, a stale parent or sibling refresh produces TOKEN_THEFT_DETECTED. The default Node SDK handler then revokes the session through Core.",
+    "After committed revocation, refresh and online verification fail. Unrelated sessions remain usable. Offline JWT residual validity is a separate profile."
+  ],
+  "client_constraints_under_test": [
+    "The maintained React/Session fetch interceptor coordinates cookie refreshes in a shared browser context.",
+    "A raw header client concurrently using both candidate branches is not qualified; selected-child loss caused by theft handling must remain a failed availability observation."
+  ],
+  "fault_points": [
+    "Drop request before proxy forwards to Core; this is not a failure inside a database transaction.",
+    "Consume complete real Core refresh response then drop before delivery to SDK.",
+    "Deliver only the first eight response-body bytes to SDK then close transport.",
+    "Lose the committed child-promotion response; confirm stale parent on the other replica, SIGKILL and restart only temporary Core B, then check persisted policy."
+  ],
+  "still_required": [
+    "Transaction-internal pre-commit failures, database crash/failover and broader ordering/security acceptance.",
+    "SDK crash or failed revocation after Core theft response; Core legacy theft response alone does not revoke.",
+    "Other SDKs, cookie/header policies, browsers, native hardware and full original profile matrix.",
+    "Independent security review and final engine selection; identity and licensing blockers remain unchanged.",
+    "All original CDI5.3 contract entries and separately characterized CDI5.6 failures remain preserved."
+  ]
+}

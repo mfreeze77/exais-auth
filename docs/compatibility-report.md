@@ -9,9 +9,19 @@ See `contracts/README.md`, `api-contracts.json` and their source/licensing repor
 
 The working OSS Node/React and Python examples exercise password/session subsets.
 Node24.0.3 and Python0.31.3 do not automatically have identical protocol behavior:
-Python requires CDI5.4; the Node proof uses current negotiated behavior with an
-explicitly separate offline JWT profile. Core CDI5.3's two-phase refresh differs
+Python requires CDI5.4; the new Node24.0.3 wire trace actually observes CDI5.4 on
+session operations across two Core replicas. Its separately declared offline JWT
+profile remains distinct. Core CDI5.3's two-phase refresh differs
 from5.6 rotation. The zero-grace5.6 concurrency failure remains a blocker.
+
+The candidate `OSS-NODE-CDI54-LEGACY-V1` policy preserves the frozen CDI5.3
+contract and all original IDs. Real SDK tests recover from dropped refresh
+requests/responses, including partial-body transmission, and retain committed
+promotion after an abrupt temporary-Core restart. Default SDK theft handling
+revokes the family; an uncoordinated raw-header race consequently loses its
+selected child. That availability case remains failed. These observations do
+not qualify all transaction failures or the other SDK/platform profiles. See
+`evidence/foundation/sdk-session-faults` and `session-policy-review`.
 
 The Keycloak JSON SPI demonstrates engine-owned password and TOTP challenges,
 PKCE authorization-code exchange and intermediate authentication state. It is not a

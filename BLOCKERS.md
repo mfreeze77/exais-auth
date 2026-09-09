@@ -16,6 +16,13 @@
   turn as possible cybersecurity risk; no correction or bypass was implemented.
   Its PostgreSQL two-replica strict rotation proof also fails3 of10 cases involving
   legitimate child survival, concurrent refresh and a lost committed response.
+- Session policy: Node24.0.3 wire evidence confirms legacy CDI5.4. Its default
+  theft handler revokes the family, so an uncoordinated raw-header client using
+  both raced candidate branches loses the selected child. That case remains
+  failed. Narrow dropped-response/restart tests do not close transaction-internal
+  precommit, SDK-crash-before-revocation, database failure or all transport/platform
+  cases. Existing Keycloak and CDI5.6 failures remain preserved as their declared
+  profiles; neither automatically characterizes the other versioned policy.
 - Dependency distribution: LGPL/EPL/native source/relink notices, container OS review,
   every SDK/plugin transitive closure and version matrix remain incomplete.
   The runtime now carries a verified notice package and83 locked source siblings

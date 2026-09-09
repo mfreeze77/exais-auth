@@ -14,6 +14,14 @@ Material unresolved findings:
 - Unmodified OSS Core requires entitlements for native required app/tenant/link
   operations. No-fee full parity is unproved. CDI5.6 zero-grace concurrent refresh
   invalidates the legitimate session; that behavior is not accepted as complete.
+- The actual Node24.0.3 SDK negotiates CDI5.4 and revokes through Core after
+  legacy `TOKEN_THEFT_DETECTED`. A raw client racing and subsequently using both
+  candidate branches loses the selected session. This remains a failed
+  availability observation. The Core's legacy theft response alone does not
+  revoke; SDK crash/failure between classification and revocation is untested.
+  A committed promotion survived a SIGKILL/restart of the temporary second Core,
+  and three request/response transport faults recovered through the real SDK.
+  These are bounded tests, not transaction-internal failure or database HA proof.
 - Original Node graph included Nodemailer advisory GHSA-p6gq-j5cr-w38f. Scoped
  9.1.1 override passed9 isolated transport/security checks using unchanged SDK
   delivery recipes. The original affected graph and current graph audits are

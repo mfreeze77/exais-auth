@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "tools/run_sdk_session_faults.py",
+    "--name",
+    "run-02"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788912188.361405,
+  "elapsed_seconds": 81.588,
+  "input_sha256": {
+    "tools/run_sdk_session_faults.py": "6412290b2b13677ae23760d19a4659418c0326340e7b79aeaac671716059c486",
+    "tests/foundation/sdk_session_faults.mjs": "e18e9643c1884aee1164d5730a2f6e92bdb8010f585f5cfefeb0b98c739da447",
+    "tests/browser/session-coordination.mjs": "25baa95f5305e7776ffb4165cb49f290e84989a825ee37d991ada94c9b7c3e1f",
+    "contracts/session-policy-oss-node-cdi54-v1.json": "58e1a537f9051c1d34388840346211b71a5d3275092f20b248b45a5a26d0c3e7"
+  },
+  "inputs_changed": false,
+  "output_sha256": "323e43b19d8cb67825d6e46640f26bcc909a485e9d158bc9b196aba5a660777b",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}
