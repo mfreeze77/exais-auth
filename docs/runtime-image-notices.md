@@ -10,6 +10,11 @@ separate under `/opt/expertauth/lib` and the PostgreSQL plugin under
 The package preserves recognized notice texts from the84 runtime dependencies
 and83 pinned Maven source siblings, inherited POM declarations, the3 own-source
 Apache licenses, and5 independently reviewed scrypt/libffi supplemental notices.
+The corrected assembler also retains JNA's full `AL2.0` and `LGPL2.1` texts,
+bringing recognized archive notice texts to89, and three exact BSD notice headers
+from the newly pinned scrypt header sources. The previous running image still
+has its historical manifest until a newly qualified image replaces it; source
+packaging checks alone do not establish installed image contents.
 These files are attribution material. Presence of a notice or source archive does
 not establish complete distribution rights, native build reproducibility or
 compliance with every applicable source/relink condition.

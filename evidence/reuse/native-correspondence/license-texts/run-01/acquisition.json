@@ -1,0 +1,23 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T01:45:45.326163+00:00",
+  "tool_sha256": "815e34600c978c5ca7d90444b7f3491f14fb9b4ef970684a477e6124734bea38",
+  "records": [
+    {
+      "path": "GPL-3.0.txt",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "final_url": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "http_status": 200,
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "expected_git_blob_sha1": null
+    }
+  ],
+  "errors": [],
+  "total_bytes": 35149,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "finished": "2026-09-09T01:45:45.612150+00:00",
+  "passed": true
+}

@@ -1,0 +1,1165 @@
+{
+  "schema": "expertauth-jna-acquired-source-review-v1",
+  "coordinate": "net.java.dev.jna:jna:5.8.0",
+  "work_package": "WP-002",
+  "status": "PARTIAL_NATIVE_SOURCE_BUILD_AND_LICENSE_CLOSURE_UNPROVEN",
+  "request_sha256": "0cfcf867d0a6c44725009335d8e3a8715d9ca2617593a984599574aac4cee316",
+  "acquisition_manifest_sha256": "bff8ce57e995116b74e38ad56ddbbc1f0c09f98f2243ec17628a38011157b187",
+  "source_files_verified": 47,
+  "source_bytes_verified": 699788,
+  "files": [
+    {
+      "path": ".travis.yml",
+      "local_path": "acquired/.travis.yml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/.travis.yml",
+      "bytes": 1193,
+      "sha256": "479ffe113099e801a8c7af475c88e35f736b847f87d7eb79b89c3d8301ab9815",
+      "git_blob_sha1": "c8514bf64d080c5b69b3b24d1e887fba1d2685a6",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 34,
+          "byte_start": 0,
+          "byte_end_exclusive": 1193,
+          "sha256": "479ffe113099e801a8c7af475c88e35f736b847f87d7eb79b89c3d8301ab9815"
+        }
+      }
+    },
+    {
+      "path": "appveyor.yml",
+      "local_path": "acquired/appveyor.yml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/appveyor.yml",
+      "bytes": 2352,
+      "sha256": "ce57767c126cab34effcfbf7ad3d2cb65da79643bfecfb816353ee8d79d5ebe9",
+      "git_blob_sha1": "1d83ac9b63340e69c0875a7a6b3ba15429450911",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1372,
+          "sha256": "7f6c2ae9e178cff9ee34fe71b49988248764e731f412a5b82d1822f9fc340caf"
+        }
+      }
+    },
+    {
+      "path": "build-ant-tools.xml",
+      "local_path": "acquired/build-ant-tools.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/build-ant-tools.xml",
+      "bytes": 770,
+      "sha256": "52aef452bb3b7ea0bb1f3cc38d5e1b3dde67c66c30c8dea4387e77a4ee3e3614",
+      "git_blob_sha1": "bb73fc7462b1e7398c1b7fa5ee921e5eb4fd6df3",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 20,
+          "byte_start": 0,
+          "byte_end_exclusive": 770,
+          "sha256": "52aef452bb3b7ea0bb1f3cc38d5e1b3dde67c66c30c8dea4387e77a4ee3e3614"
+        }
+      }
+    },
+    {
+      "path": "build.xml",
+      "local_path": "acquired/build.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/build.xml",
+      "bytes": 78763,
+      "sha256": "bc59e5058e196365bdf0d334d476f930d67e4d69a9ccbf70d0d17f1d3defa8ba",
+      "git_blob_sha1": "4b580ed55217ecdadd211c3797f63848e4e8a363",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1453,
+          "sha256": "a97b1fca807e778aa6df46b4914c5f20f8852a9ededed4b4e7dc966e7199eb6b"
+        }
+      }
+    },
+    {
+      "path": "native/README.libffi",
+      "local_path": "acquired/native/README.libffi",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/README.libffi",
+      "bytes": 522,
+      "sha256": "d236071538a8ae12b75a267de2fbec80d3f59f05704d04f55ad2bcf3f41ec563",
+      "git_blob_sha1": "7cfda1ba87e3689ac5d1e7f0826ec8cb6fe95ec1",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 13,
+          "byte_start": 0,
+          "byte_end_exclusive": 522,
+          "sha256": "d236071538a8ae12b75a267de2fbec80d3f59f05704d04f55ad2bcf3f41ec563"
+        }
+      }
+    },
+    {
+      "path": "native/build.xml",
+      "local_path": "acquired/native/build.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/build.xml",
+      "bytes": 18865,
+      "sha256": "50a29a178acd924a219a6d20ef1f28013eb7f5fd33260ac221bc162a0f728709",
+      "git_blob_sha1": "5b6c7101fba41120edd5404438420727463e6d5a",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1478,
+          "sha256": "15c3866e328721133b1a7575cfdf3b5ea19e5d46a7032b69f183a3eadb5f335b"
+        }
+      }
+    },
+    {
+      "path": "native/callback.c",
+      "local_path": "acquired/native/callback.c",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/callback.c",
+      "bytes": 24110,
+      "sha256": "1cfebebd7768545c702c20cde3d95c575b056292926cab23f767fa48593b7541",
+      "git_blob_sha1": "846f3447207b649a27baadfe24eec55ce8f1e3f9",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Apache-2.0 OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "Preserve file copyright lines and chosen license terms; no choice or approval is made here.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 24,
+          "byte_start": 0,
+          "byte_end_exclusive": 797,
+          "sha256": "707369e098c86cf423d84be30d69f16eabf0bddb9c9df4a02d566ca091534d29"
+        }
+      }
+    },
+    {
+      "path": "native/cc.sh",
+      "local_path": "acquired/native/cc.sh",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/cc.sh",
+      "bytes": 4008,
+      "sha256": "7c701e3050c916d60c8b8df0faca978a6b0224442f524c59c19bb3c781a52a9a",
+      "git_blob_sha1": "24bcb179fac3723da046ffee9321a5a354652165",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 683,
+          "sha256": "3015e9c2fae01575a63fb6d4be56c3fbb3373903abeca19952e945284b639d8d"
+        }
+      }
+    },
+    {
+      "path": "native/dispatch.c",
+      "local_path": "acquired/native/dispatch.c",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dispatch.c",
+      "bytes": 118985,
+      "sha256": "67e085528c453f34b6062bda70dc18033c3fb75c9ce3338a351676b28cc70854",
+      "git_blob_sha1": "f87c572b9e9a1cd75fc37d933b175f54e902156a",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Apache-2.0 OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "Preserve file copyright lines and chosen license terms; no choice or approval is made here.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 28,
+          "byte_start": 0,
+          "byte_end_exclusive": 908,
+          "sha256": "1dd6d7fd893729315b0763a23f36aa2e49bd1e05d5a560c7dbe75027c1529edd"
+        }
+      }
+    },
+    {
+      "path": "native/dispatch.h",
+      "local_path": "acquired/native/dispatch.h",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dispatch.h",
+      "bytes": 9328,
+      "sha256": "9db8a13f6086ade9197a027424ebdb965850406fdf3c7ed43f4ad5d21472db56",
+      "git_blob_sha1": "aed8c89c2d51ba3a5ef8062d50595ac6779e83f8",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Apache-2.0 OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "Preserve file copyright lines and chosen license terms; no choice or approval is made here.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 23,
+          "byte_start": 0,
+          "byte_end_exclusive": 739,
+          "sha256": "231b6aaa8e43b610a8f01fb77370adeff185f52678acf1bae2ccea22b4f6d7f9"
+        }
+      }
+    },
+    {
+      "path": "native/dll-callback.c",
+      "local_path": "acquired/native/dll-callback.c",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dll-callback.c",
+      "bytes": 1192,
+      "sha256": "ff9e81c15855ff64470ac8bdd004c04b45a2e5377f68c0032c1e6528bbab62ea",
+      "git_blob_sha1": "027a3542713f7042c6dbc52fa367d722e1bd9ce6",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Apache-2.0 OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "Preserve file copyright lines and chosen license terms; no choice or approval is made here.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 23,
+          "byte_start": 0,
+          "byte_end_exclusive": 739,
+          "sha256": "d337b93a39b1f6c814f6ecf98aa8256df6835892c60dc897bb049de7784b7865"
+        }
+      }
+    },
+    {
+      "path": "native/jnidispatch.rc",
+      "local_path": "acquired/native/jnidispatch.rc",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/jnidispatch.rc",
+      "bytes": 1567,
+      "sha256": "90d875771ee3c1880750683bc6d759959c18e2ca2066099f0e9616d87fa55ab5",
+      "git_blob_sha1": "2e8f8904f855cb3d3785cc898afe2984cc36f282",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Apache-2.0 OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "Preserve file copyright lines and chosen license terms; no choice or approval is made here.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 27,
+          "byte_start": 0,
+          "byte_end_exclusive": 847,
+          "sha256": "bdd08ca1d5f2ea0849569bc63a75d6ddf0b6b8fa94241ed53a4020abd2b17ba1"
+        }
+      }
+    },
+    {
+      "path": "native/ld.sh",
+      "local_path": "acquired/native/ld.sh",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/ld.sh",
+      "bytes": 1598,
+      "sha256": "b17f28d520c30a0f318e3e210f46b28f809dc8a7123b39e6ca4216bd52434f4e",
+      "git_blob_sha1": "915da1a14375c10dcc442663a2c06c94ff786af2",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 824,
+          "sha256": "2d8a97b1aabb32372758a5a64ca7bb429756fa9a45b8f73f7819dd46226e7cb2"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/LICENSE-BUILDTOOLS",
+      "local_path": "acquired/native/libffi/LICENSE-BUILDTOOLS",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/LICENSE-BUILDTOOLS",
+      "bytes": 18698,
+      "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94",
+      "git_blob_sha1": "d1d626e00859030061ed7b071e84f8f893d84d93",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Build/test scope statement and complete GPL v2 text",
+        "observation": "Lists msvcc.sh, make_sunver.pl and bhaible tests as build/test tools; explicitly assigns GPL v2 to msvcc.sh and bhaible, without an explicit individual grant for make_sunver.pl.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 353,
+          "byte_start": 0,
+          "byte_end_exclusive": 18698,
+          "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/Makefile.am",
+      "local_path": "acquired/native/libffi/Makefile.am",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/Makefile.am",
+      "bytes": 6034,
+      "sha256": "06b52c27043a8073bb56d1a60c9d5679e77ff4fb2850b9cd6780fbf381d4a7e2",
+      "git_blob_sha1": "7654bf5ac575f8e9306006ed39ca45fd970ff978",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1067,
+          "sha256": "3fc42bec33fe3a542ebebc9e0954a447422ae85de8ad5697214e877d2bca4bc8"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/acinclude.m4",
+      "local_path": "acquired/native/libffi/acinclude.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/acinclude.m4",
+      "bytes": 17298,
+      "sha256": "29bb8bdff8fcbb35a11be7a71e5ef96b19f96d5aae3e9a3382ac3f6727a4b654",
+      "git_blob_sha1": "1a70efb010dc045bb4287ca1afcff76bfa0d74a1",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1546,
+          "sha256": "b35b78f316c0c39fd5de7b6dbcaf24c05095c3f2748245bb3a90ee41cd819ada"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/autogen.sh",
+      "local_path": "acquired/native/libffi/autogen.sh",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/autogen.sh",
+      "bytes": 32,
+      "sha256": "db8a2ee030c804ac107beeeade2f5b514882fffe5c7a8899ff3635b0c92c92e3",
+      "git_blob_sha1": "fb014a33ea3bf48f79e4dbc72fc7907c2e345820",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 2,
+          "byte_start": 0,
+          "byte_end_exclusive": 32,
+          "sha256": "db8a2ee030c804ac107beeeade2f5b514882fffe5c7a8899ff3635b0c92c92e3"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/config.guess",
+      "local_path": "acquired/native/libffi/config.guess",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/config.guess",
+      "bytes": 48932,
+      "sha256": "42f9e80c88168de121f6826b68d6b0e653967190e072d53278a5660b4e5dcb50",
+      "git_blob_sha1": "e94095c5fbe89c77bfb99903f66223e4ef856e86",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific Autoconf-program distribution exception",
+        "observation": "Exception permits stated program-distribution terms only when its conditions apply; retain exact notice.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 25,
+          "byte_start": 0,
+          "byte_end_exclusive": 1159,
+          "sha256": "822f808b9928976e3cfe8d4b32cbb5f0f913af767c3a7bdf6cb079575f83aaa1"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/config.sub",
+      "local_path": "acquired/native/libffi/config.sub",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/config.sub",
+      "bytes": 34140,
+      "sha256": "9361d9fe163230a43901581e53fc55c4edff04dbbf8c8550241a8adb14531c25",
+      "git_blob_sha1": "14b5150c42a4077edbcda041b09576230964071f",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific Autoconf-program distribution exception",
+        "observation": "Exception permits stated program-distribution terms only when its conditions apply; retain exact notice.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 25,
+          "byte_start": 0,
+          "byte_end_exclusive": 1161,
+          "sha256": "13f656b3fb48ea5b374155c8346590d74faa0bd713bf732e7c5d4c8ea2112887"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/configure.ac",
+      "local_path": "acquired/native/libffi/configure.ac",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/configure.ac",
+      "bytes": 12477,
+      "sha256": "c76a2820a1c022f9e5dcab2e7167b653cd630093a86cf0f28bcb5651a1f3d6fb",
+      "git_blob_sha1": "093b87d4f7e923ae753897b860e288ac85f7c2af",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1012,
+          "sha256": "4d4bb4e92d8684c9154a5c37c2e3a9a027f52a8a2e2cb5069c0083960efaa483"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/configure.host",
+      "local_path": "acquired/native/libffi/configure.host",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/configure.host",
+      "bytes": 6434,
+      "sha256": "9e049315bd3b816800f521c546e89a0add49fa86fc02ed281388ad929dc25b60",
+      "git_blob_sha1": "257b7848725c3bbf8a33640124408a2b8837cd61",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 827,
+          "sha256": "04a7e3be7606208d2a3274d6c8b76e7ed9c0ac54bf35a867e3a9e3e26f6125cf"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/include/Makefile.am",
+      "local_path": "acquired/native/libffi/include/Makefile.am",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/Makefile.am",
+      "bytes": 208,
+      "sha256": "43763a7deb601012459ba66e354160656c6b8659e2282b84d4239555a11e92bd",
+      "git_blob_sha1": "c59df9fb3cd390dd5d1b07b191051cc4602d35e9",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 9,
+          "byte_start": 0,
+          "byte_end_exclusive": 208,
+          "sha256": "43763a7deb601012459ba66e354160656c6b8659e2282b84d4239555a11e92bd"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/include/ffi.h.in",
+      "local_path": "acquired/native/libffi/include/ffi.h.in",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi.h.in",
+      "bytes": 14314,
+      "sha256": "184c0df55306bd44c79ab5f8a48cd18fea8e4359703b2cb6c2cf76afba0ff3d2",
+      "git_blob_sha1": "38885b0ab857f0904c81048c032a72067b272405",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "MIT-style permission grant (explicit file header)",
+        "observation": "Preserve the Anthony Green / Red Hat copyright and permission notice in generated/source distribution where applicable.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 25,
+          "byte_start": 0,
+          "byte_end_exclusive": 1373,
+          "sha256": "69f5621a0a6deae13d378330515707b59761559308433bc4219aed01fa8ddf9a"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/include/ffi_cfi.h",
+      "local_path": "acquired/native/libffi/include/ffi_cfi.h",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi_cfi.h",
+      "bytes": 1942,
+      "sha256": "0eaf4c217034e3e96ae50125fed4255f2d0bdc07cdf84ccf8b8b19140aeebc35",
+      "git_blob_sha1": "244ce572be740e79b87d98229ef85d9c643cd3e5",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "File copyright notice; enclosing libffi terms need applicability review",
+        "observation": "Preserve additional file copyright owners; ffi_common.h includes Free Software Foundation alongside Anthony Green/Red Hat. Root MIT notice alone does not enumerate every file copyright.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 5,
+          "byte_start": 0,
+          "byte_end_exclusive": 281,
+          "sha256": "1f3bfdee8a831bc9874904f9bf15af8ab73acd572904570480bb89b9af545fe0"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/include/ffi_common.h",
+      "local_path": "acquired/native/libffi/include/ffi_common.h",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi_common.h",
+      "bytes": 4160,
+      "sha256": "48348d32cd2c9e8a201e8095289d435f8638540e644c1eca92ad9db9854a2f20",
+      "git_blob_sha1": "76b9dd6fafe5766524f2a2eddf3236287a4e3e65",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "File copyright notice; enclosing libffi terms need applicability review",
+        "observation": "Preserve additional file copyright owners; ffi_common.h includes Free Software Foundation alongside Anthony Green/Red Hat. Root MIT notice alone does not enumerate every file copyright.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 8,
+          "byte_start": 0,
+          "byte_end_exclusive": 438,
+          "sha256": "2cab67a2d42094172ede456b6742f50657c2a52f32140d749f274631138f7bf6"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/libtool-ldflags",
+      "local_path": "acquired/native/libffi/libtool-ldflags",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/libtool-ldflags",
+      "bytes": 3370,
+      "sha256": "953d3a071dd9c49b5b066bd9aa6cabf8b003219f0419e211574964272672e1f5",
+      "git_blob_sha1": "e32e37bf10dd5a5af7648b64ae648e80bcf44b5f",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-2.0-or-later (explicit file header)",
+        "observation": "Build-only script carries GPL terms; no output exception was identified in this file's header.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 22,
+          "byte_start": 0,
+          "byte_end_exclusive": 885,
+          "sha256": "d8cc4a9940146257c895804f8c2eac92504cd6a0aacb733621fdfd8c00094138"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/libtool-version",
+      "local_path": "acquired/native/libffi/libtool-version",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/libtool-version",
+      "bytes": 1095,
+      "sha256": "55212a6909eebe647abc5c10f2f268a388ef2e12474ed70bffd242fccb60cb28",
+      "git_blob_sha1": "607fee5585d9c7afec826675689a56abad43966d",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 29,
+          "byte_start": 0,
+          "byte_end_exclusive": 1095,
+          "sha256": "55212a6909eebe647abc5c10f2f268a388ef2e12474ed70bffd242fccb60cb28"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/asmcfi.m4",
+      "local_path": "acquired/native/libffi/m4/asmcfi.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/asmcfi.m4",
+      "bytes": 467,
+      "sha256": "370d6bd9896c51201bec2da86cba7034b1f61e224d9e2ab255aa4b61b04af8fb",
+      "git_blob_sha1": "3e28602274d70a9b17caeab5f17a18ec589ee7cd",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 13,
+          "byte_start": 0,
+          "byte_end_exclusive": 467,
+          "sha256": "370d6bd9896c51201bec2da86cba7034b1f61e224d9e2ab255aa4b61b04af8fb"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_append_flag.m4",
+      "local_path": "acquired/native/libffi/m4/ax_append_flag.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_append_flag.m4",
+      "bytes": 1552,
+      "sha256": "392cb0e965351b1d6a9847cf165dc4092fb1853fd63dbe010ac8b21c286f5e16",
+      "git_blob_sha1": "dd6d8b61406c32a1822760b8835062a7d6b1a156",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Permissive notice-preservation grant (explicit file text)",
+        "observation": "Copying/modification/distribution allowed by file text subject to preserving copyright and notice; preserve exact text.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 30,
+          "byte_start": 0,
+          "byte_end_exclusive": 1067,
+          "sha256": "a7b94dec133f7b432d99454598fa5dec7bc6b0d08a6c52d0a6a50e0400507fd2"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_cc_maxopt.m4",
+      "local_path": "acquired/native/libffi/m4/ax_cc_maxopt.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_cc_maxopt.m4",
+      "bytes": 8127,
+      "sha256": "a63670b118b80379d34dfe33537048aee23865e4a7ff80eecc528fde2509078f",
+      "git_blob_sha1": "9e7f1ee4a1dd1fbd7d1537dad3ba3e350aa75c2d",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific configure-output exception",
+        "observation": "Output configure scripts have an exception; the macro source remains governed by its GPL terms. Preserve the macro notice and GPL v3 text for the selected source-distribution route.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 57,
+          "byte_start": 0,
+          "byte_end_exclusive": 2643,
+          "sha256": "e0c5fbd7baaababaaa342617089e33034e810ea7209e98f7fc5f58200d5d5c73"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_cflags_warn_all.m4",
+      "local_path": "acquired/native/libffi/m4/ax_cflags_warn_all.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_cflags_warn_all.m4",
+      "bytes": 5059,
+      "sha256": "f698bd1b561a4e0ee1987b92cb77bb32e4f260319e44d677470dd3f8c82ccf58",
+      "git_blob_sha1": "094577e4589198d4ae9f784e93a410134ef3bbf5",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific configure-output exception",
+        "observation": "Output configure scripts have an exception; the macro source remains governed by its GPL terms. Preserve the macro notice and GPL v3 text for the selected source-distribution route.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 60,
+          "byte_start": 0,
+          "byte_end_exclusive": 2788,
+          "sha256": "6cbdeabccf1da17367167a8bb7b895d9308782417af715ac2c24e185cb861982"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_check_compile_flag.m4",
+      "local_path": "acquired/native/libffi/m4/ax_check_compile_flag.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_check_compile_flag.m4",
+      "bytes": 2104,
+      "sha256": "629dc6835eb1e2bd586fd842a4db66541bc442bcc2b13d6f24907631c5a688b0",
+      "git_blob_sha1": "bd753b34d7dc57063b0b65f1441dde0889e1cd26",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Permissive notice-preservation grant (explicit file text)",
+        "observation": "Copying/modification/distribution allowed by file text subject to preserving copyright and notice; preserve exact text.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 36,
+          "byte_start": 0,
+          "byte_end_exclusive": 1449,
+          "sha256": "72c3076858dd96e7fd521409af9ae90b18a87a12c53ca59bcf9da31a7bdc5448"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_compiler_vendor.m4",
+      "local_path": "acquired/native/libffi/m4/ax_compiler_vendor.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_compiler_vendor.m4",
+      "bytes": 3641,
+      "sha256": "2f440c236d5ec743713c5608d84f9d337fb596f45f873cd5420c495094fd6e60",
+      "git_blob_sha1": "73efdb00554675bbd048f489b577f542acd2f99d",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific configure-output exception",
+        "observation": "Output configure scripts have an exception; the macro source remains governed by its GPL terms. Preserve the macro notice and GPL v3 text for the selected source-distribution route.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 46,
+          "byte_start": 0,
+          "byte_end_exclusive": 2159,
+          "sha256": "c99cdb1ab1c6ec3867343baf98e4776ba310fa8a6708841734b80a15ed2aa39f"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_configure_args.m4",
+      "local_path": "acquired/native/libffi/m4/ax_configure_args.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_configure_args.m4",
+      "bytes": 1657,
+      "sha256": "6b03141f467ea653eed74bb4551db6e376527426684a243a8e723d1ad11e30e9",
+      "git_blob_sha1": "9237efea7a7f4509996b2b4f81a3b7e4d5d5721d",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Permissive notice-preservation grant (explicit file text)",
+        "observation": "Copying/modification/distribution allowed by file text subject to preserving copyright and notice; preserve exact text.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 38,
+          "byte_start": 0,
+          "byte_end_exclusive": 1344,
+          "sha256": "604a5352696050a698daad7a3f72e0bb500726b2bb9aa9e1ead0116153f1ff6e"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_enable_builddir.m4",
+      "local_path": "acquired/native/libffi/m4/ax_enable_builddir.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_enable_builddir.m4",
+      "bytes": 13216,
+      "sha256": "e63154501a33a7dba2621e14744f490482e1bc59ae7c7de2e53915ba8642f30d",
+      "git_blob_sha1": "710384da545f1fc8cc77ccfe630d1b73395104e2",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific configure-output exception",
+        "observation": "Output configure scripts have an exception; the macro source remains governed by its GPL terms. Preserve the macro notice and GPL v3 text for the selected source-distribution route.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 81,
+          "byte_start": 0,
+          "byte_end_exclusive": 3697,
+          "sha256": "362771f9516bf94d5e665cac2a30dfa824aa8cffbac1bec20f44cef8ece6c241"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_gcc_archflag.m4",
+      "local_path": "acquired/native/libffi/m4/ax_gcc_archflag.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_gcc_archflag.m4",
+      "bytes": 13171,
+      "sha256": "14fae97a5f044e8b5125638a54ed43be2e090c52771aa4955262727437e78fdb",
+      "git_blob_sha1": "c52b9b296e9fab68d94d325da566e65cd7e046f4",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific configure-output exception",
+        "observation": "Output configure scripts have an exception; the macro source remains governed by its GPL terms. Preserve the macro notice and GPL v3 text for the selected source-distribution route.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 67,
+          "byte_start": 0,
+          "byte_end_exclusive": 3257,
+          "sha256": "689a3ad6b1ed82fb34b9ff939b590735ff3977800be5c7199a844dfcd3dd512d"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_gcc_x86_cpuid.m4",
+      "local_path": "acquired/native/libffi/m4/ax_gcc_x86_cpuid.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_gcc_x86_cpuid.m4",
+      "bytes": 3703,
+      "sha256": "eba1884e575cb1e6e4174777fd708893982c355ff9d07f6cb0aa59d0fd66de0b",
+      "git_blob_sha1": "df954658ee1b08e6cbed2f801d64d5048c7c94fa",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "GPL-3.0-or-later WITH file-specific configure-output exception",
+        "observation": "Output configure scripts have an exception; the macro source remains governed by its GPL terms. Preserve the macro notice and GPL v3 text for the selected source-distribution route.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 60,
+          "byte_start": 0,
+          "byte_end_exclusive": 2836,
+          "sha256": "7c71a68bc8c6b26b675a8f6aa26ce40e5a9a85246fe06b09828e66768aff51a7"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/m4/ax_require_defined.m4",
+      "local_path": "acquired/native/libffi/m4/ax_require_defined.m4",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_require_defined.m4",
+      "bytes": 1218,
+      "sha256": "d870b21e817747c6a61a9dd72e06ea45f87e012c7a1a9aa5ff90cd3af89b3774",
+      "git_blob_sha1": "17c3eab7dafde6c1358c7c189bbe44a6e14995a7",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Permissive notice-preservation grant (explicit file text)",
+        "observation": "Copying/modification/distribution allowed by file text subject to preserving copyright and notice; preserve exact text.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 32,
+          "byte_start": 0,
+          "byte_end_exclusive": 1064,
+          "sha256": "13ee64d528133d9bf0f611d0e2186bf487bf5b8f0e5f39b638d9b3102a45be53"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/make_sunver.pl",
+      "local_path": "acquired/native/libffi/make_sunver.pl",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/make_sunver.pl",
+      "bytes": 9021,
+      "sha256": "ca40d3458893e03a90807be87d720a59e921ee6bf678c6696779d635004a261f",
+      "git_blob_sha1": "8a90b1fea0d366f7a9ec0857d5304a67ee34f389",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No file license/copyright grant found. LICENSE-BUILDTOOLS mentions this tool but does not explicitly assign its terms in the following GPL-v2 sentence; enclosing-term/provenance review remains open.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1030,
+          "sha256": "e087de9ac1217e233db7594183d9f86b8d4e244dbb9d8f4d63cc930802e4b6f6"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/msvcc.sh",
+      "local_path": "acquired/native/libffi/msvcc.sh",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/msvcc.sh",
+      "bytes": 8523,
+      "sha256": "6acb3b18fa2e34c8f7ec3d03e4a4ac535c01f8aa52bf74012787218dec860af3",
+      "git_blob_sha1": "7cfc5097fe73b08e4dbf428b1a1a1fb7e2d916aa",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "LICENSE-BUILDTOOLS separately summarizes GPL v2; preserve both texts and record chosen route before source distribution.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 38,
+          "byte_start": 0,
+          "byte_end_exclusive": 1718,
+          "sha256": "3dcc68982b9cf763858decc2cc1f137fc0540beb76965cb5f04d89d37c28f252"
+        }
+      }
+    },
+    {
+      "path": "native/libffi/src/dlmalloc.c",
+      "local_path": "acquired/native/libffi/src/dlmalloc.c",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/src/dlmalloc.c",
+      "bytes": 183571,
+      "sha256": "0f28533acfc8acf41cd4f9452e862344850be30e62ec55b6791225d8ae120209",
+      "git_blob_sha1": "1aba657edb51fb8d067985d3a8e707b5cf4adb5c",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Public-domain statement (Doug Lea dlmalloc 2.8.3)",
+        "observation": "Retain the exact declaration and allocator version; actual inclusion per native build remains unverified.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 7,
+          "byte_start": 0,
+          "byte_end_exclusive": 334,
+          "sha256": "77ac347420bff92e5fbfdb46b1106ff3a741f95ffd2cae4aecf57b368bc4309b"
+        }
+      }
+    },
+    {
+      "path": "native/pom.xml",
+      "local_path": "acquired/native/pom.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/pom.xml",
+      "bytes": 2446,
+      "sha256": "479b8743ed9acf7ccb43a6455dd6db7b2bc8f6a32838898313faa8f92d832951",
+      "git_blob_sha1": "4dff01066bbb5890cd2565ba4a265576431dca8f",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1420,
+          "sha256": "1c0ee69e4bdb462f042e0c7957b7f6e0090b80b1cab0628a1b5a49c7b0beaa48"
+        }
+      }
+    },
+    {
+      "path": "native/protect.h",
+      "local_path": "acquired/native/protect.h",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/protect.h",
+      "bytes": 4275,
+      "sha256": "5b5ddb946cd9a1331aabc64fb56e02b608fc0ec88e7f5ab82bf1b8440f482451",
+      "git_blob_sha1": "8114e422d5642aae14cdc4728e5f120c4b94c23f",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "Apache-2.0 OR LGPL-2.1-or-later (explicit file header)",
+        "observation": "Preserve file copyright lines and chosen license terms; no choice or approval is made here.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 23,
+          "byte_start": 0,
+          "byte_end_exclusive": 734,
+          "sha256": "495f9241043d50373124eeae6eb60ef63d4713e6e95248e3506c3fd14190e090"
+        }
+      }
+    },
+    {
+      "path": "native/snprintf.h",
+      "local_path": "acquired/native/snprintf.h",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/snprintf.h",
+      "bytes": 440,
+      "sha256": "c6d2031859ea635dea0f543d435051829c4b13f921e802dd6521bb3458e350d8",
+      "git_blob_sha1": "9faaa7cc42e03353c5a4a48c280b44fce52a6ac5",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "ENCLOSING_TERMS_REVIEW_REQUIRED",
+        "observation": "No standalone file license grant identified; enclosing project terms require applicability review.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 15,
+          "byte_start": 0,
+          "byte_end_exclusive": 440,
+          "sha256": "c6d2031859ea635dea0f543d435051829c4b13f921e802dd6521bb3458e350d8"
+        }
+      }
+    },
+    {
+      "path": "pom-jna-jpms.xml",
+      "local_path": "acquired/pom-jna-jpms.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-jpms.xml",
+      "bytes": 1588,
+      "sha256": "612c1b43a5bc46176318c214fa542c619eb88d891e461b3f7a984c4f23165407",
+      "git_blob_sha1": "672feafc7584105bea653a85cc749b2727832a7e",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "POM license declaration (not file-specific native closure)",
+        "observation": "Retained Maven declaration does not resolve every native, tool, macro or runtime component.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1187,
+          "sha256": "6e328a8a1f468cf54aa87b0226854f81728923c2776e73c16b50078bdc1bdb97"
+        }
+      }
+    },
+    {
+      "path": "pom-jna-platform-jpms.xml",
+      "local_path": "acquired/pom-jna-platform-jpms.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-platform-jpms.xml",
+      "bytes": 1816,
+      "sha256": "04a0a49a30ecb357099188dc1c0bb74363a5a1e839049678cd9d5f1239a17ebc",
+      "git_blob_sha1": "f022e3557f52c2510640b6a0827896a7941bed0c",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "POM license declaration (not file-specific native closure)",
+        "observation": "Retained Maven declaration does not resolve every native, tool, macro or runtime component.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1228,
+          "sha256": "ad776b978257c5ebafa5128db07caa8b0e75c9375e010c1b0858de15b3a37c79"
+        }
+      }
+    },
+    {
+      "path": "pom-jna-platform.xml",
+      "local_path": "acquired/pom-jna-platform.xml",
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-platform.xml",
+      "bytes": 1806,
+      "sha256": "ad2da042559a08bc22f10fdfc764782a565346a3ed4485c82aac2992a1b7b801",
+      "git_blob_sha1": "7ef76fa9c103ee974b6a80d00b265235460beb71",
+      "integrity_verified": true,
+      "notice_observation": {
+        "declared_or_observed_terms": "POM license declaration (not file-specific native closure)",
+        "observation": "Retained Maven declaration does not resolve every native, tool, macro or runtime component.",
+        "license_approved": false,
+        "full_file_review_complete": false,
+        "witness": {
+          "line_start": 1,
+          "line_end": 35,
+          "byte_start": 0,
+          "byte_end_exclusive": 1223,
+          "sha256": "32d168d992a69a13bd4748ee754d8a9f2ea69fededf784e3a0770455e66c862a"
+        }
+      }
+    }
+  ],
+  "native_builds_performed": 0,
+  "native_platform_tests_passed": 0,
+  "license_approved": false,
+  "engine_or_foundation_status_changed": false,
+  "remaining": [
+    "455 additional files in the 508-file conservative inventory are not acquired by this text request or its six existing inputs.",
+    "All architecture C/assembly, generated JNI/configure/header inputs, build dependencies and platform toolchains require complete correspondence proof.",
+    "Full GPL-v3 source-distribution text/route for GPL-v3 macro sources is not supplied by this JNA tree's LICENSE-BUILDTOOLS (GPL v2).",
+    "make_sunver.pl, header-only notices and files without independent grants require enclosing-license/provenance review; do not blanket classify the subtree as MIT.",
+    "Static compiler runtimes, CRTs, JNI-header supplier terms and generated-tool license exceptions remain unverified."
+  ],
+  "resource_record": {
+    "owner": "parent consolidated source-acquisition lane",
+    "container_name": "expertauth-native-source-95c0212f31f4",
+    "container_id": "07047ab43e8b12fdfdc81b1a7c6d41e49ec0b2e1b4736190206afedc73f836da",
+    "container_absent_recorded": true,
+    "record_path": "acquired/container.json",
+    "independent_live_docker_inspection_performed": false
+  },
+  "reviewer_resources_created": {
+    "containers": [],
+    "images": [],
+    "networks": [],
+    "volumes": []
+  }
+}

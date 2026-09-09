@@ -1,0 +1,10 @@
+{
+  "files": [
+    {
+      "path": "src/main/include/config.h",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/config.h",
+      "expected_bytes": 157,
+      "expected_git_blob_sha1": "0000000000000000000000000000000000000000"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+"""Use the cached Python base to fetch bounded public source text; retire only our container."""
+from __future__ import annotations
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import re
+from pathlib import Path
+import subprocess
+import uuid
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / 'evidence/reuse/native-correspondence'
+IMAGE = 'python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36'
+LABELS = {'org.expertauth.project': 'expert-auth', 'org.expertauth.purpose': 'native-source-capture'}
+
+
+def call(args, timeout=30):
+    return subprocess.run(args, cwd=ROOT, capture_output=True, text=True, timeout=timeout)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--metadata', action='store_true')
+    mode.add_argument('--license-texts', action='store_true')
+    mode.add_argument('--request', type=Path)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    output = args.output.resolve()
+    if not output.is_relative_to(BASE.resolve()) or output == BASE.resolve() or output.exists():
+        raise ValueError('Use a new native review output directory')
+    request = args.request.resolve() if args.request else None
+    if request and (not request.is_relative_to(BASE.resolve()) or not request.is_file()):
+        raise ValueError('Request outside native review directory')
+    image = call(['docker', 'image', 'inspect', IMAGE])
+    if image.returncode:
+        raise RuntimeError('Required cached Python image unavailable; no pull authorized by this runner')
+    image_id = json.loads(image.stdout)[0]['Id']
+    suffix = uuid.uuid4().hex[:12]
+    name = 'expertauth-native-source-' + suffix
+    private = ROOT / '.runtime/native-source-capture'
+    private.mkdir(parents=True, exist_ok=True)
+    cidfile = private / (suffix + '.cid')
+    output.mkdir(parents=True)
+    target = '/repo/' + output.relative_to(ROOT).as_posix()
+    command = ['docker', 'run', '--pull=never', '--rm', '--name', name, '--cidfile', str(cidfile),
+               '--read-only', '--memory=256m', '--pids-limit=64', '--cpus=1', '--cap-drop=ALL',
+               '--security-opt=no-new-privileges', '--tmpfs', '/tmp:rw,nosuid,noexec,size=16m',
+               '--mount', f'type=bind,source={ROOT / "tools/capture_native_sources.py"},target=/repo/tools/capture_native_sources.py,readonly',
+               '--mount', f'type=bind,source={output},target={target}']
+    if request:
+        command.extend(['--mount', f'type=bind,source={request},target=/repo/{request.relative_to(ROOT).as_posix()},readonly'])
+    for key, value in LABELS.items():
+        command.extend(['--label', key + '=' + value])
+    command.extend([IMAGE, 'python', '-B', '/repo/tools/capture_native_sources.py'])
+    command.extend(['--metadata'] if args.metadata else ['--license-texts'] if args.license_texts else
+                   ['--request', '/repo/' + request.relative_to(ROOT).as_posix()])
+    command.extend(['--output', target])
+    report = {'schema': 'expertauth-native-source-container-v1', 'started': datetime.now(timezone.utc).isoformat(),
+              'tool_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), 'command': command,
+              'image_id': image_id, 'container_name': name, 'labels': LABELS, 'errors': []}
+    try:
+        result = call(command, timeout=900)
+        report.update(exit_code=result.returncode, stdout=result.stdout, stderr=result.stderr)
+    except Exception as error:
+        report['errors'].append(type(error).__name__ + ': ' + str(error))
+    finally:
+        report['container_absent'] = False
+        try:
+            cid = cidfile.read_text().strip() if cidfile.exists() else None
+            report['container_id'] = cid
+            if cid:
+                if not re.fullmatch('[0-9a-f]{64}', cid):
+                    raise ValueError('Invalid retained container identity; removal refused')
+                inspected = call(['docker', 'container', 'inspect', cid])
+                if inspected.returncode == 0:
+                    row = json.loads(inspected.stdout)[0]
+                    owned = (row['Id'] == cid and row['Name'] == '/' + name and row['Image'] == image_id and
+                             all((row['Config'].get('Labels') or {}).get(k) == v for k, v in LABELS.items()))
+                    if not owned:
+                        report['errors'].append('Container ownership differs; removal refused')
+                    else:
+                        removed = call(['docker', 'container', 'rm', '-f', cid])
+                        report['fallback_cleanup_exit_code'] = removed.returncode
+                        if removed.returncode:
+                            report['errors'].append('Owned container removal failed: ' + removed.stderr)
+                remaining = call(['docker', 'container', 'ls', '-aq', '--no-trunc', '--filter', 'id=' + cid])
+            else:
+                remaining = call(['docker', 'container', 'ls', '-aq', '--filter', 'name=^/' + name + '$'])
+            report['container_absent'] = remaining.returncode == 0 and not remaining.stdout.strip()
+            if report['container_absent']:
+                cidfile.unlink(missing_ok=True)
+        except Exception as error:
+            report['errors'].append('Cleanup unverified: ' + type(error).__name__ + ': ' + str(error))
+        report['finished'] = datetime.now(timezone.utc).isoformat()
+        report['passed'] = report.get('exit_code') == 0 and report['container_absent'] and not report['errors']
+        (output / 'container.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+    print(json.dumps({'output': str(output.relative_to(ROOT)), 'passed': report['passed'],
+                      'container_absent': report['container_absent'], 'errors': report['errors'],
+                      'stdout': report.get('stdout'), 'stderr': report.get('stderr')}), flush=True)
+    return 0 if report['passed'] else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

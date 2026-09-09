@@ -1,0 +1,1455 @@
+{
+  "schema": "expertauth-scrypt-native-source-correspondence-v1",
+  "coordinate": "com.lambdaworks:scrypt:1.4.0",
+  "repository": "https://github.com/wg/scrypt",
+  "release_tag": "1.4.0",
+  "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+  "scope": "File acquisition, notice observations and release-tree byte correspondence; no native build or legal/security approval",
+  "native_corresponding_source_complete": false,
+  "native_rebuild_verified": false,
+  "license_approved": false,
+  "foundation_passed": false,
+  "independent_security_review_passed": false,
+  "tree": {
+    "entries": 71,
+    "blobs": 42,
+    "subtrees_verified": 29,
+    "commit_binding": {
+      "status": "verified-commit-tree-binding",
+      "reconstructed_root_tree_sha1": "d9a607e3794061fc867796e76c5b35556e2457c9",
+      "note": "The cached trees endpoint top-level sha echoes the requested commit; it is not the reconstructed root tree hash."
+    }
+  },
+  "archives": {
+    "binary": {
+      "path": ".cache/engine-build/supertokens-core/build/dependencies/scrypt-1.4.0.jar",
+      "sha256": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4",
+      "bytes": 50052
+    },
+    "source": {
+      "path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+      "sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+      "bytes": 41994
+    }
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "role": "build-or-project-notice",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/LICENSE",
+      "expected_bytes": 10174,
+      "expected_git_blob_sha1": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__LICENSE"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "git_blob_sha1": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "2. Grant of Copyright License. Subject to the terms and conditions of"
+        ],
+        "inline_notice_byte_range": null,
+        "inline_notice_sha256": null,
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "Makefile",
+      "role": "build-or-project-notice",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/Makefile",
+      "expected_bytes": 1253,
+      "expected_git_blob_sha1": "cbb27b2d6b637a915153b9a1d86bb06f72bc2e6d",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__Makefile"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 1253,
+      "sha256": "9a4fe30061862c775cea22397badc8b14e6407b2ee12ecd6fcd8e826fcf4a48c",
+      "git_blob_sha1": "cbb27b2d6b637a915153b9a1d86bb06f72bc2e6d",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [],
+        "inline_notice_byte_range": null,
+        "inline_notice_sha256": null,
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "README",
+      "role": "build-or-project-notice",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/README",
+      "expected_bytes": 3095,
+      "expected_git_blob_sha1": "873c303dd4362ae429433b3e12b94f3578825181",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__README"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 3095,
+      "sha256": "28bd26683e2295d0b091d1b8512306ce9141dfae84423e19f10bb9c723370282",
+      "git_blob_sha1": "873c303dd4362ae429433b3e12b94f3578825181",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [],
+        "inline_notice_byte_range": null,
+        "inline_notice_sha256": null,
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "pom.xml",
+      "role": "build-or-project-notice",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/pom.xml",
+      "expected_bytes": 4054,
+      "expected_git_blob_sha1": "0674a53271dee5f8018a8f9a43554e9a6327a2cd",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__pom.xml"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 4054,
+      "sha256": "6b24f9e7bb62550241e286287f527a7dc463669a0b7cf5acde599e99842de721",
+      "git_blob_sha1": "0674a53271dee5f8018a8f9a43554e9a6327a2cd",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [],
+        "inline_notice_byte_range": null,
+        "inline_notice_sha256": null,
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/c/crypto_scrypt-nosse.c",
+      "role": "native-c",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-nosse.c",
+      "expected_bytes": 8979,
+      "expected_git_blob_sha1": "5f6690bd12db09286a6bf81ea519ad4c179bc870",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__crypto_scrypt-nosse.c"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 8979,
+      "sha256": "5eb2a4bf4b2c75c99d4cff769db19d1aa70f333c8e3ed9dccdd3ce64510abba7",
+      "git_blob_sha1": "5f6690bd12db09286a6bf81ea519ad4c179bc870",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "BSD-2-Clause",
+        "basis": "Explicit file permission and disclaimer block",
+        "copyright_lines": [
+          "Copyright 2009 Colin Percival"
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 1456
+        },
+        "inline_notice_sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8",
+        "distribution_terms_summary": [
+          "Retain copyright, conditions and disclaimer in source distributions.",
+          "Reproduce copyright, conditions and disclaimer in binary documentation/materials."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "scrypt_platform.h",
+          "scope": "project"
+        },
+        {
+          "header": "sys/types.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "sys/mman.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "errno.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdint.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdlib.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "string.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "sha256.h",
+          "scope": "project"
+        },
+        {
+          "header": "sysendian.h",
+          "scope": "project"
+        },
+        {
+          "header": "crypto_scrypt.h",
+          "scope": "project"
+        }
+      ]
+    },
+    {
+      "path": "src/main/c/crypto_scrypt-sse.c",
+      "role": "native-c",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/crypto_scrypt-sse.c",
+      "expected_bytes": 9689,
+      "expected_git_blob_sha1": "3da4903eb182c7d5a418a2694ac60206a720ccff",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__crypto_scrypt-sse.c"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 9689,
+      "sha256": "8408a75032f7477cc88c28ba599a12505dc4f0707cd5820f7b00d332b6029cc1",
+      "git_blob_sha1": "3da4903eb182c7d5a418a2694ac60206a720ccff",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "BSD-2-Clause",
+        "basis": "Explicit file permission and disclaimer block",
+        "copyright_lines": [
+          "Copyright 2009 Colin Percival"
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 1456
+        },
+        "inline_notice_sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8",
+        "distribution_terms_summary": [
+          "Retain copyright, conditions and disclaimer in source distributions.",
+          "Reproduce copyright, conditions and disclaimer in binary documentation/materials."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "scrypt_platform.h",
+          "scope": "project"
+        },
+        {
+          "header": "sys/types.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "sys/mman.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "emmintrin.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "errno.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdint.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdlib.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "string.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "sha256.h",
+          "scope": "project"
+        },
+        {
+          "header": "sysendian.h",
+          "scope": "project"
+        },
+        {
+          "header": "crypto_scrypt.h",
+          "scope": "project"
+        }
+      ]
+    },
+    {
+      "path": "src/main/c/scrypt_jni.c",
+      "role": "native-c",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/scrypt_jni.c",
+      "expected_bytes": 2060,
+      "expected_git_blob_sha1": "e8e54b9d5e5a4a9b601d2da952f6b74187279f84",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__scrypt_jni.c"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2060,
+      "sha256": "d3809f7b1d48bf906ccdaab0c4d909310d5adf45b81e6ba8a6c0929d2198fd86",
+      "git_blob_sha1": "e8e54b9d5e5a4a9b601d2da952f6b74187279f84",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "errno.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdlib.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "inttypes.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "jni.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "crypto_scrypt.h",
+          "scope": "project"
+        }
+      ]
+    },
+    {
+      "path": "src/main/c/sha256.c",
+      "role": "native-c",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/c/sha256.c",
+      "expected_bytes": 11115,
+      "expected_git_blob_sha1": "01a9f398fb33a18a68829be3e5af0475dcd6b6eb",
+      "local_source": {
+        "path": "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__sha256.c"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 11115,
+      "sha256": "522ade38a27290c3db62c773dc042e4ac52161dd53d722e06b2bbeda63243358",
+      "git_blob_sha1": "01a9f398fb33a18a68829be3e5af0475dcd6b6eb",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "BSD-2-Clause",
+        "basis": "Explicit file permission and disclaimer block",
+        "copyright_lines": [
+          "Copyright 2005,2007,2009 Colin Percival"
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 1361
+        },
+        "inline_notice_sha256": "a341ec72b05646a3ffa490381b0ba622b7088ae37c5f4e9d86a3062d15cbb908",
+        "distribution_terms_summary": [
+          "Retain copyright, conditions and disclaimer in source distributions.",
+          "Reproduce copyright, conditions and disclaimer in binary documentation/materials."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "scrypt_platform.h",
+          "scope": "project"
+        },
+        {
+          "header": "sys/types.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdint.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "string.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "sysendian.h",
+          "scope": "project"
+        },
+        {
+          "header": "sha256.h",
+          "scope": "project"
+        }
+      ]
+    },
+    {
+      "path": "src/main/include/config.h",
+      "role": "native-header",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/config.h",
+      "expected_bytes": 157,
+      "expected_git_blob_sha1": "1f0dc1e1c5a4c67720f359b2543b61bd8d536bb1",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/config.h"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 157,
+      "sha256": "fd1b958b79aeade834fa63243d44c2157ff83a1a087a5ee6f4c9df04e7c37b68",
+      "git_blob_sha1": "1f0dc1e1c5a4c67720f359b2543b61bd8d536bb1",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [],
+        "inline_notice_byte_range": null,
+        "inline_notice_sha256": null,
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "sys/limits.h",
+          "scope": "system-toolchain"
+        }
+      ]
+    },
+    {
+      "path": "src/main/include/crypto_scrypt.h",
+      "role": "native-header",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/crypto_scrypt.h",
+      "expected_bytes": 2082,
+      "expected_git_blob_sha1": "f72e1f4b0db58e505250dcfabbff92549d9c59c5",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/crypto_scrypt.h"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2082,
+      "sha256": "19c2bc37fa9b6dfc0f9fc825bb1cc93739796062c23fb51f9264568e831626ac",
+      "git_blob_sha1": "f72e1f4b0db58e505250dcfabbff92549d9c59c5",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "BSD-2-Clause",
+        "basis": "Explicit file permission and disclaimer block",
+        "copyright_lines": [
+          "Copyright 2009 Colin Percival"
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 1456
+        },
+        "inline_notice_sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8",
+        "distribution_terms_summary": [
+          "Retain copyright, conditions and disclaimer in source distributions.",
+          "Reproduce copyright, conditions and disclaimer in binary documentation/materials."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "stdint.h",
+          "scope": "system-toolchain"
+        }
+      ]
+    },
+    {
+      "path": "src/main/include/scrypt_platform.h",
+      "role": "native-header",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/scrypt_platform.h",
+      "expected_bytes": 263,
+      "expected_git_blob_sha1": "5cec2363134853eb4f7010edf7c577670f294446",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/scrypt_platform.h"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 263,
+      "sha256": "da0fee78e744f01d8d0e2d09067363f9c918b59aa58b41fcb9feb01ad40a5eaa",
+      "git_blob_sha1": "5cec2363134853eb4f7010edf7c577670f294446",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [],
+        "inline_notice_byte_range": null,
+        "inline_notice_sha256": null,
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "config.h",
+          "scope": "project"
+        }
+      ]
+    },
+    {
+      "path": "src/main/include/sha256.h",
+      "role": "native-header",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/sha256.h",
+      "expected_bytes": 2417,
+      "expected_git_blob_sha1": "289a5232f6e5fe266bd71ad89684afa08e1ac693",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/sha256.h"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2417,
+      "sha256": "0ee829a2ccee8e434e769e371607296b22620081fb9aafb6056e5df68c3a1cf7",
+      "git_blob_sha1": "289a5232f6e5fe266bd71ad89684afa08e1ac693",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "BSD-2-Clause",
+        "basis": "Explicit file permission and disclaimer block",
+        "copyright_lines": [
+          "Copyright 2005,2007,2009 Colin Percival"
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 1436
+        },
+        "inline_notice_sha256": "9d58252d00b39208738bfcc510ef5b24b3f6e7b54b42c307c6185c71a473cf25",
+        "distribution_terms_summary": [
+          "Retain copyright, conditions and disclaimer in source distributions.",
+          "Reproduce copyright, conditions and disclaimer in binary documentation/materials."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "sys/types.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdint.h",
+          "scope": "system-toolchain"
+        }
+      ]
+    },
+    {
+      "path": "src/main/include/sysendian.h",
+      "role": "native-header",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/sysendian.h",
+      "expected_bytes": 3797,
+      "expected_git_blob_sha1": "62ef31a42bd0245caa2ea20d509fbed9cab579d1",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/sysendian.h"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 3797,
+      "sha256": "996b0821c7fd18bc9d5307995e360e4262be7d8cd65966350e92dfcc057d6f59",
+      "git_blob_sha1": "62ef31a42bd0245caa2ea20d509fbed9cab579d1",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "BSD-2-Clause",
+        "basis": "Explicit file permission and disclaimer block",
+        "copyright_lines": [
+          "Copyright 2007-2009 Colin Percival"
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 1461
+        },
+        "inline_notice_sha256": "1d5a2048f30137293e7b5629f647b25f984f30931cb925afb661bc2996597618",
+        "distribution_terms_summary": [
+          "Retain copyright, conditions and disclaimer in source distributions.",
+          "Reproduce copyright, conditions and disclaimer in binary documentation/materials."
+        ],
+        "independent_license_approval": false
+      },
+      "includes": [
+        {
+          "header": "scrypt_platform.h",
+          "scope": "project"
+        },
+        {
+          "header": "sys/endian.h",
+          "scope": "system-toolchain"
+        },
+        {
+          "header": "stdint.h",
+          "scope": "system-toolchain"
+        }
+      ]
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/codec/Base64.java",
+      "role": "java-crypto-codec",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/codec/Base64.java",
+      "expected_bytes": 4672,
+      "expected_git_blob_sha1": "b615dad0449cc4e29a6e05e2a8bc04905e3380bb",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/codec/Base64.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 4672,
+      "sha256": "888183bb8631f00469fdf148ecad4f9f65f67824c7ba0b56d2a1cc0baa2c13fd",
+      "git_blob_sha1": "b615dad0449cc4e29a6e05e2a8bc04905e3380bb",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/crypto/PBKDF.java",
+      "role": "java-crypto-codec",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/crypto/PBKDF.java",
+      "expected_bytes": 2744,
+      "expected_git_blob_sha1": "43dc2f427427a267900e996b8c53e635ae9ffc42",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/crypto/PBKDF.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2744,
+      "sha256": "ed6a6325daa5674e658deff7d9e4371dddba56e51b5eca69c51d721aeccbe9de",
+      "git_blob_sha1": "43dc2f427427a267900e996b8c53e635ae9ffc42",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/crypto/SCrypt.java",
+      "role": "java-crypto-codec",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/crypto/SCrypt.java",
+      "expected_bytes": 7590,
+      "expected_git_blob_sha1": "6274238905ee85a0a8dfca999f49167af3a89daf",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/crypto/SCrypt.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 7590,
+      "sha256": "7fae0832fd4be7fb932bafb0c9e6eb1d351e73bd8b2c54f29c24eb1a4eef4357",
+      "git_blob_sha1": "6274238905ee85a0a8dfca999f49167af3a89daf",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/crypto/SCryptUtil.java",
+      "role": "java-crypto-codec",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/crypto/SCryptUtil.java",
+      "expected_bytes": 4095,
+      "expected_git_blob_sha1": "ca29a00cfda46ee1466c6b7cf0a14461d8a451f5",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/crypto/SCryptUtil.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 4095,
+      "sha256": "8a4313386b64e0a1da59a8014d78d55d250e689e76e71b48a490b48d561e518b",
+      "git_blob_sha1": "ca29a00cfda46ee1466c6b7cf0a14461d8a451f5",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/JarLibraryLoader.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/JarLibraryLoader.java",
+      "expected_bytes": 4431,
+      "expected_git_blob_sha1": "fd9d3abcff35aee2d071375d9aeadb7ece9c3b4f",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/JarLibraryLoader.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 4431,
+      "sha256": "8e8a9cab21606eca0f3c2230221e862d948f7f3bd3b83d4340214009fb4acebd",
+      "git_blob_sha1": "fd9d3abcff35aee2d071375d9aeadb7ece9c3b4f",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/LibraryLoader.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/LibraryLoader.java",
+      "expected_bytes": 574,
+      "expected_git_blob_sha1": "e84ee0ac20989e428b7dfdba5320e01701939153",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/LibraryLoader.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 574,
+      "sha256": "99dd9b99e6e49aae25ba7b21f549a08316db0cfd206e5f73ac78fb125a16c7b2",
+      "git_blob_sha1": "e84ee0ac20989e428b7dfdba5320e01701939153",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/LibraryLoaders.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/LibraryLoaders.java",
+      "expected_bytes": 1195,
+      "expected_git_blob_sha1": "1d87e3a5de06e6a799b4fed0b3951db1434b4a43",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/LibraryLoaders.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 1195,
+      "sha256": "36a4a9bf4d126e0779183141cd62da433f0a5071720b3494dd95ff934bf9995c",
+      "git_blob_sha1": "1d87e3a5de06e6a799b4fed0b3951db1434b4a43",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/NilLibraryLoader.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/NilLibraryLoader.java",
+      "expected_bytes": 524,
+      "expected_git_blob_sha1": "76a99a1c41edbd8bc428361b295314c0850330d3",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/NilLibraryLoader.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 524,
+      "sha256": "6c3ea2765fd86f176fc0e753b14c3bffeb8e764a656133c1257a210656fe4fee",
+      "git_blob_sha1": "76a99a1c41edbd8bc428361b295314c0850330d3",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2013 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "9721f34fd2da84012a87cb7f98bd2172a29e7d54975eee247abdbf44adb47141",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/Platform.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/Platform.java",
+      "expected_bytes": 2032,
+      "expected_git_blob_sha1": "953d5936b3078309d04168466f2230e042ae79d6",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/Platform.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2032,
+      "sha256": "83882d6a7e96439731275067f858906af5be66127ed33c64c47be44ca078946b",
+      "git_blob_sha1": "953d5936b3078309d04168466f2230e042ae79d6",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/SysLibraryLoader.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/SysLibraryLoader.java",
+      "expected_bytes": 811,
+      "expected_git_blob_sha1": "81a1c7f5f15e599aa92ec274986aa132b7827160",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/SysLibraryLoader.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 811,
+      "sha256": "d4440756eb667626b01ce641ed783e00f97638246089f58af3da8d394bb1e256",
+      "git_blob_sha1": "81a1c7f5f15e599aa92ec274986aa132b7827160",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/main/java/com/lambdaworks/jni/UnsupportedPlatformException.java",
+      "role": "java-jni-loader",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/java/com/lambdaworks/jni/UnsupportedPlatformException.java",
+      "expected_bytes": 337,
+      "expected_git_blob_sha1": "da0a53a97a125cb1f395f0d0c47efd53b391cbb5",
+      "local_source": {
+        "archive_path": ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar",
+        "archive_sha256": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+        "member": "com/lambdaworks/jni/UnsupportedPlatformException.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 337,
+      "sha256": "81b5e8b7a252090b9a0d5a7d0468c894b1edd7ffdb0bdfcd9b09bccfb83597f9",
+      "git_blob_sha1": "da0a53a97a125cb1f395f0d0c47efd53b391cbb5",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/CryptoTestUtil.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/CryptoTestUtil.java",
+      "expected_bytes": 589,
+      "expected_git_blob_sha1": "418c5f9e04614b425fd75fce7a9cb51b4fadbf63",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/CryptoTestUtil.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 589,
+      "sha256": "d8a94f440b247e0192d22cf534904b5b62b65f6c09dc82466d9a4c7767b6a4d8",
+      "git_blob_sha1": "418c5f9e04614b425fd75fce7a9cb51b4fadbf63",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/PBKDFTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/PBKDFTest.java",
+      "expected_bytes": 4414,
+      "expected_git_blob_sha1": "92a08b624238c9478f53130515f0cc9b7243895c",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/PBKDFTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 4414,
+      "sha256": "30dc15bda08df36a44d400641514b29550ce9a2a38bf26ff71ee2762d928d9a7",
+      "git_blob_sha1": "92a08b624238c9478f53130515f0cc9b7243895c",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/SCryptTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/SCryptTest.java",
+      "expected_bytes": 2917,
+      "expected_git_blob_sha1": "bd34bb2efae9f9dc0e9493c0ac0b9d870ffadfae",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/SCryptTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2917,
+      "sha256": "ec44e5d5dd1352f01cfd729e5ce579c123021ed619a8bff81487fabe8c5b8c94",
+      "git_blob_sha1": "bd34bb2efae9f9dc0e9493c0ac0b9d870ffadfae",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/SCryptUtilTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/SCryptUtilTest.java",
+      "expected_bytes": 1697,
+      "expected_git_blob_sha1": "f673657e653acaf0228106671d993f28f43b5ad7",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/SCryptUtilTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 1697,
+      "sha256": "a5a8fb7d84e17750abec8007f0d8ea02856f5e7edd54da9aa3046b8471dcf7cf",
+      "git_blob_sha1": "f673657e653acaf0228106671d993f28f43b5ad7",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/AbstractPlatformDetectionTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/AbstractPlatformDetectionTest.java",
+      "expected_bytes": 1041,
+      "expected_git_blob_sha1": "145369fa569434ec571e4c29a26b784357faa8cc",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/AbstractPlatformDetectionTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 1041,
+      "sha256": "5e74217f6d663a9932c15fe1fdb1452aedd8e6a0a623a95631251bd0ade5de1f",
+      "git_blob_sha1": "145369fa569434ec571e4c29a26b784357faa8cc",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/JarLibraryLoaderTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/JarLibraryLoaderTest.java",
+      "expected_bytes": 2492,
+      "expected_git_blob_sha1": "65e726887f42a4037f46c31bda3e6519ceedd630",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/JarLibraryLoaderTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 2492,
+      "sha256": "9cfa4c4044668b9fe0494dc68057f06c2c6b62243ed02761b83b9e3b98b27d23",
+      "git_blob_sha1": "65e726887f42a4037f46c31bda3e6519ceedd630",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/LibraryLoadersTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/LibraryLoadersTest.java",
+      "expected_bytes": 1568,
+      "expected_git_blob_sha1": "08ac73e6b7717b67010d9757a3993023325bf03f",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/LibraryLoadersTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 1568,
+      "sha256": "296e685ce2e289dc5155a778fe0ed8c20fd7615c34eb1e85a07d7dbb62bac398",
+      "git_blob_sha1": "08ac73e6b7717b67010d9757a3993023325bf03f",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/PlatformTest.java",
+      "role": "test-source",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/PlatformTest.java",
+      "expected_bytes": 1100,
+      "expected_git_blob_sha1": "4f469f162921b8e9c0e53a6d5418ca167a11ba88",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/PlatformTest.java"
+      },
+      "status": "verified-source-bytes",
+      "bytes": 1100,
+      "sha256": "643fa12ed20c4cc465ce4957cc3fa53b89706a58874d11b83630c9b2b0bac121",
+      "git_blob_sha1": "4f469f162921b8e9c0e53a6d5418ca167a11ba88",
+      "git_blob_and_size_verified": true,
+      "notice": {
+        "license_expression_observed": "Apache-2.0",
+        "basis": "Repository LICENSE and matching Maven POM declaration; no separate file grant or overriding terms found",
+        "copyright_lines": [
+          "Copyright (C) 2011 - Will Glozer.  All rights reserved."
+        ],
+        "inline_notice_byte_range": {
+          "start_inclusive": 0,
+          "end_exclusive": 58
+        },
+        "inline_notice_sha256": "7579266633f05f272b2c4d2b01c98f27008237fbf725217dbaee8174322b805c",
+        "distribution_terms_summary": [
+          "Preserve the repository Apache-2.0 license and applicable attribution notices.",
+          "Mark modified files and retain applicable NOTICE material when distributing derivatives."
+        ],
+        "independent_license_approval": false
+      }
+    }
+  ],
+  "summary": {
+    "source_build_test_files": 32,
+    "verified_files": 32,
+    "missing_files": [],
+    "roles": {
+      "build-or-project-notice": 4,
+      "native-c": 4,
+      "native-header": 5,
+      "java-crypto-codec": 4,
+      "java-jni-loader": 7,
+      "test-source": 8
+    },
+    "repository_native_c_and_headers_present_and_verified": true
+  },
+  "source_include_closure": {
+    "project_headers": [
+      "config.h",
+      "crypto_scrypt.h",
+      "scrypt_platform.h",
+      "sha256.h",
+      "sysendian.h"
+    ],
+    "system_headers_requiring_toolchain_provenance": [
+      "emmintrin.h",
+      "errno.h",
+      "inttypes.h",
+      "jni.h",
+      "stdint.h",
+      "stdlib.h",
+      "string.h",
+      "sys/endian.h",
+      "sys/limits.h",
+      "sys/mman.h",
+      "sys/types.h"
+    ],
+    "all_project_header_paths_in_manifest": true
+  },
+  "runtime_native_bindings": [
+    {
+      "jar_member": "lib/x86_64/darwin/libscrypt.dylib",
+      "upstream_path": "src/main/resources/lib/x86_64/darwin/libscrypt.dylib",
+      "bytes": 21708,
+      "sha256": "8327ecee1c6e5feb41766766b84e1d1ff11c3bfee1d56cc11db6db04919e5a58",
+      "git_blob_sha1": "8f53dd1797f915c849ae02370d6ad367ca33c3a5",
+      "release_tree_and_both_jars_byte_match": true,
+      "built_from_reviewed_sources_proven": false,
+      "toolchain_and_link_map_available": false,
+      "static_runtime_and_system_library_correspondence": "unverified"
+    },
+    {
+      "jar_member": "lib/x86_64/freebsd/libscrypt.so",
+      "upstream_path": "src/main/resources/lib/x86_64/freebsd/libscrypt.so",
+      "bytes": 22140,
+      "sha256": "8d1b208635d50b968d01825f94af44f0f106edc46cd078652beb8f6282f10f31",
+      "git_blob_sha1": "ef0dcbd490c067fa2b625467dd746d34a73099ea",
+      "release_tree_and_both_jars_byte_match": true,
+      "built_from_reviewed_sources_proven": false,
+      "toolchain_and_link_map_available": false,
+      "static_runtime_and_system_library_correspondence": "unverified"
+    },
+    {
+      "jar_member": "lib/x86_64/linux/libscrypt.so",
+      "upstream_path": "src/main/resources/lib/x86_64/linux/libscrypt.so",
+      "bytes": 21306,
+      "sha256": "69100ad6b49646f7f97388c64ed6d9fdf1a9b60c7dcf9787344e9f189359c3eb",
+      "git_blob_sha1": "caba0025cbf72dbfee6dcdfbbd81192f25bb2378",
+      "release_tree_and_both_jars_byte_match": true,
+      "built_from_reviewed_sources_proven": false,
+      "toolchain_and_link_map_available": false,
+      "static_runtime_and_system_library_correspondence": "unverified"
+    }
+  ],
+  "excluded_blob_inventory": [
+    {
+      "path": ".gitignore",
+      "git_blob_sha1": "0283abff8ec3282c5f886d853fcfbe8db240279c",
+      "bytes": 12,
+      "reason": "Git ignore metadata is not a native/JNI source or build input"
+    },
+    {
+      "path": "src/android/resources/lib/arm5/libscrypt.so",
+      "git_blob_sha1": "ec4b4341daa57589790446c9741b200cbcc85b2c",
+      "bytes": 17822,
+      "reason": "Upstream Android native is outside the three-member runtime JAR inventory; binary acquisition prohibited in this lane"
+    },
+    {
+      "path": "src/main/resources/lib/x86_64/darwin/libscrypt.dylib",
+      "git_blob_sha1": "8f53dd1797f915c849ae02370d6ad367ca33c3a5",
+      "bytes": 21708,
+      "reason": "Already inventoried runtime native; no acquisition"
+    },
+    {
+      "path": "src/main/resources/lib/x86_64/freebsd/libscrypt.so",
+      "git_blob_sha1": "ef0dcbd490c067fa2b625467dd746d34a73099ea",
+      "bytes": 22140,
+      "reason": "Already inventoried runtime native; no acquisition"
+    },
+    {
+      "path": "src/main/resources/lib/x86_64/linux/libscrypt.so",
+      "git_blob_sha1": "caba0025cbf72dbfee6dcdfbbd81192f25bb2378",
+      "bytes": 21306,
+      "reason": "Already inventoried runtime native; no acquisition"
+    },
+    {
+      "path": "src/test/resources/lambdaWorks.p7",
+      "git_blob_sha1": "2e5476b5d4177d05b01b403b03d1a6250844f309",
+      "bytes": 1899,
+      "reason": "Binary/signature test fixture not acquired; complete upstream test execution remains blocked"
+    },
+    {
+      "path": "src/test/resources/native-libs-badsig.jar",
+      "git_blob_sha1": "4b202b19e88befdc167af3afab15b53b074cfdff",
+      "bytes": 33452,
+      "reason": "Binary/signature test fixture not acquired; complete upstream test execution remains blocked"
+    },
+    {
+      "path": "src/test/resources/native-libs-invalid.jar",
+      "git_blob_sha1": "9d9e25de2bd6c22034c29db1a3d8fbeab72e8c92",
+      "bytes": 1272,
+      "reason": "Binary/signature test fixture not acquired; complete upstream test execution remains blocked"
+    },
+    {
+      "path": "src/test/resources/native-libs-signed.jar",
+      "git_blob_sha1": "2b5b83cc4713f7b22fabee68d67e2d34e7c082bd",
+      "bytes": 41741,
+      "reason": "Binary/signature test fixture not acquired; complete upstream test execution remains blocked"
+    },
+    {
+      "path": "src/test/resources/native-libs-unsigned.jar",
+      "git_blob_sha1": "e1dcfe4d78c2b755a88375b9fa1cf7323d345210",
+      "bytes": 39559,
+      "reason": "Binary/signature test fixture not acquired; complete upstream test execution remains blocked"
+    }
+  ],
+  "build_observations": {
+    "source": "Makefile",
+    "c_flags": "-std=c99 -Wall -O2 -DHAVE_CONFIG_H -I src/main/include",
+    "source_selection": "All four C files are considered; default SSE2=yes filters out crypto_scrypt-nosse.c; SSE2= filters out crypto_scrypt-sse.c.",
+    "native_output": "target/libscrypt.so or target/libscrypt.dylib; Makefile does not copy it into Maven resource directories.",
+    "platforms": [
+      {
+        "platform": "linux-x86_64",
+        "upstream_mode": "-shared -fPIC; JNI headers from JAVA_HOME/include and include/linux",
+        "qualification": "blocked-missing-toolchain-link-map-and-rebuild"
+      },
+      {
+        "platform": "freebsd-x86_64",
+        "upstream_mode": "-shared -fPIC; JNI headers from JAVA_HOME/include and include/freebsd",
+        "qualification": "blocked-missing-toolchain-link-map-and-rebuild"
+      },
+      {
+        "platform": "darwin-x86_64",
+        "upstream_mode": "-dynamiclib -undefined dynamic_lookup -single_module; legacy JAVA_HOME/Headers path",
+        "qualification": "blocked-missing-macos-sdk-toolchain-and-rebuild"
+      },
+      {
+        "platform": "android-arm",
+        "upstream_mode": "arm-linux-androideabi-gcc; NDK_ROOT/platforms/android-9/arch-arm; -lc; --fix-cortex-a8; SSE2 disabled",
+        "qualification": "outside-runtime-jar-and-unverified-upstream-native-platform"
+      }
+    ],
+    "compiler_version_pinned": false,
+    "jdk_vendor_version_and_jni_headers_pinned": false,
+    "system_headers_and_libc_versions_pinned": false,
+    "static_runtime_inclusion": "Unknown. A shared-library link command does not establish absence or provenance of statically incorporated compiler/runtime code.",
+    "maven": {
+      "java_source_target": "1.6",
+      "test_dependency": "junit:junit:4.8.2",
+      "plugins": {
+        "maven-compiler-plugin": "2.3.2",
+        "maven-resources-plugin": "2.5",
+        "maven-jarsigner-plugin": "1.2",
+        "maven-surefire-plugin": "2.10",
+        "maven-gpg-plugin": "1.1"
+      },
+      "native_compilation_wired_into_pom": false,
+      "signing_credentials_and_reproducible_release_process_available": false
+    }
+  },
+  "jni_boundary": {
+    "native_entry": "scrypt_jni.c JNI_OnLoad registers SCrypt.scryptN ([B[BIIII)[B using JNI_VERSION_1_6",
+    "java_selection": "SCrypt.scrypt selects scryptN only if LibraryLoader reports success; otherwise it uses scryptJ.",
+    "loader_property": "com.lambdaworks.jni.loader accepts nil/jar/sys; no configuration change was made.",
+    "platform_detector": "x86/x86_64 plus darwin/freebsd/linux; runtime JAR contains only x86_64 libraries.",
+    "native_execution_proven_by_this_manifest": false
+  },
+  "blockers": [
+    "All three runtime natives lack a reproduced source-to-binary build, compiler/JDK/platform SDK pins, link maps and transitive/static runtime provenance.",
+    "Native shared-library build output is not wired into Maven resource packaging; checked-in native bytes are packaged instead.",
+    "Complete upstream tests need five binary/signature fixtures that this source-only lane did not fetch, plus pinned test toolchain dependencies.",
+    "Independent license/security review and per-platform native execution remain unperformed."
+  ],
+  "inputs_sha256": {
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt-tree.json": "355a4a0c9ccc9a0fd898d25895b3125c12079c38863cc66b3d415d8a069ba242",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt-tag.json": "a69ed2c2fb422ea8e9b2438e486853984fe576a91b632dbea23ee98e53eee04a",
+    "evidence/reuse/native-correspondence/metadata/run-01/scrypt/commit.json": "83ccd9924a2a847b7206743fa52cf918c547e6822d045e4c8a6bc9aa2ff1a49f",
+    "evidence/reuse/runtime-distribution-review/archive-inventory.json": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b",
+    ".cache/engine-build/supertokens-core/build/dependencies/scrypt-1.4.0.jar": "9a82d218099fb14c10c0e86e7eefeebd8c104de920acdc47b8b4b7a686fb73b4",
+    ".cache/runtime-source-jars/com.lambdaworks.scrypt-1.4.0-sources.jar": "ac26db4cbcfd7c189d92b20516180c39b1558a31745beb36bcb1f7214e34a965",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__LICENSE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__Makefile": "9a4fe30061862c775cea22397badc8b14e6407b2ee12ecd6fcd8e826fcf4a48c",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__README": "28bd26683e2295d0b091d1b8512306ce9141dfae84423e19f10bb9c723370282",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__pom.xml": "6b24f9e7bb62550241e286287f527a7dc463669a0b7cf5acde599e99842de721",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__crypto_scrypt-nosse.c": "5eb2a4bf4b2c75c99d4cff769db19d1aa70f333c8e3ed9dccdd3ce64510abba7",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__crypto_scrypt-sse.c": "8408a75032f7477cc88c28ba599a12505dc4f0707cd5820f7b00d332b6029cc1",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__scrypt_jni.c": "d3809f7b1d48bf906ccdaab0c4d909310d5adf45b81e6ba8a6c0929d2198fd86",
+    "evidence/reuse/runtime-distribution-review/upstream/scrypt__src__main__c__sha256.c": "522ade38a27290c3db62c773dc042e4ac52161dd53d722e06b2bbeda63243358",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/config.h": "fd1b958b79aeade834fa63243d44c2157ff83a1a087a5ee6f4c9df04e7c37b68",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/crypto_scrypt.h": "19c2bc37fa9b6dfc0f9fc825bb1cc93739796062c23fb51f9264568e831626ac",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/scrypt_platform.h": "da0fee78e744f01d8d0e2d09067363f9c918b59aa58b41fcb9feb01ad40a5eaa",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/sha256.h": "0ee829a2ccee8e434e769e371607296b22620081fb9aafb6056e5df68c3a1cf7",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/sysendian.h": "996b0821c7fd18bc9d5307995e360e4262be7d8cd65966350e92dfcc057d6f59",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/CryptoTestUtil.java": "d8a94f440b247e0192d22cf534904b5b62b65f6c09dc82466d9a4c7767b6a4d8",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/PBKDFTest.java": "30dc15bda08df36a44d400641514b29550ce9a2a38bf26ff71ee2762d928d9a7",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/SCryptTest.java": "ec44e5d5dd1352f01cfd729e5ce579c123021ed619a8bff81487fabe8c5b8c94",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/crypto/test/SCryptUtilTest.java": "a5a8fb7d84e17750abec8007f0d8ea02856f5e7edd54da9aa3046b8471dcf7cf",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/AbstractPlatformDetectionTest.java": "5e74217f6d663a9932c15fe1fdb1452aedd8e6a0a623a95631251bd0ade5de1f",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/JarLibraryLoaderTest.java": "9cfa4c4044668b9fe0494dc68057f06c2c6b62243ed02761b83b9e3b98b27d23",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/LibraryLoadersTest.java": "296e685ce2e289dc5155a778fe0ed8c20fd7615c34eb1e85a07d7dbb62bac398",
+    "evidence/reuse/native-correspondence/scrypt/acquired/src/test/java/com/lambdaworks/jni/test/PlatformTest.java": "643fa12ed20c4cc465ce4957cc3fa53b89706a58874d11b83630c9b2b0bac121"
+  },
+  "tool_sha256": "6f4a7a2e31f9408ed7da05d747e172b6959404446118cac4b807dcc947be9d48"
+}

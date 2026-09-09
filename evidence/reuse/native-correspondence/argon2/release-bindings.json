@@ -1,0 +1,1332 @@
+{
+  "schema": "expertauth-argon2-release-correspondence-v1",
+  "commit": "a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1",
+  "tree": "f3cdd29128152396a913abf81b0dc1b84ab4ab6d",
+  "archives": [
+    {
+      "coordinate": "de.mkammerer:argon2-jvm:2.11",
+      "kind": "runtime",
+      "path": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+      "sha256": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1",
+      "bindings": [
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "linux-aarch64/libargon2.so"
+          },
+          "bytes": 172912,
+          "sha256": "20b12e0de71b2c5c6369091280a0a92451dcc8ea9a90355aade0cf0a9d2062e8",
+          "git_blob_sha1": "27f198ef1302748957a57058a9e2c42c211ab96c",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "linux-arm/libargon2.so"
+          },
+          "bytes": 154512,
+          "sha256": "f1642d52f0543d76ad5895421c860a5581677f2f0854faaddaa7681624c7b71c",
+          "git_blob_sha1": "e9b951d68ea6e0205df57f7702a6f0356f36d653",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "linux-x86-64/libargon2.so"
+          },
+          "bytes": 194040,
+          "sha256": "30c47b6591f53fd0b28ad9e679a9f8c62e21094251485a1fb06e8b81e2eeef45",
+          "git_blob_sha1": "bf8cad86215db71654f7a78677f67f88ffd5d3df",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "linux-x86/libargon2.so"
+          },
+          "bytes": 150376,
+          "sha256": "b108ec582fce15d844a9152cca1d51c23b10984601fbabafd3a4585144c4b4b3",
+          "git_blob_sha1": "b8eead3723fa64f4235146f1ab606396f7c1dc49",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "win32-x86-64/argon2.dll"
+          },
+          "bytes": 136192,
+          "sha256": "19333610dafb5bcf9269941a0aae0b440f1c13fb85dde68f05ea628181166cd2",
+          "git_blob_sha1": "a520b2bc109d17d082a88747d12954bdcd169544",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "win32-x86/argon2.dll"
+          },
+          "bytes": 116736,
+          "sha256": "376f2be5a9e309a8b3158cad5128b95f16b1bc95f9c2227f74a7c4c46166875f",
+          "git_blob_sha1": "2e71b284c65e3e317afa924bf17f152cf2472f8f",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "darwin-aarch64/libargon2.dylib"
+          },
+          "bytes": 76798,
+          "sha256": "8beda9a0477c4324f501692eaaf1570f00968c542753258e33c7fc1c2e65dc3a",
+          "git_blob_sha1": "79e00f7f4e5db09b62cde30b530e477e31b85c0f",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+          "local_source": {
+            "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+            "member": "darwin-x86-64/libargon2.dylib"
+          },
+          "bytes": 42500,
+          "sha256": "03bebb8ad4ed1b088a67b035f84d44f147a6e92ac6feaabd3af36ed90daa9103",
+          "git_blob_sha1": "2524c1e3d79b1f1dade071862898918d369a93bf",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+          "kind": "native-release-byte"
+        }
+      ]
+    },
+    {
+      "coordinate": "de.mkammerer:argon2-jvm:2.11",
+      "kind": "source",
+      "path": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+      "sha256": "c910eb491b745c9fed9c1ff1669ca9c1417601d85791aada0dcd547a20609852",
+      "bindings": [
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "linux-aarch64/libargon2.so"
+          },
+          "bytes": 172912,
+          "sha256": "20b12e0de71b2c5c6369091280a0a92451dcc8ea9a90355aade0cf0a9d2062e8",
+          "git_blob_sha1": "27f198ef1302748957a57058a9e2c42c211ab96c",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "linux-arm/libargon2.so"
+          },
+          "bytes": 154512,
+          "sha256": "f1642d52f0543d76ad5895421c860a5581677f2f0854faaddaa7681624c7b71c",
+          "git_blob_sha1": "e9b951d68ea6e0205df57f7702a6f0356f36d653",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "linux-x86-64/libargon2.so"
+          },
+          "bytes": 194040,
+          "sha256": "30c47b6591f53fd0b28ad9e679a9f8c62e21094251485a1fb06e8b81e2eeef45",
+          "git_blob_sha1": "bf8cad86215db71654f7a78677f67f88ffd5d3df",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "linux-x86/libargon2.so"
+          },
+          "bytes": 150376,
+          "sha256": "b108ec582fce15d844a9152cca1d51c23b10984601fbabafd3a4585144c4b4b3",
+          "git_blob_sha1": "b8eead3723fa64f4235146f1ab606396f7c1dc49",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "win32-x86-64/argon2.dll"
+          },
+          "bytes": 136192,
+          "sha256": "19333610dafb5bcf9269941a0aae0b440f1c13fb85dde68f05ea628181166cd2",
+          "git_blob_sha1": "a520b2bc109d17d082a88747d12954bdcd169544",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "win32-x86/argon2.dll"
+          },
+          "bytes": 116736,
+          "sha256": "376f2be5a9e309a8b3158cad5128b95f16b1bc95f9c2227f74a7c4c46166875f",
+          "git_blob_sha1": "2e71b284c65e3e317afa924bf17f152cf2472f8f",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "darwin-aarch64/libargon2.dylib"
+          },
+          "bytes": 76798,
+          "sha256": "8beda9a0477c4324f501692eaaf1570f00968c542753258e33c7fc1c2e65dc3a",
+          "git_blob_sha1": "79e00f7f4e5db09b62cde30b530e477e31b85c0f",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+          "kind": "native-release-byte"
+        },
+        {
+          "source_path": "argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+            "member": "darwin-x86-64/libargon2.dylib"
+          },
+          "bytes": 42500,
+          "sha256": "03bebb8ad4ed1b088a67b035f84d44f147a6e92ac6feaabd3af36ed90daa9103",
+          "git_blob_sha1": "2524c1e3d79b1f1dade071862898918d369a93bf",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+          "kind": "native-release-byte"
+        }
+      ]
+    },
+    {
+      "coordinate": "de.mkammerer:argon2-jvm-nolibs:2.11",
+      "kind": "runtime",
+      "path": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-nolibs-2.11.jar",
+      "sha256": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804",
+      "bindings": []
+    },
+    {
+      "coordinate": "de.mkammerer:argon2-jvm-nolibs:2.11",
+      "kind": "source",
+      "path": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+      "sha256": "e1d9f36d08b5dd09413e98e9f35cbc3430d38b498d37ad1e413e8fdabe3e3645",
+      "bindings": [
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2.java"
+          },
+          "bytes": 5487,
+          "sha256": "fabf5a83befed78ef1523061ad46810030193c21c153e31222051e2603c3c019",
+          "git_blob_sha1": "4094c5fcb0d4633d67e64c9947a926356a3c560c",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Constants.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2Constants.java"
+          },
+          "bytes": 402,
+          "sha256": "c86ae558b9bc66c7180da44fde9ef52fefef461dbaf63b442bd907a8a766a754",
+          "git_blob_sha1": "1f578aac9c545a76c7356f410143a80083829fef",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Constants.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Factory.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2Factory.java"
+          },
+          "bytes": 4898,
+          "sha256": "04c268d6b84e075b81e600a9ea85d500ba596ec7503bb729085ee789985b0a14",
+          "git_blob_sha1": "fe5bcbb5426af57eff38c1740c8565d06425323c",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Factory.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Helper.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2Helper.java"
+          },
+          "bytes": 3708,
+          "sha256": "2273037504f2a7695434265000dc614d6110ee46cf20c948fc1958dde046ec30",
+          "git_blob_sha1": "91104132b0c170cd346eaec8af8aec4eb01971c0",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Helper.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/HashResult.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/HashResult.java"
+          },
+          "bytes": 437,
+          "sha256": "5edffbe950c998b7c2f7b2ce1721d17f8a159090d98393d72276815773ebaf2c",
+          "git_blob_sha1": "703f5c9a9dfd67e73484aa689c3fe7ed53d6d685",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/HashResult.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_type.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/jna/Argon2_type.java"
+          },
+          "bytes": 383,
+          "sha256": "9ebaf3eee78d94692d8ea86afa37458b06d6ae893d3d2097377d07be20a36dc4",
+          "git_blob_sha1": "9b303ca5c31a020c25f99523293609e23bcd6066",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_type.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/JnaUint32.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/jna/JnaUint32.java"
+          },
+          "bytes": 384,
+          "sha256": "9c91876a94057f53f02f7b3f65f286907f488f8d5bc737140bddd2d9de9af72c",
+          "git_blob_sha1": "8f06b78cbfeff721d5b378c0ad16370ac71b206e",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/JnaUint32.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Size_t.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/jna/Size_t.java"
+          },
+          "bytes": 412,
+          "sha256": "5b0f1017f947ae09001781acae002acbc1fb9f69b3e63cf414f817ea906ffa1f",
+          "git_blob_sha1": "00e6f56ecc8949832cd8efa0e28eccdaa405c6a0",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Size_t.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2Library.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/jna/Argon2Library.java"
+          },
+          "bytes": 11612,
+          "sha256": "d01fee4ec162573ff9670d07c73ba92355ec66c3a5760480a62a8937d07f6182",
+          "git_blob_sha1": "7cf1958f10f77fecab6e67d60654b7a8496c2f8f",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2Library.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_context.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/jna/Argon2_context.java"
+          },
+          "bytes": 2008,
+          "sha256": "1bb8ba85650015fa83dd6d1dbb39a299d02cd89318df0d3609a5f775b84322e6",
+          "git_blob_sha1": "dd9e5b26488d53d8395c959a3218e6ba766bf908",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_context.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_version.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/jna/Argon2_version.java"
+          },
+          "bytes": 451,
+          "sha256": "847703211d963704e98cbe6a4b9680e4329ac1d3147f43d292b665e2a1b7337f",
+          "git_blob_sha1": "0e84fb27c663d611dd94e435632367e192a7d7ea",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_version.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Advanced.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2Advanced.java"
+          },
+          "bytes": 9480,
+          "sha256": "fb02c2b72ffa8c265a2822753f0b89c19dd35d720574b96cdb5b133f5eed41e5",
+          "git_blob_sha1": "7d8f8f9f011f63d9eb9f2c47fa3ba0d873744a30",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Advanced.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Version.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2Version.java"
+          },
+          "bytes": 547,
+          "sha256": "380f8039bc23f77ac79b6db4288c4c57adb379c9e6583efa9cb59b5e95f0eff7",
+          "git_blob_sha1": "5601fc7e06432181c01e2de3f124c112d8d03ce9",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Version.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2d.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2d.java"
+          },
+          "bytes": 2148,
+          "sha256": "3d246cccd58149c429fc428f26154cc9f7ff43cb56bb690defdb8c67fb7521a7",
+          "git_blob_sha1": "6e798d8a9ff04f1d6567b1236f40b464b4656fc5",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2d.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2i.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2i.java"
+          },
+          "bytes": 2148,
+          "sha256": "15c21a7040edc8480493828850fdb32717785410e782a5870275594e4af79be2",
+          "git_blob_sha1": "71c67423af8b04e4264cf36f4d7b07e9a0ca9ad8",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2i.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2id.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/Argon2id.java"
+          },
+          "bytes": 2156,
+          "sha256": "57dc9d998e440b694280e673c079746c3d91c61b9c9d3414c84772ce09908f83",
+          "git_blob_sha1": "08e57adabed7453f6f10905f51c9372a730cb7e7",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2id.java",
+          "kind": "java-source-byte"
+        },
+        {
+          "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/BaseArgon2.java",
+          "local_source": {
+            "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+            "member": "de/mkammerer/argon2/BaseArgon2.java"
+          },
+          "bytes": 18610,
+          "sha256": "080b4af30f4dfde455f52d68c1327a3c2800a33eec6d80b3f140f488955b915b",
+          "git_blob_sha1": "c9e47765aa8372a6138591f2a6c194f1c7cb9cff",
+          "matches_release_tree": true,
+          "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/BaseArgon2.java",
+          "kind": "java-source-byte"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "linux-aarch64/libargon2.so"
+      },
+      "bytes": 172912,
+      "sha256": "20b12e0de71b2c5c6369091280a0a92451dcc8ea9a90355aade0cf0a9d2062e8",
+      "git_blob_sha1": "27f198ef1302748957a57058a9e2c42c211ab96c",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "linux-arm/libargon2.so"
+      },
+      "bytes": 154512,
+      "sha256": "f1642d52f0543d76ad5895421c860a5581677f2f0854faaddaa7681624c7b71c",
+      "git_blob_sha1": "e9b951d68ea6e0205df57f7702a6f0356f36d653",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "linux-x86-64/libargon2.so"
+      },
+      "bytes": 194040,
+      "sha256": "30c47b6591f53fd0b28ad9e679a9f8c62e21094251485a1fb06e8b81e2eeef45",
+      "git_blob_sha1": "bf8cad86215db71654f7a78677f67f88ffd5d3df",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "linux-x86/libargon2.so"
+      },
+      "bytes": 150376,
+      "sha256": "b108ec582fce15d844a9152cca1d51c23b10984601fbabafd3a4585144c4b4b3",
+      "git_blob_sha1": "b8eead3723fa64f4235146f1ab606396f7c1dc49",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "win32-x86-64/argon2.dll"
+      },
+      "bytes": 136192,
+      "sha256": "19333610dafb5bcf9269941a0aae0b440f1c13fb85dde68f05ea628181166cd2",
+      "git_blob_sha1": "a520b2bc109d17d082a88747d12954bdcd169544",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "win32-x86/argon2.dll"
+      },
+      "bytes": 116736,
+      "sha256": "376f2be5a9e309a8b3158cad5128b95f16b1bc95f9c2227f74a7c4c46166875f",
+      "git_blob_sha1": "2e71b284c65e3e317afa924bf17f152cf2472f8f",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "darwin-aarch64/libargon2.dylib"
+      },
+      "bytes": 76798,
+      "sha256": "8beda9a0477c4324f501692eaaf1570f00968c542753258e33c7fc1c2e65dc3a",
+      "git_blob_sha1": "79e00f7f4e5db09b62cde30b530e477e31b85c0f",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+      "local_source": {
+        "archive": ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar",
+        "member": "darwin-x86-64/libargon2.dylib"
+      },
+      "bytes": 42500,
+      "sha256": "03bebb8ad4ed1b088a67b035f84d44f147a6e92ac6feaabd3af36ed90daa9103",
+      "git_blob_sha1": "2524c1e3d79b1f1dade071862898918d369a93bf",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "linux-aarch64/libargon2.so"
+      },
+      "bytes": 172912,
+      "sha256": "20b12e0de71b2c5c6369091280a0a92451dcc8ea9a90355aade0cf0a9d2062e8",
+      "git_blob_sha1": "27f198ef1302748957a57058a9e2c42c211ab96c",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-aarch64/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "linux-arm/libargon2.so"
+      },
+      "bytes": 154512,
+      "sha256": "f1642d52f0543d76ad5895421c860a5581677f2f0854faaddaa7681624c7b71c",
+      "git_blob_sha1": "e9b951d68ea6e0205df57f7702a6f0356f36d653",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-arm/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "linux-x86-64/libargon2.so"
+      },
+      "bytes": 194040,
+      "sha256": "30c47b6591f53fd0b28ad9e679a9f8c62e21094251485a1fb06e8b81e2eeef45",
+      "git_blob_sha1": "bf8cad86215db71654f7a78677f67f88ffd5d3df",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86-64/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "linux-x86/libargon2.so"
+      },
+      "bytes": 150376,
+      "sha256": "b108ec582fce15d844a9152cca1d51c23b10984601fbabafd3a4585144c4b4b3",
+      "git_blob_sha1": "b8eead3723fa64f4235146f1ab606396f7c1dc49",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/linux-x86/libargon2.so",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "win32-x86-64/argon2.dll"
+      },
+      "bytes": 136192,
+      "sha256": "19333610dafb5bcf9269941a0aae0b440f1c13fb85dde68f05ea628181166cd2",
+      "git_blob_sha1": "a520b2bc109d17d082a88747d12954bdcd169544",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86-64/argon2.dll",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "win32-x86/argon2.dll"
+      },
+      "bytes": 116736,
+      "sha256": "376f2be5a9e309a8b3158cad5128b95f16b1bc95f9c2227f74a7c4c46166875f",
+      "git_blob_sha1": "2e71b284c65e3e317afa924bf17f152cf2472f8f",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/win32-x86/argon2.dll",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "darwin-aarch64/libargon2.dylib"
+      },
+      "bytes": 76798,
+      "sha256": "8beda9a0477c4324f501692eaaf1570f00968c542753258e33c7fc1c2e65dc3a",
+      "git_blob_sha1": "79e00f7f4e5db09b62cde30b530e477e31b85c0f",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-aarch64/libargon2.dylib",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar",
+        "member": "darwin-x86-64/libargon2.dylib"
+      },
+      "bytes": 42500,
+      "sha256": "03bebb8ad4ed1b088a67b035f84d44f147a6e92ac6feaabd3af36ed90daa9103",
+      "git_blob_sha1": "2524c1e3d79b1f1dade071862898918d369a93bf",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/src/main/resources/darwin-x86-64/libargon2.dylib",
+      "kind": "native-release-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2.java"
+      },
+      "bytes": 5487,
+      "sha256": "fabf5a83befed78ef1523061ad46810030193c21c153e31222051e2603c3c019",
+      "git_blob_sha1": "4094c5fcb0d4633d67e64c9947a926356a3c560c",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Constants.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2Constants.java"
+      },
+      "bytes": 402,
+      "sha256": "c86ae558b9bc66c7180da44fde9ef52fefef461dbaf63b442bd907a8a766a754",
+      "git_blob_sha1": "1f578aac9c545a76c7356f410143a80083829fef",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Constants.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Factory.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2Factory.java"
+      },
+      "bytes": 4898,
+      "sha256": "04c268d6b84e075b81e600a9ea85d500ba596ec7503bb729085ee789985b0a14",
+      "git_blob_sha1": "fe5bcbb5426af57eff38c1740c8565d06425323c",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Factory.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Helper.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2Helper.java"
+      },
+      "bytes": 3708,
+      "sha256": "2273037504f2a7695434265000dc614d6110ee46cf20c948fc1958dde046ec30",
+      "git_blob_sha1": "91104132b0c170cd346eaec8af8aec4eb01971c0",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Helper.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/HashResult.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/HashResult.java"
+      },
+      "bytes": 437,
+      "sha256": "5edffbe950c998b7c2f7b2ce1721d17f8a159090d98393d72276815773ebaf2c",
+      "git_blob_sha1": "703f5c9a9dfd67e73484aa689c3fe7ed53d6d685",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/HashResult.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_type.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/jna/Argon2_type.java"
+      },
+      "bytes": 383,
+      "sha256": "9ebaf3eee78d94692d8ea86afa37458b06d6ae893d3d2097377d07be20a36dc4",
+      "git_blob_sha1": "9b303ca5c31a020c25f99523293609e23bcd6066",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_type.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/JnaUint32.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/jna/JnaUint32.java"
+      },
+      "bytes": 384,
+      "sha256": "9c91876a94057f53f02f7b3f65f286907f488f8d5bc737140bddd2d9de9af72c",
+      "git_blob_sha1": "8f06b78cbfeff721d5b378c0ad16370ac71b206e",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/JnaUint32.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Size_t.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/jna/Size_t.java"
+      },
+      "bytes": 412,
+      "sha256": "5b0f1017f947ae09001781acae002acbc1fb9f69b3e63cf414f817ea906ffa1f",
+      "git_blob_sha1": "00e6f56ecc8949832cd8efa0e28eccdaa405c6a0",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Size_t.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2Library.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/jna/Argon2Library.java"
+      },
+      "bytes": 11612,
+      "sha256": "d01fee4ec162573ff9670d07c73ba92355ec66c3a5760480a62a8937d07f6182",
+      "git_blob_sha1": "7cf1958f10f77fecab6e67d60654b7a8496c2f8f",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2Library.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_context.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/jna/Argon2_context.java"
+      },
+      "bytes": 2008,
+      "sha256": "1bb8ba85650015fa83dd6d1dbb39a299d02cd89318df0d3609a5f775b84322e6",
+      "git_blob_sha1": "dd9e5b26488d53d8395c959a3218e6ba766bf908",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_context.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_version.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/jna/Argon2_version.java"
+      },
+      "bytes": 451,
+      "sha256": "847703211d963704e98cbe6a4b9680e4329ac1d3147f43d292b665e2a1b7337f",
+      "git_blob_sha1": "0e84fb27c663d611dd94e435632367e192a7d7ea",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/jna/Argon2_version.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Advanced.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2Advanced.java"
+      },
+      "bytes": 9480,
+      "sha256": "fb02c2b72ffa8c265a2822753f0b89c19dd35d720574b96cdb5b133f5eed41e5",
+      "git_blob_sha1": "7d8f8f9f011f63d9eb9f2c47fa3ba0d873744a30",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Advanced.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Version.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2Version.java"
+      },
+      "bytes": 547,
+      "sha256": "380f8039bc23f77ac79b6db4288c4c57adb379c9e6583efa9cb59b5e95f0eff7",
+      "git_blob_sha1": "5601fc7e06432181c01e2de3f124c112d8d03ce9",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2Version.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2d.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2d.java"
+      },
+      "bytes": 2148,
+      "sha256": "3d246cccd58149c429fc428f26154cc9f7ff43cb56bb690defdb8c67fb7521a7",
+      "git_blob_sha1": "6e798d8a9ff04f1d6567b1236f40b464b4656fc5",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2d.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2i.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2i.java"
+      },
+      "bytes": 2148,
+      "sha256": "15c21a7040edc8480493828850fdb32717785410e782a5870275594e4af79be2",
+      "git_blob_sha1": "71c67423af8b04e4264cf36f4d7b07e9a0ca9ad8",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2i.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2id.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/Argon2id.java"
+      },
+      "bytes": 2156,
+      "sha256": "57dc9d998e440b694280e673c079746c3d91c61b9c9d3414c84772ce09908f83",
+      "git_blob_sha1": "08e57adabed7453f6f10905f51c9372a730cb7e7",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/Argon2id.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/BaseArgon2.java",
+      "local_source": {
+        "archive": ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar",
+        "member": "de/mkammerer/argon2/BaseArgon2.java"
+      },
+      "bytes": 18610,
+      "sha256": "080b4af30f4dfde455f52d68c1327a3c2800a33eec6d80b3f140f488955b915b",
+      "git_blob_sha1": "c9e47765aa8372a6138591f2a6c194f1c7cb9cff",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/src/main/java/de/mkammerer/argon2/BaseArgon2.java",
+      "kind": "java-source-byte"
+    },
+    {
+      "source_path": ".github/workflows/build-and-test.yml",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/.github/workflows/build-and-test.yml"
+      },
+      "bytes": 3240,
+      "sha256": "be898158cbf5cab34c9c9af2913a3ac08636064b25f35778b3b5c9e52bdeef71",
+      "git_blob_sha1": "221195d56bcbee84b2c06388c05015f52f906671",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/.github/workflows/build-and-test.yml",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": ".github/workflows/codeql-analysis.yml",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/.github/workflows/codeql-analysis.yml"
+      },
+      "bytes": 2672,
+      "sha256": "c4b69d1586826a741fb705a1478f19431f26cd1c09ea871272730313fe942c4d",
+      "git_blob_sha1": "b87ce1dd313d78e668fbd125193aebd507a20737",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/.github/workflows/codeql-analysis.yml",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "CHANGELOG.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/CHANGELOG.md"
+      },
+      "bytes": 5021,
+      "sha256": "e283d3666eaf62ead6f100b54d64b142cb62d45d0f1bcb45e7248a48c46a92e4",
+      "git_blob_sha1": "35213945c8870270946a02acc5a0fb6e96298c27",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/CHANGELOG.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "CONTRIBUTING.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/CONTRIBUTING.md"
+      },
+      "bytes": 312,
+      "sha256": "83c71d3d184cf445b8aad61453898fd9d605b129396dc96cf21eea9e062f2b4c",
+      "git_blob_sha1": "f00c74964db1b6e71e0e563e50e3f4148b85dd1c",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/CONTRIBUTING.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "LICENSE.txt",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/LICENSE.txt"
+      },
+      "bytes": 7632,
+      "sha256": "05f3d1fc856ccae3d371fe6e4140e1d4e2b3db46b8a5018702af93cbe30690db",
+      "git_blob_sha1": "ffce42b446d51326dbc8b1f71e38f7f612425be5",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/LICENSE.txt",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "README.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/README.md"
+      },
+      "bytes": 4611,
+      "sha256": "7471d1d3b190992e529b7f53f0fef01bd0110b3c82dd3d6207b8327f5a541b64",
+      "git_blob_sha1": "5e657e042bd022268740b6dd5f53d72a0075dcbd",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/README.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "SECURITY.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/SECURITY.md"
+      },
+      "bytes": 208,
+      "sha256": "530dad27c9c1fb2a2cd3a55a0a700ba293308a943690ccc3ee1bcbad11d0138e",
+      "git_blob_sha1": "24b66500e44d7aafdc9ac01cc4158b356cdba4b2",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/SECURITY.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/README.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-nolibs/README.md"
+      },
+      "bytes": 110,
+      "sha256": "4d5a4a98b5dec1aec129b2c169bd4a47c4b2b6434deb1d5d231ed4cc14ad3a50",
+      "git_blob_sha1": "6c15de0e074fb240d45f806f763274d2be971818",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/README.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "argon2-jvm-nolibs/build.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-nolibs/build.gradle"
+      },
+      "bytes": 910,
+      "sha256": "ccb735bf2d59d1a64515ac73aee2a9e3286264e2711f7197cc07f833f6c68510",
+      "git_blob_sha1": "802803ef6da315178c46473c08eea9b204fe2c67",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/build.gradle",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "argon2-jvm-runner/README.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-runner/README.md"
+      },
+      "bytes": 191,
+      "sha256": "4ed4e6470cbf06e2cd3a63ea19f4a8063cddd9adfecb62137865006ebb09d55e",
+      "git_blob_sha1": "cd3d8e45bb6f06411f9026bf0118474a2a1a3bf6",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-runner/README.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "argon2-jvm-runner/build.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-runner/build.gradle"
+      },
+      "bytes": 384,
+      "sha256": "e66cb3b8bcca18c1f14e60410958385d922f60870f0cb59f26557c5da320af86",
+      "git_blob_sha1": "ae28794884ca0a7856d80270b74b35be721e2345",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-runner/build.gradle",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "argon2-jvm/README.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm/README.md"
+      },
+      "bytes": 328,
+      "sha256": "f29d5a74417502626fa8026225f3610b159305bfbaf0a50c7c7d3827220ff6af",
+      "git_blob_sha1": "f236db2a43e0f25512fd1b3fadfabdd994b2e534",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/README.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "argon2-jvm/build.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm/build.gradle"
+      },
+      "bytes": 250,
+      "sha256": "62048119c704e416d91ae1a593bb6b64bfc90ade2b5912ecd47a8cf6a9dfb708",
+      "git_blob_sha1": "ad51149b89dd3242280dd4973eb0b259c6f361a0",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/build.gradle",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "build.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/build.gradle"
+      },
+      "bytes": 2372,
+      "sha256": "fbc0fc7524143046b7017c6c51ce809ca7bdfc6730c606e80345289db92553ce",
+      "git_blob_sha1": "ae4a8049648c161a337dd02a16ee77ee4704ce9a",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/build.gradle",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/README.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/README.md"
+      },
+      "bytes": 2213,
+      "sha256": "dd38358ad06c2b89025690a3dca7b7daed84f63811fa36115267f49ea82d4c27",
+      "git_blob_sha1": "a144de01c4c2e43b9d96d6e26904fff58a322ee0",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/README.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/build.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/build.gradle"
+      },
+      "bytes": 338,
+      "sha256": "35a235b3d6831bc1d0d8cc2a7ddde307a44da73c9dd3342feb3fb0cd6e46c466",
+      "git_blob_sha1": "f668bc85bdbc8b366093d2e34679eeda96644745",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/build.gradle",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/gradle/wrapper/gradle-wrapper.properties",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/gradle/wrapper/gradle-wrapper.properties"
+      },
+      "bytes": 202,
+      "sha256": "d28cf7781353b906ff064821470d5d8e62d3a330e427a74da255463b411db106",
+      "git_blob_sha1": "4d9ca1649142b0c20144adce78e2472e2da01c30",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/gradle/wrapper/gradle-wrapper.properties",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/gradlew.bat",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/gradlew.bat"
+      },
+      "bytes": 2674,
+      "sha256": "c46a27c79007746de5922b17abb6230d64ad8b1ba3ad1585ee5c6543c2a9b129",
+      "git_blob_sha1": "107acd32c4e687021ef32db511e8a206129b88ec",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/gradlew.bat",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/linux/libc-version.sh",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/linux/libc-version.sh"
+      },
+      "bytes": 351,
+      "sha256": "aac4c3f67a6032c5726e81aa16188e28444bf24506970a95fd6460a0485fac4f",
+      "git_blob_sha1": "bb9b658c06e645c357ecc865a569aea8497e432c",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/linux/libc-version.sh",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/linux/test.sh",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/linux/test.sh"
+      },
+      "bytes": 522,
+      "sha256": "1fa6b6c5ecf15680890159694bbaaa98f130cfff316c5dbcca196613554e4ad5",
+      "git_blob_sha1": "14d23c36f2c6f0817157d31ea7cf1b35478f1c2d",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/linux/test.sh",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "compatibility-tests/settings.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/settings.gradle"
+      },
+      "bytes": 41,
+      "sha256": "3b4d21f57516925de4877c025467a4072e2927d84d4b53da8aff6b217f417765",
+      "git_blob_sha1": "8770f40ea457298db663cc4e3c7d542ba18e6991",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/settings.gradle",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "docs/compile-argon2.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/docs/compile-argon2.md"
+      },
+      "bytes": 1125,
+      "sha256": "81b36826bbdac7a6255f66389aa5864cd96afb8e05c389e87a990bcf3165ea4d",
+      "git_blob_sha1": "0127da6c372bf318dc6d8ff69a3495ffae4cf2c2",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/docs/compile-argon2.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "docs/jna-knowhow.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/docs/jna-knowhow.md"
+      },
+      "bytes": 181,
+      "sha256": "157b5fc8c7dcad2a149b1968561fb6a22c569ae7e8fc2e89c8b049eaaac81665",
+      "git_blob_sha1": "d9392a0f416674d3693dee6469f9a555873072d7",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/docs/jna-knowhow.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "docs/publish.md",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/docs/publish.md"
+      },
+      "bytes": 1342,
+      "sha256": "07fa6605f47452a84f487f01d2871155e34fdba643101372fba2bb24fe5b292c",
+      "git_blob_sha1": "b3d44dd91ee4b8c9283daec216f30d5711491aca",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/docs/publish.md",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "gradle/wrapper/gradle-wrapper.properties",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/gradle/wrapper/gradle-wrapper.properties"
+      },
+      "bytes": 202,
+      "sha256": "052c9b360972f18483fb049cf13983706b6c8cec0d35594b3afe1802b5fe4a33",
+      "git_blob_sha1": "28ff446a21577879ae608199a6bbd5f86c8e58ab",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/gradle/wrapper/gradle-wrapper.properties",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "gradlew",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/gradlew"
+      },
+      "bytes": 5766,
+      "sha256": "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65",
+      "git_blob_sha1": "4f906e0c811fc9e230eb44819f509cd0627f2600",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/gradlew",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "gradlew.bat",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/gradlew.bat"
+      },
+      "bytes": 2674,
+      "sha256": "c46a27c79007746de5922b17abb6230d64ad8b1ba3ad1585ee5c6543c2a9b129",
+      "git_blob_sha1": "107acd32c4e687021ef32db511e8a206129b88ec",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/gradlew.bat",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "libargon2/Dockerfile",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/libargon2/Dockerfile"
+      },
+      "bytes": 353,
+      "sha256": "e32a535020db290f1230de4907ae8a09f6c72085e491038d874ec685d754507d",
+      "git_blob_sha1": "5992116e1eafdda6cd0ab7f3e84fc60dee321ef9",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/libargon2/Dockerfile",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "libargon2/context/build-libargon2.sh",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/libargon2/context/build-libargon2.sh"
+      },
+      "bytes": 811,
+      "sha256": "1f9e3ebc69698ab7211d50c152e5604ad799d2cfcee128402572b5c326143202",
+      "git_blob_sha1": "99d099c61fe33ec10fa6a6eaf6149b4b8b28562b",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/libargon2/context/build-libargon2.sh",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "libargon2/run.sh",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/libargon2/run.sh"
+      },
+      "bytes": 394,
+      "sha256": "7dc834cbcbc40ac268824c1d9f7daa36628dcb37f1f3e3c193fb338b150d66c7",
+      "git_blob_sha1": "d9793d8ab103443b5a2df39dcbbe074415e1769f",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/libargon2/run.sh",
+      "kind": "build-notice-documentation-byte"
+    },
+    {
+      "source_path": "settings.gradle",
+      "local_source": {
+        "path": "evidence/reuse/native-correspondence/argon2/acquired/settings.gradle"
+      },
+      "bytes": 110,
+      "sha256": "47c352baf5b37fc20ff027c2613bd9b6005c1daee37aafb9baa1afda301b9716",
+      "git_blob_sha1": "ba683264899e1cc7de37a92191cf2836ba8f2a24",
+      "matches_release_tree": true,
+      "source_url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/settings.gradle",
+      "kind": "build-notice-documentation-byte"
+    }
+  ],
+  "input_sha256": {
+    "evidence/reuse/native-correspondence/metadata/run-01/acquisition.json": "f78c40f107b7b804ae9722001eb83cc911858e88b4f0364479d00e7328f65d55",
+    "evidence/reuse/native-correspondence/metadata/run-01/argon2/commit.json": "ae290043c68b8e16b94aaa7377cd0cf70837fc0f8307f60c183f22610b1ce20a",
+    "evidence/reuse/native-correspondence/metadata/run-01/argon2/tree.json": "0321ecccac779c69cab5874f93ba7bf9d66071ebc9b197fc208540f06ca1f1a5",
+    "reuse/runtime-dependencies.json": "d24b8a383108071e66444e10532e9d61e859aab92126c543000b81f53592a812",
+    "reuse/runtime-source-archives.lock.json": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353",
+    ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-2.11.jar": "c1bb374c93c7f0a989530372c11b286a0b542fdd2b6efbcf9708368a70763eb1",
+    ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-2.11-sources.jar": "c910eb491b745c9fed9c1ff1669ca9c1417601d85791aada0dcd547a20609852",
+    ".cache/engine-build/supertokens-core/build/dependencies/argon2-jvm-nolibs-2.11.jar": "1557e5dc684b25dd210360ecc5ecc5fcc647e2a5b2a294822ddd3650253c2804",
+    ".cache/runtime-source-jars/de.mkammerer.argon2-jvm-nolibs-2.11-sources.jar": "e1d9f36d08b5dd09413e98e9f35cbc3430d38b498d37ad1e413e8fdabe3e3645",
+    "evidence/reuse/native-correspondence/argon2/acquired/acquisition.json": "d36624aea4237640e4637507c5e575aadeaf1db2ba3756467d1657a1f2b772aa",
+    "evidence/reuse/native-correspondence/argon2/acquired/.github/workflows/build-and-test.yml": "be898158cbf5cab34c9c9af2913a3ac08636064b25f35778b3b5c9e52bdeef71",
+    "evidence/reuse/native-correspondence/argon2/acquired/.github/workflows/codeql-analysis.yml": "c4b69d1586826a741fb705a1478f19431f26cd1c09ea871272730313fe942c4d",
+    "evidence/reuse/native-correspondence/argon2/acquired/CHANGELOG.md": "e283d3666eaf62ead6f100b54d64b142cb62d45d0f1bcb45e7248a48c46a92e4",
+    "evidence/reuse/native-correspondence/argon2/acquired/CONTRIBUTING.md": "83c71d3d184cf445b8aad61453898fd9d605b129396dc96cf21eea9e062f2b4c",
+    "evidence/reuse/native-correspondence/argon2/acquired/LICENSE.txt": "05f3d1fc856ccae3d371fe6e4140e1d4e2b3db46b8a5018702af93cbe30690db",
+    "evidence/reuse/native-correspondence/argon2/acquired/README.md": "7471d1d3b190992e529b7f53f0fef01bd0110b3c82dd3d6207b8327f5a541b64",
+    "evidence/reuse/native-correspondence/argon2/acquired/SECURITY.md": "530dad27c9c1fb2a2cd3a55a0a700ba293308a943690ccc3ee1bcbad11d0138e",
+    "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-nolibs/README.md": "4d5a4a98b5dec1aec129b2c169bd4a47c4b2b6434deb1d5d231ed4cc14ad3a50",
+    "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-nolibs/build.gradle": "ccb735bf2d59d1a64515ac73aee2a9e3286264e2711f7197cc07f833f6c68510",
+    "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-runner/README.md": "4ed4e6470cbf06e2cd3a63ea19f4a8063cddd9adfecb62137865006ebb09d55e",
+    "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm-runner/build.gradle": "e66cb3b8bcca18c1f14e60410958385d922f60870f0cb59f26557c5da320af86",
+    "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm/README.md": "f29d5a74417502626fa8026225f3610b159305bfbaf0a50c7c7d3827220ff6af",
+    "evidence/reuse/native-correspondence/argon2/acquired/argon2-jvm/build.gradle": "62048119c704e416d91ae1a593bb6b64bfc90ade2b5912ecd47a8cf6a9dfb708",
+    "evidence/reuse/native-correspondence/argon2/acquired/build.gradle": "fbc0fc7524143046b7017c6c51ce809ca7bdfc6730c606e80345289db92553ce",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/README.md": "dd38358ad06c2b89025690a3dca7b7daed84f63811fa36115267f49ea82d4c27",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/build.gradle": "35a235b3d6831bc1d0d8cc2a7ddde307a44da73c9dd3342feb3fb0cd6e46c466",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/gradle/wrapper/gradle-wrapper.properties": "d28cf7781353b906ff064821470d5d8e62d3a330e427a74da255463b411db106",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/gradlew.bat": "c46a27c79007746de5922b17abb6230d64ad8b1ba3ad1585ee5c6543c2a9b129",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/linux/libc-version.sh": "aac4c3f67a6032c5726e81aa16188e28444bf24506970a95fd6460a0485fac4f",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/linux/test.sh": "1fa6b6c5ecf15680890159694bbaaa98f130cfff316c5dbcca196613554e4ad5",
+    "evidence/reuse/native-correspondence/argon2/acquired/compatibility-tests/settings.gradle": "3b4d21f57516925de4877c025467a4072e2927d84d4b53da8aff6b217f417765",
+    "evidence/reuse/native-correspondence/argon2/acquired/docs/compile-argon2.md": "81b36826bbdac7a6255f66389aa5864cd96afb8e05c389e87a990bcf3165ea4d",
+    "evidence/reuse/native-correspondence/argon2/acquired/docs/jna-knowhow.md": "157b5fc8c7dcad2a149b1968561fb6a22c569ae7e8fc2e89c8b049eaaac81665",
+    "evidence/reuse/native-correspondence/argon2/acquired/docs/publish.md": "07fa6605f47452a84f487f01d2871155e34fdba643101372fba2bb24fe5b292c",
+    "evidence/reuse/native-correspondence/argon2/acquired/gradle/wrapper/gradle-wrapper.properties": "052c9b360972f18483fb049cf13983706b6c8cec0d35594b3afe1802b5fe4a33",
+    "evidence/reuse/native-correspondence/argon2/acquired/gradlew": "63135287117a1e6d12c84580f1f49c61d1ba02218ecd28660605e97f976e7d65",
+    "evidence/reuse/native-correspondence/argon2/acquired/gradlew.bat": "c46a27c79007746de5922b17abb6230d64ad8b1ba3ad1585ee5c6543c2a9b129",
+    "evidence/reuse/native-correspondence/argon2/acquired/libargon2/Dockerfile": "e32a535020db290f1230de4907ae8a09f6c72085e491038d874ec685d754507d",
+    "evidence/reuse/native-correspondence/argon2/acquired/libargon2/context/build-libargon2.sh": "1f9e3ebc69698ab7211d50c152e5604ad799d2cfcee128402572b5c326143202",
+    "evidence/reuse/native-correspondence/argon2/acquired/libargon2/run.sh": "7dc834cbcbc40ac268824c1d9f7daa36628dcb37f1f3e3c193fb338b150d66c7",
+    "evidence/reuse/native-correspondence/argon2/acquired/settings.gradle": "47c352baf5b37fc20ff027c2613bd9b6005c1daee37aafb9baa1afda301b9716",
+    "tools/qualify_native_argon2.py": "40f750d162a3d31e144c7b9bc387de9dac9c599c19d5d9b8cd5c1edf7225ccb3"
+  },
+  "summary": {
+    "runtime_native_members": 8,
+    "source_native_members": 8,
+    "java_source_members": 17,
+    "acquired_text_files": 31
+  },
+  "native_source_recipe_tag": "20190702",
+  "native_commit_resolved": false,
+  "native_build_qualified": false,
+  "license_approved": false,
+  "authentication_complete": false,
+  "remaining": [
+    "Resolve PHC20190702 to immutable native commit and audit all applicable source/license bytes",
+    "Identify actual Darwin/Windows build sources and toolchains; Linux recipe alone is not their correspondence",
+    "Pin Ubuntu16.04 base and apt compiler/sysroot packages; establish source-to-binary and static runtime correspondence",
+    "Provide full incorporated GPL3 terms and demonstrate recipient source/library replacement obligations",
+    "Execute required native/platform tests and independent distribution/security review"
+  ]
+}

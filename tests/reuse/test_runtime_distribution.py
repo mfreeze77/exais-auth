@@ -102,8 +102,23 @@ class RuntimeDistributionTests(unittest.TestCase):
             # The initial discovery's88 candidates included Bouncy Castle's
             # compiled LICENSE.class. It is not a notice text; its source and
             # actual text notices are preserved and checked above.
-            self.assertEqual(checked, 87)
+            self.assertEqual(checked, 89)
+            # Real JNA ships the complete alternatives under short filenames.
+            # Keep exact upstream text, not just its788-byte LICENSE pointer.
+            jna = next(row for row in report['dependencies'] if row['coordinate'] == 'net.java.dev.jna:jna:5.8.0')
+            expected_jna = {'META-INF/AL2.0': (10174, '0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594'),
+                            'META-INF/LGPL2.1': (24389, 'eea173a556abac0370461e57e12aab266894ea6be3874c2be05fd87871f75449')}
+            packaged = {row['archive_member']: row for row in jna['binary_notices']}
+            for member, identity in expected_jna.items():
+                self.assertIn(member, packaged)
+                self.assertEqual((packaged[member]['bytes'], packaged[member]['sha256']), identity)
+            self.assertFalse(any(row['path'].endswith('.class') for row in report['files']))
             self.assertEqual(len(report['supplemental_notices']), 5)
+            self.assertEqual(len(report['source_header_notices']), 3)
+            for row in report['source_header_notices']:
+                notice = (output / row['packaged_file']['path']).read_bytes()
+                self.assertEqual(notice, (ROOT / row['source_file']).read_bytes()[:row['notice_byte_range']['end_exclusive']])
+                self.assertEqual(sha(notice), row['notice_sha256'])
             for row in report['supplemental_notices']:
                 self.assertEqual((output / row['packaged_file']['path']).read_bytes(), (ROOT / row['path']).read_bytes())
             second = root / 'second'

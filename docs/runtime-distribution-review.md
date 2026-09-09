@@ -56,13 +56,24 @@ infer the native source license or build correspondence solely from the wrapper
 POM. Neither wrapper source JAR supplies the complete Gradle build project or
 full LGPL/GPL texts.
 
+The later commit-pinned review found that `libargon2/context/build-libargon2.sh`
+selects native release tag20190702 for four Linux targets. It still does not pin
+the archive digest or mutable Ubuntu/apt toolchains, and does not establish the
+Darwin/Windows builds. Wrapper build controls and full LGPL3/GPL3 texts are now
+retained under `evidence/reuse/native-correspondence`; native correspondence and
+source/relink delivery remain unqualified. See `docs/native-source-correspondence.md`.
+
 JNA [expressly offers Apache-2.0 or LGPL-2.1-or-later](https://github.com/java-native-access/jna/blob/5.8.0/LICENSE).
 Its [native Makefile](https://raw.githubusercontent.com/java-native-access/jna/5.8.0/native/Makefile)
 defaults to static libffi and can also use static compiler runtimes. The bundled
 [libffi license](https://raw.githubusercontent.com/java-native-access/jna/5.8.0/native/libffi/LICENSE)
 requires its own MIT copyright and permission notice. The cached JNA JAR's
-`META-INF/LICENSE` is only the 788-byte JNA dual-license pointer; the source JAR
-does not contain the libffi license. Choosing Apache for JNA does not remove
+`META-INF/LICENSE` is a 788-byte JNA dual-license pointer. The same binary JAR
+also contains the full alternatives in `META-INF/AL2.0` (10,174 bytes) and
+`META-INF/LGPL2.1` (24,389 bytes); the initial filename scanner missed those two
+short names. The corrected packager preserves both exact texts. The historical
+archive inventory remains unchanged and does not enumerate these two texts.
+The source JAR does not contain the libffi license. Choosing Apache for JNA does not remove
 libffi's notice requirement. Per-platform static runtime inclusion and exception
 applicability remain unverified.
 

@@ -1,0 +1,190 @@
+{
+  "schema": "expertauth-sqlite-source-acquisition-request-v1",
+  "coordinate": "org.xerial:sqlite-jdbc:3.45.1.0",
+  "repository": "xerial/sqlite-jdbc",
+  "commit": "5ac6b0d4bf42244f1d48b39af74e87ce7621cac6",
+  "scope": "Authorized small build-control text only; native binaries, source archives, extension permission gap and marked JNI headers excluded",
+  "files": [
+    {
+      "path": ".github/workflows/build-native.yml",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/.github/workflows/build-native.yml",
+      "expected_bytes": 4148,
+      "expected_git_blob_sha1": "83f7235ed1abd7cfa98034cc6a030aec02c8d652"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/.github/workflows/ci.yml",
+      "expected_bytes": 9620,
+      "expected_git_blob_sha1": "f9f97e121977b2b9c3b00adf9dfa30848957ef20"
+    },
+    {
+      "path": "Makefile",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/Makefile",
+      "expected_bytes": 11557,
+      "expected_git_blob_sha1": "b32d85f60373e54624f739bac25734d43617c3ca"
+    },
+    {
+      "path": "Makefile.common",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/Makefile.common",
+      "expected_bytes": 11538,
+      "expected_git_blob_sha1": "c435e7cebb748e0f77f847aef19bffa40f264804"
+    },
+    {
+      "path": "VERSION",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/VERSION",
+      "expected_bytes": 15,
+      "expected_git_blob_sha1": "d6a23d0b1d3250cdcb731f33041c940479039d60"
+    },
+    {
+      "path": "amalgamation_version.sh",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/amalgamation_version.sh",
+      "expected_bytes": 595,
+      "expected_git_blob_sha1": "e761f9fed8d13df79eb5bc5f4bd766aee3a59cd6"
+    },
+    {
+      "path": "docker/Dockerfile.alpine-linux_x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.alpine-linux_x86",
+      "expected_bytes": 129,
+      "expected_git_blob_sha1": "45bacc5bc568f6d97623526b74fbf08345a3d54c"
+    },
+    {
+      "path": "docker/Dockerfile.alpine-linux_x86_64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.alpine-linux_x86_64",
+      "expected_bytes": 124,
+      "expected_git_blob_sha1": "55ee051d69683e660a6bbde3b0e5be0d35d9c57d"
+    },
+    {
+      "path": "docker/Dockerfile.linux_x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.linux_x86",
+      "expected_bytes": 122,
+      "expected_git_blob_sha1": "99bc6e7cbc014163eb812f30c965f799099ab2cc"
+    },
+    {
+      "path": "docker/Dockerfile.linux_x86_64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.linux_x86_64",
+      "expected_bytes": 105,
+      "expected_git_blob_sha1": "989f208ff757435e209a351fbcdf8d8713dd680a"
+    },
+    {
+      "path": "docker/Dockerfile.rcodesign",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.rcodesign",
+      "expected_bytes": 254,
+      "expected_git_blob_sha1": "698037757aedd10bf634f1e5a4d98e6b232b5c63"
+    },
+    {
+      "path": "docker/dockcross-android-arm",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-arm",
+      "expected_bytes": 6839,
+      "expected_git_blob_sha1": "5e556d005bca95ce694cc173d8895c1e49d83811"
+    },
+    {
+      "path": "docker/dockcross-android-arm64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-arm64",
+      "expected_bytes": 6849,
+      "expected_git_blob_sha1": "760192fc161bad20d1c023a09834570343f7e849"
+    },
+    {
+      "path": "docker/dockcross-android-x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-x86",
+      "expected_bytes": 6839,
+      "expected_git_blob_sha1": "2bf9b4620c5a173d4b0ff6d1e13ad48c2befba5a"
+    },
+    {
+      "path": "docker/dockcross-android-x86_64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-x86_64",
+      "expected_bytes": 6854,
+      "expected_git_blob_sha1": "9ade10cba04bd690e05be949c60a0783a75ec8bc"
+    },
+    {
+      "path": "docker/dockcross-arm64-lts",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-arm64-lts",
+      "expected_bytes": 6859,
+      "expected_git_blob_sha1": "49873ac3f97757d8ef7e1cdef222c4912643798b"
+    },
+    {
+      "path": "docker/dockcross-armv5",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv5",
+      "expected_bytes": 6839,
+      "expected_git_blob_sha1": "1961108443056a9a72c64ce462b46ed62ee69bf7"
+    },
+    {
+      "path": "docker/dockcross-armv6-lts",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv6-lts",
+      "expected_bytes": 6859,
+      "expected_git_blob_sha1": "7f2010e2fc7f901579882ab7aa8daaa1da9327bf"
+    },
+    {
+      "path": "docker/dockcross-armv7a-lts",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv7a-lts",
+      "expected_bytes": 6864,
+      "expected_git_blob_sha1": "7df7d762ef9c6a9ce61c2a604f06229edfd20060"
+    },
+    {
+      "path": "docker/dockcross-musl-arm64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-musl-arm64",
+      "expected_bytes": 6864,
+      "expected_git_blob_sha1": "9f974d7d27ff704ec70616eae8fe450d79a172b7"
+    },
+    {
+      "path": "docker/dockcross-ppc64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-ppc64",
+      "expected_bytes": 6849,
+      "expected_git_blob_sha1": "60dbb63f56468eec59dd8cec6c9dcb349d0ed298"
+    },
+    {
+      "path": "docker/dockcross-windows-arm64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-arm64",
+      "expected_bytes": 6849,
+      "expected_git_blob_sha1": "6e43c92b66da9c526052c098e4c4d668a2f8e86a"
+    },
+    {
+      "path": "docker/dockcross-windows-armv7",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-armv7",
+      "expected_bytes": 6849,
+      "expected_git_blob_sha1": "ea955c4e5d803c3f13927b90f52746e208e8fb92"
+    },
+    {
+      "path": "docker/dockcross-windows-x64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-x64",
+      "expected_bytes": 6874,
+      "expected_git_blob_sha1": "a140fa80936b942a31e3d089b519326d05150266"
+    },
+    {
+      "path": "docker/dockcross-windows-x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-x86",
+      "expected_bytes": 6874,
+      "expected_git_blob_sha1": "a3aded06a3da6884998c84b58b2dfc14e94d25a0"
+    },
+    {
+      "path": "docker/updatescripts.sh",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/updatescripts.sh",
+      "expected_bytes": 234,
+      "expected_git_blob_sha1": "018cfd2861484b9eea8c1b785242af26b1f75d65"
+    }
+  ],
+  "total_expected_bytes": 134402,
+  "reuse_from_existing_source_jar": [
+    {
+      "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE.zentus",
+      "bytes": 1312,
+      "sha256": "89167dab92289c7e5e2b65b044f0856b703d05e5d5e35c3548e73d9c7d2f5048",
+      "kind": "notice_members",
+      "git_blob_sha1": "3e044abb4cf8adce7ea0fae32d6a8ec309c2a060"
+    },
+    {
+      "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE",
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "kind": "notice_members",
+      "git_blob_sha1": "75b52484ea471f882c29e02693b4f02dba175b5e"
+    },
+    {
+      "member": "META-INF/maven/org.xerial/sqlite-jdbc/pom.xml",
+      "bytes": 18674,
+      "sha256": "d92258eca14a1a95ca864be37ee411a801a5864a924b6ff6327563be1b053569",
+      "kind": "build_members",
+      "git_blob_sha1": "426591ff03760172bfe29ee672a85d8025445c71"
+    }
+  ],
+  "redistribution_approved": false
+}

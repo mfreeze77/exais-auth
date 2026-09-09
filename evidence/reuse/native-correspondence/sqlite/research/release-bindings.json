@@ -1,0 +1,573 @@
+{
+  "timestamp_utc": "2026-09-09T01:35:13.766486+00:00",
+  "scope": "Release Git-object identity, not compiled-source correspondence",
+  "commit": "5ac6b0d4bf42244f1d48b39af74e87ce7621cac6",
+  "tree_sha1": "504a91c037b5d074df6eafb9d1c3632c023a98fa",
+  "commit_metadata_sha256": "3f326c59fb587b151eed3124de4c1a795e2860c93ed2c626acb7cf25d015a986",
+  "tree_metadata_sha256": "90df9b05a7a8427a4954dbc6244de59360e3e46c1a68ea0ec3f630e2f5f23bfa",
+  "inspection_script_sha256": "6cfeaf1480bba97d0dc8b8b79a0fd3e614c8ef8f988eef34bd25f38d2798dd7e",
+  "native_rebuild_verified": false,
+  "native_platform_tests_passed": false,
+  "license_approved": false,
+  "native_bindings": [
+    {
+      "member": "org/sqlite/native/Linux/arm/libsqlitejdbc.so",
+      "member_sha256": "7300c64cf2a1d917b864d7ae6efb406cf2779fe3dfe90cb45adef0b2c47eae87",
+      "member_bytes": 944652,
+      "calculated_git_blob_sha1": "1f0540ca569b05c53e80db0b6469ecda7cab84f0",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/arm/libsqlitejdbc.so",
+      "release_git_blob_sha1": "1f0540ca569b05c53e80db0b6469ecda7cab84f0",
+      "release_git_blob_bytes": 944652,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux/aarch64/libsqlitejdbc.so",
+      "member_sha256": "f5904b54c00b025f0aac497c3625bcddc932d7b0705b73e2ffd4799e50cc7c3f",
+      "member_bytes": 1071960,
+      "calculated_git_blob_sha1": "37984d119cba991582f8ef965fcb7326da27610f",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/aarch64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "37984d119cba991582f8ef965fcb7326da27610f",
+      "release_git_blob_bytes": 1071960,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux/x86/libsqlitejdbc.so",
+      "member_sha256": "2750af7a06712b2b9539503b41c2c6add398d6e62eff8973e06d3e9083139536",
+      "member_bytes": 933864,
+      "calculated_git_blob_sha1": "895ca0f1a8bd334de79b8add0a3bce973ff668ce",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/x86/libsqlitejdbc.so",
+      "release_git_blob_sha1": "895ca0f1a8bd334de79b8add0a3bce973ff668ce",
+      "release_git_blob_bytes": 933864,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux/x86_64/libsqlitejdbc.so",
+      "member_sha256": "8991ba66c5c95a6d2a8bc395e874c5550b5acde267c618db1049cc1d801c34f1",
+      "member_bytes": 1048000,
+      "calculated_git_blob_sha1": "8ea19771a1be5407b7fa59c8767f4e18b4d9b84c",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/x86_64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "8ea19771a1be5407b7fa59c8767f4e18b4d9b84c",
+      "release_git_blob_bytes": 1048000,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux/armv7/libsqlitejdbc.so",
+      "member_sha256": "15e10cc91cc83f6af93bf23f3fa693de4545d574b82768436c59cbf14eefcefd",
+      "member_bytes": 932380,
+      "calculated_git_blob_sha1": "4c53e70a1ea2665042733f74ebd3e41c4466abbd",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/armv7/libsqlitejdbc.so",
+      "release_git_blob_sha1": "4c53e70a1ea2665042733f74ebd3e41c4466abbd",
+      "release_git_blob_bytes": 932380,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux/ppc64/libsqlitejdbc.so",
+      "member_sha256": "751c1374f1f9f7e9a46bfb303b1b6555b8f3d55ad73042ad3163391118702331",
+      "member_bytes": 1264248,
+      "calculated_git_blob_sha1": "7f877c8ff3f39e75c28154e7e811928ce5805bf5",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/ppc64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "7f877c8ff3f39e75c28154e7e811928ce5805bf5",
+      "release_git_blob_bytes": 1264248,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux/armv6/libsqlitejdbc.so",
+      "member_sha256": "ebf9486f5feafcc32348755c7b434fc43cdc50f815c1a312ee17ef1317868511",
+      "member_bytes": 932384,
+      "calculated_git_blob_sha1": "b01a12dba82ff96e5a525a4c68b0faf5458d44ee",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux/armv6/libsqlitejdbc.so",
+      "release_git_blob_sha1": "b01a12dba82ff96e5a525a4c68b0faf5458d44ee",
+      "release_git_blob_bytes": 932384,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Android/arm/libsqlitejdbc.so",
+      "member_sha256": "2916fc44653011496d7cc9ca95e59101e998b5ba56497b8cf5bf99791264cd70",
+      "member_bytes": 1130084,
+      "calculated_git_blob_sha1": "ae592f6b7de181a58503d195e54825901b72fa53",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Android/arm/libsqlitejdbc.so",
+      "release_git_blob_sha1": "ae592f6b7de181a58503d195e54825901b72fa53",
+      "release_git_blob_bytes": 1130084,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Android/aarch64/libsqlitejdbc.so",
+      "member_sha256": "7d3ee63027cf4a793c32ef60901f4a2e0b425c7bbfc85cf68b5da246cfc47fe0",
+      "member_bytes": 1172376,
+      "calculated_git_blob_sha1": "ac598685554a43fc0a46ee36c91b32ba02b81730",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Android/aarch64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "ac598685554a43fc0a46ee36c91b32ba02b81730",
+      "release_git_blob_bytes": 1172376,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Android/x86/libsqlitejdbc.so",
+      "member_sha256": "71beb70a579443dd45d1a5c35d23e79d9010eacbc937b334af32e36015d82c36",
+      "member_bytes": 1310444,
+      "calculated_git_blob_sha1": "efb7a08f2ac46bb9d5d0be3a9281a20fbe22d913",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Android/x86/libsqlitejdbc.so",
+      "release_git_blob_sha1": "efb7a08f2ac46bb9d5d0be3a9281a20fbe22d913",
+      "release_git_blob_bytes": 1310444,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Android/x86_64/libsqlitejdbc.so",
+      "member_sha256": "f04f166f8dcf3b72b7fdc03f26312f6488f28dd527303f427e80c449d9fc5e71",
+      "member_bytes": 1203400,
+      "calculated_git_blob_sha1": "d1e95fead7f44c9a5a2b6ef1f6cd739b2466e8d0",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Android/x86_64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "d1e95fead7f44c9a5a2b6ef1f6cd739b2466e8d0",
+      "release_git_blob_bytes": 1203400,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Windows/aarch64/sqlitejdbc.dll",
+      "member_sha256": "bf419935f3b1ba1c81016404e6b0549758b22a07cbe75d0d72bdaea84113468a",
+      "member_bytes": 1073664,
+      "calculated_git_blob_sha1": "f24776dd67fd4ad044724f85ddf41eb282725edc",
+      "release_git_path": "src/main/resources/org/sqlite/native/Windows/aarch64/sqlitejdbc.dll",
+      "release_git_blob_sha1": "f24776dd67fd4ad044724f85ddf41eb282725edc",
+      "release_git_blob_bytes": 1073664,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Windows/x86/sqlitejdbc.dll",
+      "member_sha256": "435e6e284a2e1d94a21073773d79c7c1dbe279d72d1dc579cc655f5fc5066d32",
+      "member_bytes": 905728,
+      "calculated_git_blob_sha1": "1398664e40dc13e88ef16a013161710ebd9dd1bf",
+      "release_git_path": "src/main/resources/org/sqlite/native/Windows/x86/sqlitejdbc.dll",
+      "release_git_blob_sha1": "1398664e40dc13e88ef16a013161710ebd9dd1bf",
+      "release_git_blob_bytes": 905728,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Windows/x86_64/sqlitejdbc.dll",
+      "member_sha256": "d7098290c4f013c6cbfb731e4db28053e377fdd34f3a41811eccfb485c3efb49",
+      "member_bytes": 968704,
+      "calculated_git_blob_sha1": "845e621da7cd7e55f830115be4ed9448f693e6f5",
+      "release_git_path": "src/main/resources/org/sqlite/native/Windows/x86_64/sqlitejdbc.dll",
+      "release_git_blob_sha1": "845e621da7cd7e55f830115be4ed9448f693e6f5",
+      "release_git_blob_bytes": 968704,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Windows/armv7/sqlitejdbc.dll",
+      "member_sha256": "253ef5068f46e80701e0e92442fde4eff8547d14e11f1b70b559b95c1e37541f",
+      "member_bytes": 788992,
+      "calculated_git_blob_sha1": "427581e122d0bb8c02debde484322bdb1752e8f0",
+      "release_git_path": "src/main/resources/org/sqlite/native/Windows/armv7/sqlitejdbc.dll",
+      "release_git_blob_sha1": "427581e122d0bb8c02debde484322bdb1752e8f0",
+      "release_git_blob_bytes": 788992,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Musl/aarch64/libsqlitejdbc.so",
+      "member_sha256": "e463b219ba1d39040e9c0c8a469345586af4f34a88cc40bee6b42737620883f0",
+      "member_bytes": 1071712,
+      "calculated_git_blob_sha1": "e883ba33e0dfd99fefb1073121e1e79345b58261",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Musl/aarch64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "e883ba33e0dfd99fefb1073121e1e79345b58261",
+      "release_git_blob_bytes": 1071712,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Musl/x86/libsqlitejdbc.so",
+      "member_sha256": "3ac400ec6e71124b2a9d0856e0e55089d1366afa5013b03bf088db29ced09a2f",
+      "member_bytes": 1034424,
+      "calculated_git_blob_sha1": "3530a023a8c3450b26639a823bc96a94f564bdf9",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Musl/x86/libsqlitejdbc.so",
+      "release_git_blob_sha1": "3530a023a8c3450b26639a823bc96a94f564bdf9",
+      "release_git_blob_bytes": 1034424,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Linux-Musl/x86_64/libsqlitejdbc.so",
+      "member_sha256": "c165a145c5b77548bbb990ecf11c54e578e1e25a2089ae89ce101ac5fea06744",
+      "member_bytes": 1046560,
+      "calculated_git_blob_sha1": "4aeab8861d9ca3cfb0577da4076620863eb7a750",
+      "release_git_path": "src/main/resources/org/sqlite/native/Linux-Musl/x86_64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "4aeab8861d9ca3cfb0577da4076620863eb7a750",
+      "release_git_blob_bytes": 1046560,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Mac/aarch64/libsqlitejdbc.dylib",
+      "member_sha256": "3d79e2c8d555c02d7d900b02cf4770f44691e3213861cd59886c2711ab15c66d",
+      "member_bytes": 1074768,
+      "calculated_git_blob_sha1": "032e05cfe4ea12cbe4bf45404a57de3aefad1963",
+      "release_git_path": "src/main/resources/org/sqlite/native/Mac/aarch64/libsqlitejdbc.dylib",
+      "release_git_blob_sha1": "032e05cfe4ea12cbe4bf45404a57de3aefad1963",
+      "release_git_blob_bytes": 1074768,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/Mac/x86_64/libsqlitejdbc.dylib",
+      "member_sha256": "0508bbe0d060b4d46ff63c8362762aa47ff8e3517bbad02b2c391b245570f55b",
+      "member_bytes": 1230500,
+      "calculated_git_blob_sha1": "f637107b304cd83f2d4a7d48a2747fc6d6b52806",
+      "release_git_path": "src/main/resources/org/sqlite/native/Mac/x86_64/libsqlitejdbc.dylib",
+      "release_git_blob_sha1": "f637107b304cd83f2d4a7d48a2747fc6d6b52806",
+      "release_git_blob_bytes": 1230500,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/FreeBSD/aarch64/libsqlitejdbc.so",
+      "member_sha256": "df8b2e4c5d9bee7e0c3b8361a835ff9dc2abd777ff7a48a3dc8bef84fa89a042",
+      "member_bytes": 1169976,
+      "calculated_git_blob_sha1": "0185280a8090d052520856a897702edf82771a9e",
+      "release_git_path": "src/main/resources/org/sqlite/native/FreeBSD/aarch64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "0185280a8090d052520856a897702edf82771a9e",
+      "release_git_blob_bytes": 1169976,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/FreeBSD/x86/libsqlitejdbc.so",
+      "member_sha256": "c95e4adb87579cbc7600835ecb065384a1a06702fedb5d6d7db625842c5f35f3",
+      "member_bytes": 929204,
+      "calculated_git_blob_sha1": "b09a0ae677ca5b886df4f4e7e2fa37a260a87a9f",
+      "release_git_path": "src/main/resources/org/sqlite/native/FreeBSD/x86/libsqlitejdbc.so",
+      "release_git_blob_sha1": "b09a0ae677ca5b886df4f4e7e2fa37a260a87a9f",
+      "release_git_blob_bytes": 929204,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    },
+    {
+      "member": "org/sqlite/native/FreeBSD/x86_64/libsqlitejdbc.so",
+      "member_sha256": "1972653e82e3cbdebd6d16b50313e5e51cae9c4a4ffc69ec485257420c799259",
+      "member_bytes": 1034864,
+      "calculated_git_blob_sha1": "ccdc5dae2bac2a210994bdade198c3299c3858c0",
+      "release_git_path": "src/main/resources/org/sqlite/native/FreeBSD/x86_64/libsqlitejdbc.so",
+      "release_git_blob_sha1": "ccdc5dae2bac2a210994bdade198c3299c3858c0",
+      "release_git_blob_bytes": 1034864,
+      "exact_release_object_match": true,
+      "embedded_sqlite_source_id_strings": [
+        "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+      ]
+    }
+  ],
+  "cached_source_bindings": [
+    {
+      "path": "src/main/java/org/sqlite/BusyHandler.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/Collation.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/ExtendedCommand.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/FileException.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/Function.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/JDBC.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/NativeLibraryNotFoundException.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/ProgressHandler.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteCommitListener.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteConfig.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteConnection.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteConnectionConfig.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteDataSource.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteErrorCode.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteException.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteJDBCLoader.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteLimits.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteOpenMode.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/SQLiteUpdateListener.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/Codes.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/CoreDatabaseMetaData.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/CorePreparedStatement.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/CoreResultSet.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/CoreStatement.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/DB.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/NativeDB.c",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/NativeDB.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/core/SafeStmtPtr.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/DateFormatUtils.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/DateParser.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/DatePrinter.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/ExceptionUtils.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/FastDateFormat.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/FastDateParser.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/FastDatePrinter.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/FormatCache.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/date/package-info.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/javax/SQLiteConnectionPoolDataSource.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/javax/SQLitePooledConnection.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc3/JDBC3Connection.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc3/JDBC3DatabaseMetaData.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc3/JDBC3PreparedStatement.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc3/JDBC3ResultSet.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc3/JDBC3Savepoint.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc3/JDBC3Statement.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc4/JDBC4Connection.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc4/JDBC4DatabaseMetaData.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc4/JDBC4PooledConnection.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc4/JDBC4PreparedStatement.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc4/JDBC4ResultSet.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/jdbc4/JDBC4Statement.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/util/LibraryLoaderUtil.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/util/OSInfo.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/util/ProcessRunner.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/util/QueryUtils.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/util/ResourceFinder.java",
+      "exact_release_object_match": true
+    },
+    {
+      "path": "src/main/java/org/sqlite/util/StringUtils.java",
+      "exact_release_object_match": true
+    }
+  ],
+  "notice_and_pom_bindings": [
+    {
+      "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE.zentus",
+      "path": "LICENSE.zentus",
+      "cached_git_blob_sha1": "3e044abb4cf8adce7ea0fae32d6a8ec309c2a060",
+      "release_git_blob_sha1": "3e044abb4cf8adce7ea0fae32d6a8ec309c2a060",
+      "exact_release_object_match": true
+    },
+    {
+      "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE",
+      "path": "LICENSE",
+      "cached_git_blob_sha1": "75b52484ea471f882c29e02693b4f02dba175b5e",
+      "release_git_blob_sha1": "75b52484ea471f882c29e02693b4f02dba175b5e",
+      "exact_release_object_match": true
+    },
+    {
+      "member": "META-INF/maven/org.xerial/sqlite-jdbc/pom.xml",
+      "path": "pom.xml",
+      "cached_git_blob_sha1": "426591ff03760172bfe29ee672a85d8025445c71",
+      "release_git_blob_sha1": "426591ff03760172bfe29ee672a85d8025445c71",
+      "exact_release_object_match": true
+    }
+  ],
+  "native_member_count": 23,
+  "native_release_object_bindings_verified": 23,
+  "cached_sources_verified": 57,
+  "notice_and_pom_verified": 3,
+  "all23_native_release_objects_match": true,
+  "all57_cached_sources_match": true,
+  "resulting_manifest_sha256": "f3fcf084c137e0f9d414c9e379fde2d3d2351d457d2cf0b8906f7f4ac97d85ee"
+}

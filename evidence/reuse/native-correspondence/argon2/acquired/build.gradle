@@ -1,0 +1,83 @@
+subprojects {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+    apply plugin: 'signing'
+
+    group 'de.mkammerer'
+    version '2.11'
+    description 'Argon2 Binding for the JVM'
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    compileJava {
+        options.compilerArgs.addAll(['--release', '6']);
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_1_6
+        targetCompatibility = JavaVersion.VERSION_1_6
+
+        withJavadocJar()
+        withSourcesJar()
+    }
+
+    publishing {
+        publications {
+            libs(MavenPublication) {
+                from components.java
+                pom(this.&configurePom)
+            }
+        }
+
+        repositories {
+            maven {
+                String releasesRepoUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+                String snapshotsRepoUrl = 'https://oss.sonatype.org/content/repositories/snapshots'
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+                credentials {
+                    username = project.properties['sonatype.username']
+                    password = project.properties['sonatype.password']
+                }
+            }
+        }
+    }
+
+    signing {
+        sign publishing.publications.libs
+        required { gradle.taskGraph.hasTask('publish') }
+    }
+}
+
+private def configurePom(org.gradle.api.publish.maven.MavenPom pom) {
+    pom.with {
+        name = 'Argon2 JVM'
+        description = 'Argon2 Binding for the JVM'
+        url = 'https://github.com/phxql/argon2-jvm'
+        packaging = 'jar'
+        licenses {
+            license {
+                name = 'GNU Lesser General Public License, Version 3'
+                url = 'https://www.gnu.org/licenses/lgpl-3.0.en.html'
+            }
+        }
+        developers {
+            developer {
+                id = 'phxql'
+                name = 'Moritz Kammerer'
+                email = 'kammerer.moritz@gmail.com'
+                url = 'https://www.mkammerer.de/'
+            }
+        }
+        scm {
+            connection = 'scm:git:git://github.com/phxql/argon2-jvm.git'
+            developerConnection = 'scm:git:git://github.com/phxql/argon2-jvm.git'
+            url = 'https://github.com/phxql/argon2-jvm'
+        }
+    }
+}

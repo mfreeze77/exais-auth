@@ -1,0 +1,19 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T01:49:09.411392+00:00",
+  "tool_sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7",
+  "records": [],
+  "errors": [
+    "ValueError: Git source object mismatch"
+  ],
+  "total_bytes": 0,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "request": {
+    "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/request.json",
+    "sha256": "b3ebe3fe183ed903141c252ac6b00c75587feb043e71314ae7769efdaa6d53d9"
+  },
+  "finished": "2026-09-09T01:49:09.581175+00:00",
+  "passed": false
+}

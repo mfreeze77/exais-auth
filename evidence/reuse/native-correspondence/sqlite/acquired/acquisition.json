@@ -1,0 +1,252 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T01:36:57.489385+00:00",
+  "tool_sha256": "05b7bed9297ac937d560429e7c24ca9a53eb27faaeec2b0c3dd9ca904216d72c",
+  "records": [
+    {
+      "path": ".github/workflows/build-native.yml",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/.github/workflows/build-native.yml",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/.github/workflows/build-native.yml",
+      "http_status": 200,
+      "bytes": 4148,
+      "sha256": "1ed74607218c88f98561dec0ff04dc916406010d5ae6363de9cf5f35584175d3",
+      "expected_git_blob_sha1": "83f7235ed1abd7cfa98034cc6a030aec02c8d652"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/.github/workflows/ci.yml",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/.github/workflows/ci.yml",
+      "http_status": 200,
+      "bytes": 9620,
+      "sha256": "dbc7234694b301e6c934de04cb4c94d853371b3caaf11915126004d2f84fa63c",
+      "expected_git_blob_sha1": "f9f97e121977b2b9c3b00adf9dfa30848957ef20"
+    },
+    {
+      "path": "Makefile",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/Makefile",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/Makefile",
+      "http_status": 200,
+      "bytes": 11557,
+      "sha256": "917cb969749c79a4bf5373b5ec83812a27b091d594bb5bf6486d1ae4b8a9ad9a",
+      "expected_git_blob_sha1": "b32d85f60373e54624f739bac25734d43617c3ca"
+    },
+    {
+      "path": "Makefile.common",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/Makefile.common",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/Makefile.common",
+      "http_status": 200,
+      "bytes": 11538,
+      "sha256": "1c2d5463e2fbe018aecc98cf175325ad564b7b9a84e3e0f9401a03c87e03c181",
+      "expected_git_blob_sha1": "c435e7cebb748e0f77f847aef19bffa40f264804"
+    },
+    {
+      "path": "VERSION",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/VERSION",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/VERSION",
+      "http_status": 200,
+      "bytes": 15,
+      "sha256": "c4b494c5d2ad4e863bbcedb554132deaa7a1cf2e486173f9fe3eb6a8ce1a81d6",
+      "expected_git_blob_sha1": "d6a23d0b1d3250cdcb731f33041c940479039d60"
+    },
+    {
+      "path": "amalgamation_version.sh",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/amalgamation_version.sh",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/amalgamation_version.sh",
+      "http_status": 200,
+      "bytes": 595,
+      "sha256": "7b0facbf7ab1517b1f5ddba7c51a457cf5f7d3b204a81ed955cacfe1d432fb42",
+      "expected_git_blob_sha1": "e761f9fed8d13df79eb5bc5f4bd766aee3a59cd6"
+    },
+    {
+      "path": "docker/Dockerfile.alpine-linux_x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.alpine-linux_x86",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.alpine-linux_x86",
+      "http_status": 200,
+      "bytes": 129,
+      "sha256": "b8b2cfdd0d8796503b42da28de61156fc68f9241a3f0f171598909269d86076e",
+      "expected_git_blob_sha1": "45bacc5bc568f6d97623526b74fbf08345a3d54c"
+    },
+    {
+      "path": "docker/Dockerfile.alpine-linux_x86_64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.alpine-linux_x86_64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.alpine-linux_x86_64",
+      "http_status": 200,
+      "bytes": 124,
+      "sha256": "089f898a5a0887c31f44d6317279ea46dc6fa83f4e3bbe4ff595f2245d4ce6ce",
+      "expected_git_blob_sha1": "55ee051d69683e660a6bbde3b0e5be0d35d9c57d"
+    },
+    {
+      "path": "docker/Dockerfile.linux_x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.linux_x86",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.linux_x86",
+      "http_status": 200,
+      "bytes": 122,
+      "sha256": "b7d7069536039b926cd9e2eea27a3c8b3a2fa4df8356c01da785a01b95956703",
+      "expected_git_blob_sha1": "99bc6e7cbc014163eb812f30c965f799099ab2cc"
+    },
+    {
+      "path": "docker/Dockerfile.linux_x86_64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.linux_x86_64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.linux_x86_64",
+      "http_status": 200,
+      "bytes": 105,
+      "sha256": "adda47662a057baf73ec12937f83fbf50ad4c7bf60385bd693519a194de03df8",
+      "expected_git_blob_sha1": "989f208ff757435e209a351fbcdf8d8713dd680a"
+    },
+    {
+      "path": "docker/Dockerfile.rcodesign",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.rcodesign",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/Dockerfile.rcodesign",
+      "http_status": 200,
+      "bytes": 254,
+      "sha256": "60ddd016513aab954cb8efa5f3a5ae063191a87995e8115f253334686f32de1f",
+      "expected_git_blob_sha1": "698037757aedd10bf634f1e5a4d98e6b232b5c63"
+    },
+    {
+      "path": "docker/dockcross-android-arm",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-arm",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-arm",
+      "http_status": 200,
+      "bytes": 6839,
+      "sha256": "584a1107a18a4f7b3f8c7b06f7d6e619db8c7bc36070c7d253daf6a88832f178",
+      "expected_git_blob_sha1": "5e556d005bca95ce694cc173d8895c1e49d83811"
+    },
+    {
+      "path": "docker/dockcross-android-arm64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-arm64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-arm64",
+      "http_status": 200,
+      "bytes": 6849,
+      "sha256": "4a21f7379c1cdf7f73bff8cd75a37a51b9027dafc44fd2d7d11ce37b0c0857c9",
+      "expected_git_blob_sha1": "760192fc161bad20d1c023a09834570343f7e849"
+    },
+    {
+      "path": "docker/dockcross-android-x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-x86",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-x86",
+      "http_status": 200,
+      "bytes": 6839,
+      "sha256": "fc9c95f36d3ef9fc915ab6dce27583f6b36d4a8c18111bf3a3120849e76cae70",
+      "expected_git_blob_sha1": "2bf9b4620c5a173d4b0ff6d1e13ad48c2befba5a"
+    },
+    {
+      "path": "docker/dockcross-android-x86_64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-x86_64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-android-x86_64",
+      "http_status": 200,
+      "bytes": 6854,
+      "sha256": "c01bade63139c72a915cbbcbe41492a09516aa84fa55096224c33b896557b8ae",
+      "expected_git_blob_sha1": "9ade10cba04bd690e05be949c60a0783a75ec8bc"
+    },
+    {
+      "path": "docker/dockcross-arm64-lts",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-arm64-lts",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-arm64-lts",
+      "http_status": 200,
+      "bytes": 6859,
+      "sha256": "a9f51e43d7333be557fc24175ea0a994e861eb582db5a087b3a0b37112ef06dc",
+      "expected_git_blob_sha1": "49873ac3f97757d8ef7e1cdef222c4912643798b"
+    },
+    {
+      "path": "docker/dockcross-armv5",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv5",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv5",
+      "http_status": 200,
+      "bytes": 6839,
+      "sha256": "12d851de6d810c7848231029be3ac33a88fffce695d747db2354096402ed052f",
+      "expected_git_blob_sha1": "1961108443056a9a72c64ce462b46ed62ee69bf7"
+    },
+    {
+      "path": "docker/dockcross-armv6-lts",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv6-lts",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv6-lts",
+      "http_status": 200,
+      "bytes": 6859,
+      "sha256": "f53829c3d93adcc9b17d631b2d9495fecd11c725d3e4b0415072947b61b6e5b8",
+      "expected_git_blob_sha1": "7f2010e2fc7f901579882ab7aa8daaa1da9327bf"
+    },
+    {
+      "path": "docker/dockcross-armv7a-lts",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv7a-lts",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-armv7a-lts",
+      "http_status": 200,
+      "bytes": 6864,
+      "sha256": "a2616e6c24e994fa49df7b95ab6cfe5d4ba708ad63c235f63faa3119245789ab",
+      "expected_git_blob_sha1": "7df7d762ef9c6a9ce61c2a604f06229edfd20060"
+    },
+    {
+      "path": "docker/dockcross-musl-arm64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-musl-arm64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-musl-arm64",
+      "http_status": 200,
+      "bytes": 6864,
+      "sha256": "dda4c26d953f996baf15a1ce24f1337e8b6cb1b9f41b1d066a7ad21bd34b6736",
+      "expected_git_blob_sha1": "9f974d7d27ff704ec70616eae8fe450d79a172b7"
+    },
+    {
+      "path": "docker/dockcross-ppc64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-ppc64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-ppc64",
+      "http_status": 200,
+      "bytes": 6849,
+      "sha256": "f31a6890f3014b86b491744d0f1548079fb43f563ec3f421ece39ec757e65482",
+      "expected_git_blob_sha1": "60dbb63f56468eec59dd8cec6c9dcb349d0ed298"
+    },
+    {
+      "path": "docker/dockcross-windows-arm64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-arm64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-arm64",
+      "http_status": 200,
+      "bytes": 6849,
+      "sha256": "02c62099e36df415827922dd21e2eaae6857dc7b83a39a4a798d20404e9ba7ff",
+      "expected_git_blob_sha1": "6e43c92b66da9c526052c098e4c4d668a2f8e86a"
+    },
+    {
+      "path": "docker/dockcross-windows-armv7",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-armv7",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-armv7",
+      "http_status": 200,
+      "bytes": 6849,
+      "sha256": "2f0aa5d7ba21cf2ff8eb93ce5ca96d44c398c1e97ce67c7154b22b3699cd6c5b",
+      "expected_git_blob_sha1": "ea955c4e5d803c3f13927b90f52746e208e8fb92"
+    },
+    {
+      "path": "docker/dockcross-windows-x64",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-x64",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-x64",
+      "http_status": 200,
+      "bytes": 6874,
+      "sha256": "48ab8fdefc066f748dab897358c57234a4a9dd1a59e7abaa00294d0c01fb70b4",
+      "expected_git_blob_sha1": "a140fa80936b942a31e3d089b519326d05150266"
+    },
+    {
+      "path": "docker/dockcross-windows-x86",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-x86",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/dockcross-windows-x86",
+      "http_status": 200,
+      "bytes": 6874,
+      "sha256": "8b08bf652001da36b4a9cf921b8bfa3e11bceb15f1111666267f86769887d33b",
+      "expected_git_blob_sha1": "a3aded06a3da6884998c84b58b2dfc14e94d25a0"
+    },
+    {
+      "path": "docker/updatescripts.sh",
+      "url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/updatescripts.sh",
+      "final_url": "https://raw.githubusercontent.com/xerial/sqlite-jdbc/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6/docker/updatescripts.sh",
+      "http_status": 200,
+      "bytes": 234,
+      "sha256": "5dd72218eeb54930fcb1147a550fd15b2d628ae3e2e1683b50ae04ddb603e697",
+      "expected_git_blob_sha1": "018cfd2861484b9eea8c1b785242af26b1f75d65"
+    }
+  ],
+  "errors": [],
+  "total_bytes": 134402,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "request": {
+    "path": "evidence/reuse/native-correspondence/sqlite/acquisition-request.json",
+    "sha256": "9df08bfccf6e5cc0c7cce37378b216e176f9a4ee25431e2fff1611ab7f827f5f"
+  },
+  "finished": "2026-09-09T01:37:02.077537+00:00",
+  "passed": true
+}

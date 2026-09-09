@@ -1,0 +1,441 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T01:37:18.485837+00:00",
+  "tool_sha256": "05b7bed9297ac937d560429e7c24ca9a53eb27faaeec2b0c3dd9ca904216d72c",
+  "records": [
+    {
+      "path": ".travis.yml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/.travis.yml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/.travis.yml",
+      "http_status": 200,
+      "bytes": 1193,
+      "sha256": "479ffe113099e801a8c7af475c88e35f736b847f87d7eb79b89c3d8301ab9815",
+      "expected_git_blob_sha1": "c8514bf64d080c5b69b3b24d1e887fba1d2685a6"
+    },
+    {
+      "path": "appveyor.yml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/appveyor.yml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/appveyor.yml",
+      "http_status": 200,
+      "bytes": 2352,
+      "sha256": "ce57767c126cab34effcfbf7ad3d2cb65da79643bfecfb816353ee8d79d5ebe9",
+      "expected_git_blob_sha1": "1d83ac9b63340e69c0875a7a6b3ba15429450911"
+    },
+    {
+      "path": "build-ant-tools.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/build-ant-tools.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/build-ant-tools.xml",
+      "http_status": 200,
+      "bytes": 770,
+      "sha256": "52aef452bb3b7ea0bb1f3cc38d5e1b3dde67c66c30c8dea4387e77a4ee3e3614",
+      "expected_git_blob_sha1": "bb73fc7462b1e7398c1b7fa5ee921e5eb4fd6df3"
+    },
+    {
+      "path": "build.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/build.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/build.xml",
+      "http_status": 200,
+      "bytes": 78763,
+      "sha256": "bc59e5058e196365bdf0d334d476f930d67e4d69a9ccbf70d0d17f1d3defa8ba",
+      "expected_git_blob_sha1": "4b580ed55217ecdadd211c3797f63848e4e8a363"
+    },
+    {
+      "path": "native/README.libffi",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/README.libffi",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/README.libffi",
+      "http_status": 200,
+      "bytes": 522,
+      "sha256": "d236071538a8ae12b75a267de2fbec80d3f59f05704d04f55ad2bcf3f41ec563",
+      "expected_git_blob_sha1": "7cfda1ba87e3689ac5d1e7f0826ec8cb6fe95ec1"
+    },
+    {
+      "path": "native/build.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/build.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/build.xml",
+      "http_status": 200,
+      "bytes": 18865,
+      "sha256": "50a29a178acd924a219a6d20ef1f28013eb7f5fd33260ac221bc162a0f728709",
+      "expected_git_blob_sha1": "5b6c7101fba41120edd5404438420727463e6d5a"
+    },
+    {
+      "path": "native/callback.c",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/callback.c",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/callback.c",
+      "http_status": 200,
+      "bytes": 24110,
+      "sha256": "1cfebebd7768545c702c20cde3d95c575b056292926cab23f767fa48593b7541",
+      "expected_git_blob_sha1": "846f3447207b649a27baadfe24eec55ce8f1e3f9"
+    },
+    {
+      "path": "native/cc.sh",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/cc.sh",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/cc.sh",
+      "http_status": 200,
+      "bytes": 4008,
+      "sha256": "7c701e3050c916d60c8b8df0faca978a6b0224442f524c59c19bb3c781a52a9a",
+      "expected_git_blob_sha1": "24bcb179fac3723da046ffee9321a5a354652165"
+    },
+    {
+      "path": "native/dispatch.c",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dispatch.c",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dispatch.c",
+      "http_status": 200,
+      "bytes": 118985,
+      "sha256": "67e085528c453f34b6062bda70dc18033c3fb75c9ce3338a351676b28cc70854",
+      "expected_git_blob_sha1": "f87c572b9e9a1cd75fc37d933b175f54e902156a"
+    },
+    {
+      "path": "native/dispatch.h",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dispatch.h",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dispatch.h",
+      "http_status": 200,
+      "bytes": 9328,
+      "sha256": "9db8a13f6086ade9197a027424ebdb965850406fdf3c7ed43f4ad5d21472db56",
+      "expected_git_blob_sha1": "aed8c89c2d51ba3a5ef8062d50595ac6779e83f8"
+    },
+    {
+      "path": "native/dll-callback.c",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dll-callback.c",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/dll-callback.c",
+      "http_status": 200,
+      "bytes": 1192,
+      "sha256": "ff9e81c15855ff64470ac8bdd004c04b45a2e5377f68c0032c1e6528bbab62ea",
+      "expected_git_blob_sha1": "027a3542713f7042c6dbc52fa367d722e1bd9ce6"
+    },
+    {
+      "path": "native/jnidispatch.rc",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/jnidispatch.rc",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/jnidispatch.rc",
+      "http_status": 200,
+      "bytes": 1567,
+      "sha256": "90d875771ee3c1880750683bc6d759959c18e2ca2066099f0e9616d87fa55ab5",
+      "expected_git_blob_sha1": "2e8f8904f855cb3d3785cc898afe2984cc36f282"
+    },
+    {
+      "path": "native/ld.sh",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/ld.sh",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/ld.sh",
+      "http_status": 200,
+      "bytes": 1598,
+      "sha256": "b17f28d520c30a0f318e3e210f46b28f809dc8a7123b39e6ca4216bd52434f4e",
+      "expected_git_blob_sha1": "915da1a14375c10dcc442663a2c06c94ff786af2"
+    },
+    {
+      "path": "native/libffi/LICENSE-BUILDTOOLS",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/LICENSE-BUILDTOOLS",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/LICENSE-BUILDTOOLS",
+      "http_status": 200,
+      "bytes": 18698,
+      "sha256": "e67978cd18816c0cb7d29aaaacde7b7447402c2fb321a051698890a8eaedda94",
+      "expected_git_blob_sha1": "d1d626e00859030061ed7b071e84f8f893d84d93"
+    },
+    {
+      "path": "native/libffi/Makefile.am",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/Makefile.am",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/Makefile.am",
+      "http_status": 200,
+      "bytes": 6034,
+      "sha256": "06b52c27043a8073bb56d1a60c9d5679e77ff4fb2850b9cd6780fbf381d4a7e2",
+      "expected_git_blob_sha1": "7654bf5ac575f8e9306006ed39ca45fd970ff978"
+    },
+    {
+      "path": "native/libffi/acinclude.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/acinclude.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/acinclude.m4",
+      "http_status": 200,
+      "bytes": 17298,
+      "sha256": "29bb8bdff8fcbb35a11be7a71e5ef96b19f96d5aae3e9a3382ac3f6727a4b654",
+      "expected_git_blob_sha1": "1a70efb010dc045bb4287ca1afcff76bfa0d74a1"
+    },
+    {
+      "path": "native/libffi/autogen.sh",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/autogen.sh",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/autogen.sh",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "db8a2ee030c804ac107beeeade2f5b514882fffe5c7a8899ff3635b0c92c92e3",
+      "expected_git_blob_sha1": "fb014a33ea3bf48f79e4dbc72fc7907c2e345820"
+    },
+    {
+      "path": "native/libffi/config.guess",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/config.guess",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/config.guess",
+      "http_status": 200,
+      "bytes": 48932,
+      "sha256": "42f9e80c88168de121f6826b68d6b0e653967190e072d53278a5660b4e5dcb50",
+      "expected_git_blob_sha1": "e94095c5fbe89c77bfb99903f66223e4ef856e86"
+    },
+    {
+      "path": "native/libffi/config.sub",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/config.sub",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/config.sub",
+      "http_status": 200,
+      "bytes": 34140,
+      "sha256": "9361d9fe163230a43901581e53fc55c4edff04dbbf8c8550241a8adb14531c25",
+      "expected_git_blob_sha1": "14b5150c42a4077edbcda041b09576230964071f"
+    },
+    {
+      "path": "native/libffi/configure.ac",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/configure.ac",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/configure.ac",
+      "http_status": 200,
+      "bytes": 12477,
+      "sha256": "c76a2820a1c022f9e5dcab2e7167b653cd630093a86cf0f28bcb5651a1f3d6fb",
+      "expected_git_blob_sha1": "093b87d4f7e923ae753897b860e288ac85f7c2af"
+    },
+    {
+      "path": "native/libffi/configure.host",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/configure.host",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/configure.host",
+      "http_status": 200,
+      "bytes": 6434,
+      "sha256": "9e049315bd3b816800f521c546e89a0add49fa86fc02ed281388ad929dc25b60",
+      "expected_git_blob_sha1": "257b7848725c3bbf8a33640124408a2b8837cd61"
+    },
+    {
+      "path": "native/libffi/include/Makefile.am",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/Makefile.am",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/Makefile.am",
+      "http_status": 200,
+      "bytes": 208,
+      "sha256": "43763a7deb601012459ba66e354160656c6b8659e2282b84d4239555a11e92bd",
+      "expected_git_blob_sha1": "c59df9fb3cd390dd5d1b07b191051cc4602d35e9"
+    },
+    {
+      "path": "native/libffi/include/ffi.h.in",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi.h.in",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi.h.in",
+      "http_status": 200,
+      "bytes": 14314,
+      "sha256": "184c0df55306bd44c79ab5f8a48cd18fea8e4359703b2cb6c2cf76afba0ff3d2",
+      "expected_git_blob_sha1": "38885b0ab857f0904c81048c032a72067b272405"
+    },
+    {
+      "path": "native/libffi/include/ffi_cfi.h",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi_cfi.h",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi_cfi.h",
+      "http_status": 200,
+      "bytes": 1942,
+      "sha256": "0eaf4c217034e3e96ae50125fed4255f2d0bdc07cdf84ccf8b8b19140aeebc35",
+      "expected_git_blob_sha1": "244ce572be740e79b87d98229ef85d9c643cd3e5"
+    },
+    {
+      "path": "native/libffi/include/ffi_common.h",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi_common.h",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/include/ffi_common.h",
+      "http_status": 200,
+      "bytes": 4160,
+      "sha256": "48348d32cd2c9e8a201e8095289d435f8638540e644c1eca92ad9db9854a2f20",
+      "expected_git_blob_sha1": "76b9dd6fafe5766524f2a2eddf3236287a4e3e65"
+    },
+    {
+      "path": "native/libffi/libtool-ldflags",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/libtool-ldflags",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/libtool-ldflags",
+      "http_status": 200,
+      "bytes": 3370,
+      "sha256": "953d3a071dd9c49b5b066bd9aa6cabf8b003219f0419e211574964272672e1f5",
+      "expected_git_blob_sha1": "e32e37bf10dd5a5af7648b64ae648e80bcf44b5f"
+    },
+    {
+      "path": "native/libffi/libtool-version",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/libtool-version",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/libtool-version",
+      "http_status": 200,
+      "bytes": 1095,
+      "sha256": "55212a6909eebe647abc5c10f2f268a388ef2e12474ed70bffd242fccb60cb28",
+      "expected_git_blob_sha1": "607fee5585d9c7afec826675689a56abad43966d"
+    },
+    {
+      "path": "native/libffi/m4/asmcfi.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/asmcfi.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/asmcfi.m4",
+      "http_status": 200,
+      "bytes": 467,
+      "sha256": "370d6bd9896c51201bec2da86cba7034b1f61e224d9e2ab255aa4b61b04af8fb",
+      "expected_git_blob_sha1": "3e28602274d70a9b17caeab5f17a18ec589ee7cd"
+    },
+    {
+      "path": "native/libffi/m4/ax_append_flag.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_append_flag.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_append_flag.m4",
+      "http_status": 200,
+      "bytes": 1552,
+      "sha256": "392cb0e965351b1d6a9847cf165dc4092fb1853fd63dbe010ac8b21c286f5e16",
+      "expected_git_blob_sha1": "dd6d8b61406c32a1822760b8835062a7d6b1a156"
+    },
+    {
+      "path": "native/libffi/m4/ax_cc_maxopt.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_cc_maxopt.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_cc_maxopt.m4",
+      "http_status": 200,
+      "bytes": 8127,
+      "sha256": "a63670b118b80379d34dfe33537048aee23865e4a7ff80eecc528fde2509078f",
+      "expected_git_blob_sha1": "9e7f1ee4a1dd1fbd7d1537dad3ba3e350aa75c2d"
+    },
+    {
+      "path": "native/libffi/m4/ax_cflags_warn_all.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_cflags_warn_all.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_cflags_warn_all.m4",
+      "http_status": 200,
+      "bytes": 5059,
+      "sha256": "f698bd1b561a4e0ee1987b92cb77bb32e4f260319e44d677470dd3f8c82ccf58",
+      "expected_git_blob_sha1": "094577e4589198d4ae9f784e93a410134ef3bbf5"
+    },
+    {
+      "path": "native/libffi/m4/ax_check_compile_flag.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_check_compile_flag.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_check_compile_flag.m4",
+      "http_status": 200,
+      "bytes": 2104,
+      "sha256": "629dc6835eb1e2bd586fd842a4db66541bc442bcc2b13d6f24907631c5a688b0",
+      "expected_git_blob_sha1": "bd753b34d7dc57063b0b65f1441dde0889e1cd26"
+    },
+    {
+      "path": "native/libffi/m4/ax_compiler_vendor.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_compiler_vendor.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_compiler_vendor.m4",
+      "http_status": 200,
+      "bytes": 3641,
+      "sha256": "2f440c236d5ec743713c5608d84f9d337fb596f45f873cd5420c495094fd6e60",
+      "expected_git_blob_sha1": "73efdb00554675bbd048f489b577f542acd2f99d"
+    },
+    {
+      "path": "native/libffi/m4/ax_configure_args.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_configure_args.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_configure_args.m4",
+      "http_status": 200,
+      "bytes": 1657,
+      "sha256": "6b03141f467ea653eed74bb4551db6e376527426684a243a8e723d1ad11e30e9",
+      "expected_git_blob_sha1": "9237efea7a7f4509996b2b4f81a3b7e4d5d5721d"
+    },
+    {
+      "path": "native/libffi/m4/ax_enable_builddir.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_enable_builddir.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_enable_builddir.m4",
+      "http_status": 200,
+      "bytes": 13216,
+      "sha256": "e63154501a33a7dba2621e14744f490482e1bc59ae7c7de2e53915ba8642f30d",
+      "expected_git_blob_sha1": "710384da545f1fc8cc77ccfe630d1b73395104e2"
+    },
+    {
+      "path": "native/libffi/m4/ax_gcc_archflag.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_gcc_archflag.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_gcc_archflag.m4",
+      "http_status": 200,
+      "bytes": 13171,
+      "sha256": "14fae97a5f044e8b5125638a54ed43be2e090c52771aa4955262727437e78fdb",
+      "expected_git_blob_sha1": "c52b9b296e9fab68d94d325da566e65cd7e046f4"
+    },
+    {
+      "path": "native/libffi/m4/ax_gcc_x86_cpuid.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_gcc_x86_cpuid.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_gcc_x86_cpuid.m4",
+      "http_status": 200,
+      "bytes": 3703,
+      "sha256": "eba1884e575cb1e6e4174777fd708893982c355ff9d07f6cb0aa59d0fd66de0b",
+      "expected_git_blob_sha1": "df954658ee1b08e6cbed2f801d64d5048c7c94fa"
+    },
+    {
+      "path": "native/libffi/m4/ax_require_defined.m4",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_require_defined.m4",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/m4/ax_require_defined.m4",
+      "http_status": 200,
+      "bytes": 1218,
+      "sha256": "d870b21e817747c6a61a9dd72e06ea45f87e012c7a1a9aa5ff90cd3af89b3774",
+      "expected_git_blob_sha1": "17c3eab7dafde6c1358c7c189bbe44a6e14995a7"
+    },
+    {
+      "path": "native/libffi/make_sunver.pl",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/make_sunver.pl",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/make_sunver.pl",
+      "http_status": 200,
+      "bytes": 9021,
+      "sha256": "ca40d3458893e03a90807be87d720a59e921ee6bf678c6696779d635004a261f",
+      "expected_git_blob_sha1": "8a90b1fea0d366f7a9ec0857d5304a67ee34f389"
+    },
+    {
+      "path": "native/libffi/msvcc.sh",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/msvcc.sh",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/msvcc.sh",
+      "http_status": 200,
+      "bytes": 8523,
+      "sha256": "6acb3b18fa2e34c8f7ec3d03e4a4ac535c01f8aa52bf74012787218dec860af3",
+      "expected_git_blob_sha1": "7cfc5097fe73b08e4dbf428b1a1a1fb7e2d916aa"
+    },
+    {
+      "path": "native/libffi/src/dlmalloc.c",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/src/dlmalloc.c",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/libffi/src/dlmalloc.c",
+      "http_status": 200,
+      "bytes": 183571,
+      "sha256": "0f28533acfc8acf41cd4f9452e862344850be30e62ec55b6791225d8ae120209",
+      "expected_git_blob_sha1": "1aba657edb51fb8d067985d3a8e707b5cf4adb5c"
+    },
+    {
+      "path": "native/pom.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/pom.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/pom.xml",
+      "http_status": 200,
+      "bytes": 2446,
+      "sha256": "479b8743ed9acf7ccb43a6455dd6db7b2bc8f6a32838898313faa8f92d832951",
+      "expected_git_blob_sha1": "4dff01066bbb5890cd2565ba4a265576431dca8f"
+    },
+    {
+      "path": "native/protect.h",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/protect.h",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/protect.h",
+      "http_status": 200,
+      "bytes": 4275,
+      "sha256": "5b5ddb946cd9a1331aabc64fb56e02b608fc0ec88e7f5ab82bf1b8440f482451",
+      "expected_git_blob_sha1": "8114e422d5642aae14cdc4728e5f120c4b94c23f"
+    },
+    {
+      "path": "native/snprintf.h",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/snprintf.h",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/native/snprintf.h",
+      "http_status": 200,
+      "bytes": 440,
+      "sha256": "c6d2031859ea635dea0f543d435051829c4b13f921e802dd6521bb3458e350d8",
+      "expected_git_blob_sha1": "9faaa7cc42e03353c5a4a48c280b44fce52a6ac5"
+    },
+    {
+      "path": "pom-jna-jpms.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-jpms.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-jpms.xml",
+      "http_status": 200,
+      "bytes": 1588,
+      "sha256": "612c1b43a5bc46176318c214fa542c619eb88d891e461b3f7a984c4f23165407",
+      "expected_git_blob_sha1": "672feafc7584105bea653a85cc749b2727832a7e"
+    },
+    {
+      "path": "pom-jna-platform-jpms.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-platform-jpms.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-platform-jpms.xml",
+      "http_status": 200,
+      "bytes": 1816,
+      "sha256": "04a0a49a30ecb357099188dc1c0bb74363a5a1e839049678cd9d5f1239a17ebc",
+      "expected_git_blob_sha1": "f022e3557f52c2510640b6a0827896a7941bed0c"
+    },
+    {
+      "path": "pom-jna-platform.xml",
+      "url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-platform.xml",
+      "final_url": "https://raw.githubusercontent.com/java-native-access/jna/cc4ce71d511a9aa17219cc36e2338dd1b0f52770/pom-jna-platform.xml",
+      "http_status": 200,
+      "bytes": 1806,
+      "sha256": "ad2da042559a08bc22f10fdfc764782a565346a3ed4485c82aac2992a1b7b801",
+      "expected_git_blob_sha1": "7ef76fa9c103ee974b6a80d00b265235460beb71"
+    }
+  ],
+  "errors": [],
+  "total_bytes": 699788,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "request": {
+    "path": "evidence/reuse/native-correspondence/jna/acquisition-request.json",
+    "sha256": "0cfcf867d0a6c44725009335d8e3a8715d9ca2617593a984599574aac4cee316"
+  },
+  "finished": "2026-09-09T01:37:29.692548+00:00",
+  "passed": true
+}

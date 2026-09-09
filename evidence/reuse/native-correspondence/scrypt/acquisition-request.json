@@ -1,0 +1,92 @@
+{
+  "schema": "expertauth-scrypt-source-acquisition-request-v1",
+  "coordinate": "com.lambdaworks:scrypt:1.4.0",
+  "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+  "files": [
+    {
+      "path": "src/main/include/config.h",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/config.h",
+      "expected_bytes": 157,
+      "expected_git_blob_sha1": "1f0dc1e1c5a4c67720f359b2543b61bd8d536bb1"
+    },
+    {
+      "path": "src/main/include/crypto_scrypt.h",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/crypto_scrypt.h",
+      "expected_bytes": 2082,
+      "expected_git_blob_sha1": "f72e1f4b0db58e505250dcfabbff92549d9c59c5"
+    },
+    {
+      "path": "src/main/include/scrypt_platform.h",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/scrypt_platform.h",
+      "expected_bytes": 263,
+      "expected_git_blob_sha1": "5cec2363134853eb4f7010edf7c577670f294446"
+    },
+    {
+      "path": "src/main/include/sha256.h",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/sha256.h",
+      "expected_bytes": 2417,
+      "expected_git_blob_sha1": "289a5232f6e5fe266bd71ad89684afa08e1ac693"
+    },
+    {
+      "path": "src/main/include/sysendian.h",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/sysendian.h",
+      "expected_bytes": 3797,
+      "expected_git_blob_sha1": "62ef31a42bd0245caa2ea20d509fbed9cab579d1"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/CryptoTestUtil.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/CryptoTestUtil.java",
+      "expected_bytes": 589,
+      "expected_git_blob_sha1": "418c5f9e04614b425fd75fce7a9cb51b4fadbf63"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/PBKDFTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/PBKDFTest.java",
+      "expected_bytes": 4414,
+      "expected_git_blob_sha1": "92a08b624238c9478f53130515f0cc9b7243895c"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/SCryptTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/SCryptTest.java",
+      "expected_bytes": 2917,
+      "expected_git_blob_sha1": "bd34bb2efae9f9dc0e9493c0ac0b9d870ffadfae"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/crypto/test/SCryptUtilTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/crypto/test/SCryptUtilTest.java",
+      "expected_bytes": 1697,
+      "expected_git_blob_sha1": "f673657e653acaf0228106671d993f28f43b5ad7"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/AbstractPlatformDetectionTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/AbstractPlatformDetectionTest.java",
+      "expected_bytes": 1041,
+      "expected_git_blob_sha1": "145369fa569434ec571e4c29a26b784357faa8cc"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/JarLibraryLoaderTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/JarLibraryLoaderTest.java",
+      "expected_bytes": 2492,
+      "expected_git_blob_sha1": "65e726887f42a4037f46c31bda3e6519ceedd630"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/LibraryLoadersTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/LibraryLoadersTest.java",
+      "expected_bytes": 1568,
+      "expected_git_blob_sha1": "08ac73e6b7717b67010d9757a3993023325bf03f"
+    },
+    {
+      "path": "src/test/java/com/lambdaworks/jni/test/PlatformTest.java",
+      "url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/test/java/com/lambdaworks/jni/test/PlatformTest.java",
+      "expected_bytes": 1100,
+      "expected_git_blob_sha1": "4f469f162921b8e9c0e53a6d5418ca167a11ba88"
+    }
+  ],
+  "total_files": 13,
+  "total_bytes": 24534,
+  "native_header_bytes": 8716,
+  "constraints": [
+    "Small source text files only; no binary/native test-fixture or archive download.",
+    "Preserve bytes; verify size and SHA1(blob-header+bytes), not SHA1(bytes)."
+  ]
+}

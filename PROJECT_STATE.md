@@ -11,6 +11,15 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- Native source review now identifies all59 embedded native release members and
+  adds pinned source/build/notice evidence for scrypt, Argon2, JNA and SQLite.
+  The corrected notice assembler preserves JNA's two full short-named licenses
+  and three scrypt header notices:89 archive notice texts,390 generated files.
+  Ten package/source-request tests pass, plus an actual fetched-hash rejection
+  with container cleanup. These prove tooling/attribution behavior only; the
+  running image has its historical notice manifest. Native builds/platforms,
+  unresolved grants and independent distribution review remain unqualified.
+  See `docs/native-source-correspondence.md` for exact boundaries and reports.
 - Immutable contract extraction: 205 IDs / 207 path variants; 29 contract-tool tests.
   Source facts/hashes retained; no copied unlicensed schemas or behavioral pass claim.
 - Fail-closed ledger/release gate with adversarial tests; full completion correctly fails.

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/reuse",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788918403.6149182,
+  "elapsed_seconds": 12.668,
+  "input_sha256": {
+    "tools/capture_native_sources.py": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7",
+    "tools/run_native_source_capture.py": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8",
+    "tools/assemble_runtime_licenses.py": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff",
+    "tests/reuse/test_runtime_distribution.py": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe",
+    "tests/reuse/test_native_source_capture.py": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874",
+    "reuse/native-header-notices.lock.json": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd"
+  },
+  "inputs_changed": false,
+  "output_sha256": "2fb1c9c85ce82aef5bad1e0a0f1b56da8a3904525da30944e0c62fb84d67db2e",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

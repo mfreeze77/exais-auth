@@ -29,6 +29,13 @@
   are locally available; this does not close those obligations. Four native bundles
   (scrypt, Argon2, JNA, SQLite) have incomplete build/source provenance. Five
   supplemental scrypt/libffi notices are preserved with release-byte mappings.
+  New native correspondence work identifies all59 release members and corrects
+  the source notice assembler (two JNA license texts plus three scrypt headers).
+  Those additions are not installed in the running image. JNA's make_sunver.pl
+  grant, SQLite JNI/extension terms, native toolchains/build correspondence and
+  source/relink delivery remain open. The unresolved JNA source is local-only,
+  excluded from the source ZIP; its exact metadata is retained. Read
+  `docs/native-source-correspondence.md` before further native acquisition/builds.
 - External qualification: no authorized live social/CAPTCHA/SMS/cloud provider account
   credentials supplied; native iOS/macOS hardware/toolchain unavailable in this Windows
   environment; physical passkey device/native-platform tests unexecuted. Keep each

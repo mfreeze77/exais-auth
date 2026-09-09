@@ -12,3 +12,5 @@ artifacts/
 test-results/
 playwright-report/
 examples/node-react/public/app.js
+# Retain locally for license review; no established source grant for export.
+evidence/reuse/native-correspondence/jna/acquired/native/libffi/make_sunver.pl

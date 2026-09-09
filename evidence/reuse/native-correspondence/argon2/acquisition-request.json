@@ -1,0 +1,192 @@
+{
+  "schema": "expertauth-argon2-source-acquisition-request-v1",
+  "commit": "a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1",
+  "files": [
+    {
+      "path": ".github/workflows/build-and-test.yml",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/.github/workflows/build-and-test.yml",
+      "expected_bytes": 3240,
+      "expected_git_blob_sha1": "221195d56bcbee84b2c06388c05015f52f906671"
+    },
+    {
+      "path": ".github/workflows/codeql-analysis.yml",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/.github/workflows/codeql-analysis.yml",
+      "expected_bytes": 2672,
+      "expected_git_blob_sha1": "b87ce1dd313d78e668fbd125193aebd507a20737"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/CHANGELOG.md",
+      "expected_bytes": 5021,
+      "expected_git_blob_sha1": "35213945c8870270946a02acc5a0fb6e96298c27"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/CONTRIBUTING.md",
+      "expected_bytes": 312,
+      "expected_git_blob_sha1": "f00c74964db1b6e71e0e563e50e3f4148b85dd1c"
+    },
+    {
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/LICENSE.txt",
+      "expected_bytes": 7632,
+      "expected_git_blob_sha1": "ffce42b446d51326dbc8b1f71e38f7f612425be5"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/README.md",
+      "expected_bytes": 4611,
+      "expected_git_blob_sha1": "5e657e042bd022268740b6dd5f53d72a0075dcbd"
+    },
+    {
+      "path": "SECURITY.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/SECURITY.md",
+      "expected_bytes": 208,
+      "expected_git_blob_sha1": "24b66500e44d7aafdc9ac01cc4158b356cdba4b2"
+    },
+    {
+      "path": "argon2-jvm-nolibs/README.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/README.md",
+      "expected_bytes": 110,
+      "expected_git_blob_sha1": "6c15de0e074fb240d45f806f763274d2be971818"
+    },
+    {
+      "path": "argon2-jvm-nolibs/build.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-nolibs/build.gradle",
+      "expected_bytes": 910,
+      "expected_git_blob_sha1": "802803ef6da315178c46473c08eea9b204fe2c67"
+    },
+    {
+      "path": "argon2-jvm-runner/README.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-runner/README.md",
+      "expected_bytes": 191,
+      "expected_git_blob_sha1": "cd3d8e45bb6f06411f9026bf0118474a2a1a3bf6"
+    },
+    {
+      "path": "argon2-jvm-runner/build.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm-runner/build.gradle",
+      "expected_bytes": 384,
+      "expected_git_blob_sha1": "ae28794884ca0a7856d80270b74b35be721e2345"
+    },
+    {
+      "path": "argon2-jvm/README.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/README.md",
+      "expected_bytes": 328,
+      "expected_git_blob_sha1": "f236db2a43e0f25512fd1b3fadfabdd994b2e534"
+    },
+    {
+      "path": "argon2-jvm/build.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/argon2-jvm/build.gradle",
+      "expected_bytes": 250,
+      "expected_git_blob_sha1": "ad51149b89dd3242280dd4973eb0b259c6f361a0"
+    },
+    {
+      "path": "build.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/build.gradle",
+      "expected_bytes": 2372,
+      "expected_git_blob_sha1": "ae4a8049648c161a337dd02a16ee77ee4704ce9a"
+    },
+    {
+      "path": "compatibility-tests/README.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/README.md",
+      "expected_bytes": 2213,
+      "expected_git_blob_sha1": "a144de01c4c2e43b9d96d6e26904fff58a322ee0"
+    },
+    {
+      "path": "compatibility-tests/build.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/build.gradle",
+      "expected_bytes": 338,
+      "expected_git_blob_sha1": "f668bc85bdbc8b366093d2e34679eeda96644745"
+    },
+    {
+      "path": "compatibility-tests/gradle/wrapper/gradle-wrapper.properties",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/gradle/wrapper/gradle-wrapper.properties",
+      "expected_bytes": 202,
+      "expected_git_blob_sha1": "4d9ca1649142b0c20144adce78e2472e2da01c30"
+    },
+    {
+      "path": "compatibility-tests/gradlew.bat",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/gradlew.bat",
+      "expected_bytes": 2674,
+      "expected_git_blob_sha1": "107acd32c4e687021ef32db511e8a206129b88ec"
+    },
+    {
+      "path": "compatibility-tests/linux/libc-version.sh",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/linux/libc-version.sh",
+      "expected_bytes": 351,
+      "expected_git_blob_sha1": "bb9b658c06e645c357ecc865a569aea8497e432c"
+    },
+    {
+      "path": "compatibility-tests/linux/test.sh",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/linux/test.sh",
+      "expected_bytes": 522,
+      "expected_git_blob_sha1": "14d23c36f2c6f0817157d31ea7cf1b35478f1c2d"
+    },
+    {
+      "path": "compatibility-tests/settings.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/compatibility-tests/settings.gradle",
+      "expected_bytes": 41,
+      "expected_git_blob_sha1": "8770f40ea457298db663cc4e3c7d542ba18e6991"
+    },
+    {
+      "path": "docs/compile-argon2.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/docs/compile-argon2.md",
+      "expected_bytes": 1125,
+      "expected_git_blob_sha1": "0127da6c372bf318dc6d8ff69a3495ffae4cf2c2"
+    },
+    {
+      "path": "docs/jna-knowhow.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/docs/jna-knowhow.md",
+      "expected_bytes": 181,
+      "expected_git_blob_sha1": "d9392a0f416674d3693dee6469f9a555873072d7"
+    },
+    {
+      "path": "docs/publish.md",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/docs/publish.md",
+      "expected_bytes": 1342,
+      "expected_git_blob_sha1": "b3d44dd91ee4b8c9283daec216f30d5711491aca"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/gradle/wrapper/gradle-wrapper.properties",
+      "expected_bytes": 202,
+      "expected_git_blob_sha1": "28ff446a21577879ae608199a6bbd5f86c8e58ab"
+    },
+    {
+      "path": "gradlew",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/gradlew",
+      "expected_bytes": 5766,
+      "expected_git_blob_sha1": "4f906e0c811fc9e230eb44819f509cd0627f2600"
+    },
+    {
+      "path": "gradlew.bat",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/gradlew.bat",
+      "expected_bytes": 2674,
+      "expected_git_blob_sha1": "107acd32c4e687021ef32db511e8a206129b88ec"
+    },
+    {
+      "path": "libargon2/Dockerfile",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/libargon2/Dockerfile",
+      "expected_bytes": 353,
+      "expected_git_blob_sha1": "5992116e1eafdda6cd0ab7f3e84fc60dee321ef9"
+    },
+    {
+      "path": "libargon2/context/build-libargon2.sh",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/libargon2/context/build-libargon2.sh",
+      "expected_bytes": 811,
+      "expected_git_blob_sha1": "99d099c61fe33ec10fa6a6eaf6149b4b8b28562b"
+    },
+    {
+      "path": "libargon2/run.sh",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/libargon2/run.sh",
+      "expected_bytes": 394,
+      "expected_git_blob_sha1": "d9793d8ab103443b5a2df39dcbbe074415e1769f"
+    },
+    {
+      "path": "settings.gradle",
+      "url": "https://raw.githubusercontent.com/phxql/argon2-jvm/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1/settings.gradle",
+      "expected_bytes": 110,
+      "expected_git_blob_sha1": "ba683264899e1cc7de37a92191cf2836ba8f2a24"
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "scope": "Cached archive integrity and Git blob calculation only; no native execution or rebuild",
+  "coordinate": "org.xerial:sqlite-jdbc:3.45.1.0",
+  "timestamp_utc": "2026-09-09T01:26:56.673131+00:00",
+  "inventory_sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b",
+  "inspection_script_sha256": "ebd89538716f136f2e886f8879037242bc1b9dd0a3fdd450bc0a5db4dee4179b",
+  "binary_downloaded": false,
+  "native_tests_passed": false,
+  "license_approved": false,
+  "archives": {
+    "binary": {
+      "path": ".cache/engine-build/supertokens-core/build/dependencies/sqlite-jdbc-3.45.1.0.jar",
+      "sha256": "f5f5404fa5a60f9e0b15e7bea2ea2d137e255f01babd0bfcb9dafcd2e3bf9cd2",
+      "bytes": 13501708,
+      "git_blob_sha1": "6a484ac7fa69052b9f018a2fcebdbf6841a40e08",
+      "members": [
+        {
+          "member": "org/sqlite/native/Linux/arm/libsqlitejdbc.so",
+          "bytes": 944652,
+          "sha256": "7300c64cf2a1d917b864d7ae6efb406cf2779fe3dfe90cb45adef0b2c47eae87",
+          "kind": "native_members",
+          "git_blob_sha1": "1f0540ca569b05c53e80db0b6469ecda7cab84f0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/aarch64/libsqlitejdbc.so",
+          "bytes": 1071960,
+          "sha256": "f5904b54c00b025f0aac497c3625bcddc932d7b0705b73e2ffd4799e50cc7c3f",
+          "kind": "native_members",
+          "git_blob_sha1": "37984d119cba991582f8ef965fcb7326da27610f",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/x86/libsqlitejdbc.so",
+          "bytes": 933864,
+          "sha256": "2750af7a06712b2b9539503b41c2c6add398d6e62eff8973e06d3e9083139536",
+          "kind": "native_members",
+          "git_blob_sha1": "895ca0f1a8bd334de79b8add0a3bce973ff668ce",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/x86_64/libsqlitejdbc.so",
+          "bytes": 1048000,
+          "sha256": "8991ba66c5c95a6d2a8bc395e874c5550b5acde267c618db1049cc1d801c34f1",
+          "kind": "native_members",
+          "git_blob_sha1": "8ea19771a1be5407b7fa59c8767f4e18b4d9b84c",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/armv7/libsqlitejdbc.so",
+          "bytes": 932380,
+          "sha256": "15e10cc91cc83f6af93bf23f3fa693de4545d574b82768436c59cbf14eefcefd",
+          "kind": "native_members",
+          "git_blob_sha1": "4c53e70a1ea2665042733f74ebd3e41c4466abbd",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/ppc64/libsqlitejdbc.so",
+          "bytes": 1264248,
+          "sha256": "751c1374f1f9f7e9a46bfb303b1b6555b8f3d55ad73042ad3163391118702331",
+          "kind": "native_members",
+          "git_blob_sha1": "7f877c8ff3f39e75c28154e7e811928ce5805bf5",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/armv6/libsqlitejdbc.so",
+          "bytes": 932384,
+          "sha256": "ebf9486f5feafcc32348755c7b434fc43cdc50f815c1a312ee17ef1317868511",
+          "kind": "native_members",
+          "git_blob_sha1": "b01a12dba82ff96e5a525a4c68b0faf5458d44ee",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/arm/libsqlitejdbc.so",
+          "bytes": 1130084,
+          "sha256": "2916fc44653011496d7cc9ca95e59101e998b5ba56497b8cf5bf99791264cd70",
+          "kind": "native_members",
+          "git_blob_sha1": "ae592f6b7de181a58503d195e54825901b72fa53",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/aarch64/libsqlitejdbc.so",
+          "bytes": 1172376,
+          "sha256": "7d3ee63027cf4a793c32ef60901f4a2e0b425c7bbfc85cf68b5da246cfc47fe0",
+          "kind": "native_members",
+          "git_blob_sha1": "ac598685554a43fc0a46ee36c91b32ba02b81730",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/x86/libsqlitejdbc.so",
+          "bytes": 1310444,
+          "sha256": "71beb70a579443dd45d1a5c35d23e79d9010eacbc937b334af32e36015d82c36",
+          "kind": "native_members",
+          "git_blob_sha1": "efb7a08f2ac46bb9d5d0be3a9281a20fbe22d913",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/x86_64/libsqlitejdbc.so",
+          "bytes": 1203400,
+          "sha256": "f04f166f8dcf3b72b7fdc03f26312f6488f28dd527303f427e80c449d9fc5e71",
+          "kind": "native_members",
+          "git_blob_sha1": "d1e95fead7f44c9a5a2b6ef1f6cd739b2466e8d0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/aarch64/sqlitejdbc.dll",
+          "bytes": 1073664,
+          "sha256": "bf419935f3b1ba1c81016404e6b0549758b22a07cbe75d0d72bdaea84113468a",
+          "kind": "native_members",
+          "git_blob_sha1": "f24776dd67fd4ad044724f85ddf41eb282725edc",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/x86/sqlitejdbc.dll",
+          "bytes": 905728,
+          "sha256": "435e6e284a2e1d94a21073773d79c7c1dbe279d72d1dc579cc655f5fc5066d32",
+          "kind": "native_members",
+          "git_blob_sha1": "1398664e40dc13e88ef16a013161710ebd9dd1bf",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/x86_64/sqlitejdbc.dll",
+          "bytes": 968704,
+          "sha256": "d7098290c4f013c6cbfb731e4db28053e377fdd34f3a41811eccfb485c3efb49",
+          "kind": "native_members",
+          "git_blob_sha1": "845e621da7cd7e55f830115be4ed9448f693e6f5",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/armv7/sqlitejdbc.dll",
+          "bytes": 788992,
+          "sha256": "253ef5068f46e80701e0e92442fde4eff8547d14e11f1b70b559b95c1e37541f",
+          "kind": "native_members",
+          "git_blob_sha1": "427581e122d0bb8c02debde484322bdb1752e8f0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Musl/aarch64/libsqlitejdbc.so",
+          "bytes": 1071712,
+          "sha256": "e463b219ba1d39040e9c0c8a469345586af4f34a88cc40bee6b42737620883f0",
+          "kind": "native_members",
+          "git_blob_sha1": "e883ba33e0dfd99fefb1073121e1e79345b58261",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Musl/x86/libsqlitejdbc.so",
+          "bytes": 1034424,
+          "sha256": "3ac400ec6e71124b2a9d0856e0e55089d1366afa5013b03bf088db29ced09a2f",
+          "kind": "native_members",
+          "git_blob_sha1": "3530a023a8c3450b26639a823bc96a94f564bdf9",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Musl/x86_64/libsqlitejdbc.so",
+          "bytes": 1046560,
+          "sha256": "c165a145c5b77548bbb990ecf11c54e578e1e25a2089ae89ce101ac5fea06744",
+          "kind": "native_members",
+          "git_blob_sha1": "4aeab8861d9ca3cfb0577da4076620863eb7a750",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Mac/aarch64/libsqlitejdbc.dylib",
+          "bytes": 1074768,
+          "sha256": "3d79e2c8d555c02d7d900b02cf4770f44691e3213861cd59886c2711ab15c66d",
+          "kind": "native_members",
+          "git_blob_sha1": "032e05cfe4ea12cbe4bf45404a57de3aefad1963",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Mac/x86_64/libsqlitejdbc.dylib",
+          "bytes": 1230500,
+          "sha256": "0508bbe0d060b4d46ff63c8362762aa47ff8e3517bbad02b2c391b245570f55b",
+          "kind": "native_members",
+          "git_blob_sha1": "f637107b304cd83f2d4a7d48a2747fc6d6b52806",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/FreeBSD/aarch64/libsqlitejdbc.so",
+          "bytes": 1169976,
+          "sha256": "df8b2e4c5d9bee7e0c3b8361a835ff9dc2abd777ff7a48a3dc8bef84fa89a042",
+          "kind": "native_members",
+          "git_blob_sha1": "0185280a8090d052520856a897702edf82771a9e",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/FreeBSD/x86/libsqlitejdbc.so",
+          "bytes": 929204,
+          "sha256": "c95e4adb87579cbc7600835ecb065384a1a06702fedb5d6d7db625842c5f35f3",
+          "kind": "native_members",
+          "git_blob_sha1": "b09a0ae677ca5b886df4f4e7e2fa37a260a87a9f",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/FreeBSD/x86_64/libsqlitejdbc.so",
+          "bytes": 1034864,
+          "sha256": "1972653e82e3cbdebd6d16b50313e5e51cae9c4a4ffc69ec485257420c799259",
+          "kind": "native_members",
+          "git_blob_sha1": "ccdc5dae2bac2a210994bdade198c3299c3858c0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE.zentus",
+          "bytes": 1312,
+          "sha256": "89167dab92289c7e5e2b65b044f0856b703d05e5d5e35c3548e73d9c7d2f5048",
+          "kind": "notice_members",
+          "git_blob_sha1": "3e044abb4cf8adce7ea0fae32d6a8ec309c2a060"
+        },
+        {
+          "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE",
+          "bytes": 11560,
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+          "kind": "notice_members",
+          "git_blob_sha1": "75b52484ea471f882c29e02693b4f02dba175b5e"
+        },
+        {
+          "member": "META-INF/maven/org.xerial/sqlite-jdbc/pom.xml",
+          "bytes": 18674,
+          "sha256": "d92258eca14a1a95ca864be37ee411a801a5864a924b6ff6327563be1b053569",
+          "kind": "build_members",
+          "git_blob_sha1": "426591ff03760172bfe29ee672a85d8025445c71"
+        }
+      ]
+    },
+    "source": {
+      "path": ".cache/runtime-source-jars/org.xerial.sqlite-jdbc-3.45.1.0-sources.jar",
+      "sha256": "2700e85d6bd9bfafee3b69f17305f6d141ab3fb9be31c7ca5993181e1ee6c823",
+      "bytes": 13426088,
+      "git_blob_sha1": "6863ca7060d40106853fddaaf8b808dfb64ade96",
+      "members": [
+        {
+          "member": "org/sqlite/native/Linux/arm/libsqlitejdbc.so",
+          "bytes": 944652,
+          "sha256": "7300c64cf2a1d917b864d7ae6efb406cf2779fe3dfe90cb45adef0b2c47eae87",
+          "kind": "native_members",
+          "git_blob_sha1": "1f0540ca569b05c53e80db0b6469ecda7cab84f0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/aarch64/libsqlitejdbc.so",
+          "bytes": 1071960,
+          "sha256": "f5904b54c00b025f0aac497c3625bcddc932d7b0705b73e2ffd4799e50cc7c3f",
+          "kind": "native_members",
+          "git_blob_sha1": "37984d119cba991582f8ef965fcb7326da27610f",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/x86/libsqlitejdbc.so",
+          "bytes": 933864,
+          "sha256": "2750af7a06712b2b9539503b41c2c6add398d6e62eff8973e06d3e9083139536",
+          "kind": "native_members",
+          "git_blob_sha1": "895ca0f1a8bd334de79b8add0a3bce973ff668ce",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/x86_64/libsqlitejdbc.so",
+          "bytes": 1048000,
+          "sha256": "8991ba66c5c95a6d2a8bc395e874c5550b5acde267c618db1049cc1d801c34f1",
+          "kind": "native_members",
+          "git_blob_sha1": "8ea19771a1be5407b7fa59c8767f4e18b4d9b84c",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/armv7/libsqlitejdbc.so",
+          "bytes": 932380,
+          "sha256": "15e10cc91cc83f6af93bf23f3fa693de4545d574b82768436c59cbf14eefcefd",
+          "kind": "native_members",
+          "git_blob_sha1": "4c53e70a1ea2665042733f74ebd3e41c4466abbd",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/ppc64/libsqlitejdbc.so",
+          "bytes": 1264248,
+          "sha256": "751c1374f1f9f7e9a46bfb303b1b6555b8f3d55ad73042ad3163391118702331",
+          "kind": "native_members",
+          "git_blob_sha1": "7f877c8ff3f39e75c28154e7e811928ce5805bf5",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux/armv6/libsqlitejdbc.so",
+          "bytes": 932384,
+          "sha256": "ebf9486f5feafcc32348755c7b434fc43cdc50f815c1a312ee17ef1317868511",
+          "kind": "native_members",
+          "git_blob_sha1": "b01a12dba82ff96e5a525a4c68b0faf5458d44ee",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/arm/libsqlitejdbc.so",
+          "bytes": 1130084,
+          "sha256": "2916fc44653011496d7cc9ca95e59101e998b5ba56497b8cf5bf99791264cd70",
+          "kind": "native_members",
+          "git_blob_sha1": "ae592f6b7de181a58503d195e54825901b72fa53",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/aarch64/libsqlitejdbc.so",
+          "bytes": 1172376,
+          "sha256": "7d3ee63027cf4a793c32ef60901f4a2e0b425c7bbfc85cf68b5da246cfc47fe0",
+          "kind": "native_members",
+          "git_blob_sha1": "ac598685554a43fc0a46ee36c91b32ba02b81730",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/x86/libsqlitejdbc.so",
+          "bytes": 1310444,
+          "sha256": "71beb70a579443dd45d1a5c35d23e79d9010eacbc937b334af32e36015d82c36",
+          "kind": "native_members",
+          "git_blob_sha1": "efb7a08f2ac46bb9d5d0be3a9281a20fbe22d913",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Android/x86_64/libsqlitejdbc.so",
+          "bytes": 1203400,
+          "sha256": "f04f166f8dcf3b72b7fdc03f26312f6488f28dd527303f427e80c449d9fc5e71",
+          "kind": "native_members",
+          "git_blob_sha1": "d1e95fead7f44c9a5a2b6ef1f6cd739b2466e8d0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/aarch64/sqlitejdbc.dll",
+          "bytes": 1073664,
+          "sha256": "bf419935f3b1ba1c81016404e6b0549758b22a07cbe75d0d72bdaea84113468a",
+          "kind": "native_members",
+          "git_blob_sha1": "f24776dd67fd4ad044724f85ddf41eb282725edc",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/x86/sqlitejdbc.dll",
+          "bytes": 905728,
+          "sha256": "435e6e284a2e1d94a21073773d79c7c1dbe279d72d1dc579cc655f5fc5066d32",
+          "kind": "native_members",
+          "git_blob_sha1": "1398664e40dc13e88ef16a013161710ebd9dd1bf",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/x86_64/sqlitejdbc.dll",
+          "bytes": 968704,
+          "sha256": "d7098290c4f013c6cbfb731e4db28053e377fdd34f3a41811eccfb485c3efb49",
+          "kind": "native_members",
+          "git_blob_sha1": "845e621da7cd7e55f830115be4ed9448f693e6f5",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Windows/armv7/sqlitejdbc.dll",
+          "bytes": 788992,
+          "sha256": "253ef5068f46e80701e0e92442fde4eff8547d14e11f1b70b559b95c1e37541f",
+          "kind": "native_members",
+          "git_blob_sha1": "427581e122d0bb8c02debde484322bdb1752e8f0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Musl/aarch64/libsqlitejdbc.so",
+          "bytes": 1071712,
+          "sha256": "e463b219ba1d39040e9c0c8a469345586af4f34a88cc40bee6b42737620883f0",
+          "kind": "native_members",
+          "git_blob_sha1": "e883ba33e0dfd99fefb1073121e1e79345b58261",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Musl/x86/libsqlitejdbc.so",
+          "bytes": 1034424,
+          "sha256": "3ac400ec6e71124b2a9d0856e0e55089d1366afa5013b03bf088db29ced09a2f",
+          "kind": "native_members",
+          "git_blob_sha1": "3530a023a8c3450b26639a823bc96a94f564bdf9",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Linux-Musl/x86_64/libsqlitejdbc.so",
+          "bytes": 1046560,
+          "sha256": "c165a145c5b77548bbb990ecf11c54e578e1e25a2089ae89ce101ac5fea06744",
+          "kind": "native_members",
+          "git_blob_sha1": "4aeab8861d9ca3cfb0577da4076620863eb7a750",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Mac/aarch64/libsqlitejdbc.dylib",
+          "bytes": 1074768,
+          "sha256": "3d79e2c8d555c02d7d900b02cf4770f44691e3213861cd59886c2711ab15c66d",
+          "kind": "native_members",
+          "git_blob_sha1": "032e05cfe4ea12cbe4bf45404a57de3aefad1963",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/Mac/x86_64/libsqlitejdbc.dylib",
+          "bytes": 1230500,
+          "sha256": "0508bbe0d060b4d46ff63c8362762aa47ff8e3517bbad02b2c391b245570f55b",
+          "kind": "native_members",
+          "git_blob_sha1": "f637107b304cd83f2d4a7d48a2747fc6d6b52806",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/FreeBSD/aarch64/libsqlitejdbc.so",
+          "bytes": 1169976,
+          "sha256": "df8b2e4c5d9bee7e0c3b8361a835ff9dc2abd777ff7a48a3dc8bef84fa89a042",
+          "kind": "native_members",
+          "git_blob_sha1": "0185280a8090d052520856a897702edf82771a9e",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/FreeBSD/x86/libsqlitejdbc.so",
+          "bytes": 929204,
+          "sha256": "c95e4adb87579cbc7600835ecb065384a1a06702fedb5d6d7db625842c5f35f3",
+          "kind": "native_members",
+          "git_blob_sha1": "b09a0ae677ca5b886df4f4e7e2fa37a260a87a9f",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "org/sqlite/native/FreeBSD/x86_64/libsqlitejdbc.so",
+          "bytes": 1034864,
+          "sha256": "1972653e82e3cbdebd6d16b50313e5e51cae9c4a4ffc69ec485257420c799259",
+          "kind": "native_members",
+          "git_blob_sha1": "ccdc5dae2bac2a210994bdade198c3299c3858c0",
+          "embedded_sqlite_source_id_strings": [
+            "2024-01-30 16:01:20 e876e51a0ed5c5b3126f52e532044363a014bc594cfefa87ffb5b82257cc467a"
+          ],
+          "source_id_string_is_not_runtime_execution": true
+        },
+        {
+          "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE.zentus",
+          "bytes": 1312,
+          "sha256": "89167dab92289c7e5e2b65b044f0856b703d05e5d5e35c3548e73d9c7d2f5048",
+          "kind": "notice_members",
+          "git_blob_sha1": "3e044abb4cf8adce7ea0fae32d6a8ec309c2a060"
+        },
+        {
+          "member": "META-INF/maven/org.xerial/sqlite-jdbc/LICENSE",
+          "bytes": 11560,
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+          "kind": "notice_members",
+          "git_blob_sha1": "75b52484ea471f882c29e02693b4f02dba175b5e"
+        },
+        {
+          "member": "META-INF/maven/org.xerial/sqlite-jdbc/pom.xml",
+          "bytes": 18674,
+          "sha256": "d92258eca14a1a95ca864be37ee411a801a5864a924b6ff6327563be1b053569",
+          "kind": "build_members",
+          "git_blob_sha1": "426591ff03760172bfe29ee672a85d8025445c71"
+        },
+        {
+          "member": "org/sqlite/core/NativeDB.c",
+          "bytes": 57689,
+          "sha256": "1a695760a4bdf8d1a9b50a899b0fad18a87168c1b24de2fb6404b680d44ce31f",
+          "kind": "native_source_members",
+          "git_blob_sha1": "7361dbcf3bc60389d9fd38a5348ae9c37e80a502"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "expertauth-native-source-acquisition-v1",
+  "started": "2026-09-09T01:34:28.887257+00:00",
+  "tool_sha256": "05b7bed9297ac937d560429e7c24ca9a53eb27faaeec2b0c3dd9ca904216d72c",
+  "records": [
+    {
+      "path": "argon2/ref.json",
+      "url": "https://api.github.com/repos/phxql/argon2-jvm/git/ref/tags/v2.11",
+      "final_url": "https://api.github.com/repos/phxql/argon2-jvm/git/ref/tags/v2.11",
+      "http_status": 200,
+      "bytes": 335,
+      "sha256": "fcd4411d1ca5d8fa8082ed802401605666d6369f1cb35562e7262e9eb9175357",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "scrypt/commit.json",
+      "url": "https://api.github.com/repos/wg/scrypt/git/commits/0675236370458e819ee21e4427c5f7f3f9485d33",
+      "final_url": "https://api.github.com/repos/wg/scrypt/git/commits/0675236370458e819ee21e4427c5f7f3f9485d33",
+      "http_status": 200,
+      "bytes": 1063,
+      "sha256": "83ccd9924a2a847b7206743fa52cf918c547e6822d045e4c8a6bc9aa2ff1a49f",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "jna/commit.json",
+      "url": "https://api.github.com/repos/java-native-access/jna/git/commits/cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "final_url": "https://api.github.com/repos/java-native-access/jna/git/commits/cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "http_status": 200,
+      "bytes": 1145,
+      "sha256": "6a911e502efddd312f9e8432ff9b42874c2cc4893f140ea13205607d5d7d6794",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "jna/tree.json",
+      "url": "https://api.github.com/repos/java-native-access/jna/git/trees/04a5ebb1e8b81b6f13cbcbf91dbe0b9ec6af43a6?recursive=1",
+      "final_url": "https://api.github.com/repos/java-native-access/jna/git/trees/04a5ebb1e8b81b6f13cbcbf91dbe0b9ec6af43a6?recursive=1",
+      "http_status": 200,
+      "bytes": 379627,
+      "sha256": "a07a318a286ba75b9033004f248eb42257ffdb5dace69699eded10b207352fe4",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "sqlite/commit.json",
+      "url": "https://api.github.com/repos/xerial/sqlite-jdbc/git/commits/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6",
+      "final_url": "https://api.github.com/repos/xerial/sqlite-jdbc/git/commits/5ac6b0d4bf42244f1d48b39af74e87ce7621cac6",
+      "http_status": 200,
+      "bytes": 1189,
+      "sha256": "3f326c59fb587b151eed3124de4c1a795e2860c93ed2c626acb7cf25d015a986",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "sqlite/tree.json",
+      "url": "https://api.github.com/repos/xerial/sqlite-jdbc/git/trees/504a91c037b5d074df6eafb9d1c3632c023a98fa?recursive=1",
+      "final_url": "https://api.github.com/repos/xerial/sqlite-jdbc/git/trees/504a91c037b5d074df6eafb9d1c3632c023a98fa?recursive=1",
+      "http_status": 200,
+      "bytes": 67394,
+      "sha256": "90df9b05a7a8427a4954dbc6244de59360e3e46c1a68ea0ec3f630e2f5f23bfa",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "argon2/commit.json",
+      "url": "https://api.github.com/repos/phxql/argon2-jvm/git/commits/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1",
+      "final_url": "https://api.github.com/repos/phxql/argon2-jvm/git/commits/a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1",
+      "http_status": 200,
+      "bytes": 2191,
+      "sha256": "ae290043c68b8e16b94aaa7377cd0cf70837fc0f8307f60c183f22610b1ce20a",
+      "expected_git_blob_sha1": null
+    },
+    {
+      "path": "argon2/tree.json",
+      "url": "https://api.github.com/repos/phxql/argon2-jvm/git/trees/f3cdd29128152396a913abf81b0dc1b84ab4ab6d?recursive=1",
+      "final_url": "https://api.github.com/repos/phxql/argon2-jvm/git/trees/f3cdd29128152396a913abf81b0dc1b84ab4ab6d?recursive=1",
+      "http_status": 200,
+      "bytes": 38650,
+      "sha256": "0321ecccac779c69cab5874f93ba7bf9d66071ebc9b197fc208540f06ca1f1a5",
+      "expected_git_blob_sha1": null
+    }
+  ],
+  "errors": [],
+  "total_bytes": 491594,
+  "license_approved": false,
+  "native_build_qualified": false,
+  "authentication_complete": false,
+  "commits": {
+    "jna": {
+      "repo": "java-native-access/jna",
+      "commit": "cc4ce71d511a9aa17219cc36e2338dd1b0f52770",
+      "tree": "04a5ebb1e8b81b6f13cbcbf91dbe0b9ec6af43a6",
+      "members": 1467
+    },
+    "sqlite": {
+      "repo": "xerial/sqlite-jdbc",
+      "commit": "5ac6b0d4bf42244f1d48b39af74e87ce7621cac6",
+      "tree": "504a91c037b5d074df6eafb9d1c3632c023a98fa",
+      "members": 273
+    },
+    "argon2": {
+      "repo": "phxql/argon2-jvm",
+      "commit": "a6a6ecd15c344983d5955cad6c8e7cb73dd1c1c1",
+      "tree": "f3cdd29128152396a913abf81b0dc1b84ab4ab6d",
+      "members": 158
+    }
+  },
+  "finished": "2026-09-09T01:34:31.708635+00:00",
+  "passed": true
+}

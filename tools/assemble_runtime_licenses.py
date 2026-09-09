@@ -4,13 +4,14 @@ Acquired source archives remain in a bounded cache, with locked retrieval paths.
 This does not assert complete corresponding-source or distribution approval.
 """
 from __future__ import annotations
+import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import re
 import zipfile
 from fetch_runtime_notice_sources import LOCK, ROOT, cache_path, ensure_sources, require, sha
 
-NAME = re.compile(r'^(?:license|licence|notice|copying|copyright)(?:[._-].*)?$', re.I)
+NAME = re.compile(r'^(?:(?:license|licence|notice|copying|copyright)(?:[._-].*)?|AL2\.0|LGPL2\.1)$', re.I)
 BINARY_SUFFIXES = {'.class', '.jar', '.exe', '.dll', '.so', '.dylib', '.jnilib', '.a'}
 
 
@@ -129,7 +130,6 @@ def assemble(destination: Path):
             with zipfile.ZipFile(ROOT / dependency['jar']['file']) as archive:
                 raw = archive.read(binding['jar_member'])
             require(sha(raw) == binding['member_sha256'], 'Supplemental native member drift')
-        import hashlib
         require(hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == binding['git_blob_sha1'],
                 'Supplemental release Git object mismatch')
     supplements = []
@@ -146,6 +146,29 @@ def assemble(destination: Path):
                     source[bounds['start_inclusive']:bounds['end_exclusive']] == raw, 'Source notice excerpt mismatch')
         packaged = write(row['coordinate'].replace(':', '/') + '/supplemental/' + path.name, raw)
         supplements.append({**row, 'packaged_file': packaged})
+    header_lock = json.loads(input_bytes(ROOT / 'reuse/native-header-notices.lock.json'))
+    require(header_lock['license_approved'] is False and len(header_lock['files']) == 3,
+            'Unexpected native header notice qualification')
+    source_manifest = header_lock['source_manifest']
+    require(sha(input_bytes(ROOT / source_manifest['path'])) == source_manifest['sha256'],
+            'Native header source review changed')
+    headers = []
+    for row in header_lock['files']:
+        require(row['coordinate'] == 'com.lambdaworks:scrypt:1.4.0' and
+                row['commit'] == '0675236370458e819ee21e4427c5f7f3f9485d33', 'Unreviewed native source')
+        source_path = (ROOT / row['source_file']).resolve()
+        require(source_path.is_relative_to((ROOT / 'evidence/reuse/native-correspondence/scrypt/acquired').resolve()),
+                'Native header outside reviewed source acquisition')
+        raw = input_bytes(source_path)
+        require(sha(raw) == row['source_sha256'] and
+                hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest() == row['source_git_blob_sha1'],
+                'Native header source bytes changed')
+        bounds = row['notice_byte_range']
+        require(bounds['start_inclusive'] == 0 and 0 < bounds['end_exclusive'] <= len(raw), 'Invalid header notice bounds')
+        notice = raw[:bounds['end_exclusive']]
+        require(sha(notice) == row['notice_sha256'], 'Native header notice changed')
+        packaged = write(row['coordinate'].replace(':', '/') + '/supplemental/' + row['notice_filename'], notice)
+        headers.append({**row, 'packaged_file': packaged})
     for name in ['THIRD_PARTY_NOTICES.md', 'reuse/oss-core-runtime.cdx.json', 'reuse/runtime-source-archives.lock.json', 'docs/runtime-image-notices.md']:
         write(Path(name).name, input_bytes(ROOT / name))
     input_bytes(Path(__file__))
@@ -157,6 +180,7 @@ def assemble(destination: Path):
               'binary_notice_text_count': sum(len(row['binary_notices']) for row in rows),
               'source_notice_text_count': sum(len(row['source_notices']) for row in rows),
               'supplemental_notices': supplements,
+              'source_header_notices': headers,
               'no_embedded_notice_text': [row['coordinate'] for row in rows if not row['notice_text_present']],
               'full_distribution_approved': False,
               'remaining': ['Full applicable license and copyright texts for components without embedded notices',

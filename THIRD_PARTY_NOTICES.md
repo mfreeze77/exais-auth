@@ -1,8 +1,8 @@
 # Third-party notices — source-audit checkpoint
 
 ExpertAuth does not claim ownership of upstream components. This checkpoint
-contains independently authored audit tooling and metadata plus permitted
-license/notice copies. It does not grant permission to redistribute artifacts
+contains independently authored audit tooling, metadata, notice copies and
+verbatim source excerpts/files with their upstream terms preserved. It does not grant permission to redistribute artifacts
 whose dependency or licensing boundaries remain unresolved.
 
 * **Keycloak community**, source commit
@@ -52,6 +52,18 @@ whose dependency or licensing boundaries remain unresolved.
   `evidence/reuse/runtime-distribution-review/supplemental-notices.json`.
   The runtime notice assembler preserves these alongside embedded notices.
   Native source/build and full applicable-license closure remain unqualified.
+* **Native source review inputs:** pinned scrypt C/header/Java-test files, Argon2
+  wrapper build controls, JNA/libffi build/source witnesses and SQLite build
+  controls are retained under `evidence/reuse/native-correspondence`. The component
+  manifests record exact source paths, Git objects, SHA-256 and file-specific
+  terms. These source files remain unmodified and separately attributed. JNA's
+  libffi build helpers include GPL terms and exceptions; full GPL2 is retained in
+  its `LICENSE-BUILDTOOLS`, full GPL3 under `license-texts/run-01/GPL-3.0.txt`, and
+  Argon2's full LGPL3 under `argon2/acquired/LICENSE.txt`. These files do not change
+  ExpertAuth's own license. One unresolved JNA helper, `make_sunver.pl`, remains
+  local and excluded from the source checkpoint pending its grant review. SQLite
+  headers/extensions with unresolved terms were not acquired. Native rebuilds,
+  recipient source/relink delivery and independent licensing review remain open.
 
 The runtime image's `/opt/expertauth/licenses/manifest.json` binds packaged
 attribution to actual JAR hashes. Source retrieval uses the83 available hash-locked

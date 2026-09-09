@@ -1,0 +1,34 @@
+{
+  "schema": "expertauth-scrypt-source-manifest-verification-v1",
+  "manifest_sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d",
+  "tool_sha256": "6f4a7a2e31f9408ed7da05d747e172b6959404446118cac4b807dcc947be9d48",
+  "positive_command": [
+    "python",
+    "evidence/reuse/native-correspondence/scrypt/qualify_sources.py",
+    "--commit-metadata",
+    "evidence/reuse/native-correspondence/metadata/run-01/scrypt/commit.json"
+  ],
+  "positive_exit_code": 0,
+  "checks": {
+    "all32source_file_hashes_verified": true,
+    "all_manifest_inputs_current": true,
+    "tool_current": true,
+    "native_C_and_project_header_closure": true,
+    "commit_tree_binding": true,
+    "all3native_archive_bindings": true,
+    "six_explicit_BSD2_notices": true,
+    "approval_claims_false": true,
+    "all13fetched_raw_hashes_match": true,
+    "altered_header_rejected": true,
+    "negative_scratch_removed": true
+  },
+  "negative_test": {
+    "mutation": "One bit in copied config.h; original acquired file remains unchanged",
+    "exit_code": 1,
+    "expected_failure": "Source Git blob/size differs: src/main/include/config.h",
+    "output_manifest_absent": true
+  },
+  "passed": true,
+  "native_build_or_runtime_test_executed": false,
+  "scope": "Source-identity integrity checks only, not authentication acceptance or legal approval"
+}

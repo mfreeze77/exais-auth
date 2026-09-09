@@ -87,7 +87,7 @@
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
-          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+          "sha256": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff"
         },
         {
           "path": "tools/fetch_runtime_notice_sources.py",
@@ -104,6 +104,34 @@
         {
           "path": "reuse/runtime-source-archives.lock.json",
           "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+        },
+        {
+          "path": "tools/qualify_native_argon2.py",
+          "sha256": "40f750d162a3d31e144c7b9bc387de9dac9c599c19d5d9b8cd5c1edf7225ccb3"
+        },
+        {
+          "path": "tools/verify_notice_revision.py",
+          "sha256": "c9d0cb56372c6946126371493464752e48f3ca0c8cbaae8c5b177c985f5be1b7"
+        },
+        {
+          "path": "reuse/native-header-notices.lock.json",
+          "sha256": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd"
+        },
+        {
+          "path": "tests/reuse/test_native_source_capture.py",
+          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+        },
+        {
+          "path": "tests/reuse/test_runtime_distribution.py",
+          "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
         }
       ],
       "positive_test_ids": [],
@@ -146,9 +174,45 @@
         {
           "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
           "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json",
+          "sha256": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a"
+        },
+        {
+          "path": "evidence/runs/native-source-and-notice-tests-01/command.json",
+          "sha256": "59b179aa15c3ed177641a11ba5f601c4222f504fb363469f55fdbd7cb0cff8a1"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/source-manifest.json",
+          "sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/verification.json",
+          "sha256": "88bbd3bb9df089e3d80a43d4991b0417e5b66bb05768c215dbf40495ed22fd99"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/release-bindings.json",
+          "sha256": "d32f48a43eef39d78e78263bc164cc532eaecdca13a12ce94457b97933bc721c"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/acquired-review.json",
+          "sha256": "99ade50bcd5c1da519b92cd3991527768ba9f1d9654d133fda1e30cd8a9a9ef4"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/release-bindings.json",
+          "sha256": "221093ebf574fa38a44dfe54a79b53583b60816b6c69cef72d3f956a6d30a3bf"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/acquired-verification.json",
+          "sha256": "4e8de6acd55d50de760572c3c11084c8ded66638b59c8cb139f5f661c429dd5d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
+          "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
         }
       ],
-      "qualification_note": "Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
+      "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -213,7 +277,7 @@
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
-          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+          "sha256": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff"
         },
         {
           "path": "tools/fetch_runtime_notice_sources.py",
@@ -230,6 +294,34 @@
         {
           "path": "reuse/runtime-source-archives.lock.json",
           "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+        },
+        {
+          "path": "tools/qualify_native_argon2.py",
+          "sha256": "40f750d162a3d31e144c7b9bc387de9dac9c599c19d5d9b8cd5c1edf7225ccb3"
+        },
+        {
+          "path": "tools/verify_notice_revision.py",
+          "sha256": "c9d0cb56372c6946126371493464752e48f3ca0c8cbaae8c5b177c985f5be1b7"
+        },
+        {
+          "path": "reuse/native-header-notices.lock.json",
+          "sha256": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd"
+        },
+        {
+          "path": "tests/reuse/test_native_source_capture.py",
+          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+        },
+        {
+          "path": "tests/reuse/test_runtime_distribution.py",
+          "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
         }
       ],
       "positive_test_ids": [],
@@ -272,9 +364,45 @@
         {
           "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
           "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json",
+          "sha256": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a"
+        },
+        {
+          "path": "evidence/runs/native-source-and-notice-tests-01/command.json",
+          "sha256": "59b179aa15c3ed177641a11ba5f601c4222f504fb363469f55fdbd7cb0cff8a1"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/source-manifest.json",
+          "sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/verification.json",
+          "sha256": "88bbd3bb9df089e3d80a43d4991b0417e5b66bb05768c215dbf40495ed22fd99"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/release-bindings.json",
+          "sha256": "d32f48a43eef39d78e78263bc164cc532eaecdca13a12ce94457b97933bc721c"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/acquired-review.json",
+          "sha256": "99ade50bcd5c1da519b92cd3991527768ba9f1d9654d133fda1e30cd8a9a9ef4"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/release-bindings.json",
+          "sha256": "221093ebf574fa38a44dfe54a79b53583b60816b6c69cef72d3f956a6d30a3bf"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/acquired-verification.json",
+          "sha256": "4e8de6acd55d50de760572c3c11084c8ded66638b59c8cb139f5f661c429dd5d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
+          "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
         }
       ],
-      "qualification_note": "Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
+      "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -304,7 +432,7 @@
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
-          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+          "sha256": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff"
         },
         {
           "path": "tools/fetch_runtime_notice_sources.py",
@@ -321,6 +449,34 @@
         {
           "path": "reuse/runtime-source-archives.lock.json",
           "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+        },
+        {
+          "path": "tools/qualify_native_argon2.py",
+          "sha256": "40f750d162a3d31e144c7b9bc387de9dac9c599c19d5d9b8cd5c1edf7225ccb3"
+        },
+        {
+          "path": "tools/verify_notice_revision.py",
+          "sha256": "c9d0cb56372c6946126371493464752e48f3ca0c8cbaae8c5b177c985f5be1b7"
+        },
+        {
+          "path": "reuse/native-header-notices.lock.json",
+          "sha256": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd"
+        },
+        {
+          "path": "tests/reuse/test_native_source_capture.py",
+          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+        },
+        {
+          "path": "tests/reuse/test_runtime_distribution.py",
+          "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
         }
       ],
       "positive_test_ids": [],
@@ -363,9 +519,45 @@
         {
           "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
           "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json",
+          "sha256": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a"
+        },
+        {
+          "path": "evidence/runs/native-source-and-notice-tests-01/command.json",
+          "sha256": "59b179aa15c3ed177641a11ba5f601c4222f504fb363469f55fdbd7cb0cff8a1"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/source-manifest.json",
+          "sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/verification.json",
+          "sha256": "88bbd3bb9df089e3d80a43d4991b0417e5b66bb05768c215dbf40495ed22fd99"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/release-bindings.json",
+          "sha256": "d32f48a43eef39d78e78263bc164cc532eaecdca13a12ce94457b97933bc721c"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/acquired-review.json",
+          "sha256": "99ade50bcd5c1da519b92cd3991527768ba9f1d9654d133fda1e30cd8a9a9ef4"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/release-bindings.json",
+          "sha256": "221093ebf574fa38a44dfe54a79b53583b60816b6c69cef72d3f956a6d30a3bf"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/acquired-verification.json",
+          "sha256": "4e8de6acd55d50de760572c3c11084c8ded66638b59c8cb139f5f661c429dd5d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
+          "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
         }
       ],
-      "qualification_note": "Pinned source build plus87-JAR/474-file runtime notice image verified;83 locked source siblings and5 supplemental native notices preserved. Same-JAR local replacement reached storage readiness. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
+      "qualification_note": "Historical87-JAR/474-file image installed and reached storage readiness. New source packager adds2 JNA full licenses and3 scrypt header notices (390 generated notice files,89 archive texts); installation in a new image is pending. Native release bytes are identified, not reproducibly built. Ten package/request tests and actual hash-rejection cleanup pass narrow tooling checks. Full selected-engine/native/OS distribution and source/relink closure remain unqualified.",
       "observed_test_ids": []
     },
     {
@@ -11217,7 +11409,7 @@
         },
         {
           "path": "tools/assemble_runtime_licenses.py",
-          "sha256": "5e3c7014b933682ecb07b21334284776749d8ed3ad88b09e578974a986f14d59"
+          "sha256": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff"
         },
         {
           "path": "tools/fetch_runtime_notice_sources.py",
@@ -11234,6 +11426,34 @@
         {
           "path": "reuse/runtime-source-archives.lock.json",
           "sha256": "94016926c00b86dec569d8eeaa419ca1c7726eedcc47e42060897740d6943353"
+        },
+        {
+          "path": "tools/capture_native_sources.py",
+          "sha256": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7"
+        },
+        {
+          "path": "tools/run_native_source_capture.py",
+          "sha256": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8"
+        },
+        {
+          "path": "tools/qualify_native_argon2.py",
+          "sha256": "40f750d162a3d31e144c7b9bc387de9dac9c599c19d5d9b8cd5c1edf7225ccb3"
+        },
+        {
+          "path": "tools/verify_notice_revision.py",
+          "sha256": "c9d0cb56372c6946126371493464752e48f3ca0c8cbaae8c5b177c985f5be1b7"
+        },
+        {
+          "path": "reuse/native-header-notices.lock.json",
+          "sha256": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd"
+        },
+        {
+          "path": "tests/reuse/test_native_source_capture.py",
+          "sha256": "aa57cf54bf3f1935aa3b102e12c0ac6e4e9254edac48fa799870caac43f45874"
+        },
+        {
+          "path": "tests/reuse/test_runtime_distribution.py",
+          "sha256": "96eb5289b844979668084a0b59b5ef6214989c4571e8445ecf4a7361d6a464fe"
         }
       ],
       "positive_test_ids": [],
@@ -11268,6 +11488,42 @@
         {
           "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
           "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json",
+          "sha256": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a"
+        },
+        {
+          "path": "evidence/runs/native-source-and-notice-tests-01/command.json",
+          "sha256": "59b179aa15c3ed177641a11ba5f601c4222f504fb363469f55fdbd7cb0cff8a1"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/source-manifest.json",
+          "sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/scrypt/verification.json",
+          "sha256": "88bbd3bb9df089e3d80a43d4991b0417e5b66bb05768c215dbf40495ed22fd99"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/argon2/release-bindings.json",
+          "sha256": "d32f48a43eef39d78e78263bc164cc532eaecdca13a12ce94457b97933bc721c"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/jna/acquired-review.json",
+          "sha256": "99ade50bcd5c1da519b92cd3991527768ba9f1d9654d133fda1e30cd8a9a9ef4"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/release-bindings.json",
+          "sha256": "221093ebf574fa38a44dfe54a79b53583b60816b6c69cef72d3f956a6d30a3bf"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/sqlite/research/acquired-verification.json",
+          "sha256": "4e8de6acd55d50de760572c3c11084c8ded66638b59c8cb139f5f661c429dd5d"
+        },
+        {
+          "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
+          "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
         }
       ]
     },
@@ -11990,6 +12246,42 @@
     {
       "path": "evidence/reuse/runtime-distribution-review/archive-inventory.json",
       "sha256": "3110bf82e7a0e94025b1bbfe397811f6531af92988404ab132132bbf85b9ef4b"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json",
+      "sha256": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a"
+    },
+    {
+      "path": "evidence/runs/native-source-and-notice-tests-01/command.json",
+      "sha256": "59b179aa15c3ed177641a11ba5f601c4222f504fb363469f55fdbd7cb0cff8a1"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/scrypt/source-manifest.json",
+      "sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/scrypt/verification.json",
+      "sha256": "88bbd3bb9df089e3d80a43d4991b0417e5b66bb05768c215dbf40495ed22fd99"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/argon2/release-bindings.json",
+      "sha256": "d32f48a43eef39d78e78263bc164cc532eaecdca13a12ce94457b97933bc721c"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/jna/acquired-review.json",
+      "sha256": "99ade50bcd5c1da519b92cd3991527768ba9f1d9654d133fda1e30cd8a9a9ef4"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/sqlite/research/release-bindings.json",
+      "sha256": "221093ebf574fa38a44dfe54a79b53583b60816b6c69cef72d3f956a6d30a3bf"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/sqlite/research/acquired-verification.json",
+      "sha256": "4e8de6acd55d50de760572c3c11084c8ded66638b59c8cb139f5f661c429dd5d"
+    },
+    {
+      "path": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
+      "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac"
     }
   ],
   "session_candidate_artifacts": [

@@ -1,0 +1,56 @@
+{
+  "schema": "expertauth-native-header-notices-v1",
+  "source_manifest": {
+    "path": "evidence/reuse/native-correspondence/scrypt/source-manifest.json",
+    "sha256": "fe12737c7483a9930c16296795ec8c0f84d4bd5c323802056838b37f2118c68d"
+  },
+  "files": [
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "source_file": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/crypto_scrypt.h",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/crypto_scrypt.h",
+      "source_sha256": "19c2bc37fa9b6dfc0f9fc825bb1cc93739796062c23fb51f9264568e831626ac",
+      "source_git_blob_sha1": "f72e1f4b0db58e505250dcfabbff92549d9c59c5",
+      "notice_byte_range": {
+        "start_inclusive": 0,
+        "end_exclusive": 1456
+      },
+      "notice_sha256": "42b7599d796893f0ea6f3fb892fcd2eefa6f637330578dd92ecaf8dcedc4dee8",
+      "notice_filename": "crypto_scrypt.h.NOTICE",
+      "license_expression_observed": "BSD-2-Clause"
+    },
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "source_file": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/sha256.h",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/sha256.h",
+      "source_sha256": "0ee829a2ccee8e434e769e371607296b22620081fb9aafb6056e5df68c3a1cf7",
+      "source_git_blob_sha1": "289a5232f6e5fe266bd71ad89684afa08e1ac693",
+      "notice_byte_range": {
+        "start_inclusive": 0,
+        "end_exclusive": 1436
+      },
+      "notice_sha256": "9d58252d00b39208738bfcc510ef5b24b3f6e7b54b42c307c6185c71a473cf25",
+      "notice_filename": "sha256.h.NOTICE",
+      "license_expression_observed": "BSD-2-Clause"
+    },
+    {
+      "coordinate": "com.lambdaworks:scrypt:1.4.0",
+      "commit": "0675236370458e819ee21e4427c5f7f3f9485d33",
+      "source_file": "evidence/reuse/native-correspondence/scrypt/acquired/src/main/include/sysendian.h",
+      "source_url": "https://raw.githubusercontent.com/wg/scrypt/0675236370458e819ee21e4427c5f7f3f9485d33/src/main/include/sysendian.h",
+      "source_sha256": "996b0821c7fd18bc9d5307995e360e4262be7d8cd65966350e92dfcc057d6f59",
+      "source_git_blob_sha1": "62ef31a42bd0245caa2ea20d509fbed9cab579d1",
+      "notice_byte_range": {
+        "start_inclusive": 0,
+        "end_exclusive": 1461
+      },
+      "notice_sha256": "1d5a2048f30137293e7b5629f647b25f984f30931cb925afb661bc2996597618",
+      "notice_filename": "sysendian.h.NOTICE",
+      "license_expression_observed": "BSD-2-Clause"
+    }
+  ],
+  "license_approved": false,
+  "native_build_qualified": false
+}

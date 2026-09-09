@@ -1,0 +1,110 @@
+{
+  "schema": "expertauth-native-source-checkpoint-validation-v1",
+  "current_inputs": {
+    "tools/capture_native_sources.py": "3f642fbcc50c2b4776fde970eb53c5c618a13adca7376b51934a285c33d110b7",
+    "tools/run_native_source_capture.py": "1c4fc34d66b17bfe13b7225e2320ef9342043ca8df79a0518fddc71be21ba0f8",
+    "tools/assemble_runtime_licenses.py": "3b97e1ce6f3d21a144675e0a3e988b0cde316c6281590cd01006d390391946ff",
+    "tools/qualify_native_argon2.py": "40f750d162a3d31e144c7b9bc387de9dac9c599c19d5d9b8cd5c1edf7225ccb3",
+    "tools/verify_notice_revision.py": "c9d0cb56372c6946126371493464752e48f3ca0c8cbaae8c5b177c985f5be1b7",
+    "reuse/native-header-notices.lock.json": "7be1113331e5776627361b9133fb6967a1ebac7bf9708d6341fedd6c20dbf3fd",
+    "evidence/reuse/native-correspondence/notice-packaging/run-02/report.json": "61faf9f4d39508900624dcfeb809c5aea528036feb922faa7c4b5f219126001a",
+    "ledger/implementation.json": "1d3700f9d6bc0b6b8505412a776a2d1b7d5f6c162c656d19c7db1187af61eb30"
+  },
+  "capture_reports": [
+    {
+      "container_report": "evidence/reuse/native-correspondence/argon2/acquired/container.json",
+      "sha256": "d2f20be74bf67488fd0c23d72038c13cec669f4a7c60516108f0816a351b639e",
+      "id": "cae3c1ebb1839d19d5d290d9ead6ae890df8c33fe402f352962131e946e416b4",
+      "command_exit": 0,
+      "source_tool": "evidence/reuse/native-correspondence/source-snapshots/capture_native_sources.py.before-validation-fix",
+      "runner_tool": "evidence/reuse/native-correspondence/source-snapshots/run_native_source_capture.py.before-validation-fix",
+      "retained_bytes": 47540,
+      "records": 31,
+      "passed": true
+    },
+    {
+      "container_report": "evidence/reuse/native-correspondence/jna/acquired/container.json",
+      "sha256": "6d1323bd04d4ddd582409e2113a81c7765416984c03f3b2ecb890ebeec1b7b67",
+      "id": "07047ab43e8b12fdfdc81b1a7c6d41e49ec0b2e1b4736190206afedc73f836da",
+      "command_exit": 0,
+      "source_tool": "evidence/reuse/native-correspondence/source-snapshots/capture_native_sources.py.before-validation-fix",
+      "runner_tool": "evidence/reuse/native-correspondence/source-snapshots/run_native_source_capture.py.before-validation-fix",
+      "retained_bytes": 699788,
+      "records": 47,
+      "passed": true
+    },
+    {
+      "container_report": "evidence/reuse/native-correspondence/license-texts/run-01/container.json",
+      "sha256": "fdd7e2297c36f2903b6d31bbb2b1e9f7c3d181bdb28b9bd885d23466054ded72",
+      "id": "0ed6f416a05d1a87f2d117677528debb735e2cd86e890fe0e56bef30d0bcb39b",
+      "command_exit": 0,
+      "source_tool": "evidence/reuse/native-correspondence/source-snapshots/capture_native_sources.py.before-casefold-fix",
+      "runner_tool": "tools/run_native_source_capture.py",
+      "retained_bytes": 35149,
+      "records": 1,
+      "passed": true
+    },
+    {
+      "container_report": "evidence/reuse/native-correspondence/metadata/run-01/container.json",
+      "sha256": "a1fd86b0eb1a1a2d4b066f39d8744e18cba17351b1c198e47a3fe286340d408d",
+      "id": "fa7d99a852b2ed7c259a57ef750797c20630a727c1062f88fc27bff38efc40ca",
+      "command_exit": 0,
+      "source_tool": "evidence/reuse/native-correspondence/source-snapshots/capture_native_sources.py.before-validation-fix",
+      "runner_tool": "evidence/reuse/native-correspondence/source-snapshots/run_native_source_capture.py.before-validation-fix",
+      "retained_bytes": 491594,
+      "records": 8,
+      "passed": true
+    },
+    {
+      "container_report": "evidence/reuse/native-correspondence/scrypt/acquired/container.json",
+      "sha256": "2a6a867e539e28e479cc4fd5be36ff346c4122e4fa10955fbfc9af7e74a0def8",
+      "id": "46e8a244843536772a21e9b25df614a3f80249781b2f921206b52803a229cc9e",
+      "command_exit": 0,
+      "source_tool": "evidence/reuse/native-correspondence/source-snapshots/capture_native_sources.py.before-validation-fix",
+      "runner_tool": "evidence/reuse/native-correspondence/source-snapshots/run_native_source_capture.py.before-validation-fix",
+      "retained_bytes": 24534,
+      "records": 13,
+      "passed": true
+    },
+    {
+      "container_report": "evidence/reuse/native-correspondence/sqlite/acquired/container.json",
+      "sha256": "7c806008dca54b66d2b542c09a592d5cd4fae495ac4848293a9189f3d0da534c",
+      "id": "82d535affb0ba76b16c5cf554561ea51a001ba0c8aebc949bb837f3a75070bd5",
+      "command_exit": 0,
+      "source_tool": "evidence/reuse/native-correspondence/source-snapshots/capture_native_sources.py.before-validation-fix",
+      "runner_tool": "evidence/reuse/native-correspondence/source-snapshots/run_native_source_capture.py.before-validation-fix",
+      "retained_bytes": 134402,
+      "records": 26,
+      "passed": true
+    },
+    {
+      "container_report": "evidence/reuse/native-correspondence/validation/hash-mismatch/run-01/container.json",
+      "sha256": "b3c7174e7dec490ff54beea03f4b900a89199f80cfbf082824d722e17f5ba9ac",
+      "id": "3aef02cdf0fad82d395eebbb55a9cfc181141f93de28c99df6ea5b89e53b6a50",
+      "command_exit": 1,
+      "source_tool": "tools/capture_native_sources.py",
+      "runner_tool": "tools/run_native_source_capture.py",
+      "retained_bytes": 0,
+      "records": 0,
+      "passed": false
+    }
+  ],
+  "all_capture_containers_absent": true,
+  "staged_files_scanned": 196,
+  "known_private_secret_matches": 0,
+  "baseline_staged_changes": 0,
+  "release_refused_issues": 557,
+  "notice_current_inputs_verified": 306,
+  "workspace_native_review_bytes": 3225954,
+  "host_free_bytes_observed": 294135996416,
+  "host_disk_delta_attribution": "Not established; no image/network/volume created by source capture",
+  "image_contents_verified": false,
+  "native_build_qualified": false,
+  "license_approved": false,
+  "authentication_complete": false,
+  "excluded_source": {
+    "path": "evidence/reuse/native-correspondence/jna/acquired/native/libffi/make_sunver.pl",
+    "sha256": "ca40d3458893e03a90807be87d720a59e921ee6bf678c6696779d635004a261f",
+    "reason": "Retained locally; export grant unresolved"
+  }
+}
