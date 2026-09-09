@@ -43,3 +43,13 @@ state, identity linkage, signing and refresh transitions. Adapters may validate 
 translate contracts; they must not keep a duplicate refresh store or write into
 upstream tables. Offline access verification is a separate profile from online
 session revocation. No product authority is committed by these experiments.
+
+2026-09-09 evidence addition: the separate `OSS-CDI56-GRACE5-V1` candidate passes
+12 direct Core cases and an explicitly adapted installed Node/React flow. The
+five-second window recovers lost responses and converges concurrent responses
+on one successor; stale replay revokes the intended family. The real browser
+coordinates32 protected requests across four tabs. This does not approve the
+upstream Node5.4/Python/native profiles, every client ordering, effective-policy
+readiness or the missing tenant/link/factor mapping. Original strict-profile
+failures stay preserved, and `selected_engine` remains null. Exact evidence and
+current image pins are in `docs/session-refresh-grace.md`.

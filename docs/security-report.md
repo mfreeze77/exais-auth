@@ -6,6 +6,14 @@ license-enforcement changes were performed.
 
 Material unresolved findings:
 
+- The explicit five-second CDI5.6 session candidate now passes direct Core
+  transaction-abort/retry and stale-family revocation cases, plus installed
+  Node transport faults and actual four-tab browser coordination. An old
+  response delivered after logout fails server-side use. Arbitrary concurrent
+  credential installation, all SDK/tenant/factor profiles, revocation crash
+  boundaries, effective grace-configuration readiness and full independent
+  review remain open. Historical zero-grace/legacy failures remain recorded.
+  See `docs/session-refresh-grace.md` and its source-specific reuse report.
 - The locked npm downloader now passes actual wrong-SRI response, concurrent
   writer, corrupt/link/oversize/unknown-cache and wrong-origin rejection cases,
   plus fresh registry and disconnected installation/compilation. Crash-safe
@@ -14,7 +22,7 @@ Material unresolved findings:
   for three pinned transitive packages remain unresolved. No all-dependencies-
   maintained, full distribution or independent-review claim follows. See
   `docs/node-package-bootstrap.md`.
-- Updated Node image `9375a5bc093d` passes 34 installed atomic-profile behavior
+- Updated Node image `e02ab9bcd78e` passes 34 installed atomic-profile behavior
   checks without app overlays. A real new-Core/old-plugin mismatch fails readiness
   and sign-in without issuing tokens/cookies or adding a session; healthy-writer
   retry succeeds. Original archive bytes and source bindings were checked before

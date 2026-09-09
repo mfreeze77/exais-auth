@@ -23,6 +23,13 @@
   precommit, SDK-crash-before-revocation, database failure or all transport/platform
   cases. Existing Keycloak and CDI5.6 failures remain preserved as their declared
   profiles; neither automatically characterizes the other versioned policy.
+  A separate five-second CDI5.6 candidate now passes12 direct Core cases and
+  installed Node/browser cases through an explicit two-operation adaptation.
+  Real transaction abort, retry/replay revocation and four-tab coordination pass.
+  This does not qualify unchanged Node5.4/Python/native clients, arbitrary
+  concurrent credential installation, effective-policy readiness, revocation
+  crash boundaries, all orderings or the full foundation. The original source
+  lab still uses zero grace. See `docs/session-refresh-grace.md`.
 - Dependency distribution: LGPL/EPL/native source/relink notices, container OS review,
   every SDK/plugin transitive closure and version matrix remain incomplete.
   The runtime now carries a verified notice package and83 locked source siblings
@@ -63,7 +70,7 @@
   `docs/password-session-transactions.md`. The default upstream profile still has separate transactions and
   a crash gap; known/unknown SMTP timing differs. See `docs/atomic-password-reset.md`.
   Durable delivery outbox/retries, policy, bounce handling and password-change
-  notifications remain absent. Current Node image9375a5bc093d passes a complete
+  notifications remain absent. Current Node imagee02ab9bcd78e passes a complete
   offline build and installed regressions. Fresh archive acquisition and a disconnected offline install/compile now pass;
   full fresh-stack bootstrap remains unqualified because image orchestration
   requires the retained private lab and previous image. Cache crash/stale-lock

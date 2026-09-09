@@ -1,0 +1,290 @@
+{
+  "kind": "file-specific-session-grace-reuse",
+  "created": "2026-09-09T10:14:47.042618+00:00",
+  "full_distribution_approved": false,
+  "independent_review": false,
+  "profile": "OSS-CDI56-GRACE5-V1",
+  "files": [
+    {
+      "repository": "supertokens/supertokens-core",
+      "revision": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/session/Session.java",
+      "source_sha256": "cc12e99ef8c1935b01a797c68a236404941eb6b0bc69421c41717b2b5accfa12",
+      "source_bytes": 92572,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+        "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-core__b2219c4aa019a501e4dfea76cf06ef802ca93fc0.json",
+        "sha256": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "revision": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/config/CoreConfig.java",
+      "source_sha256": "1e364297907846cf1936e2b56035c42812b9699e5b3791e708101f98efeb964c",
+      "source_bytes": 58173,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+        "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-core__b2219c4aa019a501e4dfea76cf06ef802ca93fc0.json",
+        "sha256": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-core",
+      "revision": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+      "source_path": "src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "source_sha256": "7cd1d87aa1944c47b1bfdcbb4167f088c34e325fdee683f044893fedb3075589",
+      "source_bytes": 9582,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-core/b2219c4aa019a501e4dfea76cf06ef802ca93fc0/LICENSE.md",
+        "sha256": "9ac42abfd94cef083b09acc397a6c714d27eaf410685294f539bdbbd57bbd005"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-core__b2219c4aa019a501e4dfea76cf06ef802ca93fc0.json",
+        "sha256": "d3767ee46beac7f62d4ce7dec6220c67c7f0f45ddbf18ce00ba7277aeb5730dd"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-postgresql-plugin",
+      "revision": "0b68fd14ca10baee2d0e3c31466984fccfb36c8a",
+      "source_path": "src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "source_sha256": "99bfee5d5130599b501fabf180bb522421cdad5274b0896c7f8eb318f1fb2d28",
+      "source_bytes": 31628,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-postgresql-plugin/0b68fd14ca10baee2d0e3c31466984fccfb36c8a/LICENSE.md",
+        "sha256": "0c41d8440a1b31045cbb170c14fdb814a897151b4560f94ee4e421d850f6728c"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-postgresql-plugin__0b68fd14ca10baee2d0e3c31466984fccfb36c8a.json",
+        "sha256": "e98db9d2d73445adfd01dffd80945b683d32d36a7a8fb920dbb55332f7aa6c96"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "revision": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/version.ts",
+      "source_sha256": "3980a68f24f6885391eac567c0d5eb3922e0eeb7cc0c9c3081ea4620b971507e",
+      "source_bytes": 885,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/LICENSE.md",
+        "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-node__9b82aefb46da4c0f0a388d8f6656c39a62d7642c.json",
+        "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "examples/node-react/server.js",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "revision": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/querier.ts",
+      "source_sha256": "9f72e7c5ae08e4d05557f04ed33e7e6cdffa2abaa0326298cce56ad7cc6270df",
+      "source_bytes": 30759,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/LICENSE.md",
+        "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-node__9b82aefb46da4c0f0a388d8f6656c39a62d7642c.json",
+        "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "examples/node-react/server.js",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "revision": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/session/sessionFunctions.ts",
+      "source_sha256": "49cb12e364a57baaa2a2889e482de8c6a697b619b8f5394e8fee5f753b364ab8",
+      "source_bytes": 20621,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/LICENSE.md",
+        "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-node__9b82aefb46da4c0f0a388d8f6656c39a62d7642c.json",
+        "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "examples/node-react/server.js",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-node",
+      "revision": "9b82aefb46da4c0f0a388d8f6656c39a62d7642c",
+      "source_path": "lib/ts/recipe/session/recipeImplementation.ts",
+      "source_sha256": "b72ed2e71d10e720decb4e2b93f99b0427cc8195fd357776d0021b14cb2ce50a",
+      "source_bytes": 21287,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/LICENSE.md",
+        "sha256": "85d0d55f66101b6872374737eb96400c9455b06a4ef439768f9d90a272479430"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-node__9b82aefb46da4c0f0a388d8f6656c39a62d7642c.json",
+        "sha256": "d5159d70572938b60407ac9437a9f17a19461deb7d15eaeb5a31c7280b93b680"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "examples/node-react/server.js",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    },
+    {
+      "repository": "supertokens/supertokens-auth-react",
+      "revision": "5d080836741561af3bda5461e1e993d2c4088b3b",
+      "source_path": "lib/ts/recipe/session/index.ts",
+      "source_sha256": "3200128f5900bbfc97c8612fd9e5841b32cbc2a4ae4489c124471bc537407d24",
+      "source_bytes": 6201,
+      "license": "Apache-2.0",
+      "license_determination": "Nearest enclosing license; file-header and dependency exceptions require review",
+      "license_artifact": {
+        "path": "reuse/licenses/supertokens__supertokens-auth-react/5d080836741561af3bda5461e1e993d2c4088b3b/LICENSE.md",
+        "sha256": "b3632f02c4bec56b3db9d1681d551e5eb8177dc4782799164e78778cf7a6ca69"
+      },
+      "source_manifest": {
+        "path": "reuse/files/supertokens__supertokens-auth-react__5d080836741561af3bda5461e1e993d2c4088b3b.json",
+        "sha256": "0983cc797e149d05eb78b328c2214e6faa4e8bd6bb711b151053647677324170"
+      },
+      "reuse": "unchanged dependency behavior exercised through its actual HTTP/SDK/browser path",
+      "modifications": "No upstream refresh, signing, token, storage or SDK source modified for this profile. ExpertAuth uses the existing Node network-interceptor extension to change the two private refresh/verify requests from CDI5.4 to CDI5.6.",
+      "destination": "pinned installed Core/PostgreSQL JAR or Node/React dependency",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-005",
+        "SES-006",
+        "SDK-001",
+        "SDK-005"
+      ]
+    }
+  ],
+  "adaptation": {
+    "path": "examples/node-react/server.js",
+    "sha256": "5c754163fb64b2aefd9b4a20086f139d09f3f3201649b6ce1bb59038cb377e51",
+    "activation": "EXPERTAUTH_SESSION_POLICY=core-cdi56-grace-v1 with EXPERTAUTH_RESET_POLICY=atomic-v1",
+    "supported_private_operations": [
+      "POST /recipe/session/refresh",
+      "POST /recipe/session/verify"
+    ],
+    "scope": "Default public tenant; configured namespaces fail closed at the adaptation boundary. Other operations retain the upstream protocol. No claim that upstream Node24.0.3 supports CDI5.6 unchanged."
+  },
+  "engine_ownership": "Current installed Core03b4458c532f includes the separately audited atomic password/session extension. It remains the only owner of credentials, rotation, signing and session storage. No entitlement check is changed.",
+  "dependency_declarations": [
+    "examples/node-react/package-lock.json",
+    "reuse/oss-core-runtime.cdx.json",
+    "reuse/password-session-components.json"
+  ],
+  "evidence": [
+    "evidence/foundation/refresh-grace/run-01/probe-report.json",
+    "evidence/foundation/refresh-grace/node-03/sdk-results.json",
+    "evidence/foundation/refresh-grace/node-03/browser-results.json"
+  ],
+  "primary_references": [
+    "https://github.com/supertokens/supertokens-core/pull/1308",
+    "https://raw.githubusercontent.com/supertokens/supertokens-node/9b82aefb46da4c0f0a388d8f6656c39a62d7642c/lib/ts/version.ts"
+  ],
+  "limits": [
+    "Full native/OS/transitive source and relink closure remains unapproved.",
+    "Required complete profile/version matrix, configured tenancy/linking and independent security review remain open."
+  ]
+}

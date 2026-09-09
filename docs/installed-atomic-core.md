@@ -3,7 +3,9 @@
 The current local `expertauth-oss-core:12.2.0-probe` image is
 `sha256:03b4458c532f0d1f212012967f849420761dea14c2c1636ad32c8ed29ee2e97d`.
 It contains the atomic password-reset/session Core and PostgreSQL JAR pair.
-The installed Node image remains `9375a5bc093d`. Healthy Core and Node flows
+This Core qualification used Node image `9375a5bc093d`; the subsequent
+[refresh-policy qualification](session-refresh-grace.md) installed its successor
+`e02ab9bcd78e`. Healthy Core and Node flows
 now run without application/JAR overlays. This is a qualified local candidate;
 ADR-001 still has no selected production engine and no full requirement passes.
 

@@ -1,0 +1,519 @@
+{
+  "schema": "expertauth-adapted-cdi56-browser-session-v1",
+  "started": "2026-09-09T10:14:06.876Z",
+  "finished": "2026-09-09T10:14:18.282Z",
+  "foundation_passed": false,
+  "skipped": 0,
+  "rows": [
+    {
+      "id": "SDK56-BROWSER-FOUR-TAB-REFRESH",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004",
+        "SES-007",
+        "SES-017",
+        "SDK-005"
+      ],
+      "tabs": 4,
+      "concurrent_requests": 32,
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "refresh_requests": 1,
+      "waited_for_expiry_ms": 8628,
+      "elapsed_requests_ms": 1156
+    },
+    {
+      "id": "SDK56-BROWSER-CROSS-TAB-LOGOUT",
+      "outcome": "passed",
+      "requirements": [
+        "SES-005",
+        "SDK-005"
+      ],
+      "statuses": [
+        401,
+        401,
+        401,
+        401
+      ]
+    },
+    {
+      "id": "SDK56-BROWSER-SYNTHETIC-CLEANUP",
+      "outcome": "passed"
+    }
+  ],
+  "refresh_requests": 2,
+  "errors": [],
+  "statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "network": [
+    {
+      "event": "response",
+      "path": "/auth/session/refresh",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/emailpassword/email/exists",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/signup",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/session/refresh",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/signout",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/api/session/online",
+      "status": 401
+    },
+    {
+      "event": "response",
+      "path": "/auth/",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/",
+      "status": 200
+    },
+    {
+      "event": "response",
+      "path": "/auth/",
+      "status": 200
+    }
+  ],
+  "temporaryMemory": [
+    {
+      "stage": "before-browser",
+      "capacity_bytes": 536870912,
+      "free_bytes": 536870912
+    },
+    {
+      "stage": "before-concurrency",
+      "capacity_bytes": 536870912,
+      "free_bytes": 495435776
+    },
+    {
+      "stage": "after-concurrency",
+      "capacity_bytes": 536870912,
+      "free_bytes": 361218048
+    },
+    {
+      "stage": "before-cleanup",
+      "capacity_bytes": 536870912,
+      "free_bytes": 435118080
+    }
+  ],
+  "probe_sha256": "29aac8637b8d3fb913c7c70280ba7ed1ec9f675ecb4ee2b98e95a2bf175a0931",
+  "limitation": "One Chromium/Linux cookie profile in a shared browser context. Node refresh/verify protocol is explicitly adapted to CDI5.6. No Safari, native, multi-device or complete SDK qualification."
+}

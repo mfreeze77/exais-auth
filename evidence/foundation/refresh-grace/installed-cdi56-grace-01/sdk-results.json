@@ -1,0 +1,1404 @@
+{
+  "kind": "actual-adapted-node-cdi56-grace",
+  "started": "2026-09-09T10:13:56.420Z",
+  "finished": "2026-09-09T10:14:18.782Z",
+  "foundation_passed": false,
+  "complete": false,
+  "unmodified_sdk_qualified": false,
+  "independent_human_review": false,
+  "rows": [
+    {
+      "id": "SDK56-SERIAL-ROTATION",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "refresh_http": 200,
+      "online_http": 200
+    },
+    {
+      "id": "SDK56-PARENT-GRACE-RETRY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "replaced_branch_online": 401,
+      "current_branch_online": 200
+    },
+    {
+      "id": "SDK56-LOSS-COMPLETE",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "lost_http": 500,
+      "retry_http": 200,
+      "fault": {
+        "path": "/recipe/session/refresh",
+        "stage": "after-body",
+        "replica": 1,
+        "upstream_received": true,
+        "upstream_http": 200,
+        "upstream_status": "OK",
+        "upstream_body_bytes": 2046,
+        "downstream_body_bytes": 0
+      }
+    },
+    {
+      "id": "SDK56-LOSS-PARTIAL",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "lost_http": 500,
+      "retry_http": 200,
+      "fault": {
+        "path": "/recipe/session/refresh",
+        "stage": "partial-body",
+        "replica": 1,
+        "upstream_received": true,
+        "upstream_http": 200,
+        "upstream_status": "OK",
+        "upstream_body_bytes": 2046,
+        "downstream_body_bytes": 8
+      }
+    },
+    {
+      "id": "SDK56-CONCURRENT-RESPONSES-CONVERGE",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "responses": 2,
+      "online_statuses": [
+        200,
+        401
+      ],
+      "client_selection": "test inspects both branches; this is not production client coordination"
+    },
+    {
+      "id": "SDK56-ORPHAN-REUSE-REVOKES-FAMILY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "orphan_http": 401,
+      "current_after_reuse_http": 401,
+      "other_family_http": 200,
+      "uncoordinated_clients_qualified": false
+    },
+    {
+      "id": "SDK56-EXPIRED-PARENT-REPLAY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "waited_ms": 5250,
+      "subtype": "RECENT_PREV"
+    },
+    {
+      "id": "SDK56-ONLINE-VERSUS-OFFLINE-REVOCATION",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "online_http": 401,
+      "refresh_http": 401,
+      "offline_before_expiry_http": 200,
+      "full_residual_window_qualified": false
+    },
+    {
+      "id": "SDK56-PUBLIC-PRIVATE-BOUNDARY",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "private_route_http": 404,
+      "wrong_origin_http": 403
+    },
+    {
+      "id": "SDK56-WIRE-AND-BROWSER-PROFILE",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "observed_cdi": "5.6",
+      "upstream_sdk_declared_cdi": "5.4",
+      "explicit_adaptation": true,
+      "session_calls": 63,
+      "browser_refreshes": 1,
+      "core_replicas": 2
+    },
+    {
+      "id": "SDK56-OWNED-FIXTURE-CLEANUP",
+      "outcome": "passed",
+      "requirements": [
+        "SES-003",
+        "SES-004"
+      ],
+      "owned_users_removed": 11,
+      "source_database_contacted": false
+    }
+  ],
+  "wire": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": 0,
+      "cdi": "5.3",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 1,
+      "cdi": null,
+      "http": 200,
+      "status": null,
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/reset",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "RESET_PASSWORD_INVALID_TOKEN_ERROR",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/apiversion",
+      "replica": 0,
+      "cdi": null,
+      "http": 200,
+      "status": null,
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/.well-known/jwks.json",
+      "replica": 1,
+      "cdi": null,
+      "http": 200,
+      "status": null,
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null,
+      "fault": "after-body"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null,
+      "fault": "partial-body"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED",
+      "reuse_subtype": "ORPHANED_BRANCH"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED",
+      "reuse_subtype": "RECENT_PREV"
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/.well-known/jwks.json",
+      "replica": 1,
+      "cdi": null,
+      "http": 200,
+      "status": null,
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/recipe/multitenancy/tenant/v2",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/public/users/by-accountinfo",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/recipe/signup",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "GET",
+      "path": "/user/id",
+      "replica": 1,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/public/expertauth/password/session",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 0,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "replica": 1,
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "replica": 0,
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "reuse_subtype": null
+    }
+  ],
+  "faults": [
+    {
+      "path": "/recipe/session/refresh",
+      "stage": "after-body",
+      "replica": 1,
+      "upstream_received": true,
+      "upstream_http": 200,
+      "upstream_status": "OK",
+      "upstream_body_bytes": 2046,
+      "downstream_body_bytes": 0
+    },
+    {
+      "path": "/recipe/session/refresh",
+      "stage": "partial-body",
+      "replica": 1,
+      "upstream_received": true,
+      "upstream_http": 200,
+      "upstream_status": "OK",
+      "upstream_body_bytes": 2046,
+      "downstream_body_bytes": 8
+    }
+  ],
+  "inputs": {
+    "server.js": "5c754163fb64b2aefd9b4a20086f139d09f3f3201649b6ce1bb59038cb377e51",
+    "client.jsx": "0f8bceb467a3877af5ae53da0d2d6a56de54ded95204aea2f58bd579c91311f7",
+    "package-lock.json": "10843d6704746606c41a80fce1e1508ae44418fe71eae9f0194dd21b8eefbd1b"
+  },
+  "fatal": false,
+  "skipped": 0,
+  "passed": 11,
+  "failed": 0,
+  "limitation": "Explicit private refresh/verify protocol adaptation on public tenant only; no all-SDK/platform or configured-tenant qualification."
+}

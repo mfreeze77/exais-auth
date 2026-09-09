@@ -119,6 +119,7 @@ def main():
         index[identifier]['qualification_note'] += ' Python5bffadb83aa3 full offline BuildKit build uses49 locked wheels and verifies3349 installed wheel files,63 notices,418 SDK source files and19 HTTP checks. Prior image and test clients retired; Core/database unchanged. Empty-directory checker correction disclosed. Native/OS/source obligations, fresh-stack and new lifecycle fault qualification remain open.'
     index['WP-004']['implementation']=[artifact(ROOT,path) for path in ['engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonPasswordAuthenticator.java','engine-extensions/keycloak-headless/src/main/java/org/expertauth/keycloak/JsonOtpAuthenticator.java','examples/keycloak-clients/server.mjs','examples/keycloak-clients/python_client.py','tools/run_keycloak_cluster.py']]
     index['WP-004']['candidate_evidence']=data['foundation_candidate_artifacts']
+    index['WP-004']['qualification_note']='Original foundation identity mapping and concurrency acceptance remain incomplete; candidate evidence cannot select an engine.'
     session_sources = ['contracts/session-policy-oss-node-cdi54-v1.json','tools/run_sdk_session_faults.py','tests/foundation/sdk_session_faults.mjs','tests/browser/session-coordination.mjs']
     session_reports = ['evidence/foundation/sdk-session-faults/run-05/report.json','evidence/foundation/sdk-session-faults/run-05/sdk-results.json','evidence/foundation/sdk-session-faults/run-05/browser-results.json','evidence/runs/sdk-session-memory-proof-05/command.json','evidence/foundation/session-policy-review/README.md']
     data['session_candidate_artifacts'] = [artifact(ROOT,path) for path in session_reports]
@@ -322,6 +323,60 @@ def main():
         index[identifier]['implementation'] += [artifact(ROOT,p) for p in ('tools/package_checkpoint.py','tests/evidence/test_checkpoint_secrets.py')]
         index[identifier]['candidate_evidence'] += [artifact(ROOT,'evidence/runs/checkpoint-secret-file-tests-06/command.json')]
         index[identifier]['qualification_note'] += ' Rollback-journal passwords and both session generations are now scanned, including interrupted temporary saves.22 focused scanner cases pass; malformed, oversized and incomplete journals fail closed. Link/reparse branches and generic secret discovery remain unqualified.'
+    grace_sources = ['contracts/session-policy-oss-cdi56-grace-v1.json','examples/node-react/server.js',
+        'tools/run_refresh_grace_lab.py','tests/foundation/RefreshGraceProbe.java','tests/foundation/sdk_refresh_grace.mjs',
+        'tests/browser/session-grace.mjs','tools/build_node_runtime.py','tools/verify_refresh_grace_evidence.py',
+        'reuse/session-grace-components.json','docs/session-refresh-grace.md']
+    grace_reports = ['evidence/foundation/refresh-grace/run-01/'+p for p in ('report.json','probe-report.json')]
+    for run in ('node-03','installed-cdi56-grace-01'):
+        grace_reports += ['evidence/foundation/refresh-grace/'+run+'/'+p for p in
+            ('report.json','sdk-results.json','browser-results.json','signed-out.png')]
+    grace_reports += ['evidence/foundation/refresh-grace/evidence-validation-01.json',
+        'evidence/operations/node-image-build/cdi56-grace-01/report.json',
+        'evidence/operations/node-image-build/cdi56-grace-01/candidate-runtime/runtime-report.json',
+        'evidence/operations/node-image-build/evidence-validation-cdi56-grace-01.json',
+        'evidence/operations/atomic-reset/installed-cdi56-grace-01/report.json']
+    grace_reports += ['evidence/operations/password-reset/atomic-installed-cdi56-grace-01/'+p for p in
+        ('report.json','probe-results.json','tls-results.json','browser-results.json','wire/good.jsonl','wire/missing-writer.jsonl')]
+    data['session_grace_candidate_artifacts']=[artifact(ROOT,p) for p in grace_reports]
+    data['session_grace_failed_history']=[artifact(ROOT,'evidence/foundation/refresh-grace/'+run+'/report.json') for run in
+        ('node-01','node-02','startup-01','startup-02')]
+    grace_note = ('Current installed Nodee02ab9bcd78e explicitly adapts only private refresh/verify calls toCDI5.6 through '
+        'the existing SDK network interceptor; upstream Node24.0.3 still declares5.4, and atomic password-session creation '
+        'keeps5.4. Core03b4458c532f alone owns rotation/signing/revocation, with no new engine/JAR changes. The separately '
+        'declared five-second grace profile passes12 direct Core cases, including8 concurrent responses converging on one '
+        'stored successor, an actual PostgreSQL backend termination after UPDATE before commit with rollback/retry, '
+        'three server-side replay/family-revocation classifications, committed response loss/eight-byte truncation, '
+        'late delivery after logout and an explicit5.4/5.6 transition sequence. Installed Node passes9 HTTP behavior '
+        'cases plus1wire and1cleanup row; real React passes4-tab/32-request expiry recovery with1refresh and4denials '
+        'after logout, plus cleanup.11backend users and1browser user removed;6grace containers retired. Both images '
+        'have no healthy application/JAR overlays. The builder also passes55delivery unit,8parser and34installed atomic '
+        'reset/SMTP/TLS/browser regressions. All8appfiles/7629original package members match; dependencies unchanged. '
+        'Previous Node9375a5bc093d and all29build/qualification containers retire only after qualification; original '
+        'Core/PostgreSQL processes/configuration preserved.288build and287grace correspondence checks are integrity only. '
+        'Initial HTTP-origin flag/hostname startup failures and the offline log-option diagnostic defect remain recorded; '
+        'no auth requests occurred in those failed Node runs, and their containers retire. Readiness advertises5.6 but '
+        'does not attest effective grace configuration; retained source Core still uses zero grace. Arbitrary concurrent '
+        'client credential installation, unmodified/other SDKs, native/live providers, configured tenancy/link/factors, '
+        'revocation crashes/all orderings/restarts/failover/load, bounded offline window, full migration/distribution and '
+        'independent review remain unqualified. Original zero-grace and legacy raw-client failures are preserved. No '
+        'foundation, full baseline requirement/API/profile or original SDK-version claim is promoted.')
+    grace_ids = [r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/run-01/probe-report.json')['rows']]
+    grace_ids += [r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/installed-cdi56-grace-01/sdk-results.json')['rows']]
+    grace_ids += [r['id'] for r in read_json(ROOT/'evidence/foundation/refresh-grace/installed-cdi56-grace-01/browser-results.json')['rows']]
+    # SES-017 has a narrow error-contract candidate only; keep the full row planned.
+    row=index['SES-017'];row.update(implementation=[],candidate_evidence=[],qualification_note='',observed_test_ids=[],
+        blockers=['All original SDK error distinctions and profile/version combinations remain unqualified.'])
+    for identifier in ('BAS-002','BAS-004','BAS-005','SES-003','SES-004','SES-005','SES-006','SES-007','SES-017',
+                       'SDK-001','SDKP-01','SDK-005','SDKP-05','PWD-006','OPS-004','OPS-007','OPS-011',
+                       'WP-002','WP-004','WP-009','WP-010','WP-033'):
+        row=index[identifier];row['implementation'] += [artifact(ROOT,p) for p in grace_sources]
+        row.setdefault('candidate_evidence',[]).extend(data['session_grace_candidate_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+grace_note
+        row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+grace_ids))
+    data['delivery_checkpoint_artifacts'] += [artifact(ROOT,p) for p in (
+        'evidence/operations/hygiene/verification-20260909T101607Z.json',
+        'evidence/operations/hygiene/checkpoint-retention-before-refresh-grace.json')]
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

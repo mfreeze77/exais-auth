@@ -9,7 +9,18 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest deployment work is `docs/installed-atomic-core.md`: both images now contain
+Latest work is `docs/session-refresh-grace.md`. Node image `e02ab9bcd78e`
+contains an explicit CDI5.6 refresh/verify adapter; the dependency still declares
+5.4. Twelve direct Core policy cases and installed Node/browser cases pass,
+including transaction abort, real response loss and four-tab coordination.
+All34 installed atomic-reset regressions pass. The original Core configuration
+was preserved; activating this candidate requires the documented five-second
+grace configuration. Full other-SDK/namespace/client-ordering and foundation
+gates remain open. Use `--qualify-refresh-grace` for its Node image builds, and
+the current image pin in that document for test-only work. Do not rebuild
+unchanged images or repeat passing probes just to obtain newer timestamps.
+
+Earlier deployment work is `docs/installed-atomic-core.md`: both images contain
 their current integration. Core image `03b4458c532f` passes 16 Core, 34 Node and
 14 local upgrade/rollback cases. The old Core image was retired only after those
 checks. Use compile-04 and the installed-image commands there; old compile-03

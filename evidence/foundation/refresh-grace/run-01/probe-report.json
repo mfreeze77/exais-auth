@@ -1,0 +1,989 @@
+{
+  "kind": "actual-core-cdi56-grace-policy",
+  "policy": "OSS-CDI56-GRACE5-V1",
+  "started": "2026-09-09T09:56:51.141222389Z",
+  "complete": false,
+  "foundation_passed": false,
+  "sdk_qualified": false,
+  "independent_human_review": false,
+  "credential_values_recorded": false,
+  "rows": [
+    {
+      "id": "GRACE56-PRIVATE-CONTRACT",
+      "status": "passed"
+    },
+    {
+      "committed_before_first_verify": true,
+      "id": "GRACE56-ROTATION-AT-REFRESH",
+      "status": "passed"
+    },
+    {
+      "retries": 3,
+      "window_and_expiry_unchanged": true,
+      "id": "GRACE56-PARENT-RETRY-ANCHOR",
+      "status": "passed"
+    },
+    {
+      "requests": 8,
+      "successful_responses": 8,
+      "authoritative_current_successors": 1,
+      "sdk_credential_coordination_tested": false,
+      "id": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "status": "passed"
+    },
+    {
+      "subtype": "RECENT_PREV",
+      "server_side_family_revocation": true,
+      "other_family_preserved": true,
+      "id": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "status": "passed"
+    },
+    {
+      "subtype": "ORPHANED_BRANCH",
+      "server_side_family_revocation": true,
+      "other_family_preserved": true,
+      "id": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "status": "passed"
+    },
+    {
+      "subtype": "STALE_LINEAGE",
+      "server_side_family_revocation": true,
+      "other_family_preserved": true,
+      "id": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "status": "passed"
+    },
+    {
+      "fault": "identified_database_backend_terminated_in_after_update_trigger",
+      "all_rotation_columns_rolled_back": true,
+      "same_token_retry_succeeded": true,
+      "id": "GRACE56-TRANSACTION-ABORT-AFTER-UPDATE",
+      "status": "passed"
+    },
+    {
+      "real_upstream_responses": 1,
+      "downstream_body_bytes": 0,
+      "committed_state_observed": true,
+      "window_root_retry_succeeded": true,
+      "id": "GRACE56-COMMITTED-LOST-RESPONSE",
+      "status": "passed"
+    },
+    {
+      "real_upstream_responses": 1,
+      "downstream_body_bytes": 8,
+      "committed_state_observed": true,
+      "window_root_retry_succeeded": true,
+      "id": "GRACE56-PARTIAL-RESPONSE",
+      "status": "passed"
+    },
+    {
+      "committed_response_delivered_after_logout": true,
+      "server_side_resurrection": false,
+      "sdk_token_installation_tested": false,
+      "id": "GRACE56-LOGOUT-LATE-RESPONSE",
+      "status": "passed"
+    },
+    {
+      "sequence": [
+        "5.4-create",
+        "5.4-refresh",
+        "5.6-refresh",
+        "5.4-refresh",
+        "5.6-refresh"
+      ],
+      "sdk_support_inferred": false,
+      "id": "GRACE56-CROSS-VERSION-BRIDGE",
+      "status": "passed"
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 52,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "GET",
+      "path": "/users/count",
+      "replica": "b",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 35,
+      "credential_bodies_recorded": false
+    },
+    {
+      "method": "POST",
+      "path": "/recipe/signup",
+      "replica": "a",
+      "http": 200,
+      "status": "OK",
+      "elapsed_ms": 132,
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PRIVATE-CONTRACT",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 401,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ROTATION-AT-REFRESH",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ROTATION-AT-REFRESH",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ROTATION-AT-REFRESH",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARENT-RETRY-ANCHOR",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-EIGHT-REQUEST-CONVERGENCE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-RECENT-PREV-OUTSIDE-WINDOW",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-ORPHANED-BRANCH-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "TOKEN_THEFT_DETECTED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-STALE-LINEAGE-REVOCATION",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-TRANSACTION-ABORT-AFTER-UPDATE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-TRANSACTION-ABORT-AFTER-UPDATE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 500,
+      "status": "NON_JSON_OR_NO_STATUS",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-TRANSACTION-ABORT-AFTER-UPDATE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-TRANSACTION-ABORT-AFTER-UPDATE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-COMMITTED-LOST-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-COMMITTED-LOST-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-COMMITTED-LOST-RESPONSE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-COMMITTED-LOST-RESPONSE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-COMMITTED-LOST-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARTIAL-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARTIAL-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARTIAL-RESPONSE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARTIAL-RESPONSE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-PARTIAL-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-LOGOUT-LATE-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-LOGOUT-LATE-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-LOGOUT-LATE-RESPONSE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/remove",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-LOGOUT-LATE-RESPONSE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-LOGOUT-LATE-RESPONSE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "UNAUTHORISED",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session",
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.4",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "b",
+      "method": "POST",
+      "path": "/recipe/session/refresh",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    },
+    {
+      "case": "GRACE56-CROSS-VERSION-BRIDGE",
+      "replica": "a",
+      "method": "POST",
+      "path": "/recipe/session/verify",
+      "cdi": "5.6",
+      "http": 200,
+      "status": "OK",
+      "credential_bodies_recorded": false
+    }
+  ],
+  "finished": "2026-09-09T09:56:57.844965973Z",
+  "passed": true
+}

@@ -2,3 +2,5 @@
 * -text
 # Raw command evidence keeps exact bytes, including upstream trailing whitespace.
 evidence/**/*.log -whitespace
+# Audited upstream snapshots preserve original bytes, including upstream whitespace.
+evidence/foundation/refresh-grace/*/source-snapshots/audited-upstream/** -whitespace

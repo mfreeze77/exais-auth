@@ -10,7 +10,7 @@ See `contracts/README.md`, `api-contracts.json` and their source/licensing repor
 The working OSS Node/React and Python examples exercise password/session subsets.
 The new Node/React reset subset uses optional authenticated TLS SMTP and engine
 reset APIs. Run-16 passes11 HTTP/SMTP and9 browser checks plus10 transport checks.
-The current installed Node image `9375a5bc093d` passes 34 behavior checks for
+The current installed Node image `e02ab9bcd78e` passes 34 behavior checks for
 the opt-in atomic profile, with no app source/bundle mounts. Core image
 `03b4458c532f` now contains the exact two-JAR adaptation and passes its 16 Core
 cases without overlays. Fourteen local upgrade/rollback cases preserve legacy
@@ -41,6 +41,14 @@ Python requires CDI5.4; the new Node24.0.3 wire trace actually observes CDI5.4 o
 session operations across two Core replicas. Its separately declared offline JWT
 profile remains distinct. Core CDI5.3's two-phase refresh differs
 from5.6 rotation. The zero-grace5.6 concurrency failure remains a blocker.
+
+The explicit `core-cdi56-grace-v1` Node integration adapts only private refresh
+and verify requests to5.6. Its five-second Core policy passes12 direct cases;
+the installed SDK/browser flow passes nine HTTP cases plus wire/cleanup and
+real four-tab refresh/logout checks. This is not unchanged Node5.6 support.
+Other operations retain their original protocol, and atomic password-session
+creation remains5.4. Other SDKs, configured tenants and complete error/ordering
+matrices remain unqualified. See `docs/session-refresh-grace.md`.
 
 The candidate `OSS-NODE-CDI54-LEGACY-V1` policy preserves the frozen CDI5.3
 contract and all original IDs. Real SDK tests recover from dropped refresh

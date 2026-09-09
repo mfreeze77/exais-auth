@@ -1,0 +1,1169 @@
+{
+  "kind": "refresh-grace-evidence-correspondence",
+  "started": "2026-09-09T10:17:56.652089+00:00",
+  "passed": true,
+  "complete": false,
+  "independent_review": false,
+  "authentication_tests_executed": false,
+  "tool_sha256": "21b9706bd3f10a66e64e1e040dd670c64da2921584644b6e5d5b420c7ca0b19d",
+  "checks": [
+    {
+      "check": "current installed Node pin",
+      "passed": true
+    },
+    {
+      "check": "installed image builder and both qualification children pass",
+      "passed": true
+    },
+    {
+      "check": "previous image retired",
+      "passed": true
+    },
+    {
+      "check": "run-01 actual lab passed without full claims",
+      "passed": true
+    },
+    {
+      "check": "run-01 same installed Core",
+      "passed": true
+    },
+    {
+      "check": "run-01 resource and source preservation",
+      "passed": true
+    },
+    {
+      "check": "run-01 no persistent resources introduced",
+      "passed": true
+    },
+    {
+      "check": "run-01 all exact owned helpers retired",
+      "passed": true
+    },
+    {
+      "check": "run-01 private configuration unchanged",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer evidence/operations/password-session-build/compile-04/report.json",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source evidence/operations/password-session-build/compile-04/report.json",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 current source .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "run-01 private command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "run-01 installed Core without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "run-01 installed Core without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 actual lab passed without full claims",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 same installed Core",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 resource and source preservation",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 no persistent resources introduced",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 all exact owned helpers retired",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private configuration unchanged",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tools/run_refresh_grace_lab.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tests/foundation/RefreshGraceProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tests/operations/AtomicResetProbe.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source contracts/session-policy-oss-cdi56-grace-v1.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tools/run_recovery_drill.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tools/run_sdk_session_faults.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tools/atomic_core_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer evidence/operations/password-session-build/compile-04/report.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source evidence/operations/password-session-build/compile-04/report.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source .cache/engine-build/supertokens-core/src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source .cache/engine-build/supertokens-core/src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source .cache/engine-build/supertokens-core/src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source .cache/engine-build/supertokens-postgresql-plugin/src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tools/node_runtime_identity.py",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tests/foundation/sdk_refresh_grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tests/browser/session-grace.mjs",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source tests/browser/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source examples/node-react/server.js",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source examples/node-react/client.jsx",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 recorded producer examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 current source examples/node-react/package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 1 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 1 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 2 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 2 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 3 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 3 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 4 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 4 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 5 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 5 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 6 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 6 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 7 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 7 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 8 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 8 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 9 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 9 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 10 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 10 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 11 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 11 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 12 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 12 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 13 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 13 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 14 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 14 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 15 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 15 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 16 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 16 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 17 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 17 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 18 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 18 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 19 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 19 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 20 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 20 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 21 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 21 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 22 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 22 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 23 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 23 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 24 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 24 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 25 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 25 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 26 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 26 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 27 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 27 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 28 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 28 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 29 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 29 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 30 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 30 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 31 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 31 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 32 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 32 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 33 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 33 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 34 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 34 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 35 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 35 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 36 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 36 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 37 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 37 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 38 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 38 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 39 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 39 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 40 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 40 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 41 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 41 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 42 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 42 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 43 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 43 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 44 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 44 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 45 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 45 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 46 stdout",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 private command 46 stderr",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 installed Core without JAR overlays core-a",
+      "passed": true
+    },
+    {
+      "check": "installed-cdi56-grace-01 installed Core without JAR overlays core-b",
+      "passed": true
+    },
+    {
+      "check": "twelve real Core cases",
+      "passed": true
+    },
+    {
+      "check": "after-update database abort and retry",
+      "passed": true
+    },
+    {
+      "check": "eight responses converge on one stored successor",
+      "passed": true
+    },
+    {
+      "check": "exact installed qualification bound into builder",
+      "passed": true
+    },
+    {
+      "check": "exact SDK and browser artifacts",
+      "passed": true
+    },
+    {
+      "check": "eleven SDK rows including wire and cleanup",
+      "passed": true
+    },
+    {
+      "check": "adapted profile remains explicit",
+      "passed": true
+    },
+    {
+      "check": "Node application has no source overlay",
+      "passed": true
+    },
+    {
+      "check": "actual installed app source server.js",
+      "passed": true
+    },
+    {
+      "check": "actual installed app source client.jsx",
+      "passed": true
+    },
+    {
+      "check": "actual installed app source package-lock.json",
+      "passed": true
+    },
+    {
+      "check": "wire observes only adapted CDI5.6 on both Core replicas",
+      "passed": true
+    },
+    {
+      "check": "atomic password-session creation keeps its established protocol",
+      "passed": true
+    },
+    {
+      "check": "two actual successful responses lost or truncated",
+      "passed": true
+    },
+    {
+      "check": "browser cases all passed without skips",
+      "passed": true
+    },
+    {
+      "check": "real four-tab coordinated refresh",
+      "passed": true
+    },
+    {
+      "check": "all four tabs denied after logout",
+      "passed": true
+    },
+    {
+      "check": "file-specific reuse and full licensing boundary",
+      "passed": true
+    },
+    {
+      "check": "adaptation reuse corresponds to current source",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact src/main/java/io/supertokens/session/Session.java",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact src/main/java/io/supertokens/config/CoreConfig.java",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact src/main/java/io/supertokens/storage/postgresql/queries/SessionQueries.java",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest lib/ts/version.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact lib/ts/version.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest lib/ts/querier.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact lib/ts/querier.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest lib/ts/recipe/session/sessionFunctions.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact lib/ts/recipe/session/sessionFunctions.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest lib/ts/recipe/session/recipeImplementation.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact lib/ts/recipe/session/recipeImplementation.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse source_manifest lib/ts/recipe/session/index.ts",
+      "passed": true
+    },
+    {
+      "check": "reuse license_artifact lib/ts/recipe/session/index.ts",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "source_reports": {
+    "evidence\\operations\\node-image-build\\cdi56-grace-01\\report.json": "dde8c2c09403f775f054c10450e6b5dd64d3be2d9417b53351094a2b8820f2a1",
+    "evidence\\foundation\\refresh-grace\\run-01\\report.json": "cf40e24ff5ce2db033563e10b58ea400f440c3697f253beb9b8787f065136775",
+    "evidence\\foundation\\refresh-grace\\run-01\\probe-report.json": "d33e9ec45a77cb9fa989cb0d88a66047fd6a1528ac89127802982d7eaf69e901",
+    "evidence\\foundation\\refresh-grace\\installed-cdi56-grace-01\\report.json": "54fcd2bd10d159d824a0a93c8e5a9fa3224a69c976fed833809d576e767b4cf7",
+    "evidence\\foundation\\refresh-grace\\installed-cdi56-grace-01\\sdk-results.json": "e6bead41fe2156c2f02b63bb014f663ed40586b2aca71c5ecba538871c8ec50c",
+    "evidence\\foundation\\refresh-grace\\installed-cdi56-grace-01\\browser-results.json": "e995f2218d80acebbe36c788002856a133a4d8aa441eacc2fc3bd7dd382766ff"
+  },
+  "finished": "2026-09-09T10:17:59.132361+00:00"
+}

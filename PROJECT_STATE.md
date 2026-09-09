@@ -11,6 +11,16 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- Current Node image `e02ab9bcd78e` contains the explicit CDI5.6 refresh/verify
+  adapter. A five-second Core grace profile passes12 direct Core cases, including
+  a database abort after UPDATE, response loss and stale-family revocation.
+  The installed Node adapter passes nine HTTP cases plus wire/cleanup checks;
+  four real tabs recover32 requests with one refresh and all lose online access
+  after logout. Its34 atomic-reset regressions also pass. Both installed images
+  run without app/JAR overlays in these labs. The old Node image9375a5bc093d is
+  retired; all29 build/qualification containers are removed. Unmodified SDKs,
+  other profiles and full foundation remain unqualified. See
+  `docs/session-refresh-grace.md`; all earlier failures remain historical evidence.
 - Core image `03b4458c532f` now contains the atomic Core/plugin JAR pair and passes
   16 Core, 34 installed Node/SMTP/TLS/browser and 14 actual upgrade/rollback cases.
   Healthy flows use no JAR/application overlays. All 483 running files match;
