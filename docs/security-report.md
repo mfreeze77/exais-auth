@@ -40,6 +40,24 @@ assertion. Applying headers in wire order is a test-client correction. Actual
 Python browser behavior remains unqualified; Node's browser evidence does not
 substitute for it.
 
+The Python readiness correction was tested against a real stopped PostgreSQL
+container. The old route and Core protocol advertisement incorrectly remained200;
+the corrected route returned503 in3.011 seconds, with generic error text and
+`Cache-Control: no-store`, while process liveness remained200. Storage access is
+authenticated and uses exact CDI5.4 count rather than an approximate cached value.
+Its4-second total budget and3-second HTTP timeout bound an individual check.
+This does not establish readiness load capacity, traffic removal, all dependency
+failure classes or database HA. The database was restored using its original
+container and volume; a prior private dump was retained but not restore-tested.
+No credentials, tokens or upstream exception details are included in the reports.
+Current-image regression passes19 HTTP checks with its two synthetic users removed;
+the outage probe removes its single synthetic user. See the exact image-02 and
+run-03 reports under `evidence/operations/python-readiness`. The current probe's
+normal19 checks are in image-06. A separate real dropped-connection test confirms
+its `finally` cleanup removes the one created user while preserving52 existing
+identities; the aborted child records seven unexecuted checks and exits1. The
+four outer assertions qualify harness cleanup only.
+
 Independent human security and licensing review, production TLS/proxy controls,
 all migration/key/backup/load/HA cases, native and live-provider qualification,
 complete threat-model coverage and final dependency redistribution remain open.

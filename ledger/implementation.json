@@ -799,7 +799,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -816,11 +816,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -1949,7 +1949,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -1966,11 +1966,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -1995,7 +1995,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -2012,11 +2012,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -2217,7 +2217,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         },
         {
           "path": "contracts/session-policy-oss-node-cdi54-v1.json",
@@ -2250,8 +2250,8 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         },
         {
           "path": "evidence/foundation/sdk-session-faults/run-05/report.json",
@@ -2274,7 +2274,7 @@
           "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -2299,7 +2299,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -2316,11 +2316,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -2345,7 +2345,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -2362,11 +2362,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -2439,7 +2439,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -2456,11 +2456,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -4020,7 +4020,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -4037,11 +4037,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -4082,7 +4082,7 @@
         },
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         }
       ],
       "positive_test_ids": [],
@@ -4099,11 +4099,11 @@
           "sha256": "0437870747435fe03d98539a8ab5c061c9de43b2966fb8396e85ba94c5227c30"
         },
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
         }
       ],
-      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; full criteria, tenant/app profiles and final engine remain unqualified.",
+      "qualification_note": "Real password/default-public-tenant session slice in audited OSS candidate; Python19 HTTP checks rerun against the current storage-readiness image. Full criteria, tenant/app profiles and final engine remain unqualified.",
       "observed_test_ids": [
         "NODE-PWD-001",
         "NODE-PWD-002",
@@ -4264,14 +4264,100 @@
         "registry_sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36",
         "record_sha256": "895210e9d7354978f55bbd926a8738e3d61c24cc02269d58279972f9d4603cd0"
       },
-      "status": "planned",
-      "implementation": [],
+      "status": "implemented-unverified",
+      "implementation": [
+        {
+          "path": "examples/python/app.py",
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+        },
+        {
+          "path": "examples/python/.dockerignore",
+          "sha256": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567"
+        },
+        {
+          "path": "tools/run_python_readiness.py",
+          "sha256": "b66dbb6aaad182641f179f533e96dac6a5629cbda1d17350b8cd80a8b588c136"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/operations/python_readiness.py",
+          "sha256": "f709f79a2554eef61cdcafef74224c15a96c8c77f095763ecd3a97f253ec7aaf"
+        },
+        {
+          "path": "tests/clients/python_probe.py",
+          "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+        },
+        {
+          "path": "tools/run_python_probe_cleanup_fault.py",
+          "sha256": "78742c4e271bbc26e268013ddf3b2119362b00621e8cff9cdd77f871d1948e51"
+        },
+        {
+          "path": "tests/operations/python_probe_cleanup_fault.py",
+          "sha256": "4daee5557f4dcc6f4b50129d99c0e8e5d33d25b7de5be3bed6a9ab1719ed9629"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "Full original acceptance and final-engine qualification remain open."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/python-readiness/run-03/report.json",
+          "sha256": "2b287c5fbc08878ee9e03f019403d4a14f87d1720370681a37bb3454b9b54e81"
+        },
+        {
+          "path": "evidence/operations/python-readiness/run-03/probe-report.json",
+          "sha256": "f8887cd95181dee3f046622a00d7aace1654f9de6fcd84acd8035d5a7dea954e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-02/report.json",
+          "sha256": "683e424106cb06d57495ab385ad121fa056986782d2ea886a717f3a40c6d7963"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/report.json",
+          "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+        },
+        {
+          "path": "evidence/runs/python-readiness-repro-03/command.json",
+          "sha256": "6d95f2daaec8441a16b2abfd2241ab9d16fd521ffa1d9244f3ca1b079cc55199"
+        },
+        {
+          "path": "evidence/runs/python-current-image-regression-06/command.json",
+          "sha256": "f6b14676c632392d41466ec199ae2755dd2695488cfe167158224ccd5708e6f5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/report.json",
+          "sha256": "7153b862873c83131fa992dd01ec3003059be120879092a73a0d86b86be9a0a5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
+          "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
+        }
+      ],
+      "qualification_note": "Representative Python readiness now requires authenticated exact storage access and returns503 during a real owned PostgreSQL outage while liveness stays200. Same-volume recovery and existing-session continuity pass;6 checks include one cleanup row. No traffic removal, other dependency failures, load, HA, backup restore or full OPS acceptance is qualified.",
+      "observed_test_ids": [
+        "PY-READY-HEALTHY-STORAGE",
+        "PY-READY-AUTH-BEFORE-OUTAGE",
+        "PY-READY-DATABASE-OUTAGE",
+        "PY-READY-DATABASE-RECOVERY",
+        "PY-READY-SESSION-CONTINUITY",
+        "PY-READY-SYNTHETIC-CLEANUP"
+      ]
     },
     {
       "id": "OPS-005",
@@ -4376,14 +4462,100 @@
         "registry_sha256": "5ef51155d15ba8ab47d2ffcd59800f5b564f7affc4ee85161313725274c58e36",
         "record_sha256": "00d3c43644a162dfc790b4e1dcbde4136281ccf155769d76ae4df34e95852b05"
       },
-      "status": "planned",
-      "implementation": [],
+      "status": "implemented-unverified",
+      "implementation": [
+        {
+          "path": "examples/python/app.py",
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+        },
+        {
+          "path": "examples/python/.dockerignore",
+          "sha256": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567"
+        },
+        {
+          "path": "tools/run_python_readiness.py",
+          "sha256": "b66dbb6aaad182641f179f533e96dac6a5629cbda1d17350b8cd80a8b588c136"
+        },
+        {
+          "path": "tools/refresh_python_image.py",
+          "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+        },
+        {
+          "path": "tools/run_sdk_session_faults.py",
+          "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+        },
+        {
+          "path": "tests/operations/python_readiness.py",
+          "sha256": "f709f79a2554eef61cdcafef74224c15a96c8c77f095763ecd3a97f253ec7aaf"
+        },
+        {
+          "path": "tests/clients/python_probe.py",
+          "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+        },
+        {
+          "path": "tools/run_python_probe_cleanup_fault.py",
+          "sha256": "78742c4e271bbc26e268013ddf3b2119362b00621e8cff9cdd77f871d1948e51"
+        },
+        {
+          "path": "tests/operations/python_probe_cleanup_fault.py",
+          "sha256": "4daee5557f4dcc6f4b50129d99c0e8e5d33d25b7de5be3bed6a9ab1719ed9629"
+        }
+      ],
       "positive_test_ids": [],
       "negative_test_ids": [],
       "runs": [],
       "environment": {},
       "review": {},
-      "blockers": []
+      "blockers": [
+        "Full original acceptance and final-engine qualification remain open."
+      ],
+      "candidate_evidence": [
+        {
+          "path": "evidence/operations/python-readiness/run-03/report.json",
+          "sha256": "2b287c5fbc08878ee9e03f019403d4a14f87d1720370681a37bb3454b9b54e81"
+        },
+        {
+          "path": "evidence/operations/python-readiness/run-03/probe-report.json",
+          "sha256": "f8887cd95181dee3f046622a00d7aace1654f9de6fcd84acd8035d5a7dea954e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-02/report.json",
+          "sha256": "683e424106cb06d57495ab385ad121fa056986782d2ea886a717f3a40c6d7963"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/report.json",
+          "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+        },
+        {
+          "path": "evidence/runs/python-readiness-repro-03/command.json",
+          "sha256": "6d95f2daaec8441a16b2abfd2241ab9d16fd521ffa1d9244f3ca1b079cc55199"
+        },
+        {
+          "path": "evidence/runs/python-current-image-regression-06/command.json",
+          "sha256": "f6b14676c632392d41466ec199ae2755dd2695488cfe167158224ccd5708e6f5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/report.json",
+          "sha256": "7153b862873c83131fa992dd01ec3003059be120879092a73a0d86b86be9a0a5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
+          "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
+        }
+      ],
+      "qualification_note": "Representative Python readiness now requires authenticated exact storage access and returns503 during a real owned PostgreSQL outage while liveness stays200. Same-volume recovery and existing-session continuity pass;6 checks include one cleanup row. No traffic removal, other dependency failures, load, HA, backup restore or full OPS acceptance is qualified.",
+      "observed_test_ids": [
+        "PY-READY-HEALTHY-STORAGE",
+        "PY-READY-AUTH-BEFORE-OUTAGE",
+        "PY-READY-DATABASE-OUTAGE",
+        "PY-READY-DATABASE-RECOVERY",
+        "PY-READY-SESSION-CONTINUITY",
+        "PY-READY-SYNTHETIC-CLEANUP"
+      ]
     },
     {
       "id": "OPS-012",
@@ -4483,11 +4655,15 @@
       "implementation": [
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         },
         {
           "path": "examples/python/requirements.lock",
           "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "tests/clients/python_probe.py",
+          "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
         }
       ],
       "positive_test_ids": [],
@@ -4500,11 +4676,47 @@
       ],
       "candidate_evidence": [
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+        },
+        {
+          "path": "evidence/operations/python-readiness/run-03/report.json",
+          "sha256": "2b287c5fbc08878ee9e03f019403d4a14f87d1720370681a37bb3454b9b54e81"
+        },
+        {
+          "path": "evidence/operations/python-readiness/run-03/probe-report.json",
+          "sha256": "f8887cd95181dee3f046622a00d7aace1654f9de6fcd84acd8035d5a7dea954e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-02/report.json",
+          "sha256": "683e424106cb06d57495ab385ad121fa056986782d2ea886a717f3a40c6d7963"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/report.json",
+          "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+        },
+        {
+          "path": "evidence/runs/python-readiness-repro-03/command.json",
+          "sha256": "6d95f2daaec8441a16b2abfd2241ab9d16fd521ffa1d9244f3ca1b079cc55199"
+        },
+        {
+          "path": "evidence/runs/python-current-image-regression-06/command.json",
+          "sha256": "f6b14676c632392d41466ec199ae2755dd2695488cfe167158224ccd5708e6f5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/report.json",
+          "sha256": "7153b862873c83131fa992dd01ec3003059be120879092a73a0d86b86be9a0a5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
+          "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
         }
       ],
-      "qualification_note": "Representative FastAPI integration:19 live HTTP checks, not complete Python profile. Cookie-client correction disclosed; no Python browser proof.",
+      "qualification_note": "Representative FastAPI integration:19 live HTTP checks against the current image, not complete Python profile. Cookie-client correction disclosed; no Python browser proof. Its two synthetic users were removed after the test.",
       "observed_test_ids": []
     },
     {
@@ -10174,11 +10386,15 @@
       "implementation": [
         {
           "path": "examples/python/app.py",
-          "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b"
+          "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
         },
         {
           "path": "examples/python/requirements.lock",
           "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+        },
+        {
+          "path": "tests/clients/python_probe.py",
+          "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
         }
       ],
       "positive_test_ids": [],
@@ -10191,11 +10407,47 @@
       ],
       "candidate_evidence": [
         {
-          "path": "evidence/clients/python/probe-report.json",
-          "sha256": "fb2abf45a9f0bb2209d276883ea0853b96e398cd0255e1c424a80d7d13102c33"
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+        },
+        {
+          "path": "evidence/operations/python-readiness/run-03/report.json",
+          "sha256": "2b287c5fbc08878ee9e03f019403d4a14f87d1720370681a37bb3454b9b54e81"
+        },
+        {
+          "path": "evidence/operations/python-readiness/run-03/probe-report.json",
+          "sha256": "f8887cd95181dee3f046622a00d7aace1654f9de6fcd84acd8035d5a7dea954e"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-02/report.json",
+          "sha256": "683e424106cb06d57495ab385ad121fa056986782d2ea886a717f3a40c6d7963"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/report.json",
+          "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
+        },
+        {
+          "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+          "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+        },
+        {
+          "path": "evidence/runs/python-readiness-repro-03/command.json",
+          "sha256": "6d95f2daaec8441a16b2abfd2241ab9d16fd521ffa1d9244f3ca1b079cc55199"
+        },
+        {
+          "path": "evidence/runs/python-current-image-regression-06/command.json",
+          "sha256": "f6b14676c632392d41466ec199ae2755dd2695488cfe167158224ccd5708e6f5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/report.json",
+          "sha256": "7153b862873c83131fa992dd01ec3003059be120879092a73a0d86b86be9a0a5"
+        },
+        {
+          "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
+          "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
         }
       ],
-      "qualification_note": "Representative FastAPI integration:19 live HTTP checks, not complete Python profile. Cookie-client correction disclosed; no Python browser proof.",
+      "qualification_note": "Representative FastAPI integration:19 live HTTP checks against the current image, not complete Python profile. Cookie-client correction disclosed; no Python browser proof. Its two synthetic users were removed after the test.",
       "observed_test_ids": []
     },
     {
@@ -11706,8 +11958,8 @@
       "sha256": "cf3e1c71a448f463996d5e064b3fe5df520479e21bfe7c85a1d5097555ada16a"
     },
     {
-      "path": "evidence/operations/hygiene/verification-20260908T225110Z.json",
-      "sha256": "45a0743c7e548457f1be7686a5c2dfbe5853f2af01170dd5d29ee84e2cecd655"
+      "path": "evidence/operations/hygiene/verification-20260909T010630Z.json",
+      "sha256": "8931fd32bc90a5ee6549a4cd2f8832c67071accbe9352a5128bec8cc37a50443"
     },
     {
       "path": "evidence/runs/hygiene-runner-integrity-03/command.json",
@@ -11760,6 +12012,76 @@
     {
       "path": "evidence/foundation/session-policy-review/README.md",
       "sha256": "1b9a08b5cca7b7e1bb1bffde1e1e536ba2296f1d789d728e719fb83899d6b674"
+    }
+  ],
+  "operational_candidate_artifacts": [
+    {
+      "path": "evidence/operations/python-readiness/run-03/report.json",
+      "sha256": "2b287c5fbc08878ee9e03f019403d4a14f87d1720370681a37bb3454b9b54e81"
+    },
+    {
+      "path": "evidence/operations/python-readiness/run-03/probe-report.json",
+      "sha256": "f8887cd95181dee3f046622a00d7aace1654f9de6fcd84acd8035d5a7dea954e"
+    },
+    {
+      "path": "evidence/operations/python-readiness/image-02/report.json",
+      "sha256": "683e424106cb06d57495ab385ad121fa056986782d2ea886a717f3a40c6d7963"
+    },
+    {
+      "path": "evidence/operations/python-readiness/image-06/report.json",
+      "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992"
+    },
+    {
+      "path": "evidence/operations/python-readiness/image-06/regression/probe-report.json",
+      "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+    },
+    {
+      "path": "evidence/runs/python-readiness-repro-03/command.json",
+      "sha256": "6d95f2daaec8441a16b2abfd2241ab9d16fd521ffa1d9244f3ca1b079cc55199"
+    },
+    {
+      "path": "evidence/runs/python-current-image-regression-06/command.json",
+      "sha256": "f6b14676c632392d41466ec199ae2755dd2695488cfe167158224ccd5708e6f5"
+    },
+    {
+      "path": "evidence/operations/python-probe-cleanup-fault/run-02/report.json",
+      "sha256": "7153b862873c83131fa992dd01ec3003059be120879092a73a0d86b86be9a0a5"
+    },
+    {
+      "path": "evidence/operations/python-probe-cleanup-fault/run-02/probe/fault-report.json",
+      "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
+    }
+  ],
+  "harness_lifecycle_sources": [
+    {
+      "path": "tools/check_python_image_lifecycle.py",
+      "sha256": "e417fec208db84019c3c88e23b1b8ebc0c813da932b7140e2b87c584311d06bd"
+    },
+    {
+      "path": "tools/refresh_python_image.py",
+      "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+    },
+    {
+      "path": "tests/clients/python_probe.py",
+      "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+    }
+  ],
+  "harness_lifecycle_artifacts": [
+    {
+      "path": "evidence/operations/python-image-lifecycle/source-drift-01/report.json",
+      "sha256": "f9fb03d2e6149719329ea3691da66d7dcdb615d1b3f6ff4f3e5eff9c42ce0945"
+    },
+    {
+      "path": "evidence/operations/python-image-lifecycle/source-drift-01/helper-evidence/report.json",
+      "sha256": "828db67725d2f22164258bb0def8ecce1d7ba14ae2cbf60c479ad594ee160e36"
+    },
+    {
+      "path": "evidence/operations/python-readiness/image-04/failure-diagnosis-and-retirement.json",
+      "sha256": "bf7d17492c5893d7c51b5c4ab503b8ad50e0124a4443b9fd1f8717ee916efb0f"
+    },
+    {
+      "path": "evidence/operations/python-readiness/image-05/report.json",
+      "sha256": "9e33c9cc7148e907d1939f8f34a50bb90f0642de83529da1b7148e43e1d79ee5"
     }
   ]
 }

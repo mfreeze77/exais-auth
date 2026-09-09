@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!requirements.lock
+!app.py
+
+# Isolated concurrent source drift b332b3b649674a188cf6dae578a1bb24

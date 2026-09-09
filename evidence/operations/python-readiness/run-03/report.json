@@ -1,0 +1,111 @@
+{
+  "schema": "expertauth-python-readiness-lab-v1",
+  "started": "2026-09-09T00:37:44.991044+00:00",
+  "foundation_passed": false,
+  "input_sha256": {
+    "tools/run_python_readiness.py": "b66dbb6aaad182641f179f533e96dac6a5629cbda1d17350b8cd80a8b588c136",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tests/operations/python_readiness.py": "f709f79a2554eef61cdcafef74224c15a96c8c77f095763ecd3a97f253ec7aaf",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612"
+  },
+  "base_python_image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "core_image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+  "database_image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+  "database_id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+  "database_volume": "expertauth-oss-proof-pg",
+  "controls": [
+    {
+      "action": "stop_owned_postgres",
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "exit_code": 0,
+      "observed_stopped": true
+    },
+    {
+      "action": "start_owned_postgres",
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "pg_isready": true
+    },
+    {
+      "action": "ensure_postgres_running",
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "pg_isready": true
+    }
+  ],
+  "errors": [],
+  "created_containers": [
+    {
+      "name": "expertauth-python-ready-baseline-74a232a3",
+      "id": "d811759efd15318f8338cd9778c9ba675e5513d15652d89832a56fe5cdcfc682"
+    },
+    {
+      "name": "expertauth-python-ready-current-74a232a3",
+      "id": "642cac5195cef105ffb6de770676ca0b47f808cb23ee467c46fe79a2abe4d9b1"
+    },
+    {
+      "name": "expertauth-python-ready-probe-74a232a3",
+      "id": "0123fae96f57486cbb382d4eb3f021da50b7a7c17d355b7cd0390fb8d40d8c1d"
+    }
+  ],
+  "new_images": 0,
+  "new_volumes": 0,
+  "new_networks": 0,
+  "published_ports": [],
+  "baseline_source": {
+    "commit": "fefb9daa2d1da99e5aebbffe10a4785f183153da",
+    "path": "examples/python/app.py",
+    "sha256": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b",
+    "mode": "read-only historical app overlay on the same dependency image; no obsolete image retained"
+  },
+  "baseline_file_sha256": {
+    "/app/app.py": "9be27ff8b94665acfa1721ba8011103569caa055dd5f0b1428d0cd3704ee191b",
+    "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+  },
+  "current_file_sha256": {
+    "/app/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+  },
+  "private_backup": {
+    "path": ".runtime/python-readiness/run-03/before-outage.pgdump",
+    "bytes": 184149,
+    "sha256": "f71bb81706282b24291e58886338738512fc4a11a0d8b28cbdd1e21d3b50192b",
+    "restore_tested": false
+  },
+  "probe_exit_code": 0,
+  "database_restored": true,
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "temporary_containers_retired": true,
+  "core_unchanged": true,
+  "database_started_before": "2026-09-09T00:30:41.444704126Z",
+  "database_started_after": "2026-09-09T00:37:51.233368299Z",
+  "inputs_unchanged": true,
+  "artifacts": [
+    {
+      "path": "command-output.log",
+      "sha256": "956bd3d87cb6495bbda10eb672f512b3c505a62a80b95501fa863a4ec9dbe213"
+    },
+    {
+      "path": "probe-report.json",
+      "sha256": "f8887cd95181dee3f046622a00d7aace1654f9de6fcd84acd8035d5a7dea954e"
+    }
+  ],
+  "finished": "2026-09-09T00:38:01.473865+00:00"
+}

@@ -248,3 +248,31 @@ Eight real archive/notice tests passed. These checks establish byte preservation
 input-drift rejection and deterministic notice assembly; they do not approve all
 licenses or satisfy the required independent human review. Missing full notices,
 native source/build/relink conditions and container OS closure remain open.
+
+## Python readiness change boundary
+
+The readiness correction changes locally authored integration/test tooling; it
+does not modify the audited SDK, Core or database plugin. The current Python
+image's49 installed dependencies and every base/dependency filesystem layer match
+the previously audited image. `image-02/report.json` under
+`evidence/operations/python-readiness` records exact installed source/lock hashes,
+layer equality and actual regression evidence. This is preservation evidence,
+not a new vulnerability scan or complete distribution approval.
+
+| File | Change and reuse boundary |
+|---|---|
+| `examples/python/app.py` | Adds standard-library asyncio timeout and an authenticated exact Core storage read through existing httpx; no new dependency or SDK patch |
+| `examples/python/.dockerignore` | Limits context to the existing Dockerfile, lock and app |
+| `tests/clients/python_probe.py` | Extends the local HTTP probe with owned synthetic-user cleanup and immutable report output; upstream cookie/server behavior is unchanged |
+| `tests/operations/python_readiness.py` | Locally authored real HTTP/outage/recovery probe using existing httpx |
+| `tools/run_python_readiness.py` | Local lab orchestration with a hash-pinned historical app fixture from this repository's Git history |
+| `tools/refresh_python_image.py` | Local cached image/regression/retirement orchestration using existing shared Docker helpers |
+| `tests/operations/python_probe_cleanup_fault.py` | Local pass-through HTTP proxy with one actual dropped connection; existing httpx and standard library only |
+| `tools/run_python_probe_cleanup_fault.py` | Local ownership-checked orchestration for that failure test; no new runtime dependency |
+| `tools/check_python_image_lifecycle.py` | Local isolated source-drift and image-tag rollback test using the same image layers and standard-library tooling |
+
+Exact per-file SHA256 values are bound by the implementation ledger and each
+executed report; prior tool versions are preserved beside their immutable reports
+when corrected. None of these changes grants different rights to third-party
+code. The complete SDK/native/OS dependency closure and independent licensing
+review remain required.

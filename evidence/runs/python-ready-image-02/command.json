@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "tools/refresh_python_image.py",
+    "--name",
+    "image-02"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788914179.3607874,
+  "elapsed_seconds": 14.777,
+  "input_sha256": {
+    "tools/refresh_python_image.py": "81bacc4a778ab14217cdb9fa3b02aa0242e7a430f34838a99b91b627362d7ba2",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/.dockerignore": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567",
+    "tests/clients/python_probe.py": "557a11d599598ef8dcccdead1c9173a1fd03aef3f4ef4e54216804bafc9badaa"
+  },
+  "inputs_changed": false,
+  "output_sha256": "0a55fe10a6bf279a0dabb80dd0245dee93ac87f9e865dc5155c2d13d4cb17cf3",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

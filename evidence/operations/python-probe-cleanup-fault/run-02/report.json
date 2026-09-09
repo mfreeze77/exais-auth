@@ -1,0 +1,94 @@
+{
+  "schema": "expertauth-python-probe-cleanup-fault-host-v1",
+  "started": "2026-09-09T00:54:33.592847+00:00",
+  "foundation_passed": false,
+  "command_argv": [
+    "tools/run_python_probe_cleanup_fault.py",
+    "--name",
+    "run-02"
+  ],
+  "image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "inputs": {
+    "tools/run_python_probe_cleanup_fault.py": "78742c4e271bbc26e268013ddf3b2119362b00621e8cff9cdd77f871d1948e51",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tests/operations/python_probe_cleanup_fault.py": "4daee5557f4dcc6f4b50129d99c0e8e5d33d25b7de5be3bed6a9ab1719ed9629",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612"
+  },
+  "errors": [],
+  "new_images": 0,
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "created_containers": [
+    {
+      "name": "expertauth-python-cleanup-fault-app-f729aa9f1b",
+      "id": "ba2aff87f4ef133071c9853de41be4f1706f8ad70fe0a7021df0961dac59cae7"
+    },
+    {
+      "name": "expertauth-python-cleanup-fault-probe-f729aa9f1b",
+      "id": "44f15e2eaa82faea36f93d521131073dc51bbb763ffd6b04a5d2d2842e75fa8f"
+    }
+  ],
+  "installed_sha256": {
+    "/app/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+  },
+  "probe_exit_code": 0,
+  "checks": {
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  },
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "temporary_containers_retired": true,
+  "preserved_services": {
+    "expertauth-oss-core-a": {
+      "id": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729",
+      "unchanged": true
+    },
+    "expertauth-oss-postgres": {
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "unchanged": true
+    }
+  },
+  "inputs_unchanged": true,
+  "artifacts": [
+    {
+      "path": "command-output.log",
+      "sha256": "7e55aa26d9f89f99822eac2503ef38af352ec710a2ab7c0f57abe3773b6a377c"
+    },
+    {
+      "path": "probe/child/probe-report.json",
+      "sha256": "a88754fbfeac92b10eb030280b8b053ea60aa7fce7b3cffc528204fdee3bcba6"
+    },
+    {
+      "path": "probe/child-output.log",
+      "sha256": "720bf49f135ac7a24c6bf3759c38e1ade638e851a706230e1821fe2fc171e3cd"
+    },
+    {
+      "path": "probe/fault-report.json",
+      "sha256": "f0ed01acf0f7f3fd8f36c7478c5451b8672dab5bfac8283b264137c7902fb1b0"
+    }
+  ],
+  "finished": "2026-09-09T00:54:40.435509+00:00"
+}

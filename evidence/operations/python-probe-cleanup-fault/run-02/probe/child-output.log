@@ -1,0 +1,19 @@
+PY-READY-CORE-CDI54: passed
+PY-NO-SESSION-DENIED: passed
+PY-MALFORMED-TOKEN-DENIED: passed
+PY-HEADER-SIGNUP: passed
+PY-HEADER-ONLINE-PROTECTED: passed
+PY-WRONG-PASSWORD-DENIED: passed
+PY-DUPLICATE-SIGNUP-DENIED: passed
+PY-HEADER-SIGNIN: passed
+PY-HEADER-REFRESH: passed
+PY-HEADER-LOGOUT: passed
+PY-LOGOUT-ONLINE-ACCESS-DENIED: passed
+PY-LOGOUT-REFRESH-DENIED: passed
+{
+  "executed": 12,
+  "passed": 12,
+  "failed": 0,
+  "unexecuted": 7,
+  "exit_code": 1
+}

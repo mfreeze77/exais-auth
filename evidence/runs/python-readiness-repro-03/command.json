@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "tools/run_python_readiness.py",
+    "--name",
+    "run-03"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788914264.08817,
+  "elapsed_seconds": 17.392,
+  "input_sha256": {
+    "tools/run_python_readiness.py": "b66dbb6aaad182641f179f533e96dac6a5629cbda1d17350b8cd80a8b588c136",
+    "tests/operations/python_readiness.py": "f709f79a2554eef61cdcafef74224c15a96c8c77f095763ecd3a97f253ec7aaf",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+  },
+  "inputs_changed": false,
+  "output_sha256": "7264b74fe0da2d13c15f40e1276d507b1a12c5c865dc22de5b9f78148efd8d41",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

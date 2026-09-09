@@ -35,6 +35,15 @@
   affected profile blocked when implemented; mocks cannot replace these tests.
 - Independent human security/licensing review has not occurred. An AI review does
   not meet TST-006/WP-036 or authorize production.
+- OPS-004/OPS-011: Python readiness now fails during an actual database outage and
+  recovers with existing-session continuity. This does not qualify traffic removal,
+  other dependency failure classes, load, database HA, crash recovery or backup
+  restore. The pre-outage dumps are preserved and hashed, not restore-tested.
+- Local Python offline rebuild: legacy Docker cache metadata restoration fails
+  in image-05 with `failed to read diff archive: InvalidArgument`. The current
+  image remains intact and passes19 HTTP checks through `--test-existing`.
+  Exact failure and cleanup are preserved; do not repeat that build unchanged.
+  A separately qualified full rebuild/builder path is still needed.
 - All remaining business features, migrations, UI/plugin closure, recovery/load/HA,
   and sovereign full-feature qualification remain required and unfinished.
 

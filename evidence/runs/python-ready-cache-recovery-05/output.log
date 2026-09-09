@@ -1,0 +1,1 @@
+{"report": "evidence/operations/python-readiness/image-05", "image": null, "passed": false, "regression": null, "retired_image": null, "errors": ["ValueError: Docker build failed; exact output preserved in build-output.log"]}

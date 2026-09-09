@@ -1,0 +1,1 @@
+{"report": "evidence/operations/python-readiness/image-04", "image": null, "passed": false, "regression": null, "retired_image": null, "errors": ["RuntimeError: Docker operation failed: build --pull=false"]}

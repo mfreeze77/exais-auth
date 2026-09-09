@@ -1,0 +1,21 @@
+{
+  "schema": "expertauth-python-probe-cleanup-fault-v1",
+  "started": "2026-09-09T00:53:31.986979+00:00",
+  "foundation_passed": false,
+  "rows": [],
+  "errors": [
+    "Real Core identity snapshot unavailable",
+    "Fallback cleanup: AssertionError"
+  ],
+  "skipped": 0,
+  "limits": [
+    "Harness transport-failure cleanup only; authentication parity and independent review remain unqualified.",
+    "One local auxiliary signout connection is dropped before forwarding; no database outage or engine failure."
+  ],
+  "fallback_users_removed": 0,
+  "requests": [],
+  "passed": 0,
+  "failed": 2,
+  "probe_sha256": "cdb495af8bb6195f9be6c26051589b0d27795667123cb3ec9be22e43be35cefa",
+  "finished": "2026-09-09T00:53:32.051762+00:00"
+}

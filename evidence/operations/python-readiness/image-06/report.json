@@ -1,0 +1,87 @@
+{
+  "schema": "expertauth-python-image-refresh-v1",
+  "started": "2026-09-09T01:04:12.320494+00:00",
+  "foundation_passed": false,
+  "inputs": {
+    "tools/refresh_python_image.py": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612",
+    "examples/python/.dockerignore": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+  },
+  "old_image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "errors": [],
+  "created_containers": [
+    {
+      "name": "expertauth-python-image-app-44db08cd",
+      "id": "ddf8e7bdb3dce6adeeea9f4d6c7ab243fbe3a6766a119b6bf2efa42d8169997d"
+    },
+    {
+      "name": "expertauth-python-image-probe-3acedc92",
+      "id": "292c48cc561d42c4c843c3c7e06c8ee5bbda6e3e432780ae4d480bf03df0cc32"
+    }
+  ],
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "build_network": "none",
+  "build_pull": false,
+  "build_skipped": true,
+  "new_image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "dependency_layers_unchanged": true,
+  "rootfs_layers": [
+    "sha256:6f94328331290cbd81edab450664d42da7b64c191416c9346cd5d28c84f76035",
+    "sha256:eeece50a9eae41fbec657a77c3360a561685b2fc638dbb59c4f59be2e9deb502",
+    "sha256:4bdf3c4a59c868d57940d8a761f38ce2a7269959ff6d1fd5a0157a86f6dac082",
+    "sha256:02bea5b709fab77889748c8fe2fed5a41e60e418e70d6a91b5a4f9c85475b043",
+    "sha256:f992c3c124fa4e1b30f2250fd605498f66eb8bfc3bc9f0958a085a317f7b7b2a",
+    "sha256:c4a8bef8824f8657ab8b256a1e3e89d8e2f13f0797427af2c9d675f7ebfa258c",
+    "sha256:5b377c8563e20fb2c7d21d2155544db7b7258774906619037fac6c00558e7b9a",
+    "sha256:4e8d2faafb5ee9ae164e4b616a24a00aed81515625c04272ca88a112e74875da"
+  ],
+  "installed_sha256": {
+    "/app/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+  },
+  "regression": {
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0,
+    "synthetic_users_removed": 2
+  },
+  "temporary_containers_retired": true,
+  "inputs_unchanged": true,
+  "promotion_checks_completed_before_image_retirement": true,
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "artifacts": [
+    {
+      "path": "regression/probe-report.json",
+      "sha256": "c88df82cfd616724d4224cce8cc3f2531b62c237a7a53642523997a34ce67bac"
+    },
+    {
+      "path": "regression-output.log",
+      "sha256": "d99286d7e593e7bf11c6f052cae99d04987775c7fd3058e3ee751d164f804f73"
+    }
+  ],
+  "finished": "2026-09-09T01:04:20.351361+00:00",
+  "image_promoted": true
+}

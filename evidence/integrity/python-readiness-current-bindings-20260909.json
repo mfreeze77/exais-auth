@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-09-09T01:11:43.411868+00:00",
+  "source_and_artifact_bindings_verified": true,
+  "authentication_complete": false,
+  "reports": [
+    {
+      "path": "evidence/operations/python-readiness/run-03/report.json",
+      "sha256": "2b287c5fbc08878ee9e03f019403d4a14f87d1720370681a37bb3454b9b54e81",
+      "current_input_count": 6,
+      "current_inputs_match": true,
+      "artifact_count": 2,
+      "artifacts_match": true
+    },
+    {
+      "path": "evidence/operations/python-readiness/image-06/report.json",
+      "sha256": "296b3a094854ccd5521616142cda96ca01b4954956711ff160511ee27f8d9992",
+      "current_input_count": 7,
+      "current_inputs_match": true,
+      "artifact_count": 2,
+      "artifacts_match": true
+    },
+    {
+      "path": "evidence/operations/python-probe-cleanup-fault/run-02/report.json",
+      "sha256": "7153b862873c83131fa992dd01ec3003059be120879092a73a0d86b86be9a0a5",
+      "current_input_count": 7,
+      "current_inputs_match": true,
+      "artifact_count": 4,
+      "artifacts_match": true
+    },
+    {
+      "path": "evidence/operations/python-image-lifecycle/source-drift-01/report.json",
+      "sha256": "f9fb03d2e6149719329ea3691da66d7dcdb615d1b3f6ff4f3e5eff9c42ce0945",
+      "current_input_count": 7,
+      "current_inputs_match": true,
+      "artifact_count": 14,
+      "artifacts_match": true
+    }
+  ],
+  "private_backups": [
+    {
+      "run": "run-01",
+      "bytes": 183753,
+      "hash_verified": true,
+      "restore_tested": false
+    },
+    {
+      "run": "run-03",
+      "bytes": 184149,
+      "hash_verified": true,
+      "restore_tested": false
+    }
+  ],
+  "full_release_issue_count": 557,
+  "scope": "Byte/source/preservation verification only; no additional authentication test execution or independent approval."
+}

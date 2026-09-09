@@ -1,0 +1,20 @@
+{
+  "integrity_passed": true,
+  "authentication_completion": false,
+  "counts": {
+    "requirements": 265,
+    "apis": 205,
+    "sdks": 8,
+    "plugins": 14,
+    "integrations": 10,
+    "milestones": 11,
+    "work_packages": 36
+  },
+  "requirement_status_counts": {
+    "implemented-unverified": 21,
+    "blocked": 10,
+    "planned": 227,
+    "failed": 7
+  },
+  "errors": []
+}

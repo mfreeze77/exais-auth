@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "tools/capture_contracts.py",
+    "--validate"
+  ],
+  "exit_code": 0,
+  "started_unix": 1788916231.7673643,
+  "elapsed_seconds": 0.247,
+  "input_sha256": {
+    "tools/capture_contracts.py": "ab2cd78baa5ae031e78b1a2522dfac2c4649bb3e7e6ff1ebf0d9b67e35e40906"
+  },
+  "inputs_changed": false,
+  "output_sha256": "0ec85db3e1fc999bf1446ce040285c38da1564e82375779fed9edc9aa09037da",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "tools/refresh_python_image.py",
+    "--name",
+    "image-04"
+  ],
+  "exit_code": 1,
+  "started_unix": 1788915297.0415766,
+  "elapsed_seconds": 14.41,
+  "input_sha256": {
+    "tools/refresh_python_image.py": "91c241a669d06ac2a1db6203489fafbb2844ff0c10a02fb8b8747c970b1e2917",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+  },
+  "inputs_changed": false,
+  "output_sha256": "74d9f750f2170f7d68dae5a2968b4d05fe7f69d51d179499338fb7eaca047ed2",
+  "scope": "command execution only; requirement acceptance must be reviewed separately"
+}

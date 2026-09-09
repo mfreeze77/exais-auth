@@ -1,0 +1,50 @@
+{
+  "schema": "expertauth-python-image-refresh-v1",
+  "started": "2026-09-09T00:54:57.818786+00:00",
+  "foundation_passed": false,
+  "inputs": {
+    "tools/refresh_python_image.py": "91c241a669d06ac2a1db6203489fafbb2844ff0c10a02fb8b8747c970b1e2917",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612",
+    "examples/python/.dockerignore": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+  },
+  "old_image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "errors": [
+    "RuntimeError: Docker operation failed: build --pull=false"
+  ],
+  "created_containers": [],
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "build_network": "none",
+  "build_pull": false,
+  "temporary_containers_retired": true,
+  "inputs_unchanged": true,
+  "promotion_checks_completed_before_image_retirement": true,
+  "resource_delta": {
+    "containers": {
+      "added": [
+        "77ddff44122e77d2e280cbcdbcdf95a5b4c61225a4562fc87e442af45f49cd24"
+      ],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "artifacts": [],
+  "finished": "2026-09-09T00:55:11.445281+00:00",
+  "image_promoted": false
+}

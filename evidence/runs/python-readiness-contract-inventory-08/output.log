@@ -1,0 +1,18 @@
+{
+  "accounted_operations": 205,
+  "FDI": 49,
+  "CDI": 156,
+  "operation_variants": 207,
+  "captured_reference_only": 205,
+  "fully_captured_and_behavior_verified": 0,
+  "exact_schema_redistribution_blocked": 205,
+  "vendor_control_non_equivalences_required": 5,
+  "operations_with_path_artifacts": [
+    "FDI-026",
+    "CDI-099",
+    "CDI-104",
+    "CDI-116"
+  ],
+  "upstream_additions_outside_frozen_inventory": 5,
+  "complete": false
+}

@@ -46,3 +46,24 @@ python tools/qualify_extracted_checkpoint.py --self-test
 `AGENTS.md` makes this resource lifecycle mandatory for further work. Older probe
 runners must be brought under the same cleanup rules before they are run again.
 Resource hygiene does not pass any authentication requirement or foundation gate.
+
+Python readiness checkpoint: `verification-20260909T010630Z.json` passes all9
+resource/preservation checks after the current-image regression and database outage
+proof. Two persistent task containers and six component tags remain. The Python
+image changed from `9ff0be83fb3d` to `7a4bb6dcfd63`, with every dependency/base
+filesystem layer identical and the old image removed. Temporary test containers,
+env files and source overlays were retired. No network or volume was created.
+The two private pre-outage dumps total367,902 bytes, with their exact hashes in
+`../python-readiness/run-01/report.json` and `run-03/report.json`. Their retention
+does not claim restore qualification. Historical readiness source is reproduced
+from Git without retaining a stale image. Unrelated Docker resources are unchanged.
+
+The subsequent transport-fault and image-source-drift tests also retire all owned
+resources. The source-drift trial creates only a distinct image configuration:
+all eight filesystem layers are unchanged, its protection tag is removed, and
+the current component tag is restored by the tested helper before any fallback.
+An earlier full build failure left one legacy intermediate container; its exact
+ID, command, time and lock hash were recorded before removal with its unused
+cache stage. Build failure output is now retained and intermediates use
+`--force-rm`. An unchanged legacy cache-restoration error remains blocked rather
+than retried. Current19-check regression uses `--test-existing` and adds no image.

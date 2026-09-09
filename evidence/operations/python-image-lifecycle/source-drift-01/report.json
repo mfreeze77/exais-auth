@@ -1,0 +1,263 @@
+{
+  "schema": "expertauth-real-python-image-source-drift-v1",
+  "started": "2026-09-09T01:05:07.480996+00:00",
+  "protected_tag": "expertauth-python-app:0.1.0",
+  "protected_image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "source_input_sha256": {
+    "tools/refresh_python_image.py": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612",
+    "examples/python/.dockerignore": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+  },
+  "tool_sha256": "e417fec208db84019c3c88e23b1b8ebc0c813da932b7140e2b87c584311d06bd",
+  "build_network": "none",
+  "build_pull": false,
+  "foundation_passed": false,
+  "source_drift_isolated": true,
+  "errors": [],
+  "checks": {
+    "source_drift_injected_after_actual_app_creation": true,
+    "actual_helper_refused_with_exit_1": true,
+    "helper_detected_input_drift": true,
+    "helper_did_not_promote": true,
+    "qualification_before_image_retirement": true,
+    "real_19_http_checks_passed": true,
+    "two_synthetic_users_removed": true,
+    "dependency_layers_unchanged": true,
+    "helper_restored_protected_tag": true,
+    "helper_retired_ephemeral_image": true,
+    "helper_retired_own_containers": true,
+    "core_and_postgres_unchanged_before_fallback": true,
+    "no_helper_created_volumes_or_networks": true,
+    "only_intended_input_changed_after_build": true,
+    "temporary_protection_tag_removed": true,
+    "final_protected_tag_intact": true,
+    "final_service_ids_start_times_mounts_unchanged": true,
+    "no_final_resource_inventory_delta": true,
+    "exact_private_scratch_removed": true,
+    "original_workspace_inputs_unchanged": true,
+    "helper_rollback_needed_no_outer_fallback": true
+  },
+  "fallback_actions": [],
+  "before_service_state": {
+    "expertauth-oss-core-a": {
+      "id": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729",
+      "image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+      "started_at": "2026-09-08T23:21:32.243412441Z",
+      "mounts": [
+        {
+          "Type": "bind",
+          "Name": null,
+          "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+          "Destination": "/run/expertauth/config.yaml",
+          "RW": false
+        }
+      ]
+    },
+    "expertauth-oss-postgres": {
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "started_at": "2026-09-09T00:37:51.233368299Z",
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "expertauth-oss-proof-pg",
+          "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "RW": true
+        }
+      ]
+    }
+  },
+  "mocked_helper": false,
+  "mocked_core_or_http": false,
+  "private_env_packaged": false,
+  "fixture": "Config-only image with unique LABEL inheriting the exact protected image through an identity-checked local tag",
+  "full_source_build_qualified": false,
+  "isolated_build_inputs": {
+    "tools/refresh_python_image.py": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/Dockerfile": "39e7462cb47a2e86a1b53cd4b6390cdc58de0f279e4ab0c579a31221415f42f8",
+    "examples/python/.dockerignore": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+  },
+  "injected_drift": {
+    "after_app_cid_appeared": "0fa6205791b6d70ef1d36658b364ae8cb2d06f478360aead9569606908668d40",
+    "timestamp": "2026-09-09T01:05:15.111698+00:00",
+    "path": "examples/python/.dockerignore",
+    "before_sha256": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567",
+    "after_sha256": "fad2621a3eb1230fa7dc29e1c5cb2d31b13d984ee08160b508843e829dd944bb"
+  },
+  "candidate_rootfs_layers": [
+    "sha256:6f94328331290cbd81edab450664d42da7b64c191416c9346cd5d28c84f76035",
+    "sha256:eeece50a9eae41fbec657a77c3360a561685b2fc638dbb59c4f59be2e9deb502",
+    "sha256:4bdf3c4a59c868d57940d8a761f38ce2a7269959ff6d1fd5a0157a86f6dac082",
+    "sha256:02bea5b709fab77889748c8fe2fed5a41e60e418e70d6a91b5a4f9c85475b043",
+    "sha256:f992c3c124fa4e1b30f2250fd605498f66eb8bfc3bc9f0958a085a317f7b7b2a",
+    "sha256:c4a8bef8824f8657ab8b256a1e3e89d8e2f13f0797427af2c9d675f7ebfa258c",
+    "sha256:5b377c8563e20fb2c7d21d2155544db7b7258774906619037fac6c00558e7b9a",
+    "sha256:4e8d2faafb5ee9ae164e4b616a24a00aed81515625c04272ca88a112e74875da"
+  ],
+  "protected_rootfs_layers": [
+    "sha256:6f94328331290cbd81edab450664d42da7b64c191416c9346cd5d28c84f76035",
+    "sha256:eeece50a9eae41fbec657a77c3360a561685b2fc638dbb59c4f59be2e9deb502",
+    "sha256:4bdf3c4a59c868d57940d8a761f38ce2a7269959ff6d1fd5a0157a86f6dac082",
+    "sha256:02bea5b709fab77889748c8fe2fed5a41e60e418e70d6a91b5a4f9c85475b043",
+    "sha256:f992c3c124fa4e1b30f2250fd605498f66eb8bfc3bc9f0958a085a317f7b7b2a",
+    "sha256:c4a8bef8824f8657ab8b256a1e3e89d8e2f13f0797427af2c9d675f7ebfa258c",
+    "sha256:5b377c8563e20fb2c7d21d2155544db7b7258774906619037fac6c00558e7b9a",
+    "sha256:4e8d2faafb5ee9ae164e4b616a24a00aed81515625c04272ca88a112e74875da"
+  ],
+  "observed_candidate_image": "sha256:9bcbd45997b646f211693a9ee862f0968b898108b54eb4f08b39a390938700d4",
+  "helper_exit_code": 1,
+  "observed_before_outer_fallback": {
+    "tag_image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+    "candidate_image_absent": true,
+    "helper_image_promoted": false,
+    "service_state": {
+      "expertauth-oss-core-a": {
+        "id": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729",
+        "image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+        "started_at": "2026-09-08T23:21:32.243412441Z",
+        "mounts": [
+          {
+            "Type": "bind",
+            "Name": null,
+            "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+            "Destination": "/run/expertauth/config.yaml",
+            "RW": false
+          }
+        ]
+      },
+      "expertauth-oss-postgres": {
+        "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+        "image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+        "started_at": "2026-09-09T00:37:51.233368299Z",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "expertauth-oss-proof-pg",
+            "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "RW": true
+          }
+        ]
+      }
+    }
+  },
+  "after_service_state": {
+    "expertauth-oss-core-a": {
+      "id": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729",
+      "image": "sha256:60c7677d0a9152ff4e854ab21e95df0b1aa50ed0e534ed480608d9b84bae0e58",
+      "started_at": "2026-09-08T23:21:32.243412441Z",
+      "mounts": [
+        {
+          "Type": "bind",
+          "Name": null,
+          "Source": "C:\\Users\\mfrie\\Ai_Projects\\exai auth\\expert-auth\\.runtime\\oss-core\\config.yaml",
+          "Destination": "/run/expertauth/config.yaml",
+          "RW": false
+        }
+      ]
+    },
+    "expertauth-oss-postgres": {
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "image": "sha256:67f41722b7a8cbdb868a44a4995c846eddfdc2973bccb291ce937dce88ad5675",
+      "started_at": "2026-09-09T00:37:51.233368299Z",
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "expertauth-oss-proof-pg",
+          "Source": "/var/lib/docker/volumes/expertauth-oss-proof-pg/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "RW": true
+        }
+      ]
+    }
+  },
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "finished": "2026-09-09T01:05:27.052683+00:00",
+  "expected_checks": 21,
+  "passed": true,
+  "exit_code": 0,
+  "artifacts": [
+    {
+      "path": "changed-inputs/Dockerfile",
+      "sha256": "39e7462cb47a2e86a1b53cd4b6390cdc58de0f279e4ab0c579a31221415f42f8"
+    },
+    {
+      "path": "changed-inputs/dockerignore-after-drift.txt",
+      "sha256": "fad2621a3eb1230fa7dc29e1c5cb2d31b13d984ee08160b508843e829dd944bb"
+    },
+    {
+      "path": "helper-evidence/build-output.log",
+      "sha256": "98ab7c05d866665026c823e2d1d0fb4dce3a60092155ad2f3de9ec68669e57a9"
+    },
+    {
+      "path": "helper-evidence/regression/probe-report.json",
+      "sha256": "cdc6263d168cce881fa1745487e79d2f4044044110ae28c1295ae4e65833164c"
+    },
+    {
+      "path": "helper-evidence/regression-output.log",
+      "sha256": "d99286d7e593e7bf11c6f052cae99d04987775c7fd3058e3ee751d164f804f73"
+    },
+    {
+      "path": "helper-evidence/report.json",
+      "sha256": "828db67725d2f22164258bb0def8ecce1d7ba14ae2cbf60c479ad594ee160e36"
+    },
+    {
+      "path": "helper-output.log",
+      "sha256": "a22d76f8d4396bb4ae69e719a5f51899047e82607b3521a3925549268bfb7b23"
+    },
+    {
+      "path": "input-copy/examples/python/.dockerignore",
+      "sha256": "52ce3f4dffd4fbd3f92e3ae74536c9f6b47a90586964fe2207701def21203567"
+    },
+    {
+      "path": "input-copy/examples/python/app.py",
+      "sha256": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b"
+    },
+    {
+      "path": "input-copy/examples/python/Dockerfile",
+      "sha256": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612"
+    },
+    {
+      "path": "input-copy/examples/python/requirements.lock",
+      "sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+    },
+    {
+      "path": "input-copy/tests/clients/python_probe.py",
+      "sha256": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16"
+    },
+    {
+      "path": "input-copy/tools/refresh_python_image.py",
+      "sha256": "5c8d9bedf14df9e7295293e0129a5010715073196b64696ef0593c25d2e3b9f9"
+    },
+    {
+      "path": "input-copy/tools/run_sdk_session_faults.py",
+      "sha256": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e"
+    }
+  ]
+}

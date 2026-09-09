@@ -1,0 +1,1 @@
+{"fault_regression_passed": false, "checks": 0, "errors": ["Real Core identity snapshot unavailable", "Fallback cleanup: AssertionError"]}

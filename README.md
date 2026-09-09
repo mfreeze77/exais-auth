@@ -52,6 +52,12 @@ availability remains failed. Real lost-response, abrupt-restart and four-tab
 refresh/logout behavior is recorded in `evidence/foundation/sdk-session-faults`.
 The runner reuses cached images and removes all its temporary resources.
 
+Python readiness now checks authenticated storage as well as Core protocol support.
+A real PostgreSQL outage/recovery proof passes6 checks, including cleanup, and the
+current image passes19 HTTP regression checks. The obsolete Python image was
+removed; no new dependency layers, volumes or networks were retained. Reproduction
+and the operational limits are in `evidence/operations/python-readiness/README.md`.
+
 ## Validate integrity and completion separately
 
 ```powershell

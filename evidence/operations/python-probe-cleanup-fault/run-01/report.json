@@ -1,0 +1,83 @@
+{
+  "schema": "expertauth-python-probe-cleanup-fault-host-v1",
+  "started": "2026-09-09T00:53:29.013808+00:00",
+  "foundation_passed": false,
+  "command_argv": [
+    "tools/run_python_probe_cleanup_fault.py",
+    "--name",
+    "run-01"
+  ],
+  "image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1",
+  "inputs": {
+    "tools/run_python_probe_cleanup_fault.py": "78742c4e271bbc26e268013ddf3b2119362b00621e8cff9cdd77f871d1948e51",
+    "tools/run_sdk_session_faults.py": "70941331fb69228c10cc3dc3690f7056aef5e1ca1a394428fe0d297fc235f41e",
+    "tests/operations/python_probe_cleanup_fault.py": "cdb495af8bb6195f9be6c26051589b0d27795667123cb3ec9be22e43be35cefa",
+    "tests/clients/python_probe.py": "7a4deb08d4978448e845831a0ad89cbaac6b84d4b5b8cabe57c88e9494da2c16",
+    "examples/python/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "examples/python/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+    "examples/python/Dockerfile": "fc72527bb3f7d5a9f1ef8f60b32860fe69cd49c33d21b4c3cec08d2e3d30a612"
+  },
+  "errors": [
+    "ValueError: Actual transport-fault cleanup regression did not pass"
+  ],
+  "new_images": 0,
+  "new_networks": 0,
+  "new_volumes": 0,
+  "published_ports": [],
+  "created_containers": [
+    {
+      "name": "expertauth-python-cleanup-fault-app-1185e77d80",
+      "id": "3d3c9ebf6401e06550d748d37755b4ff491bb2ea201245590e8af8750d401199"
+    },
+    {
+      "name": "expertauth-python-cleanup-fault-probe-1185e77d80",
+      "id": "d63ccde6eb03108e02af54fdccbd6a8157681a72f04bcbba023e41fa6f89ff80"
+    }
+  ],
+  "installed_sha256": {
+    "/app/app.py": "77b5048730a3e254a310a2c5df8d367332f5cfeb56e3704dd9d778c98777066b",
+    "/app/requirements.lock": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef"
+  },
+  "probe_exit_code": 1,
+  "resource_delta": {
+    "containers": {
+      "added": [],
+      "removed": []
+    },
+    "images": {
+      "added": [],
+      "removed": []
+    },
+    "volumes": {
+      "added": [],
+      "removed": []
+    },
+    "networks": {
+      "added": [],
+      "removed": []
+    }
+  },
+  "temporary_containers_retired": true,
+  "preserved_services": {
+    "expertauth-oss-core-a": {
+      "id": "8dae07565cf96fc0c8dd3d78092a047a3739e3ac28732b8f8dc98c5722b19729",
+      "unchanged": true
+    },
+    "expertauth-oss-postgres": {
+      "id": "94f223b054ba512fec46d0d1ae29f9433ac5470da636b902b1b2fcc446ac3b3c",
+      "unchanged": true
+    }
+  },
+  "inputs_unchanged": true,
+  "artifacts": [
+    {
+      "path": "command-output.log",
+      "sha256": "00ebbd5a78cf3350552586399fbe0df2eb7a932e8b9fbb1f7550f01773cf6fc5"
+    },
+    {
+      "path": "probe/fault-report.json",
+      "sha256": "ccf40cb968b54f75adae4bd3b91378a7adc188f250f084d657fb3d58f5cd09e3"
+    }
+  ],
+  "finished": "2026-09-09T00:53:34.066851+00:00"
+}

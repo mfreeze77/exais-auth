@@ -8,6 +8,15 @@ redistribution rights and differential/error/side-effect coverage remain unresol
 See `contracts/README.md`, `api-contracts.json` and their source/licensing report.
 
 The working OSS Node/React and Python examples exercise password/session subsets.
+The current Python image `7a4bb6dcfd63` passes19 HTTP regression checks after the
+readiness correction. Its public `/ready` response still uses the same healthy
+shape, but now requires authenticated exact Core storage access as well as CDI5.4.
+Both successful and failed readiness responses prohibit caching. A real database
+outage now returns503 while `/live` remains200; after database recovery the
+existing refresh/logout flow passes. This is a representative operational result,
+not full OPS-004/OPS-011 or production routing qualification. Exact before/after
+source and image evidence are in `evidence/operations/python-readiness`.
+
 Node24.0.3 and Python0.31.3 do not automatically have identical protocol behavior:
 Python requires CDI5.4; the new Node24.0.3 wire trace actually observes CDI5.4 on
 session operations across two Core replicas. Its separately declared offline JWT

@@ -23,6 +23,13 @@ Actual code and evidence:
   a legitimate concurrent refresh session. No license enforcement was altered.
 - Python/FastAPI: 19 real HTTP tests passed for default-app/public-tenant password
   and online sessions, cookie/header/CSRF/logout. Full Python profile remains open.
+  These19 checks were rerun against image `7a4bb6dcfd63` after fixing readiness.
+  A real PostgreSQL outage leaves Core's protocol advertisement and the historical
+  readiness implementation at200; the corrected app returns503 in3.011 seconds,
+  keeps liveness200 and recovers after the same database restarts. Existing-session
+  refresh/online access/logout still pass after recovery. Six operational checks
+  include one synthetic-user cleanup row. See `evidence/operations/python-readiness`.
+  No proxy traffic removal, backup restore, database HA or full OPS acceptance follows.
 - Node/React:12 live HTTP checks and4 actual Chromium checks pass. Password signup,
   wrong-password rejection, signin, logout/cookie clearing and320px layout are tested.
   Explicit offline JWT issuer/audience verification is separate from online revocation.
@@ -87,20 +94,47 @@ recognizes that mount and uses16MiB tmpfs for the unused Gradle cache. Two old c
 were retained after a nonempty check; their combined file content is385,398 bytes.
 Only Core-a/PostgreSQL remain as containers, with6 retained task image tags.
 
-The new SDK/session runner added no images, networks or volumes. All three
+The recorded SDK/session run added no images, networks or volumes. All three
 temporary containers and22 synthetic users were removed; Core-a/PostgreSQL IDs,
-start times and config were unchanged. Chromium needed more than the probe's
+start times and config were unchanged during that run. Chromium needed more than the probe's
 original128MiB `/tmp`:the successful run measured about167.5MiB of temporary use.
 Its bounded512MiB tmpfs is memory-backed and disappears with the container. All
 earlier browser failures and exact harness snapshots remain preserved.
+
+The Python readiness build reused every dependency/base filesystem layer, with
+network access disabled, and retired the obsolete Python image. Only the final
+application layer changed. Both outage runs and the image regression removed all
+temporary containers and their own synthetic users. Core-a stayed running; the
+same private PostgreSQL container/volume was stopped and restored deliberately.
+Two private pre-outage dumps total367,902 bytes and remain under `.runtime/`;
+their hashes are recorded, but dump restore has not been tested. The baseline is
+a tiny Git-pinned app overlay, so reproducing the bug needs no stale Docker image.
+Final hygiene verification at `verification-20260909T010630Z.json` passed9/9.
+
+The corrected probe now performs its own-user cleanup in `finally`. A real dropped
+auxiliary signout connection produces an incomplete child report/exit1 and removes
+the one created user, preserving52 existing identities. Four outer cleanup checks
+pass; they do not qualify authentication. Current normal regression image-06
+passes19/19 and removes two users using the retained image without a build.
+An attempted rebuild exposed missing legacy dependency-cache metadata, followed
+by an explicit Docker cached-image restoration error. Image-04's exact owned
+stopped intermediate was identified and removed; image-05's failure added no
+resources. Both failures and prior runner sources remain preserved. The current
+image is intact. The full offline rebuild path remains blocked; no repeated
+rebuild or new dependency download was used to run the current regression.
+A distinct image-configuration trial with all eight filesystem layers unchanged
+then proved source-drift rejection and tag rollback before old-image retirement.
+The helper itself restored the prior image and removed the trial image/containers;
+no outer fallback ran. Its21 lifecycle checks and nested19 HTTP checks qualify
+that harness branch only. The full legacy source-build error remains open.
 
 Full notices for other uncovered dependencies, native source/build/relink obligations,
 container OS review and independent distribution approval remain open. Four native
 bundles need further work: scrypt, Argon2, JNA and SQLite JDBC. See
 `docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
 
-Editable ledger currently maps19 requirements to partial implementation,10 to blockers,
-7 to failed candidate checks and229 to planned work. All205 API rows remain blocked
+Editable ledger currently maps21 requirements to partial implementation,10 to blockers,
+7 to failed candidate checks and227 to planned work. All205 API rows remain blocked
 for complete contract/runtime qualification. These are statuses, not a completion rate.
 
 Read `BLOCKERS.md`, `docs/adr/001-foundation.md`, and the current evidence before

@@ -1,0 +1,34 @@
+{
+  "container": {
+    "Id": "77ddff44122e77d2e280cbcdbcdf95a5b4c61225a4562fc87e442af45f49cd24",
+    "Image": "sha256:7f8667b414b5fafd47f340f9d29a4a68d7eba97ddfa7c69f34ae4be52ec78b44",
+    "Created": "2026-09-09T00:55:00.955943703Z",
+    "State": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 1,
+      "Error": "",
+      "StartedAt": "2026-09-09T00:55:01.091994287Z",
+      "FinishedAt": "2026-09-09T00:55:09.77004031Z"
+    },
+    "Mounts": []
+  },
+  "command": [
+    "/bin/sh",
+    "-c",
+    "pip install --no-cache-dir --require-hashes --only-binary=:all: -r /app/requirements.lock"
+  ],
+  "requirements_sha256": "65bf48fe9a595d9e8e12ef5314a7258c4767712564a311d62a8df261af5c38ef",
+  "ownership": "Exact new image-04 intermediate ID, build time/command and pinned lock bytes; legacy builder applies final labels only after this failed RUN.",
+  "log_limit": "Original wrapper discarded failed build output; daemon logging driver cannot return intermediate logs. Exact pip error text unavailable.",
+  "observed_cause": "Current image retains dependency filesystem layers, but legacy history reports missing dependency-stage cache image metadata; offline RUN was executed and exited1.",
+  "removed": [
+    "77ddff44122e77d2e280cbcdbcdf95a5b4c61225a4562fc87e442af45f49cd24",
+    "sha256:7f8667b414b5fafd47f340f9d29a4a68d7eba97ddfa7c69f34ae4be52ec78b44"
+  ]
+}

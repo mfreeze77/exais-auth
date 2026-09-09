@@ -1,0 +1,22 @@
+Sending build context to Docker daemon  14.34kB
+
+Step 1/4 : FROM expertauth-python-lifecycle-rollback:b332b3b649674a188cf6dae578a1bb24
+ ---> 7a4bb6dcfd63
+Step 2/4 : LABEL org.expertauth.lifecycle.fixture="b332b3b649674a188cf6dae578a1bb24"
+ ---> Running in 512e0356c37d
+ ---> Removed intermediate container 512e0356c37d
+ ---> fa94fb47cebf
+Step 3/4 : LABEL org.expertauth.project=expert-auth
+ ---> Running in 192c31400905
+ ---> Removed intermediate container 192c31400905
+ ---> eea3027f2382
+Step 4/4 : LABEL org.expertauth.purpose=python-foundation
+ ---> Running in 4e004a677134
+ ---> Removed intermediate container 4e004a677134
+ ---> 9bcbd45997b6
+Successfully built 9bcbd45997b6
+Successfully tagged expertauth-python-app:0.1.0
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

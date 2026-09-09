@@ -1,0 +1,1 @@
+{"report": "evidence/operations/python-readiness/image-06", "image": "sha256:7a4bb6dcfd634a98f603d65bc2c1219fef5b3a46a00be705631201c4f78802f1", "passed": true, "regression": {"passed": 19, "failed": 0, "skipped": 0, "synthetic_users_removed": 2}, "retired_image": null, "errors": []}

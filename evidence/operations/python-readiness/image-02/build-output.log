@@ -1,0 +1,44 @@
+Sending build context to Docker daemon  14.34kB
+
+Step 1/11 : FROM python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36
+ ---> 229a2c5bfa27
+Step 2/11 : ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_DISABLE_PIP_VERSION_CHECK=1
+ ---> Using cache
+ ---> 1a668725213d
+Step 3/11 : WORKDIR /app
+ ---> Using cache
+ ---> 70e13762af90
+Step 4/11 : COPY requirements.lock /app/requirements.lock
+ ---> Using cache
+ ---> c40ee7077457
+Step 5/11 : RUN pip install --no-cache-dir --require-hashes --only-binary=:all: -r /app/requirements.lock
+ ---> Using cache
+ ---> 5b60c1b2f7fd
+Step 6/11 : COPY app.py /app/app.py
+ ---> da4db5553f9f
+Step 7/11 : USER 65532:65532
+ ---> Running in c7dbde056571
+ ---> Removed intermediate container c7dbde056571
+ ---> fdf5151d7c2e
+Step 8/11 : EXPOSE 8300
+ ---> Running in db9ecdecd78a
+ ---> Removed intermediate container db9ecdecd78a
+ ---> ba65510731e5
+Step 9/11 : CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8300", "--no-access-log"]
+ ---> Running in 9f5952efb2e3
+ ---> Removed intermediate container 9f5952efb2e3
+ ---> 4f8751c411b6
+Step 10/11 : LABEL org.expertauth.project=expert-auth
+ ---> Running in f37c568a6bca
+ ---> Removed intermediate container f37c568a6bca
+ ---> b6bc50314f35
+Step 11/11 : LABEL org.expertauth.purpose=python-foundation
+ ---> Running in faa4ad79e5c5
+ ---> Removed intermediate container faa4ad79e5c5
+ ---> 7a4bb6dcfd63
+Successfully built 7a4bb6dcfd63
+Successfully tagged expertauth-python-app:0.1.0
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+

@@ -1,0 +1,69 @@
+{
+  "schema": "expertauth-python-readiness-proof-v1",
+  "started": "2026-09-09T00:30:37.259717+00:00",
+  "finished": "2026-09-09T00:30:48.954034+00:00",
+  "rows": [
+    {
+      "id": "PY-READY-HEALTHY-STORAGE",
+      "status": "passed",
+      "baseline": 200,
+      "current": 200,
+      "core_storage": 200,
+      "elapsed_ms": 17.3
+    },
+    {
+      "id": "PY-READY-AUTH-BEFORE-OUTAGE",
+      "status": "passed",
+      "elapsed_ms": 14.45
+    },
+    {
+      "id": "PY-READY-DATABASE-OUTAGE",
+      "status": "passed",
+      "core_protocol_http": 200,
+      "baseline_false_ready_http": 200,
+      "current_ready_http": 503,
+      "current_live_http": 200,
+      "current_ready_ms": 3011.32,
+      "database": "host confirmed same owned container stopped",
+      "elapsed_ms": 3024.03
+    },
+    {
+      "id": "PY-READY-DATABASE-RECOVERY",
+      "status": "passed",
+      "http_sequence": [
+        503,
+        200
+      ],
+      "ready_after_host_pg_ready_ms": 6167.86,
+      "elapsed_ms": 6167.86
+    },
+    {
+      "id": "PY-READY-SESSION-CONTINUITY",
+      "status": "passed",
+      "refresh": 200,
+      "online": 200,
+      "logout": 200,
+      "post_logout_refresh": 401,
+      "elapsed_ms": 335.47
+    },
+    {
+      "id": "PY-READY-SYNTHETIC-CLEANUP",
+      "status": "passed",
+      "created": 1,
+      "removed": 1
+    }
+  ],
+  "skipped": 0,
+  "passed": 6,
+  "failed": 0,
+  "requirements": [
+    "OPS-004",
+    "OPS-011"
+  ],
+  "foundation_passed": false,
+  "probe_sha256": "f709f79a2554eef61cdcafef74224c15a96c8c77f095763ecd3a97f253ec7aaf",
+  "limits": [
+    "Private single-database failure/recovery; not production traffic removal, database HA or backup restore qualification.",
+    "Representative Python application only; no new platform/profile completion."
+  ]
+}

@@ -1,0 +1,10 @@
+{"id": "PY-READY-HEALTHY-STORAGE", "status": "passed"}
+{"id": "PY-READY-AUTH-BEFORE-OUTAGE", "status": "passed"}
+{"control": "stop_owned_postgres"}
+{"id": "PY-READY-DATABASE-OUTAGE", "status": "passed"}
+{"control": "start_owned_postgres"}
+{"id": "PY-READY-DATABASE-RECOVERY", "status": "passed"}
+{"id": "PY-READY-SESSION-CONTINUITY", "status": "passed"}
+{"control": "ensure_postgres_running"}
+{"finished": true, "passed": 6, "failed": 0}
+{"report": "evidence/operations/python-readiness/run-03", "proof_passed": true, "errors": [], "database_restored": true, "foundation_passed": false}

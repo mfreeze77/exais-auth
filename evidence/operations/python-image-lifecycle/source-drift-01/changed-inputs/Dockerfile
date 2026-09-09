@@ -1,0 +1,2 @@
+FROM expertauth-python-lifecycle-rollback:b332b3b649674a188cf6dae578a1bb24
+LABEL org.expertauth.lifecycle.fixture="b332b3b649674a188cf6dae578a1bb24"

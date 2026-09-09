@@ -9,6 +9,46 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
+Latest Python operational proof: `evidence/operations/python-readiness/run-03`,
+with current image `7a4bb6dcfd63` qualified by image-06's19 live HTTP checks.
+Image-02 is the original successful image build; image-06 uses the corrected probe.
+Readiness now detects an actual database outage, returns503 while liveness stays200,
+and recovers with existing-session continuity. Six outage checks include cleanup;
+full OPS-004/OPS-011, traffic removal, backup restore and HA remain open.
+
+```powershell
+python tools/run_python_readiness.py --name NEW_UNIQUE_OUTAGE_NAME
+python tools/verify_checkpoint_hygiene.py
+```
+
+This command deliberately stops and restores the isolated owned PostgreSQL
+container; it refuses other network consumers and preserves a small private dump.
+Run only with Core-a and that database as the network's current consumers. The
+before/after source overlay comes from a pinned Git commit on the same current
+dependency image. No obsolete image is needed. It creates no images/networks/volumes
+and retires all temporary containers. Do not rerun just to refresh a timestamp.
+Use `tools/refresh_python_image.py --test-existing --name NEW_UNIQUE_IMAGE_NAME`
+after a probe-only change. Installed app/lock bytes must still match. The offline
+legacy full-Dockerfile cache path failed in image-04/image-05; exact diagnosis,
+retirement and the available error output are preserved. Do not repeat that
+unchanged build or rebuild dependencies simply to test a harness correction.
+Read the Python README before separately qualifying another build path.
+
+Two failure-lifecycle proofs are now actual, narrow results: the auxiliary signout
+transport fault removes the run's own user and preserves incomplete failure
+evidence; isolated input drift rejects a distinct image configuration, restores
+the prior tag and retires the trial image without outer fallback. Read their
+READMEs before repeating in an exclusive lab slot with a fresh evidence name:
+
+```powershell
+python tools/run_python_probe_cleanup_fault.py --name NEW_UNIQUE_FAULT_NAME
+python tools/check_python_image_lifecycle.py --name NEW_UNIQUE_DRIFT_NAME
+```
+
+The latter fixture has identical filesystem layers and does not qualify the
+legacy full-Dockerfile rebuild. Do not add its21 lifecycle assertions to the
+authentication acceptance count or repeat unchanged passing runs for timestamps.
+
 Latest bounded session proof: `evidence/foundation/sdk-session-faults/run-05`.
 It observes Node24.0.3 CDI5.4 on the wire:10 SDK and3 browser checks passed,
 including two cleanup rows; raw-header concurrency availability remains failed.
