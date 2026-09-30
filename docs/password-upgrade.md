@@ -1,4 +1,9 @@
-# Password import validation and on-login rehash
+# Password import validation and on-login rehash (reference lab)
+
+> **Reference-lab document.** Since ADR-001 (2026-09-30) the product is the independently
+> authored ExpertAuth engine (`engine/`). The SuperTokens-Core patches described here are
+> reference-behavior evidence only. The engine reimplements their rules natively:
+> bounded import structure, rehash on login, and never deciding acceptance by rehash.
 
 Status: **implemented; source-built scratch lab passes. Not an installed-image,
 foundation or production qualification.** Policy `EXPERTAUTH-PASSWORD-UPGRADE-2`.

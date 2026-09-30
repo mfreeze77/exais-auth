@@ -1,6 +1,23 @@
 # ExpertAuth execution checkpoint
 
-Status: **PARTIAL; paused at the user's request. No engine selected; M0/M1 not closed.**
+Status: **PARTIAL. Engine decided 2026-09-30: the independently authored ExpertAuth engine
+(`engine/`, ADR-001). M1 first slice built; M0/M1 not closed.**
+
+- 2026-09-30, engine pivot (product-owner direction): ExpertAuth builds its own engine;
+  SuperTokens is the reference only, and none of its code ships. `engine/` (TypeScript on
+  Node 22 with PostgreSQL) implements, independently from the published contracts and
+  the baseline data model:
+  - native apps/tenants, with tenant-scoped email identities and explicit sharing;
+  - argon2id credentials, with bounded bcrypt/argon2 import and on-login rehash;
+  - RS256 sessions whose refresh successors are derived with HMAC, so concurrent and
+    lost-response refreshes converge on one successor, while reuse revokes the family;
+  - atomic single-winner password reset.
+
+  `evidence/engine/m1-slice-01`: 41/41 tests against PostgreSQL 17.11, typecheck clean.
+  Eight rows move to implemented-unverified: IDN-001/002/003/004/006/011 (four were blocked by
+  the reference Core's 402s) and SES-003/004 (failed on the rejected candidates).
+  Everything below this bullet is **reference-lab history** (SuperTokens-Core patches,
+  Keycloak) and describes behavior evidence, not the product.
 All 265 required rows and 205 API IDs remain required. No baseline requirement is
 verified as a complete acceptance row. Tests below prove narrower cases only.
 
@@ -361,8 +378,8 @@ container OS review and independent distribution approval remain open. Four nati
 bundles need further work: scrypt, Argon2, JNA and SQLite JDBC. See
 `docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
 
-Editable ledger currently maps24 requirements to partial implementation,10 to blockers,
-7 to failed candidate checks and224 to planned work. All205 API rows remain blocked
+Editable ledger currently maps32 requirements to partial implementation,5 to blockers,
+5 to failed candidate checks and223 to planned work. All205 API rows remain blocked
 for complete contract/runtime qualification. These are statuses, not a completion rate.
 
 Read `BLOCKERS.md`, `docs/adr/001-foundation.md`, and the current evidence before

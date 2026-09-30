@@ -1,6 +1,32 @@
-# ADR-001: Foundation decision gate (pending)
+# ADR-001: Foundation decision
 
-Date: 2026-09-08. Status: **evaluation in progress; selected_engine=null**.
+Date: 2026-09-08; decided 2026-09-30. Status: **decided by the product owner:
+selected_engine = ExpertAuth Engine (independently authored).**
+
+## 2026-09-30 decision (product owner)
+
+ExpertAuth is its own authentication engine. SuperTokens is the **functional and API
+reference only**: the benchmark for behavior, the FDI/CDI wire contracts and SDK
+compatibility. **No SuperTokens source code is included in the product**, whether
+Core, the plugin interface, the PostgreSQL plugin or `ee/`. This supersedes the
+baseline's fallback of "Apache portions of SuperTokens Core as the foundation" and the
+Keycloak starting recommendation. Neither was the owner's intent. Consequences:
+
+- The engine lives in `engine/` (TypeScript on Node.js with PostgreSQL), written
+  independently from the published API contracts (`contracts/`) and the baseline data
+  model. It owns credentials, identity linkage, tenancy, sessions/refresh state and
+  signing as one write authority.
+- Multi-tenancy, account linking, MFA and every other capability the reference sells
+  as an add-on are ordinary ExpertAuth features. There is no license gate to patch
+  because no vendor code is used. The product never emulates, forges or calls a vendor
+  license service.
+- Earlier SuperTokens-Core and Keycloak labs (`engine-extensions/`, `evidence/`) become
+  reference-behavior evidence and differential-test oracles. They are not product
+  code and never ship. Their findings (refresh races, reset atomicity, hash bounds,
+  rehash) are carried forward as requirements and tests for the ExpertAuth engine.
+- All 265 requirements, 205 API IDs and every profile/review gate remain binding.
+
+## History (evaluation before the decision)
 
 The sole production identity/session engine will be selected only after the binding
 foundation cases pass. Candidate labs share no application state and are not a

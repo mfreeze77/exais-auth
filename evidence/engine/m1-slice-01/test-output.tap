@@ -1,0 +1,332 @@
+TAP version 13
+# Subtest: email/password identity
+    # Subtest: signs up and signs in with a Unicode password decoded as UTF-8
+    ok 1 - signs up and signs in with a Unicode password decoded as UTF-8
+      ---
+      duration_ms: 80.683252
+      type: 'test'
+      ...
+    # Subtest: refuses wrong passwords and unknown users with the same status
+    ok 2 - refuses wrong passwords and unknown users with the same status
+      ---
+      duration_ms: 62.166483
+      type: 'test'
+      ...
+    # Subtest: rejects a duplicate email in the same tenant, including under concurrency
+    ok 3 - rejects a duplicate email in the same tenant, including under concurrency
+      ---
+      duration_ms: 75.385665
+      type: 'test'
+      ...
+    # Subtest: rejects malformed input, missing API keys and unsupported CDI versions
+    ok 4 - rejects malformed input, missing API keys and unsupported CDI versions
+      ---
+      duration_ms: 27.758867
+      type: 'test'
+      ...
+    1..4
+ok 1 - email/password identity
+  ---
+  duration_ms: 327.417273
+  type: 'suite'
+  ...
+# Subtest: native multi-tenancy
+    # Subtest: creates apps and tenants and keeps the same email distinct per tenant
+    ok 1 - creates apps and tenants and keeps the same email distinct per tenant
+      ---
+      duration_ms: 86.042802
+      type: 'test'
+      ...
+    # Subtest: shares an identity with another tenant only explicitly, and refuses email conflicts
+    ok 2 - shares an identity with another tenant only explicitly, and refuses email conflicts
+      ---
+      duration_ms: 121.968065
+      type: 'test'
+      ...
+    # Subtest: refuses sign-in on a tenant with email/password disabled and unknown tenants
+    ok 3 - refuses sign-in on a tenant with email/password disabled and unknown tenants
+      ---
+      duration_ms: 14.421552
+      type: 'test'
+      ...
+    1..3
+ok 2 - native multi-tenancy
+  ---
+  duration_ms: 222.929829
+  type: 'suite'
+  ...
+# Subtest: password hash import and rehash
+    # Subtest: imports bcrypt and argon2i hashes from independent libraries and rehashes to argon2id on login
+    ok 1 - imports bcrypt and argon2i hashes from independent libraries and rehashes to argon2id on login
+      ---
+      duration_ms: 484.039018
+      type: 'test'
+      ...
+    # Subtest: accepts all eight concurrent first logins on an imported hash and leaves it rehashed
+    ok 2 - accepts all eight concurrent first logins on an imported hash and leaves it rehashed
+      ---
+      duration_ms: 784.628996
+      type: 'test'
+      ...
+    # Subtest: reports unsupported, malformed and over-cost hashes
+    ok 3 - reports unsupported, malformed and over-cost hashes
+      ---
+      duration_ms: 106.331375
+      type: 'test'
+      ...
+    1..3
+ok 3 - password hash import and rehash
+  ---
+  duration_ms: 1375.430496
+  type: 'suite'
+  ...
+# [expertauth] idle database connection lost: terminating connection due to administrator command
+# [expertauth] idle database connection lost: terminating connection due to administrator command
+# Subtest: password reset
+    # Subtest: atomically replaces the password and revokes every session
+    ok 1 - atomically replaces the password and revokes every session
+      ---
+      duration_ms: 188.223386
+      type: 'test'
+      ...
+    # Subtest: lets exactly one of eight concurrent consumers win
+    ok 2 - lets exactly one of eight concurrent consumers win
+      ---
+      duration_ms: 130.118853
+      type: 'test'
+      ...
+    # Subtest: spends every outstanding token on success, but an expired token spends only itself
+    ok 3 - spends every outstanding token on success, but an expired token spends only itself
+      ---
+      duration_ms: 76.29303
+      type: 'test'
+      ...
+    # Subtest: confines tokens to their tenant and to the owner email
+    ok 4 - confines tokens to their tenant and to the owner email
+      ---
+      duration_ms: 83.467415
+      type: 'test'
+      ...
+    # Subtest: supports the two-step consume flow with single use
+    ok 5 - supports the two-step consume flow with single use
+      ---
+      duration_ms: 60.736616
+      type: 'test'
+      ...
+    1..5
+ok 4 - password reset
+  ---
+  duration_ms: 624.358424
+  type: 'suite'
+  ...
+# [expertauth] idle database connection lost: terminating connection due to administrator command
+# [expertauth] idle database connection lost: terminating connection due to administrator command
+# Subtest: access tokens
+    # Subtest: issues RS256 tokens that verify offline against the public JWKS
+    ok 1 - issues RS256 tokens that verify offline against the public JWKS
+      ---
+      duration_ms: 78.870517
+      type: 'test'
+      ...
+    # Subtest: keeps protected claims authoritative and refuses tampered or unsigned tokens
+    ok 2 - keeps protected claims authoritative and refuses tampered or unsigned tokens
+      ---
+      duration_ms: 36.657502
+      type: 'test'
+      ...
+    # Subtest: enforces the anti-CSRF token when enabled
+    ok 3 - enforces the anti-CSRF token when enabled
+      ---
+      duration_ms: 32.140122
+      type: 'test'
+      ...
+    1..3
+ok 5 - access tokens
+  ---
+  duration_ms: 224.230851
+  type: 'suite'
+  ...
+# Subtest: refresh rotation
+    # Subtest: rotates, and the new refresh token is required afterwards
+    ok 1 - rotates, and the new refresh token is required afterwards
+      ---
+      duration_ms: 31.06544
+      type: 'test'
+      ...
+    # Subtest: converges eight concurrent refreshes of one token on a single successor
+    ok 2 - converges eight concurrent refreshes of one token on a single successor
+      ---
+      duration_ms: 77.438437
+      type: 'test'
+      ...
+    # Subtest: recovers a lost refresh response by retrying the parent within the grace window
+    ok 3 - recovers a lost refresh response by retrying the parent within the grace window
+      ---
+      duration_ms: 27.379285
+      type: 'test'
+      ...
+    # Subtest: treats parent reuse after the grace window as theft and revokes the session
+    ok 4 - treats parent reuse after the grace window as theft and revokes the session
+      ---
+      duration_ms: 33.633609
+      type: 'test'
+      ...
+    # Subtest: treats grandparent reuse as theft even inside the grace window
+    ok 5 - treats grandparent reuse as theft even inside the grace window
+      ---
+      duration_ms: 28.175378
+      type: 'test'
+      ...
+    # Subtest: refuses unknown, revoked and expired refresh tokens
+    ok 6 - refuses unknown, revoked and expired refresh tokens
+      ---
+      duration_ms: 19.478118
+      type: 'test'
+      ...
+    # Subtest: with zero grace, a concurrent duplicate refresh is treated as reuse (strict policy, opt-in)
+    ok 7 - with zero grace, a concurrent duplicate refresh is treated as reuse (strict policy, opt-in)
+      ---
+      duration_ms: 173.779191
+      type: 'test'
+      ...
+    1..7
+ok 6 - refresh rotation
+  ---
+  duration_ms: 391.9542
+  type: 'suite'
+  ...
+# Subtest: revocation and tenancy
+    # Subtest: revokes by handle and by user, and verify with checkDatabase then fails
+    ok 1 - revokes by handle and by user, and verify with checkDatabase then fails
+      ---
+      duration_ms: 36.356818
+      type: 'test'
+      ...
+    # Subtest: binds the tenant at creation and exposes session info without token material
+    ok 2 - binds the tenant at creation and exposes session info without token material
+      ---
+      duration_ms: 19.550597
+      type: 'test'
+      ...
+    # Subtest: isolates apps: a token from one app does not verify in another
+    ok 3 - isolates apps: a token from one app does not verify in another
+      ---
+      duration_ms: 22.323846
+      type: 'test'
+      ...
+    1..3
+ok 7 - revocation and tenancy
+  ---
+  duration_ms: 78.655601
+  type: 'suite'
+  ...
+# [expertauth] idle database connection lost: terminating connection due to administrator command
+# [expertauth] idle database connection lost: terminating connection due to administrator command
+# Subtest: config fails closed
+    # Subtest: uses production-grade defaults
+    ok 1 - uses production-grade defaults
+      ---
+      duration_ms: 1.757812
+      type: 'test'
+      ...
+    # Subtest: refuses no database
+    ok 2 - refuses no database
+      ---
+      duration_ms: 0.279398
+      type: 'test'
+      ...
+    # Subtest: refuses no API keys
+    ok 3 - refuses no API keys
+      ---
+      duration_ms: 0.127924
+      type: 'test'
+      ...
+    # Subtest: refuses short API key
+    ok 4 - refuses short API key
+      ---
+      duration_ms: 0.143682
+      type: 'test'
+      ...
+    # Subtest: refuses missing key-encryption key
+    ok 5 - refuses missing key-encryption key
+      ---
+      duration_ms: 0.130934
+      type: 'test'
+      ...
+    # Subtest: refuses short refresh secret
+    ok 6 - refuses short refresh secret
+      ---
+      duration_ms: 0.128877
+      type: 'test'
+      ...
+    # Subtest: refuses non-integer lifetime
+    ok 7 - refuses non-integer lifetime
+      ---
+      duration_ms: 0.095694
+      type: 'test'
+      ...
+    # Subtest: refuses argon2 memory too low
+    ok 8 - refuses argon2 memory too low
+      ---
+      duration_ms: 0.151074
+      type: 'test'
+      ...
+    # Subtest: refuses grace above 60s
+    ok 9 - refuses grace above 60s
+      ---
+      duration_ms: 0.224542
+      type: 'test'
+      ...
+    1..9
+ok 8 - config fails closed
+  ---
+  duration_ms: 4.029511
+  type: 'suite'
+  ...
+# Subtest: routing
+    # Subtest: parses app, tenant and route
+    ok 1 - parses app, tenant and route
+      ---
+      duration_ms: 0.293016
+      type: 'test'
+      ...
+    1..1
+ok 9 - routing
+  ---
+  duration_ms: 0.414722
+  type: 'suite'
+  ...
+# Subtest: primitives
+    # Subtest: seals and opens key material, refusing tampering
+    ok 1 - seals and opens key material, refusing tampering
+      ---
+      duration_ms: 0.97728
+      type: 'test'
+      ...
+    # Subtest: compares secrets without length shortcuts
+    ok 2 - compares secrets without length shortcuts
+      ---
+      duration_ms: 0.371
+      type: 'test'
+      ...
+    # Subtest: decides rehash and import bounds
+    ok 3 - decides rehash and import bounds
+      ---
+      duration_ms: 0.305192
+      type: 'test'
+      ...
+    1..3
+ok 10 - primitives
+  ---
+  duration_ms: 1.761261
+  type: 'suite'
+  ...
+1..10
+# tests 41
+# suites 10
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4560.850407

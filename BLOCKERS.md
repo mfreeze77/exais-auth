@@ -22,7 +22,16 @@
 - M0: all205 API records accounted, exact source-schema redistribution rights and
   behavioral/error/side-effect/differential qualification incomplete. Current spec
   facts alone are not implementation. Frozen IDs survive upstream extra endpoints.
-- M1: no foundation approved. Unactivated OSS Core returns402 for required app/tenant
+- **M1 engine: decided 2026-09-30.** The independently authored ExpertAuth engine
+  (`engine/`) is the product; SuperTokens is reference only. Its first slice natively
+  provides apps/tenants, tenant-scoped identities, explicit sharing, race-safe refresh
+  rotation and atomic reset (41/41 tests). Still missing from the engine: account
+  linking (IDN-012 stays failed until built and tested), email verification,
+  passwordless, third-party/SAML/OAuth provider, MFA, roles/metadata, key rotation,
+  audit/outbox, the remaining CDI routes, the SDK/FDI backends and control plane, plus
+  load/HA and independent review. The history below concerns the rejected reference
+  candidates.
+- Reference-candidate history. M1 before the decision: Unactivated OSS Core returns402 for required app/tenant
   provisioning and primary linking. Its CDI5.6 zero-grace refresh policy revokes a
   legitimate race. Keycloak organization/headless proofs pass narrow cases, but real
   concurrent linking duplicates provider ownership and parallel unlink removes every

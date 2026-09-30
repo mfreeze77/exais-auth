@@ -671,6 +671,34 @@ def main():
     if index['PWD-005']['status']=='planned':
         index['PWD-005']['status']='implemented-unverified'
         index['PWD-005']['blockers']=['Full original acceptance and final-engine qualification remain open.']
+    # 2026-09-30 product-owner decision (ADR-001): the independently authored ExpertAuth engine is the
+    # product. SuperTokens-derived and Keycloak artifacts above remain reference-behavior evidence only.
+    engine_sources = ['engine/src/'+p for p in ('config.ts','crypto.ts','db.ts','errors.ts','identity.ts','keys.ts',
+        'main.ts','passwords.ts','reset.ts','schema.sql','sessions.ts','http/server.ts')] + [
+        'engine/test/'+p for p in ('helpers.ts','identity.test.ts','sessions.test.ts','reset.test.ts','unit.test.ts')] + [
+        'engine/package.json','engine/package-lock.json','engine/README.md','docs/adr/001-foundation.md']
+    data['engine_candidate_artifacts'] = [artifact(ROOT,p) for p in (
+        'evidence/engine/m1-slice-01/report.json','evidence/engine/m1-slice-01/test-output.tap')]
+    engine_tests = ['EA-'+n for n in read_json(ROOT/'evidence/engine/m1-slice-01/report.json')['test_names']]
+    engine_note = ('ExpertAuth engine (independently authored, ADR-001 2026-09-30; SuperTokens is reference only): '
+        'native apps/tenants, tenant-scoped email identities with explicit sharing, argon2id credentials with bounded '
+        'bcrypt/argon2 import and on-login rehash, RS256 sessions with deterministic-successor refresh rotation '
+        '(grace convergence, lost-response retry, reuse revokes family), atomic single-winner password reset. '
+        'evidence/engine/m1-slice-01: 41/41 tests against real PostgreSQL 17.11. Not the strict release run schema; '
+        'no SDK/FDI backend, browser, load/HA or independent review yet.')
+    engine_rows = {'IDN-001':True,'IDN-002':True,'IDN-003':True,'IDN-004':True,'IDN-006':True,'IDN-011':True,
+        'PWD-001':False,'PWD-005':False,'PWD-006':False,'SES-001':False,'SES-002':False,'SES-003':True,'SES-004':True,
+        'SES-005':False,'SES-006':False,'SES-011':False,'CFG-004':False}
+    for identifier, promote in engine_rows.items():
+        row=index[identifier]
+        row['implementation'] = row.get('implementation',[]) + [artifact(ROOT,p) for p in engine_sources]
+        row['candidate_evidence']=row.get('candidate_evidence',[])+list(data['engine_candidate_artifacts'])
+        row['qualification_note']=row.get('qualification_note','')+' '+engine_note
+        row['observed_test_ids']=list(dict.fromkeys(row.get('observed_test_ids',[])+engine_tests))
+        if promote and row['status'] in ('planned','blocked','failed'):
+            row['status']='implemented-unverified'
+            row['blockers']=['Full original acceptance, SDK/profile qualification and independent review remain open. '
+                'Rejected-candidate failures (Keycloak/SuperTokens-Core labs) are retained as reference evidence.']
     assert not integrity_errors(ROOT,data), integrity_errors(ROOT,data)
     write_json(path,data)
     print('Partial traceability updated; no verified acceptance claims were created.')

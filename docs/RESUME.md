@@ -5,9 +5,19 @@ original kickoff before changing engine ownership or acceptance status. Every
 baseline requirement, API ID and profile remains binding. The original ZIP is
 missing; all20 extracted manifest files match their original bytes and checksums.
 
-This checkpoint has no selected production engine. Do not start feature work that
-silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
-refresh state in adapters, or directly modify upstream-owned tables.
+**Engine decided (ADR-001, 2026-09-30):** the product is the independently authored
+ExpertAuth engine in `engine/`. SuperTokens is the functional/API reference only; do not
+add SuperTokens code to the product. The earlier SuperTokens-Core patch labs and
+Keycloak labs are reference evidence and differential-test oracles. Resume engine work:
+`cd engine && npm ci && npm run typecheck && EXPERTAUTH_TEST_ADMIN_URL=... npm test`.
+Next bounded engine slices:
+- account linking (primary/method identities, with the link/unlink concurrency cases
+  that failed on Keycloak);
+- email verification;
+- user search, metadata and roles;
+- signing-key rotation and audit/outbox;
+- then passwordless, third-party/OIDC, MFA, and the FDI backend adapters for the
+  Node/Python examples.
 
 Latest work is [PasswordUpgrade](password-upgrade.md): PWD-005 on-login rehash and
 bounded MIG-002 import validation. It passed a source-built scratch cloud lab only.

@@ -5,13 +5,20 @@ checkpoint; not a production authentication release.** Read `PROJECT_STATE.md` f
 measured behavior and `BLOCKERS.md` for outstanding gates. No requirement was removed.
 
 The immutable acceptance baseline lives under `baseline/`; editable traceability is
-`ledger/implementation.json`. Engine selection is pending in ADR-001. Source, builds,
-real API tests and license evidence are retained separately from plan integrity tests.
+`ledger/implementation.json`.
 
-Latest: [password import validation and on-login rehash](docs/password-upgrade.md)
-(`PasswordUpgrade`) is implemented. It passes a source-built scratch cloud lab and is
-not yet installed or independently reviewed. The legacy Unicode migration is closed by
-scope because nothing is live.
+**Engine decided (ADR-001, 2026-09-30):** ExpertAuth is its own, independently authored
+engine in [`engine/`](engine/README.md), written in TypeScript with PostgreSQL. SuperTokens
+is the functional and API reference only, and no SuperTokens code is in the product.
+The first vertical slice passes 41/41 tests against real PostgreSQL. It covers native
+apps/tenants, tenant-scoped identities with explicit sharing, argon2id with bounded
+imports and rehash, RS256 sessions with race-safe refresh rotation and theft detection,
+and atomic password reset.
+
+Everything below this point describes the **earlier reference labs** (SuperTokens-Core
+patches and Keycloak). They are behavioral evidence and test oracles, not product code.
+The latest was [password import validation and rehash](docs/password-upgrade.md); its
+rules are reimplemented natively in the engine.
 
 The previous [Firebase verification checkpoint](docs/firebase-scrypt-runtime.md) was
 **paused at the user's request**. Current Core is `b4a5f18fb782` with BC 1.85.2,
