@@ -4,12 +4,12 @@ package io.expertauth.core;
 import com.google.gson.JsonObject;
 import io.supertokens.Main;
 import io.supertokens.authRecipe.AuthRecipe;
-import io.supertokens.emailpassword.PasswordHashing;
 import io.supertokens.pluginInterface.RECIPE_ID;
 import io.supertokens.pluginInterface.Storage;
 import io.supertokens.pluginInterface.authRecipe.AuthRecipeUserInfo;
 import io.supertokens.pluginInterface.authRecipe.LoginMethod;
 import io.supertokens.pluginInterface.authRecipe.sqlStorage.AuthRecipeSQLStorage;
+import io.supertokens.pluginInterface.emailpassword.sqlStorage.EmailPasswordSQLStorage;
 import io.supertokens.pluginInterface.exceptions.StorageQueryException;
 import io.supertokens.pluginInterface.exceptions.StorageTransactionLogicException;
 import io.supertokens.pluginInterface.multitenancy.TenantIdentifier;
@@ -41,7 +41,7 @@ public final class AtomicPasswordSession {
     }
 
     public static TransactionalSessionWriter writer(Storage storage) throws Rejected {
-        if (!(storage instanceof SQLStorage && storage instanceof AuthRecipeSQLStorage &&
+        if (!(storage instanceof SQLStorage && storage instanceof AuthRecipeSQLStorage && storage instanceof EmailPasswordSQLStorage &&
               storage instanceof UserLockingStorage && storage instanceof UserIdMappingSQLStorage)) throw new Rejected();
         TransactionalSessionWriter selected = null;
         // A loader is local to this call; ServiceLoader itself is not thread-safe.
@@ -78,9 +78,10 @@ public final class AtomicPasswordSession {
         if (password.isEmpty() || password.getBytes(StandardCharsets.UTF_8).length > 4096) throw new Rejected();
         AuthRecipeUserInfo observed = AuthRecipe.getUserById(tenant.toAppIdentifier(), storage, internalRecipeId);
         LoginMethod observedMethod = method(observed, tenant, internalRecipeId, email);
-        if (!PasswordHashing.getInstance(main).verifyPasswordWithHash(tenant.toAppIdentifier(), password, observedMethod.passwordHash)) throw new Rejected();
+        PasswordUpgrade.Outcome verified = PasswordUpgrade.check(main, tenant.toAppIdentifier(), password, observedMethod.passwordHash);
+        if (!verified.accepted()) throw new Rejected();
 
-        // Password hashing, Core key lookup/minting and identity mapping happen
+        // Password hashing and rehash preparation, Core key lookup/minting and identity mapping happen
         // before acquiring a row lock. The callback does no nested pool borrow.
         // No tokens leave Core until this callback's transaction commits.
         return Session.createNewSessionWithWriter(tenant, storage, main, publicRecipeId, jwt, databaseData,
@@ -94,6 +95,9 @@ public final class AtomicPasswordSession {
                         LoginMethod currentMethod = method(current, tenant, internalRecipeId, email);
                         if (!observedMethod.passwordHash.equals(currentMethod.passwordHash) ||
                             !observed.getSupertokensUserId().equals(current.getSupertokensUserId())) throw new Rejected();
+                        // A legacy-decoded or outdated hash is replaced in the same commit as the session.
+                        if (verified.replacementHash() != null && !PasswordUpgrade.replace(storage, tenant.toAppIdentifier(),
+                                transaction, internalRecipeId, observedMethod.passwordHash, verified.replacementHash())) throw new Rejected();
                         List<String> ids = new ArrayList<>(new LinkedHashSet<>(List.of(internalRecipeId, current.getSupertokensUserId())));
                         Map<String, String> publicIds = new HashMap<>();
                         for (UserIdMapping mapping : ((UserIdMappingSQLStorage) storage).getMultipleUserIdMapping_Transaction(

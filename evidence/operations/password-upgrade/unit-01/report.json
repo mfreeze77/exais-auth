@@ -1,0 +1,45 @@
+{
+  "kind": "password-upgrade-unit",
+  "passed": true,
+  "checks": 27,
+  "passes": 27,
+  "results": {
+    "historical_decoding_matches_old_servlet_reader": true,
+    "ascii_has_no_distinct_legacy_form": true,
+    "legacy_disabled_rejects_unicode_legacy_bcrypt": true,
+    "legacy_enabled_accepts_snapshot_bcrypt": true,
+    "legacy_enabled_accepts_snapshot_argon2": true,
+    "wrong_unicode_password_rejected": true,
+    "current_decoding_preferred": true,
+    "post_cutover_alias_refused": true,
+    "post_cutover_alias_would_match_without_snapshot": true,
+    "non_core_formats_never_legacy_eligible": true,
+    "legacy_match_always_rehashes": true,
+    "no_match_never_rehashes": true,
+    "current_bcrypt_same_cost_kept": true,
+    "bcrypt_cost_change_rehashes": true,
+    "bcrypt_to_argon2_rehashes": true,
+    "current_argon2_same_params_kept": true,
+    "argon2_param_change_rehashes": true,
+    "argon2i_to_argon2id_rehashes": true,
+    "imported_firebase_rehashes_to_configured": true,
+    "firebase_target_never_rehashes": true,
+    "policy_absent_disabled": true,
+    "policy_exact_value_enabled": true,
+    "policy_unknown_value_fails_closed": true,
+    "snapshot_parses_rows": true,
+    "snapshot_rejects_malformed_row": true,
+    "snapshot_rejects_raw_hash_row": true,
+    "snapshot_rejects_empty": true
+  },
+  "source_sha256": {
+    "tests/foundation/PasswordUpgradeTest.java": "6560341e24e0c2e4a0abb0912787271ec0d1fe8453dc37110f56bd4c83db5dd5",
+    "engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java": "5e9024e0035875dea89a9a1619169d7bffc74396ca14f448da0fec7dbdc9aea8"
+  },
+  "classpath": "Candidate classes and verified dependency JARs from evidence/operations/password-upgrade/cloud-source-01",
+  "libraries": [
+    "jbcrypt-0.4",
+    "argon2-jvm-2.11 (bundled native)",
+    "jna-5.8.0"
+  ]
+}

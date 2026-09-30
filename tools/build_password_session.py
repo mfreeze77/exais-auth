@@ -14,18 +14,52 @@ from run_sdk_session_faults import inventory
 from password_session_candidates import validate_pair, new_candidate
 from patch_session_policy import REFRESH, VERIFY, patch_session, guarded_api
 from patch_firebase_scrypt import PATH as FIREBASE, INPUT as JSON_INPUT, patch as patch_firebase, patch_input
+from patch_password_upgrade import PATH as SIGN_IN, patch as patch_sign_in
 
 PG_REV = '0b68fd14ca10baee2d0e3c31466984fccfb36c8a'
 SESSION = 'src/main/java/io/supertokens/session/Session.java'
-SOURCES = ['tools/build_password_session.py', 'tools/build_core_reset.py', 'tools/core_compiler_inputs.py', 'tools/password_session_candidates.py', 'tools/patch_session_policy.py', 'tools/patch_firebase_scrypt.py', ARTIFACTS] + [
+SOURCES = ['tools/build_password_session.py', 'tools/build_core_reset.py', 'tools/core_compiler_inputs.py', 'tools/password_session_candidates.py', 'tools/patch_session_policy.py', 'tools/patch_firebase_scrypt.py', 'tools/patch_password_upgrade.py', ARTIFACTS] + [
     'engine-extensions/core-reset/src/io/expertauth/core/' + name + '.java' for name in
-    ['AtomicPasswordReset', 'AtomicPasswordResetAPI', 'TransactionalSessionWriter', 'AtomicPasswordSession', 'AtomicPasswordSessionAPI', 'SessionPolicy']]
+    ['AtomicPasswordReset', 'AtomicPasswordResetAPI', 'TransactionalSessionWriter', 'AtomicPasswordSession', 'AtomicPasswordSessionAPI', 'SessionPolicy', 'PasswordUpgrade']]
 PROVIDER = 'engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java'
 SOURCES.append(PROVIDER)
+
+def patched_source(path, original):
+    """Return (published filename, patched text) for one audited Core source path."""
+    need('WithinOtelSpan' not in original, 'Source requires additional weaving review')
+    if path==JSON_INPUT:
+        patched=patch_input(original)
+    elif path==FIREBASE:
+        patched=patch_firebase(original)
+    elif path==SIGN_IN:
+        patched=patch_sign_in(original)
+    elif path==WEB:
+        marker='        addAPI(new ResetPasswordAPI(main));'; need(original.count(marker)==1,'Route anchor differs')
+        patched=original.replace(marker, marker+'\n        addAPI(new io.expertauth.core.AtomicPasswordResetAPI(main, true));\n        addAPI(new io.expertauth.core.AtomicPasswordResetAPI(main, false));\n        addAPI(new io.expertauth.core.AtomicPasswordSessionAPI(main));\n        addAPI(new io.expertauth.core.GuardedRefreshSessionAPI(main));\n        addAPI(new io.expertauth.core.GuardedVerifySessionAPI(main));')
+    elif path==SESSION:
+        body_start=original.index('        validateAccessTokenValidityOverride(tenantIdentifier, main, accessTokenValidity);')
+        start=original.rfind('    public static SessionInformationHolder createNewSession(',0,body_start)
+        end=original.index('    @TestOnly',body_start)
+        header=original[start:body_start]; body=original[body_start:end]
+        need(header.count('@Nullable Long accessTokenValidity)')==1,'Session method boundary differs')
+        wrapper=header+'        return createNewSessionWithWriter(tenantIdentifier, storage, main, recipeUserId, userDataInJWT, userDataInDatabase, enableAntiCsrf, version, useStaticKey, accessTokenValidity, null);\n    }\n\n'
+        new_header=header.replace(' createNewSession(', ' createNewSessionWithWriter(').replace('@Nullable Long accessTokenValidity)', '@Nullable Long accessTokenValidity, io.expertauth.core.AtomicPasswordSession.Insert writer)')
+        a=body.index('        StorageUtils.getSessionStorage(storage)'); b=body.index('\n\n        emitSessionCreatedEvent',a)
+        existing=body[a:b]
+        replacement='        if (writer == null) {\n'+existing+'\n        } else {\n            writer.insert(sessionHandle, recipeUserId, primaryUserId, Utils.hashSHA256(Utils.hashSHA256(refreshToken.token)), userDataInDatabase, refreshToken.expiry, userDataInJWT, refreshToken.createdTime, useStaticKey);\n        }'
+        patched=original[:start]+wrapper+new_header+body[:a]+replacement+body[b:]+original[end:]
+        patched=patch_session(patched)
+    else:
+        patched=guarded_api(original,path==REFRESH)
+    patched += '\n/* Modified by ExpertAuth contributors (2026): private password-session/reset API registration or transaction-aware session insertion callback. Original token minting and licensing checks retained. */\n'
+    filename=Path(path).name
+    if path in [REFRESH,VERIFY]:filename='Guarded'+filename
+    return filename, patched
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__); parser.add_argument('--name', required=True)
     parser.add_argument('--firebase-scrypt-bc', action='store_true', help='Use existing Bouncy Castle scrypt with UTF-8 Firebase verification')
+    parser.add_argument('--password-upgrade', action='store_true', help='Route upstream sign-in through PasswordUpgrade (legacy decoding fallback and on-login rehash)')
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument('--verify-existing', help='Recompile and compare an existing exact candidate without replacing it')
     mode.add_argument('--candidate-from', help='Build one new immutable pair while preserving this exact previous build')
@@ -55,6 +89,7 @@ def main():
               'started':datetime.now(timezone.utc).isoformat(), 'inputs':{p:sha(ROOT/p) for p in SOURCES},
               'commands':[], 'errors':[], 'images_built':0, 'downloads':0, 'new_volumes':0, 'upstream':[], 'candidates':[]}
     report['firebase_scrypt_profile'] = 'bouncycastle-utf8-v1' if args.firebase_scrypt_bc else 'original-lambdaworks-ascii'
+    report['password_upgrade_profile'] = 'expertauth-password-upgrade-1' if args.password_upgrade else 'atomic-session-only'
     if previous_name:
         report['previous_build']={'path':previous_path.relative_to(ROOT).as_posix(),'sha256':sha(previous_path),
                                   'mode':'verify' if prior else 'new-candidate','candidates':previous['candidates']}
@@ -75,38 +110,13 @@ def main():
         image=json.loads(call(['docker','image','inspect',IMAGE]).stdout)[0]
         compiler_id=image['Id']; report['compiler_image_id']=compiler_id
         need(re.fullmatch('sha256:[0-9a-f]{64}',compiler_id) and set(image['Config'].get('Volumes') or {})=={'/home/gradle/.gradle'},'Cached pinned compiler image differs')
-        for path in [WEB, SESSION, REFRESH, VERIFY, *([FIREBASE,JSON_INPUT] if args.firebase_scrypt_bc else [])]:
+        for path in [WEB, SESSION, REFRESH, VERIFY, *([FIREBASE,JSON_INPUT] if args.firebase_scrypt_bc else []), *([SIGN_IN] if args.password_upgrade else [])]:
             src=ROOT/'.cache/reuse-audit/source/supertokens__supertokens-core'/CORE_REV/path
             manifest=json.loads((ROOT/'reuse/files/supertokens__supertokens-core.json').read_text())
             row=next(r for r in manifest['files'] if r['source_path']==path)
             need(sha(src)==row['sha256'] and b'Apache License, Version 2.0' in src.read_bytes(), 'Audited Core source differs')
             original=src.read_text()
-            need('WithinOtelSpan' not in original, 'Source requires additional weaving review')
-            if path==JSON_INPUT:
-                patched=patch_input(original)
-            elif path==FIREBASE:
-                patched=patch_firebase(original)
-            elif path==WEB:
-                marker='        addAPI(new ResetPasswordAPI(main));'; need(original.count(marker)==1,'Route anchor differs')
-                patched=original.replace(marker, marker+'\n        addAPI(new io.expertauth.core.AtomicPasswordResetAPI(main, true));\n        addAPI(new io.expertauth.core.AtomicPasswordResetAPI(main, false));\n        addAPI(new io.expertauth.core.AtomicPasswordSessionAPI(main));\n        addAPI(new io.expertauth.core.GuardedRefreshSessionAPI(main));\n        addAPI(new io.expertauth.core.GuardedVerifySessionAPI(main));')
-            elif path==SESSION:
-                body_start=original.index('        validateAccessTokenValidityOverride(tenantIdentifier, main, accessTokenValidity);')
-                start=original.rfind('    public static SessionInformationHolder createNewSession(',0,body_start)
-                end=original.index('    @TestOnly',body_start)
-                header=original[start:body_start]; body=original[body_start:end]
-                need(header.count('@Nullable Long accessTokenValidity)')==1,'Session method boundary differs')
-                wrapper=header+'        return createNewSessionWithWriter(tenantIdentifier, storage, main, recipeUserId, userDataInJWT, userDataInDatabase, enableAntiCsrf, version, useStaticKey, accessTokenValidity, null);\n    }\n\n'
-                new_header=header.replace(' createNewSession(', ' createNewSessionWithWriter(').replace('@Nullable Long accessTokenValidity)', '@Nullable Long accessTokenValidity, io.expertauth.core.AtomicPasswordSession.Insert writer)')
-                a=body.index('        StorageUtils.getSessionStorage(storage)'); b=body.index('\n\n        emitSessionCreatedEvent',a)
-                existing=body[a:b]
-                replacement='        if (writer == null) {\n'+existing+'\n        } else {\n            writer.insert(sessionHandle, recipeUserId, primaryUserId, Utils.hashSHA256(Utils.hashSHA256(refreshToken.token)), userDataInDatabase, refreshToken.expiry, userDataInJWT, refreshToken.createdTime, useStaticKey);\n        }'
-                patched=original[:start]+wrapper+new_header+body[:a]+replacement+body[b:]+original[end:]
-                patched=patch_session(patched)
-            else:
-                patched=guarded_api(original,path==REFRESH)
-            patched += '\n/* Modified by ExpertAuth contributors (2026): private password-session/reset API registration or transaction-aware session insertion callback. Original token minting and licensing checks retained. */\n'
-            filename=Path(path).name
-            if path in [REFRESH,VERIFY]:filename='Guarded'+filename
+            filename, patched = patched_source(path, original)
             (private/filename).write_bytes(patched.encode()); (out/filename).write_bytes(patched.encode())
             report['upstream'].append({'repository':'supertokens/supertokens-core','commit':CORE_REV,'path':path,'sha256':row['sha256'],
                 'modified_sha256':sha(private/filename),'license':'Apache-2.0'})

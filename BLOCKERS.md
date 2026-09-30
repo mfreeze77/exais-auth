@@ -1,17 +1,21 @@
 # Open acceptance blockers
 
-- **Legacy Unicode migration is BLOCKED** in the current Core `b4a5f18fb782`
-  Firebase/UTF-8 profile. Actual old-parser BCRYPT credentials fail unchanged on
-  the new parser; the historical decoded string succeeds. An explicit migration/
-  reset policy is required before broad deployment. The 12 passing candidate rows
-  do not pass this migration. Full Firebase cost/resource validation, automatic
-  rehash and independent review remain open. See `docs/firebase-scrypt-runtime.md`.
+- **Legacy Unicode migration: policy implemented, installed qualification open.**
+  The installed Core `b4a5f18fb782` still rejects old-parser Unicode credentials.
+  The user chose dual-verify + rehash, and `PasswordUpgrade`
+  (`EXPERTAUTH-PASSWORD-UPGRADE-1`) implements it: an opt-in ISO-8859-1 fallback
+  limited to an operator cutover hash snapshot, plus on-login rehash (PWD-005). A
+  source-built scratch cloud lab passes 20/20 real cases and 27/27 unit checks. No
+  installed image, retained-lab snapshot capture, upgrade/rollback, replica
+  concurrency on the rehash, SDK/browser regression, full Firebase cost/resource
+  validation or independent review has run. See `docs/password-upgrade.md`.
 - Argon2 now uses source-built nolibs packaging in Core `b4a5f18fb782`. Original
   C tests, startup failure checks, source/bundled and source/source password,
   import/reset/concurrency cases and local upgrade/rollback pass. Remaining
   native/OS/source/relink, maintained-version, other-platform and independent
-  review gates remain open. PWD-005 rehash is missing: successful login preserves
-  imported legacy hashes. See `docs/installed-native-argon2.md`.
+  review gates remain open. PWD-005 rehash is implemented in `PasswordUpgrade` but
+  not yet installed; the current image still preserves imported legacy hashes on
+  login. See `docs/installed-native-argon2.md` and `docs/password-upgrade.md`.
 - Original `expert-auth-full-parity-plan-v1.0.zip` absent from workspace and named
   Downloads/Documents search. Expected SHA256
   `58f013dc0ae6fe9981206d4594e78d8efd0cde2f1a00f15bbdfbaec12ee918ed`.

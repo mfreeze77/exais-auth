@@ -27,7 +27,8 @@ Measured behavior and compatibility:
   Core. The old peer explicitly mounts its original scrypt JAR. All 17 users and
   six helpers retire. Actual old-peer Unicode false acceptance and Java shift-cost
   alias acceptance are preserved as security failures, not accepted behavior.
-- **Legacy Unicode migration is BLOCKED.** A real BCRYPT account created through
+- **Legacy Unicode migration is BLOCKED** in this installed candidate. The follow-up
+  policy is implemented in `docs/password-upgrade.md` and is not yet installed. A real BCRYPT account created through
   the old reader accepts its raw UTF-8 password on that reader, rejects the same
   password on the new reader, and accepts the historically decoded character string
   on the new reader. `legacy_json_migration.authentication_acceptance_pass` is false.

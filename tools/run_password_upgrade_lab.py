@@ -1,0 +1,402 @@
+"""Source-built PasswordUpgrade lab: legacy servlet decoding migration and on-login rehash.
+
+Builds plugin-interface, Core (AspectJ, as upstream) and the PostgreSQL plugin from pinned
+source checkouts, verifies every third-party JAR against the reviewed Gradle verification
+metadata, applies the same transforms as tools/build_password_session.py, then runs real
+PostgreSQL/Core containers on an internal network. Upstream prebuilt SuperTokens JARs, EE
+code and telemetry binaries are never used. Every owned container/network is removed in
+finally; private scratch stays under the supplied scratch directory.
+"""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.request
+import uuid
+import xml.etree.ElementTree as ET
+import zipfile
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from build_core_reset import ROOT, CORE_REV, need, sha  # noqa: E402
+import build_password_session as builder  # noqa: E402
+from patch_password_upgrade import PATH as SIGN_IN  # noqa: E402
+
+PI_REV = '2550750188069110753decd06265a59fadefb427'
+PG_REV = builder.PG_REV
+RUNTIME = 'mirror.gcr.io/library/gradle@sha256:67b8c4bfd2b064e58a7307e2da1fc3881bc03ecc7a57cf61d8b570a02ebfaea2'
+POSTGRES = 'mirror.gcr.io/library/postgres:17.11'
+UPSTREAM_BINARIES = {'core-12.2.0.jar', 'plugin-interface-10.0.0.jar', 'postgresql-plugin-9.8.0.jar', 'ee.jar'}
+KEY = 'expertauth-password-upgrade-lab-key-01'
+VERSION_YAML = b'core_version: 12.2.0\nplugin_interface_version: 10.0.0\nplugin_version: 9.8.0\nplugin_name: postgresql\n'  # as tools/build_oss_runtime.py
+EXPERTAUTH = ['AtomicPasswordReset', 'AtomicPasswordResetAPI', 'TransactionalSessionWriter', 'AtomicPasswordSession',
+              'AtomicPasswordSessionAPI', 'SessionPolicy', 'PasswordUpgrade']
+JAVA_OPTS = ['--add-opens=java.base/java.lang=ALL-UNNAMED', '--add-opens=java.base/java.util=ALL-UNNAMED',
+             '--add-opens=java.base/java.util.concurrent=ALL-UNNAMED']
+UNICODE = 'pässwörd-密码-\U0001F511'
+WRONG = 'pässwörd-wrong-密'
+ASCII = 'plain-ASCII-password-42'
+ALIAS_TARGET = 'Ã©-post-cutover-01'  # ISO-8859-1 reading of UTF-8 "é-post-cutover-01"
+
+
+def historical(value):
+    return value.encode('utf-8').decode('iso-8859-1')
+
+
+class Lab:
+    def __init__(self, args):
+        self.args = args
+        self.run = uuid.uuid4().hex[:10]
+        self.out = ROOT / 'evidence/operations/password-upgrade' / args.name
+        self.scratch = Path(args.scratch).resolve() / ('password-upgrade-' + args.name)
+        need(not self.out.exists() and not self.scratch.exists(), 'Preserve previous evidence and scratch')
+        need(not self.scratch.is_relative_to(ROOT) or self.scratch.is_relative_to(ROOT / '.runtime'), 'Scratch must be private')
+        self.labels = {'org.expertauth.project': 'expert-auth', 'org.expertauth.purpose': 'password-upgrade-lab',
+                       'org.expertauth.run': self.run}
+        self.report = {'kind': 'password-upgrade-lab', 'passed': False, 'runtime_qualified': False, 'foundation_passed': False,
+                       'policy': 'EXPERTAUTH-PASSWORD-UPGRADE-1', 'started': datetime.now(timezone.utc).isoformat(),
+                       'run': self.run, 'inputs': {}, 'build': {}, 'cases': [], 'requests': 0, 'errors': [],
+                       'scope': 'Scratch source-built lab on a fresh cloud checkout; not the retained Windows lab or an installed image'}
+        self.containers, self.networks, self.users = [], [], {}
+
+    # ---------- helpers ----------
+    def persist(self):
+        (self.out / 'report.json').write_text(json.dumps(self.report, indent=2, ensure_ascii=True) + '\n')
+
+    def sh(self, argv, timeout=120, check=True, **kw):
+        result = subprocess.run(argv, capture_output=True, timeout=timeout, **kw)
+        if check and result.returncode != 0:
+            (self.scratch / f'failed-{int(time.time_ns())}.log').write_bytes(result.stdout + b'\n' + result.stderr)
+            raise ValueError('Command failed: ' + ' '.join(str(a) for a in argv[:3]))
+        return result
+
+    def case(self, name, passed, **detail):
+        self.report['cases'].append({'name': name, 'passed': bool(passed), **detail})
+        self.persist()
+
+    # ---------- inputs ----------
+    def verify_inputs(self):
+        sources = Path(self.args.sources).resolve()
+        pins = {'supertokens-core': CORE_REV, 'supertokens-plugin-interface': PI_REV, 'supertokens-postgresql-plugin': PG_REV}
+        for name, rev in pins.items():
+            head = self.sh(['git', '-C', str(sources / name), 'rev-parse', 'HEAD']).stdout.decode().strip()
+            dirty = self.sh(['git', '-C', str(sources / name), 'status', '--porcelain']).stdout.strip()
+            need(head == rev and not dirty, 'Source checkout differs from pin: ' + name)
+            self.report['inputs'][name] = rev
+        manifest = {r['source_path']: r['sha256'] for r in json.loads((ROOT / 'reuse/files/supertokens__supertokens-core.json').read_text())['files']}
+        self.patched = {}
+        for path in [builder.WEB, builder.SESSION, builder.REFRESH, builder.VERIFY, builder.FIREBASE, builder.JSON_INPUT, SIGN_IN]:
+            raw = (sources / 'supertokens-core' / path).read_bytes()
+            need(hashlib.sha256(raw).hexdigest() == manifest[path], 'Audited Core source differs: ' + path)
+            self.patched[path] = builder.patched_source(path, raw.decode())
+        self.sources = sources
+        ns = '{https://schema.gradle.org/dependency-verification}'
+        known = {}
+        tree = ET.parse(ROOT / 'engine-extensions/oss-build/locks/gradle/verification-metadata.xml')
+        for artifact in tree.getroot().iter(ns + 'artifact'):
+            digest = artifact.find(ns + 'sha256')
+            if digest is not None: known.setdefault(artifact.get('name'), set()).add(digest.get('value'))
+        deps = Path(self.args.dependencies).resolve()
+        self.deps = {}
+        for group in ['core', 'plugin']:
+            rows = []
+            for jar in sorted((deps / group).glob('*.jar')):
+                if jar.name in UPSTREAM_BINARIES: continue
+                need(sha(jar) in known.get(jar.name, ()), 'Dependency not in reviewed verification metadata: ' + jar.name)
+                rows.append(jar)
+            self.deps[group] = rows
+        need(len(self.deps['core']) >= 80 and len(self.deps['plugin']) >= 4, 'Dependency set incomplete')
+        self.report['inputs']['verified_dependency_jars'] = {g: len(v) for g, v in self.deps.items()}
+        self.report['inputs']['dependency_digest'] = hashlib.sha256(''.join(sorted(sha(j) for g in self.deps.values() for j in g)).encode()).hexdigest()
+        aspectj = Path(self.args.aspectj).resolve()
+        need(hashlib.sha1(aspectj.read_bytes()).hexdigest() == '96d8512b8e9d92bddfd6333c3588107749de4ac1', 'aspectjtools 1.9.24 differs')
+        self.aspectj = aspectj
+        tracked = ['tools/run_password_upgrade_lab.py', 'tools/build_password_session.py', 'tools/patch_password_upgrade.py',
+                   'tools/patch_firebase_scrypt.py', 'tools/patch_session_policy.py',
+                   *[f'engine-extensions/core-reset/src/io/expertauth/core/{n}.java' for n in EXPERTAUTH], builder.PROVIDER]
+        self.report['inputs']['files'] = {p: sha(ROOT / p) for p in tracked}
+
+    # ---------- build ----------
+    def build(self):
+        s = self.scratch; env = {**os.environ, 'JAVA_TOOL_OPTIONS': ''}
+        cp = ':'.join(str(j) for j in self.deps['core'] + self.deps['plugin'])
+        def javac(out, files, classpath):
+            out.mkdir(parents=True)
+            self.sh(['javac', '-proc:none', '--release', '21', '-encoding', 'UTF-8', '-nowarn', '-cp', classpath, '-d', str(out), *map(str, files)], timeout=600, env=env)
+        def jar(directory, target):
+            with zipfile.ZipFile(target, 'x', zipfile.ZIP_DEFLATED) as z:
+                for p in sorted(directory.rglob('*')):
+                    if p.is_file():
+                        info = zipfile.ZipInfo(p.relative_to(directory).as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
+                        info.external_attr = 0o100644 << 16; info.compress_type = zipfile.ZIP_DEFLATED
+                        z.writestr(info, p.read_bytes())
+            return target
+        src = lambda name: sorted((self.sources / name / 'src/main/java').rglob('*.java'))
+        javac(s / 'pi', src('supertokens-plugin-interface'), cp)
+        pi = jar(s / 'pi', s / 'plugin-interface-10.0.0.jar')
+        (s / 'core').mkdir()
+        core_files = [p for p in src('supertokens-core') if '/ee/' not in p.as_posix()]
+        (s / 'core-sources.txt').write_text('\n'.join(map(str, core_files)))
+        self.sh(['java', '-Xmx2g', '-cp', str(self.aspectj), 'org.aspectj.tools.ajc.Main', '-21', '-encoding', 'UTF-8', '-warn:none',
+                 '-cp', cp + ':' + str(pi), '-d', str(s / 'core'), '@' + str(s / 'core-sources.txt')], timeout=900, env=env)
+        resources = self.sources / 'supertokens-core/src/main/resources'
+        if resources.is_dir():
+            for p in resources.rglob('*'):
+                # Telemetry resource binaries are excluded, as in the reviewed OSS build.
+                if p.is_file() and not p.name.endswith('.jar'):
+                    t = s / 'core' / p.relative_to(resources); t.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(p, t)
+        core = jar(s / 'core', s / 'core-12.2.0.jar')
+        javac(s / 'pg', src('supertokens-postgresql-plugin'), cp + ':' + str(pi))
+        shutil.copytree(self.sources / 'supertokens-postgresql-plugin/src/main/resources', s / 'pg', dirs_exist_ok=True)
+        pg = jar(s / 'pg', s / 'postgresql-plugin-9.8.0.jar')
+        (s / 'patched').mkdir()
+        for filename, text in self.patched.values(): (s / 'patched' / filename).write_text(text)
+        extra = [ROOT / f'engine-extensions/core-reset/src/io/expertauth/core/{n}.java' for n in EXPERTAUTH] + [ROOT / builder.PROVIDER]
+        javac(s / 'cand', sorted((s / 'patched').glob('*.java')) + extra, ':'.join([cp, str(core), str(pi), str(pg)]))
+        compiled = {p.relative_to(s / 'cand').as_posix(): p.read_bytes() for p in (s / 'cand').rglob('*.class')}
+        provider = 'io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class'
+        def candidate(base, target, component):
+            replacements = {k: v for k, v in compiled.items() if (k == provider) == (component == 'postgresql')}
+            if component == 'postgresql':
+                replacements['META-INF/services/io.expertauth.core.TransactionalSessionWriter'] = b'io.supertokens.storage.postgresql.ExpertAuthSessionWriter\n'
+            changed, added = [], []
+            with zipfile.ZipFile(base) as old, zipfile.ZipFile(target, 'x', zipfile.ZIP_DEFLATED) as new:
+                for entry in old.infolist():
+                    value = replacements.pop(entry.filename, None)
+                    if value is not None: changed.append(entry.filename)
+                    new.writestr(entry, old.read(entry) if value is None else value)
+                for key, value in sorted(replacements.items()):
+                    need(key.startswith(('io/expertauth/core/', 'io/supertokens/session/Session$', 'io/supertokens/storage/postgresql/ExpertAuthSessionWriter',
+                                         'META-INF/services/io.expertauth.', 'io/supertokens/webserver/api/session/Guarded')), 'Unexpected added class: ' + key)
+                    info = zipfile.ZipInfo(key, date_time=(1980, 1, 1, 0, 0, 0)); info.external_attr = 0o100644 << 16; info.compress_type = zipfile.ZIP_DEFLATED
+                    new.writestr(info, value); added.append(key)
+            return {'sha256': sha(target), 'changed': changed, 'added': added}
+        (s / 'cand-jars').mkdir()
+        cc = candidate(core, s / 'cand-jars/core-12.2.0.jar', 'core')
+        cp_ = candidate(pg, s / 'cand-jars/postgresql-plugin-9.8.0.jar', 'postgresql')
+        need('io/supertokens/emailpassword/EmailPassword.class' in cc['changed'] and 'io/expertauth/core/PasswordUpgrade.class' in cc['added'], 'Candidate misses PasswordUpgrade')
+        self.report['build'] = {'javac': self.sh(['javac', '--version'], env=env).stdout.decode().strip(),
+                                'base': {'core': sha(core), 'plugin_interface': sha(pi), 'postgresql': sha(pg)},
+                                'candidate': {'core': cc, 'postgresql': cp_}, 'patched_upstream': sorted(self.patched)}
+        for variant, core_jar, pg_jar in [('legacy', core, pg), ('candidate', s / 'cand-jars/core-12.2.0.jar', s / 'cand-jars/postgresql-plugin-9.8.0.jar')]:
+            home = s / ('install-' + variant); (home / 'lib').mkdir(parents=True); (home / 'plugin').mkdir()
+            for j in self.deps['core'] + [core_jar, pi]: shutil.copyfile(j, home / 'lib' / j.name)
+            for j in self.deps['plugin'] + [pg_jar]: shutil.copyfile(j, home / 'plugin' / j.name)
+            (home / 'version.yaml').write_bytes(VERSION_YAML)
+            os.chmod(home, 0o755)
+        self.persist()
+
+    # ---------- runtime ----------
+    def docker(self, *argv, check=True, timeout=120):
+        return self.sh(['docker', *argv], check=check, timeout=timeout)
+
+    def labels_args(self):
+        return [a for k, v in self.labels.items() for a in ('--label', f'{k}={v}')]
+
+    def start_network(self):
+        name = 'expertauth-pwupgrade-' + self.run
+        self.docker('network', 'create', '--internal', *self.labels_args(), name); self.networks.append(name); self.network = name
+        pg = 'expertauth-pwupgrade-pg-' + self.run
+        self.docker('run', '-d', '--pull=never', '--name', pg, *self.labels_args(), '--network', name, '--network-alias', 'pg',
+                    '--tmpfs', '/var/lib/postgresql/data:rw,size=256m', '-e', 'POSTGRES_PASSWORD=lab-only', '-e', 'POSTGRES_DB=supertokens', POSTGRES)
+        self.containers.append(pg); self.pg = pg
+        for _ in range(60):
+            if self.docker('exec', pg, 'pg_isready', '-U', 'postgres', '-d', 'supertokens', check=False).returncode == 0: break
+            time.sleep(1)
+        else: raise ValueError('PostgreSQL not ready')
+        time.sleep(2)
+
+    def start_core(self, variant, env):
+        name = f'expertauth-pwupgrade-{variant}-{self.run}'
+        home = self.scratch / ('install-' + variant.split('-')[0])
+        config = self.scratch / f'config-{variant}.yaml'
+        config.write_text('core_config_version: 0\npostgresql_config_version: 0\nhost: 0.0.0.0\nport: 3567\n'
+                          f'api_keys: "{KEY}"\ndisable_telemetry: true\n'
+                          'postgresql_connection_uri: "postgresql://postgres:lab-only@pg:5432/supertokens"\n')
+        mounts = ['-v', f'{home}/lib:/opt/expertauth/lib:ro', '-v', f'{home}/plugin:/opt/expertauth/plugin:ro',
+                  '-v', f'{home}/version.yaml:/opt/expertauth/version.yaml:ro', '-v', f'{config}:/run/expertauth/config.yaml:ro']
+        if 'snapshot' in env:
+            snap = self.scratch / f'snapshot-{variant}.txt'; snap.write_text(env.pop('snapshot'))
+            mounts += ['-v', f'{snap}:/run/expertauth/legacy-password-hashes.txt:ro']
+            env['EXPERTAUTH_LEGACY_PASSWORD_HASHES'] = '/run/expertauth/legacy-password-hashes.txt'
+        envs = [a for k, v in env.items() for a in ('-e', f'{k}={v}')]
+        self.docker('run', '-d', '--pull=never', '--name', name, *self.labels_args(), '--network', self.network, '--user', '0',
+                    '--tmpfs', '/opt/expertauth/logs:rw,size=16m', '--tmpfs', '/opt/expertauth/.started:rw,size=1m', '--tmpfs', '/tmp:rw,size=64m',
+                    *mounts, *envs, '--entrypoint', 'java', RUNTIME, '-Xmx512m', *JAVA_OPTS, '-cp', '/opt/expertauth/lib/*',
+                    'io.supertokens.Main', '/opt/expertauth/', 'configFile=/run/expertauth/config.yaml', 'forceNoInMemDB=true')
+        self.containers.append(name)
+        ip = self.docker('inspect', '-f', '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}', name).stdout.decode().strip()
+        base = f'http://{ip}:3567'
+        for _ in range(90):
+            try:
+                with urllib.request.urlopen(base + '/hello', timeout=2) as r:
+                    if r.status == 200: return name, base
+            except OSError: pass
+            if self.docker('inspect', '-f', '{{.State.Running}}', name).stdout.strip() != b'true': break
+            time.sleep(1)
+        logs = self.docker('logs', name, check=False).stdout[-4000:]
+        (self.scratch / f'{variant}-start.log').write_bytes(logs)
+        raise ValueError('Core did not start: ' + variant)
+
+    def stop_core(self, name):
+        (self.scratch / f'{name}.log').write_bytes(self.docker('logs', name, check=False).stdout[-20000:])
+        self.docker('rm', '-f', name); self.containers.remove(name)
+
+    def call(self, base, path, payload, rid='emailpassword', charset=True):
+        body = json.dumps(payload, ensure_ascii=False).encode('utf-8')
+        headers = {'api-key': KEY, 'cdi-version': '5.4', 'rid': rid,
+                   'Content-Type': 'application/json; charset=utf-8' if charset else 'application/json'}
+        request = urllib.request.Request(base + path, data=body, headers=headers, method='POST')
+        self.report['requests'] += 1
+        try:
+            with urllib.request.urlopen(request, timeout=30) as r: return r.status, json.loads(r.read() or b'{}')
+        except urllib.error.HTTPError as error:
+            raw = error.read()
+            try: return error.code, json.loads(raw)
+            except ValueError: return error.code, {'status': raw[:120].decode('utf-8', 'replace')}
+
+    def signin(self, base, email, password, charset=True):
+        code, body = self.call(base, '/recipe/signin', {'email': email, 'password': password}, charset=charset)
+        return code == 200 and body.get('status') == 'OK'
+
+    def session(self, base, user, email, password):
+        code, body = self.call(base, '/expertauth/password/session', {'userId': user, 'email': email, 'password': password,
+            'enableAntiCsrf': False, 'userDataInJWT': {}, 'userDataInDatabase': {}, 'useDynamicSigningKey': True}, rid='session')
+        return code == 200 and body.get('status') == 'OK' and 'accessToken' in body
+
+    def stored(self, user):
+        out = self.docker('exec', self.pg, 'psql', '-U', 'postgres', '-d', 'supertokens', '-At', '-c',
+                          f"SELECT password_hash FROM emailpassword_users WHERE app_id='public' AND user_id='{user}'").stdout.decode().strip()
+        need(out, 'Stored hash missing'); return out
+
+    def signup(self, base, label, password, charset):
+        email = f'{label}-{self.run}@password-upgrade.invalid'
+        code, body = self.call(base, '/recipe/signup', {'email': email, 'password': password}, charset=charset)
+        need(code == 200 and body.get('status') == 'OK', 'Signup failed: ' + label)
+        self.users[label] = (body['user']['id'], email); return body['user']['id'], email
+
+    # ---------- scenarios ----------
+    def scenarios(self):
+        self.start_network()
+        # Phase 1: the historical reader (unpatched source-built Core) creates the legacy population.
+        legacy, base = self.start_core('legacy-bcrypt', {})
+        self.signup(base, 'legacy-unicode-bcrypt', UNICODE, charset=False)
+        self.signup(base, 'legacy-unicode-session', UNICODE, charset=False)
+        self.signup(base, 'legacy-unicode-wrong', UNICODE, charset=False)
+        self.signup(base, 'legacy-unicode-reset', UNICODE, charset=False)
+        self.signup(base, 'legacy-ascii', ASCII, charset=False)
+        self.case('LEGACY-READER-ACCEPTS-RAW-UTF8', self.signin(base, self.users['legacy-unicode-bcrypt'][1], UNICODE, charset=False))
+        self.stop_core(legacy)
+        legacy, base = self.start_core('legacy-argon2', {'PASSWORD_HASHING_ALG': 'ARGON2'})
+        self.signup(base, 'legacy-unicode-argon2', UNICODE, charset=False)
+        self.stop_core(legacy)
+        before = {label: self.stored(uid) for label, (uid, _) in self.users.items()}
+        self.case('LEGACY-HASHES-ARE-OF-HISTORICAL-DECODING', before['legacy-unicode-bcrypt'].startswith('$2') and before['legacy-unicode-argon2'].startswith('$argon2id'))
+        snapshot = '\n'.join(sorted(hashlib.sha256(h.encode()).hexdigest() for h in before.values())) + '\n'
+        u = lambda label: self.users[label]
+
+        # Phase 2: candidate with the fallback disabled (default) reproduces the blocked migration, fail closed.
+        core, base = self.start_core('candidate-disabled', {})
+        self.case('DISABLED-REJECTS-LEGACY-UNICODE', not self.signin(base, u('legacy-unicode-bcrypt')[1], UNICODE))
+        self.case('DISABLED-ACCEPTS-ASCII', self.signin(base, u('legacy-ascii')[1], ASCII))
+        self.case('DISABLED-LEAVES-HASHES', all(self.stored(uid) == before[label] for label, (uid, _) in self.users.items()))
+        self.stop_core(core)
+
+        # Phase 3: an unrecognised policy value or missing snapshot fails closed for every credential.
+        for variant, env in [('candidate-badvalue', {'EXPERTAUTH_LEGACY_PASSWORD_DECODING': 'true', 'snapshot': snapshot}),
+                             ('candidate-nosnapshot', {'EXPERTAUTH_LEGACY_PASSWORD_DECODING': 'servlet-iso-8859-1-v1'})]:
+            core, base = self.start_core(variant, env)
+            self.case(variant.upper() + '-FAILS-CLOSED', not self.signin(base, u('legacy-ascii')[1], ASCII) and
+                      not self.signin(base, u('legacy-unicode-bcrypt')[1], UNICODE) and self.stored(u('legacy-ascii')[0]) == before['legacy-ascii'])
+            self.stop_core(core)
+
+        # Phase 4: enabled with the cutover snapshot, BCRYPT target.
+        enabled = {'EXPERTAUTH_LEGACY_PASSWORD_DECODING': 'servlet-iso-8859-1-v1', 'snapshot': snapshot}
+        core, base = self.start_core('candidate-enabled', dict(enabled))
+        uid, email = u('legacy-unicode-wrong')
+        self.case('ENABLED-REJECTS-WRONG-UNICODE', not self.signin(base, email, WRONG) and self.stored(uid) == before['legacy-unicode-wrong'])
+        uid, email = u('legacy-unicode-bcrypt')
+        self.case('ENABLED-ACCEPTS-LEGACY-UNICODE', self.signin(base, email, UNICODE))
+        after = self.stored(uid)
+        self.case('LEGACY-MATCH-REHASHED', after != before['legacy-unicode-bcrypt'] and after.startswith('$2'))
+        self.case('REHASHED-ACCEPTS-CURRENT-DECODING', self.signin(base, email, UNICODE) and self.stored(uid) == after)
+        self.case('REHASHED-REFUSES-HISTORICAL-STRING', not self.signin(base, email, historical(UNICODE)))
+        uid, email = u('legacy-unicode-session')
+        self.case('ATOMIC-SESSION-ACCEPTS-AND-REHASHES', self.session(base, uid, email, UNICODE) and self.stored(uid) != before['legacy-unicode-session'])
+        self.case('ATOMIC-SESSION-AFTER-REHASH', self.session(base, uid, email, UNICODE))
+        uid, email = u('legacy-ascii')
+        self.case('ASCII-SAME-TARGET-NOT-REHASHED', self.signin(base, email, ASCII) and self.stored(uid) == before['legacy-ascii'])
+        alias_uid, alias_email = self.signup(base, 'post-cutover-alias', ALIAS_TARGET, charset=True)
+        alias_hash = self.stored(alias_uid)
+        self.case('POST-CUTOVER-ALIAS-REFUSED', not self.signin(base, alias_email, 'é-post-cutover-01') and self.stored(alias_uid) == alias_hash
+                  and self.signin(base, alias_email, ALIAS_TARGET))
+        new_uid, new_email = self.signup(base, 'post-cutover-unicode', UNICODE, charset=True)
+        self.case('NEW-UNICODE-ACCOUNT-CURRENT', self.signin(base, new_email, UNICODE) and not self.signin(base, new_email, historical(UNICODE)))
+        self.stop_core(core)
+
+        # Phase 5: ARGON2 target; legacy argon2 Unicode and ASCII bcrypt both migrate (PWD-005 on-login rehash).
+        core, base = self.start_core('candidate-argon2', {**enabled, 'PASSWORD_HASHING_ALG': 'ARGON2'})
+        uid, email = u('legacy-unicode-argon2')
+        self.case('ARGON2-LEGACY-UNICODE-ACCEPTED-REHASHED', self.signin(base, email, UNICODE) and self.stored(uid) != before['legacy-unicode-argon2']
+                  and self.stored(uid).startswith('$argon2id') and self.signin(base, email, UNICODE))
+        uid, email = u('legacy-ascii')
+        self.case('BCRYPT-TO-ARGON2-ON-LOGIN', self.signin(base, email, ASCII) and self.stored(uid).startswith('$argon2id') and self.signin(base, email, ASCII))
+        uid, email = u('legacy-unicode-reset')
+        self.case('STILL-LEGACY-ACCOUNT-UNTOUCHED-UNTIL-LOGIN', self.stored(uid) == before['legacy-unicode-reset'])
+        self.stop_core(core)
+
+    def cleanup(self):
+        errors = []
+        for name in list(self.containers):
+            try:
+                labels = json.loads(self.docker('inspect', '-f', '{{json .Config.Labels}}', name, check=False).stdout or b'{}')
+                need(all(labels.get(k) == v for k, v in self.labels.items()), 'Ownership differs: ' + name)
+                self.docker('rm', '-f', name); self.containers.remove(name)
+            except Exception as error: errors.append(str(error))
+        for name in list(self.networks):
+            try: self.docker('network', 'rm', name); self.networks.remove(name)
+            except Exception as error: errors.append(str(error))
+        remaining = self.docker('ps', '-aq', '--filter', 'label=org.expertauth.run=' + self.run, check=False).stdout.strip()
+        self.report['cleanup'] = {'containers_retired': not remaining and not self.containers, 'networks_retired': not self.networks,
+                                  'errors': errors, 'volumes_created': 0, 'images_built': 0}
+        if not self.args.keep_scratch and self.scratch.exists():
+            need(self.scratch.name.startswith('password-upgrade-') and not any(p.is_symlink() for p in self.scratch.rglob('*')), 'Unsafe scratch cleanup')
+            shutil.rmtree(self.scratch); self.report['cleanup']['scratch_removed'] = True
+        return not errors and not remaining
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--name', required=True)
+    parser.add_argument('--sources', required=True, help='Directory with pinned supertokens-core/-plugin-interface/-postgresql-plugin checkouts')
+    parser.add_argument('--dependencies', required=True, help='Directory with core/ and plugin/ third-party JARs (verified against locks)')
+    parser.add_argument('--aspectj', required=True, help='aspectjtools-1.9.24.jar')
+    parser.add_argument('--scratch', required=True, help='Private scratch parent outside the repository (or under .runtime/)')
+    parser.add_argument('--keep-scratch', action='store_true')
+    args = parser.parse_args()
+    need(re.fullmatch('[A-Za-z0-9_-]{1,54}', args.name), 'Invalid lab name')
+    lab = Lab(args)
+    lab.out.mkdir(parents=True); lab.scratch.mkdir(parents=True)
+    try:
+        lab.verify_inputs(); lab.build(); lab.scenarios()
+    except Exception as error:
+        lab.report['errors'].append(str(error) if isinstance(error, ValueError) else f'{type(error).__name__}: {error}')
+    finally:
+        clean = lab.cleanup()
+        cases = lab.report['cases']
+        lab.report['summary'] = {'cases': len(cases), 'passes': sum(c['passed'] for c in cases)}
+        lab.report['passed'] = clean and not lab.report['errors'] and bool(cases) and all(c['passed'] for c in cases)
+        lab.report['finished'] = datetime.now(timezone.utc).isoformat(); lab.persist()
+    print(json.dumps({'passed': lab.report['passed'], 'summary': lab.report['summary'], 'errors': lab.report['errors'], 'cleanup': lab.report['cleanup']}))
+    return 0 if lab.report['passed'] else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

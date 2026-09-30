@@ -11,6 +11,26 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
+- 2026-09-30 cloud session, resumed at the user's request. The user chose dual-verify +
+  rehash for the blocked legacy Unicode migration. New
+  `engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java` verifies
+  with Core's unchanged hasher. Only when explicitly enabled does it retry the
+  historical ISO-8859-1 decoding, and only for bcrypt/argon2 hashes listed in an
+  operator cutover SHA-256 snapshot. Accepted legacy or outdated hashes are rehashed
+  through the plugin transaction API: in the same commit as the atomic session, and
+  as a locked best-effort step on `/recipe/signin`. That route's patch is
+  `tools/patch_password_upgrade.py`, wired as `--password-upgrade` in
+  `tools/build_password_session.py`. Its per-file transform is now a reusable
+  `patched_source`; existing transforms are unchanged. A source-built scratch cloud
+  lab (`tools/run_password_upgrade_lab.py`) verified all 84 third-party JARs
+  against the reviewed Gradle metadata and excluded upstream prebuilt/EE/telemetry
+  binaries. It passes 20/20 real PostgreSQL/Core cases and 27/27 unit checks. The
+  default reproduces the block, misconfiguration fails closed, and the post-cutover
+  alias is refused. All 8 containers and the network retired. PWD-005 moves
+  planned to implemented-unverified; nothing is verified. Installed image,
+  retained-lab snapshot, upgrade/rollback, concurrency, SDK/browser regressions and
+  independent review remain open. See `docs/password-upgrade.md`.
+
 - Current Core `b4a5f18fb782` / binary pair `firebase-bc-02` installs BC provider
   1.85.2 and utility/PKIX 1.85, replaces archived scrypt, and fixes UTF-8 verification.
   Twelve actual Firebase rows, installed Core/Node/native/session regressions and
@@ -336,8 +356,8 @@ container OS review and independent distribution approval remain open. Four nati
 bundles need further work: scrypt, Argon2, JNA and SQLite JDBC. See
 `docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
 
-Editable ledger currently maps23 requirements to partial implementation,10 to blockers,
-7 to failed candidate checks and225 to planned work. All205 API rows remain blocked
+Editable ledger currently maps24 requirements to partial implementation,10 to blockers,
+7 to failed candidate checks and224 to planned work. All205 API rows remain blocked
 for complete contract/runtime qualification. These are statuses, not a completion rate.
 
 Read `BLOCKERS.md`, `docs/adr/001-foundation.md`, and the current evidence before

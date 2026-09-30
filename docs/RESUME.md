@@ -9,7 +9,14 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest work is [the paused Firebase checkpoint](firebase-scrypt-runtime.md).
+Latest work is [PasswordUpgrade](password-upgrade.md): the user-selected
+dual-verify + rehash policy for the blocked legacy Unicode migration, plus PWD-005
+on-login rehash. It passed a source-built scratch cloud lab only. Next bounded
+step: build it on the retained lab with `--firebase-scrypt-bc --password-upgrade`,
+capture the cutover snapshot read-only, then run the installed-image, upgrade/
+rollback and Node/Python/browser regressions.
+
+Previous work is [the paused Firebase checkpoint](firebase-scrypt-runtime.md).
 Current Core is `b4a5f18fb782`, binary pair `firebase-bc-02`, Node `2a02e08d5fcb`.
 Its exact read-only resume commands, source/version boundaries, passing behavior,
 blocked legacy Unicode migration and next bounded work are recorded there.
