@@ -25,6 +25,10 @@ Keycloak starting recommendation. Neither was the owner's intent. Consequences:
   code and never ship. Their findings (refresh races, reset atomicity, hash bounds,
   rehash) are carried forward as requirements and tests for the ExpertAuth engine.
 - All 265 requirements, 205 API IDs and every profile/review gate remain binding.
+- **Retention (owner instruction, 2026-09-30):** keep the reference labs and their SuperTokens-
+  derived material (`engine-extensions/`, the reference-lab `tools/`/`tests/`, `evidence/`)
+  until the engine no longer needs them as a reference. Retire them only by an explicit
+  owner decision, never as incidental cleanup. Reference material never ships in the product.
 
 ## History (evaluation before the decision)
 

@@ -8,7 +8,8 @@ missing; all20 extracted manifest files match their original bytes and checksums
 **Engine decided (ADR-001, 2026-09-30):** the product is the independently authored
 ExpertAuth engine in `engine/`. SuperTokens is the functional/API reference only; do not
 add SuperTokens code to the product. The earlier SuperTokens-Core patch labs and
-Keycloak labs are reference evidence and differential-test oracles. Resume engine work:
+Keycloak labs are reference evidence and differential-test oracles. Do not delete them
+until the owner decides they are no longer needed as a reference (ADR-001 retention). Resume engine work:
 `cd engine && npm ci && npm run typecheck && EXPERTAUTH_TEST_ADMIN_URL=... npm test`.
 Account linking (slice 2) and email verification (slice 3, 55/55) are done. Record each new slice with
 `python tools/record_engine_evidence.py --name <new-name>`. Next bounded engine slices:

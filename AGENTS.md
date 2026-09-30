@@ -31,6 +31,9 @@ The user's explicit disk/Docker hygiene instruction applies to every agent.
   are outside this task's cleanup scope.
 - Bounded subagents must report and retire their resource IDs/scratch directories
   when finished. Parent integration verifies cleanup and actual evidence.
+- Reference labs (SuperTokens-derived `engine-extensions/`, reference tools/tests/evidence)
+  are retained until the owner says they are no longer needed; never delete them as cleanup.
+  They never ship in the ExpertAuth engine (`engine/`).
 - Hygiene does not waive any requirement or acceptance test. Keep foundation,
   native/provider and independent-review blockers visible. Do not retry the
   automatically rejected identity-hardening action through another agent/tool.
