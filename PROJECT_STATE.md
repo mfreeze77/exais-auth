@@ -21,17 +21,17 @@ Actual code and evidence:
     transaction API. On the atomic session route it commits with the session, with
     one re-verifying retry after a concurrent rehash; on `/recipe/signin` it is a
     locked best-effort step.
-  - **MIG-002 import validation:** full structure and bounded cost, because upstream
-    checked only the prefix.
+  - **MIG-002 import validation** for single-user and bulk-import add: full structure
+    and bounded cost, because upstream checked only the prefix.
 
   The transform is `tools/patch_password_upgrade.py` (`--password-upgrade`, which
   requires `--firebase-scrypt-bc`). The per-file builder transform is now the
   reusable `patched_source`. The source-built scratch lab
   `tools/run_password_upgrade_lab.py` verifies all 84 third-party JARs against the
-  reviewed metadata and runs `cloud-source-04`: 65/65 real cases. They include seven
-  independent-library import fixtures, 17 rejected imports, two rehash targets,
-  8+8 concurrent logins across two replicas and no hash in 95 responses; 31/31 unit
-  checks also pass. Its predecessor `cloud-source-03` measured the two defects fixed
+  reviewed metadata and runs `cloud-source-05`: 72/72 real cases. They include seven
+  independent-library import fixtures, 17 rejected single-user imports, 7 bulk-add
+  cases, two rehash targets, 8+8 concurrent logins across two replicas and no hash
+  in 102 responses; 31/31 unit checks also pass. Its predecessor `cloud-source-03` measured the two defects fixed
   here: 1/8 concurrent atomic logins, and malformed imports accepted. Run
   `cloud-source-01` had misstated its volume cleanup; this is corrected. PWD-005 is
   implemented-unverified; nothing is verified. See `docs/password-upgrade.md`.

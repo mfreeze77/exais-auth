@@ -31,7 +31,7 @@ import zipfile
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_core_reset import ROOT, CORE_REV, need, sha  # noqa: E402
 import build_password_session as builder  # noqa: E402
-from patch_password_upgrade import PATH as SIGN_IN  # noqa: E402
+from patch_password_upgrade import PATH as SIGN_IN, BULK_PATH as BULK_IMPORT  # noqa: E402
 
 PI_REV = '2550750188069110753decd06265a59fadefb427'
 PG_REV = builder.PG_REV
@@ -98,7 +98,7 @@ class Lab:
             self.report['inputs'][name] = rev
         manifest = {r['source_path']: r['sha256'] for r in json.loads((ROOT / 'reuse/files/supertokens__supertokens-core.json').read_text())['files']}
         self.patched = {}
-        for path in [builder.WEB, builder.SESSION, builder.REFRESH, builder.VERIFY, builder.FIREBASE, builder.JSON_INPUT, SIGN_IN]:
+        for path in [builder.WEB, builder.SESSION, builder.REFRESH, builder.VERIFY, builder.FIREBASE, builder.JSON_INPUT, SIGN_IN, BULK_IMPORT]:
             raw = (sources / 'supertokens-core' / path).read_bytes()
             need(hashlib.sha256(raw).hexdigest() == manifest[path], 'Audited Core source differs: ' + path)
             self.patched[path] = builder.patched_source(path, raw.decode())
@@ -378,6 +378,23 @@ class Lab:
         for name, value in malformed.items():
             ok, code, status = self.import_hash(base, 'malformed-' + name, value)
             self.case('MALFORMED-' + name.upper() + '-REPORTED', not ok and code == 400, http=code, status=status)
+        # Bulk-import add validation (processing is Core's asynchronous cron and is not exercised here).
+        def bulk(label, value, algorithm):
+            user = {'loginMethods': [{'recipeId': 'emailpassword', 'email': f'{label}-{self.run}@password-upgrade.invalid',
+                                      'passwordHash': value, 'hashingAlgorithm': algorithm, 'isPrimary': True,
+                                      'tenantIds': ['public'], 'isVerified': False, 'timeJoinedInMSSinceEpoch': 1767225600000}]}
+            code, body = self.call(base, '/bulk-import/users', {'users': [user]})
+            return code, json.dumps(body)
+        valid = {'bcrypt-2b-10': 'BCRYPT', 'argon2id-m19456-t2-p1': 'ARGON2', 'firebase-scrypt-m14-r8': 'FIREBASE_SCRYPT'}
+        for name, algorithm in valid.items():
+            code, text = bulk('bulk-' + name, fixtures[name], algorithm)
+            self.case('BULK-ADD-' + name.upper() + '-ACCEPTED', code == 200 and '"status": "OK"' in text, http=code)
+        for name, algorithm in {'bcrypt-truncated': 'BCRYPT', 'bcrypt-cost-17': 'BCRYPT', 'argon2-memory-4gib': 'ARGON2',
+                                'firebase-memcost-18': 'FIREBASE_SCRYPT'}.items():
+            code, text = bulk('bulk-malformed-' + name, malformed[name], algorithm)
+            # Each passes the upstream prefix check, so only the added bound can report it.
+            self.case('BULK-ADD-MALFORMED-' + name.upper() + '-REPORTED', code == 400 and
+                      'malformed or exceeds import cost bounds' in text, http=code)
         self.stop_core(core)
 
         # Phase 2: ARGON2 target (Core defaults m=87795,t=1,p=2): imported and bcrypt accounts move to argon2id.

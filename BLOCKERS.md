@@ -4,9 +4,9 @@
   nothing is live, so no old-reader accounts exist; UTF-8 is the only supported
   decoding and the interim fallback was removed. PWD-005 on-login rehash and bounded
   MIG-002 import validation (`PasswordUpgrade`, `EXPERTAUTH-PASSWORD-UPGRADE-2`) pass a
-  source-built scratch cloud lab: 65/65 real cases, 31/31 unit checks. Installed-image,
-  upgrade/rollback, SDK/browser regressions, bulk-import validation, review of the
-  import cost bounds, full Firebase cost/resource validation and independent review
+  source-built scratch cloud lab: 72/72 real cases, including bulk-import add
+  validation, and 31/31 unit checks. Installed-image, upgrade/rollback, SDK/browser
+  regressions, bulk-import processing, review of the import cost bounds, full Firebase cost/resource validation and independent review
   remain open. See `docs/password-upgrade.md`.
 - Argon2 now uses source-built nolibs packaging in Core `b4a5f18fb782`. Original
   C tests, startup failure checks, source/bundled and source/source password,

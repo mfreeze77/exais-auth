@@ -647,20 +647,20 @@ def main():
         'tools/patch_password_upgrade.py','tools/build_password_session.py','tools/run_password_upgrade_lab.py',
         'tests/foundation/PasswordUpgradeTest.java','tests/evidence/test_password_upgrade_patch.py','docs/password-upgrade.md']
     data['password_upgrade_candidate_artifacts'] = [artifact(ROOT,p) for p in (
-        'evidence/operations/password-upgrade/cloud-source-04/report.json','evidence/operations/password-upgrade/unit-02/report.json')]
+        'evidence/operations/password-upgrade/cloud-source-05/report.json','evidence/operations/password-upgrade/unit-02/report.json')]
     data['password_upgrade_failed_history'] = [artifact(ROOT,p) for p in (
-        'evidence/operations/password-upgrade/cloud-source-03/report.json',
+        'evidence/operations/password-upgrade/cloud-source-04/report.json','evidence/operations/password-upgrade/cloud-source-03/report.json',
         'evidence/operations/password-upgrade/cloud-source-02/report.json','evidence/operations/password-upgrade/unit-01/report.json',
         'evidence/operations/password-upgrade/cloud-source-01/report.json','evidence/operations/password-upgrade/cloud-source-01/CORRECTION.md')]
-    upgrade_ids = ['PWUP-'+c['name'] for c in read_json(ROOT/'evidence/operations/password-upgrade/cloud-source-04/report.json')['cases']]
+    upgrade_ids = ['PWUP-'+c['name'] for c in read_json(ROOT/'evidence/operations/password-upgrade/cloud-source-05/report.json')['cases']]
     upgrade_note = ('PasswordUpgrade (EXPERTAUTH-PASSWORD-UPGRADE-2): on-login rehash to the configured Core algorithm through '
         'the storage plugin transaction API (same commit as the atomic session with one re-verifying retry after a concurrent '
-        'rehash; locked best-effort on /recipe/signin) and bounded full-structure single-user import validation. Legacy '
+        'rehash; locked best-effort on /recipe/signin) and bounded full-structure single-user and bulk-add import validation. Legacy '
         'Unicode migration closed by scope 2026-09-30: nothing live, UTF-8 only; interim fallback (-1) removed. Source-built '
-        'scratch cloud lab cloud-source-04 passes 65/65 real cases (seven independent-library import fixtures, 17 rejected '
-        'imports, two targets, 8+8 concurrent two-replica logins, no hash in 95 responses) and 31/31 unit checks; '
+        'scratch cloud lab cloud-source-05 passes 72/72 real cases (seven independent-library import fixtures, 17 rejected '
+        'imports, 7 bulk-add cases, two targets, 8+8 concurrent two-replica logins, no hash in 102 responses) and 31/31 unit checks; '
         'all 84 third-party JARs match reviewed metadata. Not the installed image, retained lab, BC1.85.2 or source-built '
-        'Argon2; no upgrade/rollback, SDK/browser regression, bulk-import validation or independent review. '
+        'Argon2; no upgrade/rollback, SDK/browser regression, bulk-import processing or independent review. '
         'See docs/password-upgrade.md.')
     for identifier in ('PWD-001','PWD-005','MIG-002','WP-002'):
         row=index[identifier]

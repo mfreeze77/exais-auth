@@ -1,0 +1,470 @@
+{
+  "kind": "password-upgrade-lab",
+  "passed": true,
+  "runtime_qualified": false,
+  "foundation_passed": false,
+  "policy": "EXPERTAUTH-PASSWORD-UPGRADE-2",
+  "started": "2026-09-30T16:53:50.357229+00:00",
+  "run": "c7a3174677",
+  "inputs": {
+    "supertokens-core": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+    "supertokens-plugin-interface": "2550750188069110753decd06265a59fadefb427",
+    "supertokens-postgresql-plugin": "0b68fd14ca10baee2d0e3c31466984fccfb36c8a",
+    "verified_dependency_jars": {
+      "core": 80,
+      "plugin": 4
+    },
+    "dependency_digest": "ffbce69cfe856e8b74c83079abb91b7b8c4d6d1346c5445a74bb2477fc887a78",
+    "files": {
+      "tools/run_password_upgrade_lab.py": "35a8d32b29f4f3d205e9865700c265d2b438de79f6de895c8891a52d6977769b",
+      "tools/build_password_session.py": "c7d7e7eb9b39a6ec80a4c6eeb31a6a8642cfd7cc628e25230ada784b0f7c79a7",
+      "tools/patch_password_upgrade.py": "a5f996546c22dd0df64431fa7a164b9217b546cb218ad3a10fe1aa6daedeb22d",
+      "tools/patch_firebase_scrypt.py": "dfd8b5d24a49bcbd9936e44e26e160d055d266811c1c44616b2b1a412c381b01",
+      "tools/patch_session_policy.py": "e9f7c244bfcd223b423eef6241f21940f2c68f4833fabc10d423fef37ef7efe6",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64",
+      "engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java": "4e420fee569e245b952e6d214077e7fc11b502e4973a028868da0ec3d81202e1",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java": "d388169a0c756816e52960a6b022c2a25dc7e41711f1b3862c7289109f984098",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java": "5e1fc6c057316916068c6bcabab8ca7caabfc677a8d6ccf94d943b5f4dd5480a",
+      "engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java": "166e01da744f6030718ca74318c6ca318488c4f27dd31e774edacb0e95ed713f",
+      "engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java": "9a464de2fb911039287e6ecfbefd752e01f57513f30afe7a37cc6bace9a77c38",
+      "engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java": "870e18adc9ecff84ea371a064de77f43e25d829bf79d76de1baaa1adc2a94566"
+    },
+    "fixture_libraries": {
+      "bcrypt": "5.0.0",
+      "argon2-cffi": "25.1.0",
+      "cryptography": "50.0.2"
+    }
+  },
+  "build": {
+    "javac": "javac 21.0.10",
+    "base": {
+      "core": "6c1965c6f31993ccc32e683e329e15b9949010deb7fe1d9c764a8c6f4fa96265",
+      "plugin_interface": "aa020c56b1825f7c719cf6727a21aa4b62059e38fcb250be00b890bb63051c60",
+      "postgresql": "f57c98bf8b5a7337d8b13a402ed18fbcab58778ec0203f25fdb5010bbc0bc851"
+    },
+    "candidate": {
+      "core": {
+        "sha256": "0e61274eb179dbf5f1aa9941440bd68ec954c6738d040caa92f5862993fd8333",
+        "changed": [
+          "io/supertokens/bulkimport/BulkImportUserUtils$IDMode.class",
+          "io/supertokens/bulkimport/BulkImportUserUtils.class",
+          "io/supertokens/emailpassword/EmailPassword$ConsumeResetPasswordTokenResult.class",
+          "io/supertokens/emailpassword/EmailPassword$ImportUserResponse.class",
+          "io/supertokens/emailpassword/EmailPassword.class",
+          "io/supertokens/emailpassword/PasswordHashingUtils.class",
+          "io/supertokens/session/Session.class",
+          "io/supertokens/webserver/InputParser.class",
+          "io/supertokens/webserver/Webserver$TomcatReference.class",
+          "io/supertokens/webserver/Webserver.class"
+        ],
+        "added": [
+          "io/expertauth/core/AtomicPasswordReset$Rejected.class",
+          "io/expertauth/core/AtomicPasswordReset.class",
+          "io/expertauth/core/AtomicPasswordResetAPI.class",
+          "io/expertauth/core/AtomicPasswordSession$HashChanged.class",
+          "io/expertauth/core/AtomicPasswordSession$Insert.class",
+          "io/expertauth/core/AtomicPasswordSession$Rejected.class",
+          "io/expertauth/core/AtomicPasswordSession.class",
+          "io/expertauth/core/AtomicPasswordSessionAPI.class",
+          "io/expertauth/core/GuardedRefreshSessionAPI.class",
+          "io/expertauth/core/GuardedVerifySessionAPI.class",
+          "io/expertauth/core/PasswordUpgrade$Outcome.class",
+          "io/expertauth/core/PasswordUpgrade$Target.class",
+          "io/expertauth/core/PasswordUpgrade.class",
+          "io/expertauth/core/SessionPolicy$Rejected.class",
+          "io/expertauth/core/SessionPolicy.class",
+          "io/expertauth/core/TransactionalSessionWriter.class"
+        ]
+      },
+      "postgresql": {
+        "sha256": "d3a3f5d8721969a6d7f4c6e43c3fe7bb51f730538e7f73b212bedc8769de13f5",
+        "changed": [],
+        "added": [
+          "META-INF/services/io.expertauth.core.TransactionalSessionWriter",
+          "io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class"
+        ]
+      }
+    },
+    "patched_upstream": [
+      "src/main/java/io/supertokens/bulkimport/BulkImportUserUtils.java",
+      "src/main/java/io/supertokens/emailpassword/EmailPassword.java",
+      "src/main/java/io/supertokens/emailpassword/PasswordHashingUtils.java",
+      "src/main/java/io/supertokens/session/Session.java",
+      "src/main/java/io/supertokens/webserver/InputParser.java",
+      "src/main/java/io/supertokens/webserver/Webserver.java",
+      "src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "src/main/java/io/supertokens/webserver/api/session/VerifySessionAPI.java"
+    ]
+  },
+  "cases": [
+    {
+      "name": "UTF8-SIGNUP-SIGNIN",
+      "passed": true
+    },
+    {
+      "name": "LATIN1-READING-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "WRONG-PASSWORD-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "SAME-TARGET-NOT-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-BCRYPT-2B-10",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2B-10-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2B-10-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2B-10-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-BCRYPT-2A-12",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2A-12-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2A-12-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2A-12-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-BCRYPT-2Y-10",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2Y-10-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2Y-10-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-BCRYPT-2Y-10-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-ARGON2ID-M19456-T2-P1",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-ARGON2ID-M19456-T2-P1-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-ARGON2ID-M19456-T2-P1-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-ARGON2ID-M19456-T2-P1-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-ARGON2I-M19456-T2-P1",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-ARGON2I-M19456-T2-P1-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-ARGON2I-M19456-T2-P1-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-ARGON2I-M19456-T2-P1-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-ARGON2D-M19456-T2-P1",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-ARGON2D-M19456-T2-P1-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-ARGON2D-M19456-T2-P1-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-ARGON2D-M19456-T2-P1-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "IMPORT-FIREBASE-SCRYPT-M14-R8",
+      "passed": true,
+      "http": 200,
+      "status": "OK"
+    },
+    {
+      "name": "IMPORTED-FIREBASE-SCRYPT-M14-R8-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-FIREBASE-SCRYPT-M14-R8-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "IMPORTED-FIREBASE-SCRYPT-M14-R8-STABLE-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-BCRYPT-2B-10-REHASHED-IN-COMMIT",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-BCRYPT-2B-10-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-ARGON2ID-M19456-T2-P1-REHASHED-IN-COMMIT",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-ARGON2ID-M19456-T2-P1-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-FIREBASE-SCRYPT-M14-R8-REHASHED-IN-COMMIT",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-FIREBASE-SCRYPT-M14-R8-WRONG-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "UNSUPPORTED-MD5-HEX-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid format\n"
+    },
+    {
+      "name": "UNSUPPORTED-SHA512-CRYPT-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid format\n"
+    },
+    {
+      "name": "UNSUPPORTED-DJANGO-PBKDF2-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid format\n"
+    },
+    {
+      "name": "UNSUPPORTED-PLAINTEXT-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid format\n"
+    },
+    {
+      "name": "UNSUPPORTED-PASSLIB-SCRYPT-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid format\n"
+    },
+    {
+      "name": "UNSUPPORTED-BCRYPT-DECLARED-ARGON2-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid Argon2 format\n"
+    },
+    {
+      "name": "UNSUPPORTED-ARGON2-DECLARED-BCRYPT-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is in invalid BCrypt format\n"
+    },
+    {
+      "name": "UNSUPPORTED-UNKNOWN-ALGORITHM-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Unsupported password hashing algorithm\n"
+    },
+    {
+      "name": "MALFORMED-BCRYPT-TRUNCATED-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-BCRYPT-BAD-ALPHABET-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-ARGON2ID-GARBAGE-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-ARGON2-UNKNOWN-VERSION-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-FIREBASE-BAD-BASE64-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-BCRYPT-COST-17-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-ARGON2-MEMORY-4GIB-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-ARGON2-ITERATIONS-101-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "MALFORMED-FIREBASE-MEMCOST-18-REPORTED",
+      "passed": true,
+      "http": 400,
+      "status": "Password hash is malformed or exceeds import cost bounds\n"
+    },
+    {
+      "name": "BULK-ADD-BCRYPT-2B-10-ACCEPTED",
+      "passed": true,
+      "http": 200
+    },
+    {
+      "name": "BULK-ADD-ARGON2ID-M19456-T2-P1-ACCEPTED",
+      "passed": true,
+      "http": 200
+    },
+    {
+      "name": "BULK-ADD-FIREBASE-SCRYPT-M14-R8-ACCEPTED",
+      "passed": true,
+      "http": 200
+    },
+    {
+      "name": "BULK-ADD-MALFORMED-BCRYPT-TRUNCATED-REPORTED",
+      "passed": true,
+      "http": 400
+    },
+    {
+      "name": "BULK-ADD-MALFORMED-BCRYPT-COST-17-REPORTED",
+      "passed": true,
+      "http": 400
+    },
+    {
+      "name": "BULK-ADD-MALFORMED-ARGON2-MEMORY-4GIB-REPORTED",
+      "passed": true,
+      "http": 400
+    },
+    {
+      "name": "BULK-ADD-MALFORMED-FIREBASE-MEMCOST-18-REPORTED",
+      "passed": true,
+      "http": 400
+    },
+    {
+      "name": "ARGON2-TARGET-BCRYPT-2B-10-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "ARGON2-TARGET-ARGON2ID-M19456-T2-P1-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "ARGON2-TARGET-ARGON2I-M19456-T2-P1-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "ARGON2-TARGET-FIREBASE-SCRYPT-M14-R8-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "ARGON2-TARGET-BCRYPT-SIGNUP-MIGRATES",
+      "passed": true
+    },
+    {
+      "name": "ARGON2-TARGET-NATIVE-NOT-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "CONCURRENT-SIGNIN-ALL-ACCEPTED-ONE-REHASH",
+      "passed": true,
+      "attempts": 8,
+      "succeeded": 8,
+      "other_outcomes": []
+    },
+    {
+      "name": "CONCURRENT-ATOMIC-SESSION-ALL-ACCEPTED-ONE-REHASH",
+      "passed": true,
+      "attempts": 8,
+      "succeeded": 8,
+      "other_outcomes": [],
+      "sessions_in_database": 8
+    },
+    {
+      "name": "CONCURRENT-ATOMIC-SESSION-STABLE-AFTER",
+      "passed": true
+    },
+    {
+      "name": "HASH-NEVER-EXPOSED-IN-RESPONSES",
+      "passed": true,
+      "responses": 102,
+      "leaking": 0
+    }
+  ],
+  "findings": [],
+  "requests": 102,
+  "errors": [],
+  "scope": "Scratch source-built lab on a fresh cloud checkout; not the retained Windows lab or an installed image",
+  "cleanup": {
+    "containers_retired": true,
+    "networks_retired": true,
+    "errors": [],
+    "volumes_left": [],
+    "images_built": 0
+  },
+  "summary": {
+    "cases": 72,
+    "passes": 72
+  },
+  "finished": "2026-09-30T16:54:37.457257+00:00"
+}

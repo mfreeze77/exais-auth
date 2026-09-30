@@ -14,7 +14,7 @@ from run_sdk_session_faults import inventory
 from password_session_candidates import validate_pair, new_candidate
 from patch_session_policy import REFRESH, VERIFY, patch_session, guarded_api
 from patch_firebase_scrypt import PATH as FIREBASE, INPUT as JSON_INPUT, patch as patch_firebase, patch_input
-from patch_password_upgrade import PATH as SIGN_IN, patch as patch_sign_in
+from patch_password_upgrade import PATH as SIGN_IN, patch as patch_sign_in, BULK_PATH as BULK_IMPORT, patch_bulk
 
 PG_REV = '0b68fd14ca10baee2d0e3c31466984fccfb36c8a'
 SESSION = 'src/main/java/io/supertokens/session/Session.java'
@@ -33,6 +33,8 @@ def patched_source(path, original):
         patched=patch_firebase(original)
     elif path==SIGN_IN:
         patched=patch_sign_in(original)
+    elif path==BULK_IMPORT:
+        patched=patch_bulk(original)
     elif path==WEB:
         marker='        addAPI(new ResetPasswordAPI(main));'; need(original.count(marker)==1,'Route anchor differs')
         patched=original.replace(marker, marker+'\n        addAPI(new io.expertauth.core.AtomicPasswordResetAPI(main, true));\n        addAPI(new io.expertauth.core.AtomicPasswordResetAPI(main, false));\n        addAPI(new io.expertauth.core.AtomicPasswordSessionAPI(main));\n        addAPI(new io.expertauth.core.GuardedRefreshSessionAPI(main));\n        addAPI(new io.expertauth.core.GuardedVerifySessionAPI(main));')
@@ -111,7 +113,7 @@ def main():
         image=json.loads(call(['docker','image','inspect',IMAGE]).stdout)[0]
         compiler_id=image['Id']; report['compiler_image_id']=compiler_id
         need(re.fullmatch('sha256:[0-9a-f]{64}',compiler_id) and set(image['Config'].get('Volumes') or {})=={'/home/gradle/.gradle'},'Cached pinned compiler image differs')
-        for path in [WEB, SESSION, REFRESH, VERIFY, *([FIREBASE,JSON_INPUT] if args.firebase_scrypt_bc else []), *([SIGN_IN] if args.password_upgrade else [])]:
+        for path in [WEB, SESSION, REFRESH, VERIFY, *([FIREBASE,JSON_INPUT] if args.firebase_scrypt_bc else []), *([SIGN_IN, BULK_IMPORT] if args.password_upgrade else [])]:
             src=ROOT/'.cache/reuse-audit/source/supertokens__supertokens-core'/CORE_REV/path
             manifest=json.loads((ROOT/'reuse/files/supertokens__supertokens-core.json').read_text())
             row=next(r for r in manifest['files'] if r['source_path']==path)

@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'tools'))
-from patch_password_upgrade import ANCHOR, IMPORT_ANCHOR, PATH, patch
+from patch_password_upgrade import ANCHOR, IMPORT_ANCHOR, PATH, patch, BULK_ANCHOR, BULK_PATH, patch_bulk
 import build_password_session as builder
 
 HEADER = '    public static AuthRecipeUserInfo signIn(TenantIdentifier tenantIdentifier, Storage storage, Main main,\n'
@@ -34,6 +34,16 @@ class SignInPatch(unittest.TestCase):
         filename, patched = builder.patched_source(PATH, BODY)
         self.assertEqual(filename, 'EmailPassword.java')
         self.assertIn('PasswordUpgrade.signIn', patched)
+
+    def test_bulk_bound_runs_only_after_upstream_acceptance(self):
+        body = '    private String validateAndNormalisePasswordHash(\n' + BULK_ANCHOR + '        return passwordHash;\n'
+        patched = patch_bulk(body)
+        self.assertIn('errors.add(e.getMessage());', patched)
+        self.assertIn('if (upstreamFormatAccepted && !io.expertauth.core.PasswordUpgrade.structurallyValid(passwordHash))', patched)
+        for text in [body.replace('errors.add(e.getMessage());', 'errors.add("x");'), body + BULK_ANCHOR]:
+            with self.assertRaises(ValueError):
+                patch_bulk(text)
+        self.assertEqual(builder.patched_source(BULK_PATH, body)[0], 'BulkImportUserUtils.java')
 
     def test_upgrade_requires_utf8_reader(self):
         source = (ROOT / 'tools/build_password_session.py').read_text()
