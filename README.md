@@ -8,9 +8,10 @@ The immutable acceptance baseline lives under `baseline/`; editable traceability
 `ledger/implementation.json`. Engine selection is pending in ADR-001. Source, builds,
 real API tests and license evidence are retained separately from plan integrity tests.
 
-Latest: [legacy Unicode migration and on-login rehash](docs/password-upgrade.md)
-(`PasswordUpgrade`) is implemented. It passes a source-built scratch cloud lab and
-is not yet installed or independently reviewed.
+Latest: [password import validation and on-login rehash](docs/password-upgrade.md)
+(`PasswordUpgrade`) is implemented. It passes a source-built scratch cloud lab and is
+not yet installed or independently reviewed. The legacy Unicode migration is closed by
+scope because nothing is live.
 
 The previous [Firebase verification checkpoint](docs/firebase-scrypt-runtime.md) was
 **paused at the user's request**. Current Core is `b4a5f18fb782` with BC 1.85.2,

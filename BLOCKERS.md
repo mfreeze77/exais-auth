@@ -1,21 +1,19 @@
 # Open acceptance blockers
 
-- **Legacy Unicode migration: policy implemented, installed qualification open.**
-  The installed Core `b4a5f18fb782` still rejects old-parser Unicode credentials.
-  The user chose dual-verify + rehash, and `PasswordUpgrade`
-  (`EXPERTAUTH-PASSWORD-UPGRADE-1`) implements it: an opt-in ISO-8859-1 fallback
-  limited to an operator cutover hash snapshot, plus on-login rehash (PWD-005). A
-  source-built scratch cloud lab passes 20/20 real cases and 27/27 unit checks. No
-  installed image, retained-lab snapshot capture, upgrade/rollback, replica
-  concurrency on the rehash, SDK/browser regression, full Firebase cost/resource
-  validation or independent review has run. See `docs/password-upgrade.md`.
+- **Legacy Unicode migration: closed by scope (2026-09-30).** The user confirmed
+  nothing is live, so no old-reader accounts exist; UTF-8 is the only supported
+  decoding and the interim fallback was removed. PWD-005 on-login rehash and bounded
+  MIG-002 import validation (`PasswordUpgrade`, `EXPERTAUTH-PASSWORD-UPGRADE-2`) pass a
+  source-built scratch cloud lab: 65/65 real cases, 31/31 unit checks. Installed-image,
+  upgrade/rollback, SDK/browser regressions, bulk-import validation, review of the
+  import cost bounds, full Firebase cost/resource validation and independent review
+  remain open. See `docs/password-upgrade.md`.
 - Argon2 now uses source-built nolibs packaging in Core `b4a5f18fb782`. Original
   C tests, startup failure checks, source/bundled and source/source password,
   import/reset/concurrency cases and local upgrade/rollback pass. Remaining
   native/OS/source/relink, maintained-version, other-platform and independent
   review gates remain open. PWD-005 rehash is implemented in `PasswordUpgrade` but
-  not yet installed; the current image still preserves imported legacy hashes on
-  login. See `docs/installed-native-argon2.md` and `docs/password-upgrade.md`.
+  not yet installed; the current image still preserves imported hashes on login. See `docs/installed-native-argon2.md` and `docs/password-upgrade.md`.
 - Original `expert-auth-full-parity-plan-v1.0.zip` absent from workspace and named
   Downloads/Documents search. Expected SHA256
   `58f013dc0ae6fe9981206d4594e78d8efd0cde2f1a00f15bbdfbaec12ee918ed`.

@@ -11,27 +11,30 @@ its expected checksum remains recorded. Research report is available and preserv
 
 Actual code and evidence:
 
-- 2026-09-30 cloud session, resumed at the user's request. The user chose dual-verify +
-  rehash for the blocked legacy Unicode migration. New
-  `engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java` verifies
-  with Core's unchanged hasher. Only when explicitly enabled does it retry the
-  historical ISO-8859-1 decoding, and only for bcrypt/argon2 hashes listed in an
-  operator cutover SHA-256 snapshot. Accepted legacy or outdated hashes are rehashed
-  through the plugin transaction API: in the same commit as the atomic session, and
-  as a locked best-effort step on `/recipe/signin`. That route's patch is
-  `tools/patch_password_upgrade.py`, wired as `--password-upgrade` in
-  `tools/build_password_session.py`. Its per-file transform is now a reusable
-  `patched_source`; existing transforms are unchanged. A source-built scratch cloud
-  lab (`tools/run_password_upgrade_lab.py`) verified all 84 third-party JARs
-  against the reviewed Gradle metadata and excluded upstream prebuilt/EE/telemetry
-  binaries. It passes 20/20 real PostgreSQL/Core cases and 27/27 unit checks. The
-  default reproduces the block, misconfiguration fails closed, and the post-cutover
-  alias is refused. Run `cloud-source-02` retired all 8 containers, the network and
-  its scratch, and measured no leaked volume. Run 01 left 8 anonymous volumes
-  (removed; see its `CORRECTION.md`). PWD-005 moves
-  planned to implemented-unverified; nothing is verified. Installed image,
-  retained-lab snapshot, upgrade/rollback, concurrency, SDK/browser regressions and
-  independent review remain open. See `docs/password-upgrade.md`.
+- 2026-09-30 cloud session, resumed at the user's request. The user confirmed nothing
+  is live. The legacy Unicode migration therefore has no population and is closed by
+  scope, and UTF-8 is the only supported decoding. An interim opt-in fallback
+  (policy `-1`) was built and then removed; its evidence remains. Current
+  `engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java`
+  (`EXPERTAUTH-PASSWORD-UPGRADE-2`) adds two things:
+  - **PWD-005 on-login rehash** to the configured Core algorithm through the plugin
+    transaction API. On the atomic session route it commits with the session, with
+    one re-verifying retry after a concurrent rehash; on `/recipe/signin` it is a
+    locked best-effort step.
+  - **MIG-002 import validation:** full structure and bounded cost, because upstream
+    checked only the prefix.
+
+  The transform is `tools/patch_password_upgrade.py` (`--password-upgrade`, which
+  requires `--firebase-scrypt-bc`). The per-file builder transform is now the
+  reusable `patched_source`. The source-built scratch lab
+  `tools/run_password_upgrade_lab.py` verifies all 84 third-party JARs against the
+  reviewed metadata and runs `cloud-source-04`: 65/65 real cases. They include seven
+  independent-library import fixtures, 17 rejected imports, two rehash targets,
+  8+8 concurrent logins across two replicas and no hash in 95 responses; 31/31 unit
+  checks also pass. Its predecessor `cloud-source-03` measured the two defects fixed
+  here: 1/8 concurrent atomic logins, and malformed imports accepted. Run
+  `cloud-source-01` had misstated its volume cleanup; this is corrected. PWD-005 is
+  implemented-unverified; nothing is verified. See `docs/password-upgrade.md`.
 
 - Current Core `b4a5f18fb782` / binary pair `firebase-bc-02` installs BC provider
   1.85.2 and utility/PKIX 1.85, replaces archived scrypt, and fixes UTF-8 verification.

@@ -16,133 +16,78 @@ import io.supertokens.pluginInterface.multitenancy.AppIdentifier;
 import io.supertokens.pluginInterface.sqlStorage.SQLStorage;
 import io.supertokens.pluginInterface.sqlStorage.TransactionConnection;
 import io.supertokens.pluginInterface.useridmapping.UserLockingStorage;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.security.MessageDigest;
-import java.util.HashSet;
-import java.util.HexFormat;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Legacy-decoding fallback and on-login rehash over Core's own hasher and storage.
+ * On-login rehash over Core's own hasher and storage (PWD-005).
  *
- * Before the UTF-8 JSON reader change, a request without a servlet charset was
- * decoded as ISO-8859-1, so Core hashed the UTF-8 bytes' Latin-1 reading. The
- * fallback reproduces only that decoding, only when explicitly enabled, only for
- * bcrypt/argon2 hashes whose SHA-256 is in the operator's cutover snapshot, and
- * only after the current decoding fails. A post-cutover password never becomes
- * eligible, and a legacy match rehashes the correctly decoded password, which
- * leaves the snapshot by construction once the update commits.
- * No hash primitive is implemented here; verification and hashing stay in Core.
+ * Verification is Core's unchanged PasswordHashing with the UTF-8 decoded password;
+ * there is no alternate decoding. When an accepted hash's format or cost differs from
+ * the configured Core algorithm (imported bcrypt/argon2/Firebase scrypt, changed bcrypt
+ * rounds or argon2 m/t/p, argon2i/d), the correctly decoded password is rehashed and
+ * stored through the storage plugin transaction API as a compare-and-replace.
+ * No hash primitive is implemented here.
  */
 public final class PasswordUpgrade {
-    public static final String POLICY = "EXPERTAUTH-PASSWORD-UPGRADE-1";
-    public static final String LEGACY_ENV = "EXPERTAUTH_LEGACY_PASSWORD_DECODING";
-    public static final String LEGACY_VALUE = "servlet-iso-8859-1-v1";
-    public static final String SNAPSHOT_ENV = "EXPERTAUTH_LEGACY_PASSWORD_HASHES";
-    private static final Pattern SNAPSHOT_ROW = Pattern.compile("^[0-9a-f]{64}$");
-    private static volatile Set<String> snapshot;
+    public static final String POLICY = "EXPERTAUTH-PASSWORD-UPGRADE-2";
     private static final Pattern BCRYPT = Pattern.compile("^\\$2[abxy]\\$(\\d{2})\\$.{53}$");
     private static final Pattern ARGON2ID = Pattern.compile("^\\$argon2id\\$v=19\\$m=(\\d{1,10}),t=(\\d{1,10}),p=(\\d{1,10})\\$[^$]+\\$[^$]+$");
 
     private PasswordUpgrade() {}
 
-    public enum Match { CURRENT, LEGACY_SERVLET_DECODING, NONE }
-
-    @FunctionalInterface public interface Verifier {
-        boolean verify(String password, String hash) throws Exception;
-    }
-
     /** Current Core hashing target; FIREBASE_SCRYPT cannot be produced by Core and never triggers rehash. */
     public record Target(String algorithm, int bcryptRounds, int argon2Iterations, int argon2MemoryKb, int argon2Parallelism) {}
 
-    public record Outcome(Match match, String replacementHash) {
-        public boolean accepted() { return match != Match.NONE; }
-    }
+    public record Outcome(boolean accepted, String replacementHash) {}
 
-    public static final class Misconfigured extends IllegalStateException {
-        private static final long serialVersionUID = 1L;
-        public Misconfigured() { super("Invalid " + LEGACY_ENV + "/" + SNAPSHOT_ENV + " configuration"); }
-    }
+    // Import-time structure and resource bounds. Prefix-only acceptance creates accounts that can never
+    // sign in, and unbounded costs turn every login attempt on an imported account into a resource sink.
+    public static final int BCRYPT_MIN_COST = 4, BCRYPT_MAX_COST = 16;
+    public static final long ARGON2_MAX_MEMORY_KB = 1_048_576, ARGON2_MAX_ITERATIONS = 100, ARGON2_MAX_PARALLELISM = 64;
+    public static final int FIREBASE_MAX_MEM_COST = 17, FIREBASE_MAX_ROUNDS = 32;
+    private static final Pattern BCRYPT_STRUCTURE = Pattern.compile("^\\$2[abxy]\\$(\\d{2})\\$[./A-Za-z0-9]{53}$");
+    private static final Pattern ARGON2_STRUCTURE = Pattern.compile(
+        "^\\$argon2(?:id|i|d)\\$v=(?:16|19)\\$m=(\\d{1,10}),t=(\\d{1,10}),p=(\\d{1,10})\\$[A-Za-z0-9+/]{11,}\\$[A-Za-z0-9+/]{16,}$");
+    private static final Pattern FIREBASE_STRUCTURE = Pattern.compile(
+        "^\\$f_scrypt\\$([A-Za-z0-9+/]+={0,2})\\$([A-Za-z0-9+/]+={0,2})\\$m=(\\d{1,2})\\$r=(\\d{1,2})\\$s=([A-Za-z0-9+/]+={0,2})$");
 
-    /** Absent means disabled. Any value other than the exact policy fails closed rather than guessing. */
-    public static boolean legacyEnabled(String value) {
-        if (value == null || value.isEmpty()) return false;
-        if (LEGACY_VALUE.equals(value)) return true;
-        throw new Misconfigured();
-    }
-
-    public static String hashId(String storedHash) {
-        try {
-            return HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(storedHash.getBytes(StandardCharsets.UTF_8)));
-        } catch (java.security.NoSuchAlgorithmException impossible) {
-            throw new IllegalStateException(impossible);
+    /**
+     * Full structural check for bcrypt, argon2 and Firebase scrypt strings, including resource bounds.
+     * Other strings return true so Core's own format check reports them unchanged.
+     */
+    public static boolean structurallyValid(String hash) {
+        if (hash.startsWith("$2")) {
+            Matcher m = BCRYPT_STRUCTURE.matcher(hash);
+            if (!m.matches()) return false;
+            int cost = Integer.parseInt(m.group(1));
+            return cost >= BCRYPT_MIN_COST && cost <= BCRYPT_MAX_COST;
         }
-    }
-
-    /** One lowercase SHA-256 hex digest of a stored hash per line; blank lines ignored; anything else is refused. */
-    public static Set<String> parseSnapshot(List<String> lines) {
-        Set<String> rows = new HashSet<>();
-        for (String line : lines) {
-            String row = line.strip();
-            if (row.isEmpty()) continue;
-            if (!SNAPSHOT_ROW.matcher(row).matches()) throw new Misconfigured();
-            rows.add(row);
+        if (hash.startsWith("$argon2")) {
+            Matcher m = ARGON2_STRUCTURE.matcher(hash);
+            if (!m.matches()) return false;
+            long memory = Long.parseLong(m.group(1)), iterations = Long.parseLong(m.group(2)), parallelism = Long.parseLong(m.group(3));
+            return parallelism >= 1 && parallelism <= ARGON2_MAX_PARALLELISM && memory >= 8 * parallelism &&
+                memory <= ARGON2_MAX_MEMORY_KB && iterations >= 1 && iterations <= ARGON2_MAX_ITERATIONS;
         }
-        if (rows.isEmpty()) throw new Misconfigured();
-        return Set.copyOf(rows);
-    }
-
-    /** Null when the fallback is disabled; otherwise membership in the immutable cutover snapshot. */
-    static Predicate<String> legacyPolicy() {
-        if (!legacyEnabled(System.getenv(LEGACY_ENV))) return null;
-        Set<String> rows = snapshot;
-        if (rows == null) {
-            synchronized (PasswordUpgrade.class) {
-                if (snapshot == null) {
-                    String file = System.getenv(SNAPSHOT_ENV);
-                    if (file == null || file.isEmpty()) throw new Misconfigured();
-                    try {
-                        snapshot = parseSnapshot(Files.readAllLines(Path.of(file), StandardCharsets.US_ASCII));
-                    } catch (java.io.IOException error) {
-                        throw new Misconfigured();
-                    }
-                }
-                rows = snapshot;
+        if (hash.startsWith("$f_scrypt$")) {
+            Matcher m = FIREBASE_STRUCTURE.matcher(hash);
+            if (!m.matches()) return false;
+            int memCost = Integer.parseInt(m.group(3)), rounds = Integer.parseInt(m.group(4));
+            try {
+                java.util.Base64.Decoder decoder = java.util.Base64.getDecoder();
+                if (decoder.decode(m.group(1)).length == 0 || decoder.decode(m.group(2)).length == 0) return false;
+                decoder.decode(m.group(5));
+            } catch (IllegalArgumentException malformed) {
+                return false;
             }
+            return memCost >= 1 && memCost <= FIREBASE_MAX_MEM_COST && rounds >= 1 && rounds <= FIREBASE_MAX_ROUNDS;
         }
-        Set<String> eligible = rows;
-        return hash -> eligible.contains(hashId(hash));
+        return true;
     }
 
-    /** The historical servlet reading of this password, or null when it is identical (pure ASCII). */
-    public static String legacyServletDecoding(String password) {
-        boolean ascii = true;
-        for (int i = 0; i < password.length() && ascii; i++) ascii = password.charAt(i) < 0x80;
-        return ascii ? null : new String(password.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1);
-    }
-
-    /** Only hashes Core itself could have created from a servlet-decoded string are eligible. */
-    static boolean legacyEligible(String hash) {
-        return hash.startsWith("$2") || hash.startsWith("$argon2");
-    }
-
-    public static Match verify(Verifier verifier, String password, String hash, Predicate<String> legacy) throws Exception {
-        if (verifier.verify(password, hash)) return Match.CURRENT;
-        if (legacy == null || !legacyEligible(hash) || !legacy.test(hash)) return Match.NONE;
-        String historical = legacyServletDecoding(password);
-        if (historical == null) return Match.NONE;
-        return verifier.verify(historical, hash) ? Match.LEGACY_SERVLET_DECODING : Match.NONE;
-    }
-
-    public static boolean needsRehash(Match match, String hash, Target target) {
-        if (match == Match.NONE) return false;
-        if (match == Match.LEGACY_SERVLET_DECODING) return true;
+    /** True when an accepted stored hash is not already in the configured Core format and cost. */
+    public static boolean needsRehash(String hash, Target target) {
         if ("BCRYPT".equals(target.algorithm())) {
             Matcher m = BCRYPT.matcher(hash);
             return !m.matches() || Integer.parseInt(m.group(1)) != target.bcryptRounds();
@@ -167,11 +112,11 @@ public final class PasswordUpgrade {
      */
     public static Outcome check(Main main, AppIdentifier app, String password, String hash) throws Exception {
         PasswordHashing hashing = PasswordHashing.getInstance(main);
-        Match match = verify((p, h) -> hashing.verifyPasswordWithHash(app, p, h), password, hash, legacyPolicy());
-        if (!needsRehash(match, hash, target(Config.getConfig(app.getAsPublicTenantIdentifier(), main)))) {
-            return new Outcome(match, null);
+        if (!hashing.verifyPasswordWithHash(app, password, hash)) return new Outcome(false, null);
+        if (!needsRehash(hash, target(Config.getConfig(app.getAsPublicTenantIdentifier(), main)))) {
+            return new Outcome(true, null);
         }
-        return new Outcome(match, hashing.createHashWithSalt(app, password));
+        return new Outcome(true, hashing.createHashWithSalt(app, password));
     }
 
     /** Replaces the hash on the caller's transaction only if it is still the verified one. */

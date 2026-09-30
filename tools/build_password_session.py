@@ -59,11 +59,12 @@ def patched_source(path, original):
 def main():
     parser = argparse.ArgumentParser(description=__doc__); parser.add_argument('--name', required=True)
     parser.add_argument('--firebase-scrypt-bc', action='store_true', help='Use existing Bouncy Castle scrypt with UTF-8 Firebase verification')
-    parser.add_argument('--password-upgrade', action='store_true', help='Route upstream sign-in through PasswordUpgrade (legacy decoding fallback and on-login rehash)')
+    parser.add_argument('--password-upgrade', action='store_true', help='Route upstream sign-in/import through PasswordUpgrade (on-login rehash, bounded import structure); requires --firebase-scrypt-bc')
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument('--verify-existing', help='Recompile and compare an existing exact candidate without replacing it')
     mode.add_argument('--candidate-from', help='Build one new immutable pair while preserving this exact previous build')
     args = parser.parse_args(); need(re.fullmatch('[A-Za-z0-9_-]{1,54}', args.name), 'Invalid build name')
+    need(not args.password_upgrade or args.firebase_scrypt_bc, 'PasswordUpgrade requires the UTF-8 reader profile (--firebase-scrypt-bc)')
     out = ROOT / 'evidence/operations/password-session-build' / args.name
     private = (ROOT / '.runtime/password-session-build' / args.name).resolve()
     cache = (ROOT / '.cache/password-session').resolve()
@@ -89,7 +90,7 @@ def main():
               'started':datetime.now(timezone.utc).isoformat(), 'inputs':{p:sha(ROOT/p) for p in SOURCES},
               'commands':[], 'errors':[], 'images_built':0, 'downloads':0, 'new_volumes':0, 'upstream':[], 'candidates':[]}
     report['firebase_scrypt_profile'] = 'bouncycastle-utf8-v1' if args.firebase_scrypt_bc else 'original-lambdaworks-ascii'
-    report['password_upgrade_profile'] = 'expertauth-password-upgrade-1' if args.password_upgrade else 'atomic-session-only'
+    report['password_upgrade_profile'] = 'expertauth-password-upgrade-2' if args.password_upgrade else 'atomic-session-only'
     if previous_name:
         report['previous_build']={'path':previous_path.relative_to(ROOT).as_posix(),'sha256':sha(previous_path),
                                   'mode':'verify' if prior else 'new-candidate','candidates':previous['candidates']}

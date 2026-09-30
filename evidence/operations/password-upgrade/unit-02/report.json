@@ -1,0 +1,50 @@
+{
+  "kind": "password-upgrade-unit",
+  "policy": "EXPERTAUTH-PASSWORD-UPGRADE-2",
+  "passed": true,
+  "checks": 31,
+  "passes": 31,
+  "results": {
+    "bcrypt_same_cost_kept": true,
+    "bcrypt_2y_same_cost_kept": true,
+    "bcrypt_cost_change_rehashes": true,
+    "bcrypt_to_argon2_rehashes": true,
+    "argon2_to_bcrypt_rehashes": true,
+    "argon2id_same_params_kept": true,
+    "argon2_memory_change_rehashes": true,
+    "argon2_iteration_change_rehashes": true,
+    "argon2_parallelism_change_rehashes": true,
+    "argon2i_to_argon2id_rehashes": true,
+    "firebase_import_to_bcrypt_rehashes": true,
+    "firebase_import_to_argon2_rehashes": true,
+    "firebase_target_never_rehashes": true,
+    "truncated_bcrypt_rehashes": true,
+    "argon2_other_version_rehashes": true,
+    "valid_bcrypt_structure": true,
+    "valid_argon2_variants_structure": true,
+    "valid_firebase_structure": true,
+    "truncated_bcrypt_refused": true,
+    "bcrypt_bad_alphabet_refused": true,
+    "bcrypt_cost_bounds": true,
+    "argon2_garbage_refused": true,
+    "argon2_memory_bound": true,
+    "argon2_zero_and_huge_iterations_refused": true,
+    "argon2_memory_below_8p_refused": true,
+    "argon2_unknown_version_refused": true,
+    "firebase_bad_base64_refused": true,
+    "firebase_cost_bounds": true,
+    "unknown_formats_left_to_core": true,
+    "utf8_password_verifies": true,
+    "latin1_reading_is_not_accepted": true
+  },
+  "source_sha256": {
+    "tests/foundation/PasswordUpgradeTest.java": "5b0b8d2e268bed52eacc842e888c7ca62722205ed0acbf5437b132e0f9e64e97",
+    "engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java": "9a464de2fb911039287e6ecfbefd752e01f57513f30afe7a37cc6bace9a77c38"
+  },
+  "classpath": "Candidate classes and verified dependency JARs from evidence/operations/password-upgrade/cloud-source-04",
+  "libraries": [
+    "jbcrypt-0.4",
+    "argon2-jvm-2.11 (bundled native)",
+    "jna-5.8.0"
+  ]
+}

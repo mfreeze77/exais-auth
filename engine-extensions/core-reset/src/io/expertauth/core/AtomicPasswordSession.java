@@ -36,8 +36,20 @@ public final class AtomicPasswordSession {
             throws StorageQueryException, StorageTransactionLogicException, TenantOrAppNotFoundException;
     }
 
-    public static final class Rejected extends Exception {
+    public static class Rejected extends Exception {
         public Rejected() { super("PASSWORD_SESSION_REJECTED"); }
+    }
+
+    /** The verified hash was replaced before the commit, for example by a concurrent on-login rehash. */
+    public static final class HashChanged extends Rejected {}
+
+    private static boolean hashChanged(Throwable error) {
+        for (int depth = 0; error != null && depth < 8; depth++) {
+            if (error instanceof HashChanged) return true;
+            error = error instanceof StorageTransactionLogicException logic && logic.actualException != null
+                ? logic.actualException : error.getCause();
+        }
+        return false;
     }
 
     public static TransactionalSessionWriter writer(Storage storage) throws Rejected {
@@ -70,7 +82,23 @@ public final class AtomicPasswordSession {
         return found;
     }
 
+    /**
+     * One bounded retry when the only failure is a changed hash: the retry re-reads the user and
+     * re-verifies the password against the new hash, so a concurrent reset still rejects.
+     */
     public static SessionInformationHolder create(Main main, Storage storage, TenantIdentifier tenant,
+            String internalRecipeId, String publicRecipeId, String email, String password,
+            JsonObject jwt, JsonObject databaseData, boolean csrf, AccessToken.VERSION version, boolean staticKey,
+            Long validity) throws Exception {
+        try {
+            return attempt(main, storage, tenant, internalRecipeId, publicRecipeId, email, password, jwt, databaseData, csrf, version, staticKey, validity);
+        } catch (Exception error) {
+            if (!hashChanged(error)) throw error;
+            return attempt(main, storage, tenant, internalRecipeId, publicRecipeId, email, password, jwt, databaseData, csrf, version, staticKey, validity);
+        }
+    }
+
+    private static SessionInformationHolder attempt(Main main, Storage storage, TenantIdentifier tenant,
             String internalRecipeId, String publicRecipeId, String email, String password,
             JsonObject jwt, JsonObject databaseData, boolean csrf, AccessToken.VERSION version, boolean staticKey,
             Long validity) throws Exception {
@@ -93,11 +121,11 @@ public final class AtomicPasswordSession {
                         AuthRecipeUserInfo current = ((AuthRecipeSQLStorage) storage).getPrimaryUserById_Transaction(
                             tenant.toAppIdentifier(), transaction, internalRecipeId);
                         LoginMethod currentMethod = method(current, tenant, internalRecipeId, email);
-                        if (!observedMethod.passwordHash.equals(currentMethod.passwordHash) ||
-                            !observed.getSupertokensUserId().equals(current.getSupertokensUserId())) throw new Rejected();
+                        if (!observed.getSupertokensUserId().equals(current.getSupertokensUserId())) throw new Rejected();
+                        if (!observedMethod.passwordHash.equals(currentMethod.passwordHash)) throw new HashChanged();
                         // A legacy-decoded or outdated hash is replaced in the same commit as the session.
                         if (verified.replacementHash() != null && !PasswordUpgrade.replace(storage, tenant.toAppIdentifier(),
-                                transaction, internalRecipeId, observedMethod.passwordHash, verified.replacementHash())) throw new Rejected();
+                                transaction, internalRecipeId, observedMethod.passwordHash, verified.replacementHash())) throw new HashChanged();
                         List<String> ids = new ArrayList<>(new LinkedHashSet<>(List.of(internalRecipeId, current.getSupertokensUserId())));
                         Map<String, String> publicIds = new HashMap<>();
                         for (UserIdMapping mapping : ((UserIdMappingSQLStorage) storage).getMultipleUserIdMapping_Transaction(

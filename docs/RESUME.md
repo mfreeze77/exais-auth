@@ -9,17 +9,16 @@ This checkpoint has no selected production engine. Do not start feature work tha
 silently assumes Keycloak acceptance, patch Core entitlement enforcement, duplicate
 refresh state in adapters, or directly modify upstream-owned tables.
 
-Latest work is [PasswordUpgrade](password-upgrade.md): the user-selected
-dual-verify + rehash policy for the blocked legacy Unicode migration, plus PWD-005
-on-login rehash. It passed a source-built scratch cloud lab only. Next bounded
-step: build it on the retained lab with `--firebase-scrypt-bc --password-upgrade`,
-capture the cutover snapshot read-only, then run the installed-image, upgrade/
-rollback and Node/Python/browser regressions.
+Latest work is [PasswordUpgrade](password-upgrade.md): PWD-005 on-login rehash and
+bounded MIG-002 import validation. It passed a source-built scratch cloud lab only.
+The legacy Unicode migration is closed by scope because nothing is live. Next
+bounded step: on the retained lab, build with `--firebase-scrypt-bc --password-upgrade`,
+then run the installed-image, upgrade/rollback and Node/Python/browser regressions.
 
 Previous work is [the paused Firebase checkpoint](firebase-scrypt-runtime.md).
 Current Core is `b4a5f18fb782`, binary pair `firebase-bc-02`, Node `2a02e08d5fcb`.
 Its exact read-only resume commands, source/version boundaries, passing behavior,
-blocked legacy Unicode migration and next bounded work are recorded there.
+legacy Unicode migration (since closed by scope) and next bounded work are recorded there.
 The previous guarded-01 pair and image e8c460664ac5 are retired. Preserve
 `--firebase-scrypt-bc` for future source candidates and `--native-argon2-build linux-03`
 for installed images. No new implementation package is in progress. Wait for the

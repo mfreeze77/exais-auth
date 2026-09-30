@@ -1,13 +1,17 @@
-"""Source-built PasswordUpgrade lab: legacy servlet decoding migration and on-login rehash.
+"""Source-built PasswordUpgrade lab: hash import matrix (MIG-002) and on-login rehash (PWD-005).
 
 Builds plugin-interface, Core (AspectJ, as upstream) and the PostgreSQL plugin from pinned
 source checkouts, verifies every third-party JAR against the reviewed Gradle verification
 metadata, applies the same transforms as tools/build_password_session.py, then runs real
 PostgreSQL/Core containers on an internal network. Upstream prebuilt SuperTokens JARs, EE
-code and telemetry binaries are never used. Every owned container/network is removed in
+code and telemetry binaries are never used. Import fixtures come from independent
+libraries (Python bcrypt, argon2-cffi, hashlib scrypt + cryptography AES-CTR), so run
+this with an interpreter that has them. Every owned container/network is removed in
 finally; private scratch stays under the supplied scratch directory.
 """
 import argparse
+import base64
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -43,7 +47,9 @@ JAVA_OPTS = ['--add-opens=java.base/java.lang=ALL-UNNAMED', '--add-opens=java.ba
 UNICODE = 'pässwörd-密码-\U0001F511'
 WRONG = 'pässwörd-wrong-密'
 ASCII = 'plain-ASCII-password-42'
-ALIAS_TARGET = 'Ã©-post-cutover-01'  # ISO-8859-1 reading of UTF-8 "é-post-cutover-01"
+SIGNER = base64.b64encode(hashlib.sha256(b'expertauth-password-upgrade-lab-signer').digest() * 2).decode()  # lab-only
+FB_SALT_SEPARATOR = base64.b64encode(b'\x01\x02').decode()
+HASH_MARKERS = ('$2a$', '$2b$', '$2y$', '$2x$', '$argon2', '$f_scrypt$', 'passwordHash', 'password_hash')
 
 
 def historical(value):
@@ -61,10 +67,10 @@ class Lab:
         self.labels = {'org.expertauth.project': 'expert-auth', 'org.expertauth.purpose': 'password-upgrade-lab',
                        'org.expertauth.run': self.run}
         self.report = {'kind': 'password-upgrade-lab', 'passed': False, 'runtime_qualified': False, 'foundation_passed': False,
-                       'policy': 'EXPERTAUTH-PASSWORD-UPGRADE-1', 'started': datetime.now(timezone.utc).isoformat(),
-                       'run': self.run, 'inputs': {}, 'build': {}, 'cases': [], 'requests': 0, 'errors': [],
+                       'policy': 'EXPERTAUTH-PASSWORD-UPGRADE-2', 'started': datetime.now(timezone.utc).isoformat(),
+                       'run': self.run, 'inputs': {}, 'build': {}, 'cases': [], 'findings': [], 'requests': 0, 'errors': [],
                        'scope': 'Scratch source-built lab on a fresh cloud checkout; not the retained Windows lab or an installed image'}
-        self.containers, self.networks, self.users = [], [], {}
+        self.containers, self.networks, self.users, self.bodies = [], [], {}, []
 
     # ---------- helpers ----------
     def persist(self):
@@ -185,7 +191,7 @@ class Lab:
         self.report['build'] = {'javac': self.sh(['javac', '--version'], env=env).stdout.decode().strip(),
                                 'base': {'core': sha(core), 'plugin_interface': sha(pi), 'postgresql': sha(pg)},
                                 'candidate': {'core': cc, 'postgresql': cp_}, 'patched_upstream': sorted(self.patched)}
-        for variant, core_jar, pg_jar in [('legacy', core, pg), ('candidate', s / 'cand-jars/core-12.2.0.jar', s / 'cand-jars/postgresql-plugin-9.8.0.jar')]:
+        for variant, core_jar, pg_jar in [('candidate', s / 'cand-jars/core-12.2.0.jar', s / 'cand-jars/postgresql-plugin-9.8.0.jar')]:
             home = s / ('install-' + variant); (home / 'lib').mkdir(parents=True); (home / 'plugin').mkdir()
             for j in self.deps['core'] + [core_jar, pi]: shutil.copyfile(j, home / 'lib' / j.name)
             for j in self.deps['plugin'] + [pg_jar]: shutil.copyfile(j, home / 'plugin' / j.name)
@@ -218,17 +224,14 @@ class Lab:
 
     def start_core(self, variant, env):
         name = f'expertauth-pwupgrade-{variant}-{self.run}'
-        home = self.scratch / ('install-' + variant.split('-')[0])
+        home = self.scratch / 'install-candidate'
         config = self.scratch / f'config-{variant}.yaml'
         config.write_text('core_config_version: 0\npostgresql_config_version: 0\nhost: 0.0.0.0\nport: 3567\n'
                           f'api_keys: "{KEY}"\ndisable_telemetry: true\n'
+                          f'firebase_password_hashing_signer_key: "{SIGNER}"\n'
                           'postgresql_connection_uri: "postgresql://postgres:lab-only@pg:5432/supertokens"\n')
         mounts = ['-v', f'{home}/lib:/opt/expertauth/lib:ro', '-v', f'{home}/plugin:/opt/expertauth/plugin:ro',
                   '-v', f'{home}/version.yaml:/opt/expertauth/version.yaml:ro', '-v', f'{config}:/run/expertauth/config.yaml:ro']
-        if 'snapshot' in env:
-            snap = self.scratch / f'snapshot-{variant}.txt'; snap.write_text(env.pop('snapshot'))
-            mounts += ['-v', f'{snap}:/run/expertauth/legacy-password-hashes.txt:ro']
-            env['EXPERTAUTH_LEGACY_PASSWORD_HASHES'] = '/run/expertauth/legacy-password-hashes.txt'
         envs = [a for k, v in env.items() for a in ('-e', f'{k}={v}')]
         self.docker('run', '-d', '--pull=never', '--name', name, *self.labels_args(), '--network', self.network, '--user', '0',
                     '--tmpfs', '/home/gradle/.gradle:rw,noexec,nosuid,size=1m', '--tmpfs', '/opt/expertauth/logs:rw,size=16m', '--tmpfs', '/opt/expertauth/.started:rw,size=1m', '--tmpfs', '/tmp:rw,size=64m',
@@ -259,9 +262,10 @@ class Lab:
         request = urllib.request.Request(base + path, data=body, headers=headers, method='POST')
         self.report['requests'] += 1
         try:
-            with urllib.request.urlopen(request, timeout=30) as r: return r.status, json.loads(r.read() or b'{}')
+            with urllib.request.urlopen(request, timeout=60) as r:
+                raw = r.read(); self.bodies.append(raw.decode('utf-8', 'replace')); return r.status, json.loads(raw or b'{}')
         except urllib.error.HTTPError as error:
-            raw = error.read()
+            raw = error.read(); self.bodies.append(raw.decode('utf-8', 'replace'))
             try: return error.code, json.loads(raw)
             except ValueError: return error.code, {'status': raw[:120].decode('utf-8', 'replace')}
 
@@ -285,76 +289,145 @@ class Lab:
         need(code == 200 and body.get('status') == 'OK', 'Signup failed: ' + label)
         self.users[label] = (body['user']['id'], email); return body['user']['id'], email
 
+    # ---------- fixtures ----------
+    def fixtures(self, password):
+        """Independent-library import fixtures for the configured signer; never produced by Core."""
+        import bcrypt
+        import argon2.low_level as argon2
+        from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+        from importlib.metadata import version
+        pw = password.encode('utf-8'); rows = {}
+        rows['bcrypt-2b-10'] = bcrypt.hashpw(pw, bcrypt.gensalt(10)).decode()
+        rows['bcrypt-2a-12'] = bcrypt.hashpw(pw, bcrypt.gensalt(12, prefix=b'2a')).decode()
+        rows['bcrypt-2y-10'] = '$2y$' + bcrypt.hashpw(pw, bcrypt.gensalt(10)).decode()[4:]
+        for name, kind in [('argon2id', argon2.Type.ID), ('argon2i', argon2.Type.I), ('argon2d', argon2.Type.D)]:
+            rows[name + '-m19456-t2-p1'] = argon2.hash_secret(pw, os.urandom(16), time_cost=2, memory_cost=19456,
+                                                             parallelism=1, hash_len=32, type=kind).decode()
+        salt = os.urandom(16)
+        key = hashlib.scrypt(pw, salt=salt + base64.b64decode(FB_SALT_SEPARATOR), n=2 ** 14, r=8, p=1, dklen=64)
+        encryptor = Cipher(algorithms.AES(key[:32]), modes.CTR(bytes(16))).encryptor()
+        signed = encryptor.update(base64.b64decode(SIGNER)) + encryptor.finalize()
+        rows['firebase-scrypt-m14-r8'] = (f'$f_scrypt${base64.b64encode(signed).decode()}${base64.b64encode(salt).decode()}'
+                                          f'$m=14$r=8$s={FB_SALT_SEPARATOR}')
+        self.report['inputs']['fixture_libraries'] = {p: version(p) for p in ('bcrypt', 'argon2-cffi', 'cryptography')}
+        return rows
+
+    def import_hash(self, base, label, value, algorithm=None):
+        email = f'{label}-{self.run}@password-upgrade.invalid'
+        payload = {'email': email, 'passwordHash': value}
+        if algorithm: payload['hashingAlgorithm'] = algorithm
+        code, body = self.call(base, '/recipe/user/passwordhash/import', payload)
+        ok = code == 200 and body.get('status') == 'OK'
+        if ok: self.users[label] = (body['user']['id'], email)
+        return ok, code, str(body.get('status', ''))[:80]
+
+    def sessions(self, user):
+        return int(self.docker('exec', self.pg, 'psql', '-U', 'postgres', '-d', 'supertokens', '-At', '-c',
+                               f"SELECT count(*) FROM session_info WHERE app_id='public' AND user_id='{user}'").stdout.decode().strip())
+
     # ---------- scenarios ----------
     def scenarios(self):
         self.volumes_before = self.volumes()
         self.start_network()
-        # Phase 1: the historical reader (unpatched source-built Core) creates the legacy population.
-        legacy, base = self.start_core('legacy-bcrypt', {})
-        self.signup(base, 'legacy-unicode-bcrypt', UNICODE, charset=False)
-        self.signup(base, 'legacy-unicode-session', UNICODE, charset=False)
-        self.signup(base, 'legacy-unicode-wrong', UNICODE, charset=False)
-        self.signup(base, 'legacy-unicode-reset', UNICODE, charset=False)
-        self.signup(base, 'legacy-ascii', ASCII, charset=False)
-        self.case('LEGACY-READER-ACCEPTS-RAW-UTF8', self.signin(base, self.users['legacy-unicode-bcrypt'][1], UNICODE, charset=False))
-        self.stop_core(legacy)
-        legacy, base = self.start_core('legacy-argon2', {'PASSWORD_HASHING_ALG': 'ARGON2'})
-        self.signup(base, 'legacy-unicode-argon2', UNICODE, charset=False)
-        self.stop_core(legacy)
-        before = {label: self.stored(uid) for label, (uid, _) in self.users.items()}
-        self.case('LEGACY-HASHES-ARE-OF-HISTORICAL-DECODING', before['legacy-unicode-bcrypt'].startswith('$2') and before['legacy-unicode-argon2'].startswith('$argon2id'))
-        snapshot = '\n'.join(sorted(hashlib.sha256(h.encode()).hexdigest() for h in before.values())) + '\n'
+        fixtures = self.fixtures(UNICODE)
+        bcrypt_target = re.compile(r'^\$2a\$11\$')  # Core defaults: BCRYPT, bcrypt_log_rounds 11
         u = lambda label: self.users[label]
 
-        # Phase 2: candidate with the fallback disabled (default) reproduces the blocked migration, fail closed.
-        core, base = self.start_core('candidate-disabled', {})
-        self.case('DISABLED-REJECTS-LEGACY-UNICODE', not self.signin(base, u('legacy-unicode-bcrypt')[1], UNICODE))
-        self.case('DISABLED-ACCEPTS-ASCII', self.signin(base, u('legacy-ascii')[1], ASCII))
-        self.case('DISABLED-LEAVES-HASHES', all(self.stored(uid) == before[label] for label, (uid, _) in self.users.items()))
+        # Phase 1: BCRYPT target, single replica.
+        core, base = self.start_core('candidate-bcrypt', {})
+        uid, email = self.signup(base, 'native-unicode', UNICODE, charset=True)
+        native = self.stored(uid)
+        self.case('UTF8-SIGNUP-SIGNIN', bcrypt_target.match(native) and self.signin(base, email, UNICODE) and
+                  self.signin(base, email, UNICODE, charset=False))
+        self.case('LATIN1-READING-REFUSED', not self.signin(base, email, historical(UNICODE)))
+        self.case('WRONG-PASSWORD-REFUSED', not self.signin(base, email, WRONG) and self.stored(uid) == native)
+        self.case('SAME-TARGET-NOT-REHASHED', self.signin(base, email, UNICODE) and self.stored(uid) == native)
+        for name, value in fixtures.items():
+            ok, code, status = self.import_hash(base, 'sig-' + name, value)
+            self.case('IMPORT-' + name.upper(), ok, http=code, status=status)
+            if not ok: continue
+            uid, email = u('sig-' + name)
+            self.case(f'IMPORTED-{name.upper()}-WRONG-REFUSED', not self.signin(base, email, WRONG) and self.stored(uid) == value)
+            accepted = self.signin(base, email, UNICODE); after = self.stored(uid)
+            self.case(f'IMPORTED-{name.upper()}-ACCEPTED-REHASHED', accepted and after != value and bool(bcrypt_target.match(after)))
+            self.case(f'IMPORTED-{name.upper()}-STABLE-AFTER-REHASH', self.signin(base, email, UNICODE) and self.stored(uid) == after)
+        for name in ('bcrypt-2b-10', 'argon2id-m19456-t2-p1', 'firebase-scrypt-m14-r8'):
+            ok, _, _ = self.import_hash(base, 'ses-' + name, fixtures[name]); need(ok, 'Import failed: ses-' + name)
+            uid, email = u('ses-' + name)
+            self.case(f'ATOMIC-SESSION-{name.upper()}-REHASHED-IN-COMMIT', self.session(base, uid, email, UNICODE) and
+                      bool(bcrypt_target.match(self.stored(uid))) and self.sessions(uid) == 1)
+            self.case(f'ATOMIC-SESSION-{name.upper()}-WRONG-REFUSED', not self.session(base, uid, email, WRONG) and self.sessions(uid) == 1)
+        unsupported = {'md5-hex': ('5f4dcc3b5aa765d61d8327deb882cf99', None),
+                       'sha512-crypt': ('$6$saltsalt$' + 'a' * 86, None),
+                       'django-pbkdf2': ('pbkdf2_sha256$600000$c2FsdA$' + 'A' * 43 + '=', None),
+                       'plaintext': (ASCII, None),
+                       'passlib-scrypt': ('$scrypt$ln=16,r=8,p=1$c2FsdA$' + 'A' * 43, None),
+                       'bcrypt-declared-argon2': (fixtures['bcrypt-2b-10'], 'ARGON2'),
+                       'argon2-declared-bcrypt': (fixtures['argon2id-m19456-t2-p1'], 'BCRYPT'),
+                       'unknown-algorithm': (fixtures['bcrypt-2b-10'], 'MD5')}
+        for name, (value, algorithm) in unsupported.items():
+            ok, code, status = self.import_hash(base, 'bad-' + name, value, algorithm)
+            self.case('UNSUPPORTED-' + name.upper() + '-REPORTED', not ok and code == 400, http=code, status=status)
+        # Upstream import checks only the prefix; the candidate also requires structure and bounded cost.
+        bcrypt_hash, argon2_hash, firebase_hash = fixtures['bcrypt-2b-10'], fixtures['argon2id-m19456-t2-p1'], fixtures['firebase-scrypt-m14-r8']
+        malformed = {'bcrypt-truncated': '$2a$10$short', 'bcrypt-bad-alphabet': bcrypt_hash[:-1] + '!',
+                     'argon2id-garbage': '$argon2id$garbage', 'argon2-unknown-version': argon2_hash.replace('$v=19$', '$v=20$'),
+                     'firebase-bad-base64': firebase_hash.replace('$f_scrypt$', '$f_scrypt$*', 1),
+                     'bcrypt-cost-17': '$2b$17' + bcrypt_hash[6:], 'argon2-memory-4gib': argon2_hash.replace('m=19456', 'm=4194304'),
+                     'argon2-iterations-101': argon2_hash.replace('t=2,', 't=101,'), 'firebase-memcost-18': firebase_hash.replace('$m=14$', '$m=18$')}
+        for name, value in malformed.items():
+            ok, code, status = self.import_hash(base, 'malformed-' + name, value)
+            self.case('MALFORMED-' + name.upper() + '-REPORTED', not ok and code == 400, http=code, status=status)
         self.stop_core(core)
 
-        # Phase 3: an unrecognised policy value or missing snapshot fails closed for every credential.
-        for variant, env in [('candidate-badvalue', {'EXPERTAUTH_LEGACY_PASSWORD_DECODING': 'true', 'snapshot': snapshot}),
-                             ('candidate-nosnapshot', {'EXPERTAUTH_LEGACY_PASSWORD_DECODING': 'servlet-iso-8859-1-v1'})]:
-            core, base = self.start_core(variant, env)
-            self.case(variant.upper() + '-FAILS-CLOSED', not self.signin(base, u('legacy-ascii')[1], ASCII) and
-                      not self.signin(base, u('legacy-unicode-bcrypt')[1], UNICODE) and self.stored(u('legacy-ascii')[0]) == before['legacy-ascii'])
-            self.stop_core(core)
-
-        # Phase 4: enabled with the cutover snapshot, BCRYPT target.
-        enabled = {'EXPERTAUTH_LEGACY_PASSWORD_DECODING': 'servlet-iso-8859-1-v1', 'snapshot': snapshot}
-        core, base = self.start_core('candidate-enabled', dict(enabled))
-        uid, email = u('legacy-unicode-wrong')
-        self.case('ENABLED-REJECTS-WRONG-UNICODE', not self.signin(base, email, WRONG) and self.stored(uid) == before['legacy-unicode-wrong'])
-        uid, email = u('legacy-unicode-bcrypt')
-        self.case('ENABLED-ACCEPTS-LEGACY-UNICODE', self.signin(base, email, UNICODE))
-        after = self.stored(uid)
-        self.case('LEGACY-MATCH-REHASHED', after != before['legacy-unicode-bcrypt'] and after.startswith('$2'))
-        self.case('REHASHED-ACCEPTS-CURRENT-DECODING', self.signin(base, email, UNICODE) and self.stored(uid) == after)
-        self.case('REHASHED-REFUSES-HISTORICAL-STRING', not self.signin(base, email, historical(UNICODE)))
-        uid, email = u('legacy-unicode-session')
-        self.case('ATOMIC-SESSION-ACCEPTS-AND-REHASHES', self.session(base, uid, email, UNICODE) and self.stored(uid) != before['legacy-unicode-session'])
-        self.case('ATOMIC-SESSION-AFTER-REHASH', self.session(base, uid, email, UNICODE))
-        uid, email = u('legacy-ascii')
-        self.case('ASCII-SAME-TARGET-NOT-REHASHED', self.signin(base, email, ASCII) and self.stored(uid) == before['legacy-ascii'])
-        alias_uid, alias_email = self.signup(base, 'post-cutover-alias', ALIAS_TARGET, charset=True)
-        alias_hash = self.stored(alias_uid)
-        self.case('POST-CUTOVER-ALIAS-REFUSED', not self.signin(base, alias_email, 'é-post-cutover-01') and self.stored(alias_uid) == alias_hash
-                  and self.signin(base, alias_email, ALIAS_TARGET))
-        new_uid, new_email = self.signup(base, 'post-cutover-unicode', UNICODE, charset=True)
-        self.case('NEW-UNICODE-ACCOUNT-CURRENT', self.signin(base, new_email, UNICODE) and not self.signin(base, new_email, historical(UNICODE)))
+        # Phase 2: ARGON2 target (Core defaults m=87795,t=1,p=2): imported and bcrypt accounts move to argon2id.
+        core, base = self.start_core('candidate-argon2', {'PASSWORD_HASHING_ALG': 'ARGON2'})
+        argon2_target = re.compile(r'^\$argon2id\$v=19\$m=87795,t=1,p=2\$')
+        for name in ('bcrypt-2b-10', 'argon2id-m19456-t2-p1', 'argon2i-m19456-t2-p1', 'firebase-scrypt-m14-r8'):
+            ok, _, _ = self.import_hash(base, 'arg-' + name, fixtures[name]); need(ok, 'Import failed: arg-' + name)
+            uid, email = u('arg-' + name)
+            accepted = self.signin(base, email, UNICODE); after = self.stored(uid)
+            self.case(f'ARGON2-TARGET-{name.upper()}-REHASHED', accepted and bool(argon2_target.match(after)) and self.signin(base, email, UNICODE))
+        uid, email = u('native-unicode')
+        self.case('ARGON2-TARGET-BCRYPT-SIGNUP-MIGRATES', self.signin(base, email, UNICODE) and bool(argon2_target.match(self.stored(uid))))
+        uid, email = self.signup(base, 'native-argon2', UNICODE, charset=True)
+        first = self.stored(uid)
+        self.case('ARGON2-TARGET-NATIVE-NOT-REHASHED', bool(argon2_target.match(first)) and self.signin(base, email, UNICODE) and self.stored(uid) == first)
         self.stop_core(core)
 
-        # Phase 5: ARGON2 target; legacy argon2 Unicode and ASCII bcrypt both migrate (PWD-005 on-login rehash).
-        core, base = self.start_core('candidate-argon2', {**enabled, 'PASSWORD_HASHING_ALG': 'ARGON2'})
-        uid, email = u('legacy-unicode-argon2')
-        self.case('ARGON2-LEGACY-UNICODE-ACCEPTED-REHASHED', self.signin(base, email, UNICODE) and self.stored(uid) != before['legacy-unicode-argon2']
-                  and self.stored(uid).startswith('$argon2id') and self.signin(base, email, UNICODE))
-        uid, email = u('legacy-ascii')
-        self.case('BCRYPT-TO-ARGON2-ON-LOGIN', self.signin(base, email, ASCII) and self.stored(uid).startswith('$argon2id') and self.signin(base, email, ASCII))
-        uid, email = u('legacy-unicode-reset')
-        self.case('STILL-LEGACY-ACCOUNT-UNTOUCHED-UNTIL-LOGIN', self.stored(uid) == before['legacy-unicode-reset'])
-        self.stop_core(core)
+        # Phase 3: two BCRYPT replicas; eight concurrent first logins per route on imported accounts.
+        a, base_a = self.start_core('candidate-replica-a', {})
+        b, base_b = self.start_core('candidate-replica-b', {})
+        for route in ('signin', 'session'):
+            label = 'conc-' + route
+            ok, _, _ = self.import_hash(base_a, label, fixtures['argon2i-m19456-t2-p1'] if route == 'signin' else fixtures['firebase-scrypt-m14-r8'])
+            need(ok, 'Import failed: ' + label)
+            uid, email = u(label)
+            def attempt(i):
+                target = base_a if i % 2 == 0 else base_b
+                if route == 'signin':
+                    code, body = self.call(target, '/recipe/signin', {'email': email, 'password': UNICODE})
+                else:
+                    code, body = self.call(target, '/expertauth/password/session', {'userId': uid, 'email': email, 'password': UNICODE,
+                        'enableAntiCsrf': False, 'userDataInJWT': {}, 'userDataInDatabase': {}, 'useDynamicSigningKey': True}, rid='session')
+                return code, str(body.get('status', ''))[:60], 'accessToken' in body
+            with ThreadPoolExecutor(8) as pool: results = list(pool.map(attempt, range(8)))
+            succeeded = sum(1 for c, s_, _ in results if c == 200 and s_ == 'OK')
+            others = sorted({(c, s_) for c, s_, _ in results if not (c == 200 and s_ == 'OK')})
+            final = self.stored(uid)
+            detail = {'attempts': 8, 'succeeded': succeeded, 'other_outcomes': [list(o) for o in others]}
+            if route == 'signin':
+                self.case('CONCURRENT-SIGNIN-ALL-ACCEPTED-ONE-REHASH', succeeded == 8 and bool(bcrypt_target.match(final)) and
+                          self.signin(base_b, email, UNICODE) and self.stored(uid) == final, **detail)
+            else:
+                count = self.sessions(uid); detail['sessions_in_database'] = count
+                # One bounded retry after a concurrent rehash re-verifies against the new hash, so all attempts succeed.
+                self.case('CONCURRENT-ATOMIC-SESSION-ALL-ACCEPTED-ONE-REHASH', succeeded == 8 and not others and count == 8
+                          and bool(bcrypt_target.match(final)), **detail)
+                self.case('CONCURRENT-ATOMIC-SESSION-STABLE-AFTER', self.session(base_b, uid, email, UNICODE) and self.stored(uid) == final)
+        self.stop_core(a); self.stop_core(b)
+        leaked = [i for i, body in enumerate(self.bodies) if any(marker in body for marker in HASH_MARKERS)]
+        self.case('HASH-NEVER-EXPOSED-IN-RESPONSES', not leaked, responses=len(self.bodies), leaking=len(leaked))
 
     def cleanup(self):
         errors = []
@@ -399,7 +472,7 @@ def main():
         lab.report['summary'] = {'cases': len(cases), 'passes': sum(c['passed'] for c in cases)}
         lab.report['passed'] = clean and not lab.report['errors'] and bool(cases) and all(c['passed'] for c in cases)
         lab.report['finished'] = datetime.now(timezone.utc).isoformat(); lab.persist()
-    print(json.dumps({'passed': lab.report['passed'], 'summary': lab.report['summary'], 'errors': lab.report['errors'], 'cleanup': lab.report['cleanup']}))
+    print(json.dumps({'passed': lab.report['passed'], 'summary': lab.report['summary'], 'findings': lab.report['findings'], 'errors': lab.report['errors'], 'cleanup': lab.report['cleanup']}))
     return 0 if lab.report['passed'] else 1
 
 

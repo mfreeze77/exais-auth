@@ -1,117 +1,111 @@
-# Legacy Unicode password migration and on-login rehash
+# Password import validation and on-login rehash
 
 Status: **implemented; source-built scratch lab passes. Not an installed-image,
-foundation or production qualification.** Policy `EXPERTAUTH-PASSWORD-UPGRADE-1`.
-Resolves the design of the blocked legacy Unicode migration recorded in
-`docs/firebase-scrypt-runtime.md` and adds the missing PWD-005 rehash. Every original
-requirement, profile and review gate stays binding. `selected_engine` is still null.
+foundation or production qualification.** Policy `EXPERTAUTH-PASSWORD-UPGRADE-2`.
+Adds the missing PWD-005 rehash and closes an upstream MIG-002 import gap. Every
+original requirement, profile and review gate stays binding. `selected_engine` is still null.
 
-## Problem
+## Scope decision (2026-09-30)
 
-Before candidate `firebase-bc-02`, Core read JSON without a servlet charset as
-ISO-8859-1. An account created with a non-ASCII password therefore has a bcrypt or
-argon2 hash of the *Latin-1 reading of the UTF-8 bytes*. The UTF-8 reader correctly
-refuses that password. `firebase-legacy-json-01` measured this as a blocked
-migration. Imported and outdated hashes were also never upgraded after login.
+The user confirmed ExpertAuth is **not live**. No account was ever created by the
+historical ISO-8859-1 JSON reader, so the "legacy Unicode migration" blocked in
+`docs/firebase-scrypt-runtime.md` has no population and is closed by scope. UTF-8 is the
+only supported password decoding. The opt-in legacy-decoding fallback built earlier
+the same day (policy `-1`, runs `cloud-source-01`/`-02`) was removed rather than kept
+as unused attack surface. Its evidence stays as history. If a deployment ever inherits
+old-reader accounts, the answer is the existing reset flow, not a second decoding.
 
-## Decision (user-selected: dual-verify + rehash)
+## Behavior
 
-`engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java`:
+`engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java`, applied to
+upstream `EmailPassword.java` by `tools/patch_password_upgrade.py`:
 
-1. Verify with the current decoding through Core's unchanged `PasswordHashing`.
-2. Only if that fails, and only when **all** of these hold, retry with
-   `new String(utf8Bytes, ISO_8859_1)`:
-   - `EXPERTAUTH_LEGACY_PASSWORD_DECODING=servlet-iso-8859-1-v1`, the exact value.
-     Absent means disabled. Any other value fails closed for every sign-in.
-   - `EXPERTAUTH_LEGACY_PASSWORD_HASHES` names a readable file of lowercase
-     SHA-256 digests of the stored hash strings captured at cutover. A missing,
-     empty or malformed file fails closed for every sign-in.
-   - The stored hash is bcrypt/argon2, a format Core itself created from a servlet
-     string. Firebase scrypt imports were hashed by Firebase from real bytes and
-     are never eligible.
-   - The stored hash's digest is in the snapshot.
-3. A legacy match always rehashes the correctly decoded password. Any accepted hash
-   whose format or cost differs from the configured Core algorithm is also rehashed:
-   bcrypt rounds, argon2id m/t/p, argon2i/d to argon2id, or bcrypt to argon2 and
-   the reverse. Imported Firebase hashes move to the configured algorithm. A
-   `FIREBASE_SCRYPT` target never rehashes because Core cannot create it.
+- **Rehash on login (PWD-005).** Verification uses Core's unchanged `PasswordHashing`.
+  An accepted hash whose format or cost differs from the configured Core algorithm is
+  rehashed. That covers imported bcrypt/argon2/Firebase scrypt, changed bcrypt rounds,
+  changed argon2id m/t/p, argon2i/d to argon2id, and bcrypt to argon2 and the reverse.
+  A `FIREBASE_SCRYPT` target never rehashes because Core cannot create it. Writes use
+  `EmailPasswordSQLStorage.updateUsersPassword_Transaction` under `lockUser` as a
+  compare-and-replace against the exact verified hash.
+  - `/expertauth/password/session`: the rehash commits in the **same transaction** as
+    the session. If a concurrent login already rehashed, the attempt fails with
+    `HashChanged` and is retried **once**. The retry re-reads the user and re-verifies
+    the password against the new hash, so a concurrent reset to a different password
+    still rejects.
+  - `/recipe/signin`: acceptance follows verification. The rehash is a best-effort
+    locked transaction and is retried on the next login if it fails.
+- **Import validation (MIG-002).** Upstream accepts any string with a known prefix
+  (`$2a$10$short` imports and can never sign in). It also accepts unbounded costs, so
+  one imported record can make every login attempt on that account a
+  memory/CPU sink. After the unchanged upstream check, single-user import now
+  requires full structure and bounded cost, and otherwise returns
+  `400 Password hash is malformed or exceeds import cost bounds`:
+  - bcrypt `$2[abxy]$` with a 53-character bcrypt-alphabet body; cost 4–16;
+  - argon2 `id|i|d`, `v=16|19`, m ≥ 8·p and ≤ 1 GiB, t 1–100, p 1–64, base64 salt/hash;
+  - Firebase `$f_scrypt$<hash>$<salt>$m=$r=$s=` in that order, decodable base64,
+    m 1–17, r 1–32.
 
-The snapshot is what makes the fallback exact. Without it, a post-cutover account
-whose password text happens to be a Latin-1 reading (for example `Ã©…`) would also
-accept `é…`, and the rehash would silently change that user's password. With it,
-post-cutover hashes are never eligible. A rehashed or reset credential has a new
-hash that is not in the snapshot, so eligibility ends by construction. No
-upstream table is altered and no schema or marker row is added.
-
-Rehash writes go through the storage plugin's
-`EmailPasswordSQLStorage.updateUsersPassword_Transaction`, under `lockUser`, as a
-compare-and-replace against the exact verified hash:
-
-- `/expertauth/password/session` (atomic profile): the replacement commits in the
-  **same transaction** as the session insert. Any mismatch rejects the operation.
-- `/recipe/signin` (upstream route; `tools/patch_password_upgrade.py` changes only the
-  verification call): verification decides acceptance. The rehash is a separate
-  best-effort locked transaction; if it fails, the old hash remains and the rehash
-  is retried on the next sign-in. Lookup, `WRONG_CREDENTIALS`, the Firebase signer
-  key error and audit emission stay upstream.
-
-A legacy-era hash also still accepts the historically decoded string directly,
-because that is literally the hashed text. This stops once the account is rehashed.
-
-## Operator procedure (not yet qualified on the retained lab)
-
-1. Before starting any UTF-8-reader Core, capture the snapshot read-only:
-   `psql -At -c "SELECT password_hash FROM emailpassword_users" | python -c "import sys,hashlib;[print(hashlib.sha256(l.rstrip('\n').encode()).hexdigest()) for l in sys.stdin if l.strip()]" > legacy-password-hashes.txt`
-   Treat this file as sensitive. Mount it read-only.
-2. Build: `tools/build_password_session.py --name NEW --candidate-from firebase-bc-02 --firebase-scrypt-bc --password-upgrade`.
-3. Start Core with both variables set. Leave them set until the non-rehashed
-   population is acceptable, then unset `EXPERTAUTH_LEGACY_PASSWORD_DECODING`. The
-   remaining legacy Unicode accounts then need the existing reset flow.
+  These bounds are policy constants for review, not upstream values. Core-created
+  hashes are not subject to them, so an operator's own `bcrypt_log_rounds` is unaffected.
+- `--password-upgrade` in `tools/build_password_session.py` requires `--firebase-scrypt-bc`,
+  so the UTF-8 reader is always present.
 
 ## Evidence
 
-- `evidence/operations/password-upgrade/unit-01/report.json`: 27/27 decision checks
-  with the real jbcrypt 0.4 and argon2-jvm 2.11 libraries Core uses.
-- `evidence/operations/password-upgrade/cloud-source-02/report.json`: **20/20** real
-  cases, 30 HTTP requests. Built by `tools/run_password_upgrade_lab.py` from pinned
+- `evidence/operations/password-upgrade/cloud-source-04/report.json`: **65/65** real
+  cases, 95 HTTP requests, built by `tools/run_password_upgrade_lab.py` from pinned
   Core/plugin-interface/PostgreSQL-plugin checkouts. Core is compiled with AspectJ
-  1.9.24 as upstream does. All 84 third-party JARs match
-  `engine-extensions/oss-build/locks/gradle/verification-metadata.xml`. Upstream
-  prebuilt SuperTokens JARs, EE code and telemetry binaries are excluded, and the
-  patched sources come from the same `patched_source` function as the real
-  builder. PostgreSQL 17.11 runs on an `--internal` network. An unpatched
-  source-built Core creates the legacy population, and the candidate then runs in
-  five configurations. Cases: legacy reader behavior; disabled default reproduces
-  the block and changes nothing; bad value and missing snapshot fail closed;
-  wrong Unicode refused; legacy bcrypt/argon2 accepted and rehashed; the historical
-  string refused after rehash; atomic session accepts and rehashes in one commit;
-  same-target ASCII untouched; post-cutover alias refused; bcrypt to argon2 on
-  login; untouched accounts stay legacy. All 8 owned containers, the network and
-  scratch were removed; measured `volumes_left: []`; no image was built.
-- `cloud-source-01` passed the same 20 cases, but its cleanup claim was a constant.
-  It left 8 anonymous volumes, which were removed by exact ID. See its
-  `CORRECTION.md`; the runner now measures volumes and fails on a leak.
-- `tests/evidence/test_password_upgrade_patch.py`: 4 source-transform guard tests.
+  1.9.24 as upstream does. All 84 third-party JARs match the reviewed Gradle
+  verification metadata. Upstream prebuilt SuperTokens JARs, EE code and telemetry
+  binaries are excluded. The patched sources come from the builder's own
+  `patched_source`. PostgreSQL 17.11 runs on an `--internal` network with a
+  configured Firebase signer key. The cases:
+  - **Decoding:** UTF-8 signup/signin with and without an explicit charset; the
+    Latin-1 reading of the password is refused; a wrong password is refused and
+    changes nothing; a same-target hash is left unchanged.
+  - **Import matrix:** seven fixtures made by *independent* libraries (Python
+    bcrypt 5.0.0: `$2b$`/`$2a$` cost 12/`$2y$`; argon2-cffi 25.1.0: argon2id/i/d at
+    m=19456,t=2,p=1; and hashlib scrypt with cryptography 50.0.2 AES-CTR for Firebase
+    m=14,r=8). Each imports, refuses a wrong password without change, accepts the
+    Unicode password, rehashes to `$2a$11$`, and stays stable.
+  - **Atomic session route:** three fixtures rehash in the same commit as exactly
+    one session; wrong passwords create no session.
+  - **Rejected imports:** 8 unsupported or mismatched imports (md5, sha512-crypt,
+    Django pbkdf2, plaintext, passlib scrypt, declared-algorithm mismatches, unknown
+    algorithm) report 400. 9 malformed or over-cost imports report 400.
+  - **ARGON2 target:** imported bcrypt/argon2id/argon2i/Firebase and native bcrypt
+    accounts move to `$argon2id$v=19$m=87795,t=1,p=2`; new argon2 accounts are not
+    rehashed.
+  - **Two replicas:** 8 concurrent first logins per route. `/recipe/signin` accepts
+    8/8 with one final hash; the atomic route accepts 8/8 with exactly 8 sessions
+    and one final hash.
+  - **No hash exposure:** none of the 95 response bodies contains a hash marker or
+    hash field.
+  - **Cleanup:** all containers, the network and the scratch were removed;
+    measured `volumes_left: []`.
+- `evidence/operations/password-upgrade/unit-02/report.json`: 31/31 rehash-decision
+  and structure-bound checks with jbcrypt 0.4 and argon2-jvm 2.11.
+- `tests/evidence/test_password_upgrade_patch.py`: 6 transform/guard tests, including
+  no remaining alternate decoding.
+- History:
+  - `cloud-source-03` (policy `-2` before these fixes) passed 56 cases but measured
+    the problems fixed here. Only 1 of 8 concurrent atomic logins succeeded (the
+    other 7 got `PASSWORD_SESSION_REJECTED` after the first rehash), and malformed
+    prefixed hashes imported with HTTP 200.
+  - `cloud-source-01`/`-02` and `unit-01` are the removed policy `-1`. Run 01's
+    volume-cleanup misstatement is corrected in its `CORRECTION.md`.
 
 ## Limits (all remain open)
 
-- Scratch lab on a fresh cloud checkout. It is not the retained Windows lab,
-  installed Core `b4a5f18fb782`, the source-built Argon2 library or BC 1.85.2. The
-  lab uses the image-locked BC 1.84, the bundled argon2-jvm native library and the
-  pinned `gradle@sha256:67b8c4…` JRE pulled via `mirror.gcr.io`. Firebase rows were
-  not re-run.
-- The candidate is not built through `tools/build_password_session.py`. That needs
-  the retained `.cache` and compiler volume. No installed image, upgrade/rollback,
-  two-replica concurrency on the rehash, Node/Python/browser regression, or
-  snapshot capture against the persistent database has been run.
-- Failed verification with a non-ASCII password costs a second hash computation on
-  eligible accounts. This reveals nothing beyond the attacker's own input, but it
-  should be reviewed alongside SMTP/known-user timing.
-- Rehash on the upstream route is best-effort by design, not atomic with the response.
-- The snapshot is read once per Core process; changing it requires a restart.
-- Rehash transactions run at the plugin's SERIALIZABLE default. Two concurrent
-  first logins on one legacy account can conflict. `/recipe/signin` absorbs the
-  conflict, but the atomic route may reject one attempt; a retry succeeds. This is
-  reasoned from the plugin source, not yet measured.
-- Independent human security review, MIG-002 import matrix, full hash/parameter
-  bounds and every SDK/platform/provider profile remain required.
+- Scratch lab on a fresh cloud checkout, not the retained Windows lab, installed Core
+  `b4a5f18fb782`, the source-built Argon2 library or BC 1.85.2. The lab uses the
+  image-locked BC 1.84, the bundled argon2-jvm native library and the pinned
+  `gradle@sha256:67b8c4…` JRE via `mirror.gcr.io`. The candidate was not built through
+  `tools/build_password_session.py`, which needs the retained `.cache` and compiler
+  volume. No installed image, upgrade/rollback or Node/Python/browser regression.
+- Bulk import (`BulkImportUserUtils`) still uses only the upstream prefix check.
+- The concurrent reset-versus-retry path is argued from the code; it was not
+  injected deterministically.
+- Rehash on the upstream route is best-effort by design. The import cost bounds are
+  unreviewed policy. Independent human security review and every SDK/platform/provider
+  profile remain required.
