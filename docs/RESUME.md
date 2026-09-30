@@ -10,10 +10,9 @@ ExpertAuth engine in `engine/`. SuperTokens is the functional/API reference only
 add SuperTokens code to the product. The earlier SuperTokens-Core patch labs and
 Keycloak labs are reference evidence and differential-test oracles. Resume engine work:
 `cd engine && npm ci && npm run typecheck && EXPERTAUTH_TEST_ADMIN_URL=... npm test`.
-Next bounded engine slices:
-- account linking (primary/method identities, with the link/unlink concurrency cases
-  that failed on Keycloak);
-- email verification;
+Account linking is done (slice 2, 51/51). Record each new slice with
+`python tools/record_engine_evidence.py --name <new-name>`. Next bounded engine slices:
+- email verification (needed by LNK-004 automatic linking and the LNK-003 proof policy);
 - user search, metadata and roles;
 - signing-key rotation and audit/outbox;
 - then passwordless, third-party/OIDC, MFA, and the FDI backend adapters for the

@@ -10,10 +10,10 @@ The immutable acceptance baseline lives under `baseline/`; editable traceability
 **Engine decided (ADR-001, 2026-09-30):** ExpertAuth is its own, independently authored
 engine in [`engine/`](engine/README.md), written in TypeScript with PostgreSQL. SuperTokens
 is the functional and API reference only, and no SuperTokens code is in the product.
-The first vertical slice passes 41/41 tests against real PostgreSQL. It covers native
-apps/tenants, tenant-scoped identities with explicit sharing, argon2id with bounded
-imports and rehash, RS256 sessions with race-safe refresh rotation and theft detection,
-and atomic password reset.
+Slices 1–2 pass 51/51 tests against real PostgreSQL. They cover native apps/tenants,
+tenant-scoped identities with explicit sharing, argon2id with bounded imports and
+rehash, RS256 sessions with race-safe refresh rotation and theft detection, atomic
+password reset, and concurrency-safe account linking.
 
 Everything below this point describes the **earlier reference labs** (SuperTokens-Core
 patches and Keycloak). They are behavioral evidence and test oracles, not product code.

@@ -14,19 +14,29 @@ export function createPool(url: string): Db {
   return pool;
 }
 
-/** Runs fn in one READ COMMITTED transaction; row locks (SELECT ... FOR UPDATE) provide ordering. */
-export async function transaction<T>(db: Db, fn: (tx: Tx) => Promise<T>): Promise<T> {
-  const tx = await db.connect();
-  try {
-    await tx.query('BEGIN');
-    const result = await fn(tx);
-    await tx.query('COMMIT');
-    return result;
-  } catch (error) {
-    await tx.query('ROLLBACK').catch(() => undefined);
-    throw error;
-  } finally {
-    tx.release();
+/**
+ * Runs fn in one READ COMMITTED transaction; row locks (SELECT ... FOR UPDATE) provide ordering.
+ * With rollback: true the same logic runs and is then discarded, so dry-run checks cannot drift
+ * from the real operation.
+ */
+export async function transaction<T>(db: Db, fn: (tx: Tx) => Promise<T>, options: { rollback?: boolean } = {}): Promise<T> {
+  // Deadlocks and serialisation failures abort the whole transaction, so re-running fn is safe:
+  // transaction bodies only act through tx.
+  for (let attempt = 1; ; attempt++) {
+    const tx = await db.connect();
+    try {
+      await tx.query('BEGIN');
+      const result = await fn(tx);
+      await tx.query(options.rollback ? 'ROLLBACK' : 'COMMIT');
+      return result;
+    } catch (error) {
+      await tx.query('ROLLBACK').catch(() => undefined);
+      const code = (error as { code?: string }).code;
+      if (attempt < 4 && (code === '40P01' || code === '40001')) continue;
+      throw error;
+    } finally {
+      tx.release();
+    }
   }
 }
 

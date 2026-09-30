@@ -6,7 +6,7 @@ functional and API **reference only**. No SuperTokens code is used. Routes and r
 the published CDI contracts captured in `../contracts/`, so reference-style backends can talk to it,
 but behavior is our own design and is tested here.
 
-Status: **first vertical slice (M1). Partial; not production-approved.** 41/41 tests pass against real
+Status: **M1 vertical slices 1–2. Partial; not production-approved.** 51/51 tests pass against real
 PostgreSQL. Everything not listed below is still planned; see `../ledger/implementation.json`.
 
 ## Implemented
@@ -15,6 +15,7 @@ PostgreSQL. Everything not listed below is still planned; see `../ledger/impleme
 | --- | --- |
 | Health / version | `GET /hello`, `GET /apiversion` (advertises CDI `5.4` shapes for the implemented subset only) |
 | Native multi-tenancy | `PUT /recipe/multitenancy/app/v2` (public app only), `PUT …/tenant/v2`, `GET …/tenant/list/v2`, `POST <tenant>/recipe/multitenancy/tenant/user[/remove]` |
+| Account linking | `GET /recipe/accountlinking/user/primary/check`, `POST …/user/primary`, `GET …/user/link/check`, `POST …/user/link`, `POST …/user/unlink` |
 | Email/password | `POST <tenant>/recipe/signup`, `…/signin`, `…/user/passwordhash/import`, `GET/PUT /recipe/user` |
 | Password reset | `POST <tenant>/recipe/user/password/reset/token`, `…/reset/token/consume` (two-step), `…/user/password/reset` (atomic) |
 | Sessions | `POST <tenant>/recipe/session`, `POST /recipe/session/refresh`, `…/verify`, `…/remove`, `GET /recipe/session` |
@@ -25,6 +26,19 @@ PostgreSQL. Everything not listed below is still planned; see `../ledger/impleme
 - **Identity:** email identities are tenant-scoped. The same email in two tenants is two identities.
   Sharing across tenants happens only through explicit association, and a conflicting email is refused.
   There is no global unique-email constraint. Apps are isolated namespaces with separate signing keys.
+- **Account linking:** every operation locks the involved emails (advisory, sorted) and user
+  rows (by id), then re-reads ownership. Deadlocks and serialisation failures retry the whole
+  transaction. The invariants, tested under concurrency, are:
+  - a method is owned by exactly one user;
+  - only primary users own several methods;
+  - no two primary users share an email in a tenant;
+  - no user row exists without a login method;
+  - unlinked methods become standalone users that can still sign in. The one exception is the
+    primary user's own original method: it is deleted when other methods remain, so the
+    primary id stays stable (`wasRecipeUserDeleted`).
+
+  Linking revokes the absorbed user's sessions, and unlinking revokes the method's sessions. The
+  check endpoints run the real operation and roll it back.
 - **Passwords:** new credentials use argon2id, by default m=19456 KiB, t=2, p=1. Imported bcrypt
   (`$2a/b/x/y$`, cost 4–16) and argon2 id/i/d hashes must be structurally valid and within cost
   bounds, and are rehashed to the configured argon2id on the next successful login. The rehash is a
@@ -77,13 +91,14 @@ EXPERTAUTH_TEST_ADMIN_URL=postgresql://postgres:<pw>@127.0.0.1:5432/postgres npm
 ```
 
 Each test file creates and drops its own database. The suites cover identity and multi-tenancy (10),
-sessions and refresh (13), reset (5), and config/routing/primitives (13).
+sessions and refresh (13), reset (5), account linking including concurrency (9), transaction retry (1),
+and config/routing/primitives (13).
 
 ## Known gaps (open, tracked)
 
 The engine has no rate limiting or abuse controls yet; it is designed to sit behind the application
 backend. `PUT /recipe/user` changes a password without revoking sessions (the reference two-step
-flow); the atomic reset route does revoke. Still missing: email verification, account linking,
-passwordless, third-party/OAuth/SAML, MFA/TOTP/WebAuthn, roles, metadata, user search, key rotation,
+flow); the atomic reset route does revoke. Still missing: email verification, application-level
+link proofs and automatic-linking policy (LNK-003/004), passwordless, third-party/OAuth/SAML, MFA/TOTP/WebAuthn, roles, metadata, user search, key rotation,
 user-ID mapping, audit/outbox, the remaining CDI routes, SDK/FDI backends, the dashboard and control
 plane, plus load, HA, backup and independent security review. All 265 requirements remain binding.

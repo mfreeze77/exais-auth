@@ -6,6 +6,7 @@ import { safeEqual } from '../crypto.ts';
 import type { Db } from '../db.ts';
 import { badRequest, HttpError } from '../errors.ts';
 import * as identity from '../identity.ts';
+import * as linking from '../linking.ts';
 import type { KeyStore } from '../keys.ts';
 import * as reset from '../reset.ts';
 import type { Sessions } from '../sessions.ts';
@@ -38,6 +39,14 @@ function routes(engine: Engine): Map<string, Route> {
       handle: async (c) => identity.associateWithTenant(db, scope(c), c.body.recipeUserId) }],
     ['POST /recipe/multitenancy/tenant/user/remove', { tenant: true, auth: true,
       handle: async (c) => identity.disassociateFromTenant(db, scope(c), c.body.recipeUserId) }],
+    // Account linking.
+    ['GET /recipe/accountlinking/user/primary/check', { tenant: false, auth: true,
+      handle: async (c) => linking.createPrimaryUser(db, c.appId, { recipeUserId: c.query.get('recipeUserId') }, true) }],
+    ['POST /recipe/accountlinking/user/primary', { tenant: false, auth: true, handle: async (c) => linking.createPrimaryUser(db, c.appId, c.body) }],
+    ['GET /recipe/accountlinking/user/link/check', { tenant: false, auth: true, handle: async (c) =>
+      linking.linkAccounts(db, c.appId, { recipeUserId: c.query.get('recipeUserId'), primaryUserId: c.query.get('primaryUserId') }, true) }],
+    ['POST /recipe/accountlinking/user/link', { tenant: false, auth: true, handle: async (c) => linking.linkAccounts(db, c.appId, c.body) }],
+    ['POST /recipe/accountlinking/user/unlink', { tenant: false, auth: true, handle: async (c) => linking.unlinkAccount(db, c.appId, c.body) }],
     // Email/password.
     ['POST /recipe/signup', { tenant: true, auth: true, handle: async (c) => identity.signUp(db, config, scope(c), c.body) }],
     ['POST /recipe/signin', { tenant: true, auth: true, handle: async (c) => identity.signIn(db, config, scope(c), c.body) }],
