@@ -1,0 +1,192 @@
+{
+  "kind": "password-upgrade-lab",
+  "passed": true,
+  "runtime_qualified": false,
+  "foundation_passed": false,
+  "policy": "EXPERTAUTH-PASSWORD-UPGRADE-1",
+  "started": "2026-09-30T06:07:44.313293+00:00",
+  "run": "9aa498227e",
+  "inputs": {
+    "supertokens-core": "b2219c4aa019a501e4dfea76cf06ef802ca93fc0",
+    "supertokens-plugin-interface": "2550750188069110753decd06265a59fadefb427",
+    "supertokens-postgresql-plugin": "0b68fd14ca10baee2d0e3c31466984fccfb36c8a",
+    "verified_dependency_jars": {
+      "core": 80,
+      "plugin": 4
+    },
+    "dependency_digest": "ffbce69cfe856e8b74c83079abb91b7b8c4d6d1346c5445a74bb2477fc887a78",
+    "files": {
+      "tools/run_password_upgrade_lab.py": "cb64beee727d08dd9085e0c9df659b20d7c699598a72af1f17347636f2ca509b",
+      "tools/build_password_session.py": "1cb5c8b31e629ef39f3546f49ba48f361ecc207629c3301f5ee631ad1cfb1a33",
+      "tools/patch_password_upgrade.py": "ef45e74580a6c3ad7040a95d39127149bcb0bed3e2d10f180572ef56a5100772",
+      "tools/patch_firebase_scrypt.py": "dfd8b5d24a49bcbd9936e44e26e160d055d266811c1c44616b2b1a412c381b01",
+      "tools/patch_session_policy.py": "e9f7c244bfcd223b423eef6241f21940f2c68f4833fabc10d423fef37ef7efe6",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordReset.java": "b6b2c3e160594b290db4fd4c5769891327f3ff093fed4dfd3ace9fc87cecf42c",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordResetAPI.java": "642559a13f72e27f93649fd8aead7e6082c3bb3c6943833676c38442fba9af64",
+      "engine-extensions/core-reset/src/io/expertauth/core/TransactionalSessionWriter.java": "4e420fee569e245b952e6d214077e7fc11b502e4973a028868da0ec3d81202e1",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSession.java": "605a2bf471ed395522d2f5a9dcf211ce9dbc4d6088824ed78ebc3c9db0c732c4",
+      "engine-extensions/core-reset/src/io/expertauth/core/AtomicPasswordSessionAPI.java": "5e1fc6c057316916068c6bcabab8ca7caabfc677a8d6ccf94d943b5f4dd5480a",
+      "engine-extensions/core-reset/src/io/expertauth/core/SessionPolicy.java": "166e01da744f6030718ca74318c6ca318488c4f27dd31e774edacb0e95ed713f",
+      "engine-extensions/core-reset/src/io/expertauth/core/PasswordUpgrade.java": "5e9024e0035875dea89a9a1619169d7bffc74396ca14f448da0fec7dbdc9aea8",
+      "engine-extensions/core-reset/postgresql/io/supertokens/storage/postgresql/ExpertAuthSessionWriter.java": "870e18adc9ecff84ea371a064de77f43e25d829bf79d76de1baaa1adc2a94566"
+    }
+  },
+  "build": {
+    "javac": "javac 21.0.10",
+    "base": {
+      "core": "6c1965c6f31993ccc32e683e329e15b9949010deb7fe1d9c764a8c6f4fa96265",
+      "plugin_interface": "aa020c56b1825f7c719cf6727a21aa4b62059e38fcb250be00b890bb63051c60",
+      "postgresql": "f57c98bf8b5a7337d8b13a402ed18fbcab58778ec0203f25fdb5010bbc0bc851"
+    },
+    "candidate": {
+      "core": {
+        "sha256": "686bfc1dbe5f1f359f0d75fddfffe22db8413d755a5c107fca233e3d50be1260",
+        "changed": [
+          "io/supertokens/emailpassword/EmailPassword$ConsumeResetPasswordTokenResult.class",
+          "io/supertokens/emailpassword/EmailPassword$ImportUserResponse.class",
+          "io/supertokens/emailpassword/EmailPassword.class",
+          "io/supertokens/emailpassword/PasswordHashingUtils.class",
+          "io/supertokens/session/Session.class",
+          "io/supertokens/webserver/InputParser.class",
+          "io/supertokens/webserver/Webserver$TomcatReference.class",
+          "io/supertokens/webserver/Webserver.class"
+        ],
+        "added": [
+          "io/expertauth/core/AtomicPasswordReset$Rejected.class",
+          "io/expertauth/core/AtomicPasswordReset.class",
+          "io/expertauth/core/AtomicPasswordResetAPI.class",
+          "io/expertauth/core/AtomicPasswordSession$Insert.class",
+          "io/expertauth/core/AtomicPasswordSession$Rejected.class",
+          "io/expertauth/core/AtomicPasswordSession.class",
+          "io/expertauth/core/AtomicPasswordSessionAPI.class",
+          "io/expertauth/core/GuardedRefreshSessionAPI.class",
+          "io/expertauth/core/GuardedVerifySessionAPI.class",
+          "io/expertauth/core/PasswordUpgrade$Match.class",
+          "io/expertauth/core/PasswordUpgrade$Misconfigured.class",
+          "io/expertauth/core/PasswordUpgrade$Outcome.class",
+          "io/expertauth/core/PasswordUpgrade$Target.class",
+          "io/expertauth/core/PasswordUpgrade$Verifier.class",
+          "io/expertauth/core/PasswordUpgrade.class",
+          "io/expertauth/core/SessionPolicy$Rejected.class",
+          "io/expertauth/core/SessionPolicy.class",
+          "io/expertauth/core/TransactionalSessionWriter.class"
+        ]
+      },
+      "postgresql": {
+        "sha256": "d3a3f5d8721969a6d7f4c6e43c3fe7bb51f730538e7f73b212bedc8769de13f5",
+        "changed": [],
+        "added": [
+          "META-INF/services/io.expertauth.core.TransactionalSessionWriter",
+          "io/supertokens/storage/postgresql/ExpertAuthSessionWriter.class"
+        ]
+      }
+    },
+    "patched_upstream": [
+      "src/main/java/io/supertokens/emailpassword/EmailPassword.java",
+      "src/main/java/io/supertokens/emailpassword/PasswordHashingUtils.java",
+      "src/main/java/io/supertokens/session/Session.java",
+      "src/main/java/io/supertokens/webserver/InputParser.java",
+      "src/main/java/io/supertokens/webserver/Webserver.java",
+      "src/main/java/io/supertokens/webserver/api/session/RefreshSessionAPI.java",
+      "src/main/java/io/supertokens/webserver/api/session/VerifySessionAPI.java"
+    ]
+  },
+  "cases": [
+    {
+      "name": "LEGACY-READER-ACCEPTS-RAW-UTF8",
+      "passed": true
+    },
+    {
+      "name": "LEGACY-HASHES-ARE-OF-HISTORICAL-DECODING",
+      "passed": true
+    },
+    {
+      "name": "DISABLED-REJECTS-LEGACY-UNICODE",
+      "passed": true
+    },
+    {
+      "name": "DISABLED-ACCEPTS-ASCII",
+      "passed": true
+    },
+    {
+      "name": "DISABLED-LEAVES-HASHES",
+      "passed": true
+    },
+    {
+      "name": "CANDIDATE-BADVALUE-FAILS-CLOSED",
+      "passed": true
+    },
+    {
+      "name": "CANDIDATE-NOSNAPSHOT-FAILS-CLOSED",
+      "passed": true
+    },
+    {
+      "name": "ENABLED-REJECTS-WRONG-UNICODE",
+      "passed": true
+    },
+    {
+      "name": "ENABLED-ACCEPTS-LEGACY-UNICODE",
+      "passed": true
+    },
+    {
+      "name": "LEGACY-MATCH-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "REHASHED-ACCEPTS-CURRENT-DECODING",
+      "passed": true
+    },
+    {
+      "name": "REHASHED-REFUSES-HISTORICAL-STRING",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-ACCEPTS-AND-REHASHES",
+      "passed": true
+    },
+    {
+      "name": "ATOMIC-SESSION-AFTER-REHASH",
+      "passed": true
+    },
+    {
+      "name": "ASCII-SAME-TARGET-NOT-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "POST-CUTOVER-ALIAS-REFUSED",
+      "passed": true
+    },
+    {
+      "name": "NEW-UNICODE-ACCOUNT-CURRENT",
+      "passed": true
+    },
+    {
+      "name": "ARGON2-LEGACY-UNICODE-ACCEPTED-REHASHED",
+      "passed": true
+    },
+    {
+      "name": "BCRYPT-TO-ARGON2-ON-LOGIN",
+      "passed": true
+    },
+    {
+      "name": "STILL-LEGACY-ACCOUNT-UNTOUCHED-UNTIL-LOGIN",
+      "passed": true
+    }
+  ],
+  "requests": 30,
+  "errors": [],
+  "scope": "Scratch source-built lab on a fresh cloud checkout; not the retained Windows lab or an installed image",
+  "cleanup": {
+    "containers_retired": true,
+    "networks_retired": true,
+    "errors": [],
+    "volumes_left": [],
+    "images_built": 0,
+    "scratch_removed": true
+  },
+  "summary": {
+    "cases": 20,
+    "passes": 20
+  },
+  "finished": "2026-09-30T06:08:36.697501+00:00"
+}

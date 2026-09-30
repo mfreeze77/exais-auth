@@ -26,7 +26,9 @@ Actual code and evidence:
   against the reviewed Gradle metadata and excluded upstream prebuilt/EE/telemetry
   binaries. It passes 20/20 real PostgreSQL/Core cases and 27/27 unit checks. The
   default reproduces the block, misconfiguration fails closed, and the post-cutover
-  alias is refused. All 8 containers and the network retired. PWD-005 moves
+  alias is refused. Run `cloud-source-02` retired all 8 containers, the network and
+  its scratch, and measured no leaked volume. Run 01 left 8 anonymous volumes
+  (removed; see its `CORRECTION.md`). PWD-005 moves
   planned to implemented-unverified; nothing is verified. Installed image,
   retained-lab snapshot, upgrade/rollback, concurrency, SDK/browser regressions and
   independent review remain open. See `docs/password-upgrade.md`.

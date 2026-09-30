@@ -72,7 +72,7 @@ because that is literally the hashed text. This stops once the account is rehash
 
 - `evidence/operations/password-upgrade/unit-01/report.json`: 27/27 decision checks
   with the real jbcrypt 0.4 and argon2-jvm 2.11 libraries Core uses.
-- `evidence/operations/password-upgrade/cloud-source-01/report.json`: **20/20** real
+- `evidence/operations/password-upgrade/cloud-source-02/report.json`: **20/20** real
   cases, 30 HTTP requests. Built by `tools/run_password_upgrade_lab.py` from pinned
   Core/plugin-interface/PostgreSQL-plugin checkouts. Core is compiled with AspectJ
   1.9.24 as upstream does. All 84 third-party JARs match
@@ -86,8 +86,11 @@ because that is literally the hashed text. This stops once the account is rehash
   wrong Unicode refused; legacy bcrypt/argon2 accepted and rehashed; the historical
   string refused after rehash; atomic session accepts and rehashes in one commit;
   same-target ASCII untouched; post-cutover alias refused; bcrypt to argon2 on
-  login; untouched accounts stay legacy. All 8 owned containers and the network
-  were removed; no volume or image was built.
+  login; untouched accounts stay legacy. All 8 owned containers, the network and
+  scratch were removed; measured `volumes_left: []`; no image was built.
+- `cloud-source-01` passed the same 20 cases, but its cleanup claim was a constant.
+  It left 8 anonymous volumes, which were removed by exact ID. See its
+  `CORRECTION.md`; the runner now measures volumes and fails on a leak.
 - `tests/evidence/test_password_upgrade_patch.py`: 4 source-transform guard tests.
 
 ## Limits (all remain open)

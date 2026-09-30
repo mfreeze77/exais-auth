@@ -647,12 +647,14 @@ def main():
         'tools/patch_password_upgrade.py','tools/build_password_session.py','tools/run_password_upgrade_lab.py',
         'tests/foundation/PasswordUpgradeTest.java','tests/evidence/test_password_upgrade_patch.py','docs/password-upgrade.md']
     data['password_upgrade_candidate_artifacts'] = [artifact(ROOT,p) for p in (
-        'evidence/operations/password-upgrade/cloud-source-01/report.json','evidence/operations/password-upgrade/unit-01/report.json')]
-    upgrade_ids = ['PWUP-'+c['name'] for c in read_json(ROOT/'evidence/operations/password-upgrade/cloud-source-01/report.json')['cases']]
+        'evidence/operations/password-upgrade/cloud-source-02/report.json','evidence/operations/password-upgrade/unit-01/report.json')]
+    data['password_upgrade_failed_history'] = [artifact(ROOT,p) for p in (
+        'evidence/operations/password-upgrade/cloud-source-01/report.json','evidence/operations/password-upgrade/cloud-source-01/CORRECTION.md')]
+    upgrade_ids = ['PWUP-'+c['name'] for c in read_json(ROOT/'evidence/operations/password-upgrade/cloud-source-02/report.json')['cases']]
     upgrade_note = ('PasswordUpgrade (EXPERTAUTH-PASSWORD-UPGRADE-1): opt-in ISO-8859-1 legacy-decoding fallback limited to '
         'bcrypt/argon2 hashes in an operator cutover SHA-256 snapshot, plus on-login rehash to the configured Core algorithm '
         'through the storage plugin transaction API (same commit as the atomic session; locked best-effort on /recipe/signin). '
-        'Source-built scratch cloud lab passes 20/20 real cases and 27/27 unit checks; all 84 third-party JARs match the '
+        'Source-built scratch cloud lab passes 20/20 real cases (cloud-source-02; 01 left unmeasured anonymous volumes, corrected) and 27/27 unit checks; all 84 third-party JARs match the '
         'reviewed verification metadata. Not the installed image, retained lab, BC1.85.2 or source-built Argon2; no '
         'upgrade/rollback, replica concurrency, SDK/browser regression, persistent snapshot capture or independent review. '
         'See docs/password-upgrade.md.')

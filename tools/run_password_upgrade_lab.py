@@ -200,6 +200,9 @@ class Lab:
     def labels_args(self):
         return [a for k, v in self.labels.items() for a in ('--label', f'{k}={v}')]
 
+    def volumes(self):
+        return set(self.docker('volume', 'ls', '-q').stdout.decode().split())
+
     def start_network(self):
         name = 'expertauth-pwupgrade-' + self.run
         self.docker('network', 'create', '--internal', *self.labels_args(), name); self.networks.append(name); self.network = name
@@ -228,7 +231,7 @@ class Lab:
             env['EXPERTAUTH_LEGACY_PASSWORD_HASHES'] = '/run/expertauth/legacy-password-hashes.txt'
         envs = [a for k, v in env.items() for a in ('-e', f'{k}={v}')]
         self.docker('run', '-d', '--pull=never', '--name', name, *self.labels_args(), '--network', self.network, '--user', '0',
-                    '--tmpfs', '/opt/expertauth/logs:rw,size=16m', '--tmpfs', '/opt/expertauth/.started:rw,size=1m', '--tmpfs', '/tmp:rw,size=64m',
+                    '--tmpfs', '/home/gradle/.gradle:rw,noexec,nosuid,size=1m', '--tmpfs', '/opt/expertauth/logs:rw,size=16m', '--tmpfs', '/opt/expertauth/.started:rw,size=1m', '--tmpfs', '/tmp:rw,size=64m',
                     *mounts, *envs, '--entrypoint', 'java', RUNTIME, '-Xmx512m', *JAVA_OPTS, '-cp', '/opt/expertauth/lib/*',
                     'io.supertokens.Main', '/opt/expertauth/', 'configFile=/run/expertauth/config.yaml', 'forceNoInMemDB=true')
         self.containers.append(name)
@@ -247,7 +250,7 @@ class Lab:
 
     def stop_core(self, name):
         (self.scratch / f'{name}.log').write_bytes(self.docker('logs', name, check=False).stdout[-20000:])
-        self.docker('rm', '-f', name); self.containers.remove(name)
+        self.docker('rm', '-f', '-v', name); self.containers.remove(name)
 
     def call(self, base, path, payload, rid='emailpassword', charset=True):
         body = json.dumps(payload, ensure_ascii=False).encode('utf-8')
@@ -284,6 +287,7 @@ class Lab:
 
     # ---------- scenarios ----------
     def scenarios(self):
+        self.volumes_before = self.volumes()
         self.start_network()
         # Phase 1: the historical reader (unpatched source-built Core) creates the legacy population.
         legacy, base = self.start_core('legacy-bcrypt', {})
@@ -358,18 +362,19 @@ class Lab:
             try:
                 labels = json.loads(self.docker('inspect', '-f', '{{json .Config.Labels}}', name, check=False).stdout or b'{}')
                 need(all(labels.get(k) == v for k, v in self.labels.items()), 'Ownership differs: ' + name)
-                self.docker('rm', '-f', name); self.containers.remove(name)
+                self.docker('rm', '-f', '-v', name); self.containers.remove(name)
             except Exception as error: errors.append(str(error))
         for name in list(self.networks):
             try: self.docker('network', 'rm', name); self.networks.remove(name)
             except Exception as error: errors.append(str(error))
         remaining = self.docker('ps', '-aq', '--filter', 'label=org.expertauth.run=' + self.run, check=False).stdout.strip()
+        leaked = sorted(self.volumes() - getattr(self, 'volumes_before', self.volumes()))
         self.report['cleanup'] = {'containers_retired': not remaining and not self.containers, 'networks_retired': not self.networks,
-                                  'errors': errors, 'volumes_created': 0, 'images_built': 0}
+                                  'errors': errors, 'volumes_left': leaked, 'images_built': 0}
         if not self.args.keep_scratch and self.scratch.exists():
             need(self.scratch.name.startswith('password-upgrade-') and not any(p.is_symlink() for p in self.scratch.rglob('*')), 'Unsafe scratch cleanup')
             shutil.rmtree(self.scratch); self.report['cleanup']['scratch_removed'] = True
-        return not errors and not remaining
+        return not errors and not remaining and not leaked
 
 
 def main():
