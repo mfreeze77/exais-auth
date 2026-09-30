@@ -10,6 +10,7 @@ import * as linking from '../linking.ts';
 import type { KeyStore } from '../keys.ts';
 import * as reset from '../reset.ts';
 import type { Sessions } from '../sessions.ts';
+import * as verification from '../verification.ts';
 
 export const CDI_VERSIONS = ['5.4'];
 const MAX_BODY = 64 * 1024;
@@ -59,6 +60,13 @@ function routes(engine: Engine): Map<string, Route> {
     ['POST /recipe/user/password/reset/token', { tenant: true, auth: true, handle: async (c) => reset.createResetToken(db, config, scope(c), c.body) }],
     ['POST /recipe/user/password/reset/token/consume', { tenant: true, auth: true, handle: async (c) => reset.consumeResetToken(db, scope(c), c.body) }],
     ['POST /recipe/user/password/reset', { tenant: true, auth: true, handle: async (c) => reset.resetPassword(db, config, scope(c), c.body) }],
+    // Email verification.
+    ['POST /recipe/user/email/verify/token', { tenant: true, auth: true, handle: async (c) => verification.createVerificationToken(db, config, scope(c), c.body) }],
+    ['POST /recipe/user/email/verify', { tenant: true, auth: true, handle: async (c) => verification.verifyEmail(db, scope(c), c.body) }],
+    ['GET /recipe/user/email/verify', { tenant: false, auth: true,
+      handle: async (c) => verification.isVerified(db, c.appId, { userId: c.query.get('userId') ?? undefined, email: c.query.get('email') ?? undefined }) }],
+    ['POST /recipe/user/email/verify/token/remove', { tenant: true, auth: true, handle: async (c) => verification.removeVerificationTokens(db, scope(c), c.body) }],
+    ['POST /recipe/user/email/verify/remove', { tenant: false, auth: true, handle: async (c) => verification.unverifyEmail(db, c.appId, c.body) }],
     // Sessions.
     ['POST /recipe/session', { tenant: true, auth: true, handle: async (c) => sessions.create(scope(c), c.body) }],
     ['POST /recipe/session/refresh', { tenant: false, auth: true, handle: async (c) => sessions.refresh(c.appId, c.body) }],

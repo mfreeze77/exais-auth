@@ -119,3 +119,25 @@ CREATE TABLE IF NOT EXISTS ea_signing_keys (
   created_at    bigint NOT NULL,
   PRIMARY KEY (app_id, key_id)
 );
+
+-- Email verification: verified (user, email) pairs are app-scoped; tokens are tenant-bound one-time
+-- challenges stored only as SHA-256 digests. Changing an email therefore drops its verification.
+CREATE TABLE IF NOT EXISTS ea_email_verifications (
+  app_id      text NOT NULL REFERENCES ea_apps(app_id) ON DELETE CASCADE,
+  user_id     text NOT NULL,
+  email       text NOT NULL,
+  verified_at bigint NOT NULL,
+  PRIMARY KEY (app_id, user_id, email)
+);
+
+CREATE TABLE IF NOT EXISTS ea_email_verification_tokens (
+  app_id      text NOT NULL,
+  token_hash  text NOT NULL,
+  tenant_id   text NOT NULL,
+  user_id     text NOT NULL,
+  email       text NOT NULL,
+  expires_at  bigint NOT NULL,
+  PRIMARY KEY (app_id, token_hash),
+  FOREIGN KEY (app_id, tenant_id) REFERENCES ea_tenants(app_id, tenant_id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS ea_email_verification_tokens_owner ON ea_email_verification_tokens (app_id, user_id, email);

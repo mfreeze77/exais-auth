@@ -4,7 +4,7 @@ import pg from 'pg';
 export type Db = pg.Pool;
 export type Tx = pg.PoolClient;
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2; // 2: email verification tables
 
 export function createPool(url: string): Db {
   const pool = new pg.Pool({ connectionString: url, max: 20 });

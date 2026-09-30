@@ -25,9 +25,9 @@
 - **M1 engine: decided 2026-09-30.** The independently authored ExpertAuth engine
   (`engine/`) is the product; SuperTokens is reference only. Its first slice natively
   provides apps/tenants, tenant-scoped identities, explicit sharing, race-safe refresh
-  rotation, atomic reset and concurrency-safe account linking (51/51 tests). Still
-  missing from the engine: link proof/recent-auth and automatic-linking policy
-  (LNK-003/004), email verification,
+  rotation, atomic reset, concurrency-safe account linking and email verification
+  (55/55 tests). Still missing from the engine: link proof/recent-auth and
+  automatic-linking policy (LNK-003/004),
   passwordless, third-party/SAML/OAuth provider, MFA, roles/metadata, key rotation,
   audit/outbox, the remaining CDI routes, the SDK/FDI backends and control plane, plus
   load/HA and independent review. The history below concerns the rejected reference

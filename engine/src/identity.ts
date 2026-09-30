@@ -69,12 +69,13 @@ export async function userJson(db: Db | Tx, appId: string, userId: string) {
   if (user.rowCount !== 1) return null;
   const methods = await db.query(
     `SELECT m.method_id, m.recipe_id, m.email, m.created_at,
-            COALESCE(array_agg(t.tenant_id ORDER BY t.tenant_id) FILTER (WHERE t.tenant_id IS NOT NULL), '{}') AS tenants
+            COALESCE(array_agg(t.tenant_id ORDER BY t.tenant_id) FILTER (WHERE t.tenant_id IS NOT NULL), '{}') AS tenants,
+            EXISTS (SELECT 1 FROM ea_email_verifications v WHERE v.app_id = m.app_id AND v.user_id = m.method_id::text AND v.email = m.email) AS verified
        FROM ea_login_methods m LEFT JOIN ea_tenant_methods t ON t.app_id = m.app_id AND t.method_id = m.method_id
       WHERE m.app_id = $1 AND m.primary_user_id = $2 GROUP BY m.app_id, m.method_id ORDER BY m.created_at, m.method_id`, [appId, userId]);
   const loginMethods = methods.rows.map((m) => ({
     recipeId: m.recipe_id, recipeUserId: m.method_id, tenantIds: m.tenants as string[], email: m.email,
-    timeJoined: Number(m.created_at), verified: false,
+    timeJoined: Number(m.created_at), verified: m.verified as boolean,
   }));
   return {
     id: user.rows[0].user_id as string,

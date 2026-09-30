@@ -6,7 +6,7 @@ functional and API **reference only**. No SuperTokens code is used. Routes and r
 the published CDI contracts captured in `../contracts/`, so reference-style backends can talk to it,
 but behavior is our own design and is tested here.
 
-Status: **M1 vertical slices 1–2. Partial; not production-approved.** 51/51 tests pass against real
+Status: **M1 vertical slices 1–3. Partial; not production-approved.** 55/55 tests pass against real
 PostgreSQL. Everything not listed below is still planned; see `../ledger/implementation.json`.
 
 ## Implemented
@@ -17,6 +17,7 @@ PostgreSQL. Everything not listed below is still planned; see `../ledger/impleme
 | Native multi-tenancy | `PUT /recipe/multitenancy/app/v2` (public app only), `PUT …/tenant/v2`, `GET …/tenant/list/v2`, `POST <tenant>/recipe/multitenancy/tenant/user[/remove]` |
 | Account linking | `GET /recipe/accountlinking/user/primary/check`, `POST …/user/primary`, `GET …/user/link/check`, `POST …/user/link`, `POST …/user/unlink` |
 | Email/password | `POST <tenant>/recipe/signup`, `…/signin`, `…/user/passwordhash/import`, `GET/PUT /recipe/user` |
+| Email verification | `POST <tenant>/recipe/user/email/verify/token`, `POST <tenant>/recipe/user/email/verify`, `GET /recipe/user/email/verify`, `POST <tenant>/…/verify/token/remove`, `POST /recipe/user/email/verify/remove` |
 | Password reset | `POST <tenant>/recipe/user/password/reset/token`, `…/reset/token/consume` (two-step), `…/user/password/reset` (atomic) |
 | Sessions | `POST <tenant>/recipe/session`, `POST /recipe/session/refresh`, `…/verify`, `…/remove`, `GET /recipe/session` |
 | Keys | `GET /.well-known/jwks.json` (unauthenticated), `GET /recipe/jwt/jwks` |
@@ -60,6 +61,11 @@ PostgreSQL. Everything not listed below is still planned; see `../ledger/impleme
   one concurrent consumer wins. A successful reset spends all of the account's outstanding tokens. An
   expired token spends only itself. Tokens are bound to their tenant and to the email they were issued
   for.
+- **Email verification:** verification is keyed by (app, user, exact email), so a different
+  email is never considered verified. Tokens are 384-bit, stored as SHA-256 digests,
+  tenant-bound and single-use under a row lock (exactly one of eight concurrent consumers
+  wins). A successful verification spends the pair's other tokens; an expired token spends
+  only itself. Login methods report `verified` from this state.
 - **Operations:** API keys are required on every route except `/hello` and JWKS, and compared in
   constant time. Private signing keys are sealed with AES-256-GCM under `EXPERTAUTH_KEY_ENCRYPTION_KEY`.
   Schema install is idempotent under an advisory lock, which is safe with several replicas. Internal
@@ -91,14 +97,14 @@ EXPERTAUTH_TEST_ADMIN_URL=postgresql://postgres:<pw>@127.0.0.1:5432/postgres npm
 ```
 
 Each test file creates and drops its own database. The suites cover identity and multi-tenancy (10),
-sessions and refresh (13), reset (5), account linking including concurrency (9), transaction retry (1),
+sessions and refresh (13), reset (5), account linking including concurrency (9), transaction retry (1), email verification (4),
 and config/routing/primitives (13).
 
 ## Known gaps (open, tracked)
 
 The engine has no rate limiting or abuse controls yet; it is designed to sit behind the application
 backend. `PUT /recipe/user` changes a password without revoking sessions (the reference two-step
-flow); the atomic reset route does revoke. Still missing: email verification, application-level
+flow); the atomic reset route does revoke. Still missing: application-level
 link proofs and automatic-linking policy (LNK-003/004), passwordless, third-party/OAuth/SAML, MFA/TOTP/WebAuthn, roles, metadata, user search, key rotation,
 user-ID mapping, audit/outbox, the remaining CDI routes, SDK/FDI backends, the dashboard and control
 plane, plus load, HA, backup and independent security review. All 265 requirements remain binding.

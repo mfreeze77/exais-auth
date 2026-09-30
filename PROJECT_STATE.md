@@ -22,7 +22,9 @@ Status: **PARTIAL. Engine decided 2026-09-30: the independently authored ExpertA
   - sessions are revoked on link and unlink.
 
   `evidence/engine/m1-slice-02`: 51/51. It also promotes IDN-005/012 and LNK-001/002/006/007/008;
-  LNK-003 (application link-proof policy) stays failed until built.
+  LNK-003 (application link-proof policy) stays failed until built. Slice 3 adds email
+  verification: tenant-bound, single-use tokens (one winner of eight concurrent consumers),
+  keyed by the exact email. `evidence/engine/m1-slice-03`: 55/55; VER-001/002 promoted.
   Eight rows move to implemented-unverified: IDN-001/002/003/004/006/011 (five were blocked by
   the reference Core's 402s) and SES-003/004 (failed on the rejected candidates).
   Everything below this bullet is **reference-lab history** (SuperTokens-Core patches,
@@ -387,8 +389,8 @@ container OS review and independent distribution approval remain open. Four nati
 bundles need further work: scrypt, Argon2, JNA and SQLite JDBC. See
 `docs/runtime-distribution-review.md` and `evidence/runtime/oss-core-notices`.
 
-Editable ledger currently maps39 requirements to partial implementation,4 to blockers,
-1 to a failed check and221 to planned work. All205 API rows remain blocked
+Editable ledger currently maps41 requirements to partial implementation,4 to blockers,
+1 to a failed check and219 to planned work. All205 API rows remain blocked
 for complete contract/runtime qualification. These are statuses, not a completion rate.
 
 Read `BLOCKERS.md`, `docs/adr/001-foundation.md`, and the current evidence before

@@ -16,6 +16,7 @@ export interface Config {
   /** Window in which the immediate parent refresh token still yields the same successor. */
   refreshGraceSeconds: number;
   resetTokenSeconds: number;
+  emailVerificationTokenSeconds: number;
   argon2: Argon2Policy;
   issuer: string;
 }
@@ -58,6 +59,7 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): Config {
     refreshTokenSeconds: integer(env, 'EXPERTAUTH_REFRESH_TOKEN_SECONDS', 144000 * 60, 60, 365 * 86400),
     refreshGraceSeconds: integer(env, 'EXPERTAUTH_REFRESH_GRACE_SECONDS', 5, 0, 60),
     resetTokenSeconds: integer(env, 'EXPERTAUTH_RESET_TOKEN_SECONDS', 3600, 60, 86400),
+    emailVerificationTokenSeconds: integer(env, 'EXPERTAUTH_EMAIL_VERIFICATION_TOKEN_SECONDS', 86400, 60, 7 * 86400),
     argon2: {
       memoryKiB: integer(env, 'EXPERTAUTH_ARGON2_MEMORY_KIB', 19456, 8192, 1048576),
       iterations: integer(env, 'EXPERTAUTH_ARGON2_ITERATIONS', 2, 1, 100),
